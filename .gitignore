@@ -1,0 +1,8 @@
+# Local application state and generated material
+.DS_Store
+~$*
+__pycache__/
+*.py[cod]
+.venv/
+outputs/
+local/
