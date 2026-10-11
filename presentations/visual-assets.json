@@ -1,0 +1,49 @@
+{
+  "purpose": "Working workshop visuals, not a preserved final slide package",
+  "reactor_source_commit": "0d981f202feab5af8c79d2f8d94d42784c3f1252",
+  "reactor_source_sha256": "853e58a5a66a92bd3a0e8d5e9ba8ab555ad3fa6b6e53d5861e9ba9c261e2c93c",
+  "assets": {
+    "workshop-installation/wistr-installation.blend": {
+      "path": "../../fastSaltModels/outputs/workshop-installation/wistr-installation.blend",
+      "sha256": "7914cdfd6078f4f1ad415816e88fe0725a09393e3e0fdbfb1850fcd7d0b49a56"
+    },
+    "workshop-installation/wistr-model-report.json": {
+      "path": "../../fastSaltModels/outputs/workshop-installation/wistr-model-report.json",
+      "sha256": "bc01c06cecf0770e838e672672119b4eca44bb113a9d0c6b720624b2f800fb84"
+    },
+    "workshop-installation/wistr-cutaway.png": {
+      "path": "../../fastSaltModels/outputs/workshop-installation/wistr-cutaway.png",
+      "sha256": "35fa243b65d885d0ca473a5cc15a102d9e4e93a8a9e2748917128b7c03d9ee81"
+    },
+    "workshop-installation/wistr-equipment.png": {
+      "path": "../../fastSaltModels/outputs/workshop-installation/wistr-equipment.png",
+      "sha256": "0fbda582335629b5dcc1f7b78bf10e8bf6c8614e27f660557a41282c49c9b063"
+    },
+    "workshop-installation/wistr-plan.png": {
+      "path": "../../fastSaltModels/outputs/workshop-installation/wistr-plan.png",
+      "sha256": "ca5596503e499caa13a33d0a564eb07edeee6799979593bf0c4876bebabaf487"
+    },
+    "workshop-reactor/reactor-cutaway.png": {
+      "path": "../../fastSaltModels/outputs/workshop-reactor/reactor-cutaway.png",
+      "sha256": "6abb7415cf50e877f1dd479b7069a7fa3266cbfd2b269bb988a192ebf1520dde"
+    },
+    "workshop-reactor/reactor-air-section.png": {
+      "path": "../../fastSaltModels/outputs/workshop-reactor/reactor-air-section.png",
+      "sha256": "f20ab9f35422fb8daddf004f46773e2c210eb282cb86986b7356a702eb0ea417"
+    },
+    "workshop-reactor/reactor-core-removal.png": {
+      "path": "../../fastSaltModels/outputs/workshop-reactor/reactor-core-removal.png",
+      "sha256": "bd7e84858bd327ed93f555ed89ac82192d62f8e3556a2fde4904b77e38b23908"
+    },
+    "workshop-reactor/render-manifest.json": {
+      "path": "../../fastSaltModels/outputs/workshop-reactor/render-manifest.json",
+      "sha256": "e9dcfbc7745317a9a160d42757efcc275ba78dfafec38002a123e69793769cb9"
+    }
+  },
+  "code_sha256": {
+    "scripts/build_wistr.py": "4c42e19671da49e3223e6b4e4ded5491bb3064a6db8676349d21fece0e9dcc58",
+    "models/wistr_installation.py": "d94505c20903e42d25980015a06e6618fb7d697fbbbb851486528fb1e6319a1d",
+    "src/textual_graphics/installation_reactor.py": "b348446bb0b482ad2c0b7d54e46626d21623d1e9db3a99c9dbbb6e141b398275",
+    "scripts/render_reactor_baseline.py": "8fc1dd644e36b1d8a19020a1d934825937468827376414cdfca2cc667cf3757a"
+  }
+}

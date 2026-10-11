@@ -6,7 +6,7 @@ The first-pass inventory covered 388 filesystem entries in the existing Papers a
 
 This was a bibliographic inventory, not a full scientific review. Original files were not moved, renamed, or deleted.
 
-The [original detailed inventory](../../TextualGraphics/outputs/publication-library/inventory.json) is a generated local aid, not the editable bibliography. It resides in ignored graphics outputs and is not required to use this Markdown index.
+The [original detailed inventory](../../fastSaltModels/outputs/publication-library/inventory.json) is a generated local aid, not the editable bibliography. It resides in ignored graphics outputs and is not required to use this Markdown index.
 
 ## Questions to resolve
 
@@ -37,7 +37,6 @@ The Finished Papers and Presentations folder contains 13 macOS aliases. Two reso
 
 | Alias | Existing target or filename candidate | Evidence |
 | --- | --- | --- |
-
 | 2023 ICAPP WISSR PP .pptx | [ICAPP2023_WISSR PP tw6.pptx](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Papers and Presentations/2023 ICAPP/ICAPP2023_WISSR PP tw6.pptx>) | Embedded filename match; alias unresolved |
 | 2023 ICAPP WISSR Paper.pdf | [1207 (T-02).pdf](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Papers and Presentations/2023 ICAPP/1207 (T-02).pdf>); [1207 (T-02).pdf](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Papers and Presentations/2023 ICAPP/ICAPP2023_e-Proceedings/Papers/1207 (T-02).pdf>) | Embedded filename match; alias unresolved |
 | 2023 NET Paper WISSR | [Core Design of WISSR.pdf](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Papers and Presentations/2023 NET/Core Design of WISSR.pdf>) | Embedded filename match; alias unresolved |

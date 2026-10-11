@@ -19,6 +19,8 @@ The [publication index](publications/index.md) is the editable source for the cu
 
 ## Calculations and models
 
-Record units, input sources, software versions, model scope, run instructions, and meaningful checks. Keep component identities and reference frames explicit when exchanging data. A visual fit or closed mesh is not a substitute for a physics or engineering validation.
+Use **Hurmet Markdown (`.md`) for official calculation results wherever practical**, following the [calculation conventions](calculations/README.md). Calca, Python, Julia, and specialist solvers remain acceptable development tools. When a calculation cannot reasonably be represented in Hurmet, retain its reproducible source and link a clear result summary; do not maintain a second implementation merely to satisfy a format preference.
+
+Record units, input sources, software versions, model scope, run instructions, and meaningful checks. Recalculate a Hurmet worksheet before saving its results, and compare converted results with their source. State whether results are preliminary or reviewed; use of the preferred format does not itself establish review status. Keep component identities and reference frames explicit when exchanging data. A visual fit or closed mesh is not a substitute for a physics or engineering validation.
 
 Do not add routine generated renders or caches to this repository. Retain original files in their owning repository or source collection and reference a named revision.

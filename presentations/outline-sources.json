@@ -1,0 +1,33 @@
+{
+  "recorded": "2026-10-10",
+  "purpose": "Outline source review and candidate assets, not final slide assets",
+  "reactor_source_baseline": "0d981f202feab5af8c79d2f8d94d42784c3f1252",
+  "files": {
+    "source_deck": {
+      "path": "/Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Fast Salt/Fast Salt System 5.pptx",
+      "sha256": "80dd178aa50a9d5616837081fd8ab771021c9079ff9d8a8e03038b80b3c09238"
+    },
+    "reactor_baseline_manifest": {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSaltModels/baselines/wistr-reactor-handling-2026-10-08/manifest.json",
+      "sha256": "fc265c3c62e3a5d9b044b92bd0fd68821cf64f1de1bd94b292a4c737e29bc26c"
+    },
+    "reviewed_reactor_overview": {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSaltModels/outputs/reactor-study/reactor-cutaway.png",
+      "sha256": "594ff9afb18588237063cfd16f9df532ec79ff3ba10eec437e2b65c399a3d366"
+    },
+    "reviewed_core_removal": {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSaltModels/outputs/reactor-study/reactor-core-removal.png",
+      "sha256": "c4acc3408af86a62a5ce74290f6f9d594ef9451686c0dead6302bd7ec4cb19c8"
+    },
+    "reviewed_installation": {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSaltModels/outputs/wistr/wistr-cutaway.png",
+      "sha256": "fa32128e16eb78ef4a2eff2a4357de411801626c5c18b3413d6074a3c59d8310"
+    }
+  },
+  "notes": [
+    "The supplied source deck has 29 slides; cover dated June 26, 2026.",
+    "The reviewed general reactor cutaway shows earlier cap hardware; regenerate selected views from the saved handling baseline.",
+    "The reviewed installation uses a simplified reactor and does not establish a turbine/condenser plant layout.",
+    "Research figure selection and latest UM/MSU updates remain outstanding."
+  ]
+}

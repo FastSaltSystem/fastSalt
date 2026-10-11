@@ -14,7 +14,7 @@ These are system functions. Their description here does not establish that the f
 | Fuel refining and reuse | Prepare fuel for the reactor and manage separated material streams | Publications and evolving processing concepts |
 | WISTR | Produce heat using salt fuel held in modular tanks and a separate coolant | UM analyses and current mechanical graphics |
 | Coolant heat transport | Connect the reactor to steam generation | Three coolant legs in the current visual concept |
-| Steam generation | Transfer heat to the steam power system | Preliminary Calca calculations supplied to MSU students; student design work underway |
+| Steam generation | Transfer heat to the steam power system | Preliminary Calca estimate converted to Hurmet; MSU student design work underway |
 | Steam power plant | Convert heat into electrical output | Installation arrangement to develop |
 | Air cooling and maintenance equipment | Support the cooling and remote maintenance concepts | Current reactor graphics and work to be connected to relevant analysis |
 
