@@ -31,3 +31,7 @@ When a deck is prepared, keep its editable source and speaker notes here, with a
 - [Timed outline and slide briefs](workshop-outline.md)
 - [Source and candidate-asset record](outline-sources.json), including the original candidate file hashes and recorded refresh needs.
 - [Refreshed working visuals](visual-assets.md) and their [current hashes](visual-assets.json).
+
+## Rankine-cycle diagram
+
+The [11 October 2026 diagram](rankine-cycle-2026-10-11/README.md) provides an editable one-slide PowerPoint and a high-resolution PNG, with the selected 5 kPa reference temperatures, pressures, major flows and duties. The latest alternative shows the motor-driven BFP, replacement main-IP heater extractions and revised flows/duties. It distinguishes gross power from output after the BFP and condensate-pump loads. Revision 2 of the earlier steam-driven case, with full heater paths, is preserved. It is a preliminary cycle diagram for the workshop; the complete talk deck remains to be assembled.

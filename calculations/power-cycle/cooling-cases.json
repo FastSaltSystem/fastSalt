@@ -1,0 +1,54 @@
+{
+  "scope": "Fixed condenser screening; constant U, water flow and cycle section efficiencies. Not a rated off-design operating map.",
+  "U_W_m2K": 2500.0,
+  "area_m2": 38513.36611915767,
+  "water_mass_kg_s": 23715.848903468777,
+  "water_volume_m3_s": 23.763375654778333,
+  "water_cp_J_kgK": 4180.0,
+  "water_density_kg_m3": 998,
+  "effectiveness": 0.6213951753686277,
+  "LP3_pressure_Pa": 194383.06191486618,
+  "cases": [
+    {
+      "label": "Normal reference",
+      "inlet_C": 20,
+      "outlet_C": 28.00000000095889,
+      "condenser_kPa": 5.000000013038516,
+      "condensing_C": 32.87425513739322,
+      "terminal_approach_K": 4.8742551364343285,
+      "gross_MW": 689.5439687510517,
+      "condenser_MW": 793.057987427051,
+      "exhaust_moisture_percent": 12.644106831072,
+      "thermal_residual_W": 2.7640098333358765,
+      "energy_residual_J_kg": 7.776350230415119e-09
+    },
+    {
+      "label": "Hot design check",
+      "inlet_C": 30,
+      "outlet_C": 38.216656207614164,
+      "condenser_kPa": 8.75193946622312,
+      "condensing_C": 43.222916027173596,
+      "terminal_approach_K": 5.006259819559432,
+      "gross_MW": 668.5995261545286,
+      "condenser_MW": 814.5356043261771,
+      "exhaust_moisture_percent": 10.982919193881525,
+      "thermal_residual_W": 1.5837405920028687,
+      "energy_residual_J_kg": 8.120025540847564e-09
+    },
+    {
+      "label": "Extreme check",
+      "inlet_C": 35,
+      "outlet_C": 43.327267854815375,
+      "condenser_kPa": 11.404555501416326,
+      "condensing_C": 48.40092136389342,
+      "terminal_approach_K": 5.073653509078042,
+      "gross_MW": 657.9062531689192,
+      "condenser_MW": 825.5007856142894,
+      "exhaust_moisture_percent": 10.155587012421885,
+      "thermal_residual_W": 2.5974984169006348,
+      "energy_residual_J_kg": 7.82921460995567e-09
+    }
+  ],
+  "source_results_sha256": "c98d05f18e6c5f52c787ce680ab0acbd00e1fbb43db46218a73dc18771e4a280",
+  "solver_sha256": "5e828882a98c894f9c25789c61d898cf813e68cca31f37fcb8a4b7417229eca0"
+}

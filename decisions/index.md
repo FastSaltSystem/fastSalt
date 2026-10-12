@@ -400,6 +400,352 @@ Earlier baselines remain unchanged. This records acceptance of the visual draft,
 not engineering qualification. The model checkpoint and this documentation
 checkpoint are separate local Git commits.
 
+## D-022 — Insulate hot-air ductwork in the working model
+
+Date: 2026-10-11. Source: explicit owner direction after checkpoint `a99002f`.
+Status: working visual design; thermal sizing pending.
+
+Apply insulation to the hot-air branches, reactor side collector/crossover and
+stub, upper manifold, stack connection and barrel. Use a provisional 100 mm layer
+and 1 mm metal cladding for space coordination. These thicknesses are model choices,
+not owner-specified or thermally qualified values. Enlarge the upper manifold to
+fit the liner and wrapped connection, and adjust affected hot routes for clearance.
+Retain the floor-level fresh-air route and preserve the committed checkpoint.
+
+## D-023 — Add provisional turbine and fuel-preparation buildings
+
+Date: 2026-10-11. Source: owner requested both buildings and explicitly chose
+“Use provisional sizes and locations.” Status: working visual layout.
+
+Create a separate site scene around the current installation. Use a 45 × 24 m,
+20 m high turbine envelope beside the west/southwest secondary outlets and a
+30 × 24 m, 14 m high fuel-preparation envelope east/northeast across a service
+yard. These dimensions and locations are model assumptions approved for drafting,
+not equipment or process sizing. Preserve the reactor door approach, air intake
+and stack. Continue the existing steam/feedwater jackets to open interface ends
+inside the turbine building. Keep fuel preparation at envelope level.
+
+Use a common visual access pad at the existing −9.1 m equipment-floor datum;
+actual site grading remains open. No containment, shielding, transport qualification
+or fuel-processing capacity is implied. See the
+[site guide](../../fastSaltModels/docs/site-study.md). Earlier checkpoints remain unchanged.
+
+## D-024 — Start the Rankine cycle from the supplied system diagram
+
+Date: 2026-10-11. Source: owner supplied Diagram.pdf and confirmed “Yes—use
+main-steam reheat as drawn” and “Use that provisional condenser case” for a
+water-cooled condenser at 5 kPa absolute. Status: preliminary calculation basis.
+
+Retain the HP/reheat/LP turbine arrangement, regenerative heater banks and
+steam-driven feed pump. Carry forward 1,500 MW thermal, 24 MPa, 830 K main steam
+and 560 K return feedwater. Extraction pressures, efficiencies, 470°C reheat,
+360°C heating-stream return and 20–28°C cooling water are provisional model
+choices, not additional owner-specified values. The 500°C reheat trial was
+rejected for temperature crossover under the same return assumption.
+
+Publish results in Hurmet with imported water properties and coupled flows clearly
+identified. The Python/CoolProp solver remains authoritative for state properties
+and coupled balances. LP moisture, equipment adequacy, net export and building fit
+remain open. See [cycle basis](../calculations/power-cycle/README.md).
+
+## D-025 — Provisional cooling-water design cases
+
+Date: 2026-10-11. Source: owner accepted the proposed 20°C normal reference,
+30°C hot-weather design case and 35°C extreme check with “That sounds good.”
+Status: accepted preliminary environmental assumptions; no site selected.
+
+These are temperatures of water entering the condenser, not outdoor air
+conditions or claimed occurrence percentiles. Use the hot case to guide cooling
+system sizing and the extreme case to examine potential reduced output. Normal
+operation need not remain at the hot-day condenser pressure. Set the minimum
+permitted condenser pressure after checking LP wetness and turbine limits,
+including later cooler-than-reference conditions.
+
+The first follow-up holds the existing approximately 38,500 m² condenser area,
+U = 2,500 W/(m² K) and 23.76 m³/s cooling flow fixed. It is a screening comparison,
+not acceptance of that equipment size or permission to operate at the calculated
+pressures. The permissible hot-day pressure/output and final heat sink remain to
+choose. See [cooling cases](../calculations/power-cycle/Cooling-water%20cases%20-%20Hurmet.md).
+
+## D-026 — Select a preliminary reheat/wetness solution
+
+Date: 2026-10-11. Source: owner directed “OK, let's resolve them” after the
+reheat/wetness discussion and acceptance of the cooling-water cases.
+Status: analyst-selected working thermal-cycle design, not supplier qualification
+or owner-specified numerical inputs.
+
+Use 2.8 MPa HP exhaust, 2.66 MPa hot reheat at 510°C, and a 380°C main-steam
+heating return. Shift the feed-pump-turbine heater extractions to 1.6/1.0 MPa to
+retain positive heater bleeds. Preserve the single main-steam reheater and the
+24 MPa / 830 K steam-generator interface. Use a provisional 5 kPa condenser floor
+at these reheat conditions, with cooling control still to design.
+
+The selected case clears the 10% moisture screen for the accepted 20/30/35°C
+cooling-water cases and for LP interval efficiencies 0.86–0.90 at 5 kPa. The
+minimum reheater approach is about 20.28 K. At exactly 5 kPa it costs approximately
+10.82 MW gross relative to the first trial; heating-steam fraction rises from
+15.96% to 26.28% and reheater duty from 189.4 to 252.5 MW. This favors thermal and
+flow margins over highest calculated output. Old trial results are preserved.
+
+This resolves feasibility within the stated steady-state model. Actual turbine
+wetness/exhaust limits, pressure losses, thermal equipment design, cold-weather
+controls, startup/transient operation and net station loads remain to establish.
+See [selected worksheet](../calculations/power-cycle/Selected%20reheat%20and%20wetness%20-%20Hurmet.md).
+
+## D-027 — Develop preliminary power-plant equipment sizes
+
+Date: 2026-10-11. Source: owner requested “Now let's size what we can.” Status:
+analyst-selected sizing assumptions and layout candidates for review, not
+owner-specified dimensions or supplier-qualified equipment.
+
+Use D-026's selected cycle for the first equipment schedule. Preserve its condenser
+thermal basis; divide it provisionally into three modules. Estimate reheater surface
+using U=1,000 W/(m² K) and a 20% allowance, with four candidate modules. Seven
+heater area proxies use U=2,000 with the same allowance. Record sensitivities.
+Screen six LP exhaust flows, generator capacities at 0.90 power factor with 10%
+margin, ten minutes usable deaerator storage, and three 50% pumps per water service.
+Pipe velocities, packing, pump heads, NPSH and service clearances are explicit
+assumptions in the [worksheet](../calculations/power-cycle/Power%20plant%20equipment%20sizing%20-%20Hurmet.md).
+
+Propose 26.5 MPa BFP discharge and 1.0 MPa condensate discharge to cover loss and
+elevation budgets. Do not promote those values to the coupled operating basis yet:
+BFP shaft duty rises 2.28 MW, so pump-turbine extraction flows, heaters, SG states,
+reheat approach and performance must be reclosed. Preserve the existing diagram,
+performance results and main-pipe wall study. No building or reactor geometry is
+changed; check a dimensional plant arrangement before resizing the turbine building.
+
+## D-028 — Evaluate electric boiler-feed-pump drive
+
+Date: 2026-10-11. Source: owner requested examination of electric drive, preferring
+simplicity if efficiency loss is not significant. Status: completed preliminary
+comparison; analyst recommendation for review, not final drive selection.
+
+Compare both drives at the D-027 proposed 26.5 MPa BFP / 1.0 MPa condensate-pump
+pressures. Retain the SG interface and selected reheat conditions. Reclose the
+steam-driven reference with LP3 at 0.12186 MPa to use its auxiliary exhaust in the
+DA; use the same LP3 pressure for the electric alternative. In the latter, feed
+HP2/HP1 from 1.6/1.0 MPa main-IP extractions and the DA from its 0.6 MPa outlet.
+
+With 95% combined electrical-drive efficiency, electric drive costs 4.03 MW or
+0.269 percentage points at 5 kPa, about 0.60% of comparison output. The same
+condenser in 20/30/35°C water gives 4.12–4.23 MW penalties. This favors electric
+drive as a simpler candidate, subject to review of the trade. Its reheater needs
+281.6 MW duty versus 250.1 MW in the matched steam case; retain 3 × 50% pumps with
+15 MW motor shaft allowances as a candidate only. Reheat/main-IP flow, hot heater
+bleeds, pipe sizing, electrical supply and startup steam must be reconciled before
+adoption. Full station loads and lifecycle economics are not yet evaluated.
+
+Preserve D-026/D-027 result files, equipment schedule and diagram. The alternative
+is isolated in its [Hurmet worksheet](../calculations/power-cycle/BFP%20drive%20comparison%20-%20Hurmet.md)
+and reproducible coupled calculation. Hurmet imports property/cycle results and
+independently checks power, efficiency and capacity arithmetic.
+
+## D-029 — Carry motor BFPs into equipment sizing and the first hall layout
+
+Date: 2026-10-11. Source: owner said “ok, proceed” to update the equipment
+schedule/piping and test the turbine-building layout. Status: working preliminary
+motor-drive revision; no vendor, pressure-boundary or civil design qualification.
+
+Use D-028's motor case as the current equipment-sizing source. Adopt for layout
+four 16 × 3.25 × 3.25 m reheater envelopes (9,122 m² total), 550/350 MVA generator
+allowances, three 50% BFPs with 15 MW motors and 20 MVA per-train BFP-only supply
+allowances. Revise the five pipe bores identified in the current worksheet and
+remove the auxiliary pump-turbine supply service. Retain unchanged pump hydraulic
+requirements, condenser surface and deaerator storage; update their operating
+loads/flows from the motor cycle. Preserve original steam-drive outputs.
+
+Use a provisional 66 × 40 × 28 m hall, 20 × 10 × 7 m electrical annex and tube
+withdrawal aprons for the first dimensional draft. Turbines are at +12 m, minimum
+DA water level +14 m and crane underside +25 m. These are analyst reservations,
+not new owner-specified dimensions or proof of complete plant fit. The east wall
+and steam/feedwater interface remain fixed; the pad expands to accommodate the
+westward hall extension and external maintenance areas. The earlier empty 45 ×
+24 × 20 m box remains documented; the larger draft is not attributed solely to
+the drive change. Fuel-preparation scope remains unchanged.
+
+Verification: all bores pass the retained velocity screens in four cases; Hurmet
+save/reopen passes 50 comparisons and two sensitivities; 29 equipment boxes and
+16 service reservations pass selected 3D overlap/containment checks. Source,
+model and scope are recorded in the [worksheet](../calculations/power-cycle/Motor-BFP%20equipment%20sizing%20-%20Hurmet.md)
+and [site guide](../../fastSaltModels/docs/site-study.md). Full piping, structure,
+installation access, egress, rotor handling and crane adequacy remain open.
+
+## D-030 — Arrange turbine equipment around the steam-entry side
+
+Date: 2026-10-11. Source: owner requested grouped reheaters near steam entry,
+LP turbine/condensers to the left, BFPs between HP/LP equipment, and reversal of
+the HP/IP train to place both generators together. Status: preliminary layout
+implemented; HP/LP equipment interpreted as the feedwater-heater banks.
+
+Keep D-029 equipment sizes and the 66 × 40 × 28 m hall. Group all four reheaters
+on the east/right; put three condensers and LP casings on the west/left. Place
+BFPs between the LP and HP heater banks, with DA storage above. Reverse HP/IP so
+the turbine is near the east steam entry and its generator aligns alongside
+the LP generator. Move the electrical annex to the central south frontage,
+leaving separate heater withdrawal aprons on either side.
+
+The revised 29 equipment boxes and 16 service volumes pass selected 3D overlap,
+wall/vertical clearance, external pull-apron coverage and arrangement checks.
+No cycle, equipment capacity or piping size changes. Shorter steam/electrical
+connections are a layout intent, not a calculated pressure-loss or cabling result.
+Internal piping, structural support, full access and crane coverage remain open.
+See the [current plan and model](../../fastSaltModels/docs/site-study.md).
+
+D-030 follow-up: the owner requested checking space for condensate pumps along
+the west wall, before the LP heaters. Move the three existing pump envelopes
+there and shift the LP heater bank 2.25 m east. Reserve a 1.2 m pump-side access
+strip; retain the 3 m cross aisle, condenser locations and hall size. The revised
+29 equipment boxes and 17 service volumes pass the selected checks. Outlet
+positions, suction head, piping length and pump removal paths remain unresolved.
+
+## D-031 — Rotate BFPs and shorten the turbine hall
+
+Date: 2026-10-11. Source: owner proposed turning the BFPs 90° to reduce building
+size. Status: preliminary dimensional draft; full installation fit unresolved.
+
+Rotate each existing 10 × 4 m BFP/motor envelope to 4 × 10 m and arrange the
+three side by side with 2 m gaps. Retain a 4 × 10 m laydown area and reserve a
+2 m front-access strip leading to the 3 m cross aisle. Move HP heaters and
+reheaters inward and shorten the main hall from 66 to 60 m, retaining its 40 m
+width and 28 m height. The east steam/feedwater interface remains at X=−36 m;
+the hall centre moves to (−66, −10) m. The annex remains 20 × 10 × 7 m.
+
+Main-hall area reduces 240 m², from 2,640 to 2,400 m² (9.1%). Equipment capacities,
+envelope dimensions apart from orientation, and cycle results are retained.
+Twenty-nine equipment boxes and 18 service reservations pass selected overlap,
+containment, apron and vertical-clearance checks. Detailed piping, structure,
+transport/rotor handling and crane access remain unresolved. The present turbine
+trains limit further shortening without rearrangement; this is not a minimum.
+Earlier 66 m drafts remain preserved in outputs/site-study-motor through -v3.
+
+## D-032 — Align the buildings and enter the turbine wall squarely
+
+Date: 2026-10-11. Source: owner requested bends near the reactor and improved
+building alignment so steam/feedwater enter the power-plant wall at right angles.
+Status: provisional geometry implemented and checked.
+
+Keep the reactor at its established origin and translate the turbine hall, annex,
+equipment and maintenance aprons 10 m north, placing the hall centre at (−66, 0) m.
+Retain the 60 × 40 × 28 m hall and the east wall at X=−36 m. Bend both pipes near
+X=−28 m onto a shared westward approach at Y=−4.19484 m. Shift the wall bay and
+pipe-rack frames to suit; update internal terminal tangents to the wall-normal run.
+Preserve reactor nozzle tangents and all existing pipe dimensions and elevations.
+
+Check building/air-ring separation, pipe envelopes around the reactor, bend radii,
+wall opening, exact internal/site endpoint and tangent continuity, plus existing
+internal route/stage checks. The 4.70 m feedwater clearance issue and pressure-loss,
+thermal-expansion, support and maintenance-review limitations remain open. Earlier
+site/piping outputs are preserved. See the [site guide](../../fastSaltModels/docs/site-study.md).
+
+## D-033 — Gentler interbuilding pipe offsets
+
+Date: 2026-10-11. Source: owner requested two 45° bends between buildings.
+Status: provisional geometry; subject to routing review.
+
+Use two opposite 45° bends on both steam and feedwater offsets. The existing
+reactor outlet points 20° away from the turbine-wall normal, so the site copy
+adds a separate shallow 20° alignment turn just outside the reactor before the
+two-bend offset. This is three horizontal direction changes overall, not two.
+The original reactor wall penetration, building locations, turbine interfaces,
+pipe sizes and elevations remain unchanged. Move the illustrative support frames
+under the final straight section. The source installation and prior site drafts
+remain preserved. Geometry checks cover bend angles, endpoints/tangents and
+selected clearances; pressure loss, flexibility and support design remain open.
+See the [site guide](../../fastSaltModels/docs/site-study.md).
+
+## D-034 — Shared reactor catwalk and distributed absorber modules
+
+Date: 2026-10-12. Source: owner requested an expanded-metal catwalk near the
+vessel top, replacement of the absorber stands and service connections; owner
+selected one module opposite each absorber rather than three pairs.
+Status: provisional model generated; connection and selected clearance checks passed.
+
+Use a 4.95–7.15 m annular deck at installation Z=−1.20 m with six modules at
+radius 6.60 m. Dedicated steel bearing pads share the catwalk frame. Route each
+absorber's four existing 25/50 mm stubs to its own module through removable
+spider-side jumpers and under-deck tubing. Add passages to the absorber insulation
+inserts in the installation copy. Original reactor source and prior site snapshots
+remain preserved. Deck/frame sizing, tube thermal treatment, remote connectors,
+access stairs and maintenance qualification remain open. See the
+[installation guide](../../fastSaltModels/docs/installation.md).
+
+## D-035 — Connect sector service plugs to maintenance tanks
+
+Date: 2026-10-12. Source: owner requested piping from the fuel-maintenance tanks
+to the ports on the sector tops. Status: provisional routing generated; connection and
+selected static clearance checks passed.
+
+Retain the three independent 25/50 mm tube pairs per sector and use one dedicated
+tank per sector. The layout assignment is S1→T6, S2→T1, S3→T2, S4→T3, S5→T4,
+S6→T5, keeping the routes ordered around the building. Route through the existing
+removable core-service thermal inserts, outward and beneath the catwalk, then to
+six separate roof nozzles on each tank. Show removable cap-side jumpers and tank
+connections. The actual sector stub coordinates and diameters are retained;
+tank nozzles, wall thickness, unions and routing elevations are provisional.
+This adds visual connectivity, not a fuel-transfer sequence, hydraulic/thermal
+result, tank-internal design or handling qualification. Tube heating/insulation,
+valves, supports and maintenance sweeps remain open. See the
+[installation guide](../../fastSaltModels/docs/installation.md).
+
+## D-036 — Double the absorber-module tank volumes
+
+Date: 2026-10-12. Source: owner requested twice the volume with the same or similar
+aspect ratio. Scale the six absorber tank envelopes uniformly by 2^(1/3), from
+0.640 m diameter × 1.000 m height to 0.80635 × 1.25992 m. Nominal cylinder volume
+changes from 0.32170 to 0.64340 m³ each. Preserve tank bottom elevations and existing
+connections; raise the unchanged control boxes and panels by 259.9 mm. Existing
+module seats accommodate the wider tanks. These are geometric envelope volumes;
+usable salt capacity and increased equipment/support loads remain to establish.
+Earlier installation snapshots remain preserved. See the
+[installation guide](../../fastSaltModels/docs/installation.md).
+
+
+## D-037 — Add paired absorber reservoirs and raise the catwalk
+
+Owner-approved 12 October 2026: two reservoirs and two independent modules per
+absorber (12 of each). Large 50 mm spider lines connect to reservoir bottoms;
+reservoir tops and the separate 25 mm spider lines connect to their matching
+modules. No shared absorber-salt manifold is introduced. Catwalk Z rises from
+−1.20 to +0.50 m; outer radius grows to 7.35 m, inner radius stays 4.95 m.
+Reservoir bottom Z=1.05 m provides 2.70 m fall to the existing spider terminals.
+External drains have continuously descending rounded paths; internal inherited
+paths are checked for no upward step. Pressure/gas displacement and drainage
+rates are not established by that geometric check.
+
+Reservoir dimensions reuse 0.80635 m diameter × 1.25992 m height provisionally;
+capacity is not sized against required absorber inventory. Existing module tanks
+retain D-036 dimensions. New reservoir insulation is a provisional 100 mm with
+1 mm cladding and electric heating allowances; individual service insulation
+is provisionally 50 mm, with a removable common enclosure around close-pitch
+spider tubing. These values reserve space, not thermal performance. Structural
+ratings, access stairs, supports, heater duty, controls and handling sweeps remain
+open. See the [installation guide](../../fastSaltModels/docs/installation.md).
+
+## D-038 — Compact heated bundles beneath liftable insulation
+
+Owner-approved 12 October 2026: replace bulky service enclosures with compact
+insulated tubes and open-bottom channels under the removable insulation covers.
+Only the large absorber salt lines are heated; paired gas lines share insulation.
+Tank-top gas lines are insulated but unheated. All 36 fuel-maintenance lines are
+heated, arranged in six insulated bundles retaining independent tube pairs.
+Twelve reservoirs and twelve modules remain. Catwalk Z=−0.60 m is 1.10 m below
+D-037; tank bottom Z=−0.05 m retains 1.60 m fall to spider terminals. No external
+salt drain has an uphill segment. Fifty-millimetre bundle insulation remains a
+visual allowance, not a thermal sizing result.
+
+The intended mechanical access sequence lifts insulation before disconnecting
+cap-side services. Installation cassette copies have open-bottom channels,
+480 mm local top-up insulation strips, upper headers and channel-edge webs.
+Nominal insulation depth above channels remains 512 mm; pickup heads/guides
+extend 550 mm upward. New structural, mass and thermal assessment is required.
+Pressure parts are unchanged. Selective tube, envelope and sampled cover-lift
+checks do not qualify the full maintenance/operating sequence. Isolated reactor,
+cover study and site snapshots are not automatically refreshed. D-037 remains
+historical; its boxes and elevations are superseded by this decision.
+See the [installation guide](../../fastSaltModels/docs/installation.md).
+
+The accepted D-038 checkpoint is fastSaltModels `8ec6833`, with the saved installation under `baselines/wistr-service-bundles-2026-10-12/`. The owner retained spider penetrations after considering the less accessible vessel-side alternative. Stair access will be developed separately.
+
 ## Proposals not yet adopted
 
 - A common Python engineering definition with adapters for graphics and analysis tools.

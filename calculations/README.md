@@ -91,3 +91,54 @@ well or decay-heat cooling. [Verification](reactor/reactor-top-insulation-check.
   per-layer runner/collar and accumulated hanger/ceramic-bearing screening, direct-seating average pressure,
   and explicitly imported lifted-only upper-frame result. Supersedes the tray/post
   assumptions of the previous rigid-cover sheet for this revision.
+
+
+## Rankine-cycle power plant
+
+[Rankine cycle - Hurmet](power-cycle/Rankine%20cycle%20-%20Hurmet.md) presents the
+first regenerative main-steam-reheat case from the owner's system diagram,
+with a 5 kPa condenser. Steam properties and coupled extraction fractions are
+explicitly imported from a versioned Python/CoolProp calculation. Hurmet handles
+flow/power scaling and the conditional condenser estimate. See the
+[design basis, state table and checks](power-cycle/README.md).
+
+
+[Cooling-water cases - Hurmet](power-cycle/Cooling-water%20cases%20-%20Hurmet.md)
+checks the accepted 20/30/35°C inlet-water assumptions against one unchanged
+condenser envelope. Coupled pressures and cycle results are explicitly imported;
+Hurmet verifies thermal area and water temperature rise.
+
+
+[Selected reheat and wetness - Hurmet](power-cycle/Selected%20reheat%20and%20wetness%20-%20Hurmet.md)
+is the current preliminary power-cycle basis (D-026). It replaces the initial
+4 MPa / 470°C trial for equipment studies, retaining its source/results for
+comparison. A single main-steam reheater at revised pressures meets the provisional
+moisture and thermal-approach screens with a 5 kPa condenser floor.
+
+
+[Power plant equipment sizing - Hurmet](power-cycle/Power%20plant%20equipment%20sizing%20-%20Hurmet.md)
+adds preliminary exchanger areas, turbine exhaust passages, generators, pump duties,
+deaerator storage and main/extraction pipe bores. [Sizing notes](power-cycle/equipment-sizing-notes.md)
+distinguish calculated requirements from layout allowances. The higher proposed
+pump pressures need cycle reclosure before updating performance; no graphics change.
+
+
+[BFP drive comparison — Hurmet](power-cycle/BFP%20drive%20comparison%20-%20Hurmet.md)
+compares matched steam/electric pump drives with rebalanced heater extractions and
+proposed pump pressure budgets. Electric drive has a conditional 4 MW penalty,
+with increased reheater capacity; a candidate for review, not a replacement of
+the selected equipment or diagram. Python and Hurmet checks are recorded with it.
+
+
+[Motor-BFP equipment sizing — Hurmet](power-cycle/Motor-BFP%20equipment%20sizing%20-%20Hurmet.md)
+is the current preliminary equipment revision (D-029): revised reheater, generators,
+electric pump supplies and pipe bores, with the first dimensional building draft.
+Earlier steam-drive schedules remain historical references. Fifty Hurmet numerical
+comparisons, two sensitivities and four-case pipe-velocity checks passed.
+
+
+[Maintenance fuel tank capacity — Hurmet](reactor/Maintenance%20fuel%20tank%20capacity%20-%20Hurmet.md)
+compares one tank with the full gross core-sector envelope. At 50% cooling-pipe
+occupancy, the modeled tank provides 11.81 m³ versus a 6.43 m³ sector envelope.
+This preliminary check uses exterior tank dimensions; internal construction,
+freeboard and connected-pipe fuel inventory remain to be resolved.

@@ -25,7 +25,7 @@ This repository organizes the project definition, research evidence, component i
 
 The University of Michigan team has documented the evolution of WISSR and WISTR through neutronics, fuel-cycle, and thermal-fluid analyses. Subsequent accident-scenario work is ongoing, as reported by the project owner. Michigan State University students are developing the steam-generator concept. The mechanical and installation graphics are maintained in the separate [fastSaltModels project](../fastSaltModels/README.md).
 
-The current graphics checkpoint is fastSaltModels commit `a99002f`, “Preserve insulated WISTR installation and floor-routed reactor air supply,” with [saved scenes and reports](../fastSaltModels/baselines/wistr-insulated-installation-2026-10-11/). Commit `0d981f2` retains the earlier reactor handling and tube-plug baseline. It is a geometric concept baseline; it does not establish mass properties, structural capacity, or agreement with every analysis model.
+The current graphics checkpoint is fastSaltModels commit `8ec6833`, “Preserve WISTR service bundles and Fast Salt plant layout,” with the accepted [installation scene, views and checked report](../fastSaltModels/baselines/wistr-service-bundles-2026-10-12/). It preserves the under-cover service bundles, lowered catwalk and paired absorber reservoirs, together with the developed turbine/site sources. The earlier insulated installation remains at `a99002f`. Commit `0d981f2` retains the earlier reactor handling and tube-plug baseline. It is a geometric concept baseline; it does not establish mass properties, structural capacity, or agreement with every analysis model.
 
 ## Repository organization
 

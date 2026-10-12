@@ -1,0 +1,14 @@
+{
+  "ElectricPumpLoad": 24.95786538373793,
+  "SteamComparisonOutput": 675.6222580546566,
+  "ElectricComparisonOutput": 671.5900832428524,
+  "OutputPenalty": 4.032174811804225,
+  "RelativeOutputPenalty": 0.5968090547244862,
+  "SteamEfficiencyPercent": 45.04148387031044,
+  "ElectricEfficiencyPercent": 44.77267221619016,
+  "EfficiencyPenaltyPoints": 0.2688116541202774,
+  "ReheaterDutyIncreasePercent": 12.6078168676786,
+  "DutyPerPump": 11.854986057275514,
+  "ElectricalDutyPerPump": 12.478932691868964,
+  "MotorShaftMarginPercent": 26.529039574823976
+}

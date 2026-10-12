@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "basis": "bfp-drive-comparison.json / proposed_pressure_comparison.electric; exact 5 kPa condenser case; all pressures absolute",
+  "original_diagram_author": "Thomas J. Wielenga",
+  "sources": [
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSalt/calculations/power-cycle/bfp-drive-comparison.json",
+      "sha256": "8c4b58352f462978f624f7b458e67b1e25122fee611ecb87cb70b12b5f2c3b79"
+    },
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSalt/calculations/power-cycle/BFP drive comparison - Hurmet.md",
+      "sha256": "aea7599068b8ab39ee6c74c9915adc0490f14fb455da0176b2ccce4530aaf809"
+    },
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSalt/calculations/power-cycle/reheat-selection.json",
+      "sha256": "eda8391e0fef20ae71c36a711a8f8fc8142972914360429a6b1b6119fb9be455"
+    },
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSalt/calculations/power-cycle/cooling-cases.json",
+      "sha256": "32fd8be3088d9b5aa524099a49a3020161819c29b404022b83f28185006417ac"
+    },
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSalt/presentations/rankine-cycle-2026-10-11/Fast-Salt-Rankine-cycle-2026-10-11-v2.pptx",
+      "sha256": "80fb48b1b063f834c81be598af1c4a0210b0127d3436e94d6443991564ae98b7"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "Fast-Salt-Rankine-cycle-motor-BFP-2026-10-11.pptx",
+      "sha256": "f18b0c0e3f6e91fe89badb5da51e7d3b7d8819fdb6ab296fe18802d36f50bf87"
+    },
+    {
+      "file": "Fast-Salt-Rankine-cycle-motor-BFP-2026-10-11.png",
+      "sha256": "546f0a5c10272efdfa8fb403b5e340f2771d839c95adb47ffab0d00d9d8f8661"
+    }
+  ],
+  "authoring_source": {
+    "file": "build-diagram-motor.mjs",
+    "sha256": "05b7556f6824272c588459f770c076e6e0bce192caea79272564a2eb720e4adc"
+  },
+  "editable": "Native PowerPoint shapes and text",
+  "scope": "Motor BFP diagram alternative; earlier steam-drive diagrams and equipment schedule preserved",
+  "validation": "Package, geometry, reference Arial font policy, one slide, first-party import, numeric-label/native-editability checks and final visual review passed."
+}

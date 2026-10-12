@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11",
+  "basis": "selected_at_5kPa; all pressures absolute",
+  "original_diagram_author": "Thomas J. Wielenga",
+  "sources": [
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSalt/calculations/power-cycle/reheat-selection.json",
+      "sha256": "eda8391e0fef20ae71c36a711a8f8fc8142972914360429a6b1b6119fb9be455"
+    },
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSalt/calculations/power-cycle/Selected reheat and wetness - Hurmet.md",
+      "sha256": "623aa00a5ea426b79e4f5086e185d128f5bb556c9dd64acf4154f84d0505cd3c"
+    },
+    {
+      "path": "/Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Steam Generator/graphics/Diagram.pdf",
+      "sha256": "9ca0b52b2144cef3379441520586d227a4d6264984361ee103fb3a05e87bba21"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "Fast-Salt-Rankine-cycle-2026-10-11.pptx",
+      "sha256": "4eec751d2e0d0d49011369b59cd5bf858c4b9544c728332caf4514114b5ebeea"
+    },
+    {
+      "file": "Fast-Salt-Rankine-cycle-2026-10-11.png",
+      "sha256": "847162b87fb6f8be530e50426efcba8fc8dd973936f8fb9605334c2dd56d5f6a"
+    },
+    {
+      "file": "Fast-Salt-Rankine-cycle-2026-10-11-v2.pptx",
+      "sha256": "80fb48b1b063f834c81be598af1c4a0210b0127d3436e94d6443991564ae98b7"
+    },
+    {
+      "file": "Fast-Salt-Rankine-cycle-2026-10-11-v2.png",
+      "sha256": "878de130b8b19ef78133d5f1a22657d34353a305234b06993d8ae70c58bb53e1"
+    }
+  ],
+  "editable": "Native PowerPoint text and shapes; no flattened slide image",
+  "validation": "Package, slide geometry, Arial font policy and first-party import passed; final render visually reviewed; selected output and heater temperatures checked against JSON.",
+  "revision": 2,
+  "changes": "Full extraction and reheater-return paths; no cycle calculation changes."
+}

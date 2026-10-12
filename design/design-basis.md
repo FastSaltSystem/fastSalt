@@ -169,3 +169,173 @@ of three pairs are adapted only in the installation copy. All 19 process routes
 have separate metal/insulation meshes. The current draft preserves 5 m hoist-body
 clearance and passes selective envelope/connection/access checks; this does not
 approve pressure design, structural loads or complete maintenance reach.
+
+
+## Cooling-water environmental basis — 11 October 2026
+
+Owner-accepted provisional condenser-water inlet temperatures: **20°C normal
+reference, 30°C hot design case, 35°C extreme check** (D-025). These are not air
+temperatures or weather percentiles. No cooling tower, water source or site has
+been selected. The initial 5 kPa condenser condition remains the 20°C reference;
+it is not imposed at all inlet temperatures. Permissible hot-day pressure/output
+and minimum operating pressure remain to determine. See the
+[cooling-case results](../calculations/power-cycle/README.md#accepted-cooling-water-cases--11-october-2026).
+
+
+## Selected preliminary power cycle — 11 October 2026
+
+D-026 selects 2.8 MPa HP exhaust, 2.66 MPa/510°C hot reheat and 380°C high-pressure
+heating return, with 1.6/1.0 MPa feed-pump-turbine heater extractions. Main-steam
+conditions and 1,500 MW heat input remain inherited targets. A 5 kPa minimum
+condenser pressure is a provisional modeling/control requirement at these reheat
+conditions, not a qualified turbine limit. The selected cycle meets the 10% LP
+moisture screen for the accepted cooling-water cases; it does not establish
+blade-erosion acceptability or a net plant output. See the
+[selected cycle basis](../calculations/power-cycle/README.md#selected-working-cycle--11-october-2026).
+
+
+## Preliminary power-plant equipment allowances — 11 October 2026
+
+[D-027](../decisions/index.md#d-027--develop-preliminary-power-plant-equipment-sizes)
+adds [equipment-sizing requirements and candidates](../calculations/power-cycle/equipment-sizing-notes.md):
+~38,500 m² condenser surface in three modules, ~8,200 m² conditional reheater
+surface in four modules, six candidate LP exhaust flows, seven heater thermal
+areas, generator capacities, pump allowances and ten-minute deaerator storage.
+The 45 × 24 × 20 m turbine building has not been verified against these items.
+Proposed 26.5/1.0 MPa feedwater/condensate discharge pressures and 14 m deaerator
+minimum level are sizing allowances requiring coupled-cycle and pump verification;
+they do not supersede the D-026 numerical performance case yet.
+
+
+## Motor-BFP equipment and turbine-hall revision — D-029
+
+The owner authorized resizing for motor-driven BFPs. Use the
+[current worksheet](../calculations/power-cycle/Motor-BFP%20equipment%20sizing%20-%20Hurmet.md)
+and [equipment JSON](../calculations/power-cycle/motor-equipment-sizing.json).
+This supersedes the D-027 equipment allowances for working layout purposes,
+while retaining that calculation as a historical reference. The BFP comparison
+remains the property/heat-balance source; the revised main/IP heater ports and
+higher pump duties are represented there. The pump pressure allowance is still
+an aggregate rather than a solved distributed steam/water network.
+
+Reheater area is 9,122 m² in four 16 × 3.25 × 3.25 m reservations; generator
+allowances 550 and 350 MVA. Keep three 50% BFPs with 15 MW motor allowances and
+reserve one 20 MVA BFP-only supply transformer per train. Main reactor/SG duties
+and main header bores are unchanged. Revised internal bores and their checks
+are in the worksheet; new pressure-wall and insulation designs are not implied.
+
+A first dimensional arrangement reserves a 66 × 40 × 28 m main hall plus a
+20 × 10 × 7 m electrical annex, replacing the unverified 45 × 24 × 20 m box.
+Its east wall remains at X=−36 m, preserving the reactor pipe interface; the
+building expands westward and transversely. Withdrawal aprons and removable
+wall panels are needed. The plan is one candidate, not a minimum: main pipe
+routes, columns, decks, full egress, crane/rotor handling and remaining auxiliary
+plant are unresolved. Fuel-preparation envelope is unchanged.
+
+D-030 revises the arrangement within that same hall: reheaters grouped at the
+east steam entry, LP casings/condensers west, BFPs between the LP and HP heater
+banks, and the reversed HP/IP train placing its generator beside the LP
+unit's generator. DA storage and the south electrical annex move to the central
+pump/generator zone. Equipment sizes and cycle results remain those of D-029;
+this geometric arrangement does not establish piping or electrical losses.
+
+D-031 shortens the current working hall to **60 × 40 × 28 m**, centre (−66, −10) m,
+with the east wall still X=−36 m. The three BFP trains rotate to 4 × 10 m plan
+reservations and sit side by side, with 2 m gaps, 2 m front access and the existing
+3 m cross aisle. HP heaters and reheaters move inward. The 20 × 10 × 7 m annex
+and equipment sizes/capacities stay unchanged. The 240 m² floor-area reduction
+is geometric; complete piping, civil and maintenance fit remains unverified.
+
+D-032 aligns the reactor and turbine-hall centres at world Y=0, moving the turbine
+hall centre to (−66, 0) m. Reactor geometry and hall dimensions stay unchanged.
+Both secondary pipes bend near X=−28 m onto Y=−4.19484 m and enter the hall's
+east wall at X=−36 m at right angles. Internal terminals at X=−39 m and local
+Y=15.80516 m have matching straight tangents. This supersedes the former diagonal
+site approach; pipe pressure, insulation and flexibility assumptions are unchanged.
+
+D-033 refines the D-032 external approach with two 45° offset bends per pipe.
+Parallel westward end runs require a separate 20° alignment turn at the original
+reactor-side outlet, just outside the reactor. Only the site copy of each building
+connection is extended; upstream routes and the existing reactor wall penetration
+are retained. Building positions, turbine interfaces, elevations and pipe dimensions
+are unchanged. Bend intersections are approximately (−27.2, −8.89252) and
+(−31.89768, −4.19484) m; these are control intersections, rounded by the model.
+
+## Reactor catwalk and absorber services — D-034
+
+The 12 October 2026 installation draft uses a shared expanded-metal annular deck,
+radii 4.95–7.15 m, at Z=−1.20 m (7.90 m above the equipment floor). Six modules at
+radius 6.60 m align with absorbers 1–6 at 45° + 60° increments. Four external tubes
+per absorber retain two 25 mm and two 50 mm ODs, provisionally 2 mm walls, and
+connect the actual spider stubs to the module base. The route rises through bored
+removable insulation inserts, turns down inside the catwalk and continues beneath
+the deck. Visible coupling allowances identify removable spider-side jumpers;
+detailed remote disconnects and thermal treatment are unresolved. This revises
+the former three paired platforms. Structural load rating, access stairs and
+complete lifting clearances remain to establish. Site snapshots still reference
+the previous installation until explicitly refreshed.
+
+## Sector-to-maintenance-tank services — D-035
+
+The 12 October 2026 layout connects each sector's three 25/50 mm service pairs
+to one dedicated fuel-maintenance tank. Provisional assignment: sectors 1–6 to
+tanks 6, 1, 2, 3, 4, 5 respectively. All 36 lines start at the existing plug stubs;
+tank roof nozzles are new layout allowances. Bored removable thermal inserts and
+cap-side disconnect allowances retain the intended maintenance sequence. Routes
+sweep under the catwalk before turning down to tank roof connections. Tube sizes
+are inherited from the core model, including provisional 2 mm walls; fuel-transfer
+operation, thermal treatment, valves, supports and tank internals are not resolved
+by these graphics. The earlier site scene remains unchanged until refreshed.
+
+## Absorber tank volume revision — D-036
+
+All six absorber-module cylindrical tanks increase uniformly by 2^(1/3), retaining
+their height/diameter ratio of 1.5625. Current envelope dimensions: diameter
+0.806349 m, height 1.259921 m; nominal volume 0.643398 m³ each, twice the previous
+0.321699 m³. Bottom connections and module positions remain fixed. Control boxes
+retain their dimensions and rise 0.259921 m. Catwalk/seat footprints are unchanged;
+usable capacity and revised loads require their own engineering basis.
+
+## Paired absorber reservoirs and gravity-drain routing — D-037
+
+Owner-approved 12 October 2026: two reservoirs and two independent modules per
+absorber (12 of each). Large 50 mm spider lines connect to reservoir bottoms;
+reservoir tops and the separate 25 mm spider lines connect to their matching
+modules. No shared absorber-salt manifold is introduced. Catwalk Z rises from
+−1.20 to +0.50 m; outer radius grows to 7.35 m, inner radius stays 4.95 m.
+Reservoir bottom Z=1.05 m provides 2.70 m fall to the existing spider terminals.
+External drains have continuously descending rounded paths; internal inherited
+paths are checked for no upward step. Pressure/gas displacement and drainage
+rates are not established by that geometric check.
+
+Reservoir dimensions reuse 0.80635 m diameter × 1.25992 m height provisionally;
+capacity is not sized against required absorber inventory. Existing module tanks
+retain D-036 dimensions. New reservoir insulation is a provisional 100 mm with
+1 mm cladding and electric heating allowances; individual service insulation
+is provisionally 50 mm, with a removable common enclosure around close-pitch
+spider tubing. These values reserve space, not thermal performance. Structural
+ratings, access stairs, supports, heater duty, controls and handling sweeps remain
+open. See the [installation guide](../../fastSaltModels/docs/installation.md).
+
+## D-038 — Compact heated bundles beneath liftable insulation
+
+Owner-approved 12 October 2026: replace bulky service enclosures with compact
+insulated tubes and open-bottom channels under the removable insulation covers.
+Only the large absorber salt lines are heated; paired gas lines share insulation.
+Tank-top gas lines are insulated but unheated. All 36 fuel-maintenance lines are
+heated, arranged in six insulated bundles retaining independent tube pairs.
+Twelve reservoirs and twelve modules remain. Catwalk Z=−0.60 m is 1.10 m below
+D-037; tank bottom Z=−0.05 m retains 1.60 m fall to spider terminals. No external
+salt drain has an uphill segment. Fifty-millimetre bundle insulation remains a
+visual allowance, not a thermal sizing result.
+
+The intended mechanical access sequence lifts insulation before disconnecting
+cap-side services. Installation cassette copies have open-bottom channels,
+480 mm local top-up insulation strips, upper headers and channel-edge webs.
+Nominal insulation depth above channels remains 512 mm; pickup heads/guides
+extend 550 mm upward. New structural, mass and thermal assessment is required.
+Pressure parts are unchanged. Selective tube, envelope and sampled cover-lift
+checks do not qualify the full maintenance/operating sequence. Isolated reactor,
+cover study and site snapshots are not automatically refreshed. D-037 remains
+historical; its boxes and elevations are superseded by this decision.
+See the [installation guide](../../fastSaltModels/docs/installation.md).
