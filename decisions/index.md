@@ -954,6 +954,12 @@ Affected: [site model and guide](../../fastSaltModels/docs/site-study.md#interna
 
 The area ratio uses clear bores: 1.794 m exhaust bore → 1.55365 m inlet bore (1.55965 m OD with provisional 3 mm wall). Outdoor intakes use the same diameter as a layout allowance. Air paths clear selected piping and stair envelopes; the coolant supply drop shifts to (3.8, 16.5) m. Both headers recess around columns. A local cold-header outer-wall pocket at 340° preserves coolant-tank clearance but reduces local passage below the 6.25 m² nominal section. Airflow, local losses, support/structural design and complete access remain unqualified. See [the current model guide](../../fastSaltModels/docs/site-study.md#generator-air-inlets-and-complete-column-layout--d-050).
 
+## D-051 — Add illustrative turbine-hall machinery detail
+
+12 October 2026. The owner requests more equipment detail in the steam power plant. Replace opaque reservation boxes with recognizable turbine and generator housings, pump/motor sets, condenser shells, reheaters, feedwater heaters and deaerator/storage drums. Retain the existing hall, equipment envelopes, cycle sizing and main pipe terminals. Add local casing connectors, shaft alignment at a provisional 15.2 m above floor, and guarded couplings in the five existing train gaps.
+
+The owner accepted this visual checkpoint and requested commits; fastSaltModels `094d4a3` preserves [the named snapshot](../../fastSaltModels/baselines/turbine-equipment-2026-10-12/). Generic casing profiles, bolt patterns, saddles and coupling dimensions do not qualify supplier equipment or structural/pressure design. The model guide records containment and connection checks, preserved routing limitations and omitted upper structures/auxiliary circuits. Source and affected model: [turbine equipment detail](../../fastSaltModels/docs/turbine-equipment.md). The previously accepted site baseline remains preserved separately.
+
 ## Proposals not yet adopted
 
 - A common Python engineering definition with adapters for graphics and analysis tools.

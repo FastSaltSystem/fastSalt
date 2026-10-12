@@ -4,7 +4,9 @@ Updated 12 October 2026. This is the working handover for the **Fast Salt System
 
 ## Current materials
 
-Accepted site checkpoint: fastSaltModels `a6bbc77`, preserved with its Blender scene, key views, checked reports and hash manifest in [the 12 October site baseline](../fastSaltModels/baselines/fast-salt-site-2026-10-12/). It includes D-043–D-050 and the final 1.35 m generator-inlet elevation. Routine outputs remain ignored.
+Accepted turbine equipment checkpoint: fastSaltModels `094d4a3`, preserved with the complete Blender site, three inspection views, checked reports and hash manifest in [the turbine equipment baseline](../fastSaltModels/baselines/turbine-equipment-2026-10-12/). It adds D-051 machinery detail to the retained layout.
+
+Earlier site checkpoint: fastSaltModels `a6bbc77`, preserved with its Blender scene, key views, checked reports and hash manifest in [the 12 October site baseline](../fastSaltModels/baselines/fast-salt-site-2026-10-12/). It includes D-043–D-050 and the final 1.35 m generator-inlet elevation. Routine outputs remain ignored.
 
 | Area | Current state | Start here |
 | --- | --- | --- |
@@ -27,6 +29,8 @@ D-046 adds low insulated salt-storage distribution in the composed site: a fuel 
 D-047 adds three fuel pressure servers, twelve 25 mm tank gas tubes and paired supply/off-gas headers through the shared duct. The nitrogen skid now feeds the off-gas building from beside its west wall. [Current arrangement](../fastSaltModels/docs/site-study.md#fuel-pressure-servers-and-nitrogen-relocation--d-047).
 
 D-050 completes the reactor-building columns and adds three outdoor fresh-air inlets plus horizontally centered generator-side valve boxes, subsequently lowered to 1.35 m above floor with short level duct connections. Inlet bores give 75% of exhaust clear area; selected route/equipment checks cover the enlarged connections. [Current air layout](../fastSaltModels/docs/site-study.md#generator-air-inlets-and-complete-column-layout--d-050).
+
+The accepted turbine-hall visual checkpoint adds [recognizable machinery exteriors and inspection views](../fastSaltModels/docs/turbine-equipment.md) (D-051), retaining the equipment reservations and all main pipe terminals. Upper-level structures and supplier geometry remain to develop.
 
 ## Next work, in order
 
