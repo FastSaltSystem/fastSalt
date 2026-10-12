@@ -746,6 +746,87 @@ See the [installation guide](../../fastSaltModels/docs/installation.md).
 
 The accepted D-038 checkpoint is fastSaltModels `8ec6833`, with the saved installation under `baselines/wistr-service-bundles-2026-10-12/`. The owner retained spider penetrations after considering the less accessible vessel-side alternative. Stair access will be developed separately.
 
+## D-039 — Add stair access to the reactor catwalk
+
+Owner requested a stairway on 12 October 2026. The draft uses three switchback
+flights in the clear bay at radius 14 m and installation angle 210°. An
+approximately 8.2 m bridge with two bends avoids the hot-salt riser and joins
+the catwalk at 195° through a 1.30 m rail
+opening between module stations. Independent columns carry the stair; no support
+is attached to the vessel. The 8.50 m rise uses 48 equal 177.1 mm risers, 280 mm
+going, at least 1.20 m clear width and two 1.20 m deep intermediate landings.
+These dimensions and framing are provisional layout choices. Actual stair solids and 52 walking/headroom volumes reserve 2.10 m clearance
+and are screened against existing equipment and services with all collections
+evaluated. Side trusses indicate the provisional bridge support arrangement. Complete egress, strength, foundations, handrail
+detail and operational access remain unresolved. The earlier D-038 checkpoint
+is preserved; the site composition is not automatically refreshed.
+See the [installation guide](../../fastSaltModels/docs/installation.md#catwalk-stairway--12-october-2026).
+
+## D-040 — Internal hot-air header and direct reactor-to-stack exhaust
+
+On 12 October 2026 the owner requested replacing the exterior upper concrete
+ring with an insulated duct inside the building, aligning the stack with the
+reactor exhaust for a direct connection, and retaining a large manifold for the
+steam generators because they have the highest maximum heat load. The proposed
+smaller manifold is superseded by this final direction.
+
+The working visual header has 2.50 × 2.702 m clear section (6.755 m²), preserving
+the previous ring's passage area, at radius 18.75 m and Z=10 m. A provisional
+3 mm shell, 100 mm external insulation and 1 mm cladding give 246 mm wall
+clearance and 850 mm clearance below the crane runway. The three generator
+roof exhausts and six fuel-tank exhausts feed it; it connects independently to
+the stack through a 2.4 m duct. The stack moves to angle 135°, radius 27 m.
+The reactor's 2 m hot-air duct runs straight at outlet elevation Z=−2.77 m to
+the same stack, bypassing the header. The external lower concrete fresh-air
+ring remains. Dimensions are provisional geometry, not calculated heat-removal
+capacity; maximum duties, airflow, losses, buoyancy, insulation and supports
+require assessment. Existing named baselines remain unchanged; site composition
+is not automatically refreshed. See the
+[installation guide](../../fastSaltModels/docs/installation.md#internal-hot-air-header-and-direct-reactor-exhaust--12-october-2026).
+
+## D-041 — Larger centred generator exhausts and auxiliary supplies
+
+Owner requests of 12 October 2026: centre and double all three generator hot-air
+outlets; add a 50 mm line from reactor bottom through a pump near coolant storage
+to its bottom; add an outdoor liquid-nitrogen supply; insulate coolant storage.
+The owner confirmed 50 mm OD with heating/insulation, and a provisional nitrogen
+tank, vaporizer and common header with consumer branches deferred.
+
+The visual draft uses 1.8 m generator exhaust OD (2.002 m insulated), 2.2 m square
+valve boxes with unchanged height, a 50 mm OD / provisional 3 mm wall transfer
+tube with 50 mm radial insulation, and a small unsized motor-pump envelope.
+The coolant tank is raised 0.9 m for bottom entry, with provisional 350 mm
+side/top/bottom insulation and 1 mm jacket, borrowing the return-salt allowance.
+An outdoor nitrogen vessel envelope of 2.5 m diameter × 6.5 m height is placed
+at radius 28.5 m, 330°, with ambient vaporizer, regulator panel and 50 mm gas
+header with three capped future takeoffs. Final tank capacity, equipment duties,
+thermal performance, pressure boundaries, supports and cryogenic system design
+remain open. These are visual layout choices, not selected equipment ratings.
+See the [installation guide](../../fastSaltModels/docs/installation.md#generator-exhausts-coolant-transfer-and-nitrogen-supply--12-october-2026).
+
+## D-042 — Catwalk-level laydown and mobile sector removal
+
+**12 October 2026 — owner direction; dimensions provisional.** Remove the fixed
+sector-storage facility. Bring a canister on a cart to receive a core sector,
+then remove it through the equipment door. Add temporary storage surfaces for
+one insulation cover and one sector cap at catwalk level.
+
+The draft uses an independently supported 8.7 × 6.1 m platform at Z=−0.6 m,
+above the maintenance fuel tanks, with separate receiving bays and a bridge at
+15°. Existing stair access remains at 195°. Receiving supports, deck loading
+and demountable framing for future tank access remain to detail. A 3.6 × 3.25 m
+cart carries a provisional 2.95 m-ID × 6 m-clear canister. Overall 6.33 m height
+leaves 0.17 m beneath the present door; reserve is tight and must be revisited
+with shielding, cooling, load capacity and restraints. The envelope accommodates
+the modeled core with attached tubes, not an established transport package.
+Selected geometry checks and inspection-only cover/cap placement are documented
+in the [installation guide](../../fastSaltModels/docs/installation.md#maintenance-laydown-and-mobile-sector-canister--12-october-2026).
+
+The accepted D-039–D-042 checkpoint is fastSaltModels `06a13ef`. The saved scene,
+selected review views, geometry report and hash manifest are preserved in
+[the maintenance baseline](../../fastSaltModels/baselines/wistr-maintenance-2026-10-12/).
+Earlier baselines and the site snapshot remain unchanged.
+
 ## Proposals not yet adopted
 
 - A common Python engineering definition with adapters for graphics and analysis tools.
