@@ -2,7 +2,7 @@
 
 Curated local index, established 10 October 2026. Markdown is the authoritative editable index. Original files remain in place; the links below point to documents on this Mac.
 
-The 14 entries are work groups, including conference papers, presentations, journal manuscripts, a technical report, and working notes. They are not a count of published papers. Preferred reading copies are provisional where noted. Dates come from document contents where available, not filesystem modification dates. DOI strings were transcribed from inspected documents and have not been checked online.
+The 16 entries are work groups, including conference papers, presentations, journal manuscripts, a technical report, and working notes. They are not a count of published papers. Preferred reading copies are provisional where noted. Dates come from document contents where available, not filesystem modification dates. DOI strings were transcribed from inspected documents and have not been checked online.
 
 See [curation notes](curation-notes.md) for aliases, duplicates, historical versions, and publication-status questions.
 
@@ -13,7 +13,7 @@ See [curation notes](curation-notes.md) for aliases, duplicates, historical vers
 - **Design history:** [W10](#w10)
 - **Fuel cycle:** [W03](#w03), [W04](#w04), [W10](#w10), [W11](#w11)
 - **Fuel handling:** [W05](#w05)
-- **Fuel processing:** [W09](#w09)
+- **Fuel processing:** [W09](#w09), [W15](#w15), [W16](#w16)
 - **Materials:** [W12](#w12)
 - **Neutronics:** [W01](#w01), [W02](#w02), [W03](#w03), [W04](#w04), [W08](#w08), [W10](#w10), [W11](#w11), [W14](#w14)
 - **System overview:** [W07](#w07)
@@ -37,6 +37,8 @@ See [curation notes](curation-notes.md) for aliases, duplicates, historical vers
 | [W12](#w12) | Undated | Corrosion Mitigation in Static Salt Reactors |
 | [W13](#w13) | Undated | CFD Analysis on Slab Model for Annular Fuel Chamber of Stable Molten Salt Reactor |
 | [W14](#w14) | Undated | Estimating Criticality |
+| [W15](#w15) | 2025-12-29 (footer) | Fast Salt Waste Converter |
+| [W16](#w16) | 2025-12-19 (footer) | Liquid Metal Fast Salt Refiner |
 
 ## W01
 
@@ -290,6 +292,36 @@ Related files:
 
 - [Criticality Plot.svg](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Papers and Presentations/Criticality Estimation/Criticality Plot.svg>)
 - [Criticality Plot.idraw](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Papers and Presentations/Criticality Estimation/Criticality Plot.idraw>)
+
+## W15
+
+### Fast Salt Waste Converter
+
+- **Author:** Thomas Wielenga, Ph.D.
+- **Displayed date:** 2025-12-29 in document footer; retained as printed, not inferred from filename or filesystem dates.
+- **Status:** Owner-supplied current concept report, received 12 October 2026. Publication and technical validation status not established.
+- **Reference copy:** [Fast Salt Converter3.docx](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/FS Converter/Fast Salt Converter3.docx>)
+- **SHA-256 at review:** `7e7a6d91fbd63fe14b61a3c7acc5bf50d1d970ae4ddc91e0007e11f54c6d972c`
+
+Indexed for system scope and dimensional evidence. The owner identifies this as
+a current reference; this does not establish that every option in it is selected.
+No building footprint or complete dimensioned equipment arrangement was identified.
+See the [review](../design/conversion-refining-review.md#current-converter-and-refiner-reports).
+
+## W16
+
+### Liquid Metal Fast Salt Refiner
+
+- **Author:** Thomas Wielenga, Ph.D.
+- **Displayed date:** 2025-12-19 in document footer; retained as printed, not inferred from filename or filesystem dates.
+- **Status:** Owner-supplied current concept report, received 12 October 2026. Publication and technical validation status not established.
+- **Reference copy:** [Liquid Metal Fast Salt Refiner_4.docx](</Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/FS Recycler/Liquid Metal Fast Salt Refiner_4.docx>)
+- **SHA-256 at review:** `2a445a423a932587b01986a99cd1d3d5cdcfe5614a89b2a3233dcbbb4fe71d89`
+
+Indexed for system scope and dimensional evidence. The owner identifies this as
+a current reference; this does not establish that every option in it is selected.
+No building footprint or complete dimensioned equipment arrangement was identified.
+See the [review](../design/conversion-refining-review.md#current-converter-and-refiner-reports).
 
 ## Additional system presentation
 

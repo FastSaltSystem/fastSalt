@@ -827,6 +827,133 @@ selected review views, geometry report and hash manifest are preserved in
 [the maintenance baseline](../../fastSaltModels/baselines/wistr-maintenance-2026-10-12/).
 Earlier baselines and the site snapshot remain unchanged.
 
+## D-043 — Attached off-gas and fuel/coolant salt-preparation buildings
+
+**12 October 2026 — owner direction; envelopes provisional.** Add an off-gas
+treatment building attached to the reactor building. Reactor gas is treated
+before release. The owner selected a **separate release stack** for the draft.
+Place fuel and coolant salt preparation adjacent to it and also attached to
+the reactor building. Salt arrives in canisters, is purified/melted, and is
+supplied to the reactor building as liquid through separate pipes.
+
+The owner then requested halving each building's length and width (one-quarter
+area), a shared pipe/tube duct, and **5 m height for both buildings**. The current
+north-side envelopes are 10 × 11 × 5 m for off-gas at (−1, 31.5) m, and
+15 × 12 × 5 m for salt preparation at (11.5, 32) m. They share a boundary at
+X=4 m and one enclosed 4 m-wide, 1 m-high service duct across the fresh-air
+ring. Its underside clears the ring by 0.3 m and its roof is 4.66 m above the
+building floor. Gas, fuel and coolant retain separate lines inside it.
+Canister receiving remains on the north side through a 6 × 4.2 m opening;
+the existing reactor equipment door and transfer lane remain available.
+The separate 0.8 m × 22 m release-stack envelope moves to (−7.5, 35.5) m.
+Equipment placeholders shrink in plan to suit; heights and pipe diameters are
+retained. These dimensions do not establish process duties or equipment capacity.
+
+The model shows functional equipment reservations, a provisional reactor gas
+collection terminal, and insulated liquid fuel/coolant lines ending at reserved
+reactor-side tie-ins. It does not select purification chemistry or qualify gas
+treatment performance. Detailed reactor-side collection/distribution, process
+duties, supports, confinement and handling remain to design. The turbine hall
+and its existing cycle/piping definition are retained. See the
+[site guide](../../fastSaltModels/docs/site-study.md#attached-off-gas-and-salt-preparation-buildings--12-october-2026).
+
+## D-044 — Horseshoe fuel handling and radioactive fuel return
+
+**12 October 2026 — owner direction; floor-plan study authorized.** Fuel salt
+is both supplied and removed for recycling. Arrange remote fuel-handling
+equipment in a horseshoe around a central observation post, with shielded
+viewing and manipulation areas outside. Use the EBR-II Fuel Cycle Facility
+as an architectural reference. Develop a dimensioned plan before rebuilding
+the site model.
+
+The proposed study uses a 28 m outer span, 7 m-clear central room, 4.5 m radial
+equipment band, 2.5 m outer gallery, and 1.5 m placeholder shielding bands.
+An 8 m fuel-building height allows a 6.5 m clear cell plus 1.5 m overhead
+reservation. The separate 12 × 12 × 5 m coolant annex and these dimensions are
+**proposals, not approved engineering requirements**. Off-gas remains 10 × 11 ×
+5 m with a separate stack. Fuel supply and radioactive return are distinct
+interfaces within the shared service-entry concept. Return-line sizing and
+process operations are not selected.
+
+The existing D-043 Blender geometry remains current until this plan is
+reviewed and integrated. The reference values, drawings, checks and limitations
+are in the [fuel-handling study](../../fastSaltModels/docs/fuel-handling-study.md).
+
+### D-044 clarification — conversion separate from liquid-salt refining
+
+After reviewing Fast Salt System revision 5, the owner clarifies that incoming
+spent-fuel conversion occupies a separate building. The horseshoe building
+under discussion refines crude converter salt and recycles returned WISTR fuel.
+It deals with interconnected liquid-processing equipment, so EBR-II's solid-fuel
+station arrangement is not its sizing basis. Retain the horseshoe as an
+observation/access preference; mark the 28 m span, 8 m height and seven bays as
+reference-only. No replacement facility dimensions are established by the deck.
+See the [source review](../design/conversion-refining-review.md).
+
+## D-045 — Rectangular process-building reservations and fuel supply/return
+
+12 October 2026. The owner accepts approximate site-layout envelopes: converter
+20 × 15 × 8 m; fuel refining/recycling 15 × 12 × 5 m; existing off-gas building
+10 × 11 × 5 m. These are revisable visual space reservations, not process sizing.
+The horseshoe and leaded-glass observation layout are no longer requirements.
+Camera-based observation is a working concept; no viewing/control system is designed.
+
+The owner requests independent fuel-in and fuel-out pipes through the shared
+refiner–reactor service duct. Gold indicates refined-fuel supply toward the
+reactor; rose indicates used-fuel return toward the refiner. Both terminate at
+reserved interfaces. The new return borrows the existing supply line's 150 mm
+visible jacket envelope solely for illustration (50 mm tube plus 50 mm radial
+insulation); no return-line engineering size or internal extraction circuit is selected.
+Existing coolant and off-gas routes remain distinct inside the same duct.
+
+The converter is an empty building envelope at (11.5, 55) m, beyond the refiner
+and its receiving apron. No converter/refiner process connection or equipment
+train is added. The existing coolant preparation placeholders remain in the
+refiner building pending later allocation. The refiner and off-gas retain their
+previous footprints. See the [site guide](../../fastSaltModels/docs/site-study.md).
+
+## D-046 — Low insulated storage distribution
+
+12 October 2026. At the owner's request, extend the shared-duct coolant supply to the bottom of the coolant storage tank and take the fuel supply/return to a valve box, then six separate pairs to the six fuel maintenance tanks. Keep all lines insulated and near ground level where possible. This supersedes the reactor-side reserved endpoints in D-045.
+
+The visual draft places the box north of the vessel, with fuel branch centrelines 0.20 m above floor and a coolant floor route 0.40 m above floor. Short raised transitions clear the existing feedwater header; the shared duct stays above the exterior fresh-air ring. Coolant connects to an independent bottom nozzle beside the existing reactor-transfer connection. The fuel pairs connect at low inner tank ends; existing sector service bundles remain.
+
+The 50 mm tube and 50 mm radial insulation (150 mm jacket envelope) are inherited visual allowances, not newly calculated sizes. The insulated 1.6 × 3.0 × 1.14 m valve box reserves space only. Valve internals, transfer sequences, process duty, pressure/shielding requirements and heat-trace design are unspecified. Selected pipe/equipment/support/stair clearance checks and terminal continuity are recorded by the model builder; full access and support qualification remain open.
+
+Affected: composed site model, storage interfaces and [site guide](../../fastSaltModels/docs/site-study.md#low-insulated-salt-distribution--d-046). The isolated installation and named maintenance baseline are preserved.
+
+## D-047 — Fuel pressure servers and nitrogen supply through off-gas building
+
+12 October 2026. The owner requests one pressure server per maintenance-fuel-tank pair, styled like the absorber modules: a control box above a cylindrical tank. Each of the six maintenance tanks receives two 25 mm tubes from its associated server. Supply gas is paired with off-gas through the shared building duct and splits into three server branches.
+
+The draft adopts 25 mm as bare tube OD. New gas tubing has a provisional 25 mm radial insulation allowance and is unheated; the existing 150 mm off-gas trunk envelope is retained. Three absorber-module-sized server envelopes and a separate supply-interface box in the off-gas building are shown. The previous reserved pickup above the reactor is replaced by the three-server collection network. Valve internals, pressure ratings, flow duty, pressure-control logic and operating sequences remain unspecified.
+
+Move the nitrogen tank and its vaporizer together beside the off-gas building, at (−10, 30) m in the site frame. Retain the 50 mm gas-outlet allowance but route it into the off-gas building. Remove the old direct reactor feed, unused capped gas header and its wall sleeve from the composed site. The isolated installation and named baselines are preserved.
+
+The model checks all twelve tank tubes, six common-header tee connections, selected route/equipment clearances and the skid's location. See the [model guide and previews](../../fastSaltModels/docs/site-study.md#fuel-pressure-servers-and-nitrogen-relocation--d-047). These remain visual interfaces rather than a qualified gas-control or radioactive-off-gas system.
+
+## D-048 — Common insulation and heat tracing for each fuel pair
+
+12 October 2026. The owner requests that fuel in/out lines remain together and be heated and insulated from fuel handling to the distributor, and from the distributor to every maintenance fuel tank.
+
+The visual model now uses seven continuous common clad jackets, each containing two 50 mm OD tubes at 80 mm centre spacing with electrical tracing. The existing provisional 50 mm minimum insulation allowance plus 1 mm cladding gives a 236 mm overall envelope. Fuel floor centrelines are lowered 20 mm to 0.18 m for clearance at existing coolant crossings; coolant remains at 0.40 m. The refiner end is a paired reserved interface beside its supply station; internal process connections remain unspecified.
+
+This supersedes the separate colored outer-envelope representation in D-045/D-046. The fourteen fuel members, seven jackets, duct fit and selected clashes are checked by the site builder. Heater duty, thermal sizing, pressure/support design and full access qualification remain open. Gas services from D-047 are unchanged. Affected: composed site geometry, [site guide](../../fastSaltModels/docs/site-study.md#common-heated-fuel-bundles--d-048), and fuel-storage interface records.
+
+## D-049 — Move fresh-air distribution inside the reactor building
+
+12 October 2026. The owner requests moving the outside cold-air duct inside the building. The composed site now uses a closed floor-level steel C-shaped duct with sealed ends around the existing 5.5 m equipment-door gap. Ten existing equipment branches shorten to inside connections; the outdoor intake remains and passes through the wall. The former exterior concrete ring and branch wall holes are removed.
+
+The provisional clear section is 2.45 × 2.551 m (6.25 m² nominal, retained from the previous plenum), with 6 mm steel and a 60 mm support allowance. The duct top is 2.623 m above floor. Its normal outer radius is 20.30 m; the entire section shifts inward at existing wall columns. Local effective area, airflow/pressure loss, steel/support sizing and full access remain unresolved. Equipment and fuel/gas routes retain their positions; the coolant-storage supply drop shifts 0.5 m inward to clear a column recess. This is a visual layout revision, not airflow or structural qualification.
+
+Affected: [site model and guide](../../fastSaltModels/docs/site-study.md#internal-fresh-air-duct--d-049), shared site interface records. The historical source installation remains a retained input, with the revision applied by the site builder.
+
+## D-050 — Complete columns and revise generator fresh-air connections
+
+12 October 2026. The owner requests columns on both sides, three outdoor air intakes near the generators, centered generator-side butterfly-valve boxes, and inlet area equal to 75% of exhaust area. D-050 completes all 18 column positions (20° spacing) while retaining the cutaway wall, and replaces the single south inlet with short inlets at 190°, 70° and 310°. The initial valve centers were 8.5 m above floor. In the subsequent owner-requested revision, lower all three to **1.35 m above floor**, retaining horizontal centering and the bore-area ratio. The boxes have approximately 0.37 m floor clearance; short level branches replace the tall inlet risers.
+
+The area ratio uses clear bores: 1.794 m exhaust bore → 1.55365 m inlet bore (1.55965 m OD with provisional 3 mm wall). Outdoor intakes use the same diameter as a layout allowance. Air paths clear selected piping and stair envelopes; the coolant supply drop shifts to (3.8, 16.5) m. Both headers recess around columns. A local cold-header outer-wall pocket at 340° preserves coolant-tank clearance but reduces local passage below the 6.25 m² nominal section. Airflow, local losses, support/structural design and complete access remain unqualified. See [the current model guide](../../fastSaltModels/docs/site-study.md#generator-air-inlets-and-complete-column-layout--d-050).
+
 ## Proposals not yet adopted
 
 - A common Python engineering definition with adapters for graphics and analysis tools.

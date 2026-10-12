@@ -25,7 +25,9 @@ This repository organizes the project definition, research evidence, component i
 
 The University of Michigan team has documented the evolution of WISSR and WISTR through neutronics, fuel-cycle, and thermal-fluid analyses. Subsequent accident-scenario work is ongoing, as reported by the project owner. Michigan State University students are developing the steam-generator concept. The mechanical and installation graphics are maintained in the separate [fastSaltModels project](../fastSaltModels/README.md).
 
-The current graphics checkpoint is fastSaltModels commit `8ec6833`, “Preserve WISTR service bundles and Fast Salt plant layout,” with the accepted [installation scene, views and checked report](../fastSaltModels/baselines/wistr-service-bundles-2026-10-12/). It preserves the under-cover service bundles, lowered catwalk and paired absorber reservoirs, together with the developed turbine/site sources. The earlier insulated installation remains at `a99002f`. Commit `0d981f2` retains the earlier reactor handling and tube-plug baseline. It is a geometric concept baseline; it does not establish mass properties, structural capacity, or agreement with every analysis model.
+The current site graphics checkpoint is fastSaltModels commit `a6bbc77`, “Preserve Fast Salt process buildings, service routing and air-inlet checkpoint.” The [named snapshot](../fastSaltModels/baselines/fast-salt-site-2026-10-12/) contains the complete Blender site, key views, checked reports and file hashes. It includes the converter/refiner/off-gas building reservations, paired heated fuel lines, pressure servers and nitrogen routing, internal fresh-air header, complete columns and generator inlet valve centers lowered to 1.35 m above floor.
+
+Earlier [maintenance](../fastSaltModels/baselines/wistr-maintenance-2026-10-12/) (`06a13ef`) and [service-bundle](../fastSaltModels/baselines/wistr-service-bundles-2026-10-12/) (`8ec6833`) snapshots remain intact. These are visual geometry checkpoints, not structural, thermal, process or complete access qualification.
 
 ## Repository organization
 
