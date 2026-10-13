@@ -1,0 +1,14 @@
+{
+  "revision": "A",
+  "date": "2026-10-13",
+  "files_relative_to_package_root": {
+    "WISTR-coolant-PID-rev-A.pdf": "3000e87167e60102c96323ccc89d8f6c88d901acf201071b52969b7ed746a0f0",
+    "FS-CS-001-rev-A.svg": "f5bba0a44bef29d29a868944a27b797f60996ff1463b900485aab0027c63d85d",
+    "FS-CS-002-rev-A.svg": "c5193752eaaf8923811c51cbceb26b6b254c45d058e286b3a41ea420868aecd7",
+    "instruments.csv": "fbdf8f7004c4d044ad4d08d5102d5416ca45ccaad17a00a27c4cac933b6d2d9e",
+    "lines.csv": "aac42f9998e8ee93a6c49ed521bd741a5c5c1a7a4188124e9cacebdd74fcd288",
+    "valves.csv": "25fa83930662949e37df66b42d3d95c2dd773f2e9fd3fb0fee867eee8d1e2b0d",
+    "source-manifest.json": "f95c23519d4585d85b3fd09e0612edd260d08856b24086e888ae81e0a16475e9"
+  },
+  "original_renderer_sha256": "3ffadf5d7802527f7672e1c17519f0d0a1122b85d80f4968749bcdd5412cb766"
+}

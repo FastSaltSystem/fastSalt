@@ -1,0 +1,338 @@
+# P&ID view: shared main-circulation data plus local storage, instruments and valves.
+# TOML has no null. List omitted, unresolved values in unresolved_fields.
+# The Python loader restores those fields as None; never use zero for unknown.
+
+schema_version = 1
+
+[shared_engineering]
+model = "../../engineering/coolant-system.toml"
+
+[document]
+id = "FS-CS"
+title = "WISTR coolant system"
+revision = "A-working"
+date = "13 October 2026"
+status = "Preliminary - for discussion"
+
+
+[equipment.R-101]
+shared = true
+
+[equipment.SG-101]
+shared = true
+
+[equipment.P-101]
+shared = true
+
+[equipment.SG-102]
+shared = true
+
+[equipment.P-102]
+shared = true
+
+[equipment.SG-103]
+shared = true
+
+[equipment.P-103]
+shared = true
+
+[equipment.P-401]
+type = "pump"
+name = "Coolant transfer pump"
+ports = ["suction", "discharge"]
+status = "Visual envelope; duty and type unselected"
+
+[equipment.TK-401]
+type = "tank"
+name = "Coolant storage"
+ports = ["bottom_1", "bottom_2", "gas_space"]
+radial_insulation_mm = 350
+status = "Established concept; insulation is a visual allowance"
+
+[boundaries.B-401]
+name = "Coolant salt preparation"
+ports = ["outlet"]
+
+[lines.L-101]
+shared = true
+sheet = 1
+
+[lines.L-201]
+shared = true
+sheet = 1
+
+[lines.L-102]
+shared = true
+sheet = 1
+
+[lines.L-202]
+shared = true
+sheet = 1
+
+[lines.L-103]
+shared = true
+sheet = 1
+
+[lines.L-203]
+shared = true
+sheet = 1
+
+[lines.L-401]
+bore_mm = 44.0
+od_mm = 50.0
+wall_mm = 3.0
+radial_insulation_mm = 50.0
+status = "Established topology; OD/insulation visual allowances; heated; transfer wall provisional"
+sheet = 2
+from = "R-101.bottom"
+to = "P-401.suction"
+via = []
+heated = true
+unresolved_fields = ["temperature_C"]
+
+[lines.L-402]
+bore_mm = 44.0
+od_mm = 50.0
+wall_mm = 3.0
+radial_insulation_mm = 50.0
+status = "Established topology; OD/insulation visual allowances; heated; transfer wall provisional"
+sheet = 2
+from = "P-401.discharge"
+to = "TK-401.bottom_1"
+via = []
+heated = true
+unresolved_fields = ["temperature_C"]
+
+[lines.L-403]
+od_mm = 50.0
+radial_insulation_mm = 50.0
+status = "Established topology; OD/insulation visual allowances; heated; transfer wall provisional"
+sheet = 2
+from = "B-401.outlet"
+to = "TK-401.bottom_2"
+via = []
+heated = true
+unresolved_fields = ["bore_mm", "wall_mm", "temperature_C"]
+
+[instruments.TT-101H]
+location = "L-101"
+purpose = "Observe hot-leg temperature"
+status = "proposed"
+sheet = 1
+type = "TT"
+on = "L-101"
+
+[instruments.TT-101C]
+location = "L-201: pump discharge"
+purpose = "Observe returning coolant temperature"
+status = "proposed"
+sheet = 1
+type = "TT"
+on = "L-201"
+
+[instruments.FT-101]
+location = "L-201: pump discharge"
+purpose = "Observe per-leg circulation; technology unselected"
+status = "proposed"
+sheet = 1
+type = "FT"
+on = "L-201"
+
+[instruments.PT-101S]
+location = "L-201: pump suction"
+purpose = "Observe suction pressure"
+status = "proposed"
+sheet = 1
+type = "PT"
+on = "L-201"
+
+[instruments.PT-101D]
+location = "L-201: pump discharge"
+purpose = "Observe discharge pressure; compare with suction"
+status = "proposed"
+sheet = 1
+type = "PT"
+on = "L-201"
+
+[instruments.TT-102H]
+location = "L-102"
+purpose = "Observe hot-leg temperature"
+status = "proposed"
+sheet = 1
+type = "TT"
+on = "L-102"
+
+[instruments.TT-102C]
+location = "L-202: pump discharge"
+purpose = "Observe returning coolant temperature"
+status = "proposed"
+sheet = 1
+type = "TT"
+on = "L-202"
+
+[instruments.FT-102]
+location = "L-202: pump discharge"
+purpose = "Observe per-leg circulation; technology unselected"
+status = "proposed"
+sheet = 1
+type = "FT"
+on = "L-202"
+
+[instruments.PT-102S]
+location = "L-202: pump suction"
+purpose = "Observe suction pressure"
+status = "proposed"
+sheet = 1
+type = "PT"
+on = "L-202"
+
+[instruments.PT-102D]
+location = "L-202: pump discharge"
+purpose = "Observe discharge pressure; compare with suction"
+status = "proposed"
+sheet = 1
+type = "PT"
+on = "L-202"
+
+[instruments.TT-103H]
+location = "L-103"
+purpose = "Observe hot-leg temperature"
+status = "proposed"
+sheet = 1
+type = "TT"
+on = "L-103"
+
+[instruments.TT-103C]
+location = "L-203: pump discharge"
+purpose = "Observe returning coolant temperature"
+status = "proposed"
+sheet = 1
+type = "TT"
+on = "L-203"
+
+[instruments.FT-103]
+location = "L-203: pump discharge"
+purpose = "Observe per-leg circulation; technology unselected"
+status = "proposed"
+sheet = 1
+type = "FT"
+on = "L-203"
+
+[instruments.PT-103S]
+location = "L-203: pump suction"
+purpose = "Observe suction pressure"
+status = "proposed"
+sheet = 1
+type = "PT"
+on = "L-203"
+
+[instruments.PT-103D]
+location = "L-203: pump discharge"
+purpose = "Observe discharge pressure; compare with suction"
+status = "proposed"
+sheet = 1
+type = "PT"
+on = "L-203"
+
+[instruments.TT-401]
+location = "L-401"
+purpose = "Observe transfer-line temperature"
+status = "proposed"
+sheet = 2
+type = "TT"
+on = "L-401"
+
+[instruments.PT-401D]
+location = "L-402"
+purpose = "Observe transfer discharge pressure"
+status = "proposed"
+sheet = 2
+type = "PT"
+on = "L-402"
+
+[instruments.PT-402]
+location = "TK-401 gas space"
+purpose = "Observe storage pressure; gas system TBD"
+status = "proposed"
+sheet = 2
+type = "PT"
+on = "TK-401"
+
+[instruments.LT-401]
+location = "TK-401"
+purpose = "Observe storage inventory; measurement method TBD"
+status = "proposed"
+sheet = 2
+type = "LT"
+on = "TK-401"
+
+[instruments.TT-402]
+location = "TK-401"
+purpose = "Observe stored salt temperature; sensor coverage TBD"
+status = "proposed"
+sheet = 2
+type = "TT"
+on = "TK-401"
+
+[valves.V-101H]
+line = "L-101"
+purpose = "Candidate branch isolation; not a complete maintenance isolation scheme"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 1
+
+[valves.V-101C]
+line = "L-201"
+purpose = "Candidate branch isolation; not a complete maintenance isolation scheme"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 1
+
+[valves.V-102H]
+line = "L-102"
+purpose = "Candidate branch isolation; not a complete maintenance isolation scheme"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 1
+
+[valves.V-102C]
+line = "L-202"
+purpose = "Candidate branch isolation; not a complete maintenance isolation scheme"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 1
+
+[valves.V-103H]
+line = "L-103"
+purpose = "Candidate branch isolation; not a complete maintenance isolation scheme"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 1
+
+[valves.V-103C]
+line = "L-203"
+purpose = "Candidate branch isolation; not a complete maintenance isolation scheme"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 1
+
+[valves.V-401]
+line = "L-401"
+purpose = "Candidate transfer/supply isolation"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 2
+
+[valves.V-402]
+line = "L-402"
+purpose = "Candidate transfer/supply isolation"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 2
+
+[valves.V-403]
+line = "L-403"
+purpose = "Candidate transfer/supply isolation"
+status = "proposed"
+selection = "Type, actuation and fail position TBD"
+sheet = 2

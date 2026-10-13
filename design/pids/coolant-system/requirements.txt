@@ -1,0 +1,2 @@
+# Python 3.11+ includes the TOML reader (tomllib).
+reportlab==4.4.9

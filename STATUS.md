@@ -1,6 +1,20 @@
 # Project status and next work
 
-Updated 12 October 2026. This is the working handover for the **Fast Salt System** project. Update it when a workstream changes status; keep technical values in the [design basis](design/design-basis.md) and cross-component decisions in the [decision record](decisions/index.md).
+Updated 13 October 2026. This is the working handover for the **Fast Salt System** project. Update it when a workstream changes status; keep technical values in the [design basis](design/design-basis.md) and cross-component decisions in the [decision record](decisions/index.md).
+
+## Coolant-system P&ID draft — 13 October 2026
+
+A [two-sheet preliminary coolant P&ID](design/pids/coolant-system/README.md) now records the three circulation legs, bottom-suction main pumps, reactor-to-storage transfer and preparation-to-storage supply. Amber symbols distinguish 20 proposed measurements and nine candidate isolation valves from established process connections. Editable SVGs, a printable PDF, registers and source hashes are retained. Refill/drain states, pressure/expansion/vent arrangements, SG tube-failure response and instrumentation technologies remain open. This is a discussion document; no automatic protection logic or new graphics design is adopted.
+
+The coolant drawing now uses separate engineering and layout TOML sources, a Python renderer and Markdown review notes. The owner selected explicit TOML tables for clearer hierarchy and easier cut/paste. Earlier YAML sources are archived; eleven validation/regression checks pass; model edits drive the drawings and registers. Routine builds go to ignored `outputs/current/`; the original Revision A deliverables and renderer are preserved. See the [editing and revision workflow](design/pids/coolant-system/README.md#working-source-and-draft-history). No engineering arrangement changed in this refactor.
+
+## Python assembly authoring and TOML exchange — 13 October 2026
+
+[D-052](decisions/index.md#d-052--python-authored-assemblies-with-resolved-toml-exchange) implements the PMS-style authoring structure for the three main coolant legs: Python assembly rules → detached resolved document → Blender, with optional TOML export/import. Eight plain-Python checks, Blender direct/TOML geometry checks and a full installation build from TOML pass. P&ID tags, flow paths and dimensions agree for the migrated subset. Existing geometry and baselines are retained; the remaining systems still use their existing builders. See [the working guide](../fastSaltModels/docs/assembly-models.md).
+
+## Shared coolant engineering source — 13 October 2026
+
+[D-053](decisions/index.md#d-053--shared-coolant-engineering-source-for-multiple-views) moves the main coolant identities, ports, topology, pipe dimensions and operating-case inputs into [one shared model](design/engineering/README.md). Both P&ID and graphics consume it, with view layouts retained separately. Worksheet hashes require explicit review when calculation sources change. Six cross-view checks pass, including one edited source updating both views. The P&ID remains byte-identical and resolved graphics geometry is unchanged. Blender direct/TOML checks and the full installation build (4,332 meshes) pass. Hurmet equations remain authoritative in the worksheets; automatic Hurmet exchange and simulation adapters are still future work.
 
 ## Current materials
 

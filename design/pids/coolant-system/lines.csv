@@ -1,0 +1,10 @@
+tag,source,destination,bore_mm,od_mm,wall_mm,radial_insulation_mm,temperature_C,status,sheet
+L-101,R-101 H1,SG-101 salt inlet,1425,1475,25,400,601.85,Established topology; dimensions conditional,1
+L-201,SG-101 salt outlet,P-101 then R-101 C1,1425,1475,25,350,536.85,Established topology; dimensions conditional; includes pump suction and discharge,1
+L-102,R-101 H2,SG-102 salt inlet,1425,1475,25,400,601.85,Established topology; dimensions conditional,1
+L-202,SG-102 salt outlet,P-102 then R-101 C2,1425,1475,25,350,536.85,Established topology; dimensions conditional; includes pump suction and discharge,1
+L-103,R-101 H3,SG-103 salt inlet,1425,1475,25,400,601.85,Established topology; dimensions conditional,1
+L-203,SG-103 salt outlet,P-103 then R-101 C3,1425,1475,25,350,536.85,Established topology; dimensions conditional; includes pump suction and discharge,1
+L-401,R-101 bottom,P-401 suction,44,50,3,50,TBD,Established topology; OD/insulation visual allowances; heated; transfer wall provisional,2
+L-402,P-401 discharge,TK-401 bottom port 1,44,50,3,50,TBD,Established topology; OD/insulation visual allowances; heated; transfer wall provisional,2
+L-403,Coolant preparation via shared duct,TK-401 bottom port 2,TBD,50,TBD,50,TBD,Established topology; OD/insulation visual allowances; heated; transfer wall provisional,2

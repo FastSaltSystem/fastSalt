@@ -13,6 +13,8 @@ This repository organizes the project definition, research evidence, component i
 - [System overview](design/system-overview.md)
 - [Design basis and current assumptions](design/design-basis.md)
 - [Component and analysis interfaces](design/interfaces.md)
+- [Shared coolant engineering model](design/engineering/README.md)
+- [Preliminary coolant-system P&ID](design/pids/coolant-system/README.md)
 - [Publication library](publications/index.md)
 - [Research studies](research/studies.md)
 - [Calculations and result format](calculations/README.md)

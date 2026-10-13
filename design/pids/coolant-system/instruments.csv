@@ -1,0 +1,21 @@
+tag,location,purpose,status,sheet
+TT-101H,L-101,Observe hot-leg temperature,Proposed,1
+TT-101C,L-201: pump discharge,Observe returning coolant temperature,Proposed,1
+FT-101,L-201: pump discharge,Observe per-leg circulation; technology unselected,Proposed,1
+PT-101S,L-201: pump suction,Observe suction pressure,Proposed,1
+PT-101D,L-201: pump discharge,Observe discharge pressure; compare with suction,Proposed,1
+TT-102H,L-102,Observe hot-leg temperature,Proposed,1
+TT-102C,L-202: pump discharge,Observe returning coolant temperature,Proposed,1
+FT-102,L-202: pump discharge,Observe per-leg circulation; technology unselected,Proposed,1
+PT-102S,L-202: pump suction,Observe suction pressure,Proposed,1
+PT-102D,L-202: pump discharge,Observe discharge pressure; compare with suction,Proposed,1
+TT-103H,L-103,Observe hot-leg temperature,Proposed,1
+TT-103C,L-203: pump discharge,Observe returning coolant temperature,Proposed,1
+FT-103,L-203: pump discharge,Observe per-leg circulation; technology unselected,Proposed,1
+PT-103S,L-203: pump suction,Observe suction pressure,Proposed,1
+PT-103D,L-203: pump discharge,Observe discharge pressure; compare with suction,Proposed,1
+TT-401,L-401,Observe transfer-line temperature,Proposed,2
+PT-401D,L-402,Observe transfer discharge pressure,Proposed,2
+PT-402,TK-401 gas space,Observe storage pressure; gas system TBD,Proposed,2
+LT-401,TK-401,Observe storage inventory; measurement method TBD,Proposed,2
+TT-402,TK-401,Observe stored salt temperature; sensor coverage TBD,Proposed,2

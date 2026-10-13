@@ -1,0 +1,49 @@
+{
+  "revision": "A",
+  "date": "2026-10-13",
+  "purpose": "Preliminary coolant system P&ID",
+  "sources": [
+    {
+      "repository": "fastSalt",
+      "head": "f076dfa45fd87ce507595cd03afdc9054255218e",
+      "path": "design/interfaces.md",
+      "sha256": "921f28730d56c93d60f1d015905e7f36e5c1d72345398c72b93247aa0e92920d"
+    },
+    {
+      "repository": "fastSalt",
+      "head": "f076dfa45fd87ce507595cd03afdc9054255218e",
+      "path": "calculations/steam-generator/Coolant pump estimate - Hurmet.md",
+      "sha256": "31445e71b66881cec2823ea5b8068a2bf316ff67227f470c3611ea3d903df8b1"
+    },
+    {
+      "repository": "fastSalt",
+      "head": "f076dfa45fd87ce507595cd03afdc9054255218e",
+      "path": "calculations/steam-generator/Molten-salt coolant pipe wall - Hurmet.md",
+      "sha256": "77a2fc8c868f90ea8990b9504e83626c94bc1b7e4201e30f6b0ca29050ce903e"
+    },
+    {
+      "repository": "fastSalt",
+      "head": "f076dfa45fd87ce507595cd03afdc9054255218e",
+      "path": "calculations/steam-generator/Molten-salt coolant insulation - Hurmet.md",
+      "sha256": "87ea2baefe4ae9bd28072d43d7c59159187f290d655f8b24182ee1923772258e"
+    },
+    {
+      "repository": "fastSaltModels",
+      "head": "094d4a3f341a1cfaffde5a79f70fc071814bbf04",
+      "path": "models/wistr_installation.py",
+      "sha256": "f27ade8c9fa557504d1380047c47da6004dabc906c32a17ea770c965f61d7605"
+    },
+    {
+      "repository": "fastSaltModels",
+      "head": "094d4a3f341a1cfaffde5a79f70fc071814bbf04",
+      "path": "src/textual_graphics/installation_utilities.py",
+      "sha256": "bcd4429d9a21d78d6a26c0f18a05887f1f02e9e7c2ad95c7d3c135ebacd78076"
+    },
+    {
+      "repository": "fastSaltModels",
+      "head": "094d4a3f341a1cfaffde5a79f70fc071814bbf04",
+      "path": "src/textual_graphics/site_salt_distribution.py",
+      "sha256": "f401ca4bae9ec85d42c0df1eddafad1c86380e4bc2310262692ade1bb5c5cc07"
+    }
+  ]
+}

@@ -514,3 +514,17 @@ The current site moves fresh-air distribution into a floor-level steel duct insi
 12 October 2026. The owner requests columns on both sides, three outdoor air intakes near the generators, centered generator-side butterfly-valve boxes, and inlet area equal to 75% of exhaust area. D-050 completes all 18 column positions (20° spacing) while retaining the cutaway wall, and replaces the single south inlet with short inlets at 190°, 70° and 310°. The owner subsequently requested lowering the three valve boxes: centers are now **1.35 m above floor**, horizontally centered on the side, with approximately 0.37 m clearance beneath each box. Short level branches replace the tall risers.
 
 The area ratio uses clear bores: 1.794 m exhaust bore → 1.55365 m inlet bore (1.55965 m OD with provisional 3 mm wall). Outdoor intakes use the same diameter as a layout allowance. Air paths clear selected piping and stair envelopes; the coolant supply drop shifts to (3.8, 16.5) m. Both headers recess around columns. A local cold-header outer-wall pocket at 340° preserves coolant-tank clearance but reduces local passage below the 6.25 m² nominal section. Airflow, local losses, support/structural design and complete access remain unqualified. See [the current model guide](../../fastSaltModels/docs/site-study.md#generator-air-inlets-and-complete-column-layout--d-050).
+
+
+## Resolved coolant assembly interface — D-052
+
+13 October 2026. The three main coolant legs now resolve from Python authoring into a detached, literal static-graphics document. Components declare parents, local metre/degree transforms and named ports; resolved data carries world transforms, connected route endpoints and fluid direction separately from curve ordering. The same document can pass directly to Blender or round-trip through TOML. The P&ID's directly authored TOML remains a separate schema with shared identifiers.
+
+The first mapping uses SG/P-101, 102 and 103 for the existing graphics pairs 1, 2 and 3 (180°, 60°, 300°). Reactor H/C aliases follow these legs; native terminal mappings are recorded in the generated document. An optional comparison checks seven equipment identifiers, six main-line dimensional specifications and each represented flow segment against the P&ID. It does not infer engineering properties from a mesh or overwrite disagreeing inputs.
+
+See [the authoring and exchange contract](../../fastSaltModels/docs/assembly-models.md) and [D-052](../decisions/index.md#d-052--python-authored-assemblies-with-resolved-toml-exchange). This is graphics interoperability, not a SAM/OpenMC/CFD coupling or a qualified common engineering model. Unmigrated systems retain their current interfaces.
+
+
+## Shared engineering source — D-053
+
+The [main coolant engineering model](engineering/README.md) now supplies seven equipment identities, six process connections, conditional main-pipe dimensions and normal-case inputs to both the P&ID and the Python graphics author. This replaces the D-052 independent-source relationship for that subset. View adapters retain their own geometry/layout and reject incompatible topology. The shared source and adapter hashes accompany generated outputs; worksheet hashes pin the reviewed calculation revision. Existing Hurmet documents remain the calculation sources. Automatic calculation exchange and SAM/OpenMC/CFD adapters are not implemented.

@@ -1,0 +1,374 @@
+# Authoritative engineering data; null means unresolved.
+schema_version: 1
+document:
+  id: FS-CS
+  title: WISTR coolant system
+  revision: A-working
+  date: 13 October 2026
+  status: Preliminary - for discussion
+basis:
+  flow_m3_s: 4.619533
+  pump_rise_kPa: 286.3092
+  shaft_MW: 1.653268
+  motor_MW: 2
+  screening_pressure_MPag: 1
+  secondary_pressure_MPaa: 24
+equipment:
+  R-101:
+    type: reactor
+    name: WISTR reactor
+    ports: [H1, H2, H3, C1, C2, C3, bottom]
+    status: Established concept
+  SG-101:
+    type: heat_exchanger
+    name: Steam generator 1
+    duty_MWth: 500
+    ports: [salt_inlet, salt_outlet]
+    status: Established concept; duty is a target
+  P-101:
+    type: pump
+    name: Coolant circulation pump 1
+    ports: [suction, discharge]
+    status: Established concept; duty provisional
+  SG-102:
+    type: heat_exchanger
+    name: Steam generator 2
+    duty_MWth: 500
+    ports: [salt_inlet, salt_outlet]
+    status: Established concept; duty is a target
+  P-102:
+    type: pump
+    name: Coolant circulation pump 2
+    ports: [suction, discharge]
+    status: Established concept; duty provisional
+  SG-103:
+    type: heat_exchanger
+    name: Steam generator 3
+    duty_MWth: 500
+    ports: [salt_inlet, salt_outlet]
+    status: Established concept; duty is a target
+  P-103:
+    type: pump
+    name: Coolant circulation pump 3
+    ports: [suction, discharge]
+    status: Established concept; duty provisional
+  P-401:
+    type: pump
+    name: Coolant transfer pump
+    ports: [suction, discharge]
+    status: Visual envelope; duty and type unselected
+  TK-401:
+    type: tank
+    name: Coolant storage
+    ports: [bottom_1, bottom_2, gas_space]
+    radial_insulation_mm: 350
+    status: Established concept; insulation is a visual allowance
+boundaries:
+  B-401:
+    name: Coolant salt preparation
+    ports: [outlet]
+lines:
+  L-101:
+    bore_mm: 1425.0
+    od_mm: 1475.0
+    wall_mm: 25.0
+    radial_insulation_mm: 400.0
+    temperature_C: 601.85
+    status: Established topology; dimensions conditional
+    sheet: 1
+    from: R-101.H1
+    to: SG-101.salt_inlet
+    via: []
+    heated: null
+  L-201:
+    bore_mm: 1425.0
+    od_mm: 1475.0
+    wall_mm: 25.0
+    radial_insulation_mm: 350.0
+    temperature_C: 536.85
+    status: Established topology; dimensions conditional; includes pump suction and discharge
+    sheet: 1
+    from: SG-101.salt_outlet
+    to: R-101.C1
+    via: [P-101]
+    heated: null
+  L-102:
+    bore_mm: 1425.0
+    od_mm: 1475.0
+    wall_mm: 25.0
+    radial_insulation_mm: 400.0
+    temperature_C: 601.85
+    status: Established topology; dimensions conditional
+    sheet: 1
+    from: R-101.H2
+    to: SG-102.salt_inlet
+    via: []
+    heated: null
+  L-202:
+    bore_mm: 1425.0
+    od_mm: 1475.0
+    wall_mm: 25.0
+    radial_insulation_mm: 350.0
+    temperature_C: 536.85
+    status: Established topology; dimensions conditional; includes pump suction and discharge
+    sheet: 1
+    from: SG-102.salt_outlet
+    to: R-101.C2
+    via: [P-102]
+    heated: null
+  L-103:
+    bore_mm: 1425.0
+    od_mm: 1475.0
+    wall_mm: 25.0
+    radial_insulation_mm: 400.0
+    temperature_C: 601.85
+    status: Established topology; dimensions conditional
+    sheet: 1
+    from: R-101.H3
+    to: SG-103.salt_inlet
+    via: []
+    heated: null
+  L-203:
+    bore_mm: 1425.0
+    od_mm: 1475.0
+    wall_mm: 25.0
+    radial_insulation_mm: 350.0
+    temperature_C: 536.85
+    status: Established topology; dimensions conditional; includes pump suction and discharge
+    sheet: 1
+    from: SG-103.salt_outlet
+    to: R-101.C3
+    via: [P-103]
+    heated: null
+  L-401:
+    bore_mm: 44.0
+    od_mm: 50.0
+    wall_mm: 3.0
+    radial_insulation_mm: 50.0
+    temperature_C: null
+    status: Established topology; OD/insulation visual allowances; heated; transfer wall provisional
+    sheet: 2
+    from: R-101.bottom
+    to: P-401.suction
+    via: []
+    heated: true
+  L-402:
+    bore_mm: 44.0
+    od_mm: 50.0
+    wall_mm: 3.0
+    radial_insulation_mm: 50.0
+    temperature_C: null
+    status: Established topology; OD/insulation visual allowances; heated; transfer wall provisional
+    sheet: 2
+    from: P-401.discharge
+    to: TK-401.bottom_1
+    via: []
+    heated: true
+  L-403:
+    bore_mm: null
+    od_mm: 50.0
+    wall_mm: null
+    radial_insulation_mm: 50.0
+    temperature_C: null
+    status: Established topology; OD/insulation visual allowances; heated; transfer wall provisional
+    sheet: 2
+    from: B-401.outlet
+    to: TK-401.bottom_2
+    via: []
+    heated: true
+instruments:
+  TT-101H:
+    location: L-101
+    purpose: Observe hot-leg temperature
+    status: proposed
+    sheet: 1
+    type: TT
+    'on': L-101
+  TT-101C:
+    location: 'L-201: pump discharge'
+    purpose: Observe returning coolant temperature
+    status: proposed
+    sheet: 1
+    type: TT
+    'on': L-201
+  FT-101:
+    location: 'L-201: pump discharge'
+    purpose: Observe per-leg circulation; technology unselected
+    status: proposed
+    sheet: 1
+    type: FT
+    'on': L-201
+  PT-101S:
+    location: 'L-201: pump suction'
+    purpose: Observe suction pressure
+    status: proposed
+    sheet: 1
+    type: PT
+    'on': L-201
+  PT-101D:
+    location: 'L-201: pump discharge'
+    purpose: Observe discharge pressure; compare with suction
+    status: proposed
+    sheet: 1
+    type: PT
+    'on': L-201
+  TT-102H:
+    location: L-102
+    purpose: Observe hot-leg temperature
+    status: proposed
+    sheet: 1
+    type: TT
+    'on': L-102
+  TT-102C:
+    location: 'L-202: pump discharge'
+    purpose: Observe returning coolant temperature
+    status: proposed
+    sheet: 1
+    type: TT
+    'on': L-202
+  FT-102:
+    location: 'L-202: pump discharge'
+    purpose: Observe per-leg circulation; technology unselected
+    status: proposed
+    sheet: 1
+    type: FT
+    'on': L-202
+  PT-102S:
+    location: 'L-202: pump suction'
+    purpose: Observe suction pressure
+    status: proposed
+    sheet: 1
+    type: PT
+    'on': L-202
+  PT-102D:
+    location: 'L-202: pump discharge'
+    purpose: Observe discharge pressure; compare with suction
+    status: proposed
+    sheet: 1
+    type: PT
+    'on': L-202
+  TT-103H:
+    location: L-103
+    purpose: Observe hot-leg temperature
+    status: proposed
+    sheet: 1
+    type: TT
+    'on': L-103
+  TT-103C:
+    location: 'L-203: pump discharge'
+    purpose: Observe returning coolant temperature
+    status: proposed
+    sheet: 1
+    type: TT
+    'on': L-203
+  FT-103:
+    location: 'L-203: pump discharge'
+    purpose: Observe per-leg circulation; technology unselected
+    status: proposed
+    sheet: 1
+    type: FT
+    'on': L-203
+  PT-103S:
+    location: 'L-203: pump suction'
+    purpose: Observe suction pressure
+    status: proposed
+    sheet: 1
+    type: PT
+    'on': L-203
+  PT-103D:
+    location: 'L-203: pump discharge'
+    purpose: Observe discharge pressure; compare with suction
+    status: proposed
+    sheet: 1
+    type: PT
+    'on': L-203
+  TT-401:
+    location: L-401
+    purpose: Observe transfer-line temperature
+    status: proposed
+    sheet: 2
+    type: TT
+    'on': L-401
+  PT-401D:
+    location: L-402
+    purpose: Observe transfer discharge pressure
+    status: proposed
+    sheet: 2
+    type: PT
+    'on': L-402
+  PT-402:
+    location: TK-401 gas space
+    purpose: Observe storage pressure; gas system TBD
+    status: proposed
+    sheet: 2
+    type: PT
+    'on': TK-401
+  LT-401:
+    location: TK-401
+    purpose: Observe storage inventory; measurement method TBD
+    status: proposed
+    sheet: 2
+    type: LT
+    'on': TK-401
+  TT-402:
+    location: TK-401
+    purpose: Observe stored salt temperature; sensor coverage TBD
+    status: proposed
+    sheet: 2
+    type: TT
+    'on': TK-401
+valves:
+  V-101H:
+    line: L-101
+    purpose: Candidate branch isolation; not a complete maintenance isolation scheme
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 1
+  V-101C:
+    line: L-201
+    purpose: Candidate branch isolation; not a complete maintenance isolation scheme
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 1
+  V-102H:
+    line: L-102
+    purpose: Candidate branch isolation; not a complete maintenance isolation scheme
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 1
+  V-102C:
+    line: L-202
+    purpose: Candidate branch isolation; not a complete maintenance isolation scheme
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 1
+  V-103H:
+    line: L-103
+    purpose: Candidate branch isolation; not a complete maintenance isolation scheme
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 1
+  V-103C:
+    line: L-203
+    purpose: Candidate branch isolation; not a complete maintenance isolation scheme
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 1
+  V-401:
+    line: L-401
+    purpose: Candidate transfer/supply isolation
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 2
+  V-402:
+    line: L-402
+    purpose: Candidate transfer/supply isolation
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 2
+  V-403:
+    line: L-403
+    purpose: Candidate transfer/supply isolation
+    status: proposed
+    selection: Type, actuation and fail position TBD
+    sheet: 2

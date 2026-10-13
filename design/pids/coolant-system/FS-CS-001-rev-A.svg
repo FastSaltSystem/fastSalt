@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 850" role="img"><title>WISTR coolant system sheet 1</title>
+<rect x="0" y="0" width="1200" height="850" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Coolant circulation</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">Three established process legs; proposed measurement and isolation locations shown in amber.</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<rect x="35" y="152" width="205" height="525" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="137" y="184" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold" fill="#173345" text-anchor="middle">R-101</text>
+<text x="137" y="205" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">WISTR reactor</text>
+<text x="52" y="255" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Shared hot plenum</text>
+<text x="52" y="276" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">feeds H1 / H2 / H3.</text>
+<text x="52" y="328" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">C1 / C2 / C3 return</text>
+<text x="52" y="349" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">to shared downcomer.</text>
+<text x="52" y="403" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Internal coolant path:</text>
+<text x="52" y="427" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">downcomer</text>
+<text x="52" y="450" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">to bottom plenum</text>
+<text x="52" y="473" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">up through core tubes</text>
+<text x="52" y="496" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">to hot plenum.</text>
+<text x="52" y="552" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Fuel is a separate fluid.</text>
+<text x="52" y="582" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Plenums are inside R-101;</text>
+<text x="52" y="600" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">no external common salt</text>
+<text x="52" y="618" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">header is implied.</text>
+<polyline points="138,677 138,708" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="142,696 138,704 134,696" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="157" y="695" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">A / reactor bottom</text>
+<text x="157" y="710" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">to sheet 2, L-401</text>
+<rect x="880" y="193" width="105" height="142" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="932" y="240" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">SG-101</text>
+<text x="932" y="262" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">500 MWth</text>
+<text x="932" y="290" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Exchanger</text>
+<polyline points="240,215 880,215" fill="none" stroke="#b7442e" stroke-width="2.7"/>
+<polyline points="822,211 830,215 822,219" fill="none" stroke="#b7442e" stroke-width="2"/>
+<text x="250" y="204" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#b7442e" text-anchor="start">H1</text>
+<text x="600" y="203" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#b7442e" text-anchor="middle">L-101  |  hot salt ~602 C</text>
+<rect x="303" y="206" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="305,208 325,222 325,208 305,222 305,208" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="315" y="199" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-101H</text>
+<polyline points="690,215 690,236" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="690" cy="255" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="690" y="254" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="690" y="266" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">101H</text>
+<polyline points="880,310 790,310 790,340 620,340 620,332" fill="none" stroke="#147689" stroke-width="2.7"/>
+<polyline points="728,344 720,340 728,336" fill="none" stroke="#147689" stroke-width="2"/>
+<polyline points="616,341 620,333 624,341" fill="none" stroke="#147689" stroke-width="2"/>
+<circle cx="620" cy="310" r="22" stroke="#173345" fill="white" stroke-width="1.5"/>
+<polyline points="629,300 610,310 629,320" fill="none" stroke="#173345" stroke-width="1.7"/>
+<text x="620" y="361" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">P-101</text>
+<polyline points="598,310 240,310" fill="none" stroke="#147689" stroke-width="2.7"/>
+<polyline points="278,314 270,310 278,306" fill="none" stroke="#147689" stroke-width="2"/>
+<text x="250" y="299" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#147689" text-anchor="start">C1</text>
+<text x="520" y="293" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#147689" text-anchor="middle">L-201 | ~537 C</text>
+<rect x="303" y="301" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="305,303 325,317 325,303 305,317 305,303" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="315" y="294" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-101C</text>
+<polyline points="385,310 385,330" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="385" cy="349" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="385" y="348" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">FT</text>
+<text x="385" y="360" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">101</text>
+<polyline points="472,310 472,330" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="472" cy="349" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="472" y="348" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="472" y="360" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">101C</text>
+<polyline points="555,310 555,330" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="555" cy="349" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="555" y="348" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="555" y="360" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">101D</text>
+<polyline points="750,340 750,322" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="750" cy="303" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="750" y="302" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="750" y="314" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">101S</text>
+<polyline points="985,217 1120,217" fill="none" stroke="#173345" stroke-width="1.4"/>
+<polyline points="1106,213 1114,217 1106,221" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="1049" y="207" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Steam to power cycle</text>
+<polyline points="1120,310 985,310" fill="none" stroke="#173345" stroke-width="1.4"/>
+<polyline points="999,314 991,310 999,306" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="1049" y="300" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Feedwater from cycle</text>
+<text x="1010" y="255" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#546772" text-anchor="start">Salt / water boundary</text>
+<text x="1010" y="272" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#546772" text-anchor="start">Air passages omitted</text>
+<rect x="880" y="373" width="105" height="142" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="932" y="420" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">SG-102</text>
+<text x="932" y="442" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">500 MWth</text>
+<text x="932" y="470" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Exchanger</text>
+<polyline points="240,395 880,395" fill="none" stroke="#b7442e" stroke-width="2.7"/>
+<polyline points="822,391 830,395 822,399" fill="none" stroke="#b7442e" stroke-width="2"/>
+<text x="250" y="384" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#b7442e" text-anchor="start">H2</text>
+<text x="600" y="383" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#b7442e" text-anchor="middle">L-102  |  hot salt ~602 C</text>
+<rect x="303" y="386" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="305,388 325,402 325,388 305,402 305,388" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="315" y="379" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-102H</text>
+<polyline points="690,395 690,416" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="690" cy="435" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="690" y="434" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="690" y="446" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">102H</text>
+<polyline points="880,490 790,490 790,520 620,520 620,512" fill="none" stroke="#147689" stroke-width="2.7"/>
+<polyline points="728,524 720,520 728,516" fill="none" stroke="#147689" stroke-width="2"/>
+<polyline points="616,521 620,513 624,521" fill="none" stroke="#147689" stroke-width="2"/>
+<circle cx="620" cy="490" r="22" stroke="#173345" fill="white" stroke-width="1.5"/>
+<polyline points="629,480 610,490 629,500" fill="none" stroke="#173345" stroke-width="1.7"/>
+<text x="620" y="541" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">P-102</text>
+<polyline points="598,490 240,490" fill="none" stroke="#147689" stroke-width="2.7"/>
+<polyline points="278,494 270,490 278,486" fill="none" stroke="#147689" stroke-width="2"/>
+<text x="250" y="479" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#147689" text-anchor="start">C2</text>
+<text x="520" y="473" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#147689" text-anchor="middle">L-202 | ~537 C</text>
+<rect x="303" y="481" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="305,483 325,497 325,483 305,497 305,483" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="315" y="474" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-102C</text>
+<polyline points="385,490 385,510" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="385" cy="529" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="385" y="528" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">FT</text>
+<text x="385" y="540" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">102</text>
+<polyline points="472,490 472,510" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="472" cy="529" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="472" y="528" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="472" y="540" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">102C</text>
+<polyline points="555,490 555,510" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="555" cy="529" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="555" y="528" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="555" y="540" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">102D</text>
+<polyline points="750,520 750,502" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="750" cy="483" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="750" y="482" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="750" y="494" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">102S</text>
+<polyline points="985,397 1120,397" fill="none" stroke="#173345" stroke-width="1.4"/>
+<polyline points="1106,393 1114,397 1106,401" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="1049" y="387" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Steam to power cycle</text>
+<polyline points="1120,490 985,490" fill="none" stroke="#173345" stroke-width="1.4"/>
+<polyline points="999,494 991,490 999,486" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="1049" y="480" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Feedwater from cycle</text>
+<text x="1010" y="435" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#546772" text-anchor="start">Salt / water boundary</text>
+<text x="1010" y="452" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#546772" text-anchor="start">Air passages omitted</text>
+<rect x="880" y="553" width="105" height="142" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="932" y="600" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">SG-103</text>
+<text x="932" y="622" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">500 MWth</text>
+<text x="932" y="650" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Exchanger</text>
+<polyline points="240,575 880,575" fill="none" stroke="#b7442e" stroke-width="2.7"/>
+<polyline points="822,571 830,575 822,579" fill="none" stroke="#b7442e" stroke-width="2"/>
+<text x="250" y="564" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#b7442e" text-anchor="start">H3</text>
+<text x="600" y="563" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#b7442e" text-anchor="middle">L-103  |  hot salt ~602 C</text>
+<rect x="303" y="566" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="305,568 325,582 325,568 305,582 305,568" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="315" y="559" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-103H</text>
+<polyline points="690,575 690,596" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="690" cy="615" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="690" y="614" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="690" y="626" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">103H</text>
+<polyline points="880,670 790,670 790,700 620,700 620,692" fill="none" stroke="#147689" stroke-width="2.7"/>
+<polyline points="728,704 720,700 728,696" fill="none" stroke="#147689" stroke-width="2"/>
+<polyline points="616,701 620,693 624,701" fill="none" stroke="#147689" stroke-width="2"/>
+<circle cx="620" cy="670" r="22" stroke="#173345" fill="white" stroke-width="1.5"/>
+<polyline points="629,660 610,670 629,680" fill="none" stroke="#173345" stroke-width="1.7"/>
+<text x="620" y="721" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">P-103</text>
+<polyline points="598,670 240,670" fill="none" stroke="#147689" stroke-width="2.7"/>
+<polyline points="278,674 270,670 278,666" fill="none" stroke="#147689" stroke-width="2"/>
+<text x="250" y="659" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#147689" text-anchor="start">C3</text>
+<text x="520" y="653" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#147689" text-anchor="middle">L-203 | ~537 C</text>
+<rect x="303" y="661" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="305,663 325,677 325,663 305,677 305,663" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="315" y="654" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-103C</text>
+<polyline points="385,670 385,690" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="385" cy="709" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="385" y="708" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">FT</text>
+<text x="385" y="720" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">103</text>
+<polyline points="472,670 472,690" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="472" cy="709" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="472" y="708" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="472" y="720" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">103C</text>
+<polyline points="555,670 555,690" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="555" cy="709" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="555" y="708" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="555" y="720" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">103D</text>
+<polyline points="750,700 750,682" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="750" cy="663" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="750" y="662" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="750" y="674" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">103S</text>
+<polyline points="985,577 1120,577" fill="none" stroke="#173345" stroke-width="1.4"/>
+<polyline points="1106,573 1114,577 1106,581" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="1049" y="567" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Steam to power cycle</text>
+<polyline points="1120,670 985,670" fill="none" stroke="#173345" stroke-width="1.4"/>
+<polyline points="999,674 991,670 999,666" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="1049" y="660" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Feedwater from cycle</text>
+<text x="1010" y="615" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#546772" text-anchor="start">Salt / water boundary</text>
+<text x="1010" y="632" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#546772" text-anchor="start">Air passages omitted</text>
+<rect x="35" y="734" width="1130" height="57" fill="#edf3f6" stroke="#edf3f6" stroke-width="1.3"/>
+<text x="48" y="754" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">PER LEG: 4.620 m3/s; pump rise 286 kPa; 1.65 MW shaft; provisional 2 MW motor. Main line bore 1425 mm.</text>
+<text x="48" y="773" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Main wall 25 mm; radial insulation hot 400 / return 350 mm (conditional estimates). Pump rise is not system design pressure.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-CS-001 | Rev A | 13 October 2026 | Preliminary - for discussion</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 1 / 2 | Functional schematic; not to scale</text>
+</svg>

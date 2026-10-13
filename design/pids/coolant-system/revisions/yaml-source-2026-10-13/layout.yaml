@@ -1,0 +1,824 @@
+# Authoritative drawing layout; coordinates are page units, not metres.
+schema_version: 1
+page:
+  width: 1200
+  height: 850
+sheets:
+- number: 1
+  title: Coolant circulation
+  subtitle: Three established process legs; proposed measurement and isolation locations shown in amber.
+  ports:
+    R-101.H1: [240, 215]
+    SG-101.salt_inlet: [880, 215]
+    SG-101.salt_outlet: [880, 310]
+    P-101.suction: [620, 332]
+    P-101.discharge: [598, 310]
+    R-101.C1: [240, 310]
+    R-101.H2: [240, 395]
+    SG-102.salt_inlet: [880, 395]
+    SG-102.salt_outlet: [880, 490]
+    P-102.suction: [620, 512]
+    P-102.discharge: [598, 490]
+    R-101.C2: [240, 490]
+    R-101.H3: [240, 575]
+    SG-103.salt_inlet: [880, 575]
+    SG-103.salt_outlet: [880, 670]
+    P-103.suction: [620, 692]
+    P-103.discharge: [598, 670]
+    R-101.C3: [240, 670]
+  elements:
+  - kind: rect
+    args: [35, 152, 205, 525]
+    style:
+      fill: '#edf3f6'
+  - kind: text
+    args: [137, 184, '${equipment.R-101.tag}', 19]
+    style:
+      weight: true
+      anchor: middle
+  - kind: text
+    args: [137, 205, WISTR reactor, 15]
+    style:
+      weight: true
+      anchor: middle
+  - kind: text
+    args: [52, 255, Shared hot plenum, 12]
+    style: {}
+  - kind: text
+    args: [52, 276, feeds H1 / H2 / H3., 12]
+    style: {}
+  - kind: text
+    args: [52, 328, C1 / C2 / C3 return, 12]
+    style: {}
+  - kind: text
+    args: [52, 349, to shared downcomer., 12]
+    style: {}
+  - kind: text
+    args: [52, 403, 'Internal coolant path:', 12]
+    style: {}
+  - kind: text
+    args: [52, 427, downcomer, 12]
+    style: {}
+  - kind: text
+    args: [52, 450, to bottom plenum, 12]
+    style: {}
+  - kind: text
+    args: [52, 473, up through core tubes, 12]
+    style: {}
+  - kind: text
+    args: [52, 496, to hot plenum., 12]
+    style: {}
+  - kind: text
+    args: [52, 552, Fuel is a separate fluid., 12]
+    style:
+      weight: true
+  - kind: text
+    args: [52, 582, Plenums are inside R-101;, 11]
+    style: {}
+  - kind: text
+    args: [52, 600, no external common salt, 11]
+    style: {}
+  - kind: text
+    args: [52, 618, header is implied., 11]
+    style: {}
+  - kind: line
+    args:
+    - - [138, 677]
+      - [138, 708]
+    - '#274453'
+    style: {}
+  - kind: arrow
+    args: [138, 704, down]
+    style: {}
+  - kind: text
+    args: [157, 695, A / reactor bottom, 11]
+    style: {}
+  - kind: text
+    args: [157, 710, 'to sheet 2, L-401', 11]
+    style: {}
+  - kind: rect
+    args: [880, 193, 105, 142]
+    style:
+      fill: '#edf3f6'
+  - kind: text
+    args: [932, 240, '${equipment.SG-101.tag}', 15]
+    style:
+      weight: true
+      anchor: middle
+  - kind: text
+    args: [932, 262, '${equipment.SG-101.duty_MWth:g} MWth', 11]
+    style:
+      anchor: middle
+  - kind: text
+    args: [932, 290, Exchanger, 11]
+    style:
+      anchor: middle
+  - kind: route
+    args:
+    - - [240, 215]
+      - [880, 215]
+    - '#b7442e'
+    - 2.7
+    style: {}
+    line: L-101
+    segment: 0
+  - kind: arrow
+    args: [830, 215]
+    style:
+      color: '#b7442e'
+  - kind: text
+    args: [250, 204, H1, 10, '#b7442e', true]
+    style: {}
+  - kind: text
+    args: [600, 203, '${lines.L-101.tag}  |  hot salt ~${lines.L-101.temperature_C:.0f} C', 12, '#b7442e']
+    style:
+      anchor: middle
+  - kind: valve
+    args: [315, 215]
+    style: {}
+    tag: V-101H
+  - kind: instrument
+    args: [690, 255, 690, 215]
+    style: {}
+    tag: TT-101H
+  - kind: route
+    args:
+    - - [880, 310]
+      - [790, 310]
+      - [790, 340]
+      - [620, 340]
+      - [620, 332]
+    - '#147689'
+    - 2.7
+    style: {}
+    line: L-201
+    segment: 0
+  - kind: arrow
+    args: [720, 340, left, '#147689']
+    style: {}
+  - kind: arrow
+    args: [620, 333, up, '#147689']
+    style: {}
+  - kind: pump
+    args: [620, 310]
+    style: {}
+    tag: P-101
+  - kind: route
+    args:
+    - - [598, 310]
+      - [240, 310]
+    - '#147689'
+    - 2.7
+    style: {}
+    line: L-201
+    segment: 1
+  - kind: arrow
+    args: [270, 310, left, '#147689']
+    style: {}
+  - kind: text
+    args: [250, 299, C1, 10, '#147689', true]
+    style: {}
+  - kind: text
+    args: [520, 293, '${lines.L-201.tag} | ~${lines.L-201.temperature_C:.0f} C', 11, '#147689']
+    style:
+      anchor: middle
+  - kind: valve
+    args: [315, 310]
+    style: {}
+    tag: V-101C
+  - kind: instrument
+    args: [385, 349, 385, 310]
+    style: {}
+    tag: FT-101
+  - kind: instrument
+    args: [472, 349, 472, 310]
+    style: {}
+    tag: TT-101C
+  - kind: instrument
+    args: [555, 349, 555, 310]
+    style: {}
+    tag: PT-101D
+  - kind: instrument
+    args: [750, 303, 750, 340]
+    style: {}
+    tag: PT-101S
+  - kind: line
+    args:
+    - - [985, 217]
+      - [1120, 217]
+    - '#173345'
+    - 1.4
+    style: {}
+  - kind: arrow
+    args: [1114, 217]
+    style: {}
+  - kind: text
+    args: [1049, 207, Steam to power cycle, 10]
+    style:
+      anchor: middle
+  - kind: line
+    args:
+    - - [1120, 310]
+      - [985, 310]
+    - '#173345'
+    - 1.4
+    style: {}
+  - kind: arrow
+    args: [991, 310, left]
+    style: {}
+  - kind: text
+    args: [1049, 300, Feedwater from cycle, 10]
+    style:
+      anchor: middle
+  - kind: text
+    args: [1010, 255, Salt / water boundary, 10, '#546772']
+    style: {}
+  - kind: text
+    args: [1010, 272, Air passages omitted, 10, '#546772']
+    style: {}
+  - kind: rect
+    args: [880, 373, 105, 142]
+    style:
+      fill: '#edf3f6'
+  - kind: text
+    args: [932, 420, '${equipment.SG-102.tag}', 15]
+    style:
+      weight: true
+      anchor: middle
+  - kind: text
+    args: [932, 442, '${equipment.SG-102.duty_MWth:g} MWth', 11]
+    style:
+      anchor: middle
+  - kind: text
+    args: [932, 470, Exchanger, 11]
+    style:
+      anchor: middle
+  - kind: route
+    args:
+    - - [240, 395]
+      - [880, 395]
+    - '#b7442e'
+    - 2.7
+    style: {}
+    line: L-102
+    segment: 0
+  - kind: arrow
+    args: [830, 395]
+    style:
+      color: '#b7442e'
+  - kind: text
+    args: [250, 384, H2, 10, '#b7442e', true]
+    style: {}
+  - kind: text
+    args: [600, 383, '${lines.L-102.tag}  |  hot salt ~${lines.L-102.temperature_C:.0f} C', 12, '#b7442e']
+    style:
+      anchor: middle
+  - kind: valve
+    args: [315, 395]
+    style: {}
+    tag: V-102H
+  - kind: instrument
+    args: [690, 435, 690, 395]
+    style: {}
+    tag: TT-102H
+  - kind: route
+    args:
+    - - [880, 490]
+      - [790, 490]
+      - [790, 520]
+      - [620, 520]
+      - [620, 512]
+    - '#147689'
+    - 2.7
+    style: {}
+    line: L-202
+    segment: 0
+  - kind: arrow
+    args: [720, 520, left, '#147689']
+    style: {}
+  - kind: arrow
+    args: [620, 513, up, '#147689']
+    style: {}
+  - kind: pump
+    args: [620, 490]
+    style: {}
+    tag: P-102
+  - kind: route
+    args:
+    - - [598, 490]
+      - [240, 490]
+    - '#147689'
+    - 2.7
+    style: {}
+    line: L-202
+    segment: 1
+  - kind: arrow
+    args: [270, 490, left, '#147689']
+    style: {}
+  - kind: text
+    args: [250, 479, C2, 10, '#147689', true]
+    style: {}
+  - kind: text
+    args: [520, 473, '${lines.L-202.tag} | ~${lines.L-202.temperature_C:.0f} C', 11, '#147689']
+    style:
+      anchor: middle
+  - kind: valve
+    args: [315, 490]
+    style: {}
+    tag: V-102C
+  - kind: instrument
+    args: [385, 529, 385, 490]
+    style: {}
+    tag: FT-102
+  - kind: instrument
+    args: [472, 529, 472, 490]
+    style: {}
+    tag: TT-102C
+  - kind: instrument
+    args: [555, 529, 555, 490]
+    style: {}
+    tag: PT-102D
+  - kind: instrument
+    args: [750, 483, 750, 520]
+    style: {}
+    tag: PT-102S
+  - kind: line
+    args:
+    - - [985, 397]
+      - [1120, 397]
+    - '#173345'
+    - 1.4
+    style: {}
+  - kind: arrow
+    args: [1114, 397]
+    style: {}
+  - kind: text
+    args: [1049, 387, Steam to power cycle, 10]
+    style:
+      anchor: middle
+  - kind: line
+    args:
+    - - [1120, 490]
+      - [985, 490]
+    - '#173345'
+    - 1.4
+    style: {}
+  - kind: arrow
+    args: [991, 490, left]
+    style: {}
+  - kind: text
+    args: [1049, 480, Feedwater from cycle, 10]
+    style:
+      anchor: middle
+  - kind: text
+    args: [1010, 435, Salt / water boundary, 10, '#546772']
+    style: {}
+  - kind: text
+    args: [1010, 452, Air passages omitted, 10, '#546772']
+    style: {}
+  - kind: rect
+    args: [880, 553, 105, 142]
+    style:
+      fill: '#edf3f6'
+  - kind: text
+    args: [932, 600, '${equipment.SG-103.tag}', 15]
+    style:
+      weight: true
+      anchor: middle
+  - kind: text
+    args: [932, 622, '${equipment.SG-103.duty_MWth:g} MWth', 11]
+    style:
+      anchor: middle
+  - kind: text
+    args: [932, 650, Exchanger, 11]
+    style:
+      anchor: middle
+  - kind: route
+    args:
+    - - [240, 575]
+      - [880, 575]
+    - '#b7442e'
+    - 2.7
+    style: {}
+    line: L-103
+    segment: 0
+  - kind: arrow
+    args: [830, 575]
+    style:
+      color: '#b7442e'
+  - kind: text
+    args: [250, 564, H3, 10, '#b7442e', true]
+    style: {}
+  - kind: text
+    args: [600, 563, '${lines.L-103.tag}  |  hot salt ~${lines.L-103.temperature_C:.0f} C', 12, '#b7442e']
+    style:
+      anchor: middle
+  - kind: valve
+    args: [315, 575]
+    style: {}
+    tag: V-103H
+  - kind: instrument
+    args: [690, 615, 690, 575]
+    style: {}
+    tag: TT-103H
+  - kind: route
+    args:
+    - - [880, 670]
+      - [790, 670]
+      - [790, 700]
+      - [620, 700]
+      - [620, 692]
+    - '#147689'
+    - 2.7
+    style: {}
+    line: L-203
+    segment: 0
+  - kind: arrow
+    args: [720, 700, left, '#147689']
+    style: {}
+  - kind: arrow
+    args: [620, 693, up, '#147689']
+    style: {}
+  - kind: pump
+    args: [620, 670]
+    style: {}
+    tag: P-103
+  - kind: route
+    args:
+    - - [598, 670]
+      - [240, 670]
+    - '#147689'
+    - 2.7
+    style: {}
+    line: L-203
+    segment: 1
+  - kind: arrow
+    args: [270, 670, left, '#147689']
+    style: {}
+  - kind: text
+    args: [250, 659, C3, 10, '#147689', true]
+    style: {}
+  - kind: text
+    args: [520, 653, '${lines.L-203.tag} | ~${lines.L-203.temperature_C:.0f} C', 11, '#147689']
+    style:
+      anchor: middle
+  - kind: valve
+    args: [315, 670]
+    style: {}
+    tag: V-103C
+  - kind: instrument
+    args: [385, 709, 385, 670]
+    style: {}
+    tag: FT-103
+  - kind: instrument
+    args: [472, 709, 472, 670]
+    style: {}
+    tag: TT-103C
+  - kind: instrument
+    args: [555, 709, 555, 670]
+    style: {}
+    tag: PT-103D
+  - kind: instrument
+    args: [750, 663, 750, 700]
+    style: {}
+    tag: PT-103S
+  - kind: line
+    args:
+    - - [985, 577]
+      - [1120, 577]
+    - '#173345'
+    - 1.4
+    style: {}
+  - kind: arrow
+    args: [1114, 577]
+    style: {}
+  - kind: text
+    args: [1049, 567, Steam to power cycle, 10]
+    style:
+      anchor: middle
+  - kind: line
+    args:
+    - - [1120, 670]
+      - [985, 670]
+    - '#173345'
+    - 1.4
+    style: {}
+  - kind: arrow
+    args: [991, 670, left]
+    style: {}
+  - kind: text
+    args: [1049, 660, Feedwater from cycle, 10]
+    style:
+      anchor: middle
+  - kind: text
+    args: [1010, 615, Salt / water boundary, 10, '#546772']
+    style: {}
+  - kind: text
+    args: [1010, 632, Air passages omitted, 10, '#546772']
+    style: {}
+  - kind: rect
+    args: [35, 734, 1130, 57]
+    style:
+      fill: '#edf3f6'
+      stroke: '#edf3f6'
+  - kind: text
+    args: [48, 754, 'PER LEG: ${basis.flow_m3_s:.3f} m3/s; pump rise ${basis.pump_rise_kPa:.0f} kPa; ${basis.shaft_MW:.2f}
+        MW shaft; provisional ${basis.motor_MW:g} MW motor. Main line bore ${lines.L-101.bore_mm:g} mm.', 11]
+    style:
+      weight: true
+  - kind: text
+    args: [48, 773, 'Main wall ${lines.L-101.wall_mm:g} mm; radial insulation hot ${lines.L-101.radial_insulation_mm:g}
+        / return ${lines.L-201.radial_insulation_mm:g} mm (conditional estimates). Pump rise is not system design
+        pressure.', 11]
+    style: {}
+- number: 2
+  title: Coolant storage, transfer and review points
+  subtitle: Established transfer direction retained. No reverse-flow, vent destination or automatic protection is
+    assumed.
+  ports:
+    R-101.bottom: [260, 208]
+    P-401.suction: [608, 316]
+    P-401.discharge: [652, 316]
+    TK-401.bottom_1: [934, 400]
+    B-401.outlet: [335, 442]
+    TK-401.bottom_2: [1040, 400]
+  elements:
+  - kind: rect
+    args: [35, 165, 225, 90]
+    style:
+      fill: '#edf3f6'
+  - kind: text
+    args: [52, 190, A / FROM R-101 BOTTOM, 13]
+    style:
+      weight: true
+  - kind: text
+    args: [52, 213, Continuation from sheet 1, 11]
+    style: {}
+  - kind: text
+    args: [52, 235, Transfer out of reactor, 11]
+    style: {}
+  - kind: route
+    args:
+    - - [260, 208]
+      - [550, 208]
+      - [550, 316]
+      - [608, 316]
+    - '#274453'
+    - 2.7
+    style: {}
+    line: L-401
+    segment: 0
+  - kind: arrow
+    args: [410, 208]
+    style: {}
+  - kind: arrow
+    args: [550, 299, down]
+    style: {}
+  - kind: valve
+    args: [322, 208]
+    style: {}
+    tag: V-401
+  - kind: instrument
+    args: [450, 161, 450, 208]
+    style: {}
+    tag: TT-401
+  - kind: text
+    args: [588, 223, L-401, 11]
+    style: {}
+  - kind: text
+    args: [588, 243, Heated + insulated, 11]
+    style: {}
+  - kind: arrow
+    args: [595, 316]
+    style: {}
+  - kind: pump
+    args: [630, 316]
+    style: {}
+    tag: P-401
+  - kind: circle
+    args: [630, 316, 22]
+    style: {}
+  - kind: line
+    args:
+    - - [621, 306]
+      - [640, 316]
+      - [621, 326]
+    - '#173345'
+    - 1.7
+    style: {}
+  - kind: route
+    args:
+    - - [652, 316]
+      - [815, 316]
+      - [815, 453]
+      - [934, 453]
+      - [934, 400]
+    - '#274453'
+    - 2.7
+    style: {}
+    line: L-402
+    segment: 0
+  - kind: arrow
+    args: [770, 316]
+    style: {}
+  - kind: arrow
+    args: [884, 453]
+    style: {}
+  - kind: arrow
+    args: [934, 412, up]
+    style: {}
+  - kind: valve
+    args: [740, 316]
+    style: {}
+    tag: V-402
+  - kind: instrument
+    args: [691, 269, 691, 316]
+    style: {}
+    tag: PT-401D
+  - kind: text
+    args: [717, 375, L-402, 11]
+    style: {}
+  - kind: text
+    args: [502, 426, Pump near tank bottom; geometry simplified., 11, '#546772']
+    style: {}
+  - kind: rect
+    args: [875, 175, 245, 225]
+    style:
+      fill: '#edf3f6'
+  - kind: text
+    args: [997, 208, '${equipment.TK-401.tag}', 19]
+    style:
+      weight: true
+      anchor: middle
+  - kind: text
+    args: [997, 234, Coolant storage, 16]
+    style:
+      weight: true
+      anchor: middle
+  - kind: text
+    args: [997, 270, Insulated tank, 12]
+    style:
+      anchor: middle
+  - kind: text
+    args: [997, 294, '${equipment.TK-401.radial_insulation_mm:g} mm visual allowance', 11]
+    style:
+      anchor: middle
+  - kind: text
+    args: [997, 321, Two separate bottom ports, 11]
+    style:
+      anchor: middle
+  - kind: text
+    args: [997, 343, Tank duty / usable inventory, 11]
+    style:
+      anchor: middle
+  - kind: text
+    args: [997, 360, to be established, 11]
+    style:
+      anchor: middle
+  - kind: instrument
+    args: [1145, 210, 1120, 240]
+    style: {}
+    tag: LT-401
+  - kind: instrument
+    args: [1145, 316, 1120, 340]
+    style: {}
+    tag: TT-402
+  - kind: instrument
+    args: [1000, 139, 1000, 175]
+    style: {}
+    tag: PT-402
+  - kind: rect
+    args: [35, 385, 300, 79]
+    style:
+      fill: '#edf3f6'
+  - kind: text
+    args: [51, 409, B / COOLANT SALT PREPARATION, 12]
+    style:
+      weight: true
+  - kind: text
+    args: [51, 431, Through shared building service duct, 11]
+    style: {}
+  - kind: text
+    args: [51, 450, Liquid coolant supply only, 11]
+    style: {}
+  - kind: route
+    args:
+    - - [335, 442]
+      - [395, 442]
+      - [395, 491]
+      - [1040, 491]
+      - [1040, 400]
+    - '#274453'
+    - 2.7
+    style: {}
+    line: L-403
+    segment: 0
+  - kind: arrow
+    args: [690, 491]
+    style: {}
+  - kind: arrow
+    args: [1040, 412, up]
+    style: {}
+  - kind: valve
+    args: [460, 491]
+    style: {}
+    tag: V-403
+  - kind: text
+    args: [720, 479, L-403 | heated + insulated; near-floor route, 12]
+    style:
+      anchor: middle
+  - kind: text
+    args: [35, 291, '${lines.L-401.od_mm:g} mm OD service tubes', 14]
+    style:
+      weight: true
+  - kind: text
+    args: [35, 315, '${lines.L-401.radial_insulation_mm:g} mm radial insulation: provisional layout allowance.',
+      11]
+    style: {}
+  - kind: text
+    args: [35, 336, 'Transfer pump type, duty and thermal design remain open.', 11]
+    style: {}
+  - kind: rect
+    args: [35, 533, 550, 116]
+    style:
+      fill: '#edf3f6'
+      stroke: '#edf3f6'
+  - kind: text
+    args: [47, 555, DRAWING CONVENTIONS, 13]
+    style:
+      weight: true
+  - kind: text
+    args: [47, 577, 'Solid pipes: established process connections; arrows show intended flow.', 11]
+    style: {}
+  - kind: text
+    args: [47, 594, Red = hot circulation; blue = cool return; dark = storage / service., 11]
+    style: {}
+  - kind: text
+    args: [47, 611, 'Amber valves and instrument bubbles: proposals for review.', 11]
+    style: {}
+  - kind: text
+    args: [47, 628, 'Dashed amber: measurement association, not an impulse or signal line.', 11]
+    style: {}
+  - kind: rect
+    args: [610, 533, 555, 116]
+    style:
+      fill: '#edf3f6'
+      stroke: '#edf3f6'
+  - kind: text
+    args: [622, 555, TAG KEY / PROPOSAL LIMITS, 13]
+    style:
+      weight: true
+  - kind: text
+    args: [622, 577, TT temperature; PT pressure; FT flow; LT level (measurement intent)., 11]
+    style: {}
+  - kind: text
+    args: [622, 594, V = candidate isolation valve; valve type and actuation not selected., 11]
+    style: {}
+  - kind: text
+    args: [622, 611, R reactor; SG steam generator; P pump; TK storage; L process line., 11]
+    style: {}
+  - kind: text
+    args: [622, 628, 'No control loops, alarm settings, trip logic or fail positions assigned.', 11]
+    style: {}
+  - kind: rect
+    args: [35, 666, 550, 116]
+    style:
+      fill: '#edf3f6'
+      stroke: '#edf3f6'
+  - kind: text
+    args: [47, 688, 'OPEN: OPERATING AND MAINTENANCE STATES', 13]
+    style:
+      weight: true
+  - kind: text
+    args: [47, 710, 'Define reactor fill / refill path, complete draining and residual salt.', 11]
+    style: {}
+  - kind: text
+    args: [47, 727, 'Establish inventory, tank freeboard, gas space and expansion provision.', 11]
+    style: {}
+  - kind: text
+    args: [47, 744, 'Define preheat / heat tracing, freeze recovery and transfer sequencing.', 11]
+    style: {}
+  - kind: text
+    args: [47, 761, Check pump suction conditions and shared-plenum flow distribution., 11]
+    style: {}
+  - kind: rect
+    args: [610, 666, 555, 116]
+    style:
+      fill: '#edf3f6'
+      stroke: '#edf3f6'
+  - kind: text
+    args: [622, 688, 'OPEN: PRESSURE BOUNDARIES AND PROTECTION', 13]
+    style:
+      weight: true
+  - kind: text
+    args: [622, 710, Establish pressure profile; 1 MPa(g) is only a wall-screening case., 11]
+    style: {}
+  - kind: text
+    args: [622, 727, Resolve SG tube-failure pressure from the 24 MPa(a) secondary side., 11]
+    style: {}
+  - kind: text
+    args: [622, 744, Define vent / relief destinations and trapped-salt thermal protection., 11]
+    style: {}
+  - kind: text
+    args: [622, 761, 'Review proposed isolation, measurement technology and remote access.', 11]
+    style: {}

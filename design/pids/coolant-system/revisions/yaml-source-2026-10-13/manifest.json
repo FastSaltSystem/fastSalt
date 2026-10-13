@@ -1,0 +1,12 @@
+{
+  "description": "Preserved YAML source before TOML adoption",
+  "date": "2026-10-13",
+  "sha256": {
+    "coolant-system.yaml": "7a62fa8b02f22034bf5701c7867ade5fd47ed5cc9dce46207433d5ebfc3a5793",
+    "layout.yaml": "5d23b313ce1344b995c5fd8a2c5e61f11eebaa2424bf4c276d6d22ef5cf84ce9",
+    "build.py": "34573bfa76f9efe754ee9caf60e848339bd3aeea436b0c770e89bf63928956a5",
+    "test_build.py": "d64a4ff2afd26754c800d0aef583df7866de926457e19612948e21d6ac2b472a",
+    "requirements.txt": "0ee24379a14efb4de69fafd5c9721ebee9e8c6988e541a504e4237a7bc13d77f",
+    "source-manifest.json": "f95c23519d4585d85b3fd09e0612edd260d08856b24086e888ae81e0a16475e9"
+  }
+}

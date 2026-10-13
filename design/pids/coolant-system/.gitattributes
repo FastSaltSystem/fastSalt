@@ -1,0 +1,3 @@
+# Preserve deliberate review snapshots byte-for-byte.
+*.pdf binary
+*.csv -text whitespace=cr-at-eol
