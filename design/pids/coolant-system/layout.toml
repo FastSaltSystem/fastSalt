@@ -1592,6 +1592,14 @@ kind = "text"
 args = [60, 771, "Relief return to TK-401 is a proposal; existing closed transfer valves prevent crediting that path for relief.", 11]
 style = {}
 
+[[sheets.elements]]
+kind = "text"
+args = [790, 687, "Clean N2 makeup: N-603, sheet 6.", 11]
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 706, "Return stays separate from N2 supply.", 11]
+
 [[sheets]]
 number = 4
 title = "Coolant operating-state draft"
@@ -2220,3 +2228,253 @@ style = {weight = false}
 kind = "text"
 args = [40, 770, "Symbol: curved diaphragm between holder faces = rupture disc. Functional schematic; no physical pipe slopes implied.", 11]
 style = {weight = false}
+
+[[sheets]]
+number = 6
+title = "Nitrogen supply - three service areas"
+subtitle = "Exterior utility header; separate room branches. Functional concept only: sizes, pressures and protection hardware TBD."
+
+[sheets.ports]
+"B-601.gas_supply" = [250, 230]
+"H-601.supply" = [360, 230]
+"H-601.offgas" = [480, 230]
+"H-601.fuel" = [750, 230]
+"H-601.coolant" = [1020, 230]
+"B-602.nitrogen_makeup" = [480, 525]
+"B-603.nitrogen_makeup" = [750, 525]
+"B-401.nitrogen_makeup" = [1020, 525]
+
+[[sheets.elements]]
+kind = "rect"
+args = [45, 165, 205, 130, "#edf3f6"]
+
+[[sheets.elements]]
+kind = "text"
+args = [60, 192, "B-601", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [60, 217, "Existing nitrogen tank", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [60, 242, "and vaporizer", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [60, 278, "Gaseous supply outlet", 12]
+
+[[sheets.elements]]
+kind = "route"
+args = [[[250, 230], [360, 230]], "#467AAB", 2.5]
+line = "N-600"
+segment = 0
+
+[[sheets.elements]]
+kind = "text"
+args = [280, 210, "N-600", 11]
+
+[[sheets.elements]]
+kind = "arrow"
+args = [320, 230, "right", "#467AAB"]
+
+[[sheets.elements]]
+kind = "line"
+args = [[[360, 230], [1115, 230]], "#467AAB", 4]
+
+[[sheets.elements]]
+kind = "text"
+args = [390, 175, "H-601 / EXTERIOR CLEAN NITROGEN HEADER", 15]
+
+[[sheets.elements]]
+kind = "text"
+args = [390, 198, "Wall rack below roof edges; above receiving doors", 12]
+
+[[sheets.elements]]
+kind = "circle"
+args = [480, 230, 4, "#467AAB", "#467AAB"]
+
+[[sheets.elements]]
+kind = "route"
+args = [[[480, 230], [480, 525]], "#467AAB", 2.5]
+line = "N-601"
+segment = 0
+
+[[sheets.elements]]
+kind = "text"
+args = [498, 273, "N-601", 12]
+
+[[sheets.elements]]
+kind = "valve"
+args = [480, 306]
+tag = "V-601N"
+
+[[sheets.elements]]
+kind = "rect"
+args = [370, 350, 220, 90, "#edf3f6"]
+
+[[sheets.elements]]
+kind = "text"
+args = [382, 375, "Exterior control reservation", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [382, 400, "Regulation / backflow protection", 11]
+
+[[sheets.elements]]
+kind = "text"
+args = [382, 423, "Arrangement and ratings TBD", 11]
+
+[[sheets.elements]]
+kind = "arrow"
+args = [480, 490, "down", "#467AAB"]
+
+[[sheets.elements]]
+kind = "rect"
+args = [370, 525, 220, 120, "#edf3f6"]
+
+[[sheets.elements]]
+kind = "text"
+args = [382, 550, "B-602 / OFF-GAS AREA", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [382, 575, "Existing gas distribution", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [382, 600, "Room/process users TBD", 12]
+
+[[sheets.elements]]
+kind = "circle"
+args = [750, 230, 4, "#467AAB", "#467AAB"]
+
+[[sheets.elements]]
+kind = "route"
+args = [[[750, 230], [750, 525]], "#467AAB", 2.5]
+line = "N-602"
+segment = 0
+
+[[sheets.elements]]
+kind = "text"
+args = [768, 273, "N-602", 12]
+
+[[sheets.elements]]
+kind = "valve"
+args = [750, 306]
+tag = "V-602N"
+
+[[sheets.elements]]
+kind = "rect"
+args = [640, 350, 220, 90, "#edf3f6"]
+
+[[sheets.elements]]
+kind = "text"
+args = [652, 375, "Exterior control reservation", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [652, 400, "Regulation / backflow protection", 11]
+
+[[sheets.elements]]
+kind = "text"
+args = [652, 423, "Arrangement and ratings TBD", 11]
+
+[[sheets.elements]]
+kind = "arrow"
+args = [750, 490, "down", "#467AAB"]
+
+[[sheets.elements]]
+kind = "rect"
+args = [640, 525, 220, 120, "#edf3f6"]
+
+[[sheets.elements]]
+kind = "text"
+args = [652, 550, "B-603 / FUEL RECYCLING", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [652, 575, "New nitrogen interface", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [652, 600, "Room/process users TBD", 12]
+
+[[sheets.elements]]
+kind = "circle"
+args = [1020, 230, 4, "#467AAB", "#467AAB"]
+
+[[sheets.elements]]
+kind = "route"
+args = [[[1020, 230], [1020, 525]], "#467AAB", 2.5]
+line = "N-603"
+segment = 0
+
+[[sheets.elements]]
+kind = "text"
+args = [1038, 273, "N-603", 12]
+
+[[sheets.elements]]
+kind = "valve"
+args = [1020, 306]
+tag = "V-603N"
+
+[[sheets.elements]]
+kind = "rect"
+args = [910, 350, 220, 90, "#edf3f6"]
+
+[[sheets.elements]]
+kind = "text"
+args = [922, 375, "Exterior control reservation", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [922, 400, "Regulation / backflow protection", 11]
+
+[[sheets.elements]]
+kind = "text"
+args = [922, 423, "Arrangement and ratings TBD", 11]
+
+[[sheets.elements]]
+kind = "arrow"
+args = [1020, 490, "down", "#467AAB"]
+
+[[sheets.elements]]
+kind = "rect"
+args = [910, 525, 220, 120, "#edf3f6"]
+
+[[sheets.elements]]
+kind = "text"
+args = [922, 550, "B-401 / COOLANT PREP", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [922, 575, "Makeup side of station", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [922, 600, "G-400 / H-401: sheet 3", 12]
+
+[[sheets.elements]]
+kind = "line"
+args = [[[345, 462], [1145, 462]], "#546772", 1, true]
+
+[[sheets.elements]]
+kind = "text"
+args = [45, 452, "BUILDING ENVELOPE", 11]
+
+[[sheets.elements]]
+kind = "text"
+args = [45, 475, "Separate room entries", 11]
+
+[[sheets.elements]]
+kind = "text"
+args = [45, 685, "Clean supply only. Returning coolant gas and fuel off-gas do not enter H-601.", 14]
+
+[[sheets.elements]]
+kind = "text"
+args = [45, 711, "Branch blocks show required functions, not selected regulators or a credited contamination barrier.", 12]
+
+[[sheets.elements]]
+kind = "text"
+args = [45, 737, "Detailed gas demand, return handling, controls, pressure protection and penetration seals remain unresolved.", 12]

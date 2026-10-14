@@ -87,7 +87,7 @@ unresolved_fields = ["volume_m3"]
 
 [boundaries.B-401]
 name = "Coolant salt preparation"
-ports = ["salt_transfer", "coolant_gas"]
+ports = ["salt_transfer", "coolant_gas", "nitrogen_makeup"]
 coolant_gas_function = "Common pressure-control station: controlled gas makeup and return; hardware and receiving arrangements unresolved"
 
 [lines]
@@ -691,3 +691,90 @@ connection_basis = "Direct high-level coolant-side connection on each SG; indepe
 isolation_basis = "No intervening isolation valve in this concept; normal gas-valve closure must not isolate emergency relief"
 limitation = "High takeoff does not establish inventory retention during pressure-driven two-phase discharge"
 unresolved_fields = ["takeoff_elevation_m", "transient_protection_performance", "expelled_salt_inventory_m3", "receiver_arrangement", "receiver_capacity_m3", "steam_venting", "backpressure", "anti_siphon_arrangement", "freeze_protection", "disc_temperature_control", "post_event_cooling", "burst_detection_and_response"]
+
+
+# D-068: common clean nitrogen utility; independent of process-gas return.
+[equipment.H-601]
+name = "Exterior clean nitrogen header"
+type = "header"
+ports = ["supply", "offgas", "fuel", "coolant"]
+status = "accepted_for_concept"
+
+[boundaries.B-601]
+name = "Existing nitrogen storage and vaporizer"
+ports = ["gas_supply"]
+
+[boundaries.B-602]
+name = "Off-gas area nitrogen distribution"
+ports = ["nitrogen_makeup"]
+
+[boundaries.B-603]
+name = "Fuel refining/recycling nitrogen distribution"
+ports = ["nitrogen_makeup"]
+
+[nitrogen_distribution]
+status = "accepted_for_concept"
+supply = "B-601.gas_supply"
+header = "H-601"
+layout = "Existing outdoor tank/vaporizer; exterior wall rack below low-building roof edges; separate accessible branches into three rooms"
+separation = "Clean nitrogen supply only. Coolant G-400 / H-401 is a separate bidirectional process-gas network; its return does not join H-601. Fuel off-gas remains separate."
+branch_function = "Independent exterior isolation, pressure regulation and prevention of process-gas backflow; functional reservations, internal hardware unresolved"
+unresolved_fields = ["flow_demand", "supply_pressure", "branch_pressures", "regulator_selection", "backflow_protection_arrangement", "failure_response", "supports_and_penetration_seals"]
+
+[lines.N-600]
+from = "B-601.gas_supply"
+to = "H-601.supply"
+via = []
+flow_direction = "from_to"
+service = "Nitrogen vaporizer to common header"
+sheet = 6
+status = "Owner-selected exterior supply concept; dimensions and pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.N-601]
+from = "H-601.offgas"
+to = "B-602.nitrogen_makeup"
+via = []
+flow_direction = "from_to"
+service = "Clean nitrogen to off-gas area"
+sheet = 6
+status = "Owner-selected exterior supply concept; dimensions and pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.N-602]
+from = "H-601.fuel"
+to = "B-603.nitrogen_makeup"
+via = []
+flow_direction = "from_to"
+service = "Clean nitrogen to fuel refining/recycling"
+sheet = 6
+status = "Owner-selected exterior supply concept; dimensions and pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.N-603]
+from = "H-601.coolant"
+to = "B-401.nitrogen_makeup"
+via = []
+flow_direction = "from_to"
+service = "Clean nitrogen to coolant-preparation makeup station"
+sheet = 6
+status = "Owner-selected exterior supply concept; dimensions and pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[valves.V-601N]
+line = "N-601"
+purpose = "Independent exterior nitrogen branch isolation; valve type, actuation and fail position unresolved"
+status = "accepted_for_concept"
+sheet = 6
+
+[valves.V-602N]
+line = "N-602"
+purpose = "Independent exterior nitrogen branch isolation; valve type, actuation and fail position unresolved"
+status = "accepted_for_concept"
+sheet = 6
+
+[valves.V-603N]
+line = "N-603"
+purpose = "Independent exterior nitrogen branch isolation; valve type, actuation and fail position unresolved"
+status = "accepted_for_concept"
+sheet = 6

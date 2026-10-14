@@ -1096,6 +1096,36 @@ The draft moves TK-401 to (18.5, 18.5) m, retaining its selected size/insulation
 
 [Geometry and scope](../../fastSaltModels/docs/compact-services-draft.md). This supersedes D-065's separate cylindrical enclosure and intake position for visual review. No thermal/structural performance, intake/exhaust separation, complete access or new process design is established. The owner accepted this layout for versioning on 14 October 2026. Earlier scenes are preserved; generated outputs are not added as a new binary baseline.
 
+## D-067 — Coolant P&ID coverage in 3D and lower storage transfer route
+
+14 October 2026. Owner requests accounting for all coolant P&ID elements in the 3D model, identifying missing SG/tank gas lines and valves, and removing the unused fresh-air header between the door and SG inlet so the coolant line can be lowered and the tee beneath the tank become the low point. Responsible: project owner.
+
+The draft imports current P&ID identities/status, adds three nominal SG gas collection vessels, continuously open salt-gas connections, separate gas isolation valves, H-401, G-400 and G-402, and a coolant-preparation pressure-control station envelope. Proposed isolation/measurement items remain tagged reservations. Dedicated high-level relief items are represented by unsized stubs and marked B-501 interfaces; no discharge destination, capacity or new failure assessment is adopted. Fuel off-gas remains separate; G-401 remains removed. Visual gas dimensions are explicitly provisional and do not fill unresolved engineering fields.
+
+Fresh-air header removal spans approximately 27.19–76 degrees, retaining the SG-102 inlet near 81.09 degrees and all other branches. L-401 loses its raised crossing and runs at the existing 0.40 m under-vessel/pump level. The common bottom tee is at 0.20 m; L-402 and L-403 descend toward it. The level inner run and unresolved equipment internals prevent a claim of complete gravity drainage. Existing pressure-assisted sweep intent and operating states are retained.
+
+See [coverage, review files and checks](../../fastSaltModels/docs/coolant-pid-3d.md). Main circulation geometry and adopted hydraulic calculations remain unchanged. The owner accepted D-067 through D-069 for versioning on 14 October 2026.
+
+## D-068 — Exterior clean nitrogen header and separate service-room branches
+
+Date: 2026-10-14. Source: owner accepts the recommendation to retain the outdoor nitrogen skid and serve all three service areas from an accessible exterior header.
+
+Add H-601, supplied by N-600 from the existing nitrogen tank/vaporizer gas outlet B-601. Independent branches N-601/N-602/N-603 serve off-gas-area gas distribution B-602, fuel refining/recycling B-603 and coolant preparation B-401. Reserve exterior isolation, regulation and backflow-prevention functions; detailed devices remain unresolved. Keep header piping above receiving doors, with short individual room penetrations. The draft uses a wall rack below the roof edges rather than routine roof access. Owner refinement: route N-600 from the vaporizer/regulator on a supported crossing to the west wall, then around the corner to the front; remove the freestanding service-area run and shorten H-601 to the building corner. Support geometry remains illustrative.
+
+N-603 enters B-401.nitrogen_makeup. The bidirectional G-400/H-401 coolant-gas network and fuel off-gas returns do not join H-601. Internal gas-user distribution and coolant return disposition remain unresolved. Nitrogen supply pressure and demand are not selected. Visual 50/25 mm header/branch diameters do not establish capacity or pipe specification. Supports, access/radiation zoning and penetration seals require further design.
+
+Affected: P&ID TOML/layout, sheet 6 and sheet-3 cross-reference, Python/Blender draft and its coverage report. Main circulation geometry and hydraulic basis are unchanged. [Current review guide](../../fastSaltModels/docs/coolant-pid-3d.md).
+
+## D-069 — Attached control annex at the turbine hall's reactor-facing end
+
+Date: 2026-10-14. Source: owner accepts an attached control annex with its own structural support, a substantial separation boundary, independent ventilation and outside access, linked by a protected-vestibule concept.
+
+Reserve a 500 m² footprint (20 × 25 m), 5.5 m wall height and 180 m² operator area. Place the annex south of the steam/feedwater entrance at the turbine hall's southeast corner. Four metres of the west boundary meet the turbine hall, with a two-door vestibule and a modeled opening in its facade. Include direct outside entrance/exit and envelope spaces for control equipment, UPS and ventilation. Single-wall versus separated-wall construction is not selected; independent foundation/support and a 0.60 m control-side barrier are visual reservations only.
+
+Selected geometry checks preserve all turbine maintenance reservations and existing plant piping. The closest reactor-shell gap is 1.627 m; it does not establish a vehicle route or full maintenance access. Detailed habitability, fire/seismic/missile/shielding provisions, HVAC, electrical separation, egress and a separate supplementary shutdown location remain open. No new control logic, P&ID topology or hydraulic basis is adopted.
+
+Affected: new Python annex parameters/builder, composed Blender draft, model guides and status. [Review package](../../fastSaltModels/docs/control-annex.md).
+
 ## Proposals not yet adopted
 
 - Extending the D-052 resolved assembly definition to additional plant systems and qualified analysis adapters.

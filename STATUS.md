@@ -1,5 +1,23 @@
 # Project status and next work
 
+## Attached control annex — draft, 14 October 2026
+
+D-069 adds a 20 × 25 m, 5.5 m-high control annex at the turbine hall's southeast corner, with 4 m of shared reactor-facing boundary. It reserves 180 m² for operators, separate control-equipment/UPS/ventilation rooms, an outside entrance and second exit, and a two-door vestibule to the turbine hall. The separate slab and 0.60 m control-side barrier are visual allowances; the single/double-wall and structural details are unresolved.
+
+The draft clears modeled piping and turbine maintenance reservations. The nearest reactor-shell gap is approximately 1.63 m, not a vehicle-access route. [Complete model, exterior/interior/site views and checks](../fastSaltModels/docs/control-annex.md). Existing coolant/nitrogen tag associations and main circulation are retained. This is a spatial study; habitability, protection, ventilation, cable routes, foundations and egress remain to design. Accepted for versioning on 14 October 2026. Model sources: fastSaltModels `8bcc2e8`.
+
+## Exterior nitrogen supply to three service areas — draft, 14 October 2026
+
+D-068 retains the existing outdoor nitrogen skid and adds a common exterior wall header, with separate branches to off-gas treatment, fuel refining/recycling and coolant preparation. Branch isolation and control/protection functions are reserved outside each room. The revised N-600 feed rises at the skid, crosses to the off-gas west wall, then follows the wall around to the front; its freestanding service-area run is removed. Clean nitrogen enters a separate makeup port at the coolant pressure-control station; G-400/H-401 process-gas returns remain separate.
+
+The coolant P&ID now includes sheet 6 for this shared utility and a cross-reference on sheet 3. The 3D coverage expands to 90 tagged items. [Draft model, views and checks](../fastSaltModels/docs/coolant-pid-3d.md). Pipe dimensions are visual reservations; demand, pressure, regulation/backflow hardware, supports and penetration seals remain unresolved. Main hydraulics and existing operating-state definitions are unchanged. Accepted for versioning on 14 October 2026.
+
+## Coolant P&ID in 3D and lowered transfer piping — draft, 14 October 2026
+
+D-067 adds the missing coolant-only gas vessels, header, SG/tank gas branches and valve reservations to the current layout. All 79 tagged P&ID items are accounted for, including proposed valve/instrument locations and explicitly unresolved relief interfaces. The three relief destinations remain local marked stubs, not selected discharge facilities. [Current scene, detailed views and coverage audit](../fastSaltModels/docs/coolant-pid-3d.md).
+
+The unused fresh-air arc between the door and SG-102 inlet is removed and capped; all ten equipment branches and three inlets are retained. The raised L-401 crossing is lowered to the 0.40 m under-vessel/pump level. J-401 sits 0.20 m above the floor, with L-402/L-403 falling toward it. L-401 remains level, so complete gravity drainage is not established. Engineering dimensions/pressure-control hardware remain unresolved where previously unresolved. Main circulation geometry, adopted hydraulics and operating states are unchanged. Accepted as a visual draft for versioning on 14 October 2026.
+
 ## Compact shared-wall tank enclosure — draft, 14 October 2026
 
 D-066 moves TK-401 2.83 m toward the reactor and uses the reactor wall as the enclosure's inner boundary. The owner confirms a radial straight wall parallel to a tank tangent; a curved outer wall completes the enclosure. Coolant preparation shares approximately 9.53 m of the fuel-recycling room's east wall. Its equipment and receiving opening shift with the room. P-401 and insulated low-level transfer routes move to fit; the existing raised internal-header crossing remains.

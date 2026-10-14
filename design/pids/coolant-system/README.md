@@ -1,5 +1,9 @@
 # WISTR coolant system: preliminary P&ID
 
+**Nitrogen update, 14 October 2026 — D-068:** Sheet 6 adds the shared exterior nitrogen header and independent branches to off-gas treatment, fuel refining/recycling and coolant preparation. N-603 enters the makeup side of B-401; returning coolant gas is separate from clean nitrogen supply. Exterior branch isolation and regulation/backflow-protection functions remain provisional hardware reservations. [Current PDF](outputs/current/WISTR-coolant-PID.pdf), [nitrogen sheet SVG](outputs/current/FS-CS-006.svg), and [3D draft guide](../../../../fastSaltModels/docs/coolant-pid-3d.md). Current coverage is 90 tags; the 79-tag count below records the preceding D-067 draft.
+
+**3D update, 14 October 2026 — D-067:** [Current coverage audit and Blender views](../../../../fastSaltModels/docs/coolant-pid-3d.md) now represent all 79 tagged items, including coolant-gas vessels/header/valves and measurement reservations. This supersedes the historical “Blender pending” notes below. Relief destinations remain explicitly unresolved interface stubs. The lowered transfer route has its common tee beneath TK-401; full gravity drainage is not established. P&ID topology and operating-state definitions are unchanged.
+
 Working revision B, 14 October 2026 (original Revision A preserved). This is a discussion drawing based on the current coolant arrangement, with proposed measurement and isolation locations added for review. It is not an issued piping specification or an operating procedure.
 
 ## Preserved Revision A drawing package
@@ -138,7 +142,7 @@ The original Revision A and older Blender snapshots retain two tank-bottom conne
 
 ### Consolidated coolant-gas draft — 14 October 2026
 
-D-057 replaces the earlier D-056 draft. The current set has four sheets: circulation; storage and transfer; gas collection and pressure control; and operating states. The preserved Revision A still has two sheets.
+D-057 replaces the earlier D-056 draft. That draft had four sheets: circulation; storage and transfer; gas collection and pressure control; and operating states. The preserved Revision A still has two sheets.
 
 AC-101–103 remain continuously connected to the SG tops through L-101G–103G, on the SG side of V-101G–103G. Each vessel has pressure and level indication. A common pressure-control station at coolant preparation supplies and receives coolant gas through G-400 / H-401. TK-401 connects through G-402 / V-402G; the redundant G-401 line is removed. Fuel off-gas remains separate.
 
