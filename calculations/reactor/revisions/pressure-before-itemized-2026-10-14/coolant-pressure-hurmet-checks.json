@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "numerical_comparisons": 27,
+  "checks": [
+    "Hurmet recalculation and save/reopen",
+    "0.5 bar reference-pressure shift",
+    "hot and cold uniform-density sensitivities"
+  ],
+  "engine_sha256": "24c325bee542762dad7b1dcd3dd943a5518cb549a44e8e2f1aa4e0abcfc4ebf1"
+}

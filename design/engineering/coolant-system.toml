@@ -1,14 +1,14 @@
 # Shared engineering inputs. Edit these adopted values, not generated view outputs.
-schema_version = 1
+schema_version = 2
 
 [system]
 id = "CS"
 name = "WISTR main coolant circulation"
 active_case = "normal"
-status = "Preliminary; no new engineering sizing"
+status = "Preliminary normal hydraulic basis updated under D-063 with counterSG geometry; equipment envelopes retained"
 scope = "Three main legs only. Storage/transfer, instruments and valves remain in the P&ID source."
 
-[sources.pump]
+[sources.motor_envelope]
 path = "calculations/steam-generator/Coolant pump estimate - Hurmet.md"
 sha256 = "31445e71b66881cec2823ea5b8068a2bf316ff67227f470c3611ea3d903df8b1"
 role = "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
@@ -24,37 +24,74 @@ sha256 = "87ea2baefe4ae9bd28072d43d7c59159187f290d655f8b24182ee1923772258e"
 role = "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
 
 [sources.generator]
-path = "calculations/steam-generator/Generator sizing - Hurmet.md"
-sha256 = "11489d75d9161d14bd431fc7bae67cd6dc06ff606c3c34eb87114397a2241be1"
-role = "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+path = "calculations/steam-generator/sources/counterSG.xlsx"
+sha256 = "2c2bd8716c8bcbb9cbb7790d8d52509bbc4c99c7046f01be323e56c0faeead53"
+role = "D-063 explicitly adopted preliminary results; reviewed source revision"
 
-[cases.normal.mass_flow]
-value = 7566.47718
+
+[sources.pump]
+path = "calculations/steam-generator/Itemized coolant pump estimate - Hurmet.md"
+sha256 = "9d4b50f6a71b2bcc28fbe2a9e86f90a93195d516b5a808df75e2f011b6d3c9ec"
+role = "D-063 explicitly adopted preliminary results; reviewed source revision"
+
+[sources.core]
+path = "calculations/reactor/Core coolant pressure loss - Hurmet.md"
+sha256 = "7e213b97cd2a584e0d514b0b946b969bbdd8070d67f200c379778303d83b17d6"
+role = "D-061 explicitly adopted preliminary results; no automatic worksheet evaluation"
+
+[sources.pressure]
+path = "calculations/reactor/Normal coolant pressure profile - Hurmet.md"
+sha256 = "409f44401d4404105213de9e4c0bf53247e6c2ba8ec9e7c3df950785abf9b3a8"
+role = "D-063 explicitly adopted preliminary results; reviewed source revision"
+
+[cases.normal.total_mass_flow]
+value = 18500
 unit = "kg/s"
 source = "pump"
-status = "provisional_assumption"
-locator = "SaltMassFlow"
+status = "adopted_preliminary"
+locator = "TotalMassFlow"
 
-[cases.normal.density]
-value = 1637.93125
+[cases.normal.mass_flow]
+value = 6166.666666666667
+unit = "kg/s"
+source = "pump"
+status = "adopted_preliminary"
+locator = "LegMassFlow; per leg"
+
+[cases.normal.cold_density]
+value = 1656.3245000000002
 unit = "kg/m3"
 source = "pump"
-status = "provisional_assumption"
-locator = "SaltDensity"
+status = "adopted_preliminary"
+locator = "ColdDensity; pump inlet at 810 K"
 
-[cases.normal.generator_pressure_drop]
-value = 190872.791
+[cases.normal.generator_tube_friction]
+value = 70490.64449397153
 unit = "Pa"
 source = "pump"
-status = "provisional_assumption"
-locator = "GeneratorPressureDrop"
+status = "adopted_preliminary"
+locator = "SGFriction; excludes ends and collectors"
 
-[cases.normal.loop_allowance]
-value = 1.5
-unit = "1"
+[cases.normal.pump_pressure_rise]
+value = 172162.1429805619
+unit = "Pa"
 source = "pump"
-status = "provisional_assumption"
-locator = "AllowanceFactor"
+status = "adopted_preliminary"
+locator = "PumpRise; full itemized loop; no blanket multiplier"
+
+[cases.normal.core_height]
+value = 3.4
+unit = "m"
+source = "core"
+status = "adopted_preliminary"
+locator = "CoreLength; owner correction of UM typo"
+
+[cases.normal.core_pressure_drop]
+value = 62713.56607891116
+unit = "Pa"
+source = "core"
+status = "adopted_preliminary"
+locator = "TotalLoss; active core, reflectors and end losses"
 
 [cases.normal.pump_efficiency]
 value = 0.8
@@ -73,30 +110,58 @@ locator = "MotorEfficiency"
 [cases.normal.motor_rating]
 value = 2000.0
 unit = "kW"
-source = "pump"
+source = "motor_envelope"
 status = "provisional_assumption"
-locator = "MotorRating"
+locator = "MotorRating; retained visual reservation, not selected motor"
 
 [cases.normal.hot_temperature]
-value = 875.0
+value = 890.0
 unit = "K"
-source = "wall"
-status = "inherited_basis"
+source = "pump"
+status = "adopted_preliminary"
 locator = "HotTemperature"
 
 [cases.normal.cold_temperature]
 value = 810.0
 unit = "K"
-source = "wall"
-status = "inherited_basis"
+source = "pump"
+status = "adopted_preliminary"
 locator = "ColdTemperature"
+
+[cases.normal.gas_top_pressure]
+value = 100000.0
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "TopPressure; 1 bar gauge at SG tops"
+
+[cases.normal.pump_suction_pressure]
+value = 224562.27051696135
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "BaseSuction; mean-density normal screen"
+
+[cases.normal.pump_discharge_pressure]
+value = 382304.6736592608
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "BaseDischarge; mean-density normal screen"
+
+[cases.normal.reactor_bottom_pressure]
+value = 425359.3632822734
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "BaseBottom; bottom-plenum midpoint"
 
 [cases.normal.generator_duty]
 value = 500
 unit = "MW"
 source = "generator"
 status = "design_target"
-locator = "three-generator case"
+locator = "counter!AC2; 500 MW target; segmented workbook length verified, performance provisional"
 
 [cases.normal.secondary_pressure]
 value = 24
@@ -164,7 +229,7 @@ parent = "CS"
 [components.SG-101]
 type = "heat_exchanger"
 name = "Steam generator 1"
-ports = ["salt_inlet", "salt_outlet"]
+ports = ["salt_inlet", "salt_outlet", "gas_top", "relief_high"]
 status = "Established concept; duty is a target"
 parent = "CS"
 
@@ -178,7 +243,7 @@ parent = "CS"
 [components.SG-102]
 type = "heat_exchanger"
 name = "Steam generator 2"
-ports = ["salt_inlet", "salt_outlet"]
+ports = ["salt_inlet", "salt_outlet", "gas_top", "relief_high"]
 status = "Established concept; duty is a target"
 parent = "CS"
 
@@ -192,7 +257,7 @@ parent = "CS"
 [components.SG-103]
 type = "heat_exchanger"
 name = "Steam generator 3"
-ports = ["salt_inlet", "salt_outlet"]
+ports = ["salt_inlet", "salt_outlet", "gas_top", "relief_high"]
 status = "Established concept; duty is a target"
 parent = "CS"
 

@@ -980,6 +980,96 @@ Each quantity carries units, provenance and status. Normal-case data and the con
 
 The P&ID import rejects local overrides of shared quantities. Graphics binds equipment identities to placement tags and rejects unsupported topologies. Six cross-view tests cover propagation from one shared edit, source order independence, overrides, units/ports, topology and source freshness. The existing P&ID outputs and resolved coolant geometry are preserved by this migration. No sizing or engineering qualification changes. Responsible: project owner; shared source in `fastSalt`, graphics consumer in `fastSaltModels`.
 
+## D-054 — Reversible positive-displacement coolant transfer pump
+
+13 October 2026. The owner specifies that P-401 between the coolant tank and reactor is a positive-displacement pump capable of operation in both directions. Adopt reactor → P-401 → storage for drain/transfer and storage → P-401 → reactor for refill using the existing L-401/L-402 physical connection. No separate refill line is required by this concept. Pump ports have stable reactor-side/storage-side identities; suction and discharge depend on the operating mode.
+
+The working P&ID advances to B-working with bidirectional arrows and a PD pump label. Registers record pump kind and flow direction. Graphics retains the provisional envelope and routing, with its source metadata updated; no detailed pump mechanism or new sizing is implied. Flow/differential pressure, isolation/vent arrangements, complete generator and low-point draining, and protective functions remain unresolved. This clarifies the previous open refill question, without selecting gear/screw/piston construction or assuming sealing/isolation when stopped. Responsible: project owner; P&ID and graphics configuration.
+
+## D-055 — Tank pressurization and low-point coolant tee
+
+13 October 2026. The owner adds a pressure-gas connection from coolant preparation to the top of TK-401. Pressurization displaces coolant salt back to preparation. A common low-point tee J-401 joins L-402 and L-403 with one tank-bottom branch L-404, replacing two independent bottom connections. G-401 identifies the new gas line; L-403 carries supply and return flow.
+
+The owner explicitly confirms the post-emptying gas sweep: preparation → G-401 → empty tank → L-404 → J-401 → L-403 → preparation. Reactor and steam-generator drainage is handled separately through P-401; this does not establish gas purging of those circuits. “Fuel” in the initial wording is interpreted as coolant salt in this coolant system. Gas species, pressure, new line dimensions, valve/vent/control functions and physical drainage gradients remain unresolved. The P&ID and [operating-state record](../design/pids/coolant-system/operating-states.md) reflect this arrangement; 3D routing remains pending. Responsible: project owner.
+
+## D-056 — Coolant gas header and agreed transfer states
+
+14 October 2026. The owner confirms a coolant gas system separate from fuel off-gas treatment. Each steam generator has a top gas connection and valve. These three branches join a common header to coolant preparation, venting displaced gas during fill and admitting replacement gas during drain. TK-401 also has a valved gas-return connection to this header for tank filling. G-401 remains the separate tank-pressure supply.
+
+Assign draft tags G-101–103 / V-101G–103G, common H-401 / G-400, and tank branch G-402 / V-402G. The owner confirms normal circulation with V-401/402/403 closed and P-401 stopped; reactor drain/refill with V-401/402 open and V-403 closed; tank emptying/sweep with V-402 closed and V-403 open. Remaining positions, including V-401 and P-401 during tank emptying/sweep and gas-valve sequencing, stay unassigned. No new valve technology, failure state or interlock is selected.
+
+Consolidated as a third P&ID sheet plus the [state record](../design/pids/coolant-system/operating-states.md). New SG gas ports share existing component identities; gas routes remain P&ID-only pending geometric design. The user-selected draft workflow batches changes and defers full model regeneration and detailed checks until needed. This consolidation does not change physical sizing or establish complete drainage. Responsible: project owner.
+
+## D-057 — SG gas vessels, common pressure control and intermittent expansion transfer
+
+14 October 2026. The owner selects a nominal gas-collection vessel at each SG top, continuously connected to the SG salt side upstream of the gas isolation valve. Add AC-101–103 with pressure and level indication; numeric volumes remain unresolved. One pressure-control station at coolant preparation provides controlled gas makeup and return through G-400 / H-401. The control band, hardware, receiving arrangements and independent overpressure protection remain open.
+
+Remove G-401: the existing common header and G-402 provide the tank gas path. This supersedes D-055/D-056's separate tank-pressure line. Normal circulation keeps the three SG gas valves open and TK-401 gas valve V-402G closed. Filling/draining and intermittent expansion/contraction transfers open all four gas valves. Tank emptying/sweep closes the SG gas valves and opens V-402G; pressurization settings and transitions remain unresolved.
+
+Most expansion is assigned to TK-401. P-401 transfers salt to storage or returns it as needed, with V-401/V-402 open and V-403 closed. Between transfers, P-401 is stopped and transfer valves closed. Owner clarification, 14 October: P-401 is stopped during both tank emptying to preparation and gas sweep; tank transfer may occur during reactor operation. The owner also specifies V-401 closed in both states. Transfer triggers, capacity, pump duty and protective logic are not selected.
+
+Consolidate a four-sheet working P&ID: circulation, storage/transfer, gas schematic, and operating states. New gas vessels and pressure-control intent remain P&ID-only. Draft-mode checks are limited to affected sources and drawings; no Blender rebuild or commit. Responsible: project owner; accepted discussion recorded in the [working states](../design/pids/coolant-system/operating-states.md).
+
+## D-058 — Provisional full-inventory coolant-storage envelope
+
+14 October 2026. Following the inventory screen, the owner selects **8.2 m bare diameter × 16 m bare height** for the next storage layout, acknowledging that SG internals and inventory may change. Retain 350 mm insulation and 1 mm cladding provisionally: 8.902 m overall diameter. With assumed 25 mm radial wall, 100 mm end allowance, 20% freeboard and 5% heel, the estimate is 829.5 m³ internal and 622.1 m³ working acceptance, versus 588.9 m³ required including the current 10% inventory allowance.
+
+The [draft size](../design/engineering/coolant-storage.toml) is accepted for planning, not a finalized pressure vessel. A check against the saved current site finds that height and bare building envelope are sufficient, but the existing tank location conflicts with the laydown platform, fresh-air header/SG branch, hot coolant pipe and local transfer-pump envelope. Placement remains unresolved; the current 4 × 8 m Blender tank is not silently enlarged into those clashes. See [fit study](../../fastSaltModels/docs/coolant-storage-fit.md). No building enlargement or alternate location is selected. Responsible: project owner.
+
+## D-059 — Coolant normal pressure, level control and intended SG leak path
+
+14 October 2026. The owner specifies approximately **1 bar gauge at the steam-generator tops**, potentially lower. Record 100 kPa with explicit gauge reference and location; this is not a design pressure or relief setting. TK-401 normally remains nearly empty to provide expansion space. P-401 controls circuit inventory to establish accumulator levels; the common coolant-gas station provides separate pressure control. Numerical level targets, pressure band and automatic controls are not selected.
+
+The owner clarifies that the SG design directs a steam-side leak into the air side, not directly into coolant. Update the working P&ID review note accordingly; detailed air-space pressure response, detection and discharge remain unresolved.
+
+Coolant overpressure return to TK-401 remains a proposal. The existing transfer route is not credited for relief with V-401/V-402 normally closed and P-401 stopped. Available routing, tank gas displacement/backpressure, capacity and setpoints require review. No new relief connection or valve state is adopted. Source: owner discussion and explicit gauge-pressure clarification, 14 October 2026. Responsible: project owner. Affected: coolant P&ID TOML, working states and interface record; no Blender change or relocation.
+
+## D-060 — UM coolant flow and corrected core height
+
+14 October 2026. For the core pressure-loss calculation, the owner instructs use of the UM report's value after being shown the mismatch with the higher current generator flow. Adopt 18,500 kg/s total core coolant flow and its 810–890 K case for this estimate. The owner explicitly confirms the appendix's 3.8 m active height is a typo: use 3.4 m. Current 3.8 m core diameter is unchanged.
+
+Use 24,576 tubes and 14 mm clear bore from the report; exact count/bore area is 3.783 m² versus the appendix's 3.86 m². Record that discrepancy explicitly. The [core worksheet](../calculations/reactor/Core%20coolant%20pressure%20loss%20-%20Hurmet.md) is preliminary; it uses current 0.30/0.25 m reflector thicknesses and an assumed continuous bore. No revised tube count or diameter is adopted.
+
+Prior generator, pump and pressure-profile calculations retain their original 22,699 kg/s / 810–875 K basis until coordinated reconciliation. This core result must not be combined silently with those cases. Responsible: project owner; source: explicit conversation instructions. SG failure assessment and layout changes remain deferred.
+
+## D-061 — Shared adoption of itemized normal coolant hydraulics
+
+14 October 2026. Owner authorizes the coordinated update following the core, pump-power and normal-pressure calculations. Supersedes D-060’s temporary restriction to the core calculation and the earlier shared normal-duty inputs.
+
+D-061 adopts the UM hydraulic case into the shared engineering model, P&ID equipment register and graphics duty metadata: **18,500 kg/s total**, three equal 6,166.67 kg/s legs, **810–890 K**, and **3.4 m active core height**. At 810 K, pump-inlet density is 1,656.3245 kg/m³ and volume flow is **3.7231 m³/s per pump**. Full itemized loop loss is **230.681 kPa** (14.202 m cold-salt head), with **1.074 MW shaft / 1.118 MW electrical per pump**, **3.355 MW electrical total**. No SG-loss multiplier remains in the active adapter.
+
+Normal station pressures retain the checked mean-density screen: SG tops 1 bar(g), pump suction/discharge 1.660/3.823 bar(g), reactor bottom-plenum midpoint 4.254 bar(g). Pump differential head is distinct from the static-pressure difference between ports at different heights. These values are not design pressures or relief settings.
+
+The **2 MW motor reservations**, casing dimensions, pipe dimensions/insulation and building layout remain unchanged. Existing saved Blender scenes remain snapshots; the resolved coolant document is updated without a full Blender rebuild. SG tube geometry is retained and its 500 MW per-generator duty remains a target; SG thermal rerating, fitting losses, roughness, supplier pump curves/efficiency and NPSH remain provisional. Insulation/wall worksheets retain their earlier screening cases and need review against 890 K; adoption does not requalify them. Tank relocation and SG-failure/relief assessment remain deferred.
+
+Sources: checked core, itemized pump and normal-pressure Hurmet worksheets; SHA-256 revisions pinned in `design/engineering/coolant-system.toml`. Responsible: project owner. Original higher-flow worksheets remain historical calculations. No new equipment selection or geometry change is authorized by this adoption.
+
+## D-062 — Dedicated high-level steam-generator relief
+
+14 October 2026. The owner selects one dedicated high-level coolant-side emergency relief connection on each SG, separate from the normal gas-collection/pressure-control piping. Add shared ports `SG-101/102/103.relief_high`, lines L-101R/102R/103R, and rupture-disc concepts RD-101/102/103. No intervening isolation valves are included. Discs are normally intact and remain open after actuation; they are not operable valves in the normal state table.
+
+The requirement is to preserve reactor coolant inventory and prevent continued gravity drainage or siphoning after relief. A high takeoff alone does not prove retention during pressure-driven two-phase discharge. B-501 is an unresolved receiving-system interface with three separate terminations; it does not select a common header, number of receivers, pit, or vent route. No cold-leg downward dump is adopted.
+
+Exact elevations, burst differential pressure at actual disc temperature, flow area/capacity, expelled salt volume, receiving/venting arrangement, backpressure, freeze protection, burst detection/response and subsequent cooling remain unresolved. Detailed SG-failure/transient assessment remains deferred. P&ID sheet 5 records the concept; sheet 1 cross-references it. Physical 3D nozzles/routing remain pending; no Blender rebuild or pressure-calculation change.
+
+Responsible: project owner; source: explicit discussion and authorization.
+
+## D-063 — Adopt counterSG geometry and revised coolant calculations
+
+14 October 2026. Owner supplies the newer workbook, confirms the swapped salt inlet/outlet labels and authorizes correction and downstream updates. Supersedes D-061 SG geometry and resulting hydraulic quantities. Responsible: project owner.
+
+D-063 adopts the newer `counterSG.xlsx` geometry: **4,902 salt tubes per SG, 20 mm ID / 24 mm OD and 11.920866 m calculated active length**, provisionally used as straight hydraulic length. The 6,536 steam tubes are a separate bank. The 17 m casing, 18,500 kg/s total flow, 810–890 K temperatures and 3.4 m active core remain unchanged. Salt inlet/outlet labels were corrected to 890/810 K; numeric cells and formulas are unchanged.
+
+At the retained flow, mean SG tube velocity is 2.451 m/s. SG tube friction is **70.491 kPa**, or **87.004 kPa including tube ends and collector allowances**. Full-loop pump rise is **172.162 kPa** (10.599 m cold-salt head). Per pump: **801.2 kW shaft / 834.6 kW electrical**; three-pump total **2.504 MW electrical**. Fitting sensitivity is 2.241–3.065 MW, not a certified range. The prior D-061 total was 3.355 MW.
+
+With 1 bar(g) at SG tops, suction is **2.246 bar(g)**, discharge **3.823 bar(g)**, and reactor bottom-plenum midpoint **4.254 bar(g)**. Lower SG resistance raises suction and reduces required pump rise by matching amounts; downstream pressures stay unchanged in this fixed-flow, mean-density screen.
+
+The revised inventory is approximately **452.3 m³**, including **55.1 m³ in all three SG tube banks**. At 890 K, the fixed cold-fill charge requires 478.7 m³, or 526.5 m³ including 10% inventory allowance. The already-selected 8.2 × 16 m storage reservation provides 622.1 m³ working acceptance under existing allowances, leaving 95.6 m³. Tank placement remains pending; the smaller saved Blender tank remains a historical layout envelope.
+
+The shared TOML, P&ID and resolved graphics duty metadata use the checked revision. Existing 2 MW motor reservations and physical equipment/pipe envelopes are retained. Actual SG contact conductance, hydraulic extensions, local coefficients, roughness and pump curves/NPSH remain provisional. No protection setpoints, relief capacity or SG-failure assessment are established. Older Generator sizing and Brayton worksheets remain explicitly historical cases.
+
+The corrected workbook is versioned in `calculations/steam-generator/sources/counterSG.xlsx`; the supplied original and pre-update calculations are archived in `calculations/steam-generator/revisions/before-counterSG-2026-10-14/`.
+
 ## Proposals not yet adopted
 
 - Extending the D-052 resolved assembly definition to additional plant systems and qualified analysis adapters.

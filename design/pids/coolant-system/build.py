@@ -51,7 +51,7 @@ def load(path):
 def context(model):
     # Tags are the TOML table keys, so renaming never leaves a second tag field to update.
     return {**model, **{group: {tag: {**item, 'tag': tag} for tag, item in model[group].items()}
-                       for group in ('equipment', 'boundaries', 'lines', 'instruments', 'valves')}}
+                       for group in ('equipment', 'boundaries', 'lines', 'instruments', 'valves', 'relief_devices')}}
 
 TOKEN = re.compile(r'\$\{([^}:]+)(?::([^}]+))?\}')
 def expand(value, ctx):
@@ -82,7 +82,7 @@ def validate(model, layout):
     def require(ok, message):
         if not ok: raise ModelError(message)
     require(model.get('schema_version') == 1 and layout.get('schema_version') == 1, 'Unsupported schema_version')
-    groups = ('equipment','boundaries','lines','instruments','valves')
+    groups = ('equipment','boundaries','lines','instruments','valves','relief_devices')
     all_tags = [tag for group in groups for tag in model[group]]
     require(len(all_tags) == len(set(all_tags)), 'Tags must be unique across groups')
     ports = set()
@@ -93,6 +93,7 @@ def validate(model, layout):
     for tag, line in model['lines'].items():
         for key in ('from','to','sheet','status','bore_mm','od_mm','wall_mm','radial_insulation_mm','temperature_C'):
             require(key in line, f'{tag}: missing {key}; list unresolved quantities in unresolved_fields')
+        require(line.get('flow_direction','from_to') in ('from_to','bidirectional'), f'{tag}: invalid flow_direction')
         for start, end in segments(line):
             require(start in ports and end in ports, f'{tag}: unknown endpoint {start} -> {end}')
         for pump in line.get('via', []):
@@ -102,7 +103,7 @@ def validate(model, layout):
             require(value is None or isinstance(value, (int,float)) and value > 0, f'{tag}: {key} must be positive or explicitly unresolved')
         b,o,w = (line[k] for k in ('bore_mm','od_mm','wall_mm'))
         if None not in (b,o,w): require(abs(b+2*w-o)<1e-6, f'{tag}: bore + 2*wall must equal OD')
-    for group in ('instruments','valves'):
+    for group in ('instruments','valves','relief_devices'):
         for tag,item in model[group].items():
             require(item.get('status') in ('proposed','accepted_for_concept'), f'{tag}: status must be proposed or accepted_for_concept')
     for tag, item in model['instruments'].items():
@@ -113,9 +114,23 @@ def validate(model, layout):
     for tag, item in model['valves'].items():
         require(item.get('line') in model['lines'], f'{tag}: unknown line')
         for key in ('purpose','status','sheet'):require(item.get(key), f'{tag}: missing {key}')
-    ctx = context(model); seen_inst=[];seen_valves=[];seen_routes=[]
-    allowed = {'rect','text','line','circle','arrow','valve','instrument','pump','route'}
-    require([s['number'] for s in layout['sheets']] == [1,2], 'This drawing set requires sheets 1 and 2')
+    for tag,item in model['relief_devices'].items():
+        require(item['type']=='rupture_disc', f'{tag}: unsupported relief device')
+        require(item['line'] in model['lines'], f'{tag}: unknown relief line')
+        require(item.get('purpose') and item.get('sheet'), f'{tag}: missing purpose/sheet')
+        line=model['lines'][item['line']]
+        require(line['from'].endswith('.relief_high') and not line['via'], f'{tag}: relief must use a dedicated high SG port')
+        require(not any(v['line']==item['line'] for v in model['valves'].values()), f'{tag}: concept does not permit an isolation valve in relief path')
+        for key in ('burst_differential_pressure_Pa','specified_disc_temperature_C','minimum_flow_area_mm2','relieving_capacity_kg_s','material','discharge_backpressure_Pa'):
+            require(key in item, f'{tag}: missing {key}; explicitly mark unresolved')
+    for sg in ('SG-101','SG-102','SG-103'):
+        paths=[l for l in model['lines'].values() if l['from']==sg+'.relief_high']
+        require(len(paths)==1, f'{sg}: needs exactly one dedicated relief path')
+        tags=[tag for tag,l in model['lines'].items() if l['from']==sg+'.relief_high']
+        require(sum(d['line']==tags[0] for d in model['relief_devices'].values())==1, f'{sg}: needs one relief device')
+    ctx = context(model); seen_inst=[];seen_valves=[];seen_relief=[];seen_routes=[]
+    allowed = {'rect','text','line','circle','arrow','valve','instrument','pump','route','rupture_disc'}
+    require([s['number'] for s in layout['sheets']] == list(range(1,len(layout['sheets'])+1)), 'Sheet numbers must be consecutive from 1')
     for sheet in layout['sheets']:
         anchors = sheet['ports']
         require(set(anchors) <= ports, f'Sheet {sheet["number"]}: unknown port anchor')
@@ -133,11 +148,11 @@ def validate(model, layout):
             require(e['kind'] in allowed, f'Unknown layout element: {e["kind"]}')
             expand(e, ctx)  # All dynamic labels must resolve before any files are written.
             kind=e['kind'];tag=e.get('tag')
-            if kind in ('instrument','valve'):
-                group='instruments' if kind=='instrument' else 'valves'
+            if kind in ('instrument','valve','rupture_disc'):
+                group={'instrument':'instruments','valve':'valves','rupture_disc':'relief_devices'}[kind]
                 require(tag in model[group], f'Unknown {kind}: {tag}')
                 require(model[group][tag]['sheet']==sheet['number'], f'{tag}: sheet mismatch')
-                (seen_inst if kind=='instrument' else seen_valves).append(tag)
+                {'instrument':seen_inst,'valve':seen_valves,'rupture_disc':seen_relief}[kind].append(tag)
                 host=model[group][tag]['on' if kind=='instrument' else 'line']
                 if host in model['lines']:
                     point=e['args'][2:4] if kind=='instrument' else e['args'][:2]
@@ -151,10 +166,10 @@ def validate(model, layout):
                 require(start in anchors and end in anchors, f'{tag}: new endpoints need layout anchors')
                 require(points[0]==anchors[start] and points[-1]==anchors[end], f'{tag}: route endpoints do not match model; update layout')
                 seen_routes.append((tag,seg))
-    for label,seen,expected in [('instruments',seen_inst,set(model['instruments'])),('valves',seen_valves,set(model['valves'])),('routes',seen_routes,{(tag,i) for tag,line in model['lines'].items() for i in range(len(segments(line)))})]:
+    for label,seen,expected in [('instruments',seen_inst,set(model['instruments'])),('valves',seen_valves,set(model['valves'])),('relief_devices',seen_relief,set(model['relief_devices'])),('routes',seen_routes,{(tag,i) for tag,line in model['lines'].items() for i in range(len(segments(line)))})]:
         require(len(seen)==len(set(seen)), f'Duplicate drawn {label}')
         require(set(seen)==expected, f'Missing or extra drawn {label}: {set(seen)^expected}')
-    return {'equipment':len(model['equipment']), 'lines':len(model['lines']), 'instruments':len(seen_inst), 'valves':len(seen_valves), 'route_segments':len(seen_routes)}
+    return {'equipment':len(model['equipment']), 'lines':len(model['lines']), 'instruments':len(seen_inst), 'valves':len(seen_valves), 'relief_devices':len(seen_relief), 'route_segments':len(seen_routes)}
 
 class Drawing:
  def __init__(self,n,title,subtitle):
@@ -184,17 +199,26 @@ class Drawing:
  def valve(self,x,y,tag,color=PROP):
   self.rect(x-12,y-9,24,18,stroke='white');self.line([(x-10,y-7),(x+10,y+7),(x+10,y-7),(x-10,y+7),(x-10,y-7)],color,1.6)
   self.text(x,y-16,tag,10,color,anchor='middle')
+ def rupture_disc(self,x,y,tag):
+  # Concept symbol: curved diaphragm between holder faces; not an isolation valve.
+  self.rect(x-15,y-14,30,28,stroke='white')
+  self.line([(x-12,y-14),(x-12,y+14)],INK,1.6)
+  self.line([(x+12,y-14),(x+12,y+14)],INK,1.6)
+  self.line([(x,y-13),(x+5,y-7),(x+7,y),(x+5,y+7),(x,y+13)],INK,1.8)
+  self.text(x,y-23,tag,12,weight=True,anchor='middle')
  def inst(self,x,y,kind,num,tapx,tapy,color=PROP):
   # Dashed line denotes measurement association, not tubing or a control signal.
   self.line([(tapx,tapy),(x,y-19 if tapy<y else y+19)],color,1,dash=True)
   self.circle(x,y,19,color);self.text(x,y-1,kind,10,color,True,'middle');self.text(x,y+11,num,9,color,anchor='middle')
- def pump(self,x,y,tag):
-  self.circle(x,y,22);self.line([(x+9,y-10),(x-10,y),(x+9,y+10)],INK,1.7)
+ def pump(self,x,y,tag,reversible=False):
+  self.circle(x,y,22)
+  if reversible:self.text(x,y+4,'PD',11,weight=True,anchor='middle')
+  else:self.line([(x+9,y-10),(x-10,y),(x+9,y+10)],INK,1.7)
   self.text(x,y+51,tag,12,weight=True,anchor='middle')
  def footer(self):
   self.line([(35,804),(1165,804)],INK,1)
   self.text(35,824,f"FS-CS-00{self.n} | Rev {DOC['revision']} | {DOC['date']} | {DOC['status']}",11,weight=True)
-  self.text(1165,824,f'Sheet {self.n} / 2 | Functional schematic; not to scale',11,anchor='end')
+  self.text(1165,824,f'Sheet {self.n} / {SHEET_COUNT} | Functional schematic; not to scale',11,anchor='end')
   self.svg.insert(0,f'<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 {W} {H}" role="img"><title>WISTR coolant system sheet {self.n}</title>')
   self.svg.append('</svg>');(OUTPUT/f'FS-CS-00{self.n}.svg').write_text('\n'.join(self.svg))
   PDF.restoreState();PDF.showPage()
@@ -205,19 +229,26 @@ def register(output, name, fields, rows):
         writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(rows)
 
 def write_registers(model, output):
-    for group in ('instruments','valves'):
+    for group in ('instruments','valves','relief_devices'):
         fields=['tag']+list(next(iter(model[group].values())))
-        register(output,group+'.csv',fields,[{'tag':tag,**item} for tag,item in model[group].items()])
-    fields=['tag','from','via','to','bore_mm','od_mm','wall_mm','radial_insulation_mm','temperature_C','heated','status','sheet']
+        register(output,group+'.csv',fields,[{'tag':tag,**{key:('TBD' if value is None else value) for key,value in item.items()}} for tag,item in model[group].items()])
+    fields=['tag','service','from','via','to','bore_mm','od_mm','wall_mm','radial_insulation_mm','temperature_C','heated','flow_direction','status','sheet']
     rows=[]
     for tag,item in model['lines'].items():
         row={field:('TBD' if item.get(field) is None else item[field]) for field in fields[1:]}
+        row['service']=item.get('service','coolant salt')
+        row['flow_direction']=item.get('flow_direction','from_to')
         row['tag']=tag;row['via']='; '.join(item['via']);rows.append(row)
     register(output,'lines.csv',fields,rows)
-    register(output,'equipment.csv',['tag','name','type','status'],[{'tag':tag,**{k:item[k] for k in ('name','type','status')}} for tag,item in model['equipment'].items()])
+    fields=['tag','name','type','pump_kind','reversible','status','duty_MWth',
+            'mass_flow_kg_s','core_height_m','core_pressure_drop_kPa','flow_m3_s',
+            'pressure_rise_pa','hydraulic_kw','shaft_kw','electrical_kw','motor_rating_kw',
+            'gas_top_pressure_bar_g','suction_pressure_bar_g','discharge_pressure_bar_g','bottom_pressure_bar_g']
+    register(output,'equipment.csv',fields,[{'tag':tag,**{k:item.get(k,'') for k in fields[1:]}} for tag,item in model['equipment'].items()])
 
 def render(model, layout, output):
-    global PDF, OUTPUT, DOC, W, H
+    global PDF, OUTPUT, DOC, W, H, SHEET_COUNT
+    SHEET_COUNT=len(layout['sheets'])
     OUTPUT=output;DOC=model['document'];W=layout['page']['width'];H=layout['page']['height']
     output.mkdir(parents=True,exist_ok=True)
     PDF=canvas.Canvas(str(output/'WISTR-coolant-PID.pdf'),pagesize=landscape(A3),invariant=1)
@@ -231,7 +262,15 @@ def render(model, layout, output):
                 tag=e['tag'];kind_code,number=tag.split('-',1)
                 d.inst(a[0],a[1],kind_code,number,a[2],a[3],color=PROP if model['instruments'][tag]['status']=='proposed' else INK,**style)
             elif kind=='valve':d.valve(*a,e['tag'],color=PROP if model['valves'][e['tag']]['status']=='proposed' else INK,**style)
-            elif kind=='pump':d.pump(*a,e['tag'],**style)
+            elif kind=='rupture_disc':d.rupture_disc(*a,e['tag'])
+            elif kind=='pump':d.pump(*a,e['tag'],reversible=model['equipment'][e['tag']].get('reversible',False),**style)
+            elif kind=='arrow' and e.get('line'):
+                d.arrow(*a,**style)
+                if model['lines'][e['line']].get('flow_direction')=='bidirectional':
+                    direction=a[2] if len(a)>2 else 'right'
+                    vx,vy={'right':(1,0),'left':(-1,0),'up':(0,-1),'down':(0,1)}[direction]
+                    reverse={'right':'left','left':'right','up':'down','down':'up'}[direction]
+                    d.arrow(a[0]-20*vx,a[1]-20*vy,reverse,**style)
             else:getattr(d,'line' if kind=='route' else kind)(*a,**style)
         d.footer()
     PDF.save();write_registers(model,output)

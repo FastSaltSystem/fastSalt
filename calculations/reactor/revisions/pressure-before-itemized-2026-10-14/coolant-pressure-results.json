@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-14",
+  "status": "Preliminary normal pressure envelope; no relief sizing or SG failure assessment",
+  "inputs": {
+    "TopPressure": {
+      "value": 1.0,
+      "unit": "bar"
+    },
+    "Density": {
+      "value": 1637.93125,
+      "unit": "kg/m3"
+    },
+    "Gravity": {
+      "value": 9.80665,
+      "unit": "m/s2"
+    },
+    "SGLoss": {
+      "value": 190.872791,
+      "unit": "kPa"
+    },
+    "PumpFactor": {
+      "value": 1.5,
+      "unit": ""
+    },
+    "MassFlow": {
+      "value": 7566.47718,
+      "unit": "kg/s"
+    },
+    "MainBore": {
+      "value": 1.425,
+      "unit": "m"
+    },
+    "TopZ": {
+      "value": 17.0,
+      "unit": "m"
+    },
+    "SGInZ": {
+      "value": 15.5,
+      "unit": "m"
+    },
+    "SGOutZ": {
+      "value": 1.9000000000000004,
+      "unit": "m"
+    },
+    "SuctionZ": {
+      "value": 3.6099999999999994,
+      "unit": "m"
+    },
+    "DischargeZ": {
+      "value": 4.51,
+      "unit": "m"
+    },
+    "ReactorInZ": {
+      "value": 4.509999999999999,
+      "unit": "m"
+    },
+    "BottomZ": {
+      "value": 1.1549999999999994,
+      "unit": "m"
+    },
+    "ReactorOutZ": {
+      "value": 6.279999999999999,
+      "unit": "m"
+    }
+  },
+  "hurmet_checks": {
+    "Gradient": 0.160626184928125,
+    "PumpRise": 2.863091865,
+    "OtherLoss": 0.9543639550000002,
+    "VolumeFlow": 4.619532828377259,
+    "PipeVelocity": 2.896532779460609,
+    "PipeDynamicPressure": 0.06871041451813,
+    "SGGravityGain": 2.1845161150225,
+    "SGNetPressureGain": 0.2757882050224999,
+    "SGInPressure": 1.2409392773921875,
+    "SGOutPressure": 1.5167274824146877,
+    "SuctionHigh": 1.242056706187594,
+    "SuctionLow": 0.28769275118759396,
+    "DischargeLow": 3.006221049752282,
+    "DischargeHigh": 3.9605850047522817,
+    "ReactorInLow": 3.006221049752282,
+    "ReactorInHigh": 3.9605850047522817,
+    "BottomLow": 3.5451219001861407,
+    "BottomHigh": 4.4994858551861405,
+    "ReactorOutLow": 2.7219127024295,
+    "ReactorOutHigh": 3.6762766574295003,
+    "StaticSGOut": 3.4254553924146878,
+    "StaticSuction": 3.1507846161875936,
+    "StaticReactorIn": 3.006221049752282,
+    "StaticBottom": 3.5451219001861407,
+    "StaticReactorOut": 2.7219127024295,
+    "LowerBiasSuctionLow": -0.21230724881240604,
+    "LowerBiasSuctionHigh": 0.7420567061875941
+  },
+  "allocation_checks": {
+    "passed": true,
+    "vertices": 5,
+    "random_allocations": 100,
+    "checks": [
+      "closed-loop pressure closure",
+      "every station within correlated bounds",
+      "three legs have equal elevations"
+    ]
+  },
+  "sources": [
+    {
+      "path": "design/engineering/coolant-system.toml",
+      "sha256": "eaafaa4d8e84fc0eec3cece759c9fee17d786ba920985013d223e117bc17aba6"
+    },
+    {
+      "path": "design/pids/coolant-system/coolant-system.toml",
+      "sha256": "68bb8fb65d703fc9556a1134831b4df1178744d4ddd371df0bc72d9118d5e9c0"
+    },
+    {
+      "path": "calculations/steam-generator/Coolant pump estimate - Hurmet.md",
+      "sha256": "31445e71b66881cec2823ea5b8068a2bf316ff67227f470c3611ea3d903df8b1"
+    },
+    {
+      "path": "calculations/steam-generator/Generator sizing - Hurmet.md",
+      "sha256": "11489d75d9161d14bd431fc7bae67cd6dc06ff606c3c34eb87114397a2241be1"
+    },
+    {
+      "path": "../fastSaltModels/models/wistr_installation.py",
+      "sha256": "a689bd77e81689690202f3680c9f7534051708d5a1e783bafc0ab7c9348e3ad7"
+    },
+    {
+      "path": "../fastSaltModels/models/coolant_assembly.py",
+      "sha256": "b594e9e1240944c4c41940f151c3b641033cfb2271bf8c6af249be5f38fa565b"
+    },
+    {
+      "path": "../fastSaltModels/outputs/reactor-study/reactor-study-report.json",
+      "sha256": "f27928dfb336d85473d7707dd4e3fc7121c74fb71d9a08642427d149bb73466a"
+    }
+  ]
+}

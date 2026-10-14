@@ -11,19 +11,33 @@ from pathlib import Path
 import tomllib
 
 DEFAULT_MODEL = Path(__file__).resolve().parents[1] / 'coolant-system.toml'
-CASE_UNITS = {'mass_flow':'kg/s', 'density':'kg/m3', 'generator_pressure_drop':'Pa',
-              'loop_allowance':'1', 'pump_efficiency':'1', 'motor_efficiency':'1',
-              'motor_rating':'kW', 'hot_temperature':'K', 'cold_temperature':'K',
-              'generator_duty':'MW', 'secondary_pressure':'MPa_abs'}
+CASE_UNITS = {'total_mass_flow': 'kg/s',
+ 'mass_flow': 'kg/s',
+ 'cold_density': 'kg/m3',
+ 'generator_tube_friction': 'Pa',
+ 'pump_pressure_rise': 'Pa',
+ 'core_height': 'm',
+ 'core_pressure_drop': 'Pa',
+ 'pump_efficiency': '1',
+ 'motor_efficiency': '1',
+ 'motor_rating': 'kW',
+ 'hot_temperature': 'K',
+ 'cold_temperature': 'K',
+ 'gas_top_pressure': 'Pa_g',
+ 'pump_suction_pressure': 'Pa_g',
+ 'pump_discharge_pressure': 'Pa_g',
+ 'reactor_bottom_pressure': 'Pa_g',
+ 'generator_duty': 'MW',
+ 'secondary_pressure': 'MPa_abs'}
 STATUSES = {'provisional_assumption','inherited_basis','design_target',
-            'screening_assumption','conditional_dimension'}
+            'screening_assumption','conditional_dimension','adopted_preliminary'}
 
 
 def validate(model):
     def require(ok, message):
         if not ok:
             raise ValueError(message)
-    require(model.get('schema_version') == 1, 'Unsupported coolant schema')
+    require(model.get('schema_version') == 2, 'Unsupported coolant schema')
     require(model['system']['active_case'] == 'normal', 'Only the normal case has view adapters')
     def quantity(item, unit):
         value = item['value']
@@ -38,6 +52,7 @@ def validate(model):
         quantity(normal[key],unit)
     for key in ('pump_efficiency','motor_efficiency'):
         require(normal[key]['value'] <= 1, 'Efficiency exceeds one')
+    require(math.isclose(normal['total_mass_flow']['value'], 3*normal['mass_flow']['value'], rel_tol=1e-10), 'Total flow must equal three leg flows')
     quantity(model['cases']['wall_screening']['pressure'], 'MPa_g')
     for spec in model['specifications'].values():
         require(set(spec) == {'bore','wall','insulation'}, 'Unknown or missing pipe quantity')
@@ -97,11 +112,22 @@ def pipe_specs(model):
 
 
 def pump_inputs(model):
-    names={'mass_flow_kg_s':'mass_flow','density_kg_m3':'density',
-           'sg_pressure_drop_pa':'generator_pressure_drop','allowance_factor':'loop_allowance',
+    names={'mass_flow_kg_s':'mass_flow','density_kg_m3':'cold_density',
+           'sg_tube_friction_pa':'generator_tube_friction','pressure_rise_pa':'pump_pressure_rise',
            'pump_efficiency':'pump_efficiency','motor_efficiency':'motor_efficiency',
            'motor_rating_kw':'motor_rating'}
     return {name:value(model,key) for name,key in names.items()}
+
+
+def pump_duty(model):
+    """Per-pump duty from the explicitly adopted full-loop pressure loss."""
+    flow=value(model,'mass_flow')/value(model,'cold_density')
+    rise=value(model,'pump_pressure_rise')
+    hydraulic=flow*rise/1000
+    shaft=hydraulic/value(model,'pump_efficiency')
+    return dict(flow_m3_s=flow,pressure_rise_pa=rise,hydraulic_kw=hydraulic,
+                shaft_kw=shaft,electrical_kw=shaft/value(model,'motor_efficiency'),
+                motor_rating_kw=value(model,'motor_rating'))
 
 
 def pid_projection(model):
@@ -110,7 +136,18 @@ def pid_projection(model):
     equipment=deepcopy(model['components'])
     for c in equipment.values():
         c.pop('parent')
-        if c['type']=='heat_exchanger':c['duty_MWth']=value(model,'generator_duty')
+        if c['type']=='heat_exchanger':
+            c['duty_MWth']=value(model,'generator_duty')
+            c['gas_top_pressure_bar_g']=value(model,'gas_top_pressure')/1e5
+        elif c['type']=='pump':
+            c.update(pump_duty(model))
+            c['suction_pressure_bar_g']=value(model,'pump_suction_pressure')/1e5
+            c['discharge_pressure_bar_g']=value(model,'pump_discharge_pressure')/1e5
+        elif c['type']=='reactor':
+            c['core_height_m']=value(model,'core_height')
+            c['mass_flow_kg_s']=value(model,'total_mass_flow')
+            c['core_pressure_drop_kPa']=value(model,'core_pressure_drop')/1000
+            c['bottom_pressure_bar_g']=value(model,'reactor_bottom_pressure')/1e5
     specs=pipe_specs(model);lines={}
     for tag,c in model['connections'].items():
         service=c['specification'];spec=specs[service]
@@ -118,12 +155,14 @@ def pid_projection(model):
         lines[tag].update(bore_mm=1000*spec['bore'],wall_mm=1000*spec['wall'],
                           od_mm=1000*spec['bare_od'],radial_insulation_mm=1000*spec['insulation'],
                           temperature_C=round(value(model,service+'_temperature')-273.15,8),heated=None)
-    flow=value(model,'mass_flow')/value(model,'density')
-    rise=value(model,'generator_pressure_drop')*value(model,'loop_allowance')
+    duty=pump_duty(model);flow=duty['flow_m3_s'];rise=duty['pressure_rise_pa']
     # Preserve the worksheet's seven significant figures in existing drawing labels/registers.
     rounded=lambda x:float(format(x,'.7g'))
     basis=dict(flow_m3_s=rounded(flow),pump_rise_kPa=rounded(rise/1000),
-               shaft_MW=rounded(flow*rise/value(model,'pump_efficiency')/1e6),
+               shaft_MW=rounded(duty['shaft_kw']/1000),
+               electrical_MW=rounded(duty['electrical_kw']/1000),
+               total_mass_flow_kg_s=value(model,'total_mass_flow'),
+               core_height_m=value(model,'core_height'),
                motor_MW=value(model,'motor_rating')/1000,
                screening_pressure_MPag=model['cases']['wall_screening']['pressure']['value'],
                secondary_pressure_MPaa=value(model,'secondary_pressure'))

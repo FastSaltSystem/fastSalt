@@ -1,4 +1,4 @@
-# Drawing layout only: coordinates are page units, not metres.
+# P&ID layout; engineering data and operating states are in coolant-system.toml.
 schema_version = 1
 
 [page]
@@ -33,17 +33,17 @@ subtitle = "Three established process legs; proposed measurement and isolation l
 [[sheets.elements]]
 kind = "rect"
 args = [35, 152, 205, 525]
-style = { fill = "#edf3f6" }
+style = {fill = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [137, 184, "${equipment.R-101.tag}", 19]
-style = { weight = true, anchor = "middle" }
+style = {weight = true, anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [137, 205, "WISTR reactor", 15]
-style = { weight = true, anchor = "middle" }
+style = {weight = true, anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
@@ -93,7 +93,7 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [52, 552, "Fuel is a separate fluid.", 12]
-style = { weight = true }
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
@@ -118,6 +118,7 @@ style = {}
 [[sheets.elements]]
 kind = "arrow"
 args = [138, 704, "down"]
+line = "L-401"
 style = {}
 
 [[sheets.elements]]
@@ -127,40 +128,40 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [157, 710, "to sheet 2, L-401", 11]
+args = [157, 710, "sheet 2, L-401", 11]
 style = {}
 
 [[sheets.elements]]
 kind = "rect"
 args = [880, 193, 105, 142]
-style = { fill = "#edf3f6" }
+style = {fill = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 240, "${equipment.SG-101.tag}", 15]
-style = { weight = true, anchor = "middle" }
+style = {weight = true, anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 262, "${equipment.SG-101.duty_MWth:g} MWth", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 290, "Exchanger", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[240, 215], [880, 215]], "#b7442e", 2.7]
-style = {}
 line = "L-101"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
 args = [830, 215]
-style = { color = "#b7442e" }
+style = {color = "#b7442e"}
 
 [[sheets.elements]]
 kind = "text"
@@ -170,26 +171,26 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [600, 203, "${lines.L-101.tag}  |  hot salt ~${lines.L-101.temperature_C:.0f} C", 12, "#b7442e"]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "valve"
 args = [315, 215]
-style = {}
 tag = "V-101H"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [690, 255, 690, 215]
-style = {}
 tag = "TT-101H"
+style = {}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[880, 310], [790, 310], [790, 340], [620, 340], [620, 332]], "#147689", 2.7]
-style = {}
 line = "L-201"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
@@ -204,15 +205,15 @@ style = {}
 [[sheets.elements]]
 kind = "pump"
 args = [620, 310]
-style = {}
 tag = "P-101"
+style = {}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[598, 310], [240, 310]], "#147689", 2.7]
-style = {}
 line = "L-201"
 segment = 1
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
@@ -227,37 +228,37 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [520, 293, "${lines.L-201.tag} | ~${lines.L-201.temperature_C:.0f} C", 11, "#147689"]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "valve"
 args = [315, 310]
-style = {}
 tag = "V-101C"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [385, 349, 385, 310]
-style = {}
 tag = "FT-101"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [472, 349, 472, 310]
-style = {}
 tag = "TT-101C"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [555, 349, 555, 310]
-style = {}
 tag = "PT-101D"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [750, 303, 750, 340]
-style = {}
 tag = "PT-101S"
+style = {}
 
 [[sheets.elements]]
 kind = "line"
@@ -272,7 +273,7 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [1049, 207, "Steam to power cycle", 10]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "line"
@@ -287,7 +288,7 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [1049, 300, "Feedwater from cycle", 10]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
@@ -302,34 +303,34 @@ style = {}
 [[sheets.elements]]
 kind = "rect"
 args = [880, 373, 105, 142]
-style = { fill = "#edf3f6" }
+style = {fill = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 420, "${equipment.SG-102.tag}", 15]
-style = { weight = true, anchor = "middle" }
+style = {weight = true, anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 442, "${equipment.SG-102.duty_MWth:g} MWth", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 470, "Exchanger", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[240, 395], [880, 395]], "#b7442e", 2.7]
-style = {}
 line = "L-102"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
 args = [830, 395]
-style = { color = "#b7442e" }
+style = {color = "#b7442e"}
 
 [[sheets.elements]]
 kind = "text"
@@ -339,26 +340,26 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [600, 383, "${lines.L-102.tag}  |  hot salt ~${lines.L-102.temperature_C:.0f} C", 12, "#b7442e"]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "valve"
 args = [315, 395]
-style = {}
 tag = "V-102H"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [690, 435, 690, 395]
-style = {}
 tag = "TT-102H"
+style = {}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[880, 490], [790, 490], [790, 520], [620, 520], [620, 512]], "#147689", 2.7]
-style = {}
 line = "L-202"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
@@ -373,15 +374,15 @@ style = {}
 [[sheets.elements]]
 kind = "pump"
 args = [620, 490]
-style = {}
 tag = "P-102"
+style = {}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[598, 490], [240, 490]], "#147689", 2.7]
-style = {}
 line = "L-202"
 segment = 1
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
@@ -396,37 +397,37 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [520, 473, "${lines.L-202.tag} | ~${lines.L-202.temperature_C:.0f} C", 11, "#147689"]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "valve"
 args = [315, 490]
-style = {}
 tag = "V-102C"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [385, 529, 385, 490]
-style = {}
 tag = "FT-102"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [472, 529, 472, 490]
-style = {}
 tag = "TT-102C"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [555, 529, 555, 490]
-style = {}
 tag = "PT-102D"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [750, 483, 750, 520]
-style = {}
 tag = "PT-102S"
+style = {}
 
 [[sheets.elements]]
 kind = "line"
@@ -441,7 +442,7 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [1049, 387, "Steam to power cycle", 10]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "line"
@@ -456,7 +457,7 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [1049, 480, "Feedwater from cycle", 10]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
@@ -471,34 +472,34 @@ style = {}
 [[sheets.elements]]
 kind = "rect"
 args = [880, 553, 105, 142]
-style = { fill = "#edf3f6" }
+style = {fill = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 600, "${equipment.SG-103.tag}", 15]
-style = { weight = true, anchor = "middle" }
+style = {weight = true, anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 622, "${equipment.SG-103.duty_MWth:g} MWth", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [932, 650, "Exchanger", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[240, 575], [880, 575]], "#b7442e", 2.7]
-style = {}
 line = "L-103"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
 args = [830, 575]
-style = { color = "#b7442e" }
+style = {color = "#b7442e"}
 
 [[sheets.elements]]
 kind = "text"
@@ -508,26 +509,26 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [600, 563, "${lines.L-103.tag}  |  hot salt ~${lines.L-103.temperature_C:.0f} C", 12, "#b7442e"]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "valve"
 args = [315, 575]
-style = {}
 tag = "V-103H"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [690, 615, 690, 575]
-style = {}
 tag = "TT-103H"
+style = {}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[880, 670], [790, 670], [790, 700], [620, 700], [620, 692]], "#147689", 2.7]
-style = {}
 line = "L-203"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
@@ -542,15 +543,15 @@ style = {}
 [[sheets.elements]]
 kind = "pump"
 args = [620, 670]
-style = {}
 tag = "P-103"
+style = {}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[598, 670], [240, 670]], "#147689", 2.7]
-style = {}
 line = "L-203"
 segment = 1
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
@@ -565,37 +566,37 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [520, 653, "${lines.L-203.tag} | ~${lines.L-203.temperature_C:.0f} C", 11, "#147689"]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "valve"
 args = [315, 670]
-style = {}
 tag = "V-103C"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [385, 709, 385, 670]
-style = {}
 tag = "FT-103"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [472, 709, 472, 670]
-style = {}
 tag = "TT-103C"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [555, 709, 555, 670]
-style = {}
 tag = "PT-103D"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [750, 663, 750, 700]
-style = {}
 tag = "PT-103S"
+style = {}
 
 [[sheets.elements]]
 kind = "line"
@@ -610,7 +611,7 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [1049, 567, "Steam to power cycle", 10]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "line"
@@ -625,7 +626,7 @@ style = {}
 [[sheets.elements]]
 kind = "text"
 args = [1049, 660, "Feedwater from cycle", 10]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
@@ -640,40 +641,102 @@ style = {}
 [[sheets.elements]]
 kind = "rect"
 args = [35, 734, 1130, 57]
-style = { fill = "#edf3f6", stroke = "#edf3f6" }
+style = {fill = "#edf3f6", stroke = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
-args = [48, 754, "PER LEG: ${basis.flow_m3_s:.3f} m3/s; pump rise ${basis.pump_rise_kPa:.0f} kPa; ${basis.shaft_MW:.2f} MW shaft; provisional ${basis.motor_MW:g} MW motor. Main line bore ${lines.L-101.bore_mm:g} mm.", 11]
-style = { weight = true }
+args = [48, 754, "PER LEG: ${basis.flow_m3_s:.3f} m3/s; pump rise ${basis.pump_rise_kPa:.0f} kPa; ${basis.shaft_MW:.2f} MW shaft / ${basis.electrical_MW:.2f} MW electric; ${basis.motor_MW:g} MW motor reservation.", 11]
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
-args = [48, 773, "Main wall ${lines.L-101.wall_mm:g} mm; radial insulation hot ${lines.L-101.radial_insulation_mm:g} / return ${lines.L-201.radial_insulation_mm:g} mm (conditional estimates). Pump rise is not system design pressure.", 11]
+args = [48, 773, "UM flow ${basis.total_mass_flow_kg_s:g} kg/s total; core ${basis.core_height_m:g} m. Itemized provisional losses; no 50% multiplier. Pump rise is not design pressure.", 11]
 style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[930, 193], [930, 173]], "#50745e", 2]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [930, 164, "AC-101 / gas: sheet 3", 9]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[930, 373], [930, 353]], "#50745e", 2]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [930, 344, "AC-102 / gas: sheet 3", 9]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[930, 553], [930, 533]], "#50745e", 2]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [930, 524, "AC-103 / gas: sheet 3", 9]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[972, 193], [972, 180], [1085, 180]], "#274453", 2]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [1085, 171, "RD-101: relief sheet 5", 9]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[972, 373], [972, 360], [1085, 360]], "#274453", 2]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [1085, 351, "RD-102: relief sheet 5", 9]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[972, 553], [972, 540], [1085, 540]], "#274453", 2]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [1085, 531, "RD-103: relief sheet 5", 9]
+style = {anchor = "middle"}
 
 [[sheets]]
 number = 2
 title = "Coolant storage, transfer and review points"
-subtitle = "Established transfer direction retained. No reverse-flow, vent destination or automatic protection is assumed."
+subtitle = "Common low-point tee; pressure gas empties TK-401 and then sweeps L-403 back to coolant preparation."
 
 [sheets.ports]
 "R-101.bottom" = [260, 208]
-"P-401.suction" = [608, 316]
-"P-401.discharge" = [652, 316]
-"TK-401.bottom_1" = [934, 400]
-"B-401.outlet" = [335, 442]
-"TK-401.bottom_2" = [1040, 400]
+"P-401.reactor_side" = [608, 316]
+"P-401.storage_side" = [652, 316]
+"TK-401.bottom" = [997, 400]
+"B-401.salt_transfer" = [335, 442]
+"J-401.pump" = [815, 491]
+"J-401.preparation" = [815, 491]
+"J-401.tank" = [815, 491]
 
 [[sheets.elements]]
 kind = "rect"
 args = [35, 165, 225, 90]
-style = { fill = "#edf3f6" }
+style = {fill = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
-args = [52, 190, "A / FROM R-101 BOTTOM", 13]
-style = { weight = true }
+args = [52, 190, "A / TO / FROM R-101 BOTTOM", 13]
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
@@ -682,37 +745,39 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [52, 235, "Transfer out of reactor", 11]
+args = [52, 235, "Drain to storage / refill reactor", 11]
 style = {}
 
 [[sheets.elements]]
 kind = "route"
 args = [[[260, 208], [550, 208], [550, 316], [608, 316]], "#274453", 2.7]
-style = {}
 line = "L-401"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
 args = [410, 208]
+line = "L-401"
 style = {}
 
 [[sheets.elements]]
 kind = "arrow"
 args = [550, 299, "down"]
+line = "L-401"
 style = {}
 
 [[sheets.elements]]
 kind = "valve"
 args = [322, 208]
-style = {}
 tag = "V-401"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [450, 161, 450, 208]
-style = {}
 tag = "TT-401"
+style = {}
 
 [[sheets.elements]]
 kind = "text"
@@ -727,57 +792,45 @@ style = {}
 [[sheets.elements]]
 kind = "arrow"
 args = [595, 316]
+line = "L-401"
 style = {}
 
 [[sheets.elements]]
 kind = "pump"
 args = [630, 316]
-style = {}
 tag = "P-401"
-
-[[sheets.elements]]
-kind = "circle"
-args = [630, 316, 22]
-style = {}
-
-[[sheets.elements]]
-kind = "line"
-args = [[[621, 306], [640, 316], [621, 326]], "#173345", 1.7]
 style = {}
 
 [[sheets.elements]]
 kind = "route"
-args = [[[652, 316], [815, 316], [815, 453], [934, 453], [934, 400]], "#274453", 2.7]
-style = {}
+args = [[[652, 316], [815, 316], [815, 491]], "#274453", 2.7]
 line = "L-402"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
 args = [770, 316]
+line = "L-402"
 style = {}
 
 [[sheets.elements]]
 kind = "arrow"
-args = [884, 453]
-style = {}
-
-[[sheets.elements]]
-kind = "arrow"
-args = [934, 412, "up"]
+args = [815, 458, "down"]
+line = "L-402"
 style = {}
 
 [[sheets.elements]]
 kind = "valve"
 args = [740, 316]
-style = {}
 tag = "V-402"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [691, 269, 691, 316]
-style = {}
 tag = "PT-401D"
+style = {}
 
 [[sheets.elements]]
 kind = "text"
@@ -786,76 +839,76 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [502, 426, "Pump near tank bottom; geometry simplified.", 11, "#546772"]
+args = [502, 426, "P-401: reversible positive-displacement pump.", 11, "#546772"]
 style = {}
 
 [[sheets.elements]]
 kind = "rect"
 args = [875, 175, 245, 225]
-style = { fill = "#edf3f6" }
+style = {fill = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [997, 208, "${equipment.TK-401.tag}", 19]
-style = { weight = true, anchor = "middle" }
+style = {weight = true, anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [997, 234, "Coolant storage", 16]
-style = { weight = true, anchor = "middle" }
+style = {weight = true, anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [997, 270, "Insulated tank", 12]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [997, 294, "${equipment.TK-401.radial_insulation_mm:g} mm visual allowance", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
-args = [997, 321, "Two separate bottom ports", 11]
-style = { anchor = "middle" }
+args = [997, 321, "Single bottom branch to J-401", 11]
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [997, 343, "Tank duty / usable inventory", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
 args = [997, 360, "to be established", 11]
-style = { anchor = "middle" }
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [1145, 210, 1120, 240]
-style = {}
 tag = "LT-401"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [1145, 316, 1120, 340]
-style = {}
 tag = "TT-402"
+style = {}
 
 [[sheets.elements]]
 kind = "instrument"
 args = [1000, 139, 1000, 175]
-style = {}
 tag = "PT-402"
+style = {}
 
 [[sheets.elements]]
 kind = "rect"
 args = [35, 385, 300, 79]
-style = { fill = "#edf3f6" }
+style = {fill = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [51, 409, "B / COOLANT SALT PREPARATION", 12]
-style = { weight = true }
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
@@ -864,41 +917,37 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [51, 450, "Liquid coolant supply only", 11]
+args = [51, 450, "Salt supply / return and gas sweep", 11]
 style = {}
 
 [[sheets.elements]]
 kind = "route"
-args = [[[335, 442], [395, 442], [395, 491], [1040, 491], [1040, 400]], "#274453", 2.7]
-style = {}
+args = [[[335, 442], [395, 442], [395, 491], [815, 491]], "#274453", 2.7]
 line = "L-403"
 segment = 0
+style = {}
 
 [[sheets.elements]]
 kind = "arrow"
 args = [690, 491]
-style = {}
-
-[[sheets.elements]]
-kind = "arrow"
-args = [1040, 412, "up"]
+line = "L-403"
 style = {}
 
 [[sheets.elements]]
 kind = "valve"
 args = [460, 491]
-style = {}
 tag = "V-403"
+style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [720, 479, "L-403 | heated + insulated; near-floor route", 12]
-style = { anchor = "middle" }
+args = [600, 479, "L-403 | heated salt supply / return", 12]
+style = {anchor = "middle"}
 
 [[sheets.elements]]
 kind = "text"
-args = [35, 291, "${lines.L-401.od_mm:g} mm OD service tubes", 14]
-style = { weight = true }
+args = [35, 291, "L-401/402/403: ${lines.L-401.od_mm:g} mm OD", 14]
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
@@ -907,18 +956,18 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [35, 336, "Transfer pump type, duty and thermal design remain open.", 11]
+args = [35, 336, "Pump duty, construction and thermal design remain open.", 11]
 style = {}
 
 [[sheets.elements]]
 kind = "rect"
 args = [35, 533, 550, 116]
-style = { fill = "#edf3f6", stroke = "#edf3f6" }
+style = {fill = "#edf3f6", stroke = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [47, 555, "DRAWING CONVENTIONS", 13]
-style = { weight = true }
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
@@ -927,7 +976,7 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [47, 594, "Red = hot circulation; blue = cool return; dark = storage / service.", 11]
+args = [47, 594, "Red / blue = hot / return salt; dark = service salt; green = coolant gas.", 11]
 style = {}
 
 [[sheets.elements]]
@@ -937,18 +986,18 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [47, 628, "Dashed amber: measurement association, not an impulse or signal line.", 11]
+args = [47, 628, "Dashed lines: measurement association, not impulse or signal lines.", 11]
 style = {}
 
 [[sheets.elements]]
 kind = "rect"
 args = [610, 533, 555, 116]
-style = { fill = "#edf3f6", stroke = "#edf3f6" }
+style = {fill = "#edf3f6", stroke = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [622, 555, "TAG KEY / PROPOSAL LIMITS", 13]
-style = { weight = true }
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
@@ -957,7 +1006,7 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [622, 594, "V = candidate isolation valve; valve type and actuation not selected.", 11]
+args = [622, 594, "V = isolation valve; type, actuation and fail position unselected.", 11]
 style = {}
 
 [[sheets.elements]]
@@ -967,22 +1016,22 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [622, 628, "No control loops, alarm settings, trip logic or fail positions assigned.", 11]
+args = [622, 628, "Pressure-control intent: sheet 3; settings and protection unresolved.", 11]
 style = {}
 
 [[sheets.elements]]
 kind = "rect"
 args = [35, 666, 550, 116]
-style = { fill = "#edf3f6", stroke = "#edf3f6" }
+style = {fill = "#edf3f6", stroke = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [47, 688, "OPEN: OPERATING AND MAINTENANCE STATES", 13]
-style = { weight = true }
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
-args = [47, 710, "Define reactor fill / refill path, complete draining and residual salt.", 11]
+args = [47, 710, "Reactor / SG drainage via P-401; tank / L-403 blowdown via G-402.", 11]
 style = {}
 
 [[sheets.elements]]
@@ -992,7 +1041,7 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [47, 744, "Define preheat / heat tracing, freeze recovery and transfer sequencing.", 11]
+args = [47, 744, "Coolant-gas connections: sheet 3; agreed states: sheet 4.", 11]
 style = {}
 
 [[sheets.elements]]
@@ -1003,12 +1052,12 @@ style = {}
 [[sheets.elements]]
 kind = "rect"
 args = [610, 666, 555, 116]
-style = { fill = "#edf3f6", stroke = "#edf3f6" }
+style = {fill = "#edf3f6", stroke = "#edf3f6"}
 
 [[sheets.elements]]
 kind = "text"
 args = [622, 688, "OPEN: PRESSURE BOUNDARIES AND PROTECTION", 13]
-style = { weight = true }
+style = {weight = true}
 
 [[sheets.elements]]
 kind = "text"
@@ -1017,7 +1066,7 @@ style = {}
 
 [[sheets.elements]]
 kind = "text"
-args = [622, 727, "Resolve SG tube-failure pressure from the 24 MPa(a) secondary side.", 11]
+args = [622, 727, "Steam leaks to SG air side by design; resolve air-side response.", 11]
 style = {}
 
 [[sheets.elements]]
@@ -1029,3 +1078,1145 @@ style = {}
 kind = "text"
 args = [622, 761, "Review proposed isolation, measurement technology and remote access.", 11]
 style = {}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[815, 491], [997, 491], [997, 400]], "#274453", 2.7]
+line = "L-404"
+segment = 0
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [907, 491]
+line = "L-404"
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [997, 431, "up"]
+line = "L-404"
+style = {}
+
+[[sheets.elements]]
+kind = "circle"
+args = [815, 491, 4]
+style = {fill = "#274453"}
+
+[[sheets.elements]]
+kind = "text"
+args = [832, 519, "J-401 / common low-point tee", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [1008, 447, "L-404", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[1075, 175], [1075, 143], [1145, 143]], "#50745e", 2]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [1105, 132, "G-402 / sheet 3", 9]
+style = {anchor = "middle"}
+
+[[sheets]]
+number = 3
+title = "Coolant gas collection and pressure control"
+subtitle = "One common pressure-control station at preparation; coolant gas is separate from fuel off-gas treatment."
+
+[sheets.ports]
+"SG-101.gas_top" = [190, 225]
+"AC-101.salt" = [350, 245]
+"AC-101.gas" = [350, 155]
+"H-401.sg1" = [750, 200]
+"SG-102.gas_top" = [190, 365]
+"AC-102.salt" = [350, 385]
+"AC-102.gas" = [350, 295]
+"H-401.sg2" = [750, 340]
+"SG-103.gas_top" = [190, 505]
+"AC-103.salt" = [350, 525]
+"AC-103.gas" = [350, 435]
+"H-401.sg3" = [750, 480]
+"TK-401.gas_return" = [350, 630]
+"H-401.tank" = [750, 630]
+"H-401.preparation" = [750, 340]
+"B-401.coolant_gas" = [900, 340]
+
+[[sheets.elements]]
+kind = "rect"
+args = [50, 190, 140, 60]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 213, "SG-101 TOP", 13]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 234, "Salt circuit: sheet 1", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "rect"
+args = [300, 155, 100, 90]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 178, "AC-101", 12]
+style = {weight = true, anchor = "middle"}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 198, "Gas space", 10]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[305, 218], [395, 218]], "#50745e", 1]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 234, "Salt", 10]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[190, 225], [235, 225], [235, 265], [350, 265], [350, 245]], "#173345", 2.5]
+style = {}
+line = "L-101G"
+segment = 0
+
+[[sheets.elements]]
+kind = "text"
+args = [245, 282, "L-101G / always open", 9]
+style = {}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[350, 155], [350, 147], [650, 147], [650, 200], [750, 200]], "#50745e", 2.5]
+style = {}
+line = "G-101"
+segment = 0
+
+[[sheets.elements]]
+kind = "valve"
+args = [500, 147]
+style = {}
+tag = "V-101G"
+
+[[sheets.elements]]
+kind = "text"
+args = [585, 135, "G-101", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [600, 147]
+style = {color = "#50745e"}
+line = "G-101"
+
+[[sheets.elements]]
+kind = "instrument"
+args = [450, 200, 400, 190]
+style = {}
+tag = "PT-101G"
+
+[[sheets.elements]]
+kind = "instrument"
+args = [540, 235, 400, 225]
+style = {}
+tag = "LT-101G"
+
+[[sheets.elements]]
+kind = "circle"
+args = [750, 200, 3]
+style = {fill = "#50745e", color = "#50745e"}
+
+[[sheets.elements]]
+kind = "rect"
+args = [50, 330, 140, 60]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 353, "SG-102 TOP", 13]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 374, "Salt circuit: sheet 1", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "rect"
+args = [300, 295, 100, 90]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 318, "AC-102", 12]
+style = {weight = true, anchor = "middle"}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 338, "Gas space", 10]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[305, 358], [395, 358]], "#50745e", 1]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 374, "Salt", 10]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[190, 365], [235, 365], [235, 405], [350, 405], [350, 385]], "#173345", 2.5]
+style = {}
+line = "L-102G"
+segment = 0
+
+[[sheets.elements]]
+kind = "text"
+args = [245, 422, "L-102G / always open", 9]
+style = {}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[350, 295], [350, 275], [650, 275], [650, 340], [750, 340]], "#50745e", 2.5]
+style = {}
+line = "G-102"
+segment = 0
+
+[[sheets.elements]]
+kind = "valve"
+args = [500, 275]
+style = {}
+tag = "V-102G"
+
+[[sheets.elements]]
+kind = "text"
+args = [585, 263, "G-102", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [600, 275]
+style = {color = "#50745e"}
+line = "G-102"
+
+[[sheets.elements]]
+kind = "instrument"
+args = [450, 340, 400, 330]
+style = {}
+tag = "PT-102G"
+
+[[sheets.elements]]
+kind = "instrument"
+args = [540, 375, 400, 365]
+style = {}
+tag = "LT-102G"
+
+[[sheets.elements]]
+kind = "circle"
+args = [750, 340, 3]
+style = {fill = "#50745e", color = "#50745e"}
+
+[[sheets.elements]]
+kind = "rect"
+args = [50, 470, 140, 60]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 493, "SG-103 TOP", 13]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 514, "Salt circuit: sheet 1", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "rect"
+args = [300, 435, 100, 90]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 458, "AC-103", 12]
+style = {weight = true, anchor = "middle"}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 478, "Gas space", 10]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[305, 498], [395, 498]], "#50745e", 1]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [350, 514, "Salt", 10]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[190, 505], [235, 505], [235, 545], [350, 545], [350, 525]], "#173345", 2.5]
+style = {}
+line = "L-103G"
+segment = 0
+
+[[sheets.elements]]
+kind = "text"
+args = [245, 562, "L-103G / always open", 9]
+style = {}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[350, 435], [350, 415], [650, 415], [650, 480], [750, 480]], "#50745e", 2.5]
+style = {}
+line = "G-103"
+segment = 0
+
+[[sheets.elements]]
+kind = "valve"
+args = [500, 415]
+style = {}
+tag = "V-103G"
+
+[[sheets.elements]]
+kind = "text"
+args = [585, 403, "G-103", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [600, 415]
+style = {color = "#50745e"}
+line = "G-103"
+
+[[sheets.elements]]
+kind = "instrument"
+args = [450, 480, 400, 470]
+style = {}
+tag = "PT-103G"
+
+[[sheets.elements]]
+kind = "instrument"
+args = [540, 515, 400, 505]
+style = {}
+tag = "LT-103G"
+
+[[sheets.elements]]
+kind = "circle"
+args = [750, 480, 3]
+style = {fill = "#50745e", color = "#50745e"}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[750, 200], [750, 630]], "#50745e", 3]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 163, "H-401", 12]
+style = {weight = true, anchor = "middle"}
+
+[[sheets.elements]]
+kind = "rect"
+args = [50, 590, 300, 80]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 615, "TK-401 / TOP GAS CONNECTION", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 638, "Gas makeup or return through G-402", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [65, 657, "Liquid connections: sheet 2", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[350, 630], [750, 630]], "#50745e", 2.5]
+style = {}
+line = "G-402"
+segment = 0
+
+[[sheets.elements]]
+kind = "valve"
+args = [500, 630]
+style = {}
+tag = "V-402G"
+
+[[sheets.elements]]
+kind = "arrow"
+args = [620, 630]
+style = {color = "#50745e"}
+line = "G-402"
+
+[[sheets.elements]]
+kind = "text"
+args = [585, 614, "G-402", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[750, 340], [900, 340]], "#50745e", 2.5]
+style = {}
+line = "G-400"
+segment = 0
+
+[[sheets.elements]]
+kind = "arrow"
+args = [850, 340]
+style = {color = "#50745e"}
+line = "G-400"
+
+[[sheets.elements]]
+kind = "text"
+args = [825, 323, "G-400", 11]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "rect"
+args = [900, 255, 265, 175]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [915, 279, "B / COOLANT PREPARATION", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [915, 305, "Common pressure-control station", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [915, 330, "Controlled gas makeup + return", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [915, 357, "SG target ~1 bar(g); band TBD", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [915, 384, "Tank transfer mode: TBD", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [915, 410, "Functional block; internals unresolved", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 470, "AC-101/102/103: nominal vessels;", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 488, "numeric volume not yet selected.", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 520, "Gas valves isolate the header only.", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 538, "SG-to-vessel salt connection stays open.", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 574, "Expansion transfers use P-401 / TK-401.", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 592, "Valve and pump states: sheet 4.", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 630, "G-401 removed: G-400 / H-401 / G-402", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [790, 648, "provide the preparation-to-tank gas path.", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "rect"
+args = [45, 710, 1120, 75]
+style = {fill = "#edf3f6", stroke = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [60, 732, "OPEN DESIGN ITEMS", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [60, 752, "TK-401 normally nearly empty; P-401 adjusts SG vessel levels. Pressure band and transfer triggers remain unresolved.", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [60, 771, "Relief return to TK-401 is a proposal; existing closed transfer valves prevent crediting that path for relief.", 11]
+style = {}
+
+[[sheets]]
+number = 4
+title = "Coolant operating-state draft"
+subtitle = "Agreed flow-path intent, not an operating procedure. Unassigned entries and automatic actions remain unresolved."
+
+[sheets.ports]
+
+[[sheets.elements]]
+kind = "rect"
+args = [45, 143, 1120, 324]
+style = {fill = "#edf3f6", stroke = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 169, "Operation", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 169, "V-401", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 169, "V-402", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 169, "V-403", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 169, "SG gas valves", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 169, "V-402G", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 169, "P-401", 12]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 187, "V-101G / 102G / 103G", 9]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 220, "${operating_states.normal.name}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 220, "${operating_states.normal.valves.V-401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 220, "${operating_states.normal.valves.V-402}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 220, "${operating_states.normal.valves.V-403}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 220, "${operating_states.normal.valves.V-101G} / ${operating_states.normal.valves.V-102G} / ${operating_states.normal.valves.V-103G}", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 220, "${operating_states.normal.valves.V-402G}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 220, "${operating_states.normal.pump_P401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[58, 233], [1150, 233]], "#cfdae0", 0.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 256, "${operating_states.expansion.name}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 256, "${operating_states.expansion.valves.V-401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 256, "${operating_states.expansion.valves.V-402}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 256, "${operating_states.expansion.valves.V-403}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 256, "${operating_states.expansion.valves.V-101G} / ${operating_states.expansion.valves.V-102G} / ${operating_states.expansion.valves.V-103G}", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 256, "${operating_states.expansion.valves.V-402G}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 256, "${operating_states.expansion.pump_P401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[58, 269], [1150, 269]], "#cfdae0", 0.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 292, "${operating_states.contraction.name}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 292, "${operating_states.contraction.valves.V-401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 292, "${operating_states.contraction.valves.V-402}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 292, "${operating_states.contraction.valves.V-403}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 292, "${operating_states.contraction.valves.V-101G} / ${operating_states.contraction.valves.V-102G} / ${operating_states.contraction.valves.V-103G}", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 292, "${operating_states.contraction.valves.V-402G}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 292, "${operating_states.contraction.pump_P401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[58, 305], [1150, 305]], "#cfdae0", 0.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 328, "${operating_states.drain.name}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 328, "${operating_states.drain.valves.V-401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 328, "${operating_states.drain.valves.V-402}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 328, "${operating_states.drain.valves.V-403}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 328, "${operating_states.drain.valves.V-101G} / ${operating_states.drain.valves.V-102G} / ${operating_states.drain.valves.V-103G}", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 328, "${operating_states.drain.valves.V-402G}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 328, "${operating_states.drain.pump_P401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[58, 341], [1150, 341]], "#cfdae0", 0.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 364, "${operating_states.refill.name}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 364, "${operating_states.refill.valves.V-401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 364, "${operating_states.refill.valves.V-402}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 364, "${operating_states.refill.valves.V-403}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 364, "${operating_states.refill.valves.V-101G} / ${operating_states.refill.valves.V-102G} / ${operating_states.refill.valves.V-103G}", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 364, "${operating_states.refill.valves.V-402G}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 364, "${operating_states.refill.pump_P401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[58, 377], [1150, 377]], "#cfdae0", 0.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 400, "${operating_states.tank_empty.name}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 400, "${operating_states.tank_empty.valves.V-401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 400, "${operating_states.tank_empty.valves.V-402}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 400, "${operating_states.tank_empty.valves.V-403}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 400, "${operating_states.tank_empty.valves.V-101G} / ${operating_states.tank_empty.valves.V-102G} / ${operating_states.tank_empty.valves.V-103G}", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 400, "${operating_states.tank_empty.valves.V-402G}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 400, "${operating_states.tank_empty.pump_P401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[58, 413], [1150, 413]], "#cfdae0", 0.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 436, "${operating_states.gas_sweep.name}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [310, 436, "${operating_states.gas_sweep.valves.V-401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 436, "${operating_states.gas_sweep.valves.V-402}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [490, 436, "${operating_states.gas_sweep.valves.V-403}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [580, 436, "${operating_states.gas_sweep.valves.V-101G} / ${operating_states.gas_sweep.valves.V-102G} / ${operating_states.gas_sweep.valves.V-103G}", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [750, 436, "${operating_states.gas_sweep.valves.V-402G}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [870, 436, "${operating_states.gas_sweep.pump_P401}", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 510, "EXPANSION / CONTRACTION AS NEEDED", 13]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 535, "Transfer expanded salt to TK-401; return salt as the circuit contracts.", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 555, "Most expansion is assigned to storage, not the nominal SG gas vessels.", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 575, "Between transfers: stop P-401; close V-401, V-402 and V-402G.", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 595, "Transfer triggers, level limits and usable storage volume remain TBD.", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 658, "PRESSURE AND GAS PATHS", 13]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 683, "Normal circulation: SG gas valves open to the common regulated header.", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 703, "Tank emptying / sweep: isolate SG gas branches; open the TK gas branch.", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 723, "Preparation > G-400 > H-401 > G-402 > TK-401 > L-404 > J-401 > L-403 > preparation.", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [58, 743, "This sweep covers the tank / return line; reactor and SG draining use P-401.", 12]
+style = {}
+
+[[sheets]]
+number = 5
+title = "Dedicated high-level SG relief"
+subtitle = "D-062: accepted connection concept; rupture-disc sizing and discharge receiving arrangements remain unresolved."
+
+[sheets.ports]
+"SG-101.relief_high" = [150, 250]
+"SG-102.relief_high" = [150, 400]
+"SG-103.relief_high" = [150, 550]
+"B-501.sg101" = [905, 195]
+"B-501.sg102" = [905, 345]
+"B-501.sg103" = [905, 495]
+
+[[sheets.elements]]
+kind = "rect"
+args = [905, 155, 250, 420]
+style = {fill = "#edf3f6", dash = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 185, "B-501 / INTERFACE", 14]
+style = {anchor = "middle", weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 235, "Emergency discharge", 13]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 255, "receiving system", 13]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 300, "Receiver(s), capacity,", 11]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 320, "steam vent and routing TBD.", 11]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 380, "Three separate terminations.", 11]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 400, "No common relief header", 11]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 420, "or receiver count selected.", 11]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [1030, 540, "Not normal gas / off-gas.", 11]
+style = {anchor = "middle", weight = false}
+
+[[sheets.elements]]
+kind = "rect"
+args = [65, 250, 270, 80]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [200, 281, "SG-101 / coolant side", 15]
+style = {anchor = "middle", weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [200, 305, "High-level dedicated takeoff", 11]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[150, 250], [150, 195], [905, 195]], "#274453", 2]
+line = "L-101R"
+segment = 0
+style = {}
+
+[[sheets.elements]]
+kind = "rupture_disc"
+args = [530, 195]
+tag = "RD-101"
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [805, 195, "right"]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 185, "L-101R", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [630, 220, "Salt / steam / gas", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[290, 250], [290, 235], [385, 235]], "#50745e", 1.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [390, 238, "AC / normal gas: sheet 3", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "rect"
+args = [65, 400, 270, 80]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [200, 431, "SG-102 / coolant side", 15]
+style = {anchor = "middle", weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [200, 455, "High-level dedicated takeoff", 11]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[150, 400], [150, 345], [905, 345]], "#274453", 2]
+line = "L-102R"
+segment = 0
+style = {}
+
+[[sheets.elements]]
+kind = "rupture_disc"
+args = [530, 345]
+tag = "RD-102"
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [805, 345, "right"]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 335, "L-102R", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [630, 370, "Salt / steam / gas", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[290, 400], [290, 385], [385, 385]], "#50745e", 1.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [390, 388, "AC / normal gas: sheet 3", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "rect"
+args = [65, 550, 270, 80]
+style = {fill = "#edf3f6"}
+
+[[sheets.elements]]
+kind = "text"
+args = [200, 581, "SG-103 / coolant side", 15]
+style = {anchor = "middle", weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [200, 605, "High-level dedicated takeoff", 11]
+style = {anchor = "middle"}
+
+[[sheets.elements]]
+kind = "route"
+args = [[[150, 550], [150, 495], [905, 495]], "#274453", 2]
+line = "L-103R"
+segment = 0
+style = {}
+
+[[sheets.elements]]
+kind = "rupture_disc"
+args = [530, 495]
+tag = "RD-103"
+style = {}
+
+[[sheets.elements]]
+kind = "arrow"
+args = [805, 495, "right"]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [400, 485, "L-103R", 12]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [630, 520, "Salt / steam / gas", 11]
+style = {}
+
+[[sheets.elements]]
+kind = "line"
+args = [[[290, 550], [290, 535], [385, 535]], "#50745e", 1.5]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [390, 538, "AC / normal gas: sheet 3", 10]
+style = {}
+
+[[sheets.elements]]
+kind = "text"
+args = [40, 655, "REQUIREMENT: preserve reactor coolant inventory; prevent continued gravity drainage and siphoning after relief.", 11]
+style = {weight = true}
+
+[[sheets.elements]]
+kind = "text"
+args = [40, 678, "Discs normally intact; remain open after actuation. No intervening isolation valve is included in this concept.", 11]
+style = {weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [40, 701, "Independent of AC-101/102/103, G-101/102/103 and H-401. Closing a normal gas valve does not isolate these paths.", 11]
+style = {weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [40, 724, "High takeoffs do not prove retention during pressure-driven discharge; expelled salt and two-phase flow remain to assess.", 11]
+style = {weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [40, 747, "TBD: elevations, burst pressure at disc temperature, area/capacity, backpressure, freeze protection and post-event cooling.", 11]
+style = {weight = false}
+
+[[sheets.elements]]
+kind = "text"
+args = [40, 770, "Symbol: curved diaphragm between holder faces = rupture disc. Functional schematic; no physical pipe slopes implied.", 11]
+style = {weight = false}

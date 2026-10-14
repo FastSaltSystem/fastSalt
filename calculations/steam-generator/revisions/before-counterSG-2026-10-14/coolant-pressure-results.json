@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-14",
+  "revision": "itemized",
+  "status": "Preliminary mean-density station pressures; no relief or SG-failure analysis",
+  "inputs": {
+    "TopPressure": {
+      "value": 100000,
+      "unit": "Pa"
+    },
+    "Density": {
+      "value": 1633.7825000000003,
+      "unit": "kg/m3"
+    },
+    "Gravity": {
+      "value": 9.80665,
+      "unit": "m/s2"
+    },
+    "TopZ": {
+      "value": 17.0,
+      "unit": "m"
+    },
+    "SGInZ": {
+      "value": 15.5,
+      "unit": "m"
+    },
+    "SGOutZ": {
+      "value": 1.9000000000000004,
+      "unit": "m"
+    },
+    "SuctionZ": {
+      "value": 3.6099999999999994,
+      "unit": "m"
+    },
+    "DischargeZ": {
+      "value": 4.51,
+      "unit": "m"
+    },
+    "ReactorInZ": {
+      "value": 4.509999999999999,
+      "unit": "m"
+    },
+    "BottomZ": {
+      "value": 1.1549999999999994,
+      "unit": "m"
+    },
+    "ReactorOutZ": {
+      "value": 6.279999999999999,
+      "unit": "m"
+    },
+    "SuctionLengthFraction": {
+      "value": 0.47582067744446793,
+      "unit": ""
+    },
+    "SuctionBends": {
+      "value": 2,
+      "unit": ""
+    },
+    "ReturnBends": {
+      "value": 2,
+      "unit": ""
+    },
+    "HotBends": {
+      "value": 3,
+      "unit": ""
+    },
+    "CorePassageLoss": {
+      "value": 62713.56607891116,
+      "unit": "Pa"
+    },
+    "SGFriction": {
+      "value": 131330.23609179026,
+      "unit": "Pa"
+    },
+    "SGDynamic": {
+      "value": 3359.9452809814243,
+      "unit": "Pa"
+    },
+    "HotDynamic": {
+      "value": 4639.501952809517,
+      "unit": "Pa"
+    },
+    "ColdDynamic": {
+      "value": 4513.217938994312,
+      "unit": "Pa"
+    },
+    "HotStraight": {
+      "value": 533.902742743882,
+      "unit": "Pa"
+    },
+    "ColdStraight": {
+      "value": 545.1150008952678,
+      "unit": "Pa"
+    },
+    "HotNozzleDynamic": {
+      "value": 6113.983401733183,
+      "unit": "Pa"
+    },
+    "ColdNozzleDynamic": {
+      "value": 5947.565029195834,
+      "unit": "Pa"
+    },
+    "HotNozzleFriction": {
+      "value": 83.91979247314418,
+      "unit": "Pa"
+    },
+    "ColdNozzleFriction": {
+      "value": 129.56578416159937,
+      "unit": "Pa"
+    },
+    "DownFriction": {
+      "value": 7.475544453865635,
+      "unit": "Pa"
+    },
+    "DownDynamic": {
+      "value": 358.9886932541978,
+      "unit": "Pa"
+    }
+  },
+  "hurmet_checks": {
+    "Gradient": 0.16021933153625,
+    "SuctionStraight": 0.2593769890111281,
+    "ReturnStraight": 0.2857380118841397,
+    "BaseSGSegment": 145.52287390506623,
+    "BaseSuctionSegment": 2.967307752407715,
+    "BaseReturnSegment": 3.8963123630795895,
+    "BaseDownSegment": 6.802583744319694,
+    "BaseUpSegment": 65.85447757225089,
+    "BaseHotSegment": 5.637354890834351,
+    "BasePumpRise": 230.68091022795846,
+    "BaseSGIn": 1.240328997304375,
+    "BaseSGOut": 1.9640831671467127,
+    "BaseSuction": 1.6604350326956483,
+    "BaseDischarge": 3.823046736592608,
+    "BaseReactorIn": 3.7840836129618123,
+    "BaseBottom": 4.253593632822734,
+    "BaseReactorOut": 2.7739247829769442,
+    "BaseReturnToSG": 1.2403289973043754,
+    "BaseClosureError": 4.3655745685100555e-11,
+    "LowSGSegment": 139.26654131867357,
+    "LowSuctionSegment": 1.6133423707094217,
+    "LowReturnSegment": 1.865364290532149,
+    "LowDownSegment": 3.4698125364675794,
+    "LowUpSegment": 64.3259817218176,
+    "LowHotSegment": 2.85365371914864,
+    "LowPumpRise": 213.39469595734897,
+    "LowSGIn": 1.240328997304375,
+    "LowSGOut": 2.026646493010639,
+    "LowSuction": 1.7365380123765575,
+    "LowDischarge": 3.726287573567422,
+    "LowReactorIn": 3.707633930662101,
+    "LowBottom": 4.210471662601544,
+    "LowReactorOut": 2.746087771260087,
+    "LowReturnToSG": 1.2403289973043754,
+    "LowClosureError": 4.3655745685100555e-11,
+    "HighSGSegment": 156.35556643736078,
+    "HighSuctionSegment": 5.675238515804303,
+    "HighReturnSegment": 10.214817477671627,
+    "HighDownSegment": 13.827114853278122,
+    "HighUpSegment": 68.91146927311749,
+    "HighHotSegment": 13.524508210610529,
+    "HighPumpRise": 268.50871476784283,
+    "HighSGIn": 1.240328997304375,
+    "HighSGOut": 1.8557562418237672,
+    "HighSuction": 1.525028799738737,
+    "HighDischarge": 4.06591854903454,
+    "HighReactorIn": 3.9637703742578245,
+    "HighBottom": 4.363035083029162,
+    "HighReactorOut": 2.852796316174706,
+    "HighReturnToSG": 1.2403289973043754,
+    "HighClosureError": 4.3655745685100555e-11,
+    "LowerBiasSuction": 1.1604350326956483,
+    "LowerBiasBottom": 3.753593632822734
+  },
+  "cases": {
+    "Base": {
+      "coefficients": [
+        1.5,
+        0.3,
+        1.0,
+        1.0,
+        0.5,
+        0.2,
+        2.0
+      ],
+      "pump_rise_kPa": 230.68091022795846,
+      "pressures_bar_g": {
+        "SGIn": 1.240328997304375,
+        "SGOut": 1.9640831671467127,
+        "Suction": 1.6604350326956483,
+        "Discharge": 3.823046736592608,
+        "ReactorIn": 3.7840836129618123,
+        "Bottom": 4.253593632822734,
+        "ReactorOut": 2.7739247829769442
+      },
+      "segments_kPa": {
+        "SGSegment": 145.52287390506623,
+        "SuctionSegment": 2.967307752407715,
+        "ReturnSegment": 3.8963123630795895,
+        "DownSegment": 6.802583744319694,
+        "UpSegment": 65.85447757225089,
+        "HotSegment": 5.637354890834351
+      },
+      "closure_error_Pa": 4.3655745685100555e-11
+    },
+    "Low": {
+      "coefficients": [
+        1.0,
+        0.15,
+        0.5,
+        0.5,
+        0.25,
+        0.05,
+        1.0
+      ],
+      "pump_rise_kPa": 213.39469595734897,
+      "pressures_bar_g": {
+        "SGIn": 1.240328997304375,
+        "SGOut": 2.026646493010639,
+        "Suction": 1.7365380123765575,
+        "Discharge": 3.726287573567422,
+        "ReactorIn": 3.707633930662101,
+        "Bottom": 4.210471662601544,
+        "ReactorOut": 2.746087771260087
+      },
+      "segments_kPa": {
+        "SGSegment": 139.26654131867357,
+        "SuctionSegment": 1.6133423707094217,
+        "ReturnSegment": 1.865364290532149,
+        "DownSegment": 3.4698125364675794,
+        "UpSegment": 64.3259817218176,
+        "HotSegment": 2.85365371914864
+      },
+      "closure_error_Pa": 4.3655745685100555e-11
+    },
+    "High": {
+      "coefficients": [
+        2.0,
+        0.6,
+        2.0,
+        2.0,
+        1.0,
+        1.0,
+        5.0
+      ],
+      "pump_rise_kPa": 268.50871476784283,
+      "pressures_bar_g": {
+        "SGIn": 1.240328997304375,
+        "SGOut": 1.8557562418237672,
+        "Suction": 1.525028799738737,
+        "Discharge": 4.06591854903454,
+        "ReactorIn": 3.9637703742578245,
+        "Bottom": 4.363035083029162,
+        "ReactorOut": 2.852796316174706
+      },
+      "segments_kPa": {
+        "SGSegment": 156.35556643736078,
+        "SuctionSegment": 5.675238515804303,
+        "ReturnSegment": 10.214817477671627,
+        "DownSegment": 13.827114853278122,
+        "UpSegment": 68.91146927311749,
+        "HotSegment": 13.524508210610529
+      },
+      "closure_error_Pa": 4.3655745685100555e-11
+    }
+  },
+  "sources": [
+    {
+      "path": "calculations/steam-generator/coolant-pump-itemized-results.json",
+      "sha256": "d250a08eed8eed4881d55770e97b53339f1a1100ce70bfeab6d9b6b0d94fd790"
+    },
+    {
+      "path": "design/pids/coolant-system/coolant-system.toml",
+      "sha256": "68bb8fb65d703fc9556a1134831b4df1178744d4ddd371df0bc72d9118d5e9c0"
+    },
+    {
+      "path": "../fastSaltModels/models/wistr_installation.py",
+      "sha256": "be731b71b2fd48a6f29f81ad1c5833617b4d71007ab28adf207a01f2d09f4b95"
+    },
+    {
+      "path": "../fastSaltModels/models/coolant_assembly.py",
+      "sha256": "364a7c3a756e9d6759fcc2d0f0a7bd58162f7f4b4907c87f61dfa20b35c6f092"
+    },
+    {
+      "path": "../fastSaltModels/outputs/reactor-study/reactor-study-report.json",
+      "sha256": "f27928dfb336d85473d7707dd4e3fc7121c74fb71d9a08642427d149bb73466a"
+    }
+  ]
+}

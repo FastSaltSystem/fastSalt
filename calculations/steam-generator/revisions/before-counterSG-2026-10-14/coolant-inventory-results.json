@@ -1,0 +1,383 @@
+{
+  "date": "2026-10-14",
+  "status": "Preliminary geometric screening; no selected tank replacement",
+  "inputs": {
+    "Legs": {
+      "value": 3,
+      "unit": ""
+    },
+    "LowerRadius": {
+      "value": 3.1999999999999997,
+      "unit": "m"
+    },
+    "ReflectorRadius": {
+      "value": 2.1999999999999997,
+      "unit": "m"
+    },
+    "HotRadius": {
+      "value": 3.831639668346854,
+      "unit": "m"
+    },
+    "BottomHeight": {
+      "value": 0.75,
+      "unit": "m"
+    },
+    "DownHeight": {
+      "value": 3.91,
+      "unit": "m"
+    },
+    "HotHeight": {
+      "value": 1.6,
+      "unit": "m"
+    },
+    "CoreHeight": {
+      "value": 3.4,
+      "unit": "m"
+    },
+    "LowerReflector": {
+      "value": 0.3,
+      "unit": "m"
+    },
+    "UpperReflector": {
+      "value": 0.25,
+      "unit": "m"
+    },
+    "CoreFlowArea": {
+      "value": 3.86,
+      "unit": "m2"
+    },
+    "SGTubeCount": {
+      "value": 12090.0,
+      "unit": ""
+    },
+    "SGTubeBore": {
+      "value": 0.014,
+      "unit": "m"
+    },
+    "SGTubeLength": {
+      "value": 19.8790057,
+      "unit": "m"
+    },
+    "SGShortLength": {
+      "value": 17,
+      "unit": "m"
+    },
+    "MainBore": {
+      "value": 1.425,
+      "unit": "m"
+    },
+    "HotLength": {
+      "value": 47.253415923968284,
+      "unit": "m"
+    },
+    "ColdLength": {
+      "value": 48.55093520932772,
+      "unit": "m"
+    },
+    "PolylineLength": {
+      "value": 107.62905093634382,
+      "unit": "m"
+    },
+    "NozzleBore": {
+      "value": 1.3299999999999998,
+      "unit": "m"
+    },
+    "HotNozzleLength": {
+      "value": 1.771999999999999,
+      "unit": "m"
+    },
+    "ColdNozzleLength": {
+      "value": 2.7536396683468527,
+      "unit": "m"
+    },
+    "CollectorOD": {
+      "value": 2.1,
+      "unit": "m"
+    },
+    "CollectorWall": {
+      "value": 0.025,
+      "unit": "m"
+    },
+    "CollectorLength": {
+      "value": 2.8,
+      "unit": "m"
+    },
+    "PumpDiameter": {
+      "value": 2.8,
+      "unit": "m"
+    },
+    "PumpHeight": {
+      "value": 1.8,
+      "unit": "m"
+    },
+    "PumpVoidFraction": {
+      "value": 0.5,
+      "unit": ""
+    },
+    "ServiceVolume": {
+      "value": 2,
+      "unit": "m3"
+    },
+    "TankOD": {
+      "value": 4.0,
+      "unit": "m"
+    },
+    "TankHeight": {
+      "value": 8.0,
+      "unit": "m"
+    },
+    "TankWall": {
+      "value": 0.025,
+      "unit": "m"
+    },
+    "TankEndAllowance": {
+      "value": 0.1,
+      "unit": "m"
+    },
+    "FreeboardFraction": {
+      "value": 0.2,
+      "unit": ""
+    },
+    "HeelFraction": {
+      "value": 0.05,
+      "unit": ""
+    },
+    "InventoryMargin": {
+      "value": 0.1,
+      "unit": ""
+    },
+    "FillTemperature": {
+      "value": 723.15,
+      "unit": "K"
+    },
+    "StoreTemperature": {
+      "value": 723.15,
+      "unit": "K"
+    },
+    "HotTemperature": {
+      "value": 875,
+      "unit": "K"
+    },
+    "ColdTemperature": {
+      "value": 810,
+      "unit": "K"
+    },
+    "DensityIntercept": {
+      "value": 2112.68,
+      "unit": "'kg/m3'"
+    },
+    "DensitySlope": {
+      "value": 0.5635,
+      "unit": "'kg.m-3.K-1'"
+    }
+  },
+  "routes": [
+    {
+      "name": "leg_1.hot_outlet",
+      "service": "hot",
+      "pid_line": "L-101",
+      "bore_m": 1.425,
+      "polyline_m": 17.38137407662978,
+      "rounded_m": 15.751138641322761
+    },
+    {
+      "name": "leg_1.cold_inlet",
+      "service": "cold",
+      "pid_line": "L-201",
+      "bore_m": 1.425,
+      "polyline_m": 9.78497623548483,
+      "rounded_m": 8.483132109154312
+    },
+    {
+      "name": "leg_1.cold_suction",
+      "service": "cold",
+      "pid_line": "L-201",
+      "bore_m": 1.425,
+      "polyline_m": 8.709999999999999,
+      "rounded_m": 7.700512960621595
+    },
+    {
+      "name": "leg_2.hot_outlet",
+      "service": "hot",
+      "pid_line": "L-102",
+      "bore_m": 1.425,
+      "polyline_m": 17.38137407662978,
+      "rounded_m": 15.751138641322761
+    },
+    {
+      "name": "leg_2.cold_inlet",
+      "service": "cold",
+      "pid_line": "L-202",
+      "bore_m": 1.425,
+      "polyline_m": 9.784976235484832,
+      "rounded_m": 8.483132109154313
+    },
+    {
+      "name": "leg_2.cold_suction",
+      "service": "cold",
+      "pid_line": "L-202",
+      "bore_m": 1.425,
+      "polyline_m": 8.709999999999997,
+      "rounded_m": 7.7005129606215945
+    },
+    {
+      "name": "leg_3.hot_outlet",
+      "service": "hot",
+      "pid_line": "L-103",
+      "bore_m": 1.425,
+      "polyline_m": 17.38137407662978,
+      "rounded_m": 15.751138641322761
+    },
+    {
+      "name": "leg_3.cold_inlet",
+      "service": "cold",
+      "pid_line": "L-203",
+      "bore_m": 1.425,
+      "polyline_m": 9.784976235484823,
+      "rounded_m": 8.483132109154305
+    },
+    {
+      "name": "leg_3.cold_suction",
+      "service": "cold",
+      "pid_line": "L-203",
+      "bore_m": 1.425,
+      "polyline_m": 8.709999999999999,
+      "rounded_m": 7.700512960621596
+    }
+  ],
+  "geometry_notes": {
+    "visual_holes_per_sector": 257,
+    "visual_hole_diameter_m": 0.048,
+    "core_diameter_m": 3.8
+  },
+  "hurmet_checks": {
+    "BottomVolume": 24.12743157956961,
+    "DownVolume": 66.33158728789489,
+    "HotVolume": 73.79707981584802,
+    "ChannelVolume": 15.246999999999998,
+    "ReactorVolume": 179.50309868331252,
+    "SGVolumeEach": 36.99703426722125,
+    "SGVolume": 110.99110280166376,
+    "SGShortVolume": 94.91665609956961,
+    "HotPipeVolume": 75.36207001060966,
+    "ColdPipeVolume": 77.43141753419843,
+    "HotNozzleVolume": 7.38546995251859,
+    "ColdNozzleVolume": 11.476818866049069,
+    "PolylineVolume": 171.65209992207164,
+    "BendVolumeDifference": 18.858612377263555,
+    "CollectorBore": 2.0500000000000003,
+    "CollectorVolumeEach": 4.620890094348888,
+    "CollectorVolume": 27.72534056609333,
+    "PumpEnvelopeVolume": 33.25061664559437,
+    "PumpVolume": 16.625308322797185,
+    "LoopVolume": 508.50062673724256,
+    "MeanTemperature": 842.5,
+    "FillDensity": 1705.184975,
+    "StoreDensity": 1705.184975,
+    "HotDensity": 1619.6174999999998,
+    "ColdDensity": 1656.245,
+    "MeanDensity": 1637.9312499999999,
+    "HotGroup": 170.40729006202292,
+    "ColdGroup": 211.85523387355585,
+    "MeanGroup": 126.23810280166376,
+    "VolumeClosure": 2.842170943040401e-14,
+    "ChargeMass": 867087.6284904293,
+    "NormalLoopMass": 833648.1344584936,
+    "NormalExpansionMass": 33439.4940319357,
+    "NormalExpansionVolume": 19.610478934659685,
+    "AllHotExpansionMass": 43511.11466582341,
+    "AllHotExpansionVolume": 25.516947019676508,
+    "NormalMassClosure": 0.0,
+    "NormalDrainVolume": 488.8901478025829,
+    "FullDrainStore": 508.50062673724256,
+    "FullDrainHot": 535.3656826321211,
+    "DrainClosure": -3.552713678800501e-15,
+    "TankID": 3.95,
+    "TankClearHeight": 7.9,
+    "TankGrossEnvelope": 100.53096491487338,
+    "TankInternal": 96.80798127082863,
+    "Freeboard": 19.36159625416573,
+    "Heel": 4.840399063541432,
+    "TankWorking": 72.60598595312148,
+    "ExpansionMargin": 47.08903893344497,
+    "NormalExpansionRise": 1.6003100317772534,
+    "FullDrainDeficit": 462.7596966789996,
+    "FullDrainRatio": 7.373574996664647,
+    "RequiredWorking": 588.9022508953333,
+    "RequiredInternal": 785.2030011937777,
+    "EquivalentID": 11.249481066876205,
+    "EquivalentOD": 11.299481066876206,
+    "EquivalentCurrentTanks": 8.110932496331113,
+    "ShortTubeLoop": 492.4261800351484,
+    "ZeroPumpLoop": 491.87531841444536,
+    "FullPumpLoop": 525.1259350600398,
+    "SGOnlyDeficit": 14.183121530835123,
+    "ShortSGOnlyDeficit": 22.310670146448132,
+    "TenPercentPlenumDeduction": 16.425609868331254,
+    "ReducedPlenumLoop": 492.0750168689113
+  },
+  "fill_temperature_sensitivity": [
+    {
+      "fill_temperature_K": 698.15,
+      "normal_expansion_m3": 23.811490956338357,
+      "hot_drain_m3": 539.7886421143203
+    },
+    {
+      "fill_temperature_K": 723.15,
+      "normal_expansion_m3": 19.610478934659685,
+      "hot_drain_m3": 535.3656826321211
+    },
+    {
+      "fill_temperature_K": 773.15,
+      "normal_expansion_m3": 11.208454891302267,
+      "hot_drain_m3": 526.5197636677225
+    },
+    {
+      "fill_temperature_K": 810,
+      "normal_expansion_m3": 5.016163171347867,
+      "hot_drain_m3": 520.0003213909607
+    }
+  ],
+  "sources": [
+    {
+      "path": "calculations/steam-generator/Generator sizing - Hurmet.md",
+      "sha256": "11489d75d9161d14bd431fc7bae67cd6dc06ff606c3c34eb87114397a2241be1"
+    },
+    {
+      "path": "design/engineering/coolant-system.toml",
+      "sha256": "eaafaa4d8e84fc0eec3cece759c9fee17d786ba920985013d223e117bc17aba6"
+    },
+    {
+      "path": "design/pids/coolant-system/coolant-system.toml",
+      "sha256": "1192e43871cdf9df1783af2f43e3ebb42152fd87c8a4cf3a0125929d5b1fc8cb"
+    },
+    {
+      "path": "../fastSaltModels/models/wistr_installation.py",
+      "sha256": "a689bd77e81689690202f3680c9f7534051708d5a1e783bafc0ab7c9348e3ad7"
+    },
+    {
+      "path": "../fastSaltModels/models/wistr_reactor.py",
+      "sha256": "29735dd6c39ec47f17e66c44d2e444c163cf817246803f95e95b766592eff564"
+    },
+    {
+      "path": "../fastSaltModels/models/coolant_assembly.py",
+      "sha256": "b594e9e1240944c4c41940f151c3b641033cfb2271bf8c6af249be5f38fa565b"
+    },
+    {
+      "path": "../fastSaltModels/src/textual_graphics/installation_piping.py",
+      "sha256": "158e82f1cf3c0dafef28dc97231031182beec74405534928bcba3791bbe7aa5c"
+    },
+    {
+      "path": "../fastSaltModels/src/textual_graphics/installation_services.py",
+      "sha256": "3b63f887d385e5e6dce95cdb3bb2ed6dd4a15652fd7fe8c08964f00d10f7fda5"
+    },
+    {
+      "path": "../fastSaltModels/src/textual_graphics/reactor_geometry.py",
+      "sha256": "90f901cf19579d1c017cf2811269e3d29694e6370026248e7b898f86404b6f1d"
+    },
+    {
+      "path": "../fastSaltModels/outputs/reactor-study/reactor-study-report.json",
+      "sha256": "f27928dfb336d85473d7707dd4e3fc7121c74fb71d9a08642427d149bb73466a"
+    }
+  ]
+}

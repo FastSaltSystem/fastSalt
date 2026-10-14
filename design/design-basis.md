@@ -59,7 +59,7 @@ uses 4.619533 m³/s per leg and the source generator pressure drop plus 50%.
 Provisional assumptions of 80% pump and 96% motor efficiency lead to 1.653 MW
 shaft demand per leg and a 2 MW motor envelope. Physical equipment dimensions,
 secondary header diameters, loop pressure-loss allocation and motor speed remain
-provisional. The 17 m casing does not revise the calculated 19.879 m tube length.
+provisional. D-063 adopts the newer counterSG 11.920866 m tube length; the 17 m casing remains a separate visual envelope.
 
 The subsequent single-floor draft removes the intermediate deck. All storage
 tanks now rest on the sub-floor; generator casings rest on 2.1 m steel frames and
@@ -464,3 +464,30 @@ The current site moves fresh-air distribution into a floor-level steel duct insi
 ## Generator cooling-air geometry — D-050
 
 Three horizontally centered generator-side butterfly-valve boxes have their centers **1.35 m above floor**, following the owner’s request to lower them near the generator bottoms. Their lower edges are approximately 0.37 m above floor. Inlet clear area is 75% of the existing exhaust clear area: 1.55365 m inlet bore versus 1.794 m exhaust bore; with provisional 3 mm wall, inlet OD is 1.55965 m. Three outdoor inlets near the generators use that same diameter provisionally. Both internal air headers accommodate the complete 20° column layout; the cold passage narrows locally at the coolant-storage column. These are visual definitions, not qualified airflow or structural sizing. See [D-050](../decisions/index.md#d-050--complete-columns-and-revise-generator-fresh-air-connections).
+
+
+## Core hydraulic basis — D-060, 14 October 2026
+
+Owner confirms active height 3.4 m; the UM appendix's 3.8 m height is a typo. Current diameter remains 3.8 m. Use UM's 18,500 kg/s total flow and 810–890 K for the core loss estimate, with 24,576 tubes of 14 mm clear bore. Exact area 3.783 m² differs from the report's 3.86 m²; retain the discrepancy for reconciliation. Earlier SG/pump/profile results use a different flow/temperature case and are not yet harmonized. See [D-060](../decisions/index.md#d-060--um-coolant-flow-and-corrected-core-height).
+
+## D-061 — Current normal coolant hydraulic basis
+
+**Historical D-061 values below; D-063 supersedes the SG geometry, pump duty and suction pressure.**
+
+D-061 adopts the UM hydraulic case into the shared engineering model, P&ID equipment register and graphics duty metadata: **18,500 kg/s total**, three equal 6,166.67 kg/s legs, **810–890 K**, and **3.4 m active core height**. At 810 K, pump-inlet density is 1,656.3245 kg/m³ and volume flow is **3.7231 m³/s per pump**. Full itemized loop loss is **230.681 kPa** (14.202 m cold-salt head), with **1.074 MW shaft / 1.118 MW electrical per pump**, **3.355 MW electrical total**. No SG-loss multiplier remains in the active adapter.
+
+Normal station pressures retain the checked mean-density screen: SG tops 1 bar(g), pump suction/discharge 1.660/3.823 bar(g), reactor bottom-plenum midpoint 4.254 bar(g). Pump differential head is distinct from the static-pressure difference between ports at different heights. These values are not design pressures or relief settings.
+
+The **2 MW motor reservations**, casing dimensions, pipe dimensions/insulation and building layout remain unchanged. Existing saved Blender scenes remain snapshots; the resolved coolant document is updated without a full Blender rebuild. SG tube geometry is retained and its 500 MW per-generator duty remains a target; SG thermal rerating, fitting losses, roughness, supplier pump curves/efficiency and NPSH remain provisional. Insulation/wall worksheets retain their earlier screening cases and need review against 890 K; adoption does not requalify them. Tank relocation and SG-failure/relief assessment remain deferred.
+
+## D-063 — Updated steam-generator and normal hydraulic basis
+
+D-063 adopts the newer `counterSG.xlsx` geometry: **4,902 salt tubes per SG, 20 mm ID / 24 mm OD and 11.920866 m calculated active length**, provisionally used as straight hydraulic length. The 6,536 steam tubes are a separate bank. The 17 m casing, 18,500 kg/s total flow, 810–890 K temperatures and 3.4 m active core remain unchanged. Salt inlet/outlet labels were corrected to 890/810 K; numeric cells and formulas are unchanged.
+
+At the retained flow, mean SG tube velocity is 2.451 m/s. SG tube friction is **70.491 kPa**, or **87.004 kPa including tube ends and collector allowances**. Full-loop pump rise is **172.162 kPa** (10.599 m cold-salt head). Per pump: **801.2 kW shaft / 834.6 kW electrical**; three-pump total **2.504 MW electrical**. Fitting sensitivity is 2.241–3.065 MW, not a certified range. The prior D-061 total was 3.355 MW.
+
+With 1 bar(g) at SG tops, suction is **2.246 bar(g)**, discharge **3.823 bar(g)**, and reactor bottom-plenum midpoint **4.254 bar(g)**. Lower SG resistance raises suction and reduces required pump rise by matching amounts; downstream pressures stay unchanged in this fixed-flow, mean-density screen.
+
+The revised inventory is approximately **452.3 m³**, including **55.1 m³ in all three SG tube banks**. At 890 K, the fixed cold-fill charge requires 478.7 m³, or 526.5 m³ including 10% inventory allowance. The already-selected 8.2 × 16 m storage reservation provides 622.1 m³ working acceptance under existing allowances, leaving 95.6 m³. Tank placement remains pending; the smaller saved Blender tank remains a historical layout envelope.
+
+The shared TOML, P&ID and resolved graphics duty metadata use the checked revision. Existing 2 MW motor reservations and physical equipment/pipe envelopes are retained. Actual SG contact conductance, hydraulic extensions, local coefficients, roughness and pump curves/NPSH remain provisional. No protection setpoints, relief capacity or SG-failure assessment are established. Older Generator sizing and Brayton worksheets remain explicitly historical cases.

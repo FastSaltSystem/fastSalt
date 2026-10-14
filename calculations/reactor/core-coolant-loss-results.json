@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-14",
+  "status": "Preliminary; owner-selected UM total flow, corrected 3.4 m height",
+  "inputs": {
+    "MassFlow": {
+      "value": 18500.0,
+      "unit": "kg/s"
+    },
+    "TubeCount": {
+      "value": 24576,
+      "unit": ""
+    },
+    "TubeBore": {
+      "value": 0.014,
+      "unit": "m"
+    },
+    "CoreLength": {
+      "value": 3.4,
+      "unit": "m"
+    },
+    "BottomReflector": {
+      "value": 0.3,
+      "unit": "m"
+    },
+    "TopReflector": {
+      "value": 0.25,
+      "unit": "m"
+    },
+    "InletTemperature": {
+      "value": 810.0,
+      "unit": "K"
+    },
+    "OutletTemperature": {
+      "value": 890.0,
+      "unit": "K"
+    },
+    "DensityIntercept": {
+      "value": 2112.8,
+      "unit": "'kg/m3'"
+    },
+    "DensitySlope": {
+      "value": 0.56355,
+      "unit": "'kg.m-3.K-1'"
+    },
+    "ViscosityScale": {
+      "value": 0.0007064,
+      "unit": "Pa.s"
+    },
+    "ViscosityTemperature": {
+      "value": 1204.1,
+      "unit": "K"
+    },
+    "Roughness": {
+      "value": 1e-06,
+      "unit": "m"
+    },
+    "EntranceK": {
+      "value": 0.5,
+      "unit": ""
+    },
+    "ExitK": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "Gravity": {
+      "value": 9.80665,
+      "unit": "m/s2"
+    },
+    "VelocityLimit": {
+      "value": 3.0,
+      "unit": "m/s"
+    },
+    "ReportedArea": {
+      "value": 3.86,
+      "unit": "m2"
+    }
+  },
+  "hurmet_checks": {
+    "MeanTemperature": 850.0,
+    "Density": 1633.7825000000003,
+    "Viscosity": 0.0029125081163039273,
+    "SingleArea": 0.0001539380400258999,
+    "FlowArea": 3.783181271676516,
+    "VolumeFlow": 11.323416672659915,
+    "TubeMassFlow": 0.7527669270833334,
+    "Velocity": 2.993093869816591,
+    "InletDensity": 1656.3245000000002,
+    "OutletDensity": 1611.2405,
+    "InletVelocity": 2.9523589039246985,
+    "OutletVelocity": 3.0349686377444116,
+    "ReportedAreaVelocity": 2.933527635404123,
+    "AreaDifference": 0.02030532581100508,
+    "Reynolds": 23505.823387015997,
+    "FrictionFactor": 0.025056532242121943,
+    "DynamicPressure": 7.318210867420152,
+    "PassageLength": 3.9499999999999997,
+    "CoreFriction": 44.5324681631532,
+    "ReflectorFriction": 7.203781614627725,
+    "PassageFriction": 51.73624977778093,
+    "EndLoss": 10.97731630113023,
+    "TotalLoss": 62.71356607891116,
+    "LossHead": 3.914232163970929,
+    "HydrostaticDifference": 63.28663595681875,
+    "MassFlux": 4890.064385363626,
+    "AccelerationDifference": 0.4039669172361467,
+    "StaticPressureDifference": 126.40416895296605,
+    "HydraulicPower": 710.1318397399019,
+    "RougherFactor": 0.026506019838628343,
+    "RougherTotalLoss": 65.70644041674886,
+    "MeanFlowLimit": 18542.686067978517,
+    "OutletFlowLimit": 18286.844651300118,
+    "MeanCountThreshold": 24519.424981537515,
+    "OutletCountThreshold": 24862.46308040222
+  },
+  "roughness_sensitivity": [
+    {
+      "roughness_m": 0,
+      "darcy_factor": 0.024886457284601943,
+      "passage_and_ends_kPa": 62.36239855109147
+    },
+    {
+      "roughness_m": 1e-06,
+      "darcy_factor": 0.025056532242121943,
+      "passage_and_ends_kPa": 62.71356607891115
+    },
+    {
+      "roughness_m": 1e-05,
+      "darcy_factor": 0.026506019838628343,
+      "passage_and_ends_kPa": 65.70644041674886
+    },
+    {
+      "roughness_m": 4.5e-05,
+      "darcy_factor": 0.031178692432834384,
+      "passage_and_ends_kPa": 75.35448565012884
+    }
+  ],
+  "axial_integration_external": {
+    "temperature_profile": "Linear active-core heating; reflectors at respective endpoint temperatures",
+    "active_friction_kPa": 44.54589002102603,
+    "passage_friction_kPa": 51.757479274122225,
+    "mean_temperature_relative_difference": 0.0003013948794317045,
+    "convergence_400_to_800_Pa": 6.316843791864812e-05
+  },
+  "sources": [
+    {
+      "path": "/Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/Papers and Presentations/UMReport/Evolution_of_WISSR_design 2.pdf",
+      "sha256": "8dc702b34a666518464c50ef84772478675b3df58b15abe4f395496b32ccd4d9"
+    },
+    {
+      "path": "/Users/thomaswielenga/Documents/dev/fastSaltModels/models/wistr_reactor.py",
+      "sha256": "29735dd6c39ec47f17e66c44d2e444c163cf817246803f95e95b766592eff564"
+    },
+    {
+      "path": "calculations/steam-generator/Generator sizing - Hurmet.md",
+      "sha256": "11489d75d9161d14bd431fc7bae67cd6dc06ff606c3c34eb87114397a2241be1"
+    }
+  ]
+}

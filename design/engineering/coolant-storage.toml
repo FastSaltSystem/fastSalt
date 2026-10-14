@@ -1,0 +1,17 @@
+# Owner-selected draft envelope; placement remains unresolved (D-058).
+# Current Blender scene still contains the earlier 4 m x 8 m tank.
+schema_version = 1
+[equipment.TK-401]
+name = "Coolant inventory storage"
+status = "Owner-selected provisional size; placement and construction unresolved"
+bare_diameter_m = 8.2
+bare_height_m = 16.0
+radial_insulation_m = 0.350
+cladding_m = 0.001
+[capacity_screen]
+status = "Provisional allowances; not a pressure-wall specification"
+radial_wall_allowance_m = 0.025
+total_end_height_allowance_m = 0.10
+freeboard_fraction = 0.20
+heel_fraction = 0.05
+inventory_uncertainty_fraction = 0.10

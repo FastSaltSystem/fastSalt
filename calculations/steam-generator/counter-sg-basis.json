@@ -1,0 +1,24 @@
+{
+  "source": "sources/counterSG.xlsx",
+  "sha256": "2c2bd8716c8bcbb9cbb7790d8d52509bbc4c99c7046f01be323e56c0faeead53",
+  "sheet": "counter",
+  "salt_tubes_per_generator": 4902,
+  "steam_tubes_per_generator": 6536,
+  "tube_bore_m": 0.02,
+  "tube_wall_m": 0.002,
+  "tube_length_m": 11.920866244234299,
+  "duty_MW": 500.0,
+  "salt_hot_K": 890.0,
+  "salt_cold_K": 810.0,
+  "water_in_K": 560.0,
+  "water_out_K": 830.0,
+  "workbook_salt_flow_per_generator_kg_s": 6170.523655319485,
+  "workbook_water_flow_per_generator_kg_s": 237.2254115860891,
+  "workbook_salt_velocity_m_s": [
+    2.4192138588482806,
+    2.4868721132070357
+  ],
+  "calculated_hot_endpoint_K": 889.9646417477205,
+  "verified_length_increments": 62,
+  "note": "Independent arithmetic reproduces the workbook correlation and segmented method; not heat-transfer qualification. Hydraulic calculations retain adopted 18500 kg/s total and UM properties."
+}

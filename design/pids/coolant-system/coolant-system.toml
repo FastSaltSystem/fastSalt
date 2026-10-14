@@ -1,7 +1,5 @@
-# P&ID view: shared main-circulation data plus local storage, instruments and valves.
-# TOML has no null. List omitted, unresolved values in unresolved_fields.
-# The Python loader restores those fields as None; never use zero for unknown.
-
+# Shared main circulation plus local P&ID equipment, gas and operating states.
+# Unknown quantities are listed in unresolved_fields; they are not zero.
 schema_version = 1
 
 [shared_engineering]
@@ -10,10 +8,11 @@ model = "../../engineering/coolant-system.toml"
 [document]
 id = "FS-CS"
 title = "WISTR coolant system"
-revision = "A-working"
-date = "13 October 2026"
+revision = "B-working"
+date = "14 October 2026"
 status = "Preliminary - for discussion"
 
+[equipment]
 
 [equipment.R-101]
 shared = true
@@ -38,20 +37,60 @@ shared = true
 
 [equipment.P-401]
 type = "pump"
-name = "Coolant transfer pump"
-ports = ["suction", "discharge"]
-status = "Visual envelope; duty and type unselected"
+name = "Reversible coolant transfer pump"
+ports = ["reactor_side", "storage_side"]
+pump_kind = "positive_displacement"
+reversible = true
+status = "Owner-specified reversible positive-displacement pump; duty and detailed construction unselected"
 
 [equipment.TK-401]
 type = "tank"
 name = "Coolant storage"
-ports = ["bottom_1", "bottom_2", "gas_space"]
+ports = ["bottom", "gas_return"]
 radial_insulation_mm = 350
 status = "Established concept; insulation is a visual allowance"
 
+[equipment.J-401]
+type = "junction"
+name = "Low-point coolant tee"
+ports = ["pump", "preparation", "tank"]
+status = "Owner-specified common low point beneath TK-401"
+
+[equipment.H-401]
+type = "header"
+name = "Common coolant-gas header"
+ports = ["sg1", "sg2", "sg3", "tank", "preparation"]
+status = "Owner-selected coolant-only gas header; separate from fuel off-gas treatment"
+
+[equipment.AC-101]
+type = "gas_collection_vessel"
+name = "SG-101 top gas collection vessel"
+ports = ["salt", "gas"]
+status = "Accepted nominal gas collection / bias-pressure concept; numeric volume and detailed construction unresolved"
+unresolved_fields = ["volume_m3"]
+
+[equipment.AC-102]
+type = "gas_collection_vessel"
+name = "SG-102 top gas collection vessel"
+ports = ["salt", "gas"]
+status = "Accepted nominal gas collection / bias-pressure concept; numeric volume and detailed construction unresolved"
+unresolved_fields = ["volume_m3"]
+
+[equipment.AC-103]
+type = "gas_collection_vessel"
+name = "SG-103 top gas collection vessel"
+ports = ["salt", "gas"]
+status = "Accepted nominal gas collection / bias-pressure concept; numeric volume and detailed construction unresolved"
+unresolved_fields = ["volume_m3"]
+
+[boundaries]
+
 [boundaries.B-401]
 name = "Coolant salt preparation"
-ports = ["outlet"]
+ports = ["salt_transfer", "coolant_gas"]
+coolant_gas_function = "Common pressure-control station: controlled gas makeup and return; hardware and receiving arrangements unresolved"
+
+[lines]
 
 [lines.L-101]
 shared = true
@@ -78,6 +117,7 @@ shared = true
 sheet = 1
 
 [lines.L-401]
+flow_direction = "bidirectional"
 bore_mm = 44.0
 od_mm = 50.0
 wall_mm = 3.0
@@ -85,34 +125,130 @@ radial_insulation_mm = 50.0
 status = "Established topology; OD/insulation visual allowances; heated; transfer wall provisional"
 sheet = 2
 from = "R-101.bottom"
-to = "P-401.suction"
+to = "P-401.reactor_side"
 via = []
 heated = true
 unresolved_fields = ["temperature_C"]
 
 [lines.L-402]
+flow_direction = "bidirectional"
 bore_mm = 44.0
 od_mm = 50.0
 wall_mm = 3.0
 radial_insulation_mm = 50.0
 status = "Established topology; OD/insulation visual allowances; heated; transfer wall provisional"
 sheet = 2
-from = "P-401.discharge"
-to = "TK-401.bottom_1"
+from = "P-401.storage_side"
+to = "J-401.pump"
 via = []
 heated = true
 unresolved_fields = ["temperature_C"]
 
 [lines.L-403]
+flow_direction = "bidirectional"
+service = "coolant salt supply/return; gas sweep toward preparation"
 od_mm = 50.0
 radial_insulation_mm = 50.0
 status = "Established topology; OD/insulation visual allowances; heated; transfer wall provisional"
 sheet = 2
-from = "B-401.outlet"
-to = "TK-401.bottom_2"
+from = "B-401.salt_transfer"
+to = "J-401.preparation"
 via = []
 heated = true
 unresolved_fields = ["bore_mm", "wall_mm", "temperature_C"]
+
+[lines.L-404]
+flow_direction = "bidirectional"
+service = "tank-bottom coolant salt; gas to tee after tank empties"
+status = "Owner-specified tank-bottom branch to the common low-point tee; dimensions unresolved"
+sheet = 2
+from = "J-401.tank"
+to = "TK-401.bottom"
+via = []
+heated = true
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C"]
+
+[lines.G-101]
+from = "AC-101.gas"
+to = "H-401.sg1"
+via = []
+flow_direction = "bidirectional"
+service = "coolant gas; separate from fuel off-gas"
+sheet = 3
+status = "Owner-selected connection; dimensions and operating pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.G-102]
+from = "AC-102.gas"
+to = "H-401.sg2"
+via = []
+flow_direction = "bidirectional"
+service = "coolant gas; separate from fuel off-gas"
+sheet = 3
+status = "Owner-selected connection; dimensions and operating pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.G-103]
+from = "AC-103.gas"
+to = "H-401.sg3"
+via = []
+flow_direction = "bidirectional"
+service = "coolant gas; separate from fuel off-gas"
+sheet = 3
+status = "Owner-selected connection; dimensions and operating pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.G-402]
+from = "TK-401.gas_return"
+to = "H-401.tank"
+via = []
+flow_direction = "bidirectional"
+service = "coolant gas; separate from fuel off-gas"
+sheet = 3
+status = "Owner-selected connection; dimensions and operating pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.G-400]
+from = "H-401.preparation"
+to = "B-401.coolant_gas"
+via = []
+flow_direction = "bidirectional"
+service = "coolant gas; separate from fuel off-gas"
+sheet = 3
+status = "Owner-selected connection; dimensions and operating pressure unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.L-101G]
+from = "SG-101.gas_top"
+to = "AC-101.salt"
+via = []
+flow_direction = "bidirectional"
+service = "Continuously open SG-top salt/gas connection"
+sheet = 3
+status = "No isolation valve between SG and gas vessel; dimensions unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.L-102G]
+from = "SG-102.gas_top"
+to = "AC-102.salt"
+via = []
+flow_direction = "bidirectional"
+service = "Continuously open SG-top salt/gas connection"
+sheet = 3
+status = "No isolation valve between SG and gas vessel; dimensions unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[lines.L-103G]
+from = "SG-103.gas_top"
+to = "AC-103.salt"
+via = []
+flow_direction = "bidirectional"
+service = "Continuously open SG-top salt/gas connection"
+sheet = 3
+status = "No isolation valve between SG and gas vessel; dimensions unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[instruments]
 
 [instruments.TT-101H]
 location = "L-101"
@@ -243,8 +379,8 @@ type = "TT"
 on = "L-401"
 
 [instruments.PT-401D]
-location = "L-402"
-purpose = "Observe transfer discharge pressure"
+location = "L-402: storage side of P-401"
+purpose = "Observe storage-side pump pressure; discharge during drain, suction during refill"
 status = "proposed"
 sheet = 2
 type = "PT"
@@ -273,6 +409,56 @@ status = "proposed"
 sheet = 2
 type = "TT"
 on = "TK-401"
+
+[instruments.PT-101G]
+location = "AC-101"
+purpose = "Observe SG gas-vessel pressure; measurement technology unresolved"
+status = "accepted_for_concept"
+sheet = 3
+type = "PT"
+on = "AC-101"
+
+[instruments.LT-101G]
+location = "AC-101"
+purpose = "Observe SG gas-vessel salt level; measurement technology unresolved"
+status = "accepted_for_concept"
+sheet = 3
+type = "LT"
+on = "AC-101"
+
+[instruments.PT-102G]
+location = "AC-102"
+purpose = "Observe SG gas-vessel pressure; measurement technology unresolved"
+status = "accepted_for_concept"
+sheet = 3
+type = "PT"
+on = "AC-102"
+
+[instruments.LT-102G]
+location = "AC-102"
+purpose = "Observe SG gas-vessel salt level; measurement technology unresolved"
+status = "accepted_for_concept"
+sheet = 3
+type = "LT"
+on = "AC-102"
+
+[instruments.PT-103G]
+location = "AC-103"
+purpose = "Observe SG gas-vessel pressure; measurement technology unresolved"
+status = "accepted_for_concept"
+sheet = 3
+type = "PT"
+on = "AC-103"
+
+[instruments.LT-103G]
+location = "AC-103"
+purpose = "Observe SG gas-vessel salt level; measurement technology unresolved"
+status = "accepted_for_concept"
+sheet = 3
+type = "LT"
+on = "AC-103"
+
+[valves]
 
 [valves.V-101H]
 line = "L-101"
@@ -336,3 +522,172 @@ purpose = "Candidate transfer/supply isolation"
 status = "proposed"
 selection = "Type, actuation and fail position TBD"
 sheet = 2
+
+[valves.V-101G]
+line = "G-101"
+purpose = "Gas connection isolation at steam generator 1"
+status = "accepted_for_concept"
+selection = "Valve type, actuation and fail position unresolved"
+sheet = 3
+
+[valves.V-102G]
+line = "G-102"
+purpose = "Gas connection isolation at steam generator 2"
+status = "accepted_for_concept"
+selection = "Valve type, actuation and fail position unresolved"
+sheet = 3
+
+[valves.V-103G]
+line = "G-103"
+purpose = "Gas connection isolation at steam generator 3"
+status = "accepted_for_concept"
+selection = "Valve type, actuation and fail position unresolved"
+sheet = 3
+
+[valves.V-402G]
+line = "G-402"
+purpose = "Tank connection to common coolant-gas header"
+status = "accepted_for_concept"
+selection = "Valve type, actuation and fail position unresolved"
+sheet = 3
+
+[operating_states]
+
+[operating_states.normal]
+name = "Normal / between transfers"
+pump_P401 = "stopped"
+valves = {V-401 = "closed", V-402 = "closed", V-403 = "closed", V-101G = "open", V-102G = "open", V-103G = "open", V-402G = "closed"}
+
+[operating_states.drain]
+name = "Reactor / SG drain"
+pump_P401 = "reactor to storage"
+valves = {V-401 = "open", V-402 = "open", V-403 = "closed", V-101G = "open", V-102G = "open", V-103G = "open", V-402G = "open"}
+
+[operating_states.refill]
+name = "Reactor / SG refill"
+pump_P401 = "storage to reactor"
+valves = {V-401 = "open", V-402 = "open", V-403 = "closed", V-101G = "open", V-102G = "open", V-103G = "open", V-402G = "open"}
+
+[operating_states.tank_empty]
+name = "Tank to preparation"
+pump_P401 = "stopped"
+valves = {V-401 = "closed", V-402 = "closed", V-403 = "open", V-101G = "closed", V-102G = "closed", V-103G = "closed", V-402G = "open"}
+
+[operating_states.gas_sweep]
+name = "Gas sweep to preparation"
+pump_P401 = "stopped"
+valves = {V-401 = "closed", V-402 = "closed", V-403 = "open", V-101G = "closed", V-102G = "closed", V-103G = "closed", V-402G = "open"}
+
+[operating_states.expansion]
+name = "Expansion to storage"
+pump_P401 = "reactor to storage"
+valves = {V-401 = "open", V-402 = "open", V-403 = "closed", V-101G = "open", V-102G = "open", V-103G = "open", V-402G = "open"}
+
+[operating_states.contraction]
+name = "Contraction from storage"
+pump_P401 = "storage to reactor"
+valves = {V-401 = "open", V-402 = "open", V-403 = "closed", V-101G = "open", V-102G = "open", V-103G = "open", V-402G = "open"}
+
+[gas_pressure_control]
+location = "B-401.coolant_gas"
+status = "accepted_for_concept"
+normal_function = "Maintain common SG bias-pressure band by gas makeup or return"
+tank_transfer_function = "Mode-dependent tank pressurization through G-400 / H-401 / G-402 with SG gas valves closed"
+bias_pressure_Pa = 100000
+bias_pressure_reference = "gauge"
+bias_pressure_location = "Steam-generator tops"
+bias_pressure_status = "Owner-selected approximate normal target; lower pressure may be considered; not design or relief pressure"
+unresolved_fields = ["control_band_Pa", "tank_transfer_pressure_Pa", "control_logic", "independent_overpressure_protection"]
+
+[coolant_inventory_control]
+status = "accepted_for_concept"
+normal_storage_condition = "TK-401 nearly empty, with expansion space available; numerical operating levels unresolved"
+level_control_function = "Adjust AC-101/102/103 coolant levels by transferring circuit inventory into or out of TK-401 using P-401"
+pressure_control_function = "Separate common gas makeup/return function; no automatic level-control logic selected"
+
+[steam_generator_leak_basis]
+status = "Owner-stated design intent; detailed failure response unresolved"
+intended_steam_leak_destination = "SG air side, not coolant side"
+unresolved_fields = ["air_space_pressure_response", "leak_detection", "discharge_arrangements"]
+
+[coolant_overpressure_return]
+status = "proposal_for_review"
+candidate_destination = "TK-401"
+constraint = "Existing P-401 transfer route is not credited as relief: V-401/V-402 closed between transfers"
+unresolved_fields = ["available_return_path", "tank_gas_displacement_and_backpressure", "relief_capacity", "set_pressure", "independent_protection"]
+
+[lines.L-101R]
+from = "SG-101.relief_high"
+to = "B-501.sg101"
+via = []
+flow_direction = "from_to"
+service = "Emergency coolant-side discharge; may contain salt and steam/gas"
+sheet = 5
+status = "Accepted high-level relief connection concept; physical elevation and sizing unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[relief_devices.RD-101]
+type = "rupture_disc"
+line = "L-101R"
+purpose = "Dedicated high-level SG coolant-side emergency relief; separate from normal gas branch"
+status = "accepted_for_concept"
+normal_condition = "intact"
+after_actuation = "open; non-reclosing"
+sheet = 5
+unresolved_fields = ["burst_differential_pressure_Pa", "specified_disc_temperature_C", "minimum_flow_area_mm2", "relieving_capacity_kg_s", "material", "discharge_backpressure_Pa"]
+
+[lines.L-102R]
+from = "SG-102.relief_high"
+to = "B-501.sg102"
+via = []
+flow_direction = "from_to"
+service = "Emergency coolant-side discharge; may contain salt and steam/gas"
+sheet = 5
+status = "Accepted high-level relief connection concept; physical elevation and sizing unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[relief_devices.RD-102]
+type = "rupture_disc"
+line = "L-102R"
+purpose = "Dedicated high-level SG coolant-side emergency relief; separate from normal gas branch"
+status = "accepted_for_concept"
+normal_condition = "intact"
+after_actuation = "open; non-reclosing"
+sheet = 5
+unresolved_fields = ["burst_differential_pressure_Pa", "specified_disc_temperature_C", "minimum_flow_area_mm2", "relieving_capacity_kg_s", "material", "discharge_backpressure_Pa"]
+
+[lines.L-103R]
+from = "SG-103.relief_high"
+to = "B-501.sg103"
+via = []
+flow_direction = "from_to"
+service = "Emergency coolant-side discharge; may contain salt and steam/gas"
+sheet = 5
+status = "Accepted high-level relief connection concept; physical elevation and sizing unresolved"
+unresolved_fields = ["bore_mm", "od_mm", "wall_mm", "radial_insulation_mm", "temperature_C", "heated"]
+
+[relief_devices.RD-103]
+type = "rupture_disc"
+line = "L-103R"
+purpose = "Dedicated high-level SG coolant-side emergency relief; separate from normal gas branch"
+status = "accepted_for_concept"
+normal_condition = "intact"
+after_actuation = "open; non-reclosing"
+sheet = 5
+unresolved_fields = ["burst_differential_pressure_Pa", "specified_disc_temperature_C", "minimum_flow_area_mm2", "relieving_capacity_kg_s", "material", "discharge_backpressure_Pa"]
+
+[boundaries.B-501]
+name = "Emergency discharge receiving system - unresolved interface"
+ports = ["sg101", "sg102", "sg103"]
+status = "Placeholder for discharge destinations; does not select a common header, receiver count, pit or vent route"
+
+[high_level_relief]
+status = "accepted_for_concept"
+decision = "D-062"
+devices = ["RD-101", "RD-102", "RD-103"]
+dedicated_ports = ["SG-101.relief_high", "SG-102.relief_high", "SG-103.relief_high"]
+requirement = "Preserve reactor coolant inventory; prevent continued gravity drainage or siphoning after relief"
+connection_basis = "Direct high-level coolant-side connection on each SG; independent of AC-101/102/103 and H-401"
+isolation_basis = "No intervening isolation valve in this concept; normal gas-valve closure must not isolate emergency relief"
+limitation = "High takeoff does not establish inventory retention during pressure-driven two-phase discharge"
+unresolved_fields = ["takeoff_elevation_m", "transient_protection_performance", "expelled_salt_inventory_m3", "receiver_arrangement", "receiver_capacity_m3", "steam_venting", "backpressure", "anti_siphon_arrangement", "freeze_protection", "disc_temperature_control", "post_event_cooling", "burst_detection_and_response"]

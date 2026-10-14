@@ -1,0 +1,311 @@
+# Shared engineering inputs. Edit these adopted values, not generated view outputs.
+schema_version = 2
+
+[system]
+id = "CS"
+name = "WISTR main coolant circulation"
+active_case = "normal"
+status = "Preliminary normal hydraulic basis adopted under D-061; equipment envelopes retained"
+scope = "Three main legs only. Storage/transfer, instruments and valves remain in the P&ID source."
+
+[sources.motor_envelope]
+path = "calculations/steam-generator/Coolant pump estimate - Hurmet.md"
+sha256 = "31445e71b66881cec2823ea5b8068a2bf316ff67227f470c3611ea3d903df8b1"
+role = "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+
+[sources.wall]
+path = "calculations/steam-generator/Molten-salt coolant pipe wall - Hurmet.md"
+sha256 = "77a2fc8c868f90ea8990b9504e83626c94bc1b7e4201e30f6b0ca29050ce903e"
+role = "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+
+[sources.insulation]
+path = "calculations/steam-generator/Molten-salt coolant insulation - Hurmet.md"
+sha256 = "87ea2baefe4ae9bd28072d43d7c59159187f290d655f8b24182ee1923772258e"
+role = "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+
+[sources.generator]
+path = "calculations/steam-generator/Generator sizing - Hurmet.md"
+sha256 = "11489d75d9161d14bd431fc7bae67cd6dc06ff606c3c34eb87114397a2241be1"
+role = "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+
+
+[sources.pump]
+path = "calculations/steam-generator/Itemized coolant pump estimate - Hurmet.md"
+sha256 = "9c3da8898840f40fb15df9f1b219b734d739053095d8691ef62d9f3c5b8b7bd7"
+role = "D-061 explicitly adopted preliminary results; no automatic worksheet evaluation"
+
+[sources.core]
+path = "calculations/reactor/Core coolant pressure loss - Hurmet.md"
+sha256 = "7e213b97cd2a584e0d514b0b946b969bbdd8070d67f200c379778303d83b17d6"
+role = "D-061 explicitly adopted preliminary results; no automatic worksheet evaluation"
+
+[sources.pressure]
+path = "calculations/reactor/Normal coolant pressure profile - Hurmet.md"
+sha256 = "9fc54cb3581ce429f59a5e6984869d72330ed328555ee62f5e2a9720ae3402b2"
+role = "D-061 explicitly adopted preliminary results; no automatic worksheet evaluation"
+
+[cases.normal.total_mass_flow]
+value = 18500
+unit = "kg/s"
+source = "pump"
+status = "adopted_preliminary"
+locator = "TotalMassFlow"
+
+[cases.normal.mass_flow]
+value = 6166.666666666667
+unit = "kg/s"
+source = "pump"
+status = "adopted_preliminary"
+locator = "LegMassFlow; per leg"
+
+[cases.normal.cold_density]
+value = 1656.3245000000002
+unit = "kg/m3"
+source = "pump"
+status = "adopted_preliminary"
+locator = "ColdDensity; pump inlet at 810 K"
+
+[cases.normal.generator_tube_friction]
+value = 131330.23609179026
+unit = "Pa"
+source = "pump"
+status = "adopted_preliminary"
+locator = "SGFriction; excludes ends and collectors"
+
+[cases.normal.pump_pressure_rise]
+value = 230680.91022795846
+unit = "Pa"
+source = "pump"
+status = "adopted_preliminary"
+locator = "PumpRise; full itemized loop; no blanket multiplier"
+
+[cases.normal.core_height]
+value = 3.4
+unit = "m"
+source = "core"
+status = "adopted_preliminary"
+locator = "CoreLength; owner correction of UM typo"
+
+[cases.normal.core_pressure_drop]
+value = 62713.56607891116
+unit = "Pa"
+source = "core"
+status = "adopted_preliminary"
+locator = "TotalLoss; active core, reflectors and end losses"
+
+[cases.normal.pump_efficiency]
+value = 0.8
+unit = "1"
+source = "pump"
+status = "provisional_assumption"
+locator = "PumpEfficiency"
+
+[cases.normal.motor_efficiency]
+value = 0.96
+unit = "1"
+source = "pump"
+status = "provisional_assumption"
+locator = "MotorEfficiency"
+
+[cases.normal.motor_rating]
+value = 2000.0
+unit = "kW"
+source = "motor_envelope"
+status = "provisional_assumption"
+locator = "MotorRating; retained visual reservation, not selected motor"
+
+[cases.normal.hot_temperature]
+value = 890.0
+unit = "K"
+source = "pump"
+status = "adopted_preliminary"
+locator = "HotTemperature"
+
+[cases.normal.cold_temperature]
+value = 810.0
+unit = "K"
+source = "pump"
+status = "adopted_preliminary"
+locator = "ColdTemperature"
+
+[cases.normal.gas_top_pressure]
+value = 100000.0
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "TopPressure; 1 bar gauge at SG tops"
+
+[cases.normal.pump_suction_pressure]
+value = 166043.50326956483
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "BaseSuction; mean-density normal screen"
+
+[cases.normal.pump_discharge_pressure]
+value = 382304.6736592608
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "BaseDischarge; mean-density normal screen"
+
+[cases.normal.reactor_bottom_pressure]
+value = 425359.3632822734
+unit = "Pa_g"
+source = "pressure"
+status = "adopted_preliminary"
+locator = "BaseBottom; bottom-plenum midpoint"
+
+[cases.normal.generator_duty]
+value = 500
+unit = "MW"
+source = "generator"
+status = "design_target"
+locator = "three-generator case; target, thermal rerating pending"
+
+[cases.normal.secondary_pressure]
+value = 24
+unit = "MPa_abs"
+source = "wall"
+status = "inherited_basis"
+locator = "secondary pressure context"
+
+[cases.wall_screening.pressure]
+value = 1
+unit = "MPa_g"
+source = "wall"
+status = "screening_assumption"
+locator = "DesignPressure"
+
+[specifications.hot.bore]
+value = 1.425
+unit = "m"
+source = "wall"
+status = "conditional_dimension"
+locator = "Bore"
+
+[specifications.hot.wall]
+value = 0.025
+unit = "m"
+source = "wall"
+status = "conditional_dimension"
+locator = "nominal wall"
+
+[specifications.hot.insulation]
+value = 0.4
+unit = "m"
+source = "insulation"
+status = "conditional_dimension"
+locator = "hot insulation allowance"
+
+[specifications.cold.bore]
+value = 1.425
+unit = "m"
+source = "wall"
+status = "conditional_dimension"
+locator = "Bore"
+
+[specifications.cold.wall]
+value = 0.025
+unit = "m"
+source = "wall"
+status = "conditional_dimension"
+locator = "nominal wall"
+
+[specifications.cold.insulation]
+value = 0.35
+unit = "m"
+source = "insulation"
+status = "conditional_dimension"
+locator = "cold insulation allowance"
+
+[components.R-101]
+type = "reactor"
+name = "WISTR reactor"
+ports = ["H1", "H2", "H3", "C1", "C2", "C3", "bottom"]
+status = "Established concept"
+parent = "CS"
+
+[components.SG-101]
+type = "heat_exchanger"
+name = "Steam generator 1"
+ports = ["salt_inlet", "salt_outlet", "gas_top", "relief_high"]
+status = "Established concept; duty is a target"
+parent = "CS"
+
+[components.P-101]
+type = "pump"
+name = "Coolant circulation pump 1"
+ports = ["suction", "discharge"]
+status = "Established concept; duty provisional"
+parent = "CS"
+
+[components.SG-102]
+type = "heat_exchanger"
+name = "Steam generator 2"
+ports = ["salt_inlet", "salt_outlet", "gas_top", "relief_high"]
+status = "Established concept; duty is a target"
+parent = "CS"
+
+[components.P-102]
+type = "pump"
+name = "Coolant circulation pump 2"
+ports = ["suction", "discharge"]
+status = "Established concept; duty provisional"
+parent = "CS"
+
+[components.SG-103]
+type = "heat_exchanger"
+name = "Steam generator 3"
+ports = ["salt_inlet", "salt_outlet", "gas_top", "relief_high"]
+status = "Established concept; duty is a target"
+parent = "CS"
+
+[components.P-103]
+type = "pump"
+name = "Coolant circulation pump 3"
+ports = ["suction", "discharge"]
+status = "Established concept; duty provisional"
+parent = "CS"
+
+[connections.L-101]
+from = "R-101.H1"
+to = "SG-101.salt_inlet"
+via = []
+specification = "hot"
+status = "Established topology; dimensions conditional"
+
+[connections.L-201]
+from = "SG-101.salt_outlet"
+to = "R-101.C1"
+via = ["P-101"]
+specification = "cold"
+status = "Established topology; dimensions conditional; includes pump suction and discharge"
+
+[connections.L-102]
+from = "R-101.H2"
+to = "SG-102.salt_inlet"
+via = []
+specification = "hot"
+status = "Established topology; dimensions conditional"
+
+[connections.L-202]
+from = "SG-102.salt_outlet"
+to = "R-101.C2"
+via = ["P-102"]
+specification = "cold"
+status = "Established topology; dimensions conditional; includes pump suction and discharge"
+
+[connections.L-103]
+from = "R-101.H3"
+to = "SG-103.salt_inlet"
+via = []
+specification = "hot"
+status = "Established topology; dimensions conditional"
+
+[connections.L-203]
+from = "SG-103.salt_outlet"
+to = "R-101.C3"
+via = ["P-103"]
+specification = "cold"
+status = "Established topology; dimensions conditional; includes pump suction and discharge"

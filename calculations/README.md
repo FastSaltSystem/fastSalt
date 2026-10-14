@@ -142,3 +142,32 @@ compares one tank with the full gross core-sector envelope. At 50% cooling-pipe
 occupancy, the modeled tank provides 11.81 m³ versus a 6.43 m³ sector envelope.
 This preliminary check uses exterior tank dimensions; internal construction,
 freeboard and connected-pipe fuel inventory remain to be resolved.
+
+
+
+
+
+
+
+
+
+[Coolant inventory and storage capacity — Hurmet](reactor/Coolant%20inventory%20and%20storage%20capacity%20-%20Hurmet.md) compares the approximately 452 m³ circuit (D-063) with TK-401's provisional 73 m³ working acceptance. A 450°C fill case gives 18–25 m³ expansion, but full hot drainage requires roughly 479 m³ before uncertainty/freeboard allowances. The 8.2 × 16 m D-058 tank reservation is checked separately; relocation remains pending. [Basis, sensitivities and 67 Hurmet checks](reactor/coolant-inventory-check.md).
+
+
+[Normal coolant pressure profile — Hurmet](reactor/Normal%20coolant%20pressure%20profile%20-%20Hurmet.md) now combines the 1 bar(g) SG-top reference with the UM flow and allocated itemized losses: approximately 2.25 bar(g) suction, 3.82 discharge and 4.25 at the reactor bottom-plenum midpoint. The earlier broad envelope is archived. [Results, assumptions and 53 Hurmet checks](reactor/coolant-pressure-check.md). Mean-density screening only; no pressure ratings or relief settings are selected. SG failure assessment remains deferred.
+
+
+[Core coolant pressure loss — Hurmet](reactor/Core%20coolant%20pressure%20loss%20-%20Hurmet.md) uses owner-selected UM flow and corrected 3.4 m height: approximately 44.5 kPa active-core friction or 62.7 kPa including reflector extensions and provisional end losses. It distinguishes 2.993 m/s mean velocity from 3.035 m/s hot-outlet velocity and documents the report's count/area mismatch. [Checks](reactor/core-coolant-loss-check.md).
+
+
+## Itemized coolant pump power
+
+[Itemized coolant pump estimate — Hurmet](steam-generator/Itemized%20coolant%20pump%20estimate%20-%20Hurmet.md) replaces the blanket allowance for the new UM-flow calculation with SG/core/piping and explicit provisional fitting losses. Working total is 2.504 MW electrical for three pumps, with 2.24–3.07 MW fitting sensitivity. [Checks and limits](steam-generator/coolant-pump-itemized-check.md). D-063 updates the shared graphics/P&ID duty; no motor change is selected.
+
+## Current shared coolant hydraulic case — D-063
+
+Use the core, **Itemized coolant pump estimate**, and **Normal coolant pressure profile** Hurmet sheets for current normal-duty inputs. D-063 retains 18,500 kg/s total and 810–890 K, and adopts 172.162 kPa full-loop loss with counterSG tube geometry into the shared views. The original **Coolant pump estimate** remains historical except for its retained 2 MW motor-envelope reservation. Earlier Brayton studies are separate exploratory cases, not revised automatically by this adoption.
+
+## Newer SG workbook — D-063
+
+[Source and correction record](steam-generator/sources/README.md). Corrected `counterSG.xlsx` labels; independently reproduced 11.920866 m length. Active pump, pressure and inventory Hurmet sheets now use this geometry. Earlier Generator sizing and auxiliary Brayton calculations remain historical.

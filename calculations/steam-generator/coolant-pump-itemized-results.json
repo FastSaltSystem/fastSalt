@@ -1,0 +1,359 @@
+{
+  "date": "2026-10-14",
+  "status": "Preliminary itemized normal-duty power; no blanket allowance or motor selection",
+  "inputs": {
+    "TotalMassFlow": {
+      "value": 18500.0,
+      "unit": "kg/s"
+    },
+    "Legs": {
+      "value": 3,
+      "unit": ""
+    },
+    "HotTemperature": {
+      "value": 890.0,
+      "unit": "K"
+    },
+    "ColdTemperature": {
+      "value": 810.0,
+      "unit": "K"
+    },
+    "DensityIntercept": {
+      "value": 2112.8,
+      "unit": "'kg/m3'"
+    },
+    "DensitySlope": {
+      "value": 0.56355,
+      "unit": "'kg.m-3.K-1'"
+    },
+    "ViscosityScale": {
+      "value": 0.0007064,
+      "unit": "Pa.s"
+    },
+    "ViscosityTemperature": {
+      "value": 1204.1,
+      "unit": "K"
+    },
+    "SGTubeCount": {
+      "value": 4902,
+      "unit": ""
+    },
+    "SGTubeBore": {
+      "value": 0.02,
+      "unit": "m"
+    },
+    "SGTubeLength": {
+      "value": 11.920866244234299,
+      "unit": "m"
+    },
+    "TubeRoughness": {
+      "value": 1e-06,
+      "unit": "m"
+    },
+    "PipeRoughness": {
+      "value": 2e-06,
+      "unit": "m"
+    },
+    "CorePassageLoss": {
+      "value": 62713.56607891116,
+      "unit": "Pa"
+    },
+    "MainBore": {
+      "value": 1.425,
+      "unit": "m"
+    },
+    "HotPipeLength": {
+      "value": 15.751138641322761,
+      "unit": "m"
+    },
+    "ColdPipeLength": {
+      "value": 16.183645069775906,
+      "unit": "m"
+    },
+    "HotBends": {
+      "value": 3,
+      "unit": ""
+    },
+    "ColdBends": {
+      "value": 4,
+      "unit": ""
+    },
+    "NozzleBore": {
+      "value": 1.3299999999999998,
+      "unit": "m"
+    },
+    "HotNozzleLength": {
+      "value": 1.771999999999999,
+      "unit": "m"
+    },
+    "ColdNozzleLength": {
+      "value": 2.7536396683468527,
+      "unit": "m"
+    },
+    "DownOuterRadius": {
+      "value": 3.1999999999999997,
+      "unit": "m"
+    },
+    "DownInnerRadius": {
+      "value": 2.1999999999999997,
+      "unit": "m"
+    },
+    "DownLength": {
+      "value": 3.3549999999999995,
+      "unit": "m"
+    },
+    "SGEndK": {
+      "value": 1.5,
+      "unit": ""
+    },
+    "BendK": {
+      "value": 0.3,
+      "unit": ""
+    },
+    "CollectorK": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "ReactorEntryK": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "ReactorExitK": {
+      "value": 0.5,
+      "unit": ""
+    },
+    "ValveK": {
+      "value": 0.2,
+      "unit": ""
+    },
+    "BulkTurnK": {
+      "value": 2.0,
+      "unit": ""
+    },
+    "PumpEfficiency": {
+      "value": 0.8,
+      "unit": ""
+    },
+    "MotorEfficiency": {
+      "value": 0.96,
+      "unit": ""
+    },
+    "Gravity": {
+      "value": 9.80665,
+      "unit": "m/s2"
+    }
+  },
+  "hurmet_checks": {
+    "MeanTemperature": 850.0,
+    "MeanDensity": 1633.7825000000003,
+    "HotDensity": 1611.2405,
+    "ColdDensity": 1656.3245000000002,
+    "MeanViscosity": 0.0029125081163039273,
+    "HotViscosity": 0.002732857373033061,
+    "ColdViscosity": 0.0031235481404797163,
+    "LegMassFlow": 6166.666666666667,
+    "PumpVolumeFlow": 3.723102970865109,
+    "SGVelocity": 2.4509421136175815,
+    "SGReynolds": 27497.30592217555,
+    "SGFactor": 0.024100347757239134,
+    "SGDynamic": 4.907161514596229,
+    "SGFriction": 70.49064449397153,
+    "SGEnds": 7.360742271894344,
+    "HotVelocity": 2.399774829798134,
+    "HotDynamic": 4.639501952809518,
+    "HotFactor": 0.010411030054948258,
+    "HotStraight": 0.5339027427438819,
+    "HotNozzleVelocity": 2.754843554615206,
+    "HotNozzleDynamic": 6.113983401733183,
+    "HotNozzleFactor": 0.010302154751739548,
+    "HotNozzleFriction": 0.08391979247314418,
+    "ColdVelocity": 2.3344546293020243,
+    "ColdDynamic": 4.513217938994313,
+    "ColdFactor": 0.010635069856644433,
+    "ColdStraight": 0.5451150008952679,
+    "ColdNozzleVelocity": 2.679858630576304,
+    "ColdNozzleDynamic": 5.947565029195833,
+    "ColdNozzleFactor": 0.010521936105512018,
+    "ColdNozzleFriction": 0.12956578416159936,
+    "StraightLoss": 1.2925033202738931,
+    "BendLoss": 9.591413284321739,
+    "CollectorLoss": 9.15271989180383,
+    "ReactorNozzleLoss": 9.004556730062424,
+    "ValveLoss": 1.8305439783607662,
+    "DownArea": 16.964600329384883,
+    "DownDiameter": 2.0,
+    "DownVelocity": 0.6583891571703365,
+    "DownDynamic": 0.3589886932541978,
+    "DownFactor": 0.012413650941974746,
+    "DownFriction": 0.007475544453865635,
+    "BulkTurnLoss": 0.7179773865083956,
+    "KnownGeometryLoss": 134.50418943761042,
+    "LocalLoss": 37.6579535429515,
+    "PumpRise": 172.16214298056192,
+    "PumpHead": 10.599162691749303,
+    "HydraulicPerPump": 640.9773860014337,
+    "ShaftPerPump": 801.2217325017922,
+    "ElectricalPerPump": 834.6059713560335,
+    "TotalHydraulic": 1.922932158004301,
+    "TotalShaft": 2.403665197505376,
+    "TotalElectrical": 2.5038179140681005,
+    "BareSubtotalElectrical": 1.9561443253475421,
+    "LowLocalLoss": 19.598131155534617,
+    "HighLocalLoss": 76.25936619964327,
+    "LowRise": 154.10232059314504,
+    "LowElectrical": 2.241167217256038,
+    "HighRise": 210.7635556372537,
+    "HighElectrical": 3.0652125786841906,
+    "SameFlowOldMethod": 105.73596674095728,
+    "SameFlowOldElectrical": 1.537757390236533
+  },
+  "routes": [
+    {
+      "name": "leg_1.hot_outlet",
+      "service": "hot",
+      "length_m": 15.751138641322761,
+      "bend_angles_deg": [
+        17.500372788484363,
+        90.0,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_1.cold_inlet",
+      "service": "cold",
+      "length_m": 8.483132109154312,
+      "bend_angles_deg": [
+        74.99999999999999,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_1.cold_suction",
+      "service": "cold",
+      "length_m": 7.700512960621595,
+      "bend_angles_deg": [
+        90.0,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_2.hot_outlet",
+      "service": "hot",
+      "length_m": 15.751138641322761,
+      "bend_angles_deg": [
+        17.50037278848434,
+        90.0,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_2.cold_inlet",
+      "service": "cold",
+      "length_m": 8.483132109154313,
+      "bend_angles_deg": [
+        75.0,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_2.cold_suction",
+      "service": "cold",
+      "length_m": 7.7005129606215945,
+      "bend_angles_deg": [
+        90.0,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_3.hot_outlet",
+      "service": "hot",
+      "length_m": 15.751138641322761,
+      "bend_angles_deg": [
+        17.500372788484444,
+        90.0,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_3.cold_inlet",
+      "service": "cold",
+      "length_m": 8.483132109154305,
+      "bend_angles_deg": [
+        74.99999999999997,
+        90.0
+      ]
+    },
+    {
+      "name": "leg_3.cold_suction",
+      "service": "cold",
+      "length_m": 7.700512960621596,
+      "bend_angles_deg": [
+        90.0,
+        90.0
+      ]
+    }
+  ],
+  "roughness_sensitivity_external": [
+    {
+      "tube_roughness_m": 1e-06,
+      "SG_friction_kPa": 70.49064449397153,
+      "core_with_ends_kPa": 62.71356607891115,
+      "total_electrical_MW": 2.5038179140681005
+    },
+    {
+      "tube_roughness_m": 1e-05,
+      "SG_friction_kPa": 73.75153705187788,
+      "core_with_ends_kPa": 65.70644041674886,
+      "total_electrical_MW": 2.5947687660549854
+    },
+    {
+      "tube_roughness_m": 4.5e-05,
+      "SG_friction_kPa": 84.52929042947598,
+      "core_with_ends_kPa": 75.35448565012882,
+      "total_electrical_MW": 2.89182873281602
+    }
+  ],
+  "efficiency_sensitivity_external": [
+    {
+      "pump_efficiency": 0.75,
+      "motor_efficiency": 0.96,
+      "total_electrical_MW": 2.6707391083393075
+    },
+    {
+      "pump_efficiency": 0.8,
+      "motor_efficiency": 0.96,
+      "total_electrical_MW": 2.5038179140681005
+    },
+    {
+      "pump_efficiency": 0.85,
+      "motor_efficiency": 0.96,
+      "total_electrical_MW": 2.3565345073582127
+    }
+  ],
+  "sources": [
+    {
+      "path": "calculations/reactor/core-coolant-loss-results.json",
+      "sha256": "35c25106916cbf5bf3c249899c44b8d6df35463319b547f022813cc1cbd217ec"
+    },
+    {
+      "path": "calculations/steam-generator/sources/counterSG.xlsx",
+      "sha256": "2c2bd8716c8bcbb9cbb7790d8d52509bbc4c99c7046f01be323e56c0faeead53"
+    },
+    {
+      "path": "calculations/steam-generator/counter_sg_basis.py",
+      "sha256": "54bb51e645e3d9ecc721379e7f23c4d64d244c46f7292cacb2a4e3ee5a242886"
+    },
+    {
+      "path": "../fastSaltModels/models/wistr_installation.py",
+      "sha256": "be731b71b2fd48a6f29f81ad1c5833617b4d71007ab28adf207a01f2d09f4b95"
+    },
+    {
+      "path": "../fastSaltModels/models/coolant_assembly.py",
+      "sha256": "364a7c3a756e9d6759fcc2d0f0a7bd58162f7f4b4907c87f61dfa20b35c6f092"
+    },
+    {
+      "path": "../fastSaltModels/outputs/reactor-study/reactor-study-report.json",
+      "sha256": "f27928dfb336d85473d7707dd4e3fc7121c74fb71d9a08642427d149bb73466a"
+    }
+  ]
+}

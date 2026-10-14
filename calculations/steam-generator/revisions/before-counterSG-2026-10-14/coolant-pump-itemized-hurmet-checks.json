@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "numerical_comparisons": 62,
+  "checks": [
+    "independent SI/Colebrook calculation",
+    "save/reopen",
+    "efficiency sensitivity",
+    "SG length scaling",
+    "bend K and itemized sum"
+  ],
+  "engine_sha256": "24c325bee542762dad7b1dcd3dd943a5518cb549a44e8e2f1aa4e0abcfc4ebf1"
+}

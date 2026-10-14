@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "revision": "itemized",
+  "numerical_comparisons": 53,
+  "checks": [
+    "independent pressure balances",
+    "save/reopen",
+    "three case loop closures",
+    "reference pressure shift",
+    "reference elevation shift",
+    "uniform-density hydrostatic sensitivities"
+  ],
+  "engine_sha256": "24c325bee542762dad7b1dcd3dd943a5518cb549a44e8e2f1aa4e0abcfc4ebf1"
+}

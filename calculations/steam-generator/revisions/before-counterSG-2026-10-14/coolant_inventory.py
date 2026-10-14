@@ -1,0 +1,227 @@
+"""Preliminary coolant inventory; publishes a live Hurmet volume/mass balance.
+
+Run from any directory. Defaults to sibling fastSaltModels; no Blender required.
+Geometry remains a layout estimate, not measured internal fluid volume.
+"""
+from pathlib import Path
+import argparse,hashlib,json,math,re,sys
+ROOT=Path(__file__).resolve().parent
+
+def rounded_length(points, desired):
+    """Analytic arc counterpart of installation_piping.fillet_path, metres."""
+    points=[p for i,p in enumerate(points) if not i or math.dist(p,points[i-1])>1e-6]
+    total=sum(math.dist(a,b) for a,b in zip(points,points[1:]))
+    for i,(a,p,c) in enumerate(zip(points,points[1:],points[2:]),1):
+        la=math.dist(a,p);lc=math.dist(c,p)
+        u=[(a[k]-p[k])/la for k in range(3)];v=[(c[k]-p[k])/lc for k in range(3)]
+        theta=math.acos(max(-1,min(1,sum(x*y for x,y in zip(u,v)))))
+        if abs(theta-math.pi)<1e-5:continue
+        if theta<1e-4:raise ValueError('Reversing route')
+        trim=min(desired/math.tan(theta/2),la*(.95 if i==1 else .49),lc*(.95 if i==len(points)-2 else .49))
+        radius=trim*math.tan(theta/2)
+        total+=radius*(math.pi-theta)-2*trim
+    return total
+
+def extract(models,hub):
+    sys.path[:0]=[str(models/'src'),str(models/'models')]
+    import wistr_installation as layout,wistr_reactor as reactor,coolant_assembly
+    from textual_graphics.assembly_model import document
+    doc=document(coolant_assembly.build_model(layout,coolant_assembly.reactor_interface(layout,models),models))
+    coolant_assembly.check_pid_links(doc,hub/'design/pids/coolant-system/coolant-system.toml')
+    routes=[]
+    for name,c in doc['connections'].items():
+        pts=c['points_m'];spec=c['spec'];poly=sum(math.dist(a,b) for a,b in zip(pts,pts[1:]))
+        arc=rounded_length(pts,max(1.5,spec['jacket_od']))
+        assert 0<arc<=poly+1e-8
+        routes.append(dict(name=name,service=c['service'],pid_line=c['pid_line'],bore_m=spec['bore'],polyline_m=poly,rounded_m=arc))
+    d=reactor.dimensions();p=reactor.PRESENTATION;ly=reactor.LAYERS
+    sgpath=hub/'calculations/steam-generator/Generator sizing - Hurmet.md';sg=sgpath.read_text()
+    def result(name):
+        hits=re.findall(r'¢\?\?` '+name+r' = (?:(?!`).)*?〔([^〕]+)〕',sg,re.S)
+        if not hits:raise ValueError(name)
+        return float(hits[0].replace(',',''))
+    assert 'TubeID = 1.4 cm' in sg and '2112.68' in sg and '0.5635' in sg
+    inputs={
+      'Legs':(layout.STEAM_GENERATORS['count'],''),
+      'LowerRadius':(d['vessel_inner_radius'],'m'),'ReflectorRadius':(d['reflector_radius'],'m'),
+      'HotRadius':(d['hot_inner_radius'],'m'),'BottomHeight':(ly['bottom_plenum'],'m'),
+      'DownHeight':(d['hot_plenum_z']-p['downcomer_roof_thickness']-ly['bottom_plenum'],'m'),
+      'HotHeight':(ly['hot_plenum'],'m'),'CoreHeight':(reactor.CORE['height'],'m'),
+      'LowerReflector':(ly['bottom_reflector'],'m'),'UpperReflector':(ly['top_reflector'],'m'),
+      'CoreFlowArea':(3.86,'m2'),
+      'SGTubeCount':(result('NTubes'),''),'SGTubeBore':(.014,'m'),'SGTubeLength':(result('tubeLength'),'m'),
+      'SGShortLength':(17,'m'),
+      'MainBore':(layout.PIPE_SPECS['hot']['bore'],'m'),
+      'HotLength':(sum(x['rounded_m'] for x in routes if x['service']=='hot'),'m'),
+      'ColdLength':(sum(x['rounded_m'] for x in routes if x['service']=='cold'),'m'),
+      'PolylineLength':(sum(x['polyline_m'] for x in routes),'m'),
+      'NozzleBore':(reactor.CONNECTIONS['pipe_diameter']-2*.035,'m'),
+      'HotNozzleLength':(d['pipe_end_radius']-d['hot_inner_radius'],'m'),
+      'ColdNozzleLength':(d['pipe_end_radius']+.35-d['vessel_inner_radius'],'m'),
+      'CollectorOD':(layout.MANIFOLDS['collector_bare_diameters']['hot'],'m'),
+      'CollectorWall':(.025,'m'),'CollectorLength':(2*layout.MANIFOLDS['half_length'],'m'),
+      'PumpDiameter':(layout.PUMPS['casing_diameter'],'m'),'PumpHeight':(layout.PUMPS['casing_height'],'m'),
+      'PumpVoidFraction':(.5,''),'ServiceVolume':(2,'m3'),
+      'TankOD':(2*layout.COOLANT_STORAGE['radius'],'m'),'TankHeight':(layout.COOLANT_STORAGE['height'],'m'),
+      'TankWall':(.025,'m'),'TankEndAllowance':(.10,'m'),
+      'FreeboardFraction':(.20,''),'HeelFraction':(.05,''),'InventoryMargin':(.10,''),
+      'FillTemperature':(723.15,'K'),'StoreTemperature':(723.15,'K'),
+      'HotTemperature':(875,'K'),'ColdTemperature':(810,'K'),
+      'DensityIntercept':(2112.68,"'kg/m3'"),'DensitySlope':(.5635,"'kg.m-3.K-1'"),
+    }
+    sources=[sgpath,hub/'design/engineering/coolant-system.toml',hub/'design/pids/coolant-system/coolant-system.toml',models/'models/wistr_installation.py',models/'models/wistr_reactor.py',models/'models/coolant_assembly.py',models/'src/textual_graphics/installation_piping.py',models/'src/textual_graphics/installation_services.py',models/'src/textual_graphics/reactor_geometry.py',models/layout.REACTOR['baseline']/'reactor-study-report.json']
+    return inputs,routes,sources,dict(visual_holes_per_sector=len(reactor.hole_centres()),visual_hole_diameter_m=2*p['tube_pattern_radius'],core_diameter_m=reactor.CORE['diameter'])
+
+def publish(models,hub,out):
+    inputs,routes,sources,extra=extract(models,hub)
+    out.mkdir(parents=True,exist_ok=True);md=[];values={};checks={}
+    def text(s):md.append(s.strip())
+    def inp(n):
+        v,u=inputs[n];values[n]=v;text(f'¢` {n} = {v:.12g} {u} `')
+    def calc(n,expr,value,u=''):
+        values[n]=value;checks[n]=value;text(f'¢??` {n} = {expr} = 〔{value:.10g}〕 {u} `')
+    def C(n,expr,u=''):
+        # Simple arithmetic only; equivalent Hurmet and Python expressions.
+        value=eval(expr.replace('^','**'),{'__builtins__':{},'pi':math.pi,'sqrt':math.sqrt},values)
+        calc(n,expr,value,u)
+    text('''---------------
+decimalFormat: 1,000,000.
+fontSize: 12
+pageSize: letter
+dateFormat: yyyy-mm-dd
+saveDate: 2026-10-14
+---------------
+
+# Coolant inventory, expansion and TK-401 capacity
+
+14 October 2026. Preliminary volume and mass balance for the current three-leg installation. **TK-401 is an expansion-storage concept and a proposed full-drain receiver; those are different capacity requirements.** The 4 m diameter × 8 m bare tank in Blender is an external visual envelope, not a specified internal capacity.
+
+The worksheet retains the existing generator salt-property correlation and 810/875 K coolant temperatures. No tank or building is resized. Editable allowances are identified below. Open this Markdown file in Hurmet to recalculate; saved answers are not a certified inventory or an operating instruction.
+
+¢` format = "h7" `
+
+## Inputs and their provenance
+
+Current reactor and installation geometry is imported from the sibling Python models, with hashes in `coolant-inventory-results.json`. Route lengths are computed externally from resolved connections using the current bend-radius and trim rules; Hurmet computes volume from those lengths. Insulation is excluded from fluid volume.
+
+### Reactor coolant spaces
+
+Bottom plenum and hot plenum are gross fluid envelopes, without deductions for supports, links and service hardware. The downcomer excludes the 40 mm separator thickness and starts above the bottom plenum, avoiding overlap. These are conservative geometric allowances, not exact net cavities.
+
+The UM report's Appendix B, Table 58, supplies **3.86 m² coolant flow area** as a provisional reactor channel-area reference. Here it is extended through the current 3.4 m core and 0.30/0.25 m reflectors. Report dimensions/conditions do not all match the current layout; that area needs confirmation. Do not count the fuel volume as coolant. The coarse Blender hole pattern is illustrative and is not used as the engineering tube count.''')
+    for n in ['Legs','LowerRadius','ReflectorRadius','HotRadius','BottomHeight','DownHeight','HotHeight','CoreHeight','LowerReflector','UpperReflector','CoreFlowArea']:inp(n)
+    C('BottomVolume','pi * LowerRadius^2 * BottomHeight','m3')
+    C('DownVolume','pi * (LowerRadius^2 - ReflectorRadius^2) * DownHeight','m3')
+    C('HotVolume','pi * HotRadius^2 * HotHeight','m3')
+    C('ChannelVolume','CoreFlowArea * (CoreHeight + LowerReflector + UpperReflector)','m3')
+    C('ReactorVolume','BottomVolume + DownVolume + HotVolume + ChannelVolume','m3')
+    text('''### Steam generators
+
+The existing generator worksheet calculates **12,090 salt tubes per generator**, 14 mm bore and 19.879 m tube length. Only the salt tubes are counted; the water/steam tubes are excluded. The current 17 m graphic casing height is not a validated replacement for tube length. Both lengths are tested below; MSU's eventual internal design should replace this basis.''')
+    for n in ['SGTubeCount','SGTubeBore','SGTubeLength','SGShortLength']:inp(n)
+    C('SGVolumeEach','SGTubeCount * pi * SGTubeBore^2 * SGTubeLength / 4','m3')
+    C('SGVolume','Legs * SGVolumeEach','m3')
+    C('SGShortVolume','Legs * SGTubeCount * pi * SGTubeBore^2 * SGShortLength / 4','m3')
+    text('''### Main pipes and vessel nozzles
+
+These are all three legs combined. Rounded lengths run from the vessel nozzle ends to SG manifold ports and pump casing ports. Separate nozzle lengths cover the vessel inner wall to those ends; the small CAD overlap inside the vessel is excluded. Hot/cold pipe bend fillets replace corner chords with arcs. The old 1.33 m nozzle bore and the installation's 1.425 m pipe bore remain a known interface mismatch.''')
+    for n in ['MainBore','HotLength','ColdLength','PolylineLength','NozzleBore','HotNozzleLength','ColdNozzleLength']:inp(n)
+    C('HotPipeVolume','pi * MainBore^2 * HotLength / 4','m3')
+    C('ColdPipeVolume','pi * MainBore^2 * ColdLength / 4','m3')
+    C('HotNozzleVolume','Legs * pi * NozzleBore^2 * HotNozzleLength / 4','m3')
+    C('ColdNozzleVolume','Legs * pi * NozzleBore^2 * ColdNozzleLength / 4','m3')
+    C('PolylineVolume','pi * MainBore^2 * PolylineLength / 4','m3')
+    C('BendVolumeDifference','PolylineVolume - HotPipeVolume - ColdPipeVolume','m3')
+    text('''### Unresolved equipment allowances
+
+Approximate each of the six salt collectors by a 2.8 m long half cylinder, using the modeled 2.1 m bare diameter and an **assumed** 25 mm wall. Actual transitions are not integrated; they are part of inventory uncertainty. Count three hot and three cold collectors, with no air, steam or feedwater collector volume.
+
+Pump liquid cavities are unresolved: use **50% of the modeled cylindrical pump envelopes**, and test 0–100% below. Add **2 m³** for small service lines, valves and salt held in nominal gas vessels; this is an editable aggregate allowance, not a selected gas-vessel volume. The modeled transfer line is only 44 mm bore. No additional coolant inside the separate fuel tanks or other unconnected systems is assumed.''')
+    for n in ['CollectorOD','CollectorWall','CollectorLength','PumpDiameter','PumpHeight','PumpVoidFraction','ServiceVolume']:inp(n)
+    C('CollectorBore','CollectorOD - 2 * CollectorWall','m')
+    C('CollectorVolumeEach','pi * CollectorBore^2 * CollectorLength / 8','m3')
+    C('CollectorVolume','2 * Legs * CollectorVolumeEach','m3')
+    C('PumpEnvelopeVolume','Legs * pi * PumpDiameter^2 * PumpHeight / 4','m3')
+    C('PumpVolume','PumpEnvelopeVolume * PumpVoidFraction','m3')
+    C('LoopVolume','ReactorVolume + SGVolume + HotPipeVolume + ColdPipeVolume + HotNozzleVolume + ColdNozzleVolume + CollectorVolume + PumpVolume + ServiceVolume','m3')
+    text('''## Temperature cases and fixed-mass balance
+
+Use an editable **450°C (723.15 K) cold-fill/storage case**. It is above the inherited 674 K liquidus, but is not a selected operating minimum or a verified property-correlation validity limit. The existing density correlation is ρ = 2112.68 − 0.5635 T, with T in kelvin; coefficients are retained from Generator sizing. UM Table 43 gives nearly identical rounded coefficients, 2112.8 − 0.56355 T.
+
+For the normal circuit, hot plenum/legs/nozzles/collectors use 875 K; bottom plenum/downcomer/cold legs/nozzles/collectors/pumps/service allowance use 810 K; core/reflector channels and SG tubes use their mean 842.5 K. Temperature profiles are screening approximations.
+
+Hold **the total charge fixed** at the mass required to fill the loop at the cold-fill temperature. At normal operation the loop contains less mass; transfer the difference to storage. An all-hot 875 K loop bounds this modeled thermal case. Full drain includes that already-transferred expansion salt exactly once. Fixed geometric volumes neglect thermal expansion of the metal.''')
+    for n in ['FillTemperature','StoreTemperature','HotTemperature','ColdTemperature','DensityIntercept','DensitySlope']:inp(n)
+    C('MeanTemperature','(HotTemperature + ColdTemperature) / 2','K')
+    for n,t in [('FillDensity','FillTemperature'),('StoreDensity','StoreTemperature'),('HotDensity','HotTemperature'),('ColdDensity','ColdTemperature'),('MeanDensity','MeanTemperature')]:C(n,f'DensityIntercept - DensitySlope * {t}',"'kg/m3'")
+    C('HotGroup','HotVolume + HotPipeVolume + HotNozzleVolume + Legs * CollectorVolumeEach','m3')
+    C('ColdGroup','BottomVolume + DownVolume + ColdPipeVolume + ColdNozzleVolume + Legs * CollectorVolumeEach + PumpVolume + ServiceVolume','m3')
+    C('MeanGroup','ChannelVolume + SGVolume','m3')
+    C('VolumeClosure','LoopVolume - HotGroup - ColdGroup - MeanGroup','m3')
+    C('ChargeMass','LoopVolume * FillDensity','kg')
+    C('NormalLoopMass','HotGroup * HotDensity + ColdGroup * ColdDensity + MeanGroup * MeanDensity','kg')
+    C('NormalExpansionMass','ChargeMass - NormalLoopMass','kg')
+    C('NormalExpansionVolume','NormalExpansionMass / StoreDensity','m3')
+    C('AllHotExpansionMass','ChargeMass - LoopVolume * HotDensity','kg')
+    C('AllHotExpansionVolume','AllHotExpansionMass / StoreDensity','m3')
+    C('NormalMassClosure','NormalLoopMass + NormalExpansionMass - ChargeMass','kg')
+    C('NormalDrainVolume','NormalLoopMass / StoreDensity','m3')
+    C('FullDrainStore','ChargeMass / StoreDensity','m3')
+    C('FullDrainHot','ChargeMass / HotDensity','m3')
+    C('DrainClosure','FullDrainStore - NormalDrainVolume - NormalExpansionVolume','m3')
+    text('''`NormalDrainVolume` is the space for the circulating inventory after it reaches the assumed storage temperature; `FullDrainStore` also includes the expansion salt already there. `FullDrainHot` assumes the entire charge is at 875 K, an inventory reservation rather than a claim that drain mixing reaches that temperature. Additional purchased inventory or reserve beyond the stated heel must be added separately.''')
+    text('## Current tank capacity and expansion-only margin')
+    text('''Deduct an assumed 25 mm radial wall and 100 mm total end/internal-height allowance from the 4 × 8 m bare external envelope. This is not a pressure-wall calculation. Reserve **20% gas freeboard** and a **5% unavailable heel** as separate fractions of the internal geometric volume. The heel is a capacity reservation, not a claim that 5% remains after a gas sweep. No head volume is credited. Insulation is outside the tank and adds no salt capacity.''')
+    for n in ['TankOD','TankHeight','TankWall','TankEndAllowance','FreeboardFraction','HeelFraction','InventoryMargin']:inp(n)
+    C('TankID','TankOD - 2 * TankWall','m')
+    C('TankClearHeight','TankHeight - TankEndAllowance','m')
+    C('TankGrossEnvelope','pi * TankOD^2 * TankHeight / 4','m3')
+    C('TankInternal','pi * TankID^2 * TankClearHeight / 4','m3')
+    C('Freeboard','TankInternal * FreeboardFraction','m3')
+    C('Heel','TankInternal * HeelFraction','m3')
+    C('TankWorking','TankInternal * (1 - FreeboardFraction - HeelFraction)','m3')
+    C('ExpansionMargin','TankWorking - AllHotExpansionVolume','m3')
+    C('NormalExpansionRise','NormalExpansionVolume / (pi * TankID^2 / 4)','m')
+    C('FullDrainDeficit','FullDrainHot - TankWorking','m3')
+    C('FullDrainRatio','FullDrainHot / TankWorking','')
+    text('''Expansion-only margin assumes the tank starts at the reserved heel and has no other inventory. The full-drain comparison credits no permanently trapped loop salt: retaining it would not satisfy complete drainage. A final receiving-temperature transient and total charge definition must be agreed.''')
+    text('## Conditional full-drain storage reservation')
+    text('''Apply a separate **10% inventory uncertainty allowance** to the entire hot drain charge, then divide by the 75% working fraction. This allowance is not another thermal-expansion addition. Show an equivalent single cylinder at the existing 8 m external height; it is a space estimate, not an adopted replacement tank. Multiple tanks or an external store are alternatives to evaluate.''')
+    C('RequiredWorking','FullDrainHot * (1 + InventoryMargin)','m3')
+    C('RequiredInternal','RequiredWorking / (1 - FreeboardFraction - HeelFraction)','m3')
+    C('EquivalentID','sqrt(4 * RequiredInternal / (pi * TankClearHeight))','m')
+    C('EquivalentOD','EquivalentID + 2 * TankWall','m')
+    C('EquivalentCurrentTanks','RequiredWorking / TankWorking','')
+    text('## Sensitivity and checks')
+    C('ShortTubeLoop','LoopVolume - SGVolume + SGShortVolume','m3')
+    C('ZeroPumpLoop','LoopVolume - PumpVolume','m3')
+    C('FullPumpLoop','LoopVolume - PumpVolume + PumpEnvelopeVolume','m3')
+    C('SGOnlyDeficit','SGVolume - TankInternal','m3')
+    C('ShortSGOnlyDeficit','SGShortVolume - TankWorking','m3')
+    C('TenPercentPlenumDeduction','0.1 * (BottomVolume + DownVolume + HotVolume)','m3')
+    C('ReducedPlenumLoop','LoopVolume - TenPercentPlenumDeduction','m3')
+    text('''The shorter SG tube case, pump-cavity extremes and a 10% deduction from gross plenums/downcomer do not establish design bounds, but reveal the effect of major provisional inputs. Even the three SG tube inventories alone exceed the current working tank volume. The full-drain conclusion therefore does not depend on the uncertain reactor channel count or precise plumbing allowance.
+
+## Sources, differences and reproduction
+
+- [Generator sizing](../steam-generator/Generator%20sizing%20-%20Hurmet.md): salt density, temperatures, tube bore/count and calculated length. These inputs are inherited, not newly validated.
+- `fastSaltModels/models/wistr_installation.py`, `models/wistr_reactor.py`, `models/coolant_assembly.py`: current placement and dimensions. See [assembly workflow](../../../fastSaltModels/docs/assembly-models.md).
+- UM/NRDSL-25/02, *Core Design Evolution of Wielenga Innovation Salt Tank Reactor*, November 15, 2025: Table 43 (printed p.110; PDF p.126), density; Table 58 (printed p.139; PDF p.155), 3.86 m² coolant area. [Library record W10](../../publications/index.md#w10). Appendix B lists 3.80 m height / 3.40 m diameter, differing from the owner's current 3.40 m height / 3.80 m diameter; this sheet retains the current owner geometry and uses the reported flow area only as a provisional input. Its 890 K outlet is also not adopted here.
+- [NREL publication record](https://research-hub.nlr.gov/en/publications/thermophysical-properties-experimentally-tested-for-nacl-kcl-mgcl-2/) confirms the investigated 45.98/38.91/15.11 wt% MgCl₂/KCl/NaCl mixture. It does not independently validate the inherited density coefficients in this sheet.
+
+The current reactor's coarse 48 mm holes at 85 mm pitch are presentation geometry, not a replacement for the UM coolant-flow area. No fuel or absorber inventory is calculated. SG manifolds, pumps, service inventory, internal tank dimensions and freeboard remain provisional. This sheet does not size pressure protection or establish drainage gradients, heating/cooling capacity, seismic support or transfer timing.
+
+Run `python coolant_inventory.py --models /path/to/fastSaltModels`, then run `check_coolant_inventory.cjs` with `HURMET_ENGINE` and `TEMML_ENGINE` pointing to matching Hurmet bundles. Python independently calculates the saved numerical checks; Hurmet recalculates every worksheet equation, saves/reopens it and exercises temperature/diameter sensitivities. No Blender build is required. If the generated worksheet's inputs are edited directly, the checker comparisons to the Python baseline will need a corresponding reviewed update.''')
+    # Extra scenarios use the same charge definition and remain externally computed.
+    sensitivity=[]
+    for temp in (698.15,723.15,773.15,810):
+        rho=2112.68-.5635*temp;mass=values['LoopVolume']*rho
+        sensitivity.append(dict(fill_temperature_K=temp,normal_expansion_m3=(mass-values['NormalLoopMass'])/values['StoreDensity'],hot_drain_m3=mass/values['HotDensity']))
+    results={'date':'2026-10-14','status':'Preliminary geometric screening; no selected tank replacement','inputs':{n:{'value':v,'unit':u} for n,(v,u) in inputs.items()},'routes':routes,'geometry_notes':extra,'hurmet_checks':checks,'fill_temperature_sensitivity':sensitivity,'sources':[{ 'path':str(p.relative_to(hub)) if p.is_relative_to(hub) else '../fastSaltModels/'+str(p.relative_to(models)), 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sources]}
+    (out/'Coolant inventory and storage capacity - Hurmet.md').write_text('\n\n'.join(md)+'\n')
+    (out/'coolant-inventory-results.json').write_text(json.dumps(results,indent=2)+'\n')
+    for n in ['ReactorVolume','SGVolume','LoopVolume','NormalExpansionVolume','AllHotExpansionVolume','FullDrainHot','TankWorking','RequiredInternal','EquivalentOD','EquivalentCurrentTanks']:print(f'{n}: {values[n]:.4f}')
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--models',type=Path,default=ROOT.parents[1].parent/'fastSaltModels');parser.add_argument('--hub',type=Path,default=ROOT.parents[1]);parser.add_argument('--output',type=Path,default=ROOT)
+    args=parser.parse_args();publish(args.models.resolve(),args.hub.resolve(),args.output.resolve())

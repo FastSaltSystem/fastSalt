@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "numerical_comparisons": 64,
+  "checks": [
+    "Hurmet save/reopen",
+    "tank diameter sensitivity",
+    "fill temperature mass balance",
+    "storage temperature sensitivity"
+  ],
+  "engine_sha256": "24c325bee542762dad7b1dcd3dd943a5518cb549a44e8e2f1aa4e0abcfc4ebf1"
+}

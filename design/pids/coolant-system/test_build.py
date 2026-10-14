@@ -17,7 +17,28 @@ class ModelWorkflowTests(unittest.TestCase):
             with (out/'lines.csv').open() as f:
                 rows={r['tag']:r for r in csv.DictReader(f)}
             self.assertEqual(rows['L-101']['temperature_C'],'610')
-            self.assertEqual(rows['L-102']['temperature_C'],'601.85')
+            self.assertEqual(rows['L-102']['temperature_C'],'616.85')
+
+    def test_relief_is_dedicated_and_sizing_is_unresolved(self):
+        for i in (101,102,103):
+            line=self.model['lines'][f'L-{i}R']
+            self.assertEqual(line['from'],f'SG-{i}.relief_high')
+            self.assertNotEqual(line['from'],self.model['lines'][f'L-{i}G']['from'])
+            self.assertIsNone(line['bore_mm'])
+            self.assertIsNone(self.model['relief_devices'][f'RD-{i}']['burst_differential_pressure_Pa'])
+        build.validate(self.model,self.layout)
+
+    def test_relief_cannot_use_normal_gas_port(self):
+        self.model['lines']['L-101R']['from']='SG-101.gas_top'
+        with self.assertRaisesRegex(build.ModelError,'dedicated high SG port'):build.validate(self.model,self.layout)
+
+    def test_relief_cannot_be_isolated_by_gas_valve(self):
+        self.model['valves']['V-101G']['line']='L-101R'
+        with self.assertRaisesRegex(build.ModelError,'isolation valve'):build.validate(self.model,self.layout)
+
+    def test_relief_symbol_cannot_disappear(self):
+        self.layout['sheets'][4]['elements']=[e for e in self.layout['sheets'][4]['elements'] if e.get('tag')!='RD-101']
+        with self.assertRaisesRegex(build.ModelError,'Missing or extra drawn relief_devices'):build.validate(self.model,self.layout)
 
     def test_unknown_port_rejected(self):
         self.model['lines']['L-101']['to']='SG-101.nonexistent'
