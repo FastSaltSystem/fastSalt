@@ -1070,6 +1070,32 @@ The shared TOML, P&ID and resolved graphics duty metadata use the checked revisi
 
 The corrected workbook is versioned in `calculations/steam-generator/sources/counterSG.xlsx`; the supplied original and pre-update calculations are archived in `calculations/steam-generator/revisions/before-counterSG-2026-10-14/`.
 
+## D-064 — Attached coolant tank bay and three-item laydown draft
+
+14 October 2026. The owner asks to move coolant storage toward preparation and, after considering conflicts with the preparation-side internal headers, selects **an attached tank bay** for a draft. Responsible: project owner; source: explicit request and option selection. This authorizes a layout study, not final civil construction or equipment design.
+
+The models draft uses the already-selected 8.2 × 16 m bare TK-401 in a provisional 11 × 11 × 19.5 m bay attached to coolant preparation. The preparation liquid route runs directly to the shared low-point tee beneath the tank. P-401 moves beside the tank; its reactor connection uses a local raised crossing over existing headers. Pressure gas, high-point venting, drainage, heating, support loads and tank/bay access remain to develop. Existing main circulation geometry and hydraulic basis are retained.
+
+The laydown platform must hold an insulation cover, sector cap and top reflector simultaneously. A wider shared tray accommodates the cap and top reflector with the reflector reversed 180° in plan; both stay upright. Actual projected mesh fit is checked, but lifting-tool clearance, load capacity and loaded crane movement are not qualified.
+
+See [layout, files and validation scope](../../fastSaltModels/docs/tank-bay-draft.md). This is a reproducible draft overlay; accepted scenes and historical calculation source files remain unchanged. No new baseline or commit is implied.
+
+## D-065 — Shared-wall annex, cylindrical coolant silo and separate preparation
+
+14 October 2026. Owner requests one off-gas and fuel refining/recycling building, with an internal dividing wall, moved against the reactor and using its wall as the shared boundary. The obstructing fresh-air intake moves near the reactor doorway. A cylindrical enclosure replaces the square tank bay, with separate coolant preparation attached on its +Y side. Responsible: project owner; source: explicit layout instruction.
+
+The draft retains 5 m heights for both low buildings, existing process placeholders and the selected insulated tank. It moves the nitrogen skid and separate release stack with the off-gas area, shortens fuel/gas connections, and routes coolant preparation directly to the existing bottom tee. The three-item laydown and main circulation paths are retained. The round silo is provisionally 12.5 m OD × 19.5 m high to contain TK-401 and P-401; this is not a thermal or structural selection.
+
+See [draft geometry, images and checks](../../fastSaltModels/docs/attached-services-draft.md). D-065 supersedes D-064's square tank bay and separate off-gas/fuel building arrangement for the current layout study. Shielding, ventilation/segregation, process capacity, heat loss, supports and complete operational access remain unqualified. Earlier scenes remain reproducible; no commit or new baseline is implied.
+
+## D-066 — Compact tank enclosure sharing the reactor wall
+
+14 October 2026. Owner requests moving the tank closer to the reactor, using the reactor wall as one side of its enclosure, moving the cold-air vent near the hot-air stack and nitrogen tank, and a common wall between coolant preparation and fuel recycling. Owner explicitly confirms a radial straight enclosure wall, perpendicular to the reactor's curved wall and parallel to a tank tangent. Responsible: project owner.
+
+The draft moves TK-401 to (18.5, 18.5) m, retaining its selected size/insulation and a nominal 0.712 m jacket-to-reactor-wall gap. The enclosure retains 19.5 m height with a curved outer wall and radial tangent wall; the reactor wall forms its inner boundary. Coolant preparation shares the existing fuel building wall at X=13 m for about 9.53 m and remains 5 m high. P-401 moves to the southeast side with rerouted heated/insulated transfers. Intake 2 moves to 125° with its duct and opening tools. Main circulation, analytical basis and maintenance laydown remain unchanged.
+
+[Geometry and scope](../../fastSaltModels/docs/compact-services-draft.md). This supersedes D-065's separate cylindrical enclosure and intake position for visual review. No thermal/structural performance, intake/exhaust separation, complete access or new process design is established. The owner accepted this layout for versioning on 14 October 2026. Earlier scenes are preserved; generated outputs are not added as a new binary baseline.
+
 ## Proposals not yet adopted
 
 - Extending the D-052 resolved assembly definition to additional plant systems and qualified analysis adapters.

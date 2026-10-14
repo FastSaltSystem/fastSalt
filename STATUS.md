@@ -1,5 +1,25 @@
 # Project status and next work
 
+## Compact shared-wall tank enclosure — draft, 14 October 2026
+
+D-066 moves TK-401 2.83 m toward the reactor and uses the reactor wall as the enclosure's inner boundary. The owner confirms a radial straight wall parallel to a tank tangent; a curved outer wall completes the enclosure. Coolant preparation shares approximately 9.53 m of the fuel-recycling room's east wall. Its equipment and receiving opening shift with the room. P-401 and insulated low-level transfer routes move to fit; the existing raised internal-header crossing remains.
+
+Fresh-air intake 2 moves to 125°, near the main hot-air stack and nitrogen skid. [Current scene, views and geometric checks](../fastSaltModels/docs/compact-services-draft.md). Main coolant circulation and calculations, off-gas/fuel process placeholders and the three-item laydown are retained. Structural, heat-loss, access and intake/exhaust recirculation assessments remain open. This supersedes D-065's freestanding cylindrical silo for current layout review. The owner accepted the layout for versioning on 14 October 2026; model sources are committed in fastSaltModels `bb1b5f4`.
+
+## Shared-wall service annex and coolant silo — draft, 14 October 2026
+
+D-065 combines off-gas and fuel refining/recycling in a divided 5 m building against the reactor's existing curved wall. The nearby air inlet moves to 33°, clear of the doorway approach. A cylindrical 12.5 m OD enclosure replaces the square tank bay; coolant preparation occupies a separate 5 m building on its +Y side. Existing process placeholders are relocated and their interfaces rerouted. The three-item laydown and main circulation paths remain unchanged.
+
+[Current Blender draft, views and scope](../fastSaltModels/docs/attached-services-draft.md). The shape reduces wall perimeter, but heat-loss performance is not calculated. Room segregation/ventilation, structural/support design and complete operational access remain to develop. This supersedes the square-bay layout below for current visual review; D-066 is the latest layout.
+
+
+## Attached coolant tank bay and expanded laydown — draft, 14 October 2026
+
+D-064 records the owner-selected attached bay beside coolant preparation. The [layout draft](../fastSaltModels/docs/tank-bay-draft.md) moves the selected 8.2 × 16 m tank and reversible transfer pump out of the reactor building, shortens the preparation route, and uses the agreed shared bottom tee. A local raised crossing clears the existing internal headers; high-point gas handling and drainability remain to review. The bay is provisionally 11 × 11 × 19.5 m. The earlier saved interior tank arrangement remains a source snapshot.
+
+The expanded catwalk-level laydown has room for the insulation cover, cap and top reflector together. The cap and reflector share a larger tray, with the reflector reversed in plan. Current checks address geometric fit only; access, supports and loaded handling remain provisional. Main-loop hydraulic calculations are unchanged. Draft outputs and source are linked in the guide; D-066 is the latest layout.
+
+
 ## Newer SG workbook adopted — D-063, 14 October 2026
 
 D-063 adopts the newer `counterSG.xlsx` geometry: **4,902 salt tubes per SG, 20 mm ID / 24 mm OD and 11.920866 m calculated active length**, provisionally used as straight hydraulic length. The 6,536 steam tubes are a separate bank. The 17 m casing, 18,500 kg/s total flow, 810–890 K temperatures and 3.4 m active core remain unchanged. Salt inlet/outlet labels were corrected to 890/810 K; numeric cells and formulas are unchanged.
