@@ -1,0 +1,178 @@
+schema_version = 1
+revision = "A5-source-draft"
+date = "2026-10-15"
+title = "Fuel maintenance - source-transcribed diagram"
+status = "P&ID-style source transcription; unresolved details are not inferred"
+source = "sources/Fuel-Maintenance-original.svg"
+source_sha256 = "c031f8326ab244b0e6950437326b652a80f9bfbb55a8663c67437bef1aaf665e"
+connection_authority = "Original SVG paths plus owner-specified instrumentation, regulator location and off-gas valve function"
+
+[owner_clarification]
+sectors = 6
+core_regions_per_sector = 6
+storage_regions_per_tank = 3
+maintenance_tanks = 6
+core_pressure_valves_per_sector = 3
+storage_pressure_valves_per_tank = 3
+meaning = "One valve per pair; each sector's six core regions are paired into three storage regions in its associated maintenance tank."
+model_status = "Internal core and storage regions are not yet represented in the 3D model."
+
+[[pairs]]
+label = "R1 / R2"
+regions = [1, 2]
+[[pairs]]
+label = "R3 / R4"
+regions = [3, 4]
+[[pairs]]
+label = "R5 / R6"
+regions = [5, 6]
+
+[[items]]
+ref = "01"
+label = "Pressure tank"
+shown = "One in source"
+location = "Top centre, below compressor"
+[[items]]
+ref = "02"
+label = "Surge tank"
+shown = "One in source"
+location = "Top centre-right"
+[[items]]
+ref = "03"
+label = "Compressor"
+shown = "One in source"
+location = "Above pressure tank"
+[[items]]
+ref = "04"
+label = "Core fuel pressure valves"
+shown = "Three symbols"
+location = "Left valve bank"
+[[items]]
+ref = "05"
+label = "Storage pressure valves"
+shown = "Three symbols"
+location = "Right valve bank"
+[[items]]
+ref = "06"
+label = "Add-fuel displacement pump"
+shown = "One in source"
+location = "Upper-right fuel line"
+[[items]]
+ref = "07"
+label = "Remove-fuel displacement pump"
+shown = "One in source"
+location = "Lower-right fuel line"
+[[items]]
+ref = "08"
+label = "Core regions R1 to R6"
+shown = "Six per sector"
+location = "Left fuel region group"
+[[items]]
+ref = "09"
+label = "Maintenance-tank storage regions"
+shown = "Three paired regions"
+location = "Right-hand tank group"
+[[items]]
+ref = "10"
+label = "Cool-air inlet and exhaust"
+shown = "Two air symbols"
+location = "Right edge of storage tank"
+
+[unresolved]
+items = [
+ "Sharing of the fuel metering pumps across sectors; gas pressure units are one per two maintenance tanks.",
+ "Connections beyond the source drawing's right-hand fuel-line endpoints.",
+ "Detailed internal valve connections, actuator details and instrument identification are not fully specified in the source.",
+ "A geometric line crossing is not automatically interpreted as a junction.",
+ "Mapping to the existing 3D F-number labels requires a separate cross-reference; region internals are not modeled."
+]
+
+[owner_states.remove_fuel]
+label = "Remove fuel"
+source = "Owner description, 15 October 2026"
+status = "Owner-supplied draft description"
+core_pressure_valves = "Add pressure"
+maintenance_pressure_valves = "Reduce pressure"
+empty_indication = "Presence of gas in a bottom line"
+on_empty = "Return the corresponding core-pressure valve and maintenance-pressure valve to Maintain."
+completion = "All valves are in Maintain when all tanks are empty."
+verbatim = "In this case all the core pressure valves are put into \"Add pressure\" position and all of the maintenance valves are put into the \"Reduce pressure\" position until the fuel is emptied. The presence of gas in a bottom line indicates \"empty\" and those two valves are put back in \"Maintain\". All valve are in maintain when all tanks are empty."
+
+[owner_states.fill_fuel]
+label = "Fill fuel"
+source = "Owner description, 15 October 2026"
+status = "Owner-supplied draft description"
+core_pressure_valves = "Reduce pressure"
+maintenance_pressure_valves = "Add pressure"
+empty_indication = "Gas appears in the bottom line from a maintenance tank."
+indication_meaning = "That maintenance tank is empty."
+on_empty = "Return the corresponding core-pressure valve and maintenance-pressure valve to Maintain."
+completion = "All valves are in Maintain when filling is complete."
+verbatim = "Let's add the fill fuel state, with the maintenance valves in Add pressure and the core valves in Reduce pressure."
+completion_verbatim = "When gas appears in the bottom line from a maintenance tank, that tank is empty and the corresponding two valves should go back to Maintain. All valves should be in Maintain when filling is complete."
+
+[owner_states.add_small_fuel_r6]
+label = "Small fuel addition to R6"
+source = "Owner description, 15 October 2026"
+status = "Owner-supplied draft description"
+region_pair = "R5/R6"
+requested_destination = "R6"
+metering = "The add-fuel displacement pump measures a small amount of fuel into the R5/R6 maintenance-tank region."
+valve_position_basis = "Add fuel positions interpreted as the previously specified Fill fuel positions."
+core_pressure_valve = "Reduce pressure"
+maintenance_pressure_valve = "Add pressure"
+completion_indication = "Gas detected"
+on_completion = "Return both corresponding R5/R6 valves to Maintain."
+source_metering = "Now to add a small amount of fuel to R6 the add fuel displacement pump measures a small amount of fuel into R5/R6 tank."
+source_valves = "The R5R6 valves are put into add fuel positions until gas detected then into maintain."
+open_point = "The draft does not specify how fuel is directed specifically to R6 within the shared R5/R6 connection."
+
+[owner_states.remove_measured_fuel_r1_r2]
+label = "Measured fuel removal from R1/R2"
+source = "Owner description, 15 October 2026"
+status = "Owner-supplied draft description"
+region_pair = "R1/R2"
+pump = "Remove fuel displacement pump"
+action = "Removes a measured amount of fuel from R1/R2."
+verbatim = 'To remove fuel from R1/R2 "Remove fuel displacement pump" removes a measured amount of fuel.'
+
+[owner_instrumentation]
+source = "Owner description and clarification, 15 October 2026"
+status = "Draft functional representation"
+storage_level_sensor = "One per storage region"
+storage_pressure_sensor = "One per storage region"
+bottom_line_gas_sensor = "One per bottom line associated with a storage-region pair"
+pressure_tank_sensor = "One pressure sensor on the pressure tank shown"
+surge_tank_sensor = "One pressure sensor on the surge tank shown"
+historical_regulator_location = "Between compressor and surge tank"
+historical_regulator_function = "Set the pressure difference"
+regulator_status = "Removed by owner; superseded by compressor start/stop control"
+source_description = "I think we will need a level sensor in each storage tank, pressure sensor in each tank, a gas sensor in each bottom line. We will need a pressure sensor on pressure tank and surge tank and a pressure regulator. We need a fourth position on the core pressure valves that vents gas to the off-gas system."
+source_storage_clarification = "One level and pressure sensor per storage region"
+source_regulator_clarification = "between compressor and surge tank to set the pressure difference."
+
+[owner_valve_positions]
+core = ["Add pressure", "Maintain", "Reduce pressure", "Vent to off-gas"]
+storage = ["Add pressure", "Maintain", "Reduce pressure", "Vent to off-gas"]
+storage_vent_selection = "Operator selection only; not used by automatic transfer sequences"
+storage_vent_source = "Owner instruction, 15 October 2026: add off-gas selection to the surge-connected storage valves; not used unless selected by operator"
+vent_destination = "Off-gas system"
+
+[owner_removal_connection]
+source = "Owner clarification, 15 October 2026"
+suction = "R1/R2 core fuel line"
+
+[owner_compressor_control]
+source = "Owner instruction and clarification, 15 October 2026"
+removed_item = "PCV-FM-01"
+function = "Start and stop compressor to control pressure difference between the pressure and surge tanks"
+gas_supply_connection = "Add gas supply connection to surge tank"
+controlled_variable_verbatim = "Pressure difference between the two tanks"
+
+[owner_pressure_unit_sharing]
+source = "Owner clarification, 15 October 2026"
+maintenance_tanks_per_unit = 2
+unit_count = 3
+shared_items = ["Pressure tank", "Surge tank", "Controller and compressor"]
+existing_interfaces = "Gas supply and off-gas connections to the off-gas treatment room already modeled in 3D"
+model_detail = "Shared units are external envelopes; detailed internals not modeled"

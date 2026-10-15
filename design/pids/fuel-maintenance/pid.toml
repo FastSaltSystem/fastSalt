@@ -1,0 +1,105 @@
+schema_version = 1
+basis = "fuel-maintenance.toml"
+revision = "B3-draft"
+date = "2026-10-15"
+title = "WISTR fuel maintenance"
+status = "PRELIMINARY - FOR REVIEW"
+representative_sector = 1
+sector_count = 6
+sheet_count = 3
+notation_reference = "https://www.isa.org/standards-and-publications/isa-standards/isa5-1"
+
+[equipment]
+pressure_tank = "V-FM-05"
+surge_tank = "V-FM-06"
+compressor = "K-FM-03"
+add_pump = "P-FM-01"
+remove_pump = "P-FM-02"
+
+[interfaces]
+pressure_header = "H-P"
+surge_header = "H-S"
+offgas_header = "H-O"
+addition = "F-ADD"
+removal = "F-REM"
+
+[identification]
+storage_tank = "TK-FM-{sector:02d}"
+core_valve = "XV-FM-C{index:02d}"
+storage_valve = "XV-FM-S{index:02d}"
+level_sensor = "LT-FM-{index:02d}"
+pressure_sensor = "PT-FM-{index:02d}"
+gas_sensor = "GD-FM-{index:02d}"
+transfer_line = "F-FM-{index:02d}"
+
+[[pairs]]
+label = "R1/R2"
+compartment = "A"
+[[pairs]]
+label = "R3/R4"
+compartment = "B"
+[[pairs]]
+label = "R5/R6"
+compartment = "C"
+
+[compressor_control]
+controller = "PDC-FM-03"
+pressure_input = "PT-FM-95"
+surge_input = "PT-FM-96"
+output = "K-FM-03"
+function = "Start/stop compressor to regulate pressure difference between the two tanks"
+setpoint_status = "TBD"
+switching_band_status = "TBD"
+
+[gas_supply]
+line = "G-FM-94"
+destination = "V-FM-06"
+source_status = "Existing gas-supply interface in off-gas treatment room, via shared duct"
+
+[sharing]
+representative_unit = 3
+maintenance_tanks_per_unit = 2
+unit_count = 3
+sector_to_3d_tank = [6, 1, 2, 3, 4, 5]
+sector_mapping_basis = "Existing provisional D-035 / design/interfaces.md mapping; retained, not reassigned"
+server_mapping_basis = "fastSaltModels/src/textual_graphics/site_fuel_pressure.py and D-047"
+supply_3d_common = "site.fuel_pressure.supply_common"
+offgas_3d_common = "site.fuel_pressure.offgas_common"
+supply_3d_room_interface = "site.offgas_gas_supply.enclosure"
+room = "Off-gas treatment room"
+
+[[pressure_units]]
+unit = 1
+server_3d = "equipment.fuel_pressure_server_1"
+tanks_3d = [1, 2]
+sectors = [2, 3]
+pressure_tank = "V-FM-01"
+surge_tank = "V-FM-02"
+compressor = "K-FM-01"
+controller = "PDC-FM-01"
+pressure_sensor = "PT-FM-91"
+surge_sensor = "PT-FM-92"
+
+[[pressure_units]]
+unit = 2
+server_3d = "equipment.fuel_pressure_server_2"
+tanks_3d = [3, 4]
+sectors = [4, 5]
+pressure_tank = "V-FM-03"
+surge_tank = "V-FM-04"
+compressor = "K-FM-02"
+controller = "PDC-FM-02"
+pressure_sensor = "PT-FM-93"
+surge_sensor = "PT-FM-94"
+
+[[pressure_units]]
+unit = 3
+server_3d = "equipment.fuel_pressure_server_3"
+tanks_3d = [5, 6]
+sectors = [6, 1]
+pressure_tank = "V-FM-05"
+surge_tank = "V-FM-06"
+compressor = "K-FM-03"
+controller = "PDC-FM-03"
+pressure_sensor = "PT-FM-95"
+surge_sensor = "PT-FM-96"

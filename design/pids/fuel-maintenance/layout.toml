@@ -1,0 +1,5 @@
+schema_version = 1
+width = 1684
+height = 1190
+pair_offsets = [0, 510, 1020]
+header_ys = [145, 195, 245]

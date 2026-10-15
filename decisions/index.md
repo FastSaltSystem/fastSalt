@@ -1140,6 +1140,40 @@ Date: 2026-10-15. The owner requests gas charging from nitrogen and discharge ro
 
 The proposed internal service connection is to each surge vessel, with the existing compressor charging its pressure vessel. That connection, other isolated gas spaces, conditioning, nonreturn hardware, valve actuation/fail states, treatment capacity/backpressure and piping dimensions remain unresolved. Both module service isolations are closed in the draft normal-duty condition. Header volumes are therefore outside the current calculation; added module-side gas volume remains to include. Service discharge is not emergency relief. [P&ID, register and limits](../design/pids/absorber-system/README.md#separate-gas-charging-and-discharge). New service routing in 3D remains pending.
 
+## D-072 — Fuel regions and maintenance-tank pairing
+
+Date: 2026-10-15. The owner clarifies that each of six core sectors contains six fuel regions. Within each sector, regions R1/R2, R3/R4 and R5/R6 are paired, with one shared valve per pair in each of the two pressure-valve banks shown in the supplied drawing. Their fuel is stored in three corresponding regions in that sector's maintenance tank. There are six associated maintenance tanks; the internal core and storage regions have not yet been represented in the 3D model.
+
+The [source-transcribed draft](../design/pids/fuel-maintenance/README.md) preserves the supplied illustration's connections and records the sector repetition. It does not assign the drawn pressure/surge vessels, compressor or fuel pumps across sectors. Physical 3D F-number associations remain a separate cross-reference. No geometry, new process circuits or operating instructions are adopted by this documentation step.
+
+## D-073 — Conventional fuel-maintenance P&ID and measured-removal connection
+
+Date: 2026-10-15. The owner requests a conventional connected P&ID using the original sketch as a reference. The subsequent owner-defined states and instruments are retained. One representative sector is shown with three paired core/storage circuits; a tag schedule covers six sectors. Operating states move to a separate matrix.
+
+The owner explicitly confirms that the Remove fuel displacement pump draws from the **R1/R2 core fuel line**, rather than its maintenance-storage region. The Add fuel displacement pump feeds the R5/R6 maintenance-storage region as previously described. Each storage region has level and pressure sensing, each bottom transfer line has gas-presence sensing, and pressure/surge vessels have pressure sensing. The regulator is between compressor and surge vessel to set pressure difference; reference and sensing connections remain unspecified. Core selectors have a fourth Vent to off-gas position.
+
+[Current drawing package and editable sources](../design/pids/fuel-maintenance/README.md). The previous source-transcription format is archived. Tags are draft identifiers, not a completed 3D cross-reference. Equipment sharing across sectors and unprovided detailed controls remain open. No numerical analysis or 3D geometry is changed.
+
+## D-074 — Compressor pressure-difference control and surge-tank gas supply
+
+Date: 2026-10-15. The owner removes PCV-FM-01 and specifies compressor start/stop control, clarifying that the controlled variable is the pressure difference between the pressure and surge tanks. The P&ID records PDC-FM-01 with inputs from the existing PT-FM-91/PT-FM-92 measurements and a start/stop command to K-FM-01. This supersedes the regulator arrangement in D-073.
+
+Add G-FM-94 as a gas-supply connection into V-FM-02 (surge tank). External source/tie-in and supply details remain TBD. Controller setpoint, switching band, implementation and fail behavior remain unspecified. [Revision B1 drawing package](../design/pids/fuel-maintenance/README.md). No 3D geometry or calculations change.
+
+## D-075 — Shared fuel pressure units and existing 3D gas interfaces
+
+Date: 2026-10-15. The owner confirms one pressure-tank/controller/surge-tank unit is shared by two maintenance tanks. The associated compressor remains part of the shared pressure unit. There are three units for six tanks, already represented as exterior pressure-server envelopes in 3D.
+
+Retain D-047 pairs: 3D P1 serves F1/F2, P2 serves F3/F4 and P3 serves F5/F6. Retain D-035's provisional sector-to-tank mapping S1→F6, S2→F1, S3→F2, S4→F3, S5→F4, S6→F5. Consequently P&ID unit 3 serves TK-FM-06 and TK-FM-01, and sheet 2 shows this unit to match sheet 1's sector 1. The unit schedule assigns distinct vessel/controller/compressor/sensor tags to all three units.
+
+The gas-supply and off-gas interfaces are existing modeled connections to the off-gas treatment room. Reference `site.fuel_pressure.supply_common`, `site.fuel_pressure.offgas_common`, `site.fuel_pressure.server_N_supply/return` and `site.offgas_gas_supply.enclosure`; retain supply and treatment return as separate lines. Update the [P&ID and cross-reference registers](../design/pids/fuel-maintenance/README.md). No new 3D routes or detailed server internals are created. Metering-pump sharing and detailed interface hardware remain unresolved.
+
+## D-076 — Operator-selected storage off-gas position
+
+Date: 2026-10-15. The owner adds an off-gas selection to the surge-connected maintenance-storage selector valves, available only when selected by the operator. Each XV-FM-S selector now has four positions: Add pressure, Maintain, Reduce pressure and Vent to off-gas. Its fourth port connects to the existing H-O treatment-return header. This applies to all 18 storage-region selectors across six maintenance tanks.
+
+Revision B3 of the [fuel-maintenance P&ID](../design/pids/fuel-maintenance/README.md) shows the branches, position schedule and operator-only condition. Existing automatic remove/fill/small-addition sequences do not select this position. Shared pressure units, existing gas-room interfaces and 3D geometry remain unchanged.
+
 ## Proposals not yet adopted
 
 - Extending the D-052 resolved assembly definition to additional plant systems and qualified analysis adapters.

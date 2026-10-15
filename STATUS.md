@@ -1,5 +1,11 @@
 # Project status and next work
 
+## Fuel-maintenance P&ID redraw — 15 October 2026
+
+D-073 replaces the annotated reference illustration with a [three-sheet conventional P&ID draft](design/pids/fuel-maintenance/README.md): connected fuel/pressure circuits, gas-service and metering equipment, and a separate valve-position/state table. Tags, instrument bubbles, connection markers, native vector PDF/SVGs and CSV registers are generated from TOML-backed Python templates. One sector is drawn completely; a tag schedule covers all six sectors and 18 region pairs.
+
+The owner confirms the measured-removal pump connects to the R1/R2 **core fuel line**. R5/R6 storage receives metered addition. All specified sensors and the fourth core-valve off-gas position are included. Revision B3 adds operator-selected off-gas venting to all storage-side selectors; automatic transfer sequences retain their existing positions. Revision B2 records three gas-pressure units, each shared by two maintenance tanks, matching 3D servers P1/F1-F2, P2/F3-F4 and P3/F5-F6. Sheet 2 details unit 3, which serves sector 1 and sector 6 under the retained D-035 tank mapping. Existing supply/off-gas headers and room interfaces are now referenced by model object names. Compressor start/stop controls the two-vessel pressure difference. Control settings, detailed interface hardware and metering-pump sharing remain open. The former source-transcribed draft is preserved separately. 3D and calculations are unchanged. Revision B3 is accepted as the fuel-maintenance P&ID source checkpoint.
+
 ## Absorber analysis record for Michigan team — 15 October 2026
 
 The [Hurmet worksheet](calculations/reactor/Absorber%20capacity%20and%20gas%20modules%20-%20Hurmet.md) now contains an input, assumptions, results and review record for the Michigan team. Entries remain pending; no injection-time equations or new numerical results were added. The original dimensioned drawing from the supplied Word document is included as a historical reference, with source and image hashes; it has not been updated to current 3D geometry. The worksheet generator preserves this manually maintained section.
