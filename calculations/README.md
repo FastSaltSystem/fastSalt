@@ -171,3 +171,7 @@ Use the core, **Itemized coolant pump estimate**, and **Normal coolant pressure 
 ## Newer SG workbook — D-063
 
 [Source and correction record](steam-generator/sources/README.md). Corrected `counterSG.xlsx` labels; independently reproduced 11.920866 m length. Active pump, pressure and inventory Hurmet sheets now use this geometry. Earlier Generator sizing and auxiliary Brayton calculations remain historical.
+
+## Absorber system
+
+[Absorber capacity and gas modules — Hurmet](reactor/Absorber%20capacity%20and%20gas%20modules%20-%20Hurmet.md) compares the source charges with current 3D envelopes and gas-space balances. See the [P&ID and assessment](../design/pids/absorber-system/README.md). Bottom-reflector volume is excluded; updated injection time remains unresolved.

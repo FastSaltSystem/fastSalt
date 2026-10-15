@@ -1,0 +1,180 @@
+schema_version = 1
+revision = "A-draft"
+date = "2026-10-15"
+status = "Functional draft for discussion"
+engineering = "../../engineering/absorber-system.toml"
+# Expand tags across assemblies 701..706 and chamber suffixes A/B.
+# A/B identifies primary/secondary, not yet centre/outer physical positions.
+assemblies = [701, 702, 703, 704, 705, 706]
+chambers = ["A", "B"]
+
+[equipment.AT]
+name = "In-vessel absorber chamber"
+ports = ["salt_bottom", "gas_top"]
+[equipment.RS]
+name = "Heated absorber-salt reservoir"
+ports = ["salt_bottom", "gas_top"]
+[equipment.PV]
+name = "Pressure-gas vessel"
+ports = ["gas", "charge"]
+[equipment.SV]
+name = "Surge-gas vessel"
+ports = ["gas", "recovery", "makeup", "service_return"]
+[equipment.C]
+name = "Gas recovery compressor"
+ports = ["suction", "discharge"]
+[equipment.XV]
+name = "Three-position gas routing function"
+ports = ["P", "S", "A", "R"]
+status = "Document function retained; physical valve arrangement and fail state unresolved"
+
+[lines.salt]
+from = "RS.salt_bottom"
+to = "AT.salt_bottom"
+service = "Absorber salt; inject and recover"
+flow = "bidirectional"
+heated = true
+od_m = 0.05
+route = "Outside chamber to active-core bottom; bottom reflector excluded; route not yet present in Blender"
+[lines.absorber_gas]
+from = "AT.gas_top"
+to = "XV.A"
+service = "Absorber chamber gas"
+flow = "bidirectional"
+od_m = 0.025
+[lines.reservoir_gas]
+from = "RS.gas_top"
+to = "XV.R"
+service = "Reservoir gas"
+flow = "bidirectional"
+od_m = 0.025
+[lines.pressure_gas]
+from = "PV.gas"
+to = "XV.P"
+service = "Pressure supply within module"
+flow = "bidirectional"
+[lines.surge_gas]
+from = "SV.gas"
+to = "XV.S"
+service = "Gas collection within module"
+flow = "bidirectional"
+[lines.compressor_in]
+from = "SV.recovery"
+to = "C.suction"
+service = "Gas recovery suction"
+flow = "from_to"
+[lines.compressor_out]
+from = "C.discharge"
+to = "PV.charge"
+service = "Gas recovery discharge"
+flow = "from_to"
+
+[states.remove]
+connections = ["P-A", "R-S"]
+meaning = "Pressure on chamber moves salt to reservoir; reservoir gas goes to surge"
+status = "Functional interpretation of document"
+[states.hold]
+connections = []
+meaning = "All four process ports blocked in draft centre position"
+status = "Proposed interpretation; confirm hold and loss-of-power behavior"
+[states.inject]
+connections = ["P-R", "A-S"]
+meaning = "Pressure on reservoir; chamber gas goes to surge"
+status = "Document injection function"
+
+[instruments.PT_P]
+on = "PV"
+kind = "PT"
+status = "proposed"
+[instruments.PT_S]
+on = "SV"
+kind = "PT"
+status = "proposed"
+[instruments.LT_R]
+on = "RS"
+kind = "LT"
+status = "proposed"
+[instruments.LT_A]
+on = "AT"
+kind = "LT"
+status = "proposed; sensing method unresolved"
+[instruments.TT_R]
+on = "RS"
+kind = "TT"
+status = "proposed"
+
+[unresolved]
+items = ["Valve hardware, Cv, actuation, fail position and command logic", "Required insertion time and absorber worth", "Pressure ratings and overpressure paths", "Separate primary/secondary chamber partitions, upper gas space and radial assignment", "Compressor flow, recovery time and nonreturn/isolation hardware", "Nitrogen charging pressure/flow and backflow arrangement; treatment inlet capacity/backpressure and internal module service access", "Salt composition, density, viscosity and temperature", "Gas temperatures, chamber headspace and gas-line restriction", "Final bottom-fed salt route, hydraulic length and pipe inventory", "Heat trace duty, monitoring and remote disconnect design"]
+
+
+[gas_services]
+arrangement = "Two separate lines per module: clean nitrogen charge and discharge to gas treatment"
+module_connection = "Surge-gas vessel service ports provisionally selected; pressure-vessel charging uses existing recovery compressor"
+connection_status = "Draft internal connection; access to all isolated gas spaces for servicing remains to detail"
+normal_state = "Both module service isolation valves closed; headers excluded from operating gas-volume balance"
+charging = "Charge isolation open, discharge isolation closed; functional service state, not operating instructions"
+discharging = "Charge isolation closed, discharge isolation open; functional service state, not operating instructions"
+backflow = "Nonreturn function shown on each charging branch; hardware and protection architecture unresolved"
+location = "Supply and treatment interfaces in gas-treatment area; separate headers run to reactor modules"
+scope = "Service connections only, not emergency pressure relief. Diameters, pressure, valve actuation and sequencing unresolved."
+
+[service_equipment.H-700N]
+name = "Absorber nitrogen charging header"
+ports = ["feed"]
+branch_ports = "one per circuit"
+[service_equipment.H-700R]
+name = "Absorber gas discharge header"
+ports = ["return"]
+branch_ports = "one per circuit"
+[service_equipment.B-700N]
+name = "Nitrogen charging supply in gas-treatment area"
+ports = ["outlet"]
+external_reference = "Existing B-602 off-gas-area nitrogen distribution; downstream conditioning outlet unresolved"
+function = "Isolation and pressure/flow conditioning reserved; no pressure selected"
+[service_equipment.B-700T]
+name = "Gas-treatment receiving interface before treatment"
+ports = ["inlet"]
+function = "Receive absorber service discharge for treatment; treatment train, capacity, hold-up and release disposition unresolved"
+
+[service_lines.N-700]
+from = "B-700N.outlet"
+to = "H-700N.feed"
+service = "Clean nitrogen supply to charging header"
+flow = "from_to"
+[service_lines.G-700]
+from = "H-700R.return"
+to = "B-700T.inlet"
+service = "Absorber discharge to gas treatment inlet"
+flow = "from_to"
+
+[service_branches.charge]
+tag = "N-{circuit}"
+from = "H-700N.{circuit}"
+to = "SV-{circuit}.makeup"
+flow = "from_to"
+service = "Clean nitrogen charging"
+[service_branches.discharge]
+tag = "G-{circuit}"
+from = "SV-{circuit}.service_return"
+to = "H-700R.{circuit}"
+flow = "from_to"
+service = "Discharge gas to treatment"
+
+[service_valves.charge]
+tag = "V-{circuit}N"
+line = "N-{circuit}"
+type = "isolation"
+normal_state = "closed"
+status = "draft; type, actuation and fail position unresolved"
+[service_valves.discharge]
+tag = "V-{circuit}R"
+line = "G-{circuit}"
+type = "isolation"
+normal_state = "closed"
+status = "draft; type, actuation and fail position unresolved"
+[service_valves.nonreturn]
+tag = "NRV-{circuit}"
+line = "N-{circuit}"
+type = "nonreturn"
+permitted_direction = "header_to_module"
+status = "functional reservation; hardware and backflow protection unresolved"

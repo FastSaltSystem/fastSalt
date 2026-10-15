@@ -1,0 +1,64 @@
+schema_version = 1
+status = "Preliminary capacity and functional topology review; no shutdown performance qualification"
+date = "2026-10-15"
+
+[sources.document]
+path = "/Users/thomaswielenga/Documents/Ideas/Nuclear Reactor/WISTR/Calc/AbsorberSaltInjectionTime.docx"
+sha256 = "bd7edfd44c101a481ba6451588c56e90e3f1de18e49bc3c6bc066f689ab6b14a"
+reported_primary_time_s = 18.2
+reported_secondary_time_s = 22.2
+
+[sources.geometry]
+scene = "../fastSaltModels/outputs/site-control-annex/fast-salt-control-annex.blend"
+sha256 = "73f372267415be096c59e6647ba21cfd720c11d5b9d52740d28529e28f38476a"
+audit = "calculations/reactor/absorber-geometry-audit.json"
+models_commit = "8bcc2e8"
+
+[architecture]
+terminology = "Six stationary in-core absorber tanks, two chambers per tank, one absorber module per chamber; absorber salt moves in and out"
+assemblies = 6
+circuits_per_assembly = 2
+primary_volume_m3 = 0.1589
+secondary_volume_m3 = 0.1938
+volume_basis = "Document volumes per chamber, confirmed by owner 2026-10-15; no new neutronic sufficiency assessment"
+salt_entry = "External route to each absorber chamber bottom; owner 2026-10-15. Current 3D tubes stop at top."
+radial_assignment = "Primary/secondary assignment to centre/outer tube pairs unresolved"
+
+[geometry]
+reactor_origin_z_m = -8.32
+core_bottom_z_m = -7.27
+core_top_z_m = -3.87
+active_height_m = 3.4
+observed_absorber_bottom_z_m = -7.57
+absorber_bottom_z_m = -7.27
+chamber_bottom_basis = "Owner 2026-10-15: at active-core bottom, excluding bottom reflector"
+absorber_top_z_m = -3.62
+absorber_radial_length_m = 2.1
+absorber_width_m = 0.08
+reservoir_bottom_z_m = -0.05
+reservoir_diameter_m = 0.8063494719327189
+reservoir_height_m = 1.2599210498948732
+module_tank_diameter_m = 0.8063494719327189
+module_tank_height_m = 1.2599210498948732
+module_box_dimensions_m = [0.765, 0.81, 1.5]
+salt_tube_od_m = 0.05
+gas_tube_od_m = 0.025
+visual_tube_wall_m = 0.002
+scope = "External envelopes. Bottom reflector volume excluded by owner. Wall thickness, partition and upper gas volume remain provisional."
+
+[screen]
+gravity_m_s2 = 9.81
+source_head_m = 7.2
+source_pressure_abs_Pa = 337790.0
+surge_initial_abs_Pa = 100000.0
+source_reservoir_height_m = 0.8
+source_floor_above_absorber_m = 3.0
+property_basis = "Density inferred from document Eq1, not an independently specified salt property"
+temperature_model = "Isothermal equal-temperature ideal gas, as in source; hot/cold gas temperature effects unresolved"
+pressure_tank_basis = "Pressure-gas volume equal to chamber salt volume, retained from document"
+reservoir_gas_basis = "Current gross cylinder, charge equal to chamber volume, zero heel, gas headspace initially at surge pressure"
+salt_line_basis = "Initially salt-filled line with unchanged holdup; no line inventory debit in baseline"
+absorber_tank_wall_trial_m = 0.003
+absorber_tank_wall_trial_status = "Capacity sensitivity only, not adopted metal thickness"
+reservoir_working_fraction_trial = 0.8
+reservoir_working_fraction_trial_status = "Illustrative gross-volume allowance, not qualified usable capacity"

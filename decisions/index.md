@@ -1126,6 +1126,20 @@ Selected geometry checks preserve all turbine maintenance reservations and exist
 
 Affected: new Python annex parameters/builder, composed Blender draft, model guides and status. [Review package](../../fastSaltModels/docs/control-annex.md).
 
+## D-070 — Absorber chambers and functional P&ID basis
+
+Terminology clarified by owner: six stationary narrow **absorber tanks**, each with two **absorber chambers** and one **absorber module per chamber**. The **absorber salt** moves in and out of the tanks. Do not call these tanks plates.
+
+Date: 2026-10-15. The owner confirms one primary and one secondary chamber in each of six radial assemblies, with separate reservoirs and modules. Retain the injection report's 0.1589/0.1938 m³ per-chamber source volumes for the preliminary capacity check. Use current 3D elevations. Route salt externally to chamber bottoms, not through internal dip tubes. Set chamber bottoms at the active-core bottom, excluding the 0.30 m bottom reflector to avoid filling that region before reaching the core.
+
+[Draft P&ID, calculations and source review](../design/pids/absorber-system/README.md). The diagram has separate pressure and surge volumes plus a recovery compressor per circuit; gas-routing hardware, fail position and hold behavior remain unresolved. No new inventory or pressure setting is adopted. The upper region is screened as gas space only. The model's absorber tank bottoms are raised; partitions, supports and external bottom-fed routes remain to detail. Primary/secondary radial placement is unresolved. Historical injection times are not transferred to this geometry.
+
+## D-071 — Separate absorber-module charging and gas-treatment return
+
+Date: 2026-10-15. The owner requests gas charging from nitrogen and discharge routed to the gas-treatment area, then prefers a pair of lines to each module. Adopt separate charging and discharge headers in the draft P&ID, with independent module isolation on each line and charging-branch nonreturn functions reserved. The treatment return is separate from clean nitrogen and terminates before treatment, with no direct atmospheric discharge specified.
+
+The proposed internal service connection is to each surge vessel, with the existing compressor charging its pressure vessel. That connection, other isolated gas spaces, conditioning, nonreturn hardware, valve actuation/fail states, treatment capacity/backpressure and piping dimensions remain unresolved. Both module service isolations are closed in the draft normal-duty condition. Header volumes are therefore outside the current calculation; added module-side gas volume remains to include. Service discharge is not emergency relief. [P&ID, register and limits](../design/pids/absorber-system/README.md#separate-gas-charging-and-discharge). New service routing in 3D remains pending.
+
 ## Proposals not yet adopted
 
 - Extending the D-052 resolved assembly definition to additional plant systems and qualified analysis adapters.

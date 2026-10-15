@@ -1,0 +1,43 @@
+schema_version = 1
+# Drawing coordinates on 1200 x 848 A3 landscape canvas; process identity is separate.
+[sheet1]
+title = "Absorber salt system"
+subtitle = "One circuit shown; repeat independently for primary A and secondary B at six radial assemblies"
+[sheet1.boxes]
+AT = [120, 455, 170, 170]
+RS = [120, 175, 170, 145]
+XV = [470, 350, 155, 120]
+PV = [820, 175, 170, 120]
+SV = [820, 490, 170, 120]
+C = [1040, 350, 80, 80]
+[sheet1.routes]
+salt = [[205,320],[205,370],[70,370],[70,660],[205,660],[205,625]]
+absorber_gas = [[255,455],[255,430],[470,430]]
+reservoir_gas = [[255,175],[255,150],[390,150],[390,390],[470,390]]
+pressure_gas = [[820,235],[730,235],[730,390],[625,390]]
+surge_gas = [[820,550],[730,550],[730,430],[625,430]]
+compressor_in = [[990,550],[1080,550],[1080,430]]
+compressor_out = [[1080,350],[1080,235],[990,235]]
+
+
+[sheet1.services]
+charge = [[700,660],[880,660],[880,610]]
+discharge = [[940,610],[940,690],[1100,690]]
+charge_valve = [840,660]
+nonreturn = [780,660]
+discharge_valve = [1000,690]
+
+[sheet4]
+title = "Separate nitrogen charging and gas discharge"
+subtitle = "Twelve modules; separate clean supply and treatment-return headers; internal surge-vessel connections are provisional"
+module_first_x = 95
+module_spacing = 85
+module_y = 190
+charge_header_y = 400
+discharge_header_y = 520
+charge_header_ends = [45,1130]
+discharge_header_ends = [113,1140]
+nitrogen_box = [70,610,320,75]
+treatment_box = [800,610,320,75]
+charge_source_route = [[220,610],[220,580],[45,580],[45,400]]
+discharge_receiving_route = [[1140,520],[1140,580],[930,580],[930,610]]

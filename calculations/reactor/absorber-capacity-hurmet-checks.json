@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "equations": 60,
+  "checks": [
+    "Python numerical comparison",
+    "save and reopen",
+    "absorber tank-wall sensitivity",
+    "reservoir elevation sensitivity"
+  ],
+  "engine_sha256": "24c325bee542762dad7b1dcd3dd943a5518cb549a44e8e2f1aa4e0abcfc4ebf1"
+}

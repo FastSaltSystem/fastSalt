@@ -1,5 +1,21 @@
 # Project status and next work
 
+## Absorber analysis record for Michigan team — 15 October 2026
+
+The [Hurmet worksheet](calculations/reactor/Absorber%20capacity%20and%20gas%20modules%20-%20Hurmet.md) now contains an input, assumptions, results and review record for the Michigan team. Entries remain pending; no injection-time equations or new numerical results were added. The original dimensioned drawing from the supplied Word document is included as a historical reference, with source and image hashes; it has not been updated to current 3D geometry. The worksheet generator preserves this manually maintained section.
+
+## Absorber gas charging and discharge — 15 October 2026
+
+D-071 adds separate nitrogen-charging and gas-treatment-return headers with two service lines per module. Module isolation valves and charging nonreturn functions are shown; the surge-vessel connection is provisional. The [four-sheet P&ID](design/pids/absorber-system/README.md) keeps treated discharge separate from clean nitrogen. Normal-duty service isolation preserves the current gas-volume calculation; module-side dead-leg volumes, service pressures, treatment receiving conditions and 3D routing remain to develop. Saved as a draft checkpoint.
+
+## Absorber P&ID and capacity screen — 15 October 2026
+
+D-070 starts the [absorber P&ID and Hurmet capacity review](design/pids/absorber-system/README.md). The owner confirms six primary/secondary chamber pairs, separate reservoirs/modules, external bottom-feed routing, and chamber bottoms at the active-core bottom, excluding the bottom reflector. The [Blender review](../fastSaltModels/docs/absorber-system-review.md) raises all six absorber tank bottoms; external bottom routes and revised supports remain to model.
+
+The source 158.9/193.8 litre charges fit the current absorber tank and reservoir space in a preliminary capacity screen. The two ideal gas-vessel volumes total about 522/624 litres per primary/secondary module with provisional upper gas space. The secondary is tight within the 643 litre lower-cylinder gross envelope; module internals must be arranged before claiming adequate size. Injection time is not recalculated because hydraulic and gas-flow inputs remain incomplete. No pressure settings or final valve arrangement are adopted. Saved as a draft checkpoint.
+
+Absorber work is paused at the owner's request. The 3D checkpoint is `fastSaltModels` commit `f565700`; the separate stacked illustration remains unscaled. No additional physical gas routing or injection-time calculation was added.
+
 ## Attached control annex — draft, 14 October 2026
 
 D-069 adds a 20 × 25 m, 5.5 m-high control annex at the turbine hall's southeast corner, with 4 m of shared reactor-facing boundary. It reserves 180 m² for operators, separate control-equipment/UPS/ventilation rooms, an outside entrance and second exit, and a two-door vestibule to the turbine hall. The separate slab and 0.60 m control-side barrier are visual allowances; the single/double-wall and structural details are unresolved.
