@@ -1,0 +1,7 @@
+unit,service,room,common_object,branch_object,server_object
+1,Supply gas,Off-gas treatment room,site.fuel_pressure.supply_common,site.fuel_pressure.server_1_supply,equipment.fuel_pressure_server_1
+1,Off-gas,Off-gas treatment room,site.fuel_pressure.offgas_common,site.fuel_pressure.server_1_return,equipment.fuel_pressure_server_1
+2,Supply gas,Off-gas treatment room,site.fuel_pressure.supply_common,site.fuel_pressure.server_2_supply,equipment.fuel_pressure_server_2
+2,Off-gas,Off-gas treatment room,site.fuel_pressure.offgas_common,site.fuel_pressure.server_2_return,equipment.fuel_pressure_server_2
+3,Supply gas,Off-gas treatment room,site.fuel_pressure.supply_common,site.fuel_pressure.server_3_supply,equipment.fuel_pressure_server_3
+3,Off-gas,Off-gas treatment room,site.fuel_pressure.offgas_common,site.fuel_pressure.server_3_return,equipment.fuel_pressure_server_3

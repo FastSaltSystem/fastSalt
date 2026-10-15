@@ -1,0 +1,206 @@
+{
+  "snapshot_date": "2026-10-15",
+  "repository": "fastSalt",
+  "source_commit": "048104a3211f4886d1972eab48332a527b162273",
+  "status": "Selected preliminary review results; not an issued design",
+  "files": [
+    {
+      "file": "coolant-system/FS-CS-001.svg",
+      "source": "design/pids/coolant-system/outputs/current/FS-CS-001.svg",
+      "bytes": 25233,
+      "sha256": "7c3e722dcf8f23bd1f253eb8b333e178269c45a7509a89ca3f59d0e4fbb230ea"
+    },
+    {
+      "file": "coolant-system/FS-CS-002.svg",
+      "source": "design/pids/coolant-system/outputs/current/FS-CS-002.svg",
+      "bytes": 15960,
+      "sha256": "1579d372b0ee1337fb59b4c9772fef550a08d4d838c559ed13c7e97f42cd4425"
+    },
+    {
+      "file": "coolant-system/FS-CS-003.svg",
+      "source": "design/pids/coolant-system/outputs/current/FS-CS-003.svg",
+      "bytes": 16500,
+      "sha256": "c40637931baf764e5b383365e4db1da26f79c26882f056c731a123a4b0bb6346"
+    },
+    {
+      "file": "coolant-system/FS-CS-004.svg",
+      "source": "design/pids/coolant-system/outputs/current/FS-CS-004.svg",
+      "bytes": 12717,
+      "sha256": "36c21acb21cfbe4cf57d936da053f80eb9b570e784f6b8ea8b0489473a59f002"
+    },
+    {
+      "file": "coolant-system/FS-CS-005.svg",
+      "source": "design/pids/coolant-system/outputs/current/FS-CS-005.svg",
+      "bytes": 9654,
+      "sha256": "d7d6d258509a69d6256deb2c34ede779ad0c6f532764c54168956cabcf415933"
+    },
+    {
+      "file": "coolant-system/FS-CS-006.svg",
+      "source": "design/pids/coolant-system/outputs/current/FS-CS-006.svg",
+      "bytes": 9951,
+      "sha256": "5e61aca79051e1fa41535883e05ab1c2fda9e2fd503b95783482ee2a272c8ac5"
+    },
+    {
+      "file": "coolant-system/WISTR-coolant-PID.pdf",
+      "source": "design/pids/coolant-system/outputs/current/WISTR-coolant-PID.pdf",
+      "bytes": 20781,
+      "sha256": "8404f76921fb6d8117fbe89701398556f983a25b5b1e20170cffa84f18ce0550"
+    },
+    {
+      "file": "coolant-system/build-manifest.json",
+      "source": "design/pids/coolant-system/outputs/current/build-manifest.json",
+      "bytes": 2981,
+      "sha256": "b76399bed37a8872070a6357876282512fd40c24d41daa2313b93e789acfbb2c"
+    },
+    {
+      "file": "coolant-system/equipment.csv",
+      "source": "design/pids/coolant-system/outputs/current/equipment.csv",
+      "bytes": 2507,
+      "sha256": "7450dda98a6a6f3810eae0c1bb9a4ae1e8eb3e6fc199e7d138c095a7de22df15"
+    },
+    {
+      "file": "coolant-system/instruments.csv",
+      "source": "design/pids/coolant-system/outputs/current/instruments.csv",
+      "bytes": 2492,
+      "sha256": "2fcf65a5c1774e76490c2654ed18feb27b957f0844f636037c4265cff395a7d0"
+    },
+    {
+      "file": "coolant-system/lines.csv",
+      "source": "design/pids/coolant-system/outputs/current/lines.csv",
+      "bytes": 4841,
+      "sha256": "fe0f99437b6f344758da9e972d92291718dd21e2d2a50c2d5eddc5cd659d5f44"
+    },
+    {
+      "file": "coolant-system/relief_devices.csv",
+      "source": "design/pids/coolant-system/outputs/current/relief_devices.csv",
+      "bytes": 777,
+      "sha256": "c75daea563f86d1d360a01cbe0f50c03679839d6299578a3ce9e11d050ab357b"
+    },
+    {
+      "file": "coolant-system/valves.csv",
+      "source": "design/pids/coolant-system/outputs/current/valves.csv",
+      "bytes": 2123,
+      "sha256": "8cd2e2aedfc15af7c5d633ce52d329d6833e17c7150e42a99f5b9cb2ce22544e"
+    },
+    {
+      "file": "absorber-system/FS-AS-001.svg",
+      "source": "design/pids/absorber-system/outputs/current/FS-AS-001.svg",
+      "bytes": 13384,
+      "sha256": "cf570d37eb924a9c4f6f21fcdb6ad9c60cbf69cb5d7e5f2de681453ea98cf517"
+    },
+    {
+      "file": "absorber-system/FS-AS-002.svg",
+      "source": "design/pids/absorber-system/outputs/current/FS-AS-002.svg",
+      "bytes": 12017,
+      "sha256": "4eaaa29a4d522b23bd90bb50016ee7c9a179ea9357236cf747ecd1e9b4ba97a4"
+    },
+    {
+      "file": "absorber-system/FS-AS-003.svg",
+      "source": "design/pids/absorber-system/outputs/current/FS-AS-003.svg",
+      "bytes": 14749,
+      "sha256": "173d52f93f184816dc001b75fad43aa88e098147df8d484d0d01e25da9a0b953"
+    },
+    {
+      "file": "absorber-system/FS-AS-004.svg",
+      "source": "design/pids/absorber-system/outputs/current/FS-AS-004.svg",
+      "bytes": 34256,
+      "sha256": "de382dc9e5c98e3aa3ee2b5082bfa261775ab2aea5dc85545e7b4884f996138f"
+    },
+    {
+      "file": "absorber-system/WISTR-absorber-PID.pdf",
+      "source": "design/pids/absorber-system/outputs/current/WISTR-absorber-PID.pdf",
+      "bytes": 15827,
+      "sha256": "965613964b6131a9b2610c7b993d6b90819f5323235ad7de709cba93b924aa53"
+    },
+    {
+      "file": "absorber-system/checks.json",
+      "source": "design/pids/absorber-system/outputs/current/checks.json",
+      "bytes": 1350,
+      "sha256": "1ed99daf36b63d154587b9750a90332d44ec89b3e0f8a5c47fd30be5b409947c"
+    },
+    {
+      "file": "absorber-system/register.csv",
+      "source": "design/pids/absorber-system/outputs/current/register.csv",
+      "bytes": 22539,
+      "sha256": "991ba0d1182ee55b003789105d624d170508499b28eb37516993e1a769f3c42c"
+    },
+    {
+      "file": "fuel-maintenance/3d-interface-register.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/3d-interface-register.csv",
+      "bytes": 880,
+      "sha256": "0bdc367daae46fa5a009b2c874e257a6d31b63afee1e6f13b9b665ffe7fbc3c9"
+    },
+    {
+      "file": "fuel-maintenance/FS-FM-001.svg",
+      "source": "design/pids/fuel-maintenance/outputs/current/FS-FM-001.svg",
+      "bytes": 26319,
+      "sha256": "03f3aca552ee15ed7f4579335b873feb77cb29be7d93028b51a2ead4d47057c6"
+    },
+    {
+      "file": "fuel-maintenance/FS-FM-002.svg",
+      "source": "design/pids/fuel-maintenance/outputs/current/FS-FM-002.svg",
+      "bytes": 20383,
+      "sha256": "0bd815f78fd008658efdff0918abcf86d4246436fd937bf58d057cadc9d56c23"
+    },
+    {
+      "file": "fuel-maintenance/FS-FM-003.svg",
+      "source": "design/pids/fuel-maintenance/outputs/current/FS-FM-003.svg",
+      "bytes": 19398,
+      "sha256": "56d608bb8ef73c9752850130c7c5b714de610775a1ee47298fc445bce11423d6"
+    },
+    {
+      "file": "fuel-maintenance/WISTR-fuel-maintenance-PID.pdf",
+      "source": "design/pids/fuel-maintenance/outputs/current/WISTR-fuel-maintenance-PID.pdf",
+      "bytes": 16068,
+      "sha256": "881ef484ba71328d37ec1fb35286dd854400532b4c59884052f2d8484785ca7b"
+    },
+    {
+      "file": "fuel-maintenance/equipment.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/equipment.csv",
+      "bytes": 504,
+      "sha256": "bac8f8bd894c8d84ca0418d714d5b67d64ef40cc81905d645933b964bbf21cfe"
+    },
+    {
+      "file": "fuel-maintenance/instruments.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/instruments.csv",
+      "bytes": 664,
+      "sha256": "011241d77c263ed8b1b4cbaa4c4888dd1a7c47aa4e5a3343f66a3876d151cee3"
+    },
+    {
+      "file": "fuel-maintenance/lines.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/lines.csv",
+      "bytes": 2840,
+      "sha256": "4eadf5257b22fbdec475857d87632ecd492d5fa5a17861ae4bceed758a52e75a"
+    },
+    {
+      "file": "fuel-maintenance/pid-checks.json",
+      "source": "design/pids/fuel-maintenance/outputs/current/pid-checks.json",
+      "bytes": 22780,
+      "sha256": "764aba13433e86da8a758df8bcc596822a7b86644d00c7126329236d0483f593"
+    },
+    {
+      "file": "fuel-maintenance/pressure-unit-schedule.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/pressure-unit-schedule.csv",
+      "bytes": 485,
+      "sha256": "eb5da774fc43e7a6418cef147e78b8ff09b68840a9e5882d6ab5a8c0232f94a0"
+    },
+    {
+      "file": "fuel-maintenance/sector-tag-schedule.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/sector-tag-schedule.csv",
+      "bytes": 1544,
+      "sha256": "c714130f95779821b3e32127bb9cb937d02b0a08a66a74eeadd0a80705ac1aa0"
+    },
+    {
+      "file": "fuel-maintenance/signals.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/signals.csv",
+      "bytes": 220,
+      "sha256": "40d6faf0b5c6195cfd99805ed662eb05a06973d3acef2d4e8be51ff24e3ad65e"
+    },
+    {
+      "file": "fuel-maintenance/valves.csv",
+      "source": "design/pids/fuel-maintenance/outputs/current/valves.csv",
+      "bytes": 587,
+      "sha256": "219c580a3d50a7656fdb117e915eaeec8e4c3800427530c414a2149e5083dc40"
+    }
+  ]
+}

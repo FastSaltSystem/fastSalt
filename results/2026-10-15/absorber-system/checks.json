@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "circuits": 12,
+  "equipment": 76,
+  "lines": 110,
+  "instruments": 60,
+  "service_valves": 36,
+  "checks": [
+    "Unique expanded tags",
+    "All line endpoints name declared ports",
+    "Every template line has a drawn route",
+    "All instruments name declared equipment",
+    "Inject and remove states retain documented endpoint pairing",
+    "All 12 modules have separate charge and discharge branches",
+    "Discharge terminates at treatment inlet",
+    "No discharge edge enters clean nitrogen header",
+    "All 36 service valve reservations reference valid lines"
+  ],
+  "sources": {
+    "design/pids/absorber-system/absorber-system.toml": "c121202f62833e81446e289cd160815b4dd6e4da7e82eaa8f34b7a52650a26ce",
+    "design/pids/absorber-system/layout.toml": "4738b7220b9e6cfee1200da38cea03e64ba457ffc12551ea017482563b52adfc",
+    "design/pids/absorber-system/../../engineering/absorber-system.toml": "d8dd4f20e07911e46839b08b7623ca226041aa8a513efc2a9626f4d58fc5ca3c",
+    "design/pids/absorber-system/build.py": "e5925ef198abaa5fc1212b43a44687eddb6ebe7b14bb08565740a1a0cabad533",
+    "design/pids/coolant-system/build.py": "09d78ba138f45ef6f29fb094a730be688cf8f466f506d471e37180ab94c6a2f4",
+    "calculations/reactor/absorber-capacity-results.json": "9bfcc922df6b4bed3a5f2fdf4a966892d9cd3af6716f5a99b41c3a8ad16a9a3d"
+  }
+}

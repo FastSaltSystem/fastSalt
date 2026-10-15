@@ -1,0 +1,17 @@
+tag,line,purpose,status,selection,sheet
+V-101H,L-101,Candidate branch isolation; not a complete maintenance isolation scheme,proposed,"Type, actuation and fail position TBD",1
+V-101C,L-201,Candidate branch isolation; not a complete maintenance isolation scheme,proposed,"Type, actuation and fail position TBD",1
+V-102H,L-102,Candidate branch isolation; not a complete maintenance isolation scheme,proposed,"Type, actuation and fail position TBD",1
+V-102C,L-202,Candidate branch isolation; not a complete maintenance isolation scheme,proposed,"Type, actuation and fail position TBD",1
+V-103H,L-103,Candidate branch isolation; not a complete maintenance isolation scheme,proposed,"Type, actuation and fail position TBD",1
+V-103C,L-203,Candidate branch isolation; not a complete maintenance isolation scheme,proposed,"Type, actuation and fail position TBD",1
+V-401,L-401,Candidate transfer/supply isolation,proposed,"Type, actuation and fail position TBD",2
+V-402,L-402,Candidate transfer/supply isolation,proposed,"Type, actuation and fail position TBD",2
+V-403,L-403,Candidate transfer/supply isolation,proposed,"Type, actuation and fail position TBD",2
+V-101G,G-101,Gas connection isolation at steam generator 1,accepted_for_concept,"Valve type, actuation and fail position unresolved",3
+V-102G,G-102,Gas connection isolation at steam generator 2,accepted_for_concept,"Valve type, actuation and fail position unresolved",3
+V-103G,G-103,Gas connection isolation at steam generator 3,accepted_for_concept,"Valve type, actuation and fail position unresolved",3
+V-402G,G-402,Tank connection to common coolant-gas header,accepted_for_concept,"Valve type, actuation and fail position unresolved",3
+V-601N,N-601,"Independent exterior nitrogen branch isolation; valve type, actuation and fail position unresolved",accepted_for_concept,,6
+V-602N,N-602,"Independent exterior nitrogen branch isolation; valve type, actuation and fail position unresolved",accepted_for_concept,,6
+V-603N,N-603,"Independent exterior nitrogen branch isolation; valve type, actuation and fail position unresolved",accepted_for_concept,,6

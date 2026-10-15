@@ -1,0 +1,26 @@
+tag,service,from,via,to,bore_mm,od_mm,wall_mm,radial_insulation_mm,temperature_C,heated,flow_direction,status,sheet
+L-101,coolant salt,R-101.H1,,SG-101.salt_inlet,1425.0,1475.0,25.0,400.0,616.85,TBD,from_to,Established topology; dimensions conditional,1
+L-201,coolant salt,SG-101.salt_outlet,P-101,R-101.C1,1425.0,1475.0,25.0,350.0,536.85,TBD,from_to,Established topology; dimensions conditional; includes pump suction and discharge,1
+L-102,coolant salt,R-101.H2,,SG-102.salt_inlet,1425.0,1475.0,25.0,400.0,616.85,TBD,from_to,Established topology; dimensions conditional,1
+L-202,coolant salt,SG-102.salt_outlet,P-102,R-101.C2,1425.0,1475.0,25.0,350.0,536.85,TBD,from_to,Established topology; dimensions conditional; includes pump suction and discharge,1
+L-103,coolant salt,R-101.H3,,SG-103.salt_inlet,1425.0,1475.0,25.0,400.0,616.85,TBD,from_to,Established topology; dimensions conditional,1
+L-203,coolant salt,SG-103.salt_outlet,P-103,R-101.C3,1425.0,1475.0,25.0,350.0,536.85,TBD,from_to,Established topology; dimensions conditional; includes pump suction and discharge,1
+L-401,coolant salt,R-101.bottom,,P-401.reactor_side,44.0,50.0,3.0,50.0,TBD,True,bidirectional,Established topology; OD/insulation visual allowances; heated; transfer wall provisional,2
+L-402,coolant salt,P-401.storage_side,,J-401.pump,44.0,50.0,3.0,50.0,TBD,True,bidirectional,Established topology; OD/insulation visual allowances; heated; transfer wall provisional,2
+L-403,coolant salt supply/return; gas sweep toward preparation,B-401.salt_transfer,,J-401.preparation,TBD,50.0,TBD,50.0,TBD,True,bidirectional,Established topology; OD/insulation visual allowances; heated; transfer wall provisional,2
+L-404,tank-bottom coolant salt; gas to tee after tank empties,J-401.tank,,TK-401.bottom,TBD,TBD,TBD,TBD,TBD,True,bidirectional,Owner-specified tank-bottom branch to the common low-point tee; dimensions unresolved,2
+G-101,coolant gas; separate from fuel off-gas,AC-101.gas,,H-401.sg1,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,Owner-selected connection; dimensions and operating pressure unresolved,3
+G-102,coolant gas; separate from fuel off-gas,AC-102.gas,,H-401.sg2,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,Owner-selected connection; dimensions and operating pressure unresolved,3
+G-103,coolant gas; separate from fuel off-gas,AC-103.gas,,H-401.sg3,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,Owner-selected connection; dimensions and operating pressure unresolved,3
+G-402,coolant gas; separate from fuel off-gas,TK-401.gas_return,,H-401.tank,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,Owner-selected connection; dimensions and operating pressure unresolved,3
+G-400,coolant gas; separate from fuel off-gas,H-401.preparation,,B-401.coolant_gas,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,Owner-selected connection; dimensions and operating pressure unresolved,3
+L-101G,Continuously open SG-top salt/gas connection,SG-101.gas_top,,AC-101.salt,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,No isolation valve between SG and gas vessel; dimensions unresolved,3
+L-102G,Continuously open SG-top salt/gas connection,SG-102.gas_top,,AC-102.salt,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,No isolation valve between SG and gas vessel; dimensions unresolved,3
+L-103G,Continuously open SG-top salt/gas connection,SG-103.gas_top,,AC-103.salt,TBD,TBD,TBD,TBD,TBD,TBD,bidirectional,No isolation valve between SG and gas vessel; dimensions unresolved,3
+L-101R,Emergency coolant-side discharge; may contain salt and steam/gas,SG-101.relief_high,,B-501.sg101,TBD,TBD,TBD,TBD,TBD,TBD,from_to,Accepted high-level relief connection concept; physical elevation and sizing unresolved,5
+L-102R,Emergency coolant-side discharge; may contain salt and steam/gas,SG-102.relief_high,,B-501.sg102,TBD,TBD,TBD,TBD,TBD,TBD,from_to,Accepted high-level relief connection concept; physical elevation and sizing unresolved,5
+L-103R,Emergency coolant-side discharge; may contain salt and steam/gas,SG-103.relief_high,,B-501.sg103,TBD,TBD,TBD,TBD,TBD,TBD,from_to,Accepted high-level relief connection concept; physical elevation and sizing unresolved,5
+N-600,Nitrogen vaporizer to common header,B-601.gas_supply,,H-601.supply,TBD,TBD,TBD,TBD,TBD,TBD,from_to,Owner-selected exterior supply concept; dimensions and pressure unresolved,6
+N-601,Clean nitrogen to off-gas area,H-601.offgas,,B-602.nitrogen_makeup,TBD,TBD,TBD,TBD,TBD,TBD,from_to,Owner-selected exterior supply concept; dimensions and pressure unresolved,6
+N-602,Clean nitrogen to fuel refining/recycling,H-601.fuel,,B-603.nitrogen_makeup,TBD,TBD,TBD,TBD,TBD,TBD,from_to,Owner-selected exterior supply concept; dimensions and pressure unresolved,6
+N-603,Clean nitrogen to coolant-preparation makeup station,H-601.coolant,,B-401.nitrogen_makeup,TBD,TBD,TBD,TBD,TBD,TBD,from_to,Owner-selected exterior supply concept; dimensions and pressure unresolved,6

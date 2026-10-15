@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="594mm" height="420mm" viewBox="0 0 1684 1190"><title>WISTR fuel maintenance P&amp;ID sheet 2</title>
+<rect x="0" y="0" width="1684" height="1190" stroke="white" fill="white" stroke-width="1.3"/>
+<rect x="22" y="22" width="1640" height="1146" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="42" y="51" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#15232b">FAST SALT SYSTEM</text>
+<text x="42" y="83" font-family="Helvetica,Arial,sans-serif" font-size="25" font-weight="bold" text-anchor="start" fill="#15232b">GAS SERVICES AND METERED FUEL CONNECTIONS</text>
+<text x="42" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#4b5b64">Connection markers HP / HS / OG / FA / FR continue on sheet 1. Gas unit 3 serves TK-FM-06 / TK-FM-01 (3D F5/F6); three shared units total.</text>
+<text x="45" y="155" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#15232b">PRESSURE / SURGE GAS SYSTEM</text>
+<path d="M200 253 C200 229.0 380 229.0 380 253 L380 392 C380 416.0 200 416.0 200 392 Z" fill="white" stroke="#15232b" stroke-width="1.4"/>
+<text x="290.0" y="317.5" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#15232b">V-FM-05</text>
+<text x="290.0" y="340.5" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">Pressure tank</text>
+<path d="M1220 253 C1220 229.0 1400 229.0 1400 253 L1400 392 C1400 416.0 1220 416.0 1220 392 Z" fill="white" stroke="#15232b" stroke-width="1.4"/>
+<text x="1310.0" y="317.5" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#15232b">V-FM-06</text>
+<text x="1310.0" y="340.5" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">Surge tank</text>
+<circle cx="650" cy="320" r="30" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="650" y="325" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">K</text>
+<polyline points="622,340 612,360 688,360 678,340" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="650" y="385" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">K-FM-03</text>
+<text x="650" y="406" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">Gas compressor</text>
+<polyline points="380,320 620,320" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="680,320 1220,320" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="290,235 290,207" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="290" cy="180" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="290" y="177" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">PT</text>
+<text x="290" y="192" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-95</text>
+<polyline points="1310,235 1310,207" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="1310" cy="180" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1310" y="177" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">PT</text>
+<text x="1310" y="192" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-96</text>
+<circle cx="850" cy="180" r="32" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="850" y="176" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">PDC</text>
+<text x="850" y="194" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-03</text>
+<text x="850" y="135" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">Pressure-difference controller</text>
+<polyline points="317,180 818,180" fill="none" stroke="#15232b" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polyline points="791,176 800,180 791,184" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="1283,180 882,180" fill="none" stroke="#15232b" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polyline points="909,184 900,180 909,176" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="850,212 850,260 650,260 650,290" fill="none" stroke="#15232b" stroke-width="1.2" stroke-dasharray="6 4"/>
+<polyline points="654,278 650,287 646,278" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<text x="710" y="247" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Start / stop</text>
+<polyline points="1556,370 1400,370" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1469,374 1460,370 1469,366" fill="none" stroke="#335a70" stroke-width="1.6"/>
+<polyline points="1557,358 1594,358 1604,370 1594,382 1557,382 1557,358" fill="none" stroke="#335a70" stroke-width="1.3"/>
+<text x="1580" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#335a70">GS</text>
+<text x="1580" y="401" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">ROOM</text>
+<text x="1618" y="352" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70"></text>
+<text x="1420" y="346" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70">From off-gas room</text>
+<text x="1450" y="397" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#335a70">G-FM-94</text>
+<polyline points="290,410 290,475" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="267,475 304,475 314,487 304,499 267,499 267,475" fill="none" stroke="#335a70" stroke-width="1.3"/>
+<text x="290" y="491" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#335a70">HP</text>
+<text x="290" y="518" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">01</text>
+<text x="328" y="469" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70">To TK-FM-01 banks</text>
+<circle cx="290" cy="440" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<polyline points="290,410 290,440 435,440" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="436,428 473,428 483,440 473,452 436,452 436,428" fill="none" stroke="#335a70" stroke-width="1.3"/>
+<text x="459" y="444" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#335a70">HP</text>
+<text x="459" y="471" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">S6</text>
+<text x="497" y="422" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70"></text>
+<text x="335" y="424" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#335a70">TK-FM-06 banks</text>
+<polyline points="1310,410 1310,475" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1287,475 1324,475 1334,487 1324,499 1287,499 1287,475" fill="none" stroke="#335a70" stroke-width="1.3"/>
+<text x="1310" y="491" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#335a70">HS</text>
+<text x="1310" y="518" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">01</text>
+<text x="1348" y="469" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70">To TK-FM-01 banks</text>
+<circle cx="1310" cy="440" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<polyline points="1310,410 1310,440 1455,440" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1456,428 1493,428 1503,440 1493,452 1456,452 1456,428" fill="none" stroke="#335a70" stroke-width="1.3"/>
+<text x="1479" y="444" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#335a70">HS</text>
+<text x="1479" y="471" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">S6</text>
+<text x="1517" y="422" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70"></text>
+<text x="1355" y="424" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#335a70">TK-FM-06 banks</text>
+<text x="520" y="440" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">PDC-FM-03 starts/stops K-FM-03 using PT-FM-95 and PT-FM-96. One unit serves two tanks (six storage regions).</text>
+<text x="520" y="458" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Setpoint and switching band TBD.</text>
+<text x="520" y="497" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b">Gas supply: existing room supply interface and common header. Off-gas: existing separate return header to treatment; both</text>
+<text x="520" y="515" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b">use the shared duct.</text>
+<text x="45" y="560" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#15232b">CORE / STORAGE VALVE VENT CONNECTION</text>
+<polyline points="72,593 109,593 119,605 109,617 72,617 72,593" fill="none" stroke="#6b4e72" stroke-width="1.3"/>
+<text x="95" y="609" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#6b4e72">OG</text>
+<text x="95" y="636" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">01</text>
+<text x="133" y="587" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#6b4e72"></text>
+<polyline points="119,605 1460,605" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<polyline points="1401,601 1410,605 1401,609" fill="none" stroke="#6b4e72" stroke-width="1.6"/>
+<text x="420" y="588" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#6b4e72">H-O  Core / storage position 4 vents - both associated sectors</text>
+<polyline points="1100,565 1100,605" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<circle cx="1100" cy="605" r="3" stroke="#6b4e72" fill="#6b4e72" stroke-width="1.4"/>
+<polyline points="1077,541 1114,541 1124,553 1114,565 1077,565 1077,541" fill="none" stroke="#6b4e72" stroke-width="1.3"/>
+<text x="1100" y="557" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#6b4e72">OG</text>
+<text x="1100" y="584" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">S6</text>
+<text x="1138" y="535" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#6b4e72"></text>
+<polyline points="1461,593 1498,593 1508,605 1498,617 1461,617 1461,593" fill="none" stroke="#6b4e72" stroke-width="1.3"/>
+<text x="1484" y="609" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#6b4e72">OG</text>
+<text x="1484" y="636" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">ROOM</text>
+<text x="1446" y="587" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#6b4e72">Existing return to off-gas room</text>
+<text x="45" y="670" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#15232b">METERED FUEL ADDITION AND REMOVAL</text>
+<circle cx="825" cy="740" r="30" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="825" y="745" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">PD</text>
+<polyline points="797,760 787,780 863,780 853,760" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="825" y="805" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">P-FM-01</text>
+<text x="825" y="826" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">Add fuel displacement pump</text>
+<polyline points="170,740 795,740" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="855,740 1480,740" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="601,736 610,740 601,744" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="1091,736 1100,740 1091,744" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="123,728 160,728 170,740 160,752 123,752 123,728" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="146" y="744" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">EXT</text>
+<text x="146" y="771" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">TBD</text>
+<text x="184" y="722" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b"></text>
+<polyline points="1481,728 1518,728 1528,740 1518,752 1481,752 1481,728" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="1504" y="744" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">FA</text>
+<text x="1504" y="771" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">01</text>
+<text x="1466" y="722" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#15232b"></text>
+<text x="200" y="722" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Fuel source / tie-in TBD</text>
+<text x="1160" y="722" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">To R5/R6 storage (01)</text>
+<circle cx="825" cy="900" r="30" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="825" y="905" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">PD</text>
+<polyline points="797,920 787,940 863,940 853,920" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="825" y="965" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">P-FM-02</text>
+<text x="825" y="986" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">Remove fuel displacement pump</text>
+<polyline points="170,900 795,900" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="855,900 1480,900" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="601,896 610,900 601,904" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="1091,896 1100,900 1091,904" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="123,888 160,888 170,900 160,912 123,912 123,888" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="146" y="904" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">FR</text>
+<text x="146" y="931" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">01</text>
+<text x="184" y="882" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b"></text>
+<polyline points="1481,888 1518,888 1528,900 1518,912 1481,912 1481,888" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="1504" y="904" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">EXT</text>
+<text x="1504" y="931" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">TBD</text>
+<text x="1466" y="882" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#15232b"></text>
+<text x="200" y="882" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">From R1/R2 core fuel line (01)</text>
+<text x="1160" y="882" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Removed fuel destination TBD</text>
+<text x="45" y="1033" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">COOLING AIR</text>
+<polyline points="230,1028 500,1028" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="441,1024 450,1028 441,1032" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<text x="240" y="1014" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b">Fresh-air connection</text>
+<rect x="500" y="1000" width="500" height="54" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="750" y="1023" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#15232b">TK-FM-01 cooling enclosure</text>
+<text x="750" y="1043" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#15232b">Common enclosure for storage regions A / B / C</text>
+<polyline points="1000,1028 1420,1028" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="1341,1024 1350,1028 1341,1032" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<text x="1090" y="1014" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b">Exhaust-air connection</text>
+<text x="45" y="1072" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Air connections retained from reference; detailed dampers, cooling internals and external air-header tags remain TBD.</text>
+<polyline points="22,1090 1662,1090" fill="none" stroke="#15232b" stroke-width="1"/>
+<text x="42" y="1115" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#15232b">PRELIMINARY - FOR REVIEW</text>
+<text x="42" y="1139" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Owner-defined process arrangement. Sizes, ratings, fail positions and detailed controls TBD.</text>
+<text x="42" y="1159" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Functional schematic; not to scale. Solid-dot crossings connect; other crossings do not.</text>
+<polyline points="1100,1090 1100,1168" fill="none" stroke="#15232b" stroke-width="1"/>
+<text x="1120" y="1114" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#15232b">WISTR / FUEL MAINTENANCE</text>
+<text x="1120" y="1139" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">FS-FM-002     REV B3-draft     2026-10-15</text>
+<text x="1642" y="1160" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#15232b">SHEET 2 OF 3</text>
+</svg>

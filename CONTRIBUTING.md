@@ -1,6 +1,6 @@
 # Contributing
 
-This is the initial local organization of the Fast Salt System project. Public contribution and licensing arrangements are still to be established.
+The public project uses the `fastSalt` and `fastSaltModels` repositories under the FastSaltSystem organization. Licensing choices remain pending; preserve the existing terms and credits of referenced material.
 
 ## Propose a change
 
@@ -9,7 +9,11 @@ This is the initial local organization of the Fast Salt System project. Public c
 3. Label assumptions and distinguish reported results from proposed changes.
 4. Update the related interface or decision record when the change affects another workstream.
 
-When a shared remote is established, use branches and reviewed pull requests for changes to the shared baseline. Named reviewers will be recorded with the teams.
+Use branches and pull requests for changes to protected `main`. Contributors with Write access can push a branch in this repository; other contributors can fork it and propose a pull request. Readers need no invitation.
+
+Start from updated `main`, create a descriptive branch, make a focused change, run the relevant checks, and push the branch. In the pull request, explain the change, its source basis and verification. Resolve review comments before merging. An approval count is not currently required by the initial protection setup; maintainers can strengthen review requirements as the team grows.
+
+Open separate, linked pull requests when a change affects both repositories. Keep unrelated local work out of the commits.
 
 ## Research and publication records
 
@@ -23,4 +27,4 @@ Use **Hurmet Markdown (`.md`) for official calculation results wherever practica
 
 Record units, input sources, software versions, model scope, run instructions, and meaningful checks. Recalculate a Hurmet worksheet before saving its results, and compare converted results with their source. State whether results are preliminary or reviewed; use of the preferred format does not itself establish review status. Keep component identities and reference frames explicit when exchanging data. A visual fit or closed mesh is not a substitute for a physics or engineering validation.
 
-Do not add routine generated renders or caches to this repository. Retain original files in their owning repository or source collection and reference a named revision.
+Keep routine generated renders and caches in ignored `outputs/`. Selected review documents can be deliberately preserved in a dated `results/` directory with a source commit, SHA-256 manifest and visual inspection; update the [public results index](results/README.md). Retain original files in their owning repository or source collection and reference a named revision.

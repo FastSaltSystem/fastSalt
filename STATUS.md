@@ -1,5 +1,9 @@
 # Project status and next work
 
+## Public starting pages and review results — 15 October 2026
+
+D-077 adds public reader paths to both repositories: selected [P&ID PDFs and SVGs](results/README.md), the preserved motor-BFP cycle diagram, a dated model gallery and Blender checkpoint downloads. The 15 October snapshots copy existing results with SHA-256 manifests and source revisions; they do not change design geometry, equations or operating states. Cross-repository links use GitHub URLs, and the hub's model preview is pinned to its publication commit. Local-only calculation renders and publication source files are labeled explicitly. Changes are proposed through separate documentation pull requests under the new `main` protection rules.
+
 ## Fuel-maintenance P&ID redraw — 15 October 2026
 
 D-073 replaces the annotated reference illustration with a [three-sheet conventional P&ID draft](design/pids/fuel-maintenance/README.md): connected fuel/pressure circuits, gas-service and metering equipment, and a separate valve-position/state table. Tags, instrument bubbles, connection markers, native vector PDF/SVGs and CSV registers are generated from TOML-backed Python templates. One sector is drawn completely; a tag schedule covers all six sectors and 18 region pairs.

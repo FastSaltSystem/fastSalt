@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 850" role="img"><title>WISTR coolant system sheet 3</title>
+<rect x="0" y="0" width="1200" height="850" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Coolant gas collection and pressure control</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">One common pressure-control station at preparation; coolant gas is separate from fuel off-gas treatment.</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<rect x="50" y="190" width="140" height="60" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="65" y="213" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">SG-101 TOP</text>
+<text x="65" y="234" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Salt circuit: sheet 1</text>
+<rect x="300" y="155" width="100" height="90" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="350" y="178" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">AC-101</text>
+<text x="350" y="198" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Gas space</text>
+<polyline points="305,218 395,218" fill="none" stroke="#50745e" stroke-width="1"/>
+<text x="350" y="234" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Salt</text>
+<polyline points="190,225 235,225 235,265 350,265 350,245" fill="none" stroke="#173345" stroke-width="2.5"/>
+<text x="245" y="282" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="start">L-101G / always open</text>
+<polyline points="350,155 350,147 650,147 650,200 750,200" fill="none" stroke="#50745e" stroke-width="2.5"/>
+<rect x="488" y="138" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="490,140 510,154 510,140 490,154 490,140" fill="none" stroke="#173345" stroke-width="1.6"/>
+<text x="500" y="131" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">V-101G</text>
+<text x="585" y="135" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">G-101</text>
+<polyline points="592,143 600,147 592,151" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="588,151 580,147 588,143" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="400,190 450,181" fill="none" stroke="#173345" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="450" cy="200" r="19" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="450" y="199" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">PT</text>
+<text x="450" y="211" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="middle">101G</text>
+<polyline points="400,225 540,216" fill="none" stroke="#173345" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="540" cy="235" r="19" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="540" y="234" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">LT</text>
+<text x="540" y="246" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="middle">101G</text>
+<circle cx="750" cy="200" r="3" stroke="#50745e" fill="#50745e" stroke-width="1.5"/>
+<rect x="50" y="330" width="140" height="60" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="65" y="353" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">SG-102 TOP</text>
+<text x="65" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Salt circuit: sheet 1</text>
+<rect x="300" y="295" width="100" height="90" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="350" y="318" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">AC-102</text>
+<text x="350" y="338" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Gas space</text>
+<polyline points="305,358 395,358" fill="none" stroke="#50745e" stroke-width="1"/>
+<text x="350" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Salt</text>
+<polyline points="190,365 235,365 235,405 350,405 350,385" fill="none" stroke="#173345" stroke-width="2.5"/>
+<text x="245" y="422" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="start">L-102G / always open</text>
+<polyline points="350,295 350,275 650,275 650,340 750,340" fill="none" stroke="#50745e" stroke-width="2.5"/>
+<rect x="488" y="266" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="490,268 510,282 510,268 490,282 490,268" fill="none" stroke="#173345" stroke-width="1.6"/>
+<text x="500" y="259" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">V-102G</text>
+<text x="585" y="263" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">G-102</text>
+<polyline points="592,271 600,275 592,279" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="588,279 580,275 588,271" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="400,330 450,321" fill="none" stroke="#173345" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="450" cy="340" r="19" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="450" y="339" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">PT</text>
+<text x="450" y="351" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="middle">102G</text>
+<polyline points="400,365 540,356" fill="none" stroke="#173345" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="540" cy="375" r="19" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="540" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">LT</text>
+<text x="540" y="386" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="middle">102G</text>
+<circle cx="750" cy="340" r="3" stroke="#50745e" fill="#50745e" stroke-width="1.5"/>
+<rect x="50" y="470" width="140" height="60" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="65" y="493" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">SG-103 TOP</text>
+<text x="65" y="514" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Salt circuit: sheet 1</text>
+<rect x="300" y="435" width="100" height="90" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="350" y="458" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">AC-103</text>
+<text x="350" y="478" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Gas space</text>
+<polyline points="305,498 395,498" fill="none" stroke="#50745e" stroke-width="1"/>
+<text x="350" y="514" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Salt</text>
+<polyline points="190,505 235,505 235,545 350,545 350,525" fill="none" stroke="#173345" stroke-width="2.5"/>
+<text x="245" y="562" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="start">L-103G / always open</text>
+<polyline points="350,435 350,415 650,415 650,480 750,480" fill="none" stroke="#50745e" stroke-width="2.5"/>
+<rect x="488" y="406" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="490,408 510,422 510,408 490,422 490,408" fill="none" stroke="#173345" stroke-width="1.6"/>
+<text x="500" y="399" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">V-103G</text>
+<text x="585" y="403" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">G-103</text>
+<polyline points="592,411 600,415 592,419" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="588,419 580,415 588,411" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="400,470 450,461" fill="none" stroke="#173345" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="450" cy="480" r="19" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="450" y="479" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">PT</text>
+<text x="450" y="491" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="middle">103G</text>
+<polyline points="400,505 540,496" fill="none" stroke="#173345" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="540" cy="515" r="19" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="540" y="514" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">LT</text>
+<text x="540" y="526" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="middle">103G</text>
+<circle cx="750" cy="480" r="3" stroke="#50745e" fill="#50745e" stroke-width="1.5"/>
+<polyline points="750,200 750,630" fill="none" stroke="#50745e" stroke-width="3"/>
+<text x="750" y="163" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">H-401</text>
+<rect x="50" y="590" width="300" height="80" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="65" y="615" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">TK-401 / TOP GAS CONNECTION</text>
+<text x="65" y="638" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Gas makeup or return through G-402</text>
+<text x="65" y="657" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Liquid connections: sheet 2</text>
+<polyline points="350,630 750,630" fill="none" stroke="#50745e" stroke-width="2.5"/>
+<rect x="488" y="621" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="490,623 510,637 510,623 490,637 490,623" fill="none" stroke="#173345" stroke-width="1.6"/>
+<text x="500" y="614" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">V-402G</text>
+<polyline points="612,626 620,630 612,634" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="608,634 600,630 608,626" fill="none" stroke="#50745e" stroke-width="2"/>
+<text x="585" y="614" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">G-402</text>
+<polyline points="750,340 900,340" fill="none" stroke="#50745e" stroke-width="2.5"/>
+<polyline points="842,336 850,340 842,344" fill="none" stroke="#50745e" stroke-width="2"/>
+<polyline points="838,344 830,340 838,336" fill="none" stroke="#50745e" stroke-width="2"/>
+<text x="825" y="323" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">G-400</text>
+<rect x="900" y="255" width="265" height="175" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="915" y="279" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">B / COOLANT PREPARATION</text>
+<text x="915" y="305" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Common pressure-control station</text>
+<text x="915" y="330" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Controlled gas makeup + return</text>
+<text x="915" y="357" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">SG target ~1 bar(g); band TBD</text>
+<text x="915" y="384" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Tank transfer mode: TBD</text>
+<text x="915" y="410" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Functional block; internals unresolved</text>
+<text x="790" y="470" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">AC-101/102/103: nominal vessels;</text>
+<text x="790" y="488" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">numeric volume not yet selected.</text>
+<text x="790" y="520" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Gas valves isolate the header only.</text>
+<text x="790" y="538" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">SG-to-vessel salt connection stays open.</text>
+<text x="790" y="574" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Expansion transfers use P-401 / TK-401.</text>
+<text x="790" y="592" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">Valve and pump states: sheet 4.</text>
+<text x="790" y="630" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">G-401 removed: G-400 / H-401 / G-402</text>
+<text x="790" y="648" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">provide the preparation-to-tank gas path.</text>
+<rect x="45" y="710" width="1120" height="75" fill="#edf3f6" stroke="#edf3f6" stroke-width="1.3"/>
+<text x="60" y="732" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">OPEN DESIGN ITEMS</text>
+<text x="60" y="752" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">TK-401 normally nearly empty; P-401 adjusts SG vessel levels. Pressure band and transfer triggers remain unresolved.</text>
+<text x="60" y="771" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Relief return to TK-401 is a proposal; existing closed transfer valves prevent crediting that path for relief.</text>
+<text x="790" y="687" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Clean N2 makeup: N-603, sheet 6.</text>
+<text x="790" y="706" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Return stays separate from N2 supply.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-CS-003 | Rev B-working | 14 October 2026 | Preliminary - for discussion</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 3 / 6 | Functional schematic; not to scale</text>
+</svg>

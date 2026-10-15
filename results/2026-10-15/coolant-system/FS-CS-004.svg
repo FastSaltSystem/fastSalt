@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 850" role="img"><title>WISTR coolant system sheet 4</title>
+<rect x="0" y="0" width="1200" height="850" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Coolant operating-state draft</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">Agreed flow-path intent, not an operating procedure. Unassigned entries and automatic actions remain unresolved.</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<rect x="45" y="143" width="1120" height="324" fill="#edf3f6" stroke="#edf3f6" stroke-width="1.3"/>
+<text x="58" y="169" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Operation</text>
+<text x="310" y="169" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">V-401</text>
+<text x="400" y="169" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">V-402</text>
+<text x="490" y="169" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">V-403</text>
+<text x="580" y="169" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">SG gas valves</text>
+<text x="750" y="169" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">V-402G</text>
+<text x="870" y="169" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">P-401</text>
+<text x="580" y="187" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="start">V-101G / 102G / 103G</text>
+<text x="58" y="220" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Normal / between transfers</text>
+<text x="310" y="220" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="400" y="220" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="490" y="220" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="580" y="220" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">open / open / open</text>
+<text x="750" y="220" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="870" y="220" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">stopped</text>
+<polyline points="58,233 1150,233" fill="none" stroke="#cfdae0" stroke-width="0.5"/>
+<text x="58" y="256" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Expansion to storage</text>
+<text x="310" y="256" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="400" y="256" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="490" y="256" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="580" y="256" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">open / open / open</text>
+<text x="750" y="256" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="870" y="256" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">reactor to storage</text>
+<polyline points="58,269 1150,269" fill="none" stroke="#cfdae0" stroke-width="0.5"/>
+<text x="58" y="292" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Contraction from storage</text>
+<text x="310" y="292" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="400" y="292" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="490" y="292" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="580" y="292" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">open / open / open</text>
+<text x="750" y="292" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="870" y="292" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">storage to reactor</text>
+<polyline points="58,305 1150,305" fill="none" stroke="#cfdae0" stroke-width="0.5"/>
+<text x="58" y="328" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Reactor / SG drain</text>
+<text x="310" y="328" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="400" y="328" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="490" y="328" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="580" y="328" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">open / open / open</text>
+<text x="750" y="328" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="870" y="328" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">reactor to storage</text>
+<polyline points="58,341 1150,341" fill="none" stroke="#cfdae0" stroke-width="0.5"/>
+<text x="58" y="364" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Reactor / SG refill</text>
+<text x="310" y="364" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="400" y="364" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="490" y="364" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="580" y="364" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">open / open / open</text>
+<text x="750" y="364" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="870" y="364" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">storage to reactor</text>
+<polyline points="58,377 1150,377" fill="none" stroke="#cfdae0" stroke-width="0.5"/>
+<text x="58" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Tank to preparation</text>
+<text x="310" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="400" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="490" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="580" y="400" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">closed / closed / closed</text>
+<text x="750" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="870" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">stopped</text>
+<polyline points="58,413 1150,413" fill="none" stroke="#cfdae0" stroke-width="0.5"/>
+<text x="58" y="436" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Gas sweep to preparation</text>
+<text x="310" y="436" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="400" y="436" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">closed</text>
+<text x="490" y="436" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="580" y="436" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">closed / closed / closed</text>
+<text x="750" y="436" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">open</text>
+<text x="870" y="436" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">stopped</text>
+<text x="58" y="510" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">EXPANSION / CONTRACTION AS NEEDED</text>
+<text x="58" y="535" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Transfer expanded salt to TK-401; return salt as the circuit contracts.</text>
+<text x="58" y="555" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Most expansion is assigned to storage, not the nominal SG gas vessels.</text>
+<text x="58" y="575" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Between transfers: stop P-401; close V-401, V-402 and V-402G.</text>
+<text x="58" y="595" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Transfer triggers, level limits and usable storage volume remain TBD.</text>
+<text x="58" y="658" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">PRESSURE AND GAS PATHS</text>
+<text x="58" y="683" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Normal circulation: SG gas valves open to the common regulated header.</text>
+<text x="58" y="703" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Tank emptying / sweep: isolate SG gas branches; open the TK gas branch.</text>
+<text x="58" y="723" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Preparation &gt; G-400 &gt; H-401 &gt; G-402 &gt; TK-401 &gt; L-404 &gt; J-401 &gt; L-403 &gt; preparation.</text>
+<text x="58" y="743" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">This sweep covers the tank / return line; reactor and SG draining use P-401.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-CS-004 | Rev B-working | 14 October 2026 | Preliminary - for discussion</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 4 / 6 | Functional schematic; not to scale</text>
+</svg>

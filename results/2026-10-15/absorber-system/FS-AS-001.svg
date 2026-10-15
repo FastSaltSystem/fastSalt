@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 848" role="img"><title>WISTR absorber system sheet 1</title>
+<rect x="0" y="0" width="1200" height="848" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Absorber salt system</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">One circuit shown; repeat independently for primary A and secondary B at six radial assemblies</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<rect x="445" y="135" width="690" height="510" fill="#f4f7f9" stroke="#546772" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="465" y="156" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">MODULE-701A  /  separate pressure and surge volumes required</text>
+<polyline points="205,320 205,370 70,370 70,660 205,660 205,625" fill="none" stroke="#a75330" stroke-width="2.8"/>
+<polyline points="255,455 255,430 470,430" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="255,175 255,150 390,150 390,390 470,390" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="820,235 730,235 730,390 625,390" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="820,550 730,550 730,430 625,430" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="990,550 1080,550 1080,430" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="1080,350 1080,235 990,235" fill="none" stroke="#24768a" stroke-width="2"/>
+<rect x="120" y="455" width="170" height="170" fill="white" stroke="#a75330" stroke-width="1.3"/>
+<text x="205.0" y="481" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">AT-701A</text>
+<text x="205.0" y="506" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">Primary chamber</text>
+<text x="205.0" y="527" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">core-bottom salt feed</text>
+<text x="205.0" y="548" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">top gas return</text>
+<rect x="120" y="175" width="170" height="145" fill="white" stroke="#a75330" stroke-width="1.3"/>
+<text x="205.0" y="201" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">RS-701A</text>
+<text x="205.0" y="226" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">Heated reservoir</text>
+<text x="205.0" y="247" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">salt + gas space</text>
+<rect x="470" y="350" width="155" height="120" fill="white" stroke="#173345" stroke-width="1.3"/>
+<text x="547.5" y="376" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">XV-701A</text>
+<text x="547.5" y="401" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">Gas-routing block</text>
+<text x="547.5" y="422" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">3 positions (sheet 2)</text>
+<rect x="820" y="175" width="170" height="120" fill="white" stroke="#173345" stroke-width="1.3"/>
+<text x="905.0" y="201" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">PV-701A</text>
+<text x="905.0" y="226" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">Pressure gas</text>
+<rect x="820" y="490" width="170" height="120" fill="white" stroke="#173345" stroke-width="1.3"/>
+<text x="905.0" y="516" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">SV-701A</text>
+<text x="905.0" y="541" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">Surge gas</text>
+<circle cx="1080.0" cy="390.0" r="26" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="1080.0" y="395.0" font-family="Helvetica,Arial,sans-serif" font-size="17" font-weight="bold" fill="#173345" text-anchor="middle">C</text>
+<polyline points="1080,350 1080,364" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="1080,416 1080,430" fill="none" stroke="#24768a" stroke-width="2"/>
+<text x="1035" y="394" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="end">C-701A</text>
+<text x="478" y="394" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#24768a" text-anchor="middle">R</text>
+<text x="478" y="434" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#24768a" text-anchor="middle">A</text>
+<text x="617" y="394" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#24768a" text-anchor="middle">P</text>
+<text x="617" y="434" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#24768a" text-anchor="middle">S</text>
+<text x="75" y="685" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#a75330" text-anchor="start">L-SALT-701A: 50 mm OD; heated and insulated; reversible</text>
+<text x="77" y="350" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#a75330" text-anchor="start">To active-core bottom</text>
+<polyline points="74,542 70,550 66,542" fill="none" stroke="#a75330" stroke-width="2"/>
+<polyline points="201,650 205,642 209,650" fill="none" stroke="#a75330" stroke-width="2"/>
+<text x="302" y="142" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="start">G-R-701A</text>
+<text x="312" y="420" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="start">G-A-701A</text>
+<text x="646" y="380" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="start">G-P-701A</text>
+<text x="646" y="454" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="start">G-S-701A</text>
+<polyline points="1076,478 1080,470 1084,478" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="1028,239 1020,235 1028,231" fill="none" stroke="#24768a" stroke-width="2"/>
+<text x="1092" y="500" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="middle">G-CI-701A</text>
+<text x="1037" y="222" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="middle">G-CO-701A</text>
+<text x="1035" y="582" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#24768a" text-anchor="middle">Gas recovery</text>
+<polyline points="290,270 335,289" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="335" cy="270" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="335" y="269" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">LT</text>
+<text x="335" y="281" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">701AR</text>
+<polyline points="290,200 335,219" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="335" cy="200" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="335" y="199" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="335" y="211" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">701AR</text>
+<polyline points="290,545 335,564" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="335" cy="545" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="335" y="544" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">LT</text>
+<text x="335" y="556" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">701AA</text>
+<polyline points="820,190 760,202" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="760" cy="183" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="760" y="182" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="760" y="194" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">701AP</text>
+<polyline points="820,590 760,586" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="760" cy="605" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="760" y="604" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="760" y="616" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">701AS</text>
+<text x="474" y="495" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#946200" text-anchor="start">Valve hardware, actuation and</text>
+<text x="474" y="514" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#946200" text-anchor="start">loss-of-power state: unresolved</text>
+<polyline points="700,660 880,660 880,610" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="940,610 940,690 1100,690" fill="none" stroke="#795687" stroke-width="2"/>
+<rect x="828" y="651" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="830,653 850,667 850,653 830,667 830,653" fill="none" stroke="#24768a" stroke-width="1.6"/>
+<text x="840" y="644" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="middle">V-701AN</text>
+<rect x="988" y="681" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="990,683 1010,697 1010,683 990,697 990,683" fill="none" stroke="#795687" stroke-width="1.6"/>
+<text x="1000" y="674" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#795687" text-anchor="middle">V-701AR</text>
+<polyline points="772,656 780,660 772,664" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="784,652 784,668" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="780" y="642" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-701A</text>
+<text x="700" y="682" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#24768a" text-anchor="start">N-701A from H-700N (sheet 4)</text>
+<text x="1105" y="708" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#795687" text-anchor="end">G-701A to H-700R (sheet 4)</text>
+<polyline points="1077,686 1085,690 1077,694" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="45" y="729" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Arrows on salt line show injection; recovery reverses flow. Gas lines from reservoir/chamber: 25 mm OD visual allowance.</text>
+<text x="45" y="746" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Amber instruments are proposals. Heater controls, relief paths and compressor nonreturn details remain open.</text>
+<text x="45" y="763" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Charge and discharge service valves are closed in normal duty. Separate return goes to gas treatment before any release.</text>
+<text x="45" y="780" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">This sheet defines functions and endpoints. It does not assign shutdown logic, pressure ratings, valve sizing or insertion time.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-AS-001 | Rev A-draft | 2026-10-15 | Functional discussion draft</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 1 / 4 | Not to scale</text>
+</svg>

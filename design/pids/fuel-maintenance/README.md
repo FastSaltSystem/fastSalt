@@ -1,5 +1,7 @@
 # WISTR fuel-maintenance P&ID
 
+**Public drawing:** [15 October review snapshot](../../../results/2026-10-15/README.md#fuel-maintenance). Links into `outputs/` below refer to local builds and are not hosted on GitHub.
+
 Revision B3 draft, 15 October 2026. This replaces the earlier annotated illustration with a connected, tagged P&ID. The original drawing remains a reference; the owner's subsequent descriptions control the additions and clarifications.
 
 - [Three-sheet P&ID PDF](outputs/current/WISTR-fuel-maintenance-PID.pdf)

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 848" role="img"><title>WISTR absorber system sheet 3</title>
+<rect x="0" y="0" width="1200" height="848" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Capacity check against the current 3D model</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">Source charges retained; measured site elevations; owner excludes the 0.30 m bottom-reflector region</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="45" y="149" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#173345" text-anchor="start">VERTICAL GEOMETRY</text>
+<rect x="80" y="185" width="110" height="65" fill="#f3e1d7" stroke="#a75330" stroke-width="1.3"/>
+<text x="135" y="210" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">Reservoir</text>
+<text x="135" y="231" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">643 L gross</text>
+<rect x="100" y="430" width="90" height="185" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<rect x="100" y="443" width="90" height="172" fill="#d6e5e6" stroke="#24768a" stroke-width="1.3"/>
+<polyline points="190,250 215,250" fill="none" stroke="#546772" stroke-width="1"/>
+<text x="220" y="254" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Reservoir bottom Z = -0.05 m</text>
+<polyline points="190,430 215,430" fill="none" stroke="#546772" stroke-width="1"/>
+<text x="220" y="434" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Tank top Z = -3.62 m</text>
+<polyline points="190,458 215,458" fill="none" stroke="#546772" stroke-width="1"/>
+<text x="220" y="462" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Core top Z = -3.87 m</text>
+<polyline points="190,603 215,603" fill="none" stroke="#546772" stroke-width="1"/>
+<text x="220" y="607" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Chamber/core bottom = -7.27 m</text>
+<polyline points="65,250 65,430" fill="none" stroke="#546772" stroke-width="1"/>
+<text x="75" y="355" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">3.57 m</text>
+<text x="102" y="520" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Active</text>
+<text x="102" y="540" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">3.4 m</text>
+<text x="102" y="560" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">band</text>
+<text x="530" y="149" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#173345" text-anchor="start">VOLUMES PER ASSEMBLY / CIRCUIT</text>
+<rect x="530" y="165" width="330" height="29" fill="#e5edf2" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="184.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Item</text>
+<rect x="860" y="165" width="270" height="29" fill="#e5edf2" stroke="#ced8df" stroke-width="1.3"/>
+<text x="869" y="184.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Volume</text>
+<rect x="530" y="194" width="330" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="213.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Absorber tank (both chambers)</text>
+<rect x="860" y="194" width="270" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="869" y="213.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">613.2 L gross</text>
+<rect x="530" y="223" width="330" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="242.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Active-height absorber tank envelope</text>
+<rect x="860" y="223" width="270" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="869" y="242.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">571.2 L gross</text>
+<rect x="530" y="252" width="330" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="271.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Source primary + secondary</text>
+<rect x="860" y="252" width="270" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="869" y="271.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">352.7 L salt</text>
+<rect x="530" y="281" width="330" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="300.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">3 mm wall/partition trial</text>
+<rect x="860" y="281" width="270" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="869" y="300.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">526.1 L active capacity</text>
+<rect x="530" y="310" width="330" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="329.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Each external salt reservoir</text>
+<rect x="860" y="310" width="270" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="869" y="329.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">643.4 L gross</text>
+<rect x="530" y="339" width="330" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="358.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Each module lower cylinder</text>
+<rect x="860" y="339" width="270" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="869" y="358.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">643.4 L gross</text>
+<text x="530" y="403" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#173345" text-anchor="start">IDEAL GAS SPACE PER MODULE</text>
+<rect x="530" y="420" width="180" height="29" fill="#e5edf2" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="439.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Case</text>
+<rect x="710" y="420" width="140" height="29" fill="#e5edf2" stroke="#ced8df" stroke-width="1.3"/>
+<text x="719" y="439.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Pressure</text>
+<rect x="850" y="420" width="140" height="29" fill="#e5edf2" stroke="#ced8df" stroke-width="1.3"/>
+<text x="859" y="439.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Surge</text>
+<rect x="990" y="420" width="140" height="29" fill="#e5edf2" stroke="#ced8df" stroke-width="1.3"/>
+<text x="999" y="439.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">Total</text>
+<rect x="530" y="449" width="180" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="468.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Primary active</text>
+<rect x="710" y="449" width="140" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="719" y="468.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">158.9 L</text>
+<rect x="850" y="449" width="140" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="859" y="468.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">356.1 L</text>
+<rect x="990" y="449" width="140" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="999" y="468.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">515.0 L</text>
+<rect x="530" y="478" width="180" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="497.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Secondary active</text>
+<rect x="710" y="478" width="140" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="719" y="497.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">193.8 L</text>
+<rect x="850" y="478" width="140" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="859" y="497.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">422.2 L</text>
+<rect x="990" y="478" width="140" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="999" y="497.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">616.0 L</text>
+<rect x="530" y="507" width="180" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="526.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Primary + gas</text>
+<rect x="710" y="507" width="140" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="719" y="526.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">158.9 L</text>
+<rect x="850" y="507" width="140" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="859" y="526.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">363.1 L</text>
+<rect x="990" y="507" width="140" height="29" fill="#f4f7f9" stroke="#ced8df" stroke-width="1.3"/>
+<text x="999" y="526.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">522.0 L</text>
+<rect x="530" y="536" width="180" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="539" y="555.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Secondary + gas</text>
+<rect x="710" y="536" width="140" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="719" y="555.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">193.8 L</text>
+<rect x="850" y="536" width="140" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="859" y="555.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">430.1 L</text>
+<rect x="990" y="536" width="140" height="29" fill="white" stroke="#ced8df" stroke-width="1.3"/>
+<text x="999" y="555.14" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">623.9 L</text>
+<text x="530" y="590" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">+ gas = 0.25 m upper space retained as gas, not salt.</text>
+<text x="530" y="610" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Lower-cylinder fit is tight for secondary; upper box space</text>
+<text x="530" y="630" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">may be needed. Heads, walls and equipment are additional.</text>
+<text x="45" y="686" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Gas-space estimates use equal-temperature isothermal balances, source-derived density, zero heel and prefilled salt lines.</text>
+<text x="45" y="706" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Both cases exclude the bottom reflector. The second includes provisional upper gas space; neither adds salt below the core.</text>
+<text x="45" y="726" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">No updated injection time: viscosity, final hydraulic route, gas restrictions and required shutdown time remain unresolved.</text>
+<text x="45" y="746" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Source: AbsorberSaltInjectionTime.docx, pp. 1-6. See the editable Hurmet worksheet for equations, assumptions and checks.</text>
+<text x="45" y="766" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">The existing 3D salt tubes stop at the absorber tank top. External connections at the active-core bottom are shown on sheet 1, pending 3D routing.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-AS-003 | Rev A-draft | 2026-10-15 | Functional discussion draft</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 3 / 4 | Not to scale</text>
+</svg>

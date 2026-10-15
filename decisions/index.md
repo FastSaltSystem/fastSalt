@@ -1174,10 +1174,17 @@ Date: 2026-10-15. The owner adds an off-gas selection to the surge-connected mai
 
 Revision B3 of the [fuel-maintenance P&ID](../design/pids/fuel-maintenance/README.md) shows the branches, position schedule and operator-only condition. Existing automatic remove/fill/small-addition sequences do not select this position. Shared pressure units, existing gas-room interfaces and 3D geometry remain unchanged.
 
+## D-077 — Public starting pages and selected review results
+
+Date: 2026-10-15. The owner requests public starting pages and viewable results after publishing both repositories under FastSaltSystem. Keep the project hub and model sources in their existing repositories, with reader-oriented READMEs and a branch/pull-request contribution workflow.
+
+Preserve selected existing P&ID PDFs, SVG sheets, registers and checks in `fastSalt/results/2026-10-15/`. Preserve the existing control-annex site previews and check record in `fastSaltModels/results/2026-10-15/`; reuse already tracked reactor, turbine and insulation checkpoints in the gallery. Record source commit, original paths, sizes and SHA-256 hashes. Keep routine outputs ignored, retain dated snapshots and distinguish snapshot date from drawing revision. The hub links to the pinned model publication commit so its preview remains traceable.
+
+No new engineering analysis, geometry, university-paper redistribution or license selection is introduced. Hurmet worksheets remain editable sources; their interactive local HTML views are not claimed to work on GitHub. See the [public results index](../results/README.md).
+
 ## Proposals not yet adopted
 
 - Extending the D-052 resolved assembly definition to additional plant systems and qualified analysis adapters.
-- Public GitHub organization and repository names.
 - Code, documentation, and design-material licensing choices.
 - Final student and university repository arrangements.
 
