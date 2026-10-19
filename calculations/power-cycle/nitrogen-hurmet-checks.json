@@ -1,0 +1,13 @@
+{
+  "HeatPerMass": 298667.567191198,
+  "MassFlow": 33.48204190379433,
+  "TurbinePower": 8274.316738791073,
+  "CompressorPower": 7164.528969368527,
+  "SurplusPower": 944.3014346467231,
+  "CoolerHeat": 8.890212230577456,
+  "EnergyResidual": 0,
+  "AirFlow": 75.81954424742644,
+  "FanPower": 60.75283994184811,
+  "ElectricAfterFan": 836.3335229725388,
+  "MarginAtThirtyMW": 2379.01029174691
+}

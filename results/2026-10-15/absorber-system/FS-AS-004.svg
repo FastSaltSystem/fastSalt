@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 848" role="img"><title>WISTR absorber system sheet 4</title>
+<rect x="0" y="0" width="1200" height="848" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Separate nitrogen charging and gas discharge</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">Twelve modules; separate clean supply and treatment-return headers; internal surge-vessel connections are provisional</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="45" y="145" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">SV service ports shown; one module per absorber chamber. All sizes and charging pressures remain unresolved.</text>
+<polyline points="77,260 77,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="113,260 113,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="113,405 113,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="62" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="95" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-701A</text>
+<text x="95" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="95" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">701A</text>
+<rect x="68" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="70,301 84,301 70,319 84,319 70,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="77" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-701AN</text>
+<rect x="104" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="106,281 120,281 106,299 120,299 106,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="113" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-701AR</text>
+<polyline points="73,368 77,360 81,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="70,356 84,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="77" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-701A</text>
+<polyline points="117,462 113,470 109,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="77" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-701A</text>
+<text x="113" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-701A</text>
+<polyline points="162,260 162,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="198,260 198,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="198,405 198,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="147" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="180" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-701B</text>
+<text x="180" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="180" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">701B</text>
+<rect x="153" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="155,301 169,301 155,319 169,319 155,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="162" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-701BN</text>
+<rect x="189" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="191,281 205,281 191,299 205,299 191,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="198" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-701BR</text>
+<polyline points="158,368 162,360 166,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="155,356 169,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="162" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-701B</text>
+<polyline points="202,462 198,470 194,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="162" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-701B</text>
+<text x="198" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-701B</text>
+<polyline points="247,260 247,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="283,260 283,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="283,405 283,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="232" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="265" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-702A</text>
+<text x="265" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="265" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">702A</text>
+<rect x="238" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="240,301 254,301 240,319 254,319 240,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="247" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-702AN</text>
+<rect x="274" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="276,281 290,281 276,299 290,299 276,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="283" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-702AR</text>
+<polyline points="243,368 247,360 251,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="240,356 254,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="247" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-702A</text>
+<polyline points="287,462 283,470 279,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="247" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-702A</text>
+<text x="283" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-702A</text>
+<polyline points="332,260 332,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="368,260 368,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="368,405 368,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="317" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="350" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-702B</text>
+<text x="350" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="350" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">702B</text>
+<rect x="323" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="325,301 339,301 325,319 339,319 325,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="332" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-702BN</text>
+<rect x="359" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="361,281 375,281 361,299 375,299 361,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="368" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-702BR</text>
+<polyline points="328,368 332,360 336,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="325,356 339,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="332" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-702B</text>
+<polyline points="372,462 368,470 364,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="332" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-702B</text>
+<text x="368" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-702B</text>
+<polyline points="417,260 417,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="453,260 453,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="453,405 453,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="402" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="435" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-703A</text>
+<text x="435" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="435" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">703A</text>
+<rect x="408" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="410,301 424,301 410,319 424,319 410,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="417" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-703AN</text>
+<rect x="444" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="446,281 460,281 446,299 460,299 446,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="453" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-703AR</text>
+<polyline points="413,368 417,360 421,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="410,356 424,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="417" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-703A</text>
+<polyline points="457,462 453,470 449,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="417" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-703A</text>
+<text x="453" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-703A</text>
+<polyline points="502,260 502,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="538,260 538,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="538,405 538,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="487" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="520" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-703B</text>
+<text x="520" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="520" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">703B</text>
+<rect x="493" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="495,301 509,301 495,319 509,319 495,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="502" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-703BN</text>
+<rect x="529" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="531,281 545,281 531,299 545,299 531,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="538" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-703BR</text>
+<polyline points="498,368 502,360 506,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="495,356 509,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="502" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-703B</text>
+<polyline points="542,462 538,470 534,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="502" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-703B</text>
+<text x="538" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-703B</text>
+<polyline points="587,260 587,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="623,260 623,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="623,405 623,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="572" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="605" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-704A</text>
+<text x="605" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="605" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">704A</text>
+<rect x="578" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="580,301 594,301 580,319 594,319 580,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="587" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-704AN</text>
+<rect x="614" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="616,281 630,281 616,299 630,299 616,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="623" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-704AR</text>
+<polyline points="583,368 587,360 591,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="580,356 594,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="587" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-704A</text>
+<polyline points="627,462 623,470 619,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="587" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-704A</text>
+<text x="623" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-704A</text>
+<polyline points="672,260 672,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="708,260 708,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="708,405 708,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="657" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="690" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-704B</text>
+<text x="690" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="690" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">704B</text>
+<rect x="663" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="665,301 679,301 665,319 679,319 665,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="672" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-704BN</text>
+<rect x="699" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="701,281 715,281 701,299 715,299 701,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="708" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-704BR</text>
+<polyline points="668,368 672,360 676,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="665,356 679,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="672" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-704B</text>
+<polyline points="712,462 708,470 704,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="672" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-704B</text>
+<text x="708" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-704B</text>
+<polyline points="757,260 757,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="793,260 793,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="793,405 793,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="742" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="775" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-705A</text>
+<text x="775" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="775" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">705A</text>
+<rect x="748" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="750,301 764,301 750,319 764,319 750,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="757" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-705AN</text>
+<rect x="784" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="786,281 800,281 786,299 800,299 786,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="793" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-705AR</text>
+<polyline points="753,368 757,360 761,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="750,356 764,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="757" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-705A</text>
+<polyline points="797,462 793,470 789,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="757" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-705A</text>
+<text x="793" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-705A</text>
+<polyline points="842,260 842,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="878,260 878,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="878,405 878,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="827" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="860" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-705B</text>
+<text x="860" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="860" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">705B</text>
+<rect x="833" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="835,301 849,301 835,319 849,319 835,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="842" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-705BN</text>
+<rect x="869" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="871,281 885,281 871,299 885,299 871,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="878" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-705BR</text>
+<polyline points="838,368 842,360 846,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="835,356 849,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="842" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-705B</text>
+<polyline points="882,462 878,470 874,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="842" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-705B</text>
+<text x="878" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-705B</text>
+<polyline points="927,260 927,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="963,260 963,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="963,405 963,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="912" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="945" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-706A</text>
+<text x="945" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="945" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">706A</text>
+<rect x="918" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="920,301 934,301 920,319 934,319 920,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="927" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-706AN</text>
+<rect x="954" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="956,281 970,281 956,299 970,299 956,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="963" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-706AR</text>
+<polyline points="923,368 927,360 931,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="920,356 934,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="927" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-706A</text>
+<polyline points="967,462 963,470 959,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="927" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-706A</text>
+<text x="963" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-706A</text>
+<polyline points="1012,260 1012,400" fill="none" stroke="#24768a" stroke-width="1.8"/>
+<polyline points="1048,260 1048,395" fill="none" stroke="#795687" stroke-width="1.8"/>
+<polyline points="1048,405 1048,520" fill="none" stroke="#795687" stroke-width="1.8"/>
+<rect x="997" y="190" width="66" height="70" fill="#f4f7f9" stroke="#173345" stroke-width="1.3"/>
+<text x="1030" y="215" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#173345" text-anchor="middle">SV-706B</text>
+<text x="1030" y="235" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">Module</text>
+<text x="1030" y="251" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">706B</text>
+<rect x="1003" y="299" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="1005,301 1019,301 1005,319 1019,319 1005,301" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="1012" y="337" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">V-706BN</text>
+<rect x="1039" y="279" width="18" height="22" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="1041,281 1055,281 1041,299 1055,299 1041,281" fill="none" stroke="#795687" stroke-width="1.5"/>
+<text x="1048" y="317" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#795687" text-anchor="middle">V-706BR</text>
+<polyline points="1008,368 1012,360 1016,368" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="1005,356 1019,356" fill="none" stroke="#24768a" stroke-width="1.5"/>
+<text x="1012" y="382" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="normal" fill="#24768a" text-anchor="middle">NRV-706B</text>
+<polyline points="1052,462 1048,470 1044,462" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="1012" y="427" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#24768a" text-anchor="middle">N-706B</text>
+<text x="1048" y="545" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#795687" text-anchor="middle">G-706B</text>
+<polyline points="45,400 1130,400" fill="none" stroke="#24768a" stroke-width="2.5"/>
+<polyline points="113,520 1140,520" fill="none" stroke="#795687" stroke-width="2.5"/>
+<circle cx="77" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="113" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="162" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="198" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="247" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="283" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="332" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="368" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="417" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="453" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="502" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="538" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="587" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="623" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="672" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="708" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="757" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="793" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="842" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="878" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="927" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="963" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<circle cx="1012" cy="400" r="3" stroke="#24768a" fill="#24768a" stroke-width="1.5"/>
+<circle cx="1048" cy="520" r="3" stroke="#795687" fill="#795687" stroke-width="1.5"/>
+<text x="45" y="388" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#24768a" text-anchor="start">H-700N</text>
+<text x="45" y="508" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#795687" text-anchor="start">H-700R</text>
+<polyline points="220,610 220,580 45,580 45,400" fill="none" stroke="#24768a" stroke-width="2.3"/>
+<polyline points="1140,520 1140,580 930,580 930,610" fill="none" stroke="#795687" stroke-width="2.3"/>
+<polyline points="41,463 45,455 49,463" fill="none" stroke="#24768a" stroke-width="2"/>
+<polyline points="934,592 930,600 926,592" fill="none" stroke="#795687" stroke-width="2"/>
+<text x="230" y="575" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#24768a" text-anchor="start">N-700</text>
+<text x="1000" y="575" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#795687" text-anchor="start">G-700</text>
+<rect x="70" y="610" width="320" height="75" fill="#edf6f8" stroke="#24768a" stroke-width="1.3"/>
+<rect x="800" y="610" width="320" height="75" fill="#f3eff7" stroke="#795687" stroke-width="1.3"/>
+<text x="85" y="633" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">B-700N  Nitrogen charging supply</text>
+<text x="85" y="653" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">From B-602 distribution in gas-treatment area</text>
+<text x="85" y="673" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Supply isolation / conditioning: details pending</text>
+<text x="815" y="633" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">B-700T  Gas-treatment inlet</text>
+<text x="815" y="653" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Service discharge enters before treatment</text>
+<text x="815" y="673" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Treatment capacity and backpressure: pending</text>
+<text x="420" y="630" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Separate lines run between the</text>
+<text x="420" y="651" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">gas-treatment area and modules.</text>
+<text x="420" y="672" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">No direct atmospheric discharge shown.</text>
+<text x="45" y="720" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Normal duty: both module service isolation valves closed. Charge: N open / R closed. Discharge: N closed / R open.</text>
+<text x="45" y="741" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">These are intended connection states, not procedures. Valve actuation, fail positions, sequencing and pressure limits are unresolved.</text>
+<text x="45" y="762" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">NRV symbols reserve charging-branch nonreturn functions; device selection and backflow-protection design remain open.</text>
+<text x="45" y="783" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Surge-vessel service ports are provisional. Servicing other isolated gas spaces and module-side dead-leg volumes need review.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-AS-004 | Rev A-draft | 2026-10-15 | Functional discussion draft</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 4 / 4 | Not to scale</text>
+</svg>

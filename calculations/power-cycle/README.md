@@ -9,6 +9,56 @@ Start with the [Hurmet worksheet](Rankine%20cycle%20-%20Hurmet.md), the
 [state table](rankine-states.csv) and [full calculation results](rankine-results.json).
 No Blender equipment has been resized from this preliminary calculation.
 
+## Auxiliary Brayton cooler overview
+
+The four-case comparison is preserved as **[RS-008, Revision A - 19 October 2026](../../research/auxiliary-brayton-cooling/README.md)**, with a PDF report and an archived source package.
+
+Start with the **[four-case overview](brayton-overview.md)** for steam, nitrogen, open air and supercritical CO₂ at 30 MW per train. It consolidates the saved results, power margins, flow-volume comparisons and historical pump-loss basis. [Local browser view](preview/brayton-overview.html) (generated; not included in Git).
+
+## Auxiliary steam Brayton cooler — exploratory screen
+
+12 October 2026. [Steam Brayton cooler — Hurmet](Steam%20Brayton%20cooler%20-%20Hurmet.md) tests a separate non-condensing auxiliary mode using the current generator temperature endpoints, 560/830 K. The provisional 5-to-10 bar absolute trial with 85% compressor / 88% turbine efficiencies, 98% shaft transfer and 2% pressure loss per exchanger yields about 267 kW available shaft power per 10 MW heat input. An illustrative 63 kW air-fan allowance leaves 203 kW before salt pumps and other auxiliaries. Lower machine efficiencies or larger pressure losses can remove the margin.
+
+The requested **8:1** comparison retains those temperature endpoints only after lowering pressure enough to keep the compressor inlet dry. A 5 kPa suction / 40 kPa discharge trial gives 1.36 MW surplus per 10 MW heat input, but approximately 521 m³/s inlet volume flow versus 7.19 m³/s for 2:1. Throttling a continuous 24 MPa supply is analyzed separately: it lowers temperature and does not eliminate recompression to the generator pressure.
+
+This is an exploratory calculation, not an adopted cooling system or a revision to the main Rankine cycle. Existing-generator operation at lower pressure, local salt freezing, actual duties, machinery maps and startup remain unverified. Salt-circulation power now has the preliminary estimate below. [Python and full results](brayton-cooler-results.json) include pressure-ratio and loss sensitivities, dry-path checks and an IF97 property comparison. Reproduce with `python brayton_cooler.py`, `python publish_brayton_cooler.py`, then `node check_brayton_hurmet.cjs` using the same Hurmet engine environment below.
+
+## Brayton-powered salt circulation — preliminary estimate
+
+[Brayton-driven salt pump — Hurmet](Brayton-driven%20salt%20pump%20-%20Hurmet.md) applies the original generator friction correlation at reduced flow, with 50% additional loop loss. Using the surplus from a 10 MW cooler gives 2.084 m³/s at 71.23 kPa for 2:1, or 4.099 m³/s at 231.87 kPa for the vacuum 8:1 trial, per leg. Provisional alternator/motor/pump efficiencies are 95%/96%/80%. The worksheet distinguishes transport at a 65 K salt drop from actual cooler duty, includes heat returned by pumping, and compares sharing a single 10 MW trial across three legs. It is not a machinery selection or an adopted cooling design.
+
+Run `python brayton_salt_pump.py`, then `node check_brayton_salt_pump.cjs` with the Hurmet engine environment below. Python imports the preceding cycle results and solves flow roots; Hurmet independently verifies hydraulics and energy/power balances. Thirty-two numerical comparisons, save/reopen, and two input sensitivities are checked. Recompute roots in Python after physical input changes.
+
+## Balanced auxiliary fan and salt-pump demand — 13 October 2026
+
+[Fan and salt-pump balance — Hurmet](Brayton%20fan%20and%20salt%20pump%20balance%20-%20Hurmet.md) sizes both electric loads against the cycle surplus before the fan deduction. At 30 MW per leg, the 2:1 case produces 760.5 kW electrical surplus, needs 130.0 kW for salt circulation and 198.1 kW for air flow, and retains 432.4 kW. A 50 MW case is also positive. These assume a chosen 10 K salt drop, 500 Pa air-system loss, 30→130°C air and machinery/coolers scaled to the heat duty. The air-temperature/pressure sensitivity includes a failed power balance. The 8:1 comparison retains its vacuum-volume limitation.
+
+The 69.6 MW zero-margin result is a conditional mathematical boundary, not a selected or verified cooling capacity. Source hashes and results are in `brayton-fan-pump-results.json`. Reproduce with `python brayton_fan_pump_balance.py` and `node check_brayton_fan_pump.cjs`. Seventeen Hurmet numerical checks, save/reopen, altered heat duty, fan-pressure sensitivity and a deficit case pass.
+
+## Nitrogen alternative — 13 October 2026
+
+[Nitrogen versus steam — Hurmet](Nitrogen%20versus%20steam%20Brayton%20-%20Hurmet.md) compares CoolProp real-nitrogen cases with the preserved steam results. Equal-pressure 2:1 cases give nearly equal surplus. A 4:1, 10→40 bar nitrogen trial gives 944 kW shaft surplus per 10 MW, 3.56 m³/s compressor-inlet volume and 84°C cooler outlet; its ideal-counterflow cooler UA is approximately 78 versus 41 kW/K for steam at 2:1. Fixed-endpoint 8:1 nitrogen cannot reject heat solely to 30°C air; a 45°C compressor-inlet variant raises heater inlet to 346°C. Machinery/pressure sensitivities and the 30 MW fan/pump budget are included.
+
+Reproduce with `nitrogen_brayton.py` in the CoolProp environment, `publish_nitrogen_brayton.py`, and `check_nitrogen_brayton.cjs` with Hurmet/Temml configured. Python checks energy, entropy, scaling, an ideal-gas density limit and the rejected air-cooling case. Hurmet passes eleven numerical comparisons, save/reopen and fan-pressure sensitivity. No working fluid or shared-generator changeover arrangement has been selected.
+
+## Open-air alternative — 13 October 2026
+
+[Open-air Brayton cooler — Hurmet](Open-air%20Brayton%20cooler%20-%20Hurmet.md) compares ratios 2, 4, 8 and a 6.832:1 case matching the preceding heater endpoints. The matched case uses 30°C atmospheric intake, 500 Pa intake loss, 2% heater loss and 1 kPa exhaust backpressure; no cooler fan is deducted. It produces 1.484 MW shaft surplus per 10 MW, with roughly 30 m³/s inlet and 53 m³/s atmospheric exhaust. At 30 MW the salt-pump-adjusted electrical margin is 4.10 MW. These are scalable operating-point estimates, not equipment ratings or an approved discharge arrangement.
+
+Run `open_air_brayton.py` in the CoolProp environment, then `check_open_air_brayton.cjs` with Hurmet/Temml configured. Python checks energy/entropy, matched heater inlet and duty scaling; ten Hurmet numerical comparisons, save/reopen and alternator-efficiency sensitivity pass. JSON includes warmer ambient, poorer machine efficiencies and increased pressure-loss sensitivities.
+
+## Auxiliary cooler size screen — 13 October 2026
+
+[Brayton cooler size comparison — Hurmet](Brayton%20cooler%20size%20comparison%20-%20Hurmet.md) compares the same 30 MW-per-train duty. Calculated powers, bores, airflow face areas and cooler UA are distinct from explicitly provisional machinery/cooler boxes and plots. Initial plots are 504/600/512 m² for steam/nitrogen/open-air respectively; differences are not significant enough to rank footprints. The existing salt heater is excluded and its reuse remains unverified. Manufacturer gas-turbine packages provide only a scale benchmark, not selected equipment.
+
+Run `python brayton_size_screen.py`, then `node check_brayton_size.cjs` with Hurmet/Temml configured. Twelve numerical checks, save/reopen and velocity sensitivity pass. None of these layout reservations modifies the accepted site graphics or selects a cooling architecture.
+
+## Simple CO₂ loop — 13 October 2026
+
+[Simple CO₂ Brayton cooler — Hurmet](Simple%20CO2%20Brayton%20cooler%20-%20Hurmet.md) examines an unrecuperated 10–20 MPa loop for compact heat removal. The matched-temperature 30 MW case has 0.75 m³/s compressor inlet, 6.64 MW compressor duty and 655 kW nominal electrical margin after fan/pump loads, but about 29 MW still goes to a separate outdoor dry cooler. Cases at 100°C and 40°C compressor inlet illustrate machinery/cooler tradeoffs. Nitrogen at the same pressures is included to avoid attributing all compactness to CO₂. Machine-efficiency sensitivity reduces the matched-case margin to about 12 kW. Student work on the generator's emergency air passages is explicitly excluded.
+
+Run `co2_brayton.py` with CoolProp available, then `check_co2_brayton.cjs` with Hurmet/Temml configured. Energy/entropy, matched heater inlet, duty scaling, cooler-integration convergence and twelve Hurmet numerical checks pass. No package dimensions or qualified cooling function are established.
+
 ## Current equipment and layout basis — motor BFP
 
 D-029 follows the owner's instruction to proceed with the motor-driven BFP

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 850" role="img"><title>WISTR coolant system sheet 2</title>
+<rect x="0" y="0" width="1200" height="850" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Coolant storage, transfer and review points</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">Common low-point tee; pressure gas empties TK-401 and then sweeps L-403 back to coolant preparation.</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<rect x="35" y="165" width="225" height="90" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="52" y="190" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">A / TO / FROM R-101 BOTTOM</text>
+<text x="52" y="213" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Continuation from sheet 1</text>
+<text x="52" y="235" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Drain to storage / refill reactor</text>
+<polyline points="260,208 550,208 550,316 608,316" fill="none" stroke="#274453" stroke-width="2.7"/>
+<polyline points="402,204 410,208 402,212" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="398,212 390,208 398,204" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="554,291 550,299 546,291" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="546,287 550,279 554,287" fill="none" stroke="#274453" stroke-width="2"/>
+<rect x="310" y="199" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="312,201 332,215 332,201 312,215 312,201" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="322" y="192" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-401</text>
+<polyline points="450,208 450,180" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="450" cy="161" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="450" y="160" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="450" y="172" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">401</text>
+<text x="588" y="223" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">L-401</text>
+<text x="588" y="243" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Heated + insulated</text>
+<polyline points="587,312 595,316 587,320" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="583,320 575,316 583,312" fill="none" stroke="#274453" stroke-width="2"/>
+<circle cx="630" cy="316" r="22" stroke="#173345" fill="white" stroke-width="1.5"/>
+<text x="630" y="320" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="middle">PD</text>
+<text x="630" y="367" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">P-401</text>
+<polyline points="652,316 815,316 815,491" fill="none" stroke="#274453" stroke-width="2.7"/>
+<polyline points="762,312 770,316 762,320" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="758,320 750,316 758,312" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="819,450 815,458 811,450" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="811,446 815,438 819,446" fill="none" stroke="#274453" stroke-width="2"/>
+<rect x="728" y="307" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="730,309 750,323 750,309 730,323 730,309" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="740" y="300" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-402</text>
+<polyline points="691,316 691,288" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="691" cy="269" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="691" y="268" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="691" y="280" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">401D</text>
+<text x="717" y="375" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">L-402</text>
+<text x="502" y="426" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#546772" text-anchor="start">P-401: reversible positive-displacement pump.</text>
+<rect x="875" y="175" width="245" height="225" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="997" y="208" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold" fill="#173345" text-anchor="middle">TK-401</text>
+<text x="997" y="234" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold" fill="#173345" text-anchor="middle">Coolant storage</text>
+<text x="997" y="270" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">Insulated tank</text>
+<text x="997" y="294" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">350 mm visual allowance</text>
+<text x="997" y="321" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Single bottom branch to J-401</text>
+<text x="997" y="343" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Tank duty / usable inventory</text>
+<text x="997" y="360" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">to be established</text>
+<polyline points="1120,240 1145,229" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="1145" cy="210" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="1145" y="209" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">LT</text>
+<text x="1145" y="221" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">401</text>
+<polyline points="1120,340 1145,335" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="1145" cy="316" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="1145" y="315" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">TT</text>
+<text x="1145" y="327" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">402</text>
+<polyline points="1000,175 1000,158" fill="none" stroke="#946200" stroke-width="1" stroke-dasharray="5 4"/>
+<circle cx="1000" cy="139" r="19" stroke="#946200" fill="white" stroke-width="1.5"/>
+<text x="1000" y="138" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#946200" text-anchor="middle">PT</text>
+<text x="1000" y="150" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#946200" text-anchor="middle">402</text>
+<rect x="35" y="385" width="300" height="79" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="51" y="409" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="start">B / COOLANT SALT PREPARATION</text>
+<text x="51" y="431" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Through shared building service duct</text>
+<text x="51" y="450" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Salt supply / return and gas sweep</text>
+<polyline points="335,442 395,442 395,491 815,491" fill="none" stroke="#274453" stroke-width="2.7"/>
+<polyline points="682,487 690,491 682,495" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="678,495 670,491 678,487" fill="none" stroke="#274453" stroke-width="2"/>
+<rect x="448" y="482" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="450,484 470,498 470,484 450,498 450,484" fill="none" stroke="#946200" stroke-width="1.6"/>
+<text x="460" y="475" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#946200" text-anchor="middle">V-403</text>
+<text x="600" y="479" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="middle">L-403 | heated salt supply / return</text>
+<text x="35" y="291" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#173345" text-anchor="start">L-401/402/403: 50 mm OD</text>
+<text x="35" y="315" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">50 mm radial insulation: provisional layout allowance.</text>
+<text x="35" y="336" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Pump duty, construction and thermal design remain open.</text>
+<rect x="35" y="533" width="550" height="116" fill="#edf3f6" stroke="#edf3f6" stroke-width="1.3"/>
+<text x="47" y="555" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">DRAWING CONVENTIONS</text>
+<text x="47" y="577" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Solid pipes: established process connections; arrows show intended flow.</text>
+<text x="47" y="594" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Red / blue = hot / return salt; dark = service salt; green = coolant gas.</text>
+<text x="47" y="611" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Amber valves and instrument bubbles: proposals for review.</text>
+<text x="47" y="628" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Dashed lines: measurement association, not impulse or signal lines.</text>
+<rect x="610" y="533" width="555" height="116" fill="#edf3f6" stroke="#edf3f6" stroke-width="1.3"/>
+<text x="622" y="555" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">TAG KEY / PROPOSAL LIMITS</text>
+<text x="622" y="577" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">TT temperature; PT pressure; FT flow; LT level (measurement intent).</text>
+<text x="622" y="594" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">V = isolation valve; type, actuation and fail position unselected.</text>
+<text x="622" y="611" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">R reactor; SG steam generator; P pump; TK storage; L process line.</text>
+<text x="622" y="628" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Pressure-control intent: sheet 3; settings and protection unresolved.</text>
+<rect x="35" y="666" width="550" height="116" fill="#edf3f6" stroke="#edf3f6" stroke-width="1.3"/>
+<text x="47" y="688" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">OPEN: OPERATING AND MAINTENANCE STATES</text>
+<text x="47" y="710" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Reactor / SG drainage via P-401; tank / L-403 blowdown via G-402.</text>
+<text x="47" y="727" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Establish inventory, tank freeboard, gas space and expansion provision.</text>
+<text x="47" y="744" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Coolant-gas connections: sheet 3; agreed states: sheet 4.</text>
+<text x="47" y="761" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Check pump suction conditions and shared-plenum flow distribution.</text>
+<rect x="610" y="666" width="555" height="116" fill="#edf3f6" stroke="#edf3f6" stroke-width="1.3"/>
+<text x="622" y="688" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#173345" text-anchor="start">OPEN: PRESSURE BOUNDARIES AND PROTECTION</text>
+<text x="622" y="710" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Establish pressure profile; 1 MPa(g) is only a wall-screening case.</text>
+<text x="622" y="727" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Steam leaks to SG air side by design; resolve air-side response.</text>
+<text x="622" y="744" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Define vent / relief destinations and trapped-salt thermal protection.</text>
+<text x="622" y="761" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Review proposed isolation, measurement technology and remote access.</text>
+<polyline points="815,491 997,491 997,400" fill="none" stroke="#274453" stroke-width="2.7"/>
+<polyline points="899,487 907,491 899,495" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="895,495 887,491 895,487" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="993,439 997,431 1001,439" fill="none" stroke="#274453" stroke-width="2"/>
+<polyline points="1001,443 997,451 993,443" fill="none" stroke="#274453" stroke-width="2"/>
+<circle cx="815" cy="491" r="4" stroke="#173345" fill="#274453" stroke-width="1.5"/>
+<text x="832" y="519" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">J-401 / common low-point tee</text>
+<text x="1008" y="447" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">L-404</text>
+<polyline points="1075,175 1075,143 1145,143" fill="none" stroke="#50745e" stroke-width="2"/>
+<text x="1105" y="132" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="normal" fill="#173345" text-anchor="middle">G-402 / sheet 3</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-CS-002 | Rev B-working | 14 October 2026 | Preliminary - for discussion</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 2 / 6 | Functional schematic; not to scale</text>
+</svg>

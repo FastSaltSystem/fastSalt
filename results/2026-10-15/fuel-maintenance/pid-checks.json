@@ -1,0 +1,1172 @@
+{
+  "revision": "B3-draft",
+  "sheet_count": 3,
+  "original_svg_sha256": "c031f8326ab244b0e6950437326b652a80f9bfbb55a8663c67437bef1aaf665e",
+  "inputs": {
+    "pid.toml": "a62982343c7996d0f1ed6b099a5e212cc4fcaa45e1e21fc6e797c76ba75cfce0",
+    "fuel-maintenance.toml": "4a1aa5f4e0246f8ee0ab7fab86c121dedcfafe269e778f8f8449c179b77dfb78",
+    "layout.toml": "63f5d60771eac11a35a83a137f697e9cf1207adf4de04cdaf49b7dfdd4db753b",
+    "build.py": "2aca201427bde12c584bc4ba2d8a557bc377eb83f4c3a1ca5bb0d361802a6a54",
+    "sources/Fuel-Maintenance-original.svg": "c031f8326ab244b0e6950437326b652a80f9bfbb55a8663c67437bef1aaf665e"
+  },
+  "counts": {
+    "equipment": 10,
+    "instruments": 12,
+    "valves": 6,
+    "lines": 40,
+    "signals": 3
+  },
+  "sector_circuits": 18,
+  "shared_units": [
+    {
+      "unit": 1,
+      "server_3d": "equipment.fuel_pressure_server_1",
+      "tanks_3d": [
+        1,
+        2
+      ],
+      "sectors": [
+        2,
+        3
+      ],
+      "pressure_tank": "V-FM-01",
+      "surge_tank": "V-FM-02",
+      "compressor": "K-FM-01",
+      "controller": "PDC-FM-01",
+      "pressure_sensor": "PT-FM-91",
+      "surge_sensor": "PT-FM-92"
+    },
+    {
+      "unit": 2,
+      "server_3d": "equipment.fuel_pressure_server_2",
+      "tanks_3d": [
+        3,
+        4
+      ],
+      "sectors": [
+        4,
+        5
+      ],
+      "pressure_tank": "V-FM-03",
+      "surge_tank": "V-FM-04",
+      "compressor": "K-FM-02",
+      "controller": "PDC-FM-02",
+      "pressure_sensor": "PT-FM-93",
+      "surge_sensor": "PT-FM-94"
+    },
+    {
+      "unit": 3,
+      "server_3d": "equipment.fuel_pressure_server_3",
+      "tanks_3d": [
+        5,
+        6
+      ],
+      "sectors": [
+        6,
+        1
+      ],
+      "pressure_tank": "V-FM-05",
+      "surge_tank": "V-FM-06",
+      "compressor": "K-FM-03",
+      "controller": "PDC-FM-03",
+      "pressure_sensor": "PT-FM-95",
+      "surge_sensor": "PT-FM-96"
+    }
+  ],
+  "existing_3d_interfaces": [
+    {
+      "unit": 1,
+      "service": "Supply gas",
+      "room": "Off-gas treatment room",
+      "common_object": "site.fuel_pressure.supply_common",
+      "branch_object": "site.fuel_pressure.server_1_supply",
+      "server_object": "equipment.fuel_pressure_server_1"
+    },
+    {
+      "unit": 1,
+      "service": "Off-gas",
+      "room": "Off-gas treatment room",
+      "common_object": "site.fuel_pressure.offgas_common",
+      "branch_object": "site.fuel_pressure.server_1_return",
+      "server_object": "equipment.fuel_pressure_server_1"
+    },
+    {
+      "unit": 2,
+      "service": "Supply gas",
+      "room": "Off-gas treatment room",
+      "common_object": "site.fuel_pressure.supply_common",
+      "branch_object": "site.fuel_pressure.server_2_supply",
+      "server_object": "equipment.fuel_pressure_server_2"
+    },
+    {
+      "unit": 2,
+      "service": "Off-gas",
+      "room": "Off-gas treatment room",
+      "common_object": "site.fuel_pressure.offgas_common",
+      "branch_object": "site.fuel_pressure.server_2_return",
+      "server_object": "equipment.fuel_pressure_server_2"
+    },
+    {
+      "unit": 3,
+      "service": "Supply gas",
+      "room": "Off-gas treatment room",
+      "common_object": "site.fuel_pressure.supply_common",
+      "branch_object": "site.fuel_pressure.server_3_supply",
+      "server_object": "equipment.fuel_pressure_server_3"
+    },
+    {
+      "unit": 3,
+      "service": "Off-gas",
+      "room": "Off-gas treatment room",
+      "common_object": "site.fuel_pressure.offgas_common",
+      "branch_object": "site.fuel_pressure.server_3_return",
+      "server_object": "equipment.fuel_pressure_server_3"
+    }
+  ],
+  "drawings": [
+    {
+      "sheet": 1,
+      "ports": {
+        "XV-FM-C01.P": [
+          180,
+          370
+        ],
+        "XV-FM-C01.S": [
+          205,
+          345
+        ],
+        "XV-FM-C01.C": [
+          205,
+          395
+        ],
+        "XV-FM-C01.O": [
+          230,
+          370
+        ],
+        "XV-FM-S01.P": [
+          440,
+          370
+        ],
+        "XV-FM-S01.S": [
+          465,
+          345
+        ],
+        "XV-FM-S01.C": [
+          465,
+          395
+        ],
+        "XV-FM-S01.O": [
+          490,
+          370
+        ],
+        "XV-FM-C01.HP": [
+          150,
+          145
+        ],
+        "XV-FM-C01.HS": [
+          205,
+          195
+        ],
+        "XV-FM-C01.HO": [
+          260,
+          245
+        ],
+        "XV-FM-S01.HP": [
+          410,
+          145
+        ],
+        "XV-FM-S01.HS": [
+          465,
+          195
+        ],
+        "XV-FM-S01.HO": [
+          520,
+          245
+        ],
+        "CORE-S1-R1-R2.gas": [
+          205,
+          535
+        ],
+        "CORE-S1-R1-R2.fuel": [
+          205,
+          685
+        ],
+        "TK-FM-01A.gas": [
+          465,
+          655
+        ],
+        "TK-FM-01A.bottom": [
+          465,
+          845
+        ],
+        "TK-FM-01A.pressure": [
+          515,
+          675
+        ],
+        "TK-FM-01A.level": [
+          555,
+          750
+        ],
+        "F-REM.tee": [
+          205,
+          920
+        ],
+        "F-REM.offpage": [
+          100,
+          1010
+        ],
+        "XV-FM-C02.P": [
+          690,
+          370
+        ],
+        "XV-FM-C02.S": [
+          715,
+          345
+        ],
+        "XV-FM-C02.C": [
+          715,
+          395
+        ],
+        "XV-FM-C02.O": [
+          740,
+          370
+        ],
+        "XV-FM-S02.P": [
+          950,
+          370
+        ],
+        "XV-FM-S02.S": [
+          975,
+          345
+        ],
+        "XV-FM-S02.C": [
+          975,
+          395
+        ],
+        "XV-FM-S02.O": [
+          1000,
+          370
+        ],
+        "XV-FM-C02.HP": [
+          660,
+          145
+        ],
+        "XV-FM-C02.HS": [
+          715,
+          195
+        ],
+        "XV-FM-C02.HO": [
+          770,
+          245
+        ],
+        "XV-FM-S02.HP": [
+          920,
+          145
+        ],
+        "XV-FM-S02.HS": [
+          975,
+          195
+        ],
+        "XV-FM-S02.HO": [
+          1030,
+          245
+        ],
+        "CORE-S1-R3-R4.gas": [
+          715,
+          535
+        ],
+        "CORE-S1-R3-R4.fuel": [
+          715,
+          685
+        ],
+        "TK-FM-01B.gas": [
+          975,
+          655
+        ],
+        "TK-FM-01B.bottom": [
+          975,
+          845
+        ],
+        "TK-FM-01B.pressure": [
+          1025,
+          675
+        ],
+        "TK-FM-01B.level": [
+          1065,
+          750
+        ],
+        "XV-FM-C03.P": [
+          1200,
+          370
+        ],
+        "XV-FM-C03.S": [
+          1225,
+          345
+        ],
+        "XV-FM-C03.C": [
+          1225,
+          395
+        ],
+        "XV-FM-C03.O": [
+          1250,
+          370
+        ],
+        "XV-FM-S03.P": [
+          1460,
+          370
+        ],
+        "XV-FM-S03.S": [
+          1485,
+          345
+        ],
+        "XV-FM-S03.C": [
+          1485,
+          395
+        ],
+        "XV-FM-S03.O": [
+          1510,
+          370
+        ],
+        "XV-FM-C03.HP": [
+          1170,
+          145
+        ],
+        "XV-FM-C03.HS": [
+          1225,
+          195
+        ],
+        "XV-FM-C03.HO": [
+          1280,
+          245
+        ],
+        "XV-FM-S03.HP": [
+          1430,
+          145
+        ],
+        "XV-FM-S03.HS": [
+          1485,
+          195
+        ],
+        "XV-FM-S03.HO": [
+          1540,
+          245
+        ],
+        "CORE-S1-R5-R6.gas": [
+          1225,
+          535
+        ],
+        "CORE-S1-R5-R6.fuel": [
+          1225,
+          685
+        ],
+        "TK-FM-01C.gas": [
+          1485,
+          655
+        ],
+        "TK-FM-01C.bottom": [
+          1485,
+          845
+        ],
+        "TK-FM-01C.pressure": [
+          1535,
+          675
+        ],
+        "TK-FM-01C.level": [
+          1575,
+          750
+        ],
+        "F-ADD.tee": [
+          1485,
+          920
+        ],
+        "F-ADD.offpage": [
+          1580,
+          1010
+        ]
+      },
+      "routes": [
+        {
+          "tag": "G-XV-FM-C01-P",
+          "start": "XV-FM-C01.HP",
+          "end": "XV-FM-C01.P",
+          "points": [
+            [
+              150,
+              145
+            ],
+            [
+              150,
+              370
+            ],
+            [
+              180,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C01-S",
+          "start": "XV-FM-C01.HS",
+          "end": "XV-FM-C01.S",
+          "points": [
+            [
+              205,
+              195
+            ],
+            [
+              205,
+              345
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C01-O",
+          "start": "XV-FM-C01.HO",
+          "end": "XV-FM-C01.O",
+          "points": [
+            [
+              260,
+              245
+            ],
+            [
+              260,
+              370
+            ],
+            [
+              230,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S01-P",
+          "start": "XV-FM-S01.HP",
+          "end": "XV-FM-S01.P",
+          "points": [
+            [
+              410,
+              145
+            ],
+            [
+              410,
+              370
+            ],
+            [
+              440,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S01-S",
+          "start": "XV-FM-S01.HS",
+          "end": "XV-FM-S01.S",
+          "points": [
+            [
+              465,
+              195
+            ],
+            [
+              465,
+              345
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S01-O",
+          "start": "XV-FM-S01.HO",
+          "end": "XV-FM-S01.O",
+          "points": [
+            [
+              520,
+              245
+            ],
+            [
+              520,
+              370
+            ],
+            [
+              490,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-C01",
+          "start": "XV-FM-C01.C",
+          "end": "CORE-S1-R1-R2.gas",
+          "points": [
+            [
+              205,
+              395
+            ],
+            [
+              205,
+              535
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-S01",
+          "start": "XV-FM-S01.C",
+          "end": "TK-FM-01A.gas",
+          "points": [
+            [
+              465,
+              395
+            ],
+            [
+              465,
+              655
+            ]
+          ]
+        },
+        {
+          "tag": "F-FM-01",
+          "start": "CORE-S1-R1-R2.fuel",
+          "end": "TK-FM-01A.bottom",
+          "points": [
+            [
+              205,
+              685
+            ],
+            [
+              205,
+              920
+            ],
+            [
+              465,
+              920
+            ],
+            [
+              465,
+              845
+            ]
+          ]
+        },
+        {
+          "tag": "F-REM-01",
+          "start": "F-REM.tee",
+          "end": "F-REM.offpage",
+          "points": [
+            [
+              205,
+              920
+            ],
+            [
+              205,
+              1010
+            ],
+            [
+              100,
+              1010
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C02-P",
+          "start": "XV-FM-C02.HP",
+          "end": "XV-FM-C02.P",
+          "points": [
+            [
+              660,
+              145
+            ],
+            [
+              660,
+              370
+            ],
+            [
+              690,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C02-S",
+          "start": "XV-FM-C02.HS",
+          "end": "XV-FM-C02.S",
+          "points": [
+            [
+              715,
+              195
+            ],
+            [
+              715,
+              345
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C02-O",
+          "start": "XV-FM-C02.HO",
+          "end": "XV-FM-C02.O",
+          "points": [
+            [
+              770,
+              245
+            ],
+            [
+              770,
+              370
+            ],
+            [
+              740,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S02-P",
+          "start": "XV-FM-S02.HP",
+          "end": "XV-FM-S02.P",
+          "points": [
+            [
+              920,
+              145
+            ],
+            [
+              920,
+              370
+            ],
+            [
+              950,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S02-S",
+          "start": "XV-FM-S02.HS",
+          "end": "XV-FM-S02.S",
+          "points": [
+            [
+              975,
+              195
+            ],
+            [
+              975,
+              345
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S02-O",
+          "start": "XV-FM-S02.HO",
+          "end": "XV-FM-S02.O",
+          "points": [
+            [
+              1030,
+              245
+            ],
+            [
+              1030,
+              370
+            ],
+            [
+              1000,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-C02",
+          "start": "XV-FM-C02.C",
+          "end": "CORE-S1-R3-R4.gas",
+          "points": [
+            [
+              715,
+              395
+            ],
+            [
+              715,
+              535
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-S02",
+          "start": "XV-FM-S02.C",
+          "end": "TK-FM-01B.gas",
+          "points": [
+            [
+              975,
+              395
+            ],
+            [
+              975,
+              655
+            ]
+          ]
+        },
+        {
+          "tag": "F-FM-02",
+          "start": "CORE-S1-R3-R4.fuel",
+          "end": "TK-FM-01B.bottom",
+          "points": [
+            [
+              715,
+              685
+            ],
+            [
+              715,
+              920
+            ],
+            [
+              975,
+              920
+            ],
+            [
+              975,
+              845
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C03-P",
+          "start": "XV-FM-C03.HP",
+          "end": "XV-FM-C03.P",
+          "points": [
+            [
+              1170,
+              145
+            ],
+            [
+              1170,
+              370
+            ],
+            [
+              1200,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C03-S",
+          "start": "XV-FM-C03.HS",
+          "end": "XV-FM-C03.S",
+          "points": [
+            [
+              1225,
+              195
+            ],
+            [
+              1225,
+              345
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-C03-O",
+          "start": "XV-FM-C03.HO",
+          "end": "XV-FM-C03.O",
+          "points": [
+            [
+              1280,
+              245
+            ],
+            [
+              1280,
+              370
+            ],
+            [
+              1250,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S03-P",
+          "start": "XV-FM-S03.HP",
+          "end": "XV-FM-S03.P",
+          "points": [
+            [
+              1430,
+              145
+            ],
+            [
+              1430,
+              370
+            ],
+            [
+              1460,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S03-S",
+          "start": "XV-FM-S03.HS",
+          "end": "XV-FM-S03.S",
+          "points": [
+            [
+              1485,
+              195
+            ],
+            [
+              1485,
+              345
+            ]
+          ]
+        },
+        {
+          "tag": "G-XV-FM-S03-O",
+          "start": "XV-FM-S03.HO",
+          "end": "XV-FM-S03.O",
+          "points": [
+            [
+              1540,
+              245
+            ],
+            [
+              1540,
+              370
+            ],
+            [
+              1510,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-C03",
+          "start": "XV-FM-C03.C",
+          "end": "CORE-S1-R5-R6.gas",
+          "points": [
+            [
+              1225,
+              395
+            ],
+            [
+              1225,
+              535
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-S03",
+          "start": "XV-FM-S03.C",
+          "end": "TK-FM-01C.gas",
+          "points": [
+            [
+              1485,
+              395
+            ],
+            [
+              1485,
+              655
+            ]
+          ]
+        },
+        {
+          "tag": "F-FM-03",
+          "start": "CORE-S1-R5-R6.fuel",
+          "end": "TK-FM-01C.bottom",
+          "points": [
+            [
+              1225,
+              685
+            ],
+            [
+              1225,
+              920
+            ],
+            [
+              1485,
+              920
+            ],
+            [
+              1485,
+              845
+            ]
+          ]
+        },
+        {
+          "tag": "F-ADD-01",
+          "start": "F-ADD.offpage",
+          "end": "F-ADD.tee",
+          "points": [
+            [
+              1580,
+              1010
+            ],
+            [
+              1485,
+              1010
+            ],
+            [
+              1485,
+              920
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": 2,
+      "ports": {
+        "K-FM-03.left": [
+          620,
+          320
+        ],
+        "K-FM-03.right": [
+          680,
+          320
+        ],
+        "V-FM-05.compressor": [
+          380,
+          320
+        ],
+        "V-FM-06.compressor": [
+          1220,
+          320
+        ],
+        "V-FM-06.gas_supply": [
+          1400,
+          370
+        ],
+        "GAS-SUPPLY.boundary": [
+          1556,
+          370
+        ],
+        "V-FM-05.header": [
+          290,
+          410
+        ],
+        "HP.offpage": [
+          290,
+          475
+        ],
+        "HP.second_bank": [
+          435,
+          440
+        ],
+        "V-FM-06.header": [
+          1310,
+          410
+        ],
+        "HS.offpage": [
+          1310,
+          475
+        ],
+        "HS.second_bank": [
+          1455,
+          440
+        ],
+        "P-FM-01.left": [
+          795,
+          740
+        ],
+        "P-FM-01.right": [
+          855,
+          740
+        ],
+        "P-FM-01.boundary_left": [
+          170,
+          740
+        ],
+        "P-FM-01.boundary_right": [
+          1480,
+          740
+        ],
+        "P-FM-02.left": [
+          795,
+          900
+        ],
+        "P-FM-02.right": [
+          855,
+          900
+        ],
+        "P-FM-02.boundary_left": [
+          170,
+          900
+        ],
+        "P-FM-02.boundary_right": [
+          1480,
+          900
+        ]
+      },
+      "routes": [
+        {
+          "tag": "G-FM-91",
+          "start": "V-FM-05.compressor",
+          "end": "K-FM-03.left",
+          "points": [
+            [
+              380,
+              320
+            ],
+            [
+              620,
+              320
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-92",
+          "start": "K-FM-03.right",
+          "end": "V-FM-06.compressor",
+          "points": [
+            [
+              680,
+              320
+            ],
+            [
+              1220,
+              320
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-94",
+          "start": "GAS-SUPPLY.boundary",
+          "end": "V-FM-06.gas_supply",
+          "points": [
+            [
+              1556,
+              370
+            ],
+            [
+              1400,
+              370
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-HP",
+          "start": "V-FM-05.header",
+          "end": "HP.offpage",
+          "points": [
+            [
+              290,
+              410
+            ],
+            [
+              290,
+              475
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-HP-TK06",
+          "start": "V-FM-05.header",
+          "end": "HP.second_bank",
+          "points": [
+            [
+              290,
+              410
+            ],
+            [
+              290,
+              440
+            ],
+            [
+              435,
+              440
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-HS",
+          "start": "V-FM-06.header",
+          "end": "HS.offpage",
+          "points": [
+            [
+              1310,
+              410
+            ],
+            [
+              1310,
+              475
+            ]
+          ]
+        },
+        {
+          "tag": "G-FM-HS-TK06",
+          "start": "V-FM-06.header",
+          "end": "HS.second_bank",
+          "points": [
+            [
+              1310,
+              410
+            ],
+            [
+              1310,
+              440
+            ],
+            [
+              1455,
+              440
+            ]
+          ]
+        },
+        {
+          "tag": "F-P-FM-01-IN",
+          "start": "P-FM-01.boundary_left",
+          "end": "P-FM-01.left",
+          "points": [
+            [
+              170,
+              740
+            ],
+            [
+              795,
+              740
+            ]
+          ]
+        },
+        {
+          "tag": "F-P-FM-01-OUT",
+          "start": "P-FM-01.right",
+          "end": "P-FM-01.boundary_right",
+          "points": [
+            [
+              855,
+              740
+            ],
+            [
+              1480,
+              740
+            ]
+          ]
+        },
+        {
+          "tag": "F-P-FM-02-IN",
+          "start": "P-FM-02.boundary_left",
+          "end": "P-FM-02.left",
+          "points": [
+            [
+              170,
+              900
+            ],
+            [
+              795,
+              900
+            ]
+          ]
+        },
+        {
+          "tag": "F-P-FM-02-OUT",
+          "start": "P-FM-02.right",
+          "end": "P-FM-02.boundary_right",
+          "points": [
+            [
+              855,
+              900
+            ],
+            [
+              1480,
+              900
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sheet": 3,
+      "ports": {},
+      "routes": []
+    }
+  ],
+  "validation_scope": "Tag uniqueness, connected route endpoints, orthogonal routes, owner-defined positions, sector counts and source identity; not engineering qualification."
+}

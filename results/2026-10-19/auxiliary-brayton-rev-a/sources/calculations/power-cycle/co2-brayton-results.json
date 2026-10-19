@@ -1,0 +1,341 @@
+{
+  "date": "2026-10-13",
+  "property_model": "CoolProp 7.2.0 HEOS::CO2",
+  "matched": {
+    "inputs": {
+      "T1_K": 477.4016206698152,
+      "p_low_Pa": 10000000.0,
+      "p_high_Pa": 20000000.0,
+      "heat_W": 30000000.0,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "loss_each": 0.02
+    },
+    "states": {
+      "compressor_inlet": {
+        "p_Pa": 10000000.0,
+        "T_K": 477.4016206530389,
+        "T_C": 204.2516206530389,
+        "h_J_kg": 637391.7527978144,
+        "s_J_kgK": 2246.681858891454,
+        "rho_kg_m3": 120.57348528401467
+      },
+      "heater_inlet": {
+        "p_Pa": 20000000.0,
+        "T_K": 560.0,
+        "T_C": 286.85,
+        "h_J_kg": 711026.0303793929,
+        "s_J_kgK": 2266.561911664961,
+        "rho_kg_m3": 198.1710313589009
+      },
+      "turbine_inlet": {
+        "p_Pa": 19600000.0,
+        "T_K": 829.9999999977508,
+        "T_C": 556.8499999977508,
+        "h_J_kg": 1043911.7401560934,
+        "s_J_kgK": 2755.622363281549,
+        "rho_kg_m3": 120.91997186447433
+      },
+      "cooler_inlet": {
+        "p_Pa": 10204081.632653061,
+        "T_K": 751.8628467860714,
+        "T_C": 478.7128467860714,
+        "h_J_kg": 957077.4354167586,
+        "s_J_kgK": 2771.4763128694517,
+        "rho_kg_m3": 71.23939806911093
+      }
+    },
+    "mass_kg_s": 90.12102087567526,
+    "inlet_m3_s": 0.7474364754688175,
+    "hot_return_m3_s": 1.2650446707627545,
+    "compressor_W": 6635996.2670947,
+    "turbine_W": 7825596.190138333,
+    "available_shaft_W": 1033087.9992408662,
+    "electric_W": 981433.5992788228,
+    "air_heat_W": 28810400.076956365,
+    "air_volume_m3_s": 245.70745295683065,
+    "face_m2": 81.90248431894355,
+    "fan_electric_W": 196880.97192053738,
+    "electric_after_fan_W": 784552.6273582854,
+    "cooler_UA_W_K": 114316.5199581871,
+    "minimum_air_approach_K": 174.2516206530389,
+    "energy_residual_J_kg": 0.0,
+    "margin_after_pump_W": 654562.3501875787
+  },
+  "warm": {
+    "inputs": {
+      "T1_K": 373.15,
+      "p_low_Pa": 10000000.0,
+      "p_high_Pa": 20000000.0,
+      "heat_W": 30000000.0,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "loss_each": 0.02
+    },
+    "states": {
+      "compressor_inlet": {
+        "p_Pa": 10000000.0,
+        "T_K": 373.1500000000001,
+        "T_C": 100.00000000000011,
+        "h_J_kg": 504138.83965186635,
+        "s_J_kgK": 1930.1955658475717,
+        "rho_kg_m3": 188.56407909248986
+      },
+      "heater_inlet": {
+        "p_Pa": 20000000.0,
+        "T_K": 441.53258357911255,
+        "T_C": 168.38258357911258,
+        "h_J_kg": 552120.9461664605,
+        "s_J_kgK": 1946.5840892066487,
+        "rho_kg_m3": 296.7475553238747
+      },
+      "turbine_inlet": {
+        "p_Pa": 19600000.0,
+        "T_K": 829.9999999977508,
+        "T_C": 556.8499999977508,
+        "h_J_kg": 1043911.7401560934,
+        "s_J_kgK": 2755.622363281549,
+        "rho_kg_m3": 120.91997186447433
+      },
+      "cooler_inlet": {
+        "p_Pa": 10204081.632653061,
+        "T_K": 751.8628467860714,
+        "T_C": 478.7128467860714,
+        "h_J_kg": 957077.4354167586,
+        "s_J_kgK": 2771.4763128694517,
+        "rho_kg_m3": 71.23939806911093
+      }
+    },
+    "mass_kg_s": 61.00154855813021,
+    "inlet_m3_s": 0.32350566901031674,
+    "hot_return_m3_s": 0.8562895000734179,
+    "compressor_W": 2926982.800471392,
+    "turbine_W": 5297027.057068004,
+    "available_shaft_W": 2264103.715455252,
+    "electric_W": 2150898.5296824896,
+    "air_heat_W": 27629955.743403386,
+    "air_volume_m3_s": 235.64011721071537,
+    "face_m2": 78.54670573690512,
+    "fan_electric_W": 188814.19648294503,
+    "electric_after_fan_W": 1962084.3331995446,
+    "cooler_UA_W_K": 164414.56080834186,
+    "minimum_air_approach_K": 70.00000000000011,
+    "energy_residual_J_kg": 0.0,
+    "margin_after_pump_W": 1832094.0560288378
+  },
+  "near_critical": {
+    "inputs": {
+      "T1_K": 313.15,
+      "p_low_Pa": 10000000.0,
+      "p_high_Pa": 20000000.0,
+      "heat_W": 30000000.0,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "loss_each": 0.02
+    },
+    "states": {
+      "compressor_inlet": {
+        "p_Pa": 10000000.0,
+        "T_K": 313.15,
+        "T_C": 40.0,
+        "h_J_kg": 313042.2961051103,
+        "s_J_kgK": 1356.2583750555823,
+        "rho_kg_m3": 628.6117301458924
+      },
+      "heater_inlet": {
+        "p_Pa": 20000000.0,
+        "T_K": 335.5047276468701,
+        "T_C": 62.35472764687012,
+        "h_J_kg": 330425.8103750906,
+        "s_J_kgK": 1364.0423068823775,
+        "rho_kg_m3": 708.7365358511552
+      },
+      "turbine_inlet": {
+        "p_Pa": 19600000.0,
+        "T_K": 829.9999999977508,
+        "T_C": 556.8499999977508,
+        "h_J_kg": 1043911.7401560934,
+        "s_J_kgK": 2755.622363281549,
+        "rho_kg_m3": 120.91997186447433
+      },
+      "cooler_inlet": {
+        "p_Pa": 10204081.632653061,
+        "T_K": 751.8628467860714,
+        "T_C": 478.7128467860714,
+        "h_J_kg": 957077.4354167586,
+        "s_J_kgK": 2771.4763128694517,
+        "rho_kg_m3": 71.23939806911093
+      }
+    },
+    "mass_kg_s": 42.04708004432294,
+    "inlet_m3_s": 0.06688879323738418,
+    "hot_return_m3_s": 0.5902222812653769,
+    "compressor_W": 730926.0159614898,
+    "turbine_W": 3651128.9619679386,
+    "available_shaft_W": 2847180.36676709,
+    "electric_W": 2704821.348428735,
+    "air_heat_W": 27079797.053993553,
+    "air_volume_m3_s": 230.94812786187327,
+    "face_m2": 76.98270928729109,
+    "fan_electric_W": 185054.5896329113,
+    "electric_after_fan_W": 2519766.758795824,
+    "cooler_UA_W_K": 770205.8173348776,
+    "minimum_air_approach_K": 9.024415599610393,
+    "energy_residual_J_kg": 0.0,
+    "margin_after_pump_W": 2389776.4816251174
+  },
+  "same_pressure_nitrogen": {
+    "fluid": "Nitrogen",
+    "inputs": {
+      "ratio": 2,
+      "p_low_Pa": 10000000.0,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "loss_each": 0.02,
+      "duty_W": 30000000.0
+    },
+    "states": {
+      "compressor_inlet": {
+        "pressure_Pa": 10000000.0,
+        "temperature_K": 445.38746611034105,
+        "temperature_C": 172.23746611034107,
+        "enthalpy_J_kg": 457294.01716212276,
+        "entropy_J_kg_K": 5867.097975560364,
+        "density_kg_m3": 72.57882599249793,
+        "phase": "supercritical"
+      },
+      "heater_inlet": {
+        "pressure_Pa": 20000000.0,
+        "temperature_K": 559.9999999999999,
+        "temperature_C": 286.8499999999999,
+        "enthalpy_J_kg": 584651.3743594775,
+        "entropy_J_kg_K": 5901.737946239336,
+        "density_kg_m3": 109.7749377245299,
+        "phase": "supercritical"
+      },
+      "turbine_inlet": {
+        "pressure_Pa": 19600000.0,
+        "temperature_K": 829.9999999999999,
+        "temperature_C": 556.8499999999999,
+        "enthalpy_J_kg": 891362.6328266042,
+        "entropy_J_kg_K": 6354.896767418977,
+        "density_kg_m3": 73.77941024435289,
+        "phase": "supercritical"
+      },
+      "cooler_inlet": {
+        "pressure_Pa": 10204081.632653061,
+        "temperature_K": 713.3524050030007,
+        "temperature_C": 440.20240500300076,
+        "enthalpy_J_kg": 753689.4062515633,
+        "entropy_J_kg_K": 6381.528318351492,
+        "density_kg_m3": 46.187055341354714,
+        "phase": "supercritical"
+      }
+    },
+    "specific": {
+      "heat_in_J_kg": 306711.25846712664,
+      "heat_out_J_kg": 296395.3890894406,
+      "compressor_J_kg": 127357.35719735478,
+      "turbine_J_kg": 137673.22657504084
+    },
+    "mass_kg_s": 97.81186432455463,
+    "inlet_volume_m3_s": 1.3476639086813682,
+    "compressor_W": 12457060.542921508,
+    "turbine_W": 13466074.958881564,
+    "available_shaft_W": 739692.9167824248,
+    "air_heat_W": 28990985.58403994,
+    "energy_residual_J_kg": 0.0,
+    "minimum_air_approach_K": 142.23746611034107,
+    "air_cooling_feasible": true,
+    "required_counterflow_UA_W_K": 134383.40155601694,
+    "fan_electric_W": 198115.0349691035,
+    "electric_after_fan_W": 504593.23597419995,
+    "margin_after_pump_W": 374602.9588034933
+  },
+  "lower_machine_efficiencies": {
+    "inputs": {
+      "T1_K": 477.4016206698152,
+      "p_low_Pa": 10000000.0,
+      "p_high_Pa": 20000000.0,
+      "heat_W": 30000000.0,
+      "eta_c": 0.8,
+      "eta_t": 0.85,
+      "loss_each": 0.02
+    },
+    "states": {
+      "compressor_inlet": {
+        "p_Pa": 10000000.0,
+        "T_K": 477.4016206530389,
+        "T_C": 204.2516206530389,
+        "h_J_kg": 637391.7527978144,
+        "s_J_kgK": 2246.681858891454,
+        "rho_kg_m3": 120.57348528401467
+      },
+      "heater_inlet": {
+        "p_Pa": 20000000.0,
+        "T_K": 563.6754843953,
+        "T_C": 290.52548439530005,
+        "h_J_kg": 715628.1727282415,
+        "s_J_kgK": 2274.753179640792,
+        "rho_kg_m3": 196.36615051578354
+      },
+      "turbine_inlet": {
+        "p_Pa": 19600000.0,
+        "T_K": 829.9999999977508,
+        "T_C": 556.8499999977508,
+        "h_J_kg": 1043911.7401560934,
+        "s_J_kgK": 2755.622363281549,
+        "rho_kg_m3": 120.91997186447433
+      },
+      "cooler_inlet": {
+        "p_Pa": 10204081.632653061,
+        "T_K": 754.3448326097973,
+        "T_C": 481.19483260979734,
+        "h_J_kg": 960037.6958055997,
+        "s_J_kgK": 2775.4070624656256,
+        "rho_kg_m3": 70.98662607185038
+      }
+    },
+    "mass_kg_s": 91.38440962809757,
+    "inlet_m3_s": 0.7579146394652083,
+    "hot_return_m3_s": 1.287346852287376,
+    "compressor_W": 7149589.046758007,
+    "turbine_W": 7664780.026090739,
+    "available_shaft_W": 361895.3788109167,
+    "electric_W": 343800.6098703708,
+    "air_heat_W": 29484809.02066727,
+    "air_volume_m3_s": 251.45910178391694,
+    "face_m2": 83.81970059463897,
+    "fan_electric_W": 201489.66489095907,
+    "electric_after_fan_W": 142310.94497941175,
+    "cooler_UA_W_K": 116522.50433410179,
+    "minimum_air_approach_K": 174.2516206530389,
+    "energy_residual_J_kg": 0.0,
+    "margin_after_pump_W": 12320.667808705068
+  },
+  "checks": {
+    "energy_entropy": true,
+    "above_critical_state_points": true,
+    "duty_scaling": true,
+    "UA_grid_relative_change": 8.558205655262441e-07
+  },
+  "hurmet_checks": {
+    "MassFlow": 90.12102087567526,
+    "InletFlow": 0.7474364754688175,
+    "HotFlow": 1.2650446707627545,
+    "CompressorPower": 6.6359962670947,
+    "TurbinePower": 7.825596190138333,
+    "AvailableShaft": 1.0330879992408661,
+    "CoolerHeat": 28.810400076956366,
+    "EnergyResidual": 0,
+    "AirFlow": 245.70745295683065,
+    "FaceArea": 81.90248431894355,
+    "FanPower": 196.88097192053738,
+    "RemainingElectricity": 654.5623501875787
+  },
+  "source_hashes": {
+    "co2_brayton.py": "a58fa1dc823e7436c0b5706128fd29e301a6a5dfc484b28b8ad5579ccaa2edab",
+    "nitrogen_brayton.py": "257a92280b073dc8cbc0fa4430519dc26e8ade8f713d0763b4fc04cd7f7954d4",
+    "brayton-fan-pump-results.json": "44535d31c42446583c86d30d3d724659571a289a5ccc7f628695d5e2f532abd9"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-13",
+  "heat_per_train_MW": 30,
+  "cases": {
+    "steam": {
+      "label": "Closed steam, 2:1",
+      "heat_W": 30000000.0,
+      "mass_kg_s": 51.72695220700008,
+      "inlet_volume_m3_s": 21.572128105670636,
+      "hot_low_pressure_volume_m3_s": 34.150162521130156,
+      "compressor_W": 9546932.187042834,
+      "turbine_W": 10558651.32208686,
+      "inlet_equivalent_bore_m": 0.9568435359422266,
+      "hot_equivalent_bore_m": 1.2039011224769192,
+      "cooler_air_m3_s": 247.22449663663355,
+      "cooler_minimum_face_m2": 82.40816554554452,
+      "cooler_counterflow_UA_W_K": 122734.53735738777,
+      "provisional_reservations": {
+        "machine_m": [
+          15,
+          6,
+          5
+        ],
+        "cooler_m": [
+          12,
+          10,
+          6
+        ],
+        "plot_m": [
+          28,
+          18
+        ]
+      }
+    },
+    "nitrogen": {
+      "label": "Closed nitrogen, 4:1",
+      "heat_W": 30000000.0,
+      "mass_kg_s": 100.44612571138299,
+      "inlet_volume_m3_s": 10.671855418594244,
+      "hot_low_pressure_volume_m3_s": 17.830170931223773,
+      "compressor_W": 21493586.908105582,
+      "turbine_W": 24822950.21637322,
+      "inlet_equivalent_bore_m": 0.6729989681678672,
+      "hot_equivalent_bore_m": 0.8699057174778864,
+      "cooler_air_m3_s": 227.4586327422793,
+      "cooler_minimum_face_m2": 75.81954424742644,
+      "cooler_counterflow_UA_W_K": 234557.5073825266,
+      "provisional_reservations": {
+        "machine_m": [
+          15,
+          6,
+          5
+        ],
+        "cooler_m": [
+          16,
+          10,
+          7
+        ],
+        "plot_m": [
+          30,
+          20
+        ]
+      }
+    },
+    "air": {
+      "label": "Open air, matched 6.83:1",
+      "heat_W": 30000000.0,
+      "mass_kg_s": 103.34614097454212,
+      "inlet_volume_m3_s": 89.16923766721301,
+      "hot_low_pressure_volume_m3_s": 158.0685886281377,
+      "compressor_W": 27069371.12211774,
+      "turbine_W": 32165424.797133733,
+      "inlet_equivalent_bore_m": 2.751167019912142,
+      "hot_equivalent_bore_m": 3.6629603494243086,
+      "cooler_air_m3_s": 0,
+      "cooler_minimum_face_m2": 0.0,
+      "cooler_counterflow_UA_W_K": 0,
+      "provisional_reservations": {
+        "machine_m": [
+          22,
+          7,
+          5.5
+        ],
+        "cooler_m": null,
+        "plot_m": [
+          32,
+          16
+        ]
+      }
+    }
+  },
+  "vacuum_steam_inlet_m3_s": 1563.7057247897123,
+  "hurmet_checks": {
+    "SteamInletArea": 0.7190709368556879,
+    "SteamInletDiameter": 0.9568435359422266,
+    "SteamHotDiameter": 1.2039011224769192,
+    "SteamCoolerFace": 82.40816554554452,
+    "NitrogenInletArea": 0.3557285139531415,
+    "NitrogenInletDiameter": 0.6729989681678672,
+    "NitrogenHotDiameter": 0.8699057174778864,
+    "NitrogenCoolerFace": 75.81954424742644,
+    "AirInletArea": 5.944615844480867,
+    "AirInletDiameter": 2.751167019912142,
+    "AirHotDiameter": 3.6629603494243086,
+    "NitrogenToSteamUARatio": 1.911096195356358
+  },
+  "source_hashes": {
+    "brayton_size_screen.py": "c1d34bd1180579c3f73165c008e989474e1ef4e297cad0398921ab9d8893f822",
+    "brayton-cooler-results.json": "c2cbec81a2daebd0880ae7351e59b50d2a78a76714c53a39178962ac0ac6e2cb",
+    "nitrogen-brayton-results.json": "2e1880b154432ac2375903f1ddd8523172138361531662e284cef0dbf96d9d9a",
+    "open-air-brayton-results.json": "dcf0ad929835a2ad1d0f9c87e676f00fc31291f6e6e4a113ff02e4d5c55a7bb0",
+    "brayton-fan-pump-results.json": "44535d31c42446583c86d30d3d724659571a289a5ccc7f628695d5e2f532abd9"
+  }
+}

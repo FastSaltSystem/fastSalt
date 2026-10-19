@@ -1,0 +1,4 @@
+tag,type,line,purpose,status,normal_condition,after_actuation,sheet,burst_differential_pressure_Pa,specified_disc_temperature_C,minimum_flow_area_mm2,relieving_capacity_kg_s,material,discharge_backpressure_Pa
+RD-101,rupture_disc,L-101R,Dedicated high-level SG coolant-side emergency relief; separate from normal gas branch,accepted_for_concept,intact,open; non-reclosing,5,TBD,TBD,TBD,TBD,TBD,TBD
+RD-102,rupture_disc,L-102R,Dedicated high-level SG coolant-side emergency relief; separate from normal gas branch,accepted_for_concept,intact,open; non-reclosing,5,TBD,TBD,TBD,TBD,TBD,TBD
+RD-103,rupture_disc,L-103R,Dedicated high-level SG coolant-side emergency relief; separate from normal gas branch,accepted_for_concept,intact,open; non-reclosing,5,TBD,TBD,TBD,TBD,TBD,TBD

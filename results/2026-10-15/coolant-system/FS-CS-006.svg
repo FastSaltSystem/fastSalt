@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 850" role="img"><title>WISTR coolant system sheet 6</title>
+<rect x="0" y="0" width="1200" height="850" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Nitrogen supply - three service areas</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">Exterior utility header; separate room branches. Functional concept only: sizes, pressures and protection hardware TBD.</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<rect x="45" y="165" width="205" height="130" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="60" y="192" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">B-601</text>
+<text x="60" y="217" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Existing nitrogen tank</text>
+<text x="60" y="242" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">and vaporizer</text>
+<text x="60" y="278" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Gaseous supply outlet</text>
+<polyline points="250,230 360,230" fill="none" stroke="#467AAB" stroke-width="2.5"/>
+<text x="280" y="210" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">N-600</text>
+<polyline points="312,226 320,230 312,234" fill="none" stroke="#467AAB" stroke-width="2"/>
+<polyline points="360,230 1115,230" fill="none" stroke="#467AAB" stroke-width="4"/>
+<text x="390" y="175" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="normal" fill="#173345" text-anchor="start">H-601 / EXTERIOR CLEAN NITROGEN HEADER</text>
+<text x="390" y="198" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Wall rack below roof edges; above receiving doors</text>
+<circle cx="480" cy="230" r="4" stroke="#467AAB" fill="#467AAB" stroke-width="1.5"/>
+<polyline points="480,230 480,525" fill="none" stroke="#467AAB" stroke-width="2.5"/>
+<text x="498" y="273" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">N-601</text>
+<rect x="468" y="297" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="470,299 490,313 490,299 470,313 470,299" fill="none" stroke="#173345" stroke-width="1.6"/>
+<text x="480" y="290" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">V-601N</text>
+<rect x="370" y="350" width="220" height="90" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="382" y="375" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Exterior control reservation</text>
+<text x="382" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Regulation / backflow protection</text>
+<text x="382" y="423" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Arrangement and ratings TBD</text>
+<polyline points="484,482 480,490 476,482" fill="none" stroke="#467AAB" stroke-width="2"/>
+<rect x="370" y="525" width="220" height="120" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="382" y="550" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">B-602 / OFF-GAS AREA</text>
+<text x="382" y="575" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Existing gas distribution</text>
+<text x="382" y="600" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Room/process users TBD</text>
+<circle cx="750" cy="230" r="4" stroke="#467AAB" fill="#467AAB" stroke-width="1.5"/>
+<polyline points="750,230 750,525" fill="none" stroke="#467AAB" stroke-width="2.5"/>
+<text x="768" y="273" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">N-602</text>
+<rect x="738" y="297" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="740,299 760,313 760,299 740,313 740,299" fill="none" stroke="#173345" stroke-width="1.6"/>
+<text x="750" y="290" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">V-602N</text>
+<rect x="640" y="350" width="220" height="90" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="652" y="375" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Exterior control reservation</text>
+<text x="652" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Regulation / backflow protection</text>
+<text x="652" y="423" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Arrangement and ratings TBD</text>
+<polyline points="754,482 750,490 746,482" fill="none" stroke="#467AAB" stroke-width="2"/>
+<rect x="640" y="525" width="220" height="120" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="652" y="550" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">B-603 / FUEL RECYCLING</text>
+<text x="652" y="575" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">New nitrogen interface</text>
+<text x="652" y="600" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Room/process users TBD</text>
+<circle cx="1020" cy="230" r="4" stroke="#467AAB" fill="#467AAB" stroke-width="1.5"/>
+<polyline points="1020,230 1020,525" fill="none" stroke="#467AAB" stroke-width="2.5"/>
+<text x="1038" y="273" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">N-603</text>
+<rect x="1008" y="297" width="24" height="18" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="1010,299 1030,313 1030,299 1010,313 1010,299" fill="none" stroke="#173345" stroke-width="1.6"/>
+<text x="1020" y="290" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="middle">V-603N</text>
+<rect x="910" y="350" width="220" height="90" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="922" y="375" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Exterior control reservation</text>
+<text x="922" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Regulation / backflow protection</text>
+<text x="922" y="423" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Arrangement and ratings TBD</text>
+<polyline points="1024,482 1020,490 1016,482" fill="none" stroke="#467AAB" stroke-width="2"/>
+<rect x="910" y="525" width="220" height="120" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="922" y="550" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">B-401 / COOLANT PREP</text>
+<text x="922" y="575" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Makeup side of station</text>
+<text x="922" y="600" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">G-400 / H-401: sheet 3</text>
+<polyline points="345,462 1145,462" fill="none" stroke="#546772" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="45" y="452" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">BUILDING ENVELOPE</text>
+<text x="45" y="475" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Separate room entries</text>
+<text x="45" y="685" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="normal" fill="#173345" text-anchor="start">Clean supply only. Returning coolant gas and fuel off-gas do not enter H-601.</text>
+<text x="45" y="711" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Branch blocks show required functions, not selected regulators or a credited contamination barrier.</text>
+<text x="45" y="737" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">Detailed gas demand, return handling, controls, pressure protection and penetration seals remain unresolved.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-CS-006 | Rev B-working | 14 October 2026 | Preliminary - for discussion</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 6 / 6 | Functional schematic; not to scale</text>
+</svg>

@@ -1,0 +1,281 @@
+{
+  "study_id": "RS-008",
+  "title": "Auxiliary Brayton Cooling Options for the Fast Salt System - Preliminary Comparative Study",
+  "revision": "A",
+  "snapshot_date": "2026-10-19",
+  "review_status": "Preliminary; technical review pending",
+  "repository": "fastSalt",
+  "base_commit": "2d53cf7e668fdbe094f25d998e031da0c122f8cb",
+  "source_state": "Snapshot includes uncommitted and untracked working files. Base commit is context, not a complete source revision. File hashes identify the archived content.",
+  "report_build": {
+    "python": "3.12.14",
+    "reportlab": "4.4.9",
+    "renderer": "render_report.py"
+  },
+  "worksheet_engines": {
+    "hurmet.cjs": {
+      "sha256": "24c325bee542762dad7b1dcd3dd943a5518cb549a44e8e2f1aa4e0abcfc4ebf1",
+      "bundled": false,
+      "role": "Available local worksheet engine; not used to recompute cycle results for this issue"
+    },
+    "temml.cjs": {
+      "sha256": "21cddf155e94f5848186379b4c1dbc14f3a3492a223c20ccf4cb28261e47cfe3",
+      "bundled": false,
+      "role": "Available local worksheet engine; not used to recompute cycle results for this issue"
+    }
+  },
+  "manifest_scope": "All package files except manifest.json itself. No external files or future index edits are covered.",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 2566,
+      "sha256": "681130acd2430af56202f841c48fc228429476cc364e87c756bfc96420f06131"
+    },
+    {
+      "file": "packaging-checks.json",
+      "bytes": 384,
+      "sha256": "5c1533ebe6ca229f8f7921f16d8a99ac51265dce9a8d2a18340f8960998f11b6"
+    },
+    {
+      "file": "render_report.py",
+      "bytes": 5193,
+      "sha256": "24d6492deb64eaeb02fc7724b2081735bce021b14fd889590865c7192500f3b7"
+    },
+    {
+      "file": "report.html",
+      "bytes": 14386,
+      "sha256": "a2aad4dfe33a38f25fc0142ac10e3700a9f16c4c27f4e86ab9c5e78c5bdf47ed"
+    },
+    {
+      "file": "report.md",
+      "bytes": 11943,
+      "sha256": "820733709883773b3e00a92a883274c08983c7ba339d44af4186bfca64434d98"
+    },
+    {
+      "file": "report.pdf",
+      "bytes": 58562,
+      "sha256": "5915ffdf685693b779bead429628fea22bbaf4c65831b653bd977b1eac26fbcf"
+    },
+    {
+      "file": "source-hash-audit.json",
+      "bytes": 6630,
+      "sha256": "e2c2b770c6a7d14fb79c19b198d036743bcec3a44c931fbf6b25ef8d43465c9d"
+    },
+    {
+      "file": "sources/calculations/power-cycle/Brayton cooler size comparison - Hurmet.md",
+      "bytes": 12885,
+      "sha256": "e297dee0106a8b0a570d53dc652268af1bf1da9ebd25578942eb41032be38fa1",
+      "original_repository_path": "calculations/power-cycle/Brayton cooler size comparison - Hurmet.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/Brayton fan and salt pump balance - Hurmet.md",
+      "bytes": 12436,
+      "sha256": "f11ca0e7b34bbd86759391ef0c1820fb6026706864c9c25abd590c43b6c4e132",
+      "original_repository_path": "calculations/power-cycle/Brayton fan and salt pump balance - Hurmet.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/Brayton-driven salt pump - Hurmet.md",
+      "bytes": 13684,
+      "sha256": "21eaa92c0e7c1fcaf34814ff7e8d6b2946707b1dea20340795154a138386854e",
+      "original_repository_path": "calculations/power-cycle/Brayton-driven salt pump - Hurmet.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/Nitrogen versus steam Brayton - Hurmet.md",
+      "bytes": 11480,
+      "sha256": "9af6eff7b1af2b516f3f039a0fddf32b47ffb29311eb748fabc4547c033da46f",
+      "original_repository_path": "calculations/power-cycle/Nitrogen versus steam Brayton - Hurmet.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/Open-air Brayton cooler - Hurmet.md",
+      "bytes": 9388,
+      "sha256": "2218928271ed57331635c8c46c8e6a9d8bbc166bc8045dd5e837f14529495c51",
+      "original_repository_path": "calculations/power-cycle/Open-air Brayton cooler - Hurmet.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/Simple CO2 Brayton cooler - Hurmet.md",
+      "bytes": 13355,
+      "sha256": "f76566e9b8528823723a2782645cb59816427d3b60a0cf36329842aed8aff6c7",
+      "original_repository_path": "calculations/power-cycle/Simple CO2 Brayton cooler - Hurmet.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/Steam Brayton cooler - Hurmet.md",
+      "bytes": 16425,
+      "sha256": "5046f9e2446f8d2136e42ebfd031e992f5455885f383595828e1758e0fd91246",
+      "original_repository_path": "calculations/power-cycle/Steam Brayton cooler - Hurmet.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton-cooler-results.json",
+      "bytes": 63429,
+      "sha256": "c2cbec81a2daebd0880ae7351e59b50d2a78a76714c53a39178962ac0ac6e2cb",
+      "original_repository_path": "calculations/power-cycle/brayton-cooler-results.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton-fan-pump-results.json",
+      "bytes": 8405,
+      "sha256": "44535d31c42446583c86d30d3d724659571a289a5ccc7f628695d5e2f532abd9",
+      "original_repository_path": "calculations/power-cycle/brayton-fan-pump-results.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton-hurmet-checks.json",
+      "bytes": 711,
+      "sha256": "211ea43a2363fb47f02ef77d6cc3585c0975e605cdf835a7c964f9d7112bedbb",
+      "original_repository_path": "calculations/power-cycle/brayton-hurmet-checks.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton-overview.md",
+      "bytes": 6865,
+      "sha256": "b0cdfe84fe1f3b3fe818c3b1b3b578ed35ff9cbcd1dc8871f7ef87ce50aea82c",
+      "original_repository_path": "calculations/power-cycle/brayton-overview.md"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton-salt-pump-results.json",
+      "bytes": 8534,
+      "sha256": "c4c9ea8e91e807eee743f647c48526356af5b59f745e07309d2e110aecfa0ca8",
+      "original_repository_path": "calculations/power-cycle/brayton-salt-pump-results.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton-size-results.json",
+      "bytes": 3566,
+      "sha256": "bae639758622b65d8b7e25ea1860f2d1bd7fb2c293b52dee3777b4063bbcc065",
+      "original_repository_path": "calculations/power-cycle/brayton-size-results.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton_cooler.py",
+      "bytes": 7831,
+      "sha256": "a17c72d349f267a811fb6a273dfc2b75ba6b2c7bb1420b7623a61a84c8339ffb",
+      "original_repository_path": "calculations/power-cycle/brayton_cooler.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton_fan_pump_balance.py",
+      "bytes": 14138,
+      "sha256": "2c3866a69929fdd4d1b7e321128b6413b57b7f61c33ce5a1004f3227489bcfab",
+      "original_repository_path": "calculations/power-cycle/brayton_fan_pump_balance.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton_salt_pump.py",
+      "bytes": 15106,
+      "sha256": "4910359ff629315967befe0ef4551692fda2d2f070069dce754a8097e01f1b1d",
+      "original_repository_path": "calculations/power-cycle/brayton_salt_pump.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/brayton_size_screen.py",
+      "bytes": 13256,
+      "sha256": "c1d34bd1180579c3f73165c008e989474e1ef4e297cad0398921ab9d8893f822",
+      "original_repository_path": "calculations/power-cycle/brayton_size_screen.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/check_brayton_fan_pump.cjs",
+      "bytes": 2150,
+      "sha256": "f01162ef075c56187170c8a64c6ce8735e727df17caab4eec54648704e9799a9",
+      "original_repository_path": "calculations/power-cycle/check_brayton_fan_pump.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/check_brayton_hurmet.cjs",
+      "bytes": 1852,
+      "sha256": "318b68c91dca905e01fb80f1283962c0d6428e2f136b05ca94f962235e75606d",
+      "original_repository_path": "calculations/power-cycle/check_brayton_hurmet.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/check_brayton_salt_pump.cjs",
+      "bytes": 1839,
+      "sha256": "cc92dadf73320cd9a5e8c276808e7520d72b72da7644d308ee7d74faa901ca5f",
+      "original_repository_path": "calculations/power-cycle/check_brayton_salt_pump.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/check_brayton_size.cjs",
+      "bytes": 1537,
+      "sha256": "861f1dbb031f18603c0c8111732432c195876ea94da73087b960f0de6a9368d1",
+      "original_repository_path": "calculations/power-cycle/check_brayton_size.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/check_co2_brayton.cjs",
+      "bytes": 1520,
+      "sha256": "9dfd38b470bda33e184b2113e62249bbfc5f04414e9660221f294ce866cb6205",
+      "original_repository_path": "calculations/power-cycle/check_co2_brayton.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/check_nitrogen_brayton.cjs",
+      "bytes": 1495,
+      "sha256": "2f2ef414df31e7b1603e5829178271aaae83465feee9e9c4079b9e6fb4182095",
+      "original_repository_path": "calculations/power-cycle/check_nitrogen_brayton.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/check_open_air_brayton.cjs",
+      "bytes": 1704,
+      "sha256": "1a6426f614d23f456324a34bcec0b96da28cee90e7876da9c392a83ca50bf69f",
+      "original_repository_path": "calculations/power-cycle/check_open_air_brayton.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/co2-brayton-results.json",
+      "bytes": 10828,
+      "sha256": "fc5dce10b45a1cef39ff53deb7e08e60ab263e4b6732ca29c13094f3a5dceca9",
+      "original_repository_path": "calculations/power-cycle/co2-brayton-results.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/co2_brayton.py",
+      "bytes": 15066,
+      "sha256": "a58fa1dc823e7436c0b5706128fd29e301a6a5dfc484b28b8ad5579ccaa2edab",
+      "original_repository_path": "calculations/power-cycle/co2_brayton.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/hurmet_pipe_tables.cjs",
+      "bytes": 1589,
+      "sha256": "c0291f9f7d189524693863ce4ec8efcabbd436de75ce1fd6c174f49b83dc30bf",
+      "original_repository_path": "calculations/power-cycle/hurmet_pipe_tables.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/nitrogen-brayton-results.json",
+      "bytes": 26070,
+      "sha256": "2e1880b154432ac2375903f1ddd8523172138361531662e284cef0dbf96d9d9a",
+      "original_repository_path": "calculations/power-cycle/nitrogen-brayton-results.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/nitrogen_brayton.py",
+      "bytes": 5248,
+      "sha256": "257a92280b073dc8cbc0fa4430519dc26e8ade8f713d0763b4fc04cd7f7954d4",
+      "original_repository_path": "calculations/power-cycle/nitrogen_brayton.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/open-air-brayton-results.json",
+      "bytes": 19224,
+      "sha256": "dcf0ad929835a2ad1d0f9c87e676f00fc31291f6e6e4a113ff02e4d5c55a7bb0",
+      "original_repository_path": "calculations/power-cycle/open-air-brayton-results.json"
+    },
+    {
+      "file": "sources/calculations/power-cycle/open_air_brayton.py",
+      "bytes": 14099,
+      "sha256": "0ad61f0523dcd5e357edd504ac6eead30ca9994a29a96301d9f7e56249c15ee5",
+      "original_repository_path": "calculations/power-cycle/open_air_brayton.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/publish_brayton_cooler.py",
+      "bytes": 13864,
+      "sha256": "2ea83d6047b3627327a00e07d8bd935e1f5b29745389a539f2e19a976ae93a44",
+      "original_repository_path": "calculations/power-cycle/publish_brayton_cooler.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/publish_brayton_overview.cjs",
+      "bytes": 3339,
+      "sha256": "703d65790cb5727a88ff133d064706b6b4103f876acfa720aae551b8d8652e44",
+      "original_repository_path": "calculations/power-cycle/publish_brayton_overview.cjs"
+    },
+    {
+      "file": "sources/calculations/power-cycle/publish_nitrogen_brayton.py",
+      "bytes": 10563,
+      "sha256": "f2eec26855cc43f794618b8fe722e3d8c34b0477d175db44b39c8aae1c5b2822",
+      "original_repository_path": "calculations/power-cycle/publish_nitrogen_brayton.py"
+    },
+    {
+      "file": "sources/calculations/power-cycle/requirements.txt",
+      "bytes": 29,
+      "sha256": "61f20e29887734aa91f684877a622975b1acbb6e440852f67717d29d9acca378",
+      "original_repository_path": "calculations/power-cycle/requirements.txt"
+    },
+    {
+      "file": "sources/calculations/steam-generator/Generator sizing - Hurmet.md",
+      "bytes": 14300,
+      "sha256": "11489d75d9161d14bd431fc7bae67cd6dc06ff606c3c34eb87114397a2241be1",
+      "original_repository_path": "calculations/steam-generator/Generator sizing - Hurmet.md"
+    }
+  ]
+}

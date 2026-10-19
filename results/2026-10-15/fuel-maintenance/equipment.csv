@@ -1,0 +1,11 @@
+tag,description,location,sheet
+R-101,Reactor core fuel-region boundaries,Representative sector 1,1
+TK-FM-01,Maintenance tank with three storage regions,Compartments A/B/C,1
+TK-FM-01A,Maintenance-tank compartment R1/R2,TK-FM-01,1
+TK-FM-01B,Maintenance-tank compartment R3/R4,TK-FM-01,1
+TK-FM-01C,Maintenance-tank compartment R5/R6,TK-FM-01,1
+V-FM-05,Pressure tank,,2
+V-FM-06,Surge tank,,2
+K-FM-03,Gas compressor,,2
+P-FM-01,Add fuel displacement pump,,2
+P-FM-02,Remove fuel displacement pump,,2

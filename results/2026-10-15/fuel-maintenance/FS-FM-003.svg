@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="594mm" height="420mm" viewBox="0 0 1684 1190"><title>WISTR fuel maintenance P&amp;ID sheet 3</title>
+<rect x="0" y="0" width="1684" height="1190" stroke="white" fill="white" stroke-width="1.3"/>
+<rect x="22" y="22" width="1640" height="1146" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="42" y="51" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#15232b">FAST SALT SYSTEM</text>
+<text x="42" y="83" font-family="Helvetica,Arial,sans-serif" font-size="25" font-weight="bold" text-anchor="start" fill="#15232b">VALVE POSITIONS, OPERATING STATES AND TAG SCHEDULE</text>
+<text x="42" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#4b5b64">Owner-defined states; compressor pressure-difference start/stop control on sheet 2. Setpoints and fail positions TBD.</text>
+<text x="45" y="153" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#15232b">SELECTOR POSITION SCHEDULE</text>
+<rect x="45" y="170" width="205" height="38" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="55" y="194" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">Position</text>
+<rect x="250" y="170" width="340" height="38" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="260" y="194" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">Core selectors XV-FM-Cxx</text>
+<rect x="590" y="170" width="360" height="38" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="600" y="194" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">Storage selectors XV-FM-Sxx</text>
+<rect x="950" y="170" width="689" height="38" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="960" y="194" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">Connection intent</text>
+<rect x="45" y="208" width="205" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="55" y="232" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">1 - Add pressure</text>
+<rect x="250" y="208" width="340" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="260" y="232" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Available</text>
+<rect x="590" y="208" width="360" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="600" y="232" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Available</text>
+<rect x="950" y="208" width="689" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="960" y="232" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Common gas port C to pressure header H-P</text>
+<rect x="45" y="246" width="205" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="55" y="270" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">2 - Maintain</text>
+<rect x="250" y="246" width="340" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="260" y="270" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Available</text>
+<rect x="590" y="246" width="360" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="600" y="270" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Available</text>
+<rect x="950" y="246" width="689" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="960" y="270" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Maintain position; internal port isolation details TBD</text>
+<rect x="45" y="284" width="205" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="55" y="308" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">3 - Reduce pressure</text>
+<rect x="250" y="284" width="340" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="260" y="308" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Available</text>
+<rect x="590" y="284" width="360" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="600" y="308" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Available</text>
+<rect x="950" y="284" width="689" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="960" y="308" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Common gas port C to surge header H-S</text>
+<rect x="45" y="322" width="205" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="55" y="346" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">4 - Vent to off-gas</text>
+<rect x="250" y="322" width="340" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="260" y="346" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Available</text>
+<rect x="590" y="322" width="360" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="600" y="346" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Operator selection only</text>
+<rect x="950" y="322" width="689" height="38" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="960" y="346" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Selected common gas port C to off-gas header H-O</text>
+<text x="45" y="402" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#15232b">OWNER-DEFINED OPERATING STATES</text>
+<rect x="45" y="420" width="225" height="36" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="54" y="443" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">State / scope</text>
+<rect x="270" y="420" width="290" height="36" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="279" y="443" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">Core pressure valves</text>
+<rect x="560" y="420" width="270" height="36" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="569" y="443" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">Storage pressure valves</text>
+<rect x="830" y="420" width="809" height="36" stroke="#15232b" fill="#eef1f2" stroke-width="1.3"/>
+<text x="839" y="443" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">Pump / completion description</text>
+<rect x="45" y="456" width="225" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="54" y="478" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Remove fuel / all pairs</text>
+<rect x="270" y="456" width="290" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="279" y="478" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Add pressure</text>
+<rect x="560" y="456" width="270" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="569" y="478" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Reduce pressure</text>
+<rect x="830" y="456" width="809" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="839" y="478" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Gas in a bottom line: corresponding two valves return to Maintain. All valves in Maintain when all tanks are empty.</text>
+<rect x="45" y="533" width="225" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="54" y="555" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Fill fuel / all pairs</text>
+<rect x="270" y="533" width="290" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="279" y="555" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Reduce pressure</text>
+<rect x="560" y="533" width="270" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="569" y="555" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Add pressure</text>
+<rect x="830" y="533" width="809" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="839" y="555" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Gas in a maintenance-tank bottom line indicates empty: corresponding two valves return to Maintain. All valves in Maintain at completion.</text>
+<rect x="45" y="610" width="225" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="54" y="632" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Small addition / R5/R6</text>
+<rect x="270" y="610" width="290" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="279" y="632" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Reduce pressure</text>
+<rect x="560" y="610" width="270" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="569" y="632" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Add pressure</text>
+<rect x="830" y="610" width="809" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="839" y="632" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">P-FM-01 meters fuel into R5/R6 storage. Use Fill fuel positions until gas is detected, then both R5/R6 valves return to Maintain. Intended addition to</text>
+<text x="839" y="649" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">R6.</text>
+<rect x="45" y="687" width="225" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="54" y="709" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Measured removal / R1/R2</text>
+<rect x="270" y="687" width="290" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="279" y="709" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">TBD</text>
+<rect x="560" y="687" width="270" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="569" y="709" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">TBD</text>
+<rect x="830" y="687" width="809" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="839" y="709" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">P-FM-02 removes a measured quantity from the R1/R2 core fuel line. Quantity, valve positions and further sequence are not specified.</text>
+<rect x="45" y="764" width="225" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="54" y="786" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Off-gas vent</text>
+<rect x="270" y="764" width="290" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="279" y="786" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Position 4, if selected</text>
+<rect x="560" y="764" width="270" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="569" y="786" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Position 4: operator only</text>
+<rect x="830" y="764" width="809" height="77" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="839" y="786" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Storage vent is used only when selected by the operator; excluded from automatic transfer sequences. Core vent selection conditions remain</text>
+<text x="839" y="803" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">unspecified.</text>
+<text x="45" y="886" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#15232b">THREE SHARED GAS UNITS / EXISTING 3D ASSOCIATIONS</text>
+<text x="45" y="913" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#15232b">Unit / server</text>
+<text x="190" y="913" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#15232b">3D tanks</text>
+<text x="325" y="913" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#15232b">P&amp;ID tanks</text>
+<text x="570" y="913" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#15232b">Sectors</text>
+<text x="45" y="940" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">1 / P1</text>
+<text x="190" y="940" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">F1 / F2</text>
+<text x="325" y="940" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">TK-FM-02 / TK-FM-03</text>
+<text x="570" y="940" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">2 / 3</text>
+<text x="45" y="967" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">2 / P2</text>
+<text x="190" y="967" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">F3 / F4</text>
+<text x="325" y="967" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">TK-FM-04 / TK-FM-05</text>
+<text x="570" y="967" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">4 / 5</text>
+<text x="45" y="994" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">3 / P3</text>
+<text x="190" y="994" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">F5 / F6</text>
+<text x="325" y="994" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">TK-FM-06 / TK-FM-01</text>
+<text x="570" y="994" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">6 / 1</text>
+<text x="45" y="1021" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b">Each tank: A=R1/R2, B=R3/R4, C=R5/R6. Circuit index = 3 x (sector - 1) + pair. Existing provisional sector/tank mapping retained (D-035).</text>
+<text x="860" y="886" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#15232b">SYMBOLS AND OPEN DETAILS</text>
+<text x="860" y="911" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">LT / PT: level / pressure sensing functions. GD: project-defined gas-presence detector. Circular multiport valve symbol: selector; actual</text>
+<text x="860" y="929" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">actuation and internal trim TBD. PD pump: positive displacement.</text>
+<text x="860" y="974" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Solid heavy lines: process piping. Solid thin lines: instrument process connections. Dashed lines: functional measurement/command signals.</text>
+<text x="860" y="992" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">Dashed boxes: core boundaries. PDC: pressure-difference controller. Dot = junction; other crossings do not connect.</text>
+<text x="45" y="1055" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">R6-only distribution and metering-pump sharing remain TBD. Unit internals are detailed here; 3D servers remain exterior envelopes.</text>
+<text x="45" y="1073" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#4b5b64">Notation reference: ISA5.1 public guidance; project-specific selector and GD conventions are defined here. No full-standard compliance claim.</text>
+<polyline points="22,1090 1662,1090" fill="none" stroke="#15232b" stroke-width="1"/>
+<text x="42" y="1115" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#15232b">PRELIMINARY - FOR REVIEW</text>
+<text x="42" y="1139" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Owner-defined process arrangement. Sizes, ratings, fail positions and detailed controls TBD.</text>
+<text x="42" y="1159" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Functional schematic; not to scale. Solid-dot crossings connect; other crossings do not.</text>
+<polyline points="1100,1090 1100,1168" fill="none" stroke="#15232b" stroke-width="1"/>
+<text x="1120" y="1114" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#15232b">WISTR / FUEL MAINTENANCE</text>
+<text x="1120" y="1139" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">FS-FM-003     REV B3-draft     2026-10-15</text>
+<text x="1642" y="1160" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#15232b">SHEET 3 OF 3</text>
+</svg>

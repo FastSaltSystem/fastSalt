@@ -11,6 +11,7 @@ This register connects existing work to its evidence and design scope. It does n
 | RS-005 | WISTR core development | [W08](../publications/index.md#w08), [W10](../publications/index.md#w10), [W11](../publications/index.md#w11) | Tank-type and later absorber/online-refueling configurations; exact study revisions matter |
 | RS-006 | UM accident scenarios | Ongoing work reported by the project owner after the November 2025 overview | Specific case list, source models, reports, and results not yet supplied for this register |
 | RS-007 | MSU steam generator | [Component project brief](../collaboration/steam-generator-project.md) | Educational design project underway; source Calca provenance and Hurmet conversion recorded in the [calculation checks](../calculations/steam-generator/conversion-check.md); student deliverables still to collect |
+| RS-008 | Auxiliary Brayton cooling alternatives | [Comparative study and source record](auxiliary-brayton-cooling/README.md); closed steam, nitrogen, open air and supercritical CO₂ at 30 MW per train | Revision A, 19 October 2026; preliminary, technical review pending |
 
 ## Existing analysis environment
 

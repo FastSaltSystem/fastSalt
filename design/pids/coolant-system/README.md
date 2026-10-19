@@ -1,5 +1,7 @@
 # WISTR coolant system: preliminary P&ID
 
+**Public drawing:** [15 October review snapshot](../../../results/2026-10-15/README.md#coolant). Links into `outputs/` below refer to local builds and are not hosted on GitHub.
+
 **Nitrogen update, 14 October 2026 — D-068:** Sheet 6 adds the shared exterior nitrogen header and independent branches to off-gas treatment, fuel refining/recycling and coolant preparation. N-603 enters the makeup side of B-401; returning coolant gas is separate from clean nitrogen supply. Exterior branch isolation and regulation/backflow-protection functions remain provisional hardware reservations. [Current PDF](outputs/current/WISTR-coolant-PID.pdf), [nitrogen sheet SVG](outputs/current/FS-CS-006.svg), and [3D draft guide](../../../../fastSaltModels/docs/coolant-pid-3d.md). Current coverage is 90 tags; the 79-tag count below records the preceding D-067 draft.
 
 **3D update, 14 October 2026 — D-067:** [Current coverage audit and Blender views](../../../../fastSaltModels/docs/coolant-pid-3d.md) now represent all 79 tagged items, including coolant-gas vessels/header/valves and measurement reservations. This supersedes the historical “Blender pending” notes below. Relief destinations remain explicitly unresolved interface stubs. The lowered transfer route has its common tee beneath TK-401; full gravity drainage is not established. P&ID topology and operating-state definitions are unchanged.

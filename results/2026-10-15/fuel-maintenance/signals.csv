@@ -1,0 +1,4 @@
+tag,description,location,sheet
+S-FM-91,Pressure measurement input,PT-FM-95 -> PDC-FM-03,2
+S-FM-92,Surge pressure measurement input,PT-FM-96 -> PDC-FM-03,2
+S-FM-93,Compressor start/stop command,PDC-FM-03 -> K-FM-03,2

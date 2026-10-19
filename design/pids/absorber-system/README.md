@@ -1,5 +1,7 @@
 # Absorber system draft
 
+**Public drawing:** [15 October review snapshot](../../../results/2026-10-15/README.md#absorber). Links into `outputs/` below refer to local builds and are not hosted on GitHub.
+
 15 October 2026. D-070 starts a functional P&ID and capacity check using the owner's injection-time report and the latest site elevations.
 
 ## Review

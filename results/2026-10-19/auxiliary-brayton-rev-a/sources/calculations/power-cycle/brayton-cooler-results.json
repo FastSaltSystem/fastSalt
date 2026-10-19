@@ -1,0 +1,1701 @@
+{
+  "title": "Steam Brayton auxiliary cooler feasibility screen",
+  "date": "2026-10-12",
+  "property_model": "CoolProp 7.2.0 HEOS::Water (IAPWS-95)",
+  "source_hashes": {
+    "calculations/power-cycle/brayton_cooler.py": "a17c72d349f267a811fb6a273dfc2b75ba6b2c7bb1420b7623a61a84c8339ffb",
+    "calculations/steam-generator/Generator sizing - Hurmet.md": "11489d75d9161d14bd431fc7bae67cd6dc06ff606c3c34eb87114397a2241be1"
+  },
+  "base": {
+    "state_solution_valid": true,
+    "self_sustaining_before_auxiliaries": true,
+    "inputs": {
+      "compressor_ratio": 2,
+      "compressor_inlet_Pa": 500000.0,
+      "compressor_efficiency": 0.85,
+      "turbine_efficiency": 0.88,
+      "shaft_transfer_efficiency": 0.98,
+      "fractional_pressure_loss_each_exchanger": 0.02,
+      "heater_inlet_K": 560,
+      "turbine_inlet_K": 830,
+      "heat_input_W": 10000000.0
+    },
+    "states": {
+      "compressor_inlet": {
+        "pressure_Pa": 500000.0,
+        "temperature_K": 465.24733224840134,
+        "temperature_C": 192.09733224840136,
+        "enthalpy_J_kg": 2838825.7080058027,
+        "entropy_J_kg_K": 7024.760926283848,
+        "density_kg_m3": 2.3978604221899964,
+        "superheat_K": 40.26625314533817,
+        "phase": "gas"
+      },
+      "steam_generator_inlet": {
+        "pressure_Pa": 1000000.0,
+        "temperature_K": 559.9999999999997,
+        "temperature_C": 286.8499999999997,
+        "enthalpy_J_kg": 3023389.688285137,
+        "entropy_J_kg_K": 7074.7727275333,
+        "density_kg_m3": 3.977112892026735,
+        "superheat_K": 106.97199211832526,
+        "phase": "gas"
+      },
+      "turbine_inlet": {
+        "pressure_Pa": 980000.0,
+        "temperature_K": 830.0,
+        "temperature_C": 556.85,
+        "enthalpy_J_kg": 3603358.1325875674,
+        "entropy_J_kg_K": 7928.480833032968,
+        "density_kg_m3": 2.572737900544824,
+        "superheat_K": 377.8479862203709,
+        "phase": "supercritical_gas"
+      },
+      "air_cooler_inlet": {
+        "pressure_Pa": 510204.0816326531,
+        "temperature_K": 733.332944089017,
+        "temperature_C": 460.18294408901704,
+        "enthalpy_J_kg": 3399235.3132141503,
+        "entropy_J_kg_K": 7966.780781599039,
+        "density_kg_m3": 1.514691245612504,
+        "superheat_K": 307.5892790844587,
+        "phase": "supercritical_gas"
+      }
+    },
+    "specific": {
+      "heat_added_J_kg": 579968.4443024304,
+      "heat_rejected_J_kg": 560409.6052083476,
+      "turbine_work_J_kg": 204122.81937341718,
+      "compressor_work_J_kg": 184563.98027933436
+    },
+    "steam_flow_kg_s": 17.24231740233336,
+    "compressor_inlet_volume_m3_s": 7.190709368556878,
+    "turbine_power_W": 3519550.44069562,
+    "compressor_power_W": 3182310.729014278,
+    "shaft_losses_W": 70391.00881391247,
+    "available_shaft_W": 266848.70286742976,
+    "heat_rejected_air_cooler_W": 9662760.288318658,
+    "illustrative_air": {
+      "inlet_C": 30,
+      "rise_K": 100,
+      "cp_J_kg_K": 1007,
+      "density_inlet_kg_m3": 1.1643981014191607,
+      "pressure_drop_Pa": 500,
+      "fan_efficiency": 0.65,
+      "mass_kg_s": 95.9559115026679,
+      "fan_power_W": 63390.89657349575
+    },
+    "after_illustrative_fan_W": 203457.806293934,
+    "minimum_sampled_superheat_K": 40.26625314533817,
+    "energy_residual_J_kg": 0.0,
+    "compressor_inverse_residual_J_kg": 2.3283064365386963e-09
+  },
+  "high_ratio": {
+    "state_solution_valid": true,
+    "self_sustaining_before_auxiliaries": true,
+    "inputs": {
+      "compressor_ratio": 8,
+      "compressor_inlet_Pa": 5000.0,
+      "compressor_efficiency": 0.85,
+      "turbine_efficiency": 0.88,
+      "shaft_transfer_efficiency": 0.98,
+      "fractional_pressure_loss_each_exchanger": 0.02,
+      "heater_inlet_K": 560,
+      "turbine_inlet_K": 830,
+      "heat_input_W": 10000000.0
+    },
+    "states": {
+      "compressor_inlet": {
+        "pressure_Pa": 5000.0,
+        "temperature_K": 317.91271703517697,
+        "temperature_C": 44.76271703517699,
+        "enthalpy_J_kg": 2583407.521083005,
+        "entropy_J_kg_K": 8466.513341472233,
+        "density_kg_m3": 0.03413653849840162,
+        "superheat_K": 11.888461944196933,
+        "phase": "gas"
+      },
+      "steam_generator_inlet": {
+        "pressure_Pa": 40000.0,
+        "temperature_K": 559.9999999999999,
+        "temperature_C": 286.8499999999999,
+        "enthalpy_J_kg": 3049692.400319059,
+        "entropy_J_kg_K": 8595.501570900084,
+        "density_kg_m3": 0.1549310728031561,
+        "superheat_K": 210.99316962359467,
+        "phase": "gas"
+      },
+      "turbine_inlet": {
+        "pressure_Pa": 39200.0,
+        "temperature_K": 830.0000000000002,
+        "temperature_C": 556.8500000000003,
+        "enthalpy_J_kg": 3611705.900275918,
+        "entropy_J_kg_K": 9421.634583336694,
+        "density_kg_m3": 0.10235664706433532,
+        "superheat_K": 481.4780148769314,
+        "phase": "supercritical_gas"
+      },
+      "air_cooler_inlet": {
+        "pressure_Pa": 5102.040816326531,
+        "temperature_K": 563.723170593278,
+        "temperature_C": 290.57317059327806,
+        "enthalpy_J_kg": 3058027.9410403743,
+        "entropy_J_kg_K": 9560.296889638352,
+        "density_kg_m3": 0.019613082459724165,
+        "superheat_K": 257.33885604991275,
+        "phase": "gas"
+      }
+    },
+    "specific": {
+      "heat_added_J_kg": 562013.4999568593,
+      "heat_rejected_J_kg": 474620.41995736957,
+      "turbine_work_J_kg": 553677.9592355439,
+      "compressor_work_J_kg": 466284.87923605414
+    },
+    "steam_flow_kg_s": 17.793166891485008,
+    "compressor_inlet_volume_m3_s": 521.2352415965707,
+    "turbine_power_W": 9851684.332814865,
+    "compressor_power_W": 8296684.675223044,
+    "shaft_losses_W": 197033.68665629748,
+    "available_shaft_W": 1357965.9709355242,
+    "heat_rejected_air_cooler_W": 8445000.342408178,
+    "illustrative_air": {
+      "inlet_C": 30,
+      "rise_K": 100,
+      "cp_J_kg_K": 1007,
+      "density_inlet_kg_m3": 1.1643981014191607,
+      "pressure_drop_Pa": 500,
+      "fan_efficiency": 0.65,
+      "mass_kg_s": 83.86296268528478,
+      "fan_power_W": 55401.989420756174
+    },
+    "after_illustrative_fan_W": 1302563.981514768,
+    "minimum_sampled_superheat_K": 11.888461944196933,
+    "energy_residual_J_kg": 0.0,
+    "compressor_inverse_residual_J_kg": 0.0
+  },
+  "high_ratio_pressure_trials": [
+    {
+      "p_low": 500000.0,
+      "result": {
+        "state_solution_valid": false,
+        "reason": "Specified heater inlet requires a wet compressor inlet"
+      }
+    },
+    {
+      "p_low": 100000.0,
+      "result": {
+        "state_solution_valid": false,
+        "reason": "Specified heater inlet requires a wet compressor inlet"
+      }
+    },
+    {
+      "p_low": 10000.0,
+      "result": {
+        "state_solution_valid": false,
+        "reason": "Specified heater inlet requires a wet compressor inlet"
+      }
+    },
+    {
+      "p_low": 5000.0,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 8,
+          "compressor_inlet_Pa": 5000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 5000.0,
+            "temperature_K": 317.91271703517697,
+            "temperature_C": 44.76271703517699,
+            "enthalpy_J_kg": 2583407.521083005,
+            "entropy_J_kg_K": 8466.513341472233,
+            "density_kg_m3": 0.03413653849840162,
+            "superheat_K": 11.888461944196933,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 40000.0,
+            "temperature_K": 559.9999999999999,
+            "temperature_C": 286.8499999999999,
+            "enthalpy_J_kg": 3049692.400319059,
+            "entropy_J_kg_K": 8595.501570900084,
+            "density_kg_m3": 0.1549310728031561,
+            "superheat_K": 210.99316962359467,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 39200.0,
+            "temperature_K": 830.0000000000002,
+            "temperature_C": 556.8500000000003,
+            "enthalpy_J_kg": 3611705.900275918,
+            "entropy_J_kg_K": 9421.634583336694,
+            "density_kg_m3": 0.10235664706433532,
+            "superheat_K": 481.4780148769314,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 5102.040816326531,
+            "temperature_K": 563.723170593278,
+            "temperature_C": 290.57317059327806,
+            "enthalpy_J_kg": 3058027.9410403743,
+            "entropy_J_kg_K": 9560.296889638352,
+            "density_kg_m3": 0.019613082459724165,
+            "superheat_K": 257.33885604991275,
+            "phase": "gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 562013.4999568593,
+          "heat_rejected_J_kg": 474620.41995736957,
+          "turbine_work_J_kg": 553677.9592355439,
+          "compressor_work_J_kg": 466284.87923605414
+        },
+        "steam_flow_kg_s": 17.793166891485008,
+        "compressor_inlet_volume_m3_s": 521.2352415965707,
+        "turbine_power_W": 9851684.332814865,
+        "compressor_power_W": 8296684.675223044,
+        "shaft_losses_W": 197033.68665629748,
+        "available_shaft_W": 1357965.9709355242,
+        "heat_rejected_air_cooler_W": 8445000.342408178,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 83.86296268528478,
+          "fan_power_W": 55401.989420756174
+        },
+        "after_illustrative_fan_W": 1302563.981514768,
+        "minimum_sampled_superheat_K": 11.888461944196933,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 0.0
+      }
+    }
+  ],
+  "normal_steam_throttle": {
+    "inlet": {
+      "pressure_Pa": 24000000.0,
+      "temperature_K": 829.9999999716177,
+      "temperature_C": 556.8499999716178,
+      "enthalpy_J_kg": 3372394.685555759,
+      "entropy_J_kg_K": 6237.681968322024,
+      "density_kg_m3": 73.6283741526975,
+      "superheat_K": null,
+      "phase": "supercritical"
+    },
+    "outlets": [
+      {
+        "pressure_Pa": 3000000.0,
+        "temperature_K": 735.3960246360277,
+        "temperature_C": 462.24602463602776,
+        "enthalpy_J_kg": 3372394.685555759,
+        "entropy_J_kg_K": 7123.391575442734,
+        "density_kg_m3": 9.096124715773135,
+        "superheat_K": 228.39291796381082,
+        "phase": "supercritical_gas"
+      },
+      {
+        "pressure_Pa": 1000000.0,
+        "temperature_K": 723.6598831853124,
+        "temperature_C": 450.50988318531245,
+        "enthalpy_J_kg": 3372394.685555759,
+        "entropy_J_kg_K": 7621.526766269984,
+        "density_kg_m3": 3.0239912424952577,
+        "superheat_K": 270.631875303638,
+        "phase": "supercritical_gas"
+      },
+      {
+        "pressure_Pa": 40000.0,
+        "temperature_K": 717.8057070183722,
+        "temperature_C": 444.65570701837225,
+        "enthalpy_J_kg": 3372394.685555759,
+        "entropy_J_kg_K": 9102.677583514433,
+        "density_kg_m3": 0.12079240829886706,
+        "superheat_K": 368.798876641967,
+        "phase": "supercritical_gas"
+      }
+    ]
+  },
+  "efficiency_ratio_trials": [
+    {
+      "ratio": 1.5,
+      "eta_c": 0.8,
+      "eta_t": 0.85,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": false,
+        "inputs": {
+          "compressor_ratio": 1.5,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.8,
+          "turbine_efficiency": 0.85,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 499.02026340910004,
+            "temperature_C": 225.87026340910006,
+            "enthalpy_J_kg": 2910652.697934038,
+            "entropy_J_kg_K": 7173.82487433321,
+            "density_kg_m3": 2.2182845953103927,
+            "superheat_K": 74.03918430603687,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 750000.0,
+            "temperature_K": 559.9999999999999,
+            "temperature_C": 286.8499999999999,
+            "enthalpy_J_kg": 3030459.6937060123,
+            "entropy_J_kg_K": 7217.052625230835,
+            "density_kg_m3": 2.9616155938290873,
+            "superheat_K": 119.10144077131952,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 735000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3605539.9626379763,
+            "entropy_J_kg_K": 8063.234945565537,
+            "density_kg_m3": 1.92683446923392,
+            "superheat_K": 389.92617641958236,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 776.556111884695,
+            "temperature_C": 503.40611188469506,
+            "enthalpy_J_kg": 3491684.236402653,
+            "entropy_J_kg_K": 8089.265370512441,
+            "density_kg_m3": 1.429005742280649,
+            "superheat_K": 350.81244688013675,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 575080.268931964,
+          "heat_rejected_J_kg": 581031.5384686152,
+          "turbine_work_J_kg": 113855.72623532312,
+          "compressor_work_J_kg": 119806.99577197433
+        },
+        "steam_flow_kg_s": 17.388876892910876,
+        "compressor_inlet_volume_m3_s": 7.838884573094077,
+        "turbine_power_W": 1979823.2070589967,
+        "compressor_power_W": 2083309.1003883553,
+        "shaft_losses_W": 39596.46414117997,
+        "available_shaft_W": -143082.35747053864,
+        "heat_rejected_air_cooler_W": 10103485.893329358,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 100.33253121479005,
+          "fan_power_W": 66282.2019987477
+        },
+        "after_illustrative_fan_W": -209364.55946928635,
+        "minimum_sampled_superheat_K": 74.03918430603625,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 4.656612873077393e-10
+      }
+    },
+    {
+      "ratio": 2,
+      "eta_c": 0.8,
+      "eta_t": 0.85,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": false,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.8,
+          "turbine_efficiency": 0.85,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 460.8892891511017,
+            "temperature_C": 187.73928915110173,
+            "enthalpy_J_kg": 2829371.832847103,
+            "entropy_J_kg_K": 7004.344955434146,
+            "density_kg_m3": 2.4236542031479806,
+            "superheat_K": 35.90821004803854,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 559.9999999999997,
+            "temperature_C": 286.8499999999997,
+            "enthalpy_J_kg": 3023389.688285137,
+            "entropy_J_kg_K": 7074.7727275333,
+            "density_kg_m3": 3.977112892026735,
+            "superheat_K": 106.97199211832526,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 980000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3603358.1325875674,
+            "entropy_J_kg_K": 7928.480833032968,
+            "density_kg_m3": 2.572737900544824,
+            "superheat_K": 377.8479862203709,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 736.6037329512956,
+            "temperature_C": 463.4537329512956,
+            "enthalpy_J_kg": 3406194.0456927894,
+            "entropy_J_kg_K": 7976.248865339086,
+            "density_kg_m3": 1.507841158315844,
+            "superheat_K": 310.8600679467373,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 579968.4443024304,
+          "heat_rejected_J_kg": 576822.2128456864,
+          "turbine_work_J_kg": 197164.08689477807,
+          "compressor_work_J_kg": 194017.85543803405
+        },
+        "steam_flow_kg_s": 17.24231740233336,
+        "compressor_inlet_volume_m3_s": 7.114182122160023,
+        "turbine_power_W": 3399565.7665809984,
+        "compressor_power_W": 3345317.4451826126,
+        "shaft_losses_W": 67991.31533162003,
+        "available_shaft_W": -13742.993933234018,
+        "heat_rejected_air_cooler_W": 9945751.678601615,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 98.76615371004583,
+          "fan_power_W": 65247.4134917829
+        },
+        "after_illustrative_fan_W": -78990.40742501692,
+        "minimum_sampled_superheat_K": 35.90821004803797,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 8.847564458847046e-09
+      }
+    },
+    {
+      "ratio": 2.5,
+      "eta_c": 0.8,
+      "eta_t": 0.85,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2.5,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.8,
+          "turbine_efficiency": 0.85,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 434.43778015339427,
+            "temperature_C": 161.2877801533943,
+            "enthalpy_J_kg": 2770357.5763036544,
+            "entropy_J_kg_K": 6872.442280899823,
+            "density_kg_m3": 2.597119231040276,
+            "superheat_K": 9.456701050331105,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1250000.0,
+            "temperature_K": 560.0000000000003,
+            "temperature_C": 286.85000000000036,
+            "enthalpy_J_kg": 3016155.9815978534,
+            "entropy_J_kg_K": 6962.01545389512,
+            "density_kg_m3": 5.00795240358437,
+            "superheat_K": 97.04063388385839,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 1225000.0,
+            "temperature_K": 830.0000000000001,
+            "temperature_C": 556.8500000000001,
+            "enthalpy_J_kg": 3601170.7001845315,
+            "entropy_J_kg_K": 7823.506387305833,
+            "density_kg_m3": 3.2204769057985496,
+            "superheat_K": 367.9595367179654,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 706.881929255873,
+            "temperature_C": 433.73192925587307,
+            "enthalpy_J_kg": 3343171.620933542,
+            "entropy_J_kg_K": 7888.918984877409,
+            "density_kg_m3": 1.57252632979098,
+            "superheat_K": 281.13826425131475,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 585014.7185866782,
+          "heat_rejected_J_kg": 572814.0446298877,
+          "turbine_work_J_kg": 257999.07925098948,
+          "compressor_work_J_kg": 245798.405294199
+        },
+        "steam_flow_kg_s": 17.09358701975694,
+        "compressor_inlet_volume_m3_s": 6.581749045426037,
+        "turbine_power_W": 4410129.712193956,
+        "compressor_power_W": 4201576.430213875,
+        "shaft_losses_W": 88202.5942438792,
+        "available_shaft_W": 120350.68773620101,
+        "heat_rejected_air_cooler_W": 9791446.71801992,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 97.23383036762581,
+          "fan_power_W": 64235.1220238018
+        },
+        "after_illustrative_fan_W": 56115.56571239921,
+        "minimum_sampled_superheat_K": 9.456701050331105,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 2.2044405341148376e-06
+      }
+    },
+    {
+      "ratio": 3,
+      "eta_c": 0.8,
+      "eta_t": 0.85,
+      "result": {
+        "state_solution_valid": false,
+        "reason": "Specified heater inlet requires a wet compressor inlet"
+      }
+    },
+    {
+      "ratio": 1.5,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 1.5,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 502.02783711034243,
+            "temperature_C": 228.87783711034245,
+            "enthalpy_J_kg": 2916962.038844451,
+            "entropy_J_kg_K": 7186.430392546337,
+            "density_kg_m3": 2.203797650533764,
+            "superheat_K": 77.04675800727927,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 750000.0,
+            "temperature_K": 559.9999999999999,
+            "temperature_C": 286.8499999999999,
+            "enthalpy_J_kg": 3030459.6937060123,
+            "entropy_J_kg_K": 7217.052625230835,
+            "density_kg_m3": 2.9616155938290873,
+            "superheat_K": 119.10144077131952,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 735000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3605539.9626379763,
+            "entropy_J_kg_K": 8063.234945565537,
+            "density_kg_m3": 1.92683446923392,
+            "superheat_K": 389.92617641958236,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 774.6878411833818,
+            "temperature_C": 501.53784118338183,
+            "enthalpy_J_kg": 3487665.7990061124,
+            "entropy_J_kg_K": 8084.084445984355,
+            "density_kg_m3": 1.4325043610343904,
+            "superheat_K": 348.9441761788235,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 575080.268931964,
+          "heat_rejected_J_kg": 570703.7601616615,
+          "turbine_work_J_kg": 117874.16363186389,
+          "compressor_work_J_kg": 113497.65486156149
+        },
+        "steam_flow_kg_s": 17.388876892910876,
+        "compressor_inlet_volume_m3_s": 7.89041448006774,
+        "turbine_power_W": 2049699.3202493135,
+        "compressor_power_W": 1973596.7480217803,
+        "shaft_losses_W": 40993.9864049863,
+        "available_shaft_W": 35108.58582254688,
+        "heat_rejected_air_cooler_W": 9923897.427772466,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 98.54913036516848,
+          "fan_power_W": 65104.04239360131
+        },
+        "after_illustrative_fan_W": -29995.456571054434,
+        "minimum_sampled_superheat_K": 77.04675800727927,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": -9.313225746154785e-10
+      }
+    },
+    {
+      "ratio": 2,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 465.24733224840134,
+            "temperature_C": 192.09733224840136,
+            "enthalpy_J_kg": 2838825.7080058027,
+            "entropy_J_kg_K": 7024.760926283848,
+            "density_kg_m3": 2.3978604221899964,
+            "superheat_K": 40.26625314533817,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 559.9999999999997,
+            "temperature_C": 286.8499999999997,
+            "enthalpy_J_kg": 3023389.688285137,
+            "entropy_J_kg_K": 7074.7727275333,
+            "density_kg_m3": 3.977112892026735,
+            "superheat_K": 106.97199211832526,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 980000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3603358.1325875674,
+            "entropy_J_kg_K": 7928.480833032968,
+            "density_kg_m3": 2.572737900544824,
+            "superheat_K": 377.8479862203709,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 733.332944089017,
+            "temperature_C": 460.18294408901704,
+            "enthalpy_J_kg": 3399235.3132141503,
+            "entropy_J_kg_K": 7966.780781599039,
+            "density_kg_m3": 1.514691245612504,
+            "superheat_K": 307.5892790844587,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 579968.4443024304,
+          "heat_rejected_J_kg": 560409.6052083476,
+          "turbine_work_J_kg": 204122.81937341718,
+          "compressor_work_J_kg": 184563.98027933436
+        },
+        "steam_flow_kg_s": 17.24231740233336,
+        "compressor_inlet_volume_m3_s": 7.190709368556878,
+        "turbine_power_W": 3519550.44069562,
+        "compressor_power_W": 3182310.729014278,
+        "shaft_losses_W": 70391.00881391247,
+        "available_shaft_W": 266848.70286742976,
+        "heat_rejected_air_cooler_W": 9662760.288318658,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 95.9559115026679,
+          "fan_power_W": 63390.89657349575
+        },
+        "after_illustrative_fan_W": 203457.806293934,
+        "minimum_sampled_superheat_K": 40.26625314533817,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 2.3283064365386963e-09
+      }
+    },
+    {
+      "ratio": 2.5,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2.5,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 439.37389050149477,
+            "temperature_C": 166.2238905014948,
+            "enthalpy_J_kg": 2781650.988168624,
+            "entropy_J_kg_K": 6898.291546586499,
+            "density_kg_m3": 2.56223392736437,
+            "superheat_K": 14.392811398431604,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1250000.0,
+            "temperature_K": 560.0000000000003,
+            "temperature_C": 286.85000000000036,
+            "enthalpy_J_kg": 3016155.9815978534,
+            "entropy_J_kg_K": 6962.01545389512,
+            "density_kg_m3": 5.00795240358437,
+            "superheat_K": 97.04063388385839,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 1225000.0,
+            "temperature_K": 830.0000000000001,
+            "temperature_C": 556.8500000000001,
+            "enthalpy_J_kg": 3601170.7001845315,
+            "entropy_J_kg_K": 7823.506387305833,
+            "density_kg_m3": 3.2204769057985496,
+            "superheat_K": 367.9595367179654,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 702.569398577523,
+            "temperature_C": 429.419398577523,
+            "enthalpy_J_kg": 3334065.7710776245,
+            "entropy_J_kg_K": 7875.99782432139,
+            "density_kg_m3": 1.5823888962636659,
+            "superheat_K": 276.8257335729647,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 585014.7185866782,
+          "heat_rejected_J_kg": 552414.7829090003,
+          "turbine_work_J_kg": 267104.929106907,
+          "compressor_work_J_kg": 234504.99342922913
+        },
+        "steam_flow_kg_s": 17.09358701975694,
+        "compressor_inlet_volume_m3_s": 6.671360814170537,
+        "turbine_power_W": 4565781.349094923,
+        "compressor_power_W": 4008531.5117500573,
+        "shaft_losses_W": 91315.62698189853,
+        "available_shaft_W": 465934.21036296705,
+        "heat_rejected_air_cooler_W": 9442750.162655134,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 93.77110389925654,
+          "fan_power_W": 61947.55753734909
+        },
+        "after_illustrative_fan_W": 403986.65282561793,
+        "minimum_sampled_superheat_K": 14.392811398431206,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 7.040798664093018e-07
+      }
+    },
+    {
+      "ratio": 3,
+      "eta_c": 0.85,
+      "eta_t": 0.88,
+      "result": {
+        "state_solution_valid": false,
+        "reason": "Specified heater inlet requires a wet compressor inlet"
+      }
+    },
+    {
+      "ratio": 1.5,
+      "eta_c": 0.85,
+      "eta_t": 0.9,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 1.5,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.9,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 502.02783711034243,
+            "temperature_C": 228.87783711034245,
+            "enthalpy_J_kg": 2916962.038844451,
+            "entropy_J_kg_K": 7186.430392546337,
+            "density_kg_m3": 2.203797650533764,
+            "superheat_K": 77.04675800727927,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 750000.0,
+            "temperature_K": 559.9999999999999,
+            "temperature_C": 286.8499999999999,
+            "enthalpy_J_kg": 3030459.6937060123,
+            "entropy_J_kg_K": 7217.052625230835,
+            "density_kg_m3": 2.9616155938290873,
+            "superheat_K": 119.10144077131952,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 735000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3605539.9626379763,
+            "entropy_J_kg_K": 8063.234945565537,
+            "density_kg_m3": 1.92683446923392,
+            "superheat_K": 389.92617641958236,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 773.4417914348725,
+            "temperature_C": 500.2917914348725,
+            "enthalpy_J_kg": 3484986.840741752,
+            "entropy_J_kg_K": 8080.623548831011,
+            "density_kg_m3": 1.4348475040884647,
+            "superheat_K": 347.6981264303142,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 575080.268931964,
+          "heat_rejected_J_kg": 568024.8018973013,
+          "turbine_work_J_kg": 120553.1218962241,
+          "compressor_work_J_kg": 113497.65486156149
+        },
+        "steam_flow_kg_s": 17.388876892910876,
+        "compressor_inlet_volume_m3_s": 7.89041448006774,
+        "turbine_power_W": 2096283.3957095193,
+        "compressor_power_W": 1973596.7480217803,
+        "shaft_losses_W": 41925.667914190424,
+        "available_shaft_W": 80760.97977354862,
+        "heat_rejected_air_cooler_W": 9877313.352312261,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 98.08652782832434,
+          "fan_power_W": 64798.43548404776
+        },
+        "after_illustrative_fan_W": 15962.54428950086,
+        "minimum_sampled_superheat_K": 77.04675800727927,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": -9.313225746154785e-10
+      }
+    },
+    {
+      "ratio": 2,
+      "eta_c": 0.85,
+      "eta_t": 0.9,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.9,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 465.24733224840134,
+            "temperature_C": 192.09733224840136,
+            "enthalpy_J_kg": 2838825.7080058027,
+            "entropy_J_kg_K": 7024.760926283848,
+            "density_kg_m3": 2.3978604221899964,
+            "superheat_K": 40.26625314533817,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 559.9999999999997,
+            "temperature_C": 286.8499999999997,
+            "enthalpy_J_kg": 3023389.688285137,
+            "entropy_J_kg_K": 7074.7727275333,
+            "density_kg_m3": 3.977112892026735,
+            "superheat_K": 106.97199211832526,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 980000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3603358.1325875674,
+            "entropy_J_kg_K": 7928.480833032968,
+            "density_kg_m3": 2.572737900544824,
+            "superheat_K": 377.8479862203709,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 731.1508805988425,
+            "temperature_C": 458.0008805988425,
+            "enthalpy_J_kg": 3394596.158228391,
+            "entropy_J_kg_K": 7960.445228153312,
+            "density_kg_m3": 1.5192967602849463,
+            "superheat_K": 305.4072155942842,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 579968.4443024304,
+          "heat_rejected_J_kg": 555770.4502225881,
+          "turbine_work_J_kg": 208761.9743591766,
+          "compressor_work_J_kg": 184563.98027933436
+        },
+        "steam_flow_kg_s": 17.24231740233336,
+        "compressor_inlet_volume_m3_s": 7.190709368556878,
+        "turbine_power_W": 3599540.223438701,
+        "compressor_power_W": 3182310.729014278,
+        "shaft_losses_W": 71990.80446877409,
+        "available_shaft_W": 345238.68995564914,
+        "heat_rejected_air_cooler_W": 9582770.505575577,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 95.16157403749331,
+          "fan_power_W": 62866.13719899975
+        },
+        "after_illustrative_fan_W": 282372.5527566494,
+        "minimum_sampled_superheat_K": 40.26625314533817,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 2.3283064365386963e-09
+      }
+    },
+    {
+      "ratio": 2.5,
+      "eta_c": 0.85,
+      "eta_t": 0.9,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2.5,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.9,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 439.37389050149477,
+            "temperature_C": 166.2238905014948,
+            "enthalpy_J_kg": 2781650.988168624,
+            "entropy_J_kg_K": 6898.291546586499,
+            "density_kg_m3": 2.56223392736437,
+            "superheat_K": 14.392811398431604,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1250000.0,
+            "temperature_K": 560.0000000000003,
+            "temperature_C": 286.85000000000036,
+            "enthalpy_J_kg": 3016155.9815978534,
+            "entropy_J_kg_K": 6962.01545389512,
+            "density_kg_m3": 5.00795240358437,
+            "superheat_K": 97.04063388385839,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 1225000.0,
+            "temperature_K": 830.0000000000001,
+            "temperature_C": 556.8500000000001,
+            "enthalpy_J_kg": 3601170.7001845315,
+            "entropy_J_kg_K": 7823.506387305833,
+            "density_kg_m3": 3.2204769057985496,
+            "superheat_K": 367.9595367179654,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 699.691901419162,
+            "temperature_C": 426.54190141916206,
+            "enthalpy_J_kg": 3327995.204507013,
+            "entropy_J_kg_K": 7867.33956117331,
+            "density_kg_m3": 1.5890407299677654,
+            "superheat_K": 273.94823641460374,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 585014.7185866782,
+          "heat_rejected_J_kg": 546344.2163383886,
+          "turbine_work_J_kg": 273175.49567751866,
+          "compressor_work_J_kg": 234504.99342922913
+        },
+        "steam_flow_kg_s": 17.09358701975694,
+        "compressor_inlet_volume_m3_s": 6.671360814170537,
+        "turbine_power_W": 4669549.107028901,
+        "compressor_power_W": 4008531.5117500573,
+        "shaft_losses_W": 93390.9821405781,
+        "available_shaft_W": 567626.613138265,
+        "heat_rejected_air_cooler_W": 9338982.404721156,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 92.74063957022001,
+          "fan_power_W": 61266.80679795545
+        },
+        "after_illustrative_fan_W": 506359.80634030956,
+        "minimum_sampled_superheat_K": 14.392811398431206,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 7.040798664093018e-07
+      }
+    },
+    {
+      "ratio": 3,
+      "eta_c": 0.85,
+      "eta_t": 0.9,
+      "result": {
+        "state_solution_valid": false,
+        "reason": "Specified heater inlet requires a wet compressor inlet"
+      }
+    }
+  ],
+  "pressure_loss_trials": [
+    {
+      "loss": 0,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 465.24733224840134,
+            "temperature_C": 192.09733224840136,
+            "enthalpy_J_kg": 2838825.7080058027,
+            "entropy_J_kg_K": 7024.760926283848,
+            "density_kg_m3": 2.3978604221899964,
+            "superheat_K": 40.26625314533817,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 559.9999999999997,
+            "temperature_C": 286.8499999999997,
+            "enthalpy_J_kg": 3023389.688285137,
+            "entropy_J_kg_K": 7074.7727275333,
+            "density_kg_m3": 3.977112892026735,
+            "superheat_K": 106.97199211832526,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 830.0000000000001,
+            "temperature_C": 556.8500000000001,
+            "enthalpy_J_kg": 3603179.7768136454,
+            "entropy_J_kg_K": 7918.994723037171,
+            "density_kg_m3": 2.6255455615554277,
+            "superheat_K": 376.9719921183257,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 727.6916915301268,
+            "temperature_C": 454.54169153012685,
+            "enthalpy_J_kg": 3387375.59802041,
+            "entropy_J_kg_K": 7959.825285458511,
+            "density_kg_m3": 1.49597576394855,
+            "superheat_K": 302.71061242706367,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 579790.0885285083,
+          "heat_rejected_J_kg": 548549.8900146075,
+          "turbine_work_J_kg": 215804.17879323522,
+          "compressor_work_J_kg": 184563.98027933436
+        },
+        "steam_flow_kg_s": 17.247621506224316,
+        "compressor_inlet_volume_m3_s": 7.192921383835947,
+        "turbine_power_W": 3722108.7952872813,
+        "compressor_power_W": 3183289.675540208,
+        "shaft_losses_W": 74442.1759057457,
+        "available_shaft_W": 464376.94384132785,
+        "heat_rejected_air_cooler_W": 9461180.880252928,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 93.95412989327635,
+          "fan_power_W": 62068.469127635515
+        },
+        "after_illustrative_fan_W": 402308.4747136923,
+        "minimum_sampled_superheat_K": 40.26625314533817,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 2.3283064365386963e-09
+      }
+    },
+    {
+      "loss": 0.02,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 465.24733224840134,
+            "temperature_C": 192.09733224840136,
+            "enthalpy_J_kg": 2838825.7080058027,
+            "entropy_J_kg_K": 7024.760926283848,
+            "density_kg_m3": 2.3978604221899964,
+            "superheat_K": 40.26625314533817,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 559.9999999999997,
+            "temperature_C": 286.8499999999997,
+            "enthalpy_J_kg": 3023389.688285137,
+            "entropy_J_kg_K": 7074.7727275333,
+            "density_kg_m3": 3.977112892026735,
+            "superheat_K": 106.97199211832526,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 980000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3603358.1325875674,
+            "entropy_J_kg_K": 7928.480833032968,
+            "density_kg_m3": 2.572737900544824,
+            "superheat_K": 377.8479862203709,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 733.332944089017,
+            "temperature_C": 460.18294408901704,
+            "enthalpy_J_kg": 3399235.3132141503,
+            "entropy_J_kg_K": 7966.780781599039,
+            "density_kg_m3": 1.514691245612504,
+            "superheat_K": 307.5892790844587,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 579968.4443024304,
+          "heat_rejected_J_kg": 560409.6052083476,
+          "turbine_work_J_kg": 204122.81937341718,
+          "compressor_work_J_kg": 184563.98027933436
+        },
+        "steam_flow_kg_s": 17.24231740233336,
+        "compressor_inlet_volume_m3_s": 7.190709368556878,
+        "turbine_power_W": 3519550.44069562,
+        "compressor_power_W": 3182310.729014278,
+        "shaft_losses_W": 70391.00881391247,
+        "available_shaft_W": 266848.70286742976,
+        "heat_rejected_air_cooler_W": 9662760.288318658,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 95.9559115026679,
+          "fan_power_W": 63390.89657349575
+        },
+        "after_illustrative_fan_W": 203457.806293934,
+        "minimum_sampled_superheat_K": 40.26625314533817,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 2.3283064365386963e-09
+      }
+    },
+    {
+      "loss": 0.05,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": false,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.05,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 465.24733224840134,
+            "temperature_C": 192.09733224840136,
+            "enthalpy_J_kg": 2838825.7080058027,
+            "entropy_J_kg_K": 7024.760926283848,
+            "density_kg_m3": 2.3978604221899964,
+            "superheat_K": 40.26625314533817,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 559.9999999999997,
+            "temperature_C": 286.8499999999997,
+            "enthalpy_J_kg": 3023389.688285137,
+            "entropy_J_kg_K": 7074.7727275333,
+            "density_kg_m3": 3.977112892026735,
+            "superheat_K": 106.97199211832526,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 950000.0,
+            "temperature_K": 829.9999999999997,
+            "temperature_C": 556.8499999999997,
+            "enthalpy_J_kg": 3603625.5962498668,
+            "entropy_J_kg_K": 7943.072918729163,
+            "density_kg_m3": 2.4935493417083436,
+            "superheat_K": 379.1887728317047,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 526315.7894736843,
+            "temperature_K": 742.0915317963833,
+            "temperature_C": 468.9415317963833,
+            "enthalpy_J_kg": 3417690.4557489054,
+            "entropy_J_kg_K": 7977.516577039711,
+            "density_kg_m3": 1.5439701744327294,
+            "superheat_K": 315.16826117397727,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 580235.9079647297,
+          "heat_rejected_J_kg": 578864.7477431027,
+          "turbine_work_J_kg": 185935.14050096134,
+          "compressor_work_J_kg": 184563.98027933436
+        },
+        "steam_flow_kg_s": 17.234369439624306,
+        "compressor_inlet_volume_m3_s": 7.1873947624874415,
+        "turbine_power_W": 3204474.9032020196,
+        "compressor_power_W": 3180843.821381583,
+        "shaft_losses_W": 64089.49806404045,
+        "available_shaft_W": -40458.416243603824,
+        "heat_rejected_air_cooler_W": 9976368.918179562,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 99.07019779721512,
+          "fan_power_W": 65448.27268827957
+        },
+        "after_illustrative_fan_W": -105906.6889318834,
+        "minimum_sampled_superheat_K": 40.26625314533817,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 2.3283064365386963e-09
+      }
+    }
+  ],
+  "absolute_pressure_trials": [
+    {
+      "p_low": 200000.0,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 200000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 200000.0,
+            "temperature_K": 464.10705356835587,
+            "temperature_C": 190.9570535683559,
+            "enthalpy_J_kg": 2852506.7536779772,
+            "entropy_J_kg_K": 7469.1834241885435,
+            "density_kg_m3": 0.9443906009845332,
+            "superheat_K": 70.74696224039366,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 400000.0,
+            "temperature_K": 559.9999999999995,
+            "temperature_C": 286.84999999999957,
+            "enthalpy_J_kg": 3040093.0170719405,
+            "entropy_J_kg_K": 7520.055403682849,
+            "density_kg_m3": 1.56429110850005,
+            "superheat_K": 143.24164074489693,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 392000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3608585.131945129,
+            "entropy_J_kg_K": 8356.116192449472,
+            "density_kg_m3": 1.0256271643249337,
+            "superheat_K": 413.9684286566836,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 204081.63265306124,
+            "temperature_K": 733.696856032156,
+            "temperature_C": 460.54685603215603,
+            "enthalpy_J_kg": 3403767.6964343623,
+            "entropy_J_kg_K": 8394.5307418371,
+            "density_kg_m3": 0.6038396581017659,
+            "superheat_K": 339.69692963888497,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 568492.1148731885,
+          "heat_rejected_J_kg": 551260.9427563851,
+          "turbine_work_J_kg": 204817.4355107667,
+          "compressor_work_J_kg": 187586.26339396322
+        },
+        "steam_flow_kg_s": 17.59039349601298,
+        "compressor_inlet_volume_m3_s": 18.626184417416777,
+        "turbine_power_W": 3602819.2854786483,
+        "compressor_power_W": 3299716.187546548,
+        "shaft_losses_W": 72056.38570957303,
+        "available_shaft_W": 231046.71222252707,
+        "heat_rejected_air_cooler_W": 9696896.9020679,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 96.29490468786395,
+          "fan_power_W": 63614.84402608481
+        },
+        "after_illustrative_fan_W": 167431.86819644226,
+        "minimum_sampled_superheat_K": 70.74696224039366,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 4.6566128730773926e-09
+      }
+    },
+    {
+      "p_low": 500000.0,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 500000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 500000.0,
+            "temperature_K": 465.24733224840134,
+            "temperature_C": 192.09733224840136,
+            "enthalpy_J_kg": 2838825.7080058027,
+            "entropy_J_kg_K": 7024.760926283848,
+            "density_kg_m3": 2.3978604221899964,
+            "superheat_K": 40.26625314533817,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 559.9999999999997,
+            "temperature_C": 286.8499999999997,
+            "enthalpy_J_kg": 3023389.688285137,
+            "entropy_J_kg_K": 7074.7727275333,
+            "density_kg_m3": 3.977112892026735,
+            "superheat_K": 106.97199211832526,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 980000.0,
+            "temperature_K": 830.0,
+            "temperature_C": 556.85,
+            "enthalpy_J_kg": 3603358.1325875674,
+            "entropy_J_kg_K": 7928.480833032968,
+            "density_kg_m3": 2.572737900544824,
+            "superheat_K": 377.8479862203709,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 510204.0816326531,
+            "temperature_K": 733.332944089017,
+            "temperature_C": 460.18294408901704,
+            "enthalpy_J_kg": 3399235.3132141503,
+            "entropy_J_kg_K": 7966.780781599039,
+            "density_kg_m3": 1.514691245612504,
+            "superheat_K": 307.5892790844587,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 579968.4443024304,
+          "heat_rejected_J_kg": 560409.6052083476,
+          "turbine_work_J_kg": 204122.81937341718,
+          "compressor_work_J_kg": 184563.98027933436
+        },
+        "steam_flow_kg_s": 17.24231740233336,
+        "compressor_inlet_volume_m3_s": 7.190709368556878,
+        "turbine_power_W": 3519550.44069562,
+        "compressor_power_W": 3182310.729014278,
+        "shaft_losses_W": 70391.00881391247,
+        "available_shaft_W": 266848.70286742976,
+        "heat_rejected_air_cooler_W": 9662760.288318658,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 95.9559115026679,
+          "fan_power_W": 63390.89657349575
+        },
+        "after_illustrative_fan_W": 203457.806293934,
+        "minimum_sampled_superheat_K": 40.26625314533817,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 2.3283064365386963e-09
+      }
+    },
+    {
+      "p_low": 1000000.0,
+      "result": {
+        "state_solution_valid": true,
+        "self_sustaining_before_auxiliaries": true,
+        "inputs": {
+          "compressor_ratio": 2,
+          "compressor_inlet_Pa": 1000000.0,
+          "compressor_efficiency": 0.85,
+          "turbine_efficiency": 0.88,
+          "shaft_transfer_efficiency": 0.98,
+          "fractional_pressure_loss_each_exchanger": 0.02,
+          "heater_inlet_K": 560,
+          "turbine_inlet_K": 830,
+          "heat_input_W": 10000000.0
+        },
+        "states": {
+          "compressor_inlet": {
+            "pressure_Pa": 1000000.0,
+            "temperature_K": 467.41033323083553,
+            "temperature_C": 194.26033323083556,
+            "enthalpy_J_kg": 2814184.5802475703,
+            "entropy_J_kg_K": 6665.6023751924495,
+            "density_kg_m3": 4.931457785319147,
+            "superheat_K": 14.382325349161135,
+            "phase": "gas"
+          },
+          "steam_generator_inlet": {
+            "pressure_Pa": 2000000.0,
+            "temperature_K": 560.0000000000006,
+            "temperature_C": 286.8500000000006,
+            "enthalpy_J_kg": 2993411.1126304925,
+            "entropy_J_kg_K": 6714.101186550824,
+            "density_kg_m3": 8.200801594246462,
+            "superheat_K": 74.47277457533733,
+            "phase": "gas"
+          },
+          "turbine_inlet": {
+            "pressure_Pa": 1960000.0,
+            "temperature_K": 829.9999999999995,
+            "temperature_C": 556.8499999999996,
+            "enthalpy_J_kg": 3594574.688876887,
+            "entropy_J_kg_K": 7600.585929955153,
+            "density_kg_m3": 5.174846637307084,
+            "superheat_K": 345.49203482915897,
+            "phase": "supercritical_gas"
+          },
+          "air_cooler_inlet": {
+            "pressure_Pa": 1020408.1632653062,
+            "temperature_K": 732.7313892561031,
+            "temperature_C": 459.5813892561031,
+            "enthalpy_J_kg": 3391618.3043115865,
+            "entropy_J_kg_K": 7638.692741198944,
+            "density_kg_m3": 3.0466495039483372,
+            "superheat_K": 278.82361951238875,
+            "phase": "supercritical_gas"
+          }
+        },
+        "specific": {
+          "heat_added_J_kg": 601163.5762463943,
+          "heat_rejected_J_kg": 577433.7240640162,
+          "turbine_work_J_kg": 202956.3845653003,
+          "compressor_work_J_kg": 179226.53238292225
+        },
+        "steam_flow_kg_s": 16.634407663948984,
+        "compressor_inlet_volume_m3_s": 3.373121780230846,
+        "turbine_power_W": 3376059.238860409,
+        "compressor_power_W": 2981327.203853483,
+        "shaft_losses_W": 67521.18477720824,
+        "available_shaft_W": 327210.8502297181,
+        "heat_rejected_air_cooler_W": 9605267.964993075,
+        "illustrative_air": {
+          "inlet_C": 30,
+          "rise_K": 100,
+          "cp_J_kg_K": 1007,
+          "density_inlet_kg_m3": 1.1643981014191607,
+          "pressure_drop_Pa": 500,
+          "fan_efficiency": 0.65,
+          "mass_kg_s": 95.38498475663431,
+          "fan_power_W": 63013.72795780447
+        },
+        "after_illustrative_fan_W": 264197.1222719136,
+        "minimum_sampled_superheat_K": 14.382325349161135,
+        "energy_residual_J_kg": 0.0,
+        "compressor_inverse_residual_J_kg": 9.038019925355911e-06
+      }
+    }
+  ],
+  "checks": {
+    "IF97_max_relative_enthalpy_difference": 2.9821311053288708e-05,
+    "duty_scaling_pass": true,
+    "normal_24MPa_560K_phase": "supercritical_liquid"
+  },
+  "limitations": [
+    "Fixed SG temperature endpoints; no salt-side heat-transfer or freezing calculation",
+    "10 MW is a normalization, not a selected reactor decay-heat duty",
+    "Lower auxiliary-cycle pressures require isolation/depressurization or a separate heat exchanger; no direct connection to operating 24 MPa headers",
+    "No compressor/turbine maps, startup system, inventory control, overspeed control, or cooldown validation",
+    "Fan pressure drop and temperature rise are assumptions, not equipment sizing",
+    "Salt-circulation power and other station loads are not included in available-shaft result",
+    "Duty scaling holds cycle states fixed; it is not a part-load performance model"
+  ]
+}

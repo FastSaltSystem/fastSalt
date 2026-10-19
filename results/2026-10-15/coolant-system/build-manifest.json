@@ -1,0 +1,72 @@
+{
+  "document": {
+    "id": "FS-CS",
+    "title": "WISTR coolant system",
+    "revision": "B-working",
+    "date": "14 October 2026",
+    "status": "Preliminary - for discussion"
+  },
+  "validated": {
+    "equipment": 15,
+    "lines": 25,
+    "instruments": 26,
+    "valves": 16,
+    "relief_devices": 3,
+    "route_segments": 28
+  },
+  "shared_engineering": {
+    "model_sha256": "477d78d1801507ac90968b79b3eab6e81afbd07e2efb7923299c6956b3780747",
+    "adapter_sha256": "5362be77a447141230f00e0bfbb65ba756f962fdd211d190606fa5d909b5e289",
+    "sources": {
+      "motor_envelope": {
+        "path": "calculations/steam-generator/Coolant pump estimate - Hurmet.md",
+        "sha256": "31445e71b66881cec2823ea5b8068a2bf316ff67227f470c3611ea3d903df8b1",
+        "role": "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+      },
+      "wall": {
+        "path": "calculations/steam-generator/Molten-salt coolant pipe wall - Hurmet.md",
+        "sha256": "77a2fc8c868f90ea8990b9504e83626c94bc1b7e4201e30f6b0ca29050ce903e",
+        "role": "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+      },
+      "insulation": {
+        "path": "calculations/steam-generator/Molten-salt coolant insulation - Hurmet.md",
+        "sha256": "87ea2baefe4ae9bd28072d43d7c59159187f290d655f8b24182ee1923772258e",
+        "role": "Explicitly adopted worksheet values; not automatic Hurmet evaluation"
+      },
+      "generator": {
+        "path": "calculations/steam-generator/sources/counterSG.xlsx",
+        "sha256": "2c2bd8716c8bcbb9cbb7790d8d52509bbc4c99c7046f01be323e56c0faeead53",
+        "role": "D-063 explicitly adopted preliminary results; reviewed source revision"
+      },
+      "pump": {
+        "path": "calculations/steam-generator/Itemized coolant pump estimate - Hurmet.md",
+        "sha256": "9d4b50f6a71b2bcc28fbe2a9e86f90a93195d516b5a808df75e2f011b6d3c9ec",
+        "role": "D-063 explicitly adopted preliminary results; reviewed source revision"
+      },
+      "core": {
+        "path": "calculations/reactor/Core coolant pressure loss - Hurmet.md",
+        "sha256": "7e213b97cd2a584e0d514b0b946b969bbdd8070d67f200c379778303d83b17d6",
+        "role": "D-061 explicitly adopted preliminary results; no automatic worksheet evaluation"
+      },
+      "pressure": {
+        "path": "calculations/reactor/Normal coolant pressure profile - Hurmet.md",
+        "sha256": "409f44401d4404105213de9e4c0bf53247e6c2ba8ec9e7c3df950785abf9b3a8",
+        "role": "D-063 explicitly adopted preliminary results; reviewed source revision"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "file": "coolant-system.toml",
+      "sha256": "ef7b20889a0370f710aa9baf8b691e1c094b745ababaf1d4de329c8301c0ed72"
+    },
+    {
+      "file": "layout.toml",
+      "sha256": "30fd39c402e09be260968d0104cd6e923fde2c075de4ebce3c7c459c240528c0"
+    },
+    {
+      "file": "build.py",
+      "sha256": "09d78ba138f45ef6f29fb094a730be688cf8f466f506d471e37180ab94c6a2f4"
+    }
+  ]
+}

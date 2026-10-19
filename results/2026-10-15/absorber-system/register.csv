@@ -1,0 +1,283 @@
+tag,kind,assembly,chamber,name,service,from,to,on,line,type,normal_state,status
+AT-701A,equipment,1,primary,In-vessel absorber chamber,,,,,,,,
+RS-701A,equipment,1,primary,Heated absorber-salt reservoir,,,,,,,,
+PV-701A,equipment,1,primary,Pressure-gas vessel,,,,,,,,
+SV-701A,equipment,1,primary,Surge-gas vessel,,,,,,,,
+C-701A,equipment,1,primary,Gas recovery compressor,,,,,,,,
+XV-701A,equipment,1,primary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-701A,line,1,primary,,Absorber salt; inject and recover,RS-701A.salt_bottom,AT-701A.salt_bottom,,,,,
+G-A-701A,line,1,primary,,Absorber chamber gas,AT-701A.gas_top,XV-701A.A,,,,,
+G-R-701A,line,1,primary,,Reservoir gas,RS-701A.gas_top,XV-701A.R,,,,,
+G-P-701A,line,1,primary,,Pressure supply within module,PV-701A.gas,XV-701A.P,,,,,
+G-S-701A,line,1,primary,,Gas collection within module,SV-701A.gas,XV-701A.S,,,,,
+G-CI-701A,line,1,primary,,Gas recovery suction,SV-701A.recovery,C-701A.suction,,,,,
+G-CO-701A,line,1,primary,,Gas recovery discharge,C-701A.discharge,PV-701A.charge,,,,,
+PT-701AP,instrument,1,primary,,,,,PV-701A,,,,proposed
+PT-701AS,instrument,1,primary,,,,,SV-701A,,,,proposed
+LT-701AR,instrument,1,primary,,,,,RS-701A,,,,proposed
+LT-701AA,instrument,1,primary,,,,,AT-701A,,,,proposed; sensing method unresolved
+TT-701AR,instrument,1,primary,,,,,RS-701A,,,,proposed
+AT-701B,equipment,1,secondary,In-vessel absorber chamber,,,,,,,,
+RS-701B,equipment,1,secondary,Heated absorber-salt reservoir,,,,,,,,
+PV-701B,equipment,1,secondary,Pressure-gas vessel,,,,,,,,
+SV-701B,equipment,1,secondary,Surge-gas vessel,,,,,,,,
+C-701B,equipment,1,secondary,Gas recovery compressor,,,,,,,,
+XV-701B,equipment,1,secondary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-701B,line,1,secondary,,Absorber salt; inject and recover,RS-701B.salt_bottom,AT-701B.salt_bottom,,,,,
+G-A-701B,line,1,secondary,,Absorber chamber gas,AT-701B.gas_top,XV-701B.A,,,,,
+G-R-701B,line,1,secondary,,Reservoir gas,RS-701B.gas_top,XV-701B.R,,,,,
+G-P-701B,line,1,secondary,,Pressure supply within module,PV-701B.gas,XV-701B.P,,,,,
+G-S-701B,line,1,secondary,,Gas collection within module,SV-701B.gas,XV-701B.S,,,,,
+G-CI-701B,line,1,secondary,,Gas recovery suction,SV-701B.recovery,C-701B.suction,,,,,
+G-CO-701B,line,1,secondary,,Gas recovery discharge,C-701B.discharge,PV-701B.charge,,,,,
+PT-701BP,instrument,1,secondary,,,,,PV-701B,,,,proposed
+PT-701BS,instrument,1,secondary,,,,,SV-701B,,,,proposed
+LT-701BR,instrument,1,secondary,,,,,RS-701B,,,,proposed
+LT-701BA,instrument,1,secondary,,,,,AT-701B,,,,proposed; sensing method unresolved
+TT-701BR,instrument,1,secondary,,,,,RS-701B,,,,proposed
+AT-702A,equipment,2,primary,In-vessel absorber chamber,,,,,,,,
+RS-702A,equipment,2,primary,Heated absorber-salt reservoir,,,,,,,,
+PV-702A,equipment,2,primary,Pressure-gas vessel,,,,,,,,
+SV-702A,equipment,2,primary,Surge-gas vessel,,,,,,,,
+C-702A,equipment,2,primary,Gas recovery compressor,,,,,,,,
+XV-702A,equipment,2,primary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-702A,line,2,primary,,Absorber salt; inject and recover,RS-702A.salt_bottom,AT-702A.salt_bottom,,,,,
+G-A-702A,line,2,primary,,Absorber chamber gas,AT-702A.gas_top,XV-702A.A,,,,,
+G-R-702A,line,2,primary,,Reservoir gas,RS-702A.gas_top,XV-702A.R,,,,,
+G-P-702A,line,2,primary,,Pressure supply within module,PV-702A.gas,XV-702A.P,,,,,
+G-S-702A,line,2,primary,,Gas collection within module,SV-702A.gas,XV-702A.S,,,,,
+G-CI-702A,line,2,primary,,Gas recovery suction,SV-702A.recovery,C-702A.suction,,,,,
+G-CO-702A,line,2,primary,,Gas recovery discharge,C-702A.discharge,PV-702A.charge,,,,,
+PT-702AP,instrument,2,primary,,,,,PV-702A,,,,proposed
+PT-702AS,instrument,2,primary,,,,,SV-702A,,,,proposed
+LT-702AR,instrument,2,primary,,,,,RS-702A,,,,proposed
+LT-702AA,instrument,2,primary,,,,,AT-702A,,,,proposed; sensing method unresolved
+TT-702AR,instrument,2,primary,,,,,RS-702A,,,,proposed
+AT-702B,equipment,2,secondary,In-vessel absorber chamber,,,,,,,,
+RS-702B,equipment,2,secondary,Heated absorber-salt reservoir,,,,,,,,
+PV-702B,equipment,2,secondary,Pressure-gas vessel,,,,,,,,
+SV-702B,equipment,2,secondary,Surge-gas vessel,,,,,,,,
+C-702B,equipment,2,secondary,Gas recovery compressor,,,,,,,,
+XV-702B,equipment,2,secondary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-702B,line,2,secondary,,Absorber salt; inject and recover,RS-702B.salt_bottom,AT-702B.salt_bottom,,,,,
+G-A-702B,line,2,secondary,,Absorber chamber gas,AT-702B.gas_top,XV-702B.A,,,,,
+G-R-702B,line,2,secondary,,Reservoir gas,RS-702B.gas_top,XV-702B.R,,,,,
+G-P-702B,line,2,secondary,,Pressure supply within module,PV-702B.gas,XV-702B.P,,,,,
+G-S-702B,line,2,secondary,,Gas collection within module,SV-702B.gas,XV-702B.S,,,,,
+G-CI-702B,line,2,secondary,,Gas recovery suction,SV-702B.recovery,C-702B.suction,,,,,
+G-CO-702B,line,2,secondary,,Gas recovery discharge,C-702B.discharge,PV-702B.charge,,,,,
+PT-702BP,instrument,2,secondary,,,,,PV-702B,,,,proposed
+PT-702BS,instrument,2,secondary,,,,,SV-702B,,,,proposed
+LT-702BR,instrument,2,secondary,,,,,RS-702B,,,,proposed
+LT-702BA,instrument,2,secondary,,,,,AT-702B,,,,proposed; sensing method unresolved
+TT-702BR,instrument,2,secondary,,,,,RS-702B,,,,proposed
+AT-703A,equipment,3,primary,In-vessel absorber chamber,,,,,,,,
+RS-703A,equipment,3,primary,Heated absorber-salt reservoir,,,,,,,,
+PV-703A,equipment,3,primary,Pressure-gas vessel,,,,,,,,
+SV-703A,equipment,3,primary,Surge-gas vessel,,,,,,,,
+C-703A,equipment,3,primary,Gas recovery compressor,,,,,,,,
+XV-703A,equipment,3,primary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-703A,line,3,primary,,Absorber salt; inject and recover,RS-703A.salt_bottom,AT-703A.salt_bottom,,,,,
+G-A-703A,line,3,primary,,Absorber chamber gas,AT-703A.gas_top,XV-703A.A,,,,,
+G-R-703A,line,3,primary,,Reservoir gas,RS-703A.gas_top,XV-703A.R,,,,,
+G-P-703A,line,3,primary,,Pressure supply within module,PV-703A.gas,XV-703A.P,,,,,
+G-S-703A,line,3,primary,,Gas collection within module,SV-703A.gas,XV-703A.S,,,,,
+G-CI-703A,line,3,primary,,Gas recovery suction,SV-703A.recovery,C-703A.suction,,,,,
+G-CO-703A,line,3,primary,,Gas recovery discharge,C-703A.discharge,PV-703A.charge,,,,,
+PT-703AP,instrument,3,primary,,,,,PV-703A,,,,proposed
+PT-703AS,instrument,3,primary,,,,,SV-703A,,,,proposed
+LT-703AR,instrument,3,primary,,,,,RS-703A,,,,proposed
+LT-703AA,instrument,3,primary,,,,,AT-703A,,,,proposed; sensing method unresolved
+TT-703AR,instrument,3,primary,,,,,RS-703A,,,,proposed
+AT-703B,equipment,3,secondary,In-vessel absorber chamber,,,,,,,,
+RS-703B,equipment,3,secondary,Heated absorber-salt reservoir,,,,,,,,
+PV-703B,equipment,3,secondary,Pressure-gas vessel,,,,,,,,
+SV-703B,equipment,3,secondary,Surge-gas vessel,,,,,,,,
+C-703B,equipment,3,secondary,Gas recovery compressor,,,,,,,,
+XV-703B,equipment,3,secondary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-703B,line,3,secondary,,Absorber salt; inject and recover,RS-703B.salt_bottom,AT-703B.salt_bottom,,,,,
+G-A-703B,line,3,secondary,,Absorber chamber gas,AT-703B.gas_top,XV-703B.A,,,,,
+G-R-703B,line,3,secondary,,Reservoir gas,RS-703B.gas_top,XV-703B.R,,,,,
+G-P-703B,line,3,secondary,,Pressure supply within module,PV-703B.gas,XV-703B.P,,,,,
+G-S-703B,line,3,secondary,,Gas collection within module,SV-703B.gas,XV-703B.S,,,,,
+G-CI-703B,line,3,secondary,,Gas recovery suction,SV-703B.recovery,C-703B.suction,,,,,
+G-CO-703B,line,3,secondary,,Gas recovery discharge,C-703B.discharge,PV-703B.charge,,,,,
+PT-703BP,instrument,3,secondary,,,,,PV-703B,,,,proposed
+PT-703BS,instrument,3,secondary,,,,,SV-703B,,,,proposed
+LT-703BR,instrument,3,secondary,,,,,RS-703B,,,,proposed
+LT-703BA,instrument,3,secondary,,,,,AT-703B,,,,proposed; sensing method unresolved
+TT-703BR,instrument,3,secondary,,,,,RS-703B,,,,proposed
+AT-704A,equipment,4,primary,In-vessel absorber chamber,,,,,,,,
+RS-704A,equipment,4,primary,Heated absorber-salt reservoir,,,,,,,,
+PV-704A,equipment,4,primary,Pressure-gas vessel,,,,,,,,
+SV-704A,equipment,4,primary,Surge-gas vessel,,,,,,,,
+C-704A,equipment,4,primary,Gas recovery compressor,,,,,,,,
+XV-704A,equipment,4,primary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-704A,line,4,primary,,Absorber salt; inject and recover,RS-704A.salt_bottom,AT-704A.salt_bottom,,,,,
+G-A-704A,line,4,primary,,Absorber chamber gas,AT-704A.gas_top,XV-704A.A,,,,,
+G-R-704A,line,4,primary,,Reservoir gas,RS-704A.gas_top,XV-704A.R,,,,,
+G-P-704A,line,4,primary,,Pressure supply within module,PV-704A.gas,XV-704A.P,,,,,
+G-S-704A,line,4,primary,,Gas collection within module,SV-704A.gas,XV-704A.S,,,,,
+G-CI-704A,line,4,primary,,Gas recovery suction,SV-704A.recovery,C-704A.suction,,,,,
+G-CO-704A,line,4,primary,,Gas recovery discharge,C-704A.discharge,PV-704A.charge,,,,,
+PT-704AP,instrument,4,primary,,,,,PV-704A,,,,proposed
+PT-704AS,instrument,4,primary,,,,,SV-704A,,,,proposed
+LT-704AR,instrument,4,primary,,,,,RS-704A,,,,proposed
+LT-704AA,instrument,4,primary,,,,,AT-704A,,,,proposed; sensing method unresolved
+TT-704AR,instrument,4,primary,,,,,RS-704A,,,,proposed
+AT-704B,equipment,4,secondary,In-vessel absorber chamber,,,,,,,,
+RS-704B,equipment,4,secondary,Heated absorber-salt reservoir,,,,,,,,
+PV-704B,equipment,4,secondary,Pressure-gas vessel,,,,,,,,
+SV-704B,equipment,4,secondary,Surge-gas vessel,,,,,,,,
+C-704B,equipment,4,secondary,Gas recovery compressor,,,,,,,,
+XV-704B,equipment,4,secondary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-704B,line,4,secondary,,Absorber salt; inject and recover,RS-704B.salt_bottom,AT-704B.salt_bottom,,,,,
+G-A-704B,line,4,secondary,,Absorber chamber gas,AT-704B.gas_top,XV-704B.A,,,,,
+G-R-704B,line,4,secondary,,Reservoir gas,RS-704B.gas_top,XV-704B.R,,,,,
+G-P-704B,line,4,secondary,,Pressure supply within module,PV-704B.gas,XV-704B.P,,,,,
+G-S-704B,line,4,secondary,,Gas collection within module,SV-704B.gas,XV-704B.S,,,,,
+G-CI-704B,line,4,secondary,,Gas recovery suction,SV-704B.recovery,C-704B.suction,,,,,
+G-CO-704B,line,4,secondary,,Gas recovery discharge,C-704B.discharge,PV-704B.charge,,,,,
+PT-704BP,instrument,4,secondary,,,,,PV-704B,,,,proposed
+PT-704BS,instrument,4,secondary,,,,,SV-704B,,,,proposed
+LT-704BR,instrument,4,secondary,,,,,RS-704B,,,,proposed
+LT-704BA,instrument,4,secondary,,,,,AT-704B,,,,proposed; sensing method unresolved
+TT-704BR,instrument,4,secondary,,,,,RS-704B,,,,proposed
+AT-705A,equipment,5,primary,In-vessel absorber chamber,,,,,,,,
+RS-705A,equipment,5,primary,Heated absorber-salt reservoir,,,,,,,,
+PV-705A,equipment,5,primary,Pressure-gas vessel,,,,,,,,
+SV-705A,equipment,5,primary,Surge-gas vessel,,,,,,,,
+C-705A,equipment,5,primary,Gas recovery compressor,,,,,,,,
+XV-705A,equipment,5,primary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-705A,line,5,primary,,Absorber salt; inject and recover,RS-705A.salt_bottom,AT-705A.salt_bottom,,,,,
+G-A-705A,line,5,primary,,Absorber chamber gas,AT-705A.gas_top,XV-705A.A,,,,,
+G-R-705A,line,5,primary,,Reservoir gas,RS-705A.gas_top,XV-705A.R,,,,,
+G-P-705A,line,5,primary,,Pressure supply within module,PV-705A.gas,XV-705A.P,,,,,
+G-S-705A,line,5,primary,,Gas collection within module,SV-705A.gas,XV-705A.S,,,,,
+G-CI-705A,line,5,primary,,Gas recovery suction,SV-705A.recovery,C-705A.suction,,,,,
+G-CO-705A,line,5,primary,,Gas recovery discharge,C-705A.discharge,PV-705A.charge,,,,,
+PT-705AP,instrument,5,primary,,,,,PV-705A,,,,proposed
+PT-705AS,instrument,5,primary,,,,,SV-705A,,,,proposed
+LT-705AR,instrument,5,primary,,,,,RS-705A,,,,proposed
+LT-705AA,instrument,5,primary,,,,,AT-705A,,,,proposed; sensing method unresolved
+TT-705AR,instrument,5,primary,,,,,RS-705A,,,,proposed
+AT-705B,equipment,5,secondary,In-vessel absorber chamber,,,,,,,,
+RS-705B,equipment,5,secondary,Heated absorber-salt reservoir,,,,,,,,
+PV-705B,equipment,5,secondary,Pressure-gas vessel,,,,,,,,
+SV-705B,equipment,5,secondary,Surge-gas vessel,,,,,,,,
+C-705B,equipment,5,secondary,Gas recovery compressor,,,,,,,,
+XV-705B,equipment,5,secondary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-705B,line,5,secondary,,Absorber salt; inject and recover,RS-705B.salt_bottom,AT-705B.salt_bottom,,,,,
+G-A-705B,line,5,secondary,,Absorber chamber gas,AT-705B.gas_top,XV-705B.A,,,,,
+G-R-705B,line,5,secondary,,Reservoir gas,RS-705B.gas_top,XV-705B.R,,,,,
+G-P-705B,line,5,secondary,,Pressure supply within module,PV-705B.gas,XV-705B.P,,,,,
+G-S-705B,line,5,secondary,,Gas collection within module,SV-705B.gas,XV-705B.S,,,,,
+G-CI-705B,line,5,secondary,,Gas recovery suction,SV-705B.recovery,C-705B.suction,,,,,
+G-CO-705B,line,5,secondary,,Gas recovery discharge,C-705B.discharge,PV-705B.charge,,,,,
+PT-705BP,instrument,5,secondary,,,,,PV-705B,,,,proposed
+PT-705BS,instrument,5,secondary,,,,,SV-705B,,,,proposed
+LT-705BR,instrument,5,secondary,,,,,RS-705B,,,,proposed
+LT-705BA,instrument,5,secondary,,,,,AT-705B,,,,proposed; sensing method unresolved
+TT-705BR,instrument,5,secondary,,,,,RS-705B,,,,proposed
+AT-706A,equipment,6,primary,In-vessel absorber chamber,,,,,,,,
+RS-706A,equipment,6,primary,Heated absorber-salt reservoir,,,,,,,,
+PV-706A,equipment,6,primary,Pressure-gas vessel,,,,,,,,
+SV-706A,equipment,6,primary,Surge-gas vessel,,,,,,,,
+C-706A,equipment,6,primary,Gas recovery compressor,,,,,,,,
+XV-706A,equipment,6,primary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-706A,line,6,primary,,Absorber salt; inject and recover,RS-706A.salt_bottom,AT-706A.salt_bottom,,,,,
+G-A-706A,line,6,primary,,Absorber chamber gas,AT-706A.gas_top,XV-706A.A,,,,,
+G-R-706A,line,6,primary,,Reservoir gas,RS-706A.gas_top,XV-706A.R,,,,,
+G-P-706A,line,6,primary,,Pressure supply within module,PV-706A.gas,XV-706A.P,,,,,
+G-S-706A,line,6,primary,,Gas collection within module,SV-706A.gas,XV-706A.S,,,,,
+G-CI-706A,line,6,primary,,Gas recovery suction,SV-706A.recovery,C-706A.suction,,,,,
+G-CO-706A,line,6,primary,,Gas recovery discharge,C-706A.discharge,PV-706A.charge,,,,,
+PT-706AP,instrument,6,primary,,,,,PV-706A,,,,proposed
+PT-706AS,instrument,6,primary,,,,,SV-706A,,,,proposed
+LT-706AR,instrument,6,primary,,,,,RS-706A,,,,proposed
+LT-706AA,instrument,6,primary,,,,,AT-706A,,,,proposed; sensing method unresolved
+TT-706AR,instrument,6,primary,,,,,RS-706A,,,,proposed
+AT-706B,equipment,6,secondary,In-vessel absorber chamber,,,,,,,,
+RS-706B,equipment,6,secondary,Heated absorber-salt reservoir,,,,,,,,
+PV-706B,equipment,6,secondary,Pressure-gas vessel,,,,,,,,
+SV-706B,equipment,6,secondary,Surge-gas vessel,,,,,,,,
+C-706B,equipment,6,secondary,Gas recovery compressor,,,,,,,,
+XV-706B,equipment,6,secondary,Three-position gas routing function,,,,,,,,Document function retained; physical valve arrangement and fail state unresolved
+L-SALT-706B,line,6,secondary,,Absorber salt; inject and recover,RS-706B.salt_bottom,AT-706B.salt_bottom,,,,,
+G-A-706B,line,6,secondary,,Absorber chamber gas,AT-706B.gas_top,XV-706B.A,,,,,
+G-R-706B,line,6,secondary,,Reservoir gas,RS-706B.gas_top,XV-706B.R,,,,,
+G-P-706B,line,6,secondary,,Pressure supply within module,PV-706B.gas,XV-706B.P,,,,,
+G-S-706B,line,6,secondary,,Gas collection within module,SV-706B.gas,XV-706B.S,,,,,
+G-CI-706B,line,6,secondary,,Gas recovery suction,SV-706B.recovery,C-706B.suction,,,,,
+G-CO-706B,line,6,secondary,,Gas recovery discharge,C-706B.discharge,PV-706B.charge,,,,,
+PT-706BP,instrument,6,secondary,,,,,PV-706B,,,,proposed
+PT-706BS,instrument,6,secondary,,,,,SV-706B,,,,proposed
+LT-706BR,instrument,6,secondary,,,,,RS-706B,,,,proposed
+LT-706BA,instrument,6,secondary,,,,,AT-706B,,,,proposed; sensing method unresolved
+TT-706BR,instrument,6,secondary,,,,,RS-706B,,,,proposed
+H-700N,equipment,,,Absorber nitrogen charging header,,,,,,,,
+H-700R,equipment,,,Absorber gas discharge header,,,,,,,,
+B-700N,equipment,,,Nitrogen charging supply in gas-treatment area,,,,,,,,
+B-700T,equipment,,,Gas-treatment receiving interface before treatment,,,,,,,,
+N-700,line,,,,Clean nitrogen supply to charging header,B-700N.outlet,H-700N.feed,,,,,
+G-700,line,,,,Absorber discharge to gas treatment inlet,H-700R.return,B-700T.inlet,,,,,
+N-701A,line,,,,Clean nitrogen charging,H-700N.701A,SV-701A.makeup,,,,,
+G-701A,line,,,,Discharge gas to treatment,SV-701A.service_return,H-700R.701A,,,,,
+V-701AN,valve,,,,,,,,N-701A,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-701AR,valve,,,,,,,,G-701A,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-701A,valve,,,,,,,,N-701A,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-701B,line,,,,Clean nitrogen charging,H-700N.701B,SV-701B.makeup,,,,,
+G-701B,line,,,,Discharge gas to treatment,SV-701B.service_return,H-700R.701B,,,,,
+V-701BN,valve,,,,,,,,N-701B,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-701BR,valve,,,,,,,,G-701B,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-701B,valve,,,,,,,,N-701B,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-702A,line,,,,Clean nitrogen charging,H-700N.702A,SV-702A.makeup,,,,,
+G-702A,line,,,,Discharge gas to treatment,SV-702A.service_return,H-700R.702A,,,,,
+V-702AN,valve,,,,,,,,N-702A,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-702AR,valve,,,,,,,,G-702A,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-702A,valve,,,,,,,,N-702A,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-702B,line,,,,Clean nitrogen charging,H-700N.702B,SV-702B.makeup,,,,,
+G-702B,line,,,,Discharge gas to treatment,SV-702B.service_return,H-700R.702B,,,,,
+V-702BN,valve,,,,,,,,N-702B,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-702BR,valve,,,,,,,,G-702B,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-702B,valve,,,,,,,,N-702B,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-703A,line,,,,Clean nitrogen charging,H-700N.703A,SV-703A.makeup,,,,,
+G-703A,line,,,,Discharge gas to treatment,SV-703A.service_return,H-700R.703A,,,,,
+V-703AN,valve,,,,,,,,N-703A,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-703AR,valve,,,,,,,,G-703A,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-703A,valve,,,,,,,,N-703A,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-703B,line,,,,Clean nitrogen charging,H-700N.703B,SV-703B.makeup,,,,,
+G-703B,line,,,,Discharge gas to treatment,SV-703B.service_return,H-700R.703B,,,,,
+V-703BN,valve,,,,,,,,N-703B,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-703BR,valve,,,,,,,,G-703B,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-703B,valve,,,,,,,,N-703B,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-704A,line,,,,Clean nitrogen charging,H-700N.704A,SV-704A.makeup,,,,,
+G-704A,line,,,,Discharge gas to treatment,SV-704A.service_return,H-700R.704A,,,,,
+V-704AN,valve,,,,,,,,N-704A,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-704AR,valve,,,,,,,,G-704A,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-704A,valve,,,,,,,,N-704A,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-704B,line,,,,Clean nitrogen charging,H-700N.704B,SV-704B.makeup,,,,,
+G-704B,line,,,,Discharge gas to treatment,SV-704B.service_return,H-700R.704B,,,,,
+V-704BN,valve,,,,,,,,N-704B,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-704BR,valve,,,,,,,,G-704B,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-704B,valve,,,,,,,,N-704B,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-705A,line,,,,Clean nitrogen charging,H-700N.705A,SV-705A.makeup,,,,,
+G-705A,line,,,,Discharge gas to treatment,SV-705A.service_return,H-700R.705A,,,,,
+V-705AN,valve,,,,,,,,N-705A,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-705AR,valve,,,,,,,,G-705A,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-705A,valve,,,,,,,,N-705A,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-705B,line,,,,Clean nitrogen charging,H-700N.705B,SV-705B.makeup,,,,,
+G-705B,line,,,,Discharge gas to treatment,SV-705B.service_return,H-700R.705B,,,,,
+V-705BN,valve,,,,,,,,N-705B,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-705BR,valve,,,,,,,,G-705B,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-705B,valve,,,,,,,,N-705B,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-706A,line,,,,Clean nitrogen charging,H-700N.706A,SV-706A.makeup,,,,,
+G-706A,line,,,,Discharge gas to treatment,SV-706A.service_return,H-700R.706A,,,,,
+V-706AN,valve,,,,,,,,N-706A,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-706AR,valve,,,,,,,,G-706A,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-706A,valve,,,,,,,,N-706A,nonreturn,,functional reservation; hardware and backflow protection unresolved
+N-706B,line,,,,Clean nitrogen charging,H-700N.706B,SV-706B.makeup,,,,,
+G-706B,line,,,,Discharge gas to treatment,SV-706B.service_return,H-700R.706B,,,,,
+V-706BN,valve,,,,,,,,N-706B,isolation,closed,"draft; type, actuation and fail position unresolved"
+V-706BR,valve,,,,,,,,G-706B,isolation,closed,"draft; type, actuation and fail position unresolved"
+NRV-706B,valve,,,,,,,,N-706B,nonreturn,,functional reservation; hardware and backflow protection unresolved

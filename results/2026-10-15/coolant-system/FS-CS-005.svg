@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1200 850" role="img"><title>WISTR coolant system sheet 5</title>
+<rect x="0" y="0" width="1200" height="850" fill="white" stroke="white" stroke-width="1.3"/>
+<text x="35" y="37" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#546772" text-anchor="start">FAST SALT SYSTEM / WISTR</text>
+<text x="35" y="72" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="bold" fill="#173345" text-anchor="start">Dedicated high-level SG relief</text>
+<text x="35" y="99" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#546772" text-anchor="start">D-062: accepted connection concept; rupture-disc sizing and discharge receiving arrangements remain unresolved.</text>
+<polyline points="35,115 1165,115" fill="none" stroke="#173345" stroke-width="1"/>
+<rect x="905" y="155" width="250" height="420" fill="#edf3f6" stroke="#173345" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="1030" y="185" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#173345" text-anchor="middle">B-501 / INTERFACE</text>
+<text x="1030" y="235" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" fill="#173345" text-anchor="middle">Emergency discharge</text>
+<text x="1030" y="255" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" fill="#173345" text-anchor="middle">receiving system</text>
+<text x="1030" y="300" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Receiver(s), capacity,</text>
+<text x="1030" y="320" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">steam vent and routing TBD.</text>
+<text x="1030" y="380" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Three separate terminations.</text>
+<text x="1030" y="400" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">No common relief header</text>
+<text x="1030" y="420" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">or receiver count selected.</text>
+<text x="1030" y="540" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">Not normal gas / off-gas.</text>
+<rect x="65" y="250" width="270" height="80" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="200" y="281" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">SG-101 / coolant side</text>
+<text x="200" y="305" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">High-level dedicated takeoff</text>
+<polyline points="150,250 150,195 905,195" fill="none" stroke="#274453" stroke-width="2"/>
+<rect x="515" y="181" width="30" height="28" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="518,181 518,209" fill="none" stroke="#173345" stroke-width="1.6"/>
+<polyline points="542,181 542,209" fill="none" stroke="#173345" stroke-width="1.6"/>
+<polyline points="530,182 535,188 537,195 535,202 530,208" fill="none" stroke="#173345" stroke-width="1.8"/>
+<text x="530" y="172" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">RD-101</text>
+<polyline points="797,191 805,195 797,199" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="400" y="185" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">L-101R</text>
+<text x="630" y="220" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Salt / steam / gas</text>
+<polyline points="290,250 290,235 385,235" fill="none" stroke="#50745e" stroke-width="1.5"/>
+<text x="390" y="238" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">AC / normal gas: sheet 3</text>
+<rect x="65" y="400" width="270" height="80" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="200" y="431" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">SG-102 / coolant side</text>
+<text x="200" y="455" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">High-level dedicated takeoff</text>
+<polyline points="150,400 150,345 905,345" fill="none" stroke="#274453" stroke-width="2"/>
+<rect x="515" y="331" width="30" height="28" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="518,331 518,359" fill="none" stroke="#173345" stroke-width="1.6"/>
+<polyline points="542,331 542,359" fill="none" stroke="#173345" stroke-width="1.6"/>
+<polyline points="530,332 535,338 537,345 535,352 530,358" fill="none" stroke="#173345" stroke-width="1.8"/>
+<text x="530" y="322" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">RD-102</text>
+<polyline points="797,341 805,345 797,349" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="400" y="335" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">L-102R</text>
+<text x="630" y="370" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Salt / steam / gas</text>
+<polyline points="290,400 290,385 385,385" fill="none" stroke="#50745e" stroke-width="1.5"/>
+<text x="390" y="388" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">AC / normal gas: sheet 3</text>
+<rect x="65" y="550" width="270" height="80" fill="#edf3f6" stroke="#173345" stroke-width="1.3"/>
+<text x="200" y="581" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#173345" text-anchor="middle">SG-103 / coolant side</text>
+<text x="200" y="605" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="middle">High-level dedicated takeoff</text>
+<polyline points="150,550 150,495 905,495" fill="none" stroke="#274453" stroke-width="2"/>
+<rect x="515" y="481" width="30" height="28" fill="white" stroke="white" stroke-width="1.3"/>
+<polyline points="518,481 518,509" fill="none" stroke="#173345" stroke-width="1.6"/>
+<polyline points="542,481 542,509" fill="none" stroke="#173345" stroke-width="1.6"/>
+<polyline points="530,482 535,488 537,495 535,502 530,508" fill="none" stroke="#173345" stroke-width="1.8"/>
+<text x="530" y="472" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#173345" text-anchor="middle">RD-103</text>
+<polyline points="797,491 805,495 797,499" fill="none" stroke="#274453" stroke-width="2"/>
+<text x="400" y="485" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" fill="#173345" text-anchor="start">L-103R</text>
+<text x="630" y="520" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Salt / steam / gas</text>
+<polyline points="290,550 290,535 385,535" fill="none" stroke="#50745e" stroke-width="1.5"/>
+<text x="390" y="538" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" fill="#173345" text-anchor="start">AC / normal gas: sheet 3</text>
+<text x="40" y="655" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">REQUIREMENT: preserve reactor coolant inventory; prevent continued gravity drainage and siphoning after relief.</text>
+<text x="40" y="678" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Discs normally intact; remain open after actuation. No intervening isolation valve is included in this concept.</text>
+<text x="40" y="701" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Independent of AC-101/102/103, G-101/102/103 and H-401. Closing a normal gas valve does not isolate these paths.</text>
+<text x="40" y="724" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">High takeoffs do not prove retention during pressure-driven discharge; expelled salt and two-phase flow remain to assess.</text>
+<text x="40" y="747" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">TBD: elevations, burst pressure at disc temperature, area/capacity, backpressure, freeze protection and post-event cooling.</text>
+<text x="40" y="770" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="start">Symbol: curved diaphragm between holder faces = rupture disc. Functional schematic; no physical pipe slopes implied.</text>
+<polyline points="35,804 1165,804" fill="none" stroke="#173345" stroke-width="1"/>
+<text x="35" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#173345" text-anchor="start">FS-CS-005 | Rev B-working | 14 October 2026 | Preliminary - for discussion</text>
+<text x="1165" y="824" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" fill="#173345" text-anchor="end">Sheet 5 / 6 | Functional schematic; not to scale</text>
+</svg>

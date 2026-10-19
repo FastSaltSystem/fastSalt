@@ -1,0 +1,4 @@
+unit,server_3d,tanks_3d,sectors,pressure_tank,surge_tank,compressor,controller,pressure_sensor,surge_sensor,pid_tanks
+1,equipment.fuel_pressure_server_1,F1 / F2,2 / 3,V-FM-01,V-FM-02,K-FM-01,PDC-FM-01,PT-FM-91,PT-FM-92,TK-FM-02 / TK-FM-03
+2,equipment.fuel_pressure_server_2,F3 / F4,4 / 5,V-FM-03,V-FM-04,K-FM-02,PDC-FM-02,PT-FM-93,PT-FM-94,TK-FM-04 / TK-FM-05
+3,equipment.fuel_pressure_server_3,F5 / F6,6 / 1,V-FM-05,V-FM-06,K-FM-03,PDC-FM-03,PT-FM-95,PT-FM-96,TK-FM-06 / TK-FM-01

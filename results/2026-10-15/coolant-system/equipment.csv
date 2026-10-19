@@ -1,0 +1,16 @@
+tag,name,type,pump_kind,reversible,status,duty_MWth,mass_flow_kg_s,core_height_m,core_pressure_drop_kPa,flow_m3_s,pressure_rise_pa,hydraulic_kw,shaft_kw,electrical_kw,motor_rating_kw,gas_top_pressure_bar_g,suction_pressure_bar_g,discharge_pressure_bar_g,bottom_pressure_bar_g
+R-101,WISTR reactor,reactor,,,Established concept,,18500,3.4,62.71356607891116,,,,,,,,,,4.253593632822734
+SG-101,Steam generator 1,heat_exchanger,,,Established concept; duty is a target,500,,,,,,,,,,1.0,,,
+P-101,Coolant circulation pump 1,pump,,,Established concept; duty provisional,,,,,3.723102970865109,172162.1429805619,640.9773860014337,801.2217325017921,834.6059713560335,2000.0,,2.2456227051696134,3.823046736592608,
+SG-102,Steam generator 2,heat_exchanger,,,Established concept; duty is a target,500,,,,,,,,,,1.0,,,
+P-102,Coolant circulation pump 2,pump,,,Established concept; duty provisional,,,,,3.723102970865109,172162.1429805619,640.9773860014337,801.2217325017921,834.6059713560335,2000.0,,2.2456227051696134,3.823046736592608,
+SG-103,Steam generator 3,heat_exchanger,,,Established concept; duty is a target,500,,,,,,,,,,1.0,,,
+P-103,Coolant circulation pump 3,pump,,,Established concept; duty provisional,,,,,3.723102970865109,172162.1429805619,640.9773860014337,801.2217325017921,834.6059713560335,2000.0,,2.2456227051696134,3.823046736592608,
+P-401,Reversible coolant transfer pump,pump,positive_displacement,True,Owner-specified reversible positive-displacement pump; duty and detailed construction unselected,,,,,,,,,,,,,,
+TK-401,Coolant storage,tank,,,Established concept; insulation is a visual allowance,,,,,,,,,,,,,,
+J-401,Low-point coolant tee,junction,,,Owner-specified common low point beneath TK-401,,,,,,,,,,,,,,
+H-401,Common coolant-gas header,header,,,Owner-selected coolant-only gas header; separate from fuel off-gas treatment,,,,,,,,,,,,,,
+AC-101,SG-101 top gas collection vessel,gas_collection_vessel,,,Accepted nominal gas collection / bias-pressure concept; numeric volume and detailed construction unresolved,,,,,,,,,,,,,,
+AC-102,SG-102 top gas collection vessel,gas_collection_vessel,,,Accepted nominal gas collection / bias-pressure concept; numeric volume and detailed construction unresolved,,,,,,,,,,,,,,
+AC-103,SG-103 top gas collection vessel,gas_collection_vessel,,,Accepted nominal gas collection / bias-pressure concept; numeric volume and detailed construction unresolved,,,,,,,,,,,,,,
+H-601,Exterior clean nitrogen header,header,,,accepted_for_concept,,,,,,,,,,,,,,

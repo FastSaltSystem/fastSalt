@@ -1,5 +1,17 @@
 # Project status and next work
 
+## Auxiliary Brayton study preserved - 19 October 2026
+
+[RS-008, Revision A](research/auxiliary-brayton-cooling/README.md) preserves the four-case comparison as a five-page PDF, editable Markdown, browser report and 36 source files. SHA-256 manifests and a historical source-hash audit document the uncommitted working-copy basis. Packaging checked source copies, 24 comparison cells, document links and all five PDF pages; it did not rerun the thermodynamic solvers. Indexed under Research Studies and Viewable Results. Saved locally; no new engineering selection or GitHub publication.
+
+## Auxiliary cooler overview — 19 October 2026
+
+The [Brayton overview](calculations/power-cycle/brayton-overview.md) now brings the existing steam, nitrogen, open-air and supercritical CO₂ results together at 30 MW per train, with links to the detailed worksheets. It preserves the historical generator-loss-plus-50% pump allowance and distinguishes working-fluid compactness from total heat-rejection equipment size. This documentation update adds no new cycle calculations or equipment selection.
+
+## Public starting pages and review results — 15 October 2026
+
+D-077 adds public reader paths to both repositories: selected [P&ID PDFs and SVGs](results/README.md), the preserved motor-BFP cycle diagram, a dated model gallery and Blender checkpoint downloads. The 15 October snapshots copy existing results with SHA-256 manifests and source revisions; they do not change design geometry, equations or operating states. Cross-repository links use GitHub URLs, and the hub's model preview is pinned to its publication commit. Local-only calculation renders and publication source files are labeled explicitly. Changes are proposed through separate documentation pull requests under the new `main` protection rules.
+
 ## Fuel-maintenance P&ID redraw — 15 October 2026
 
 D-073 replaces the annotated reference illustration with a [three-sheet conventional P&ID draft](design/pids/fuel-maintenance/README.md): connected fuel/pressure circuits, gas-service and metering equipment, and a separate valve-position/state table. Tags, instrument bubbles, connection markers, native vector PDF/SVGs and CSV registers are generated from TOML-backed Python templates. One sector is drawn completely; a tag schedule covers all six sectors and 18 region pairs.
@@ -143,6 +155,18 @@ D-055 adds preparation-to-TK-401 pressure gas, a common low-point tee and one bo
 
 [D-053](decisions/index.md#d-053--shared-coolant-engineering-source-for-multiple-views) moves the main coolant identities, ports, topology, pipe dimensions and operating-case inputs into [one shared model](design/engineering/README.md). Both P&ID and graphics consume it, with view layouts retained separately. Worksheet hashes require explicit review when calculation sources change. Six cross-view checks pass, including one edited source updating both views. The P&ID remains byte-identical and resolved graphics geometry is unchanged. Blender direct/TOML checks and the full installation build (4,332 meshes) pass. Hurmet equations remain authoritative in the worksheets; automatic Hurmet exchange and simulation adapters are still future work.
 
+## Auxiliary cooling estimate — 13 October 2026
+
+The [balanced fan/pump Hurmet sheet](calculations/power-cycle/Brayton%20fan%20and%20salt%20pump%20balance%20-%20Hurmet.md) compares scalable 30 and 50 MW-per-leg Brayton cooling trials. For 2:1, a chosen 10 K salt drop and 500 Pa / 100 K air-side case leave 432 and 412 kW electrical margin after fan and pump demands. The approximately 69.6 MW zero-reserve power boundary is conditional, not an exchanger rating. Heat-transfer sizing, actual steam pressure losses, machine maps and startup remain open; no cooling architecture is adopted.
+
+A [nitrogen-versus-steam comparison](calculations/power-cycle/Nitrogen%20versus%20steam%20Brayton%20-%20Hurmet.md) now finds nearly identical 2:1 power balances at equal pressures. A 4:1 nitrogen trial at 10→40 bar gives 944 kW shaft surplus per 10 MW and positive air-cooling approach, but needs about twice the ideal-counterflow cooler UA of steam at 2:1. The fixed-temperature 8:1 nitrogen case requires subambient cooling and is rejected; a warmer heater-inlet variant is documented. Pressurization reduces gas volume, not the required heat rejection. No fluid selection is adopted.
+
+An [open-air Brayton comparison](calculations/power-cycle/Open-air%20Brayton%20cooler%20-%20Hurmet.md) removes the secondary cooler and fan. At 30°C outside air, a 6.832:1 trial reproduces the 287/557°C heater endpoints and yields 1.484 MW shaft surplus per 10 MW heat. At 30 MW, electrical margin after the provisional salt pump is 4.10 MW, but atmospheric inlet and hot-exhaust volumes are substantially larger than those of pressurized nitrogen. Intake/exhaust losses, exchanger separation and heat-transfer performance remain provisional; no architecture is adopted.
+
+A [size comparison](calculations/power-cycle/Brayton%20cooler%20size%20comparison%20-%20Hurmet.md) now separates calculated flow areas/shaft powers from judgment-based equipment reservations for one 30 MW train. Initial plots are approximately 500–600 m² per train, excluding the existing salt heater and unselected remote/redundant facilities. Open-air ducts are approximately 2.75/3.66 m at 15 m/s; closed-loop working-fluid pipes are smaller but require outdoor coolers. These are not vendor envelopes, and the footprint ranking is unresolved. No geometry is changed.
+
+A [simple CO₂ comparison](calculations/power-cycle/Simple%20CO2%20Brayton%20cooler%20-%20Hurmet.md) now targets compact heat removal with no recuperators. At 10–20 MPa and matched 287/557°C heater endpoints, a 30 MW trial has 0.75 m³/s compressor-inlet flow and nominal 655 kW electrical margin after the fan and salt pump. The separate outdoor cooler still needs roughly 82 m² airflow face under the existing assumptions. A same-pressure nitrogen comparison and warmer/near-critical CO₂ cases distinguish pressure effects from fluid choice; lower machine efficiencies nearly eliminate the matched case's margin. **The students' steam-generator emergency air-passage calculation remains untouched.** No equipment footprint or cooling architecture is selected.
+
 ## Current materials
 
 Accepted turbine equipment checkpoint: fastSaltModels `094d4a3`, preserved with the complete Blender site, three inspection views, checked reports and hash manifest in [the turbine equipment baseline](../fastSaltModels/baselines/turbine-equipment-2026-10-12/). It adds D-051 machinery detail to the retained layout.
@@ -173,6 +197,7 @@ D-050 completes the reactor-building columns and adds three outdoor fresh-air in
 
 The accepted turbine-hall visual checkpoint adds [recognizable machinery exteriors and inspection views](../fastSaltModels/docs/turbine-equipment.md) (D-051), retaining the equipment reservations and all main pipe terminals. Upper-level structures and supplier geometry remain to develop.
 
+An exploratory [steam Brayton cooler calculation](calculations/power-cycle/Steam%20Brayton%20cooler%20-%20Hurmet.md) now retains the generator's 287/557°C endpoints at a separate, lower auxiliary pressure. The base 2:1 trial has a modest positive shaft margin after an assumed fan load; machine efficiencies and exchanger pressure losses materially affect feasibility. An 8:1 comparison requires vacuum operation to retain dry steam at the same temperature endpoints, with much larger volume flow. Continuous 24 MPa throttling would require a separate return-pressure balance. No cooling architecture or graphics change is adopted. A [salt pony-pump Hurmet estimate](calculations/power-cycle/Brayton-driven%20salt%20pump%20-%20Hurmet.md) now applies 1.5 × generator loss: the surplus from each 10 MW trial supports 2.08 m³/s (2:1) or 4.10 m³/s (8:1) in one salt leg after assumed alternator/motor/pump losses. Heat-transport capacity is distinguished from the 10 MW cooler duty, and pump heat return is included. Salt-side heat transfer/freezing, actual machinery performance, startup and required duty remain open.
 
 ## Next work, in order
 

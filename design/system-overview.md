@@ -17,7 +17,7 @@ These are system functions. Their description here does not establish that the f
 | WISTR | Produce heat using salt fuel held in modular tanks and a separate coolant | UM analyses and current mechanical graphics |
 | Coolant heat transport | Connect the reactor to steam generation | Three coolant legs in the current visual concept |
 | Steam generation | Transfer heat to the steam power system | Preliminary Calca estimate converted to Hurmet; MSU student design work underway |
-| Steam power plant | Convert heat into electrical output | Installation arrangement to develop |
+| Steam power plant | Convert heat into electrical output | [Motor-driven feed-pump cycle and model previews](../results/README.md); preliminary equipment and piping layout |
 | Air cooling and maintenance equipment | Support the cooling and remote maintenance concepts | Current reactor graphics and work to be connected to relevant analysis |
 
 The membrane-based recycling publication and later refiner concepts retain their own identities in the [publication index](../publications/index.md). A historical publication is not automatically a description of the latest system.
@@ -26,7 +26,7 @@ The membrane-based recycling publication and later refiner concepts retain their
 
 The project uses several representations: neutronics material regions, system thermal-hydraulic models, local CFD domains, mechanical assemblies, and presentation geometry. They should share traceable dimensions and component identities, while documenting the simplifications appropriate to each analysis.
 
-The present graphics code generates Blender geometry. It does not yet provide a shared engineering-solid definition, mass properties, or automatic export to the university solvers. A common Python definition is a proposed development direction, not an existing capability.
+The present graphics code generates Blender geometry. It does not yet provide a shared engineering-solid definition, mass properties, or automatic export to the university solvers. A [shared coolant model](engineering/README.md) now supplies selected identities, topology and inputs to P&ID and graphics views. This limited shared definition does not establish a general analysis-model export.
 
 ## Near-term organization
 
@@ -34,7 +34,7 @@ The present graphics code generates Blender geometry. It does not yet provide a 
 2. Record the locations and ownership of the university analysis models.
 3. Agree the steam-generator input basis and component interface.
 4. Relate the current mechanical geometry to the analyzed design revisions.
-5. Develop a provisional installation layout and preserve the version used for the workshop.
+5. Refine the existing provisional installation layout and preserve the version used for the workshop.
 
 See the [conversion/refining presentation review](conversion-refining-review.md) for the corrected building scope and limits of the available dimensional evidence.
 

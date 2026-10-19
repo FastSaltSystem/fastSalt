@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="594mm" height="420mm" viewBox="0 0 1684 1190"><title>WISTR fuel maintenance P&amp;ID sheet 1</title>
+<rect x="0" y="0" width="1684" height="1190" stroke="white" fill="white" stroke-width="1.3"/>
+<rect x="22" y="22" width="1640" height="1146" stroke="#15232b" fill="white" stroke-width="1.3"/>
+<text x="42" y="51" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#15232b">FAST SALT SYSTEM</text>
+<text x="42" y="83" font-family="Helvetica,Arial,sans-serif" font-size="25" font-weight="bold" text-anchor="start" fill="#15232b">FUEL TRANSFER AND PRESSURE VALVES</text>
+<text x="42" y="108" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#4b5b64">Sector 1 / TK-FM-01 (3D F6). Gas unit 3 is shared with sector 6 / TK-FM-06 (3D F5). Six-sector schedule: sheet 3.</text>
+<polyline points="47,133 84,133 94,145 84,157 47,157 47,133" fill="none" stroke="#335a70" stroke-width="1.3"/>
+<text x="70" y="149" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#335a70">HP</text>
+<text x="70" y="176" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">02</text>
+<text x="108" y="127" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70"></text>
+<polyline points="94,145 1600,145" fill="none" stroke="#335a70" stroke-width="2"/>
+<text x="495" y="133" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70">H-P  Pressure-tank gas</text>
+<polyline points="47,183 84,183 94,195 84,207 47,207 47,183" fill="none" stroke="#335a70" stroke-width="1.3"/>
+<text x="70" y="199" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#335a70">HS</text>
+<text x="70" y="226" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">02</text>
+<text x="108" y="177" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70"></text>
+<polyline points="94,195 1600,195" fill="none" stroke="#335a70" stroke-width="2"/>
+<text x="495" y="183" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#335a70">H-S  Surge-tank gas</text>
+<polyline points="47,233 84,233 94,245 84,257 47,257 47,233" fill="none" stroke="#6b4e72" stroke-width="1.3"/>
+<text x="70" y="249" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#6b4e72">OG</text>
+<text x="70" y="276" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">02</text>
+<text x="108" y="227" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#6b4e72"></text>
+<polyline points="94,245 1600,245" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<text x="495" y="233" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#6b4e72">H-O  To off-gas</text>
+<text x="330" y="495" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">CIRCUIT 1  /  R1/R2</text>
+<circle cx="205" cy="370" r="25" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="205" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">SEL</text>
+<text x="245" y="417" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">XV-FM-C01</text>
+<text x="245" y="436" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#4b5b64">4 positions</text>
+<circle cx="465" cy="370" r="25" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="465" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">SEL</text>
+<text x="505" y="417" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">XV-FM-S01</text>
+<text x="505" y="436" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#4b5b64">4 positions</text>
+<polyline points="150,145 150,370 180,370" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="150" cy="145" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="150" cy="195" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="150,189 150,201" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="150" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="150,239 150,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="205,195 205,345" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="205" cy="195" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="205" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="205,239 205,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="260,245 260,370 230,370" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<circle cx="260" cy="245" r="3" stroke="#6b4e72" fill="#6b4e72" stroke-width="1.4"/>
+<polyline points="410,145 410,370 440,370" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="410" cy="145" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="410" cy="195" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="410,189 410,201" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="410" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="410,239 410,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="465,195 465,345" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="465" cy="195" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="465" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="465,239 465,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="520,245 520,370 490,370" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<circle cx="520" cy="245" r="3" stroke="#6b4e72" fill="#6b4e72" stroke-width="1.4"/>
+<rect x="115" y="535" width="180" height="150" stroke="#15232b" fill="white" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="205" y="568" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">R-101 / SECTOR 1</text>
+<text x="205" y="600" font-family="Helvetica,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#15232b">R1/R2</text>
+<text x="205" y="630" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#15232b">Core fuel regions</text>
+<polyline points="205,395 205,535" fill="none" stroke="#335a70" stroke-width="2"/>
+<path d="M375 673 C375 649.0 555 649.0 555 673 L555 827 C555 851.0 375 851.0 375 827 Z" fill="white" stroke="#15232b" stroke-width="1.4"/>
+<text x="465.0" y="745.0" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#15232b">TK-FM-01A</text>
+<text x="465.0" y="768.0" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">R1/R2 storage</text>
+<text x="465" y="811" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">Compartment A</text>
+<polyline points="465,395 465,655" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="515,675 520,675 520,619" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="520" cy="592" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="520" y="589" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">PT</text>
+<text x="520" y="604" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-01</text>
+<polyline points="555,750 583,750" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="610" cy="750" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="610" y="747" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">LT</text>
+<text x="610" y="762" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-01</text>
+<polyline points="205,685 205,920 465,920 465,845" fill="none" stroke="#20282c" stroke-width="2"/>
+<polyline points="291,916 300,920 291,924" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="279,924 270,920 279,916" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="325,920 325,892" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="325" cy="865" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="325" y="862" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">GD</text>
+<text x="325" y="877" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-01</text>
+<text x="335" y="948" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">F-FM-01</text>
+<circle cx="205" cy="920" r="3" stroke="#15232b" fill="#15232b" stroke-width="1.4"/>
+<polyline points="205,920 205,1010 100,1010" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="53,998 90,998 100,1010 90,1022 53,1022 53,998" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="76" y="1014" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">FR</text>
+<text x="76" y="1041" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">02</text>
+<text x="114" y="992" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#15232b">To removal pump P-FM-02</text>
+<polyline points="154,1014 145,1010 154,1006" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<text x="840" y="495" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">CIRCUIT 2  /  R3/R4</text>
+<circle cx="715" cy="370" r="25" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="715" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">SEL</text>
+<text x="755" y="417" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">XV-FM-C02</text>
+<text x="755" y="436" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#4b5b64">4 positions</text>
+<circle cx="975" cy="370" r="25" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="975" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">SEL</text>
+<text x="1015" y="417" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">XV-FM-S02</text>
+<text x="1015" y="436" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#4b5b64">4 positions</text>
+<polyline points="660,145 660,370 690,370" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="660" cy="145" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="660" cy="195" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="660,189 660,201" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="660" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="660,239 660,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="715,195 715,345" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="715" cy="195" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="715" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="715,239 715,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="770,245 770,370 740,370" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<circle cx="770" cy="245" r="3" stroke="#6b4e72" fill="#6b4e72" stroke-width="1.4"/>
+<polyline points="920,145 920,370 950,370" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="920" cy="145" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="920" cy="195" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="920,189 920,201" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="920" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="920,239 920,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="975,195 975,345" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="975" cy="195" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="975" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="975,239 975,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1030,245 1030,370 1000,370" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<circle cx="1030" cy="245" r="3" stroke="#6b4e72" fill="#6b4e72" stroke-width="1.4"/>
+<rect x="625" y="535" width="180" height="150" stroke="#15232b" fill="white" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="715" y="568" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">R-101 / SECTOR 1</text>
+<text x="715" y="600" font-family="Helvetica,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#15232b">R3/R4</text>
+<text x="715" y="630" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#15232b">Core fuel regions</text>
+<polyline points="715,395 715,535" fill="none" stroke="#335a70" stroke-width="2"/>
+<path d="M885 673 C885 649.0 1065 649.0 1065 673 L1065 827 C1065 851.0 885 851.0 885 827 Z" fill="white" stroke="#15232b" stroke-width="1.4"/>
+<text x="975.0" y="745.0" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#15232b">TK-FM-01B</text>
+<text x="975.0" y="768.0" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">R3/R4 storage</text>
+<text x="975" y="811" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">Compartment B</text>
+<polyline points="975,395 975,655" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1025,675 1030,675 1030,619" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="1030" cy="592" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1030" y="589" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">PT</text>
+<text x="1030" y="604" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-02</text>
+<polyline points="1065,750 1093,750" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="1120" cy="750" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1120" y="747" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">LT</text>
+<text x="1120" y="762" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-02</text>
+<polyline points="715,685 715,920 975,920 975,845" fill="none" stroke="#20282c" stroke-width="2"/>
+<polyline points="801,916 810,920 801,924" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="789,924 780,920 789,916" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="835,920 835,892" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="835" cy="865" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="835" y="862" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">GD</text>
+<text x="835" y="877" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-02</text>
+<text x="845" y="948" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">F-FM-02</text>
+<text x="1350" y="495" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#15232b">CIRCUIT 3  /  R5/R6</text>
+<circle cx="1225" cy="370" r="25" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1225" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">SEL</text>
+<text x="1265" y="417" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">XV-FM-C03</text>
+<text x="1265" y="436" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#4b5b64">4 positions</text>
+<circle cx="1485" cy="370" r="25" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1485" y="374" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">SEL</text>
+<text x="1525" y="417" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#15232b">XV-FM-S03</text>
+<text x="1525" y="436" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#4b5b64">4 positions</text>
+<polyline points="1170,145 1170,370 1200,370" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="1170" cy="145" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="1170" cy="195" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="1170,189 1170,201" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="1170" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="1170,239 1170,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1225,195 1225,345" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="1225" cy="195" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="1225" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="1225,239 1225,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1280,245 1280,370 1250,370" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<circle cx="1280" cy="245" r="3" stroke="#6b4e72" fill="#6b4e72" stroke-width="1.4"/>
+<polyline points="1430,145 1430,370 1460,370" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="1430" cy="145" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="1430" cy="195" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="1430,189 1430,201" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="1430" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="1430,239 1430,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1485,195 1485,345" fill="none" stroke="#335a70" stroke-width="2"/>
+<circle cx="1485" cy="195" r="3" stroke="#335a70" fill="#335a70" stroke-width="1.4"/>
+<circle cx="1485" cy="245" r="4" stroke="white" fill="white" stroke-width="1.4"/>
+<polyline points="1485,239 1485,251" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1540,245 1540,370 1510,370" fill="none" stroke="#6b4e72" stroke-width="2"/>
+<circle cx="1540" cy="245" r="3" stroke="#6b4e72" fill="#6b4e72" stroke-width="1.4"/>
+<rect x="1135" y="535" width="180" height="150" stroke="#15232b" fill="white" stroke-width="1.3" stroke-dasharray="6 4"/>
+<text x="1225" y="568" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">R-101 / SECTOR 1</text>
+<text x="1225" y="600" font-family="Helvetica,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#15232b">R5/R6</text>
+<text x="1225" y="630" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#15232b">Core fuel regions</text>
+<polyline points="1225,395 1225,535" fill="none" stroke="#335a70" stroke-width="2"/>
+<path d="M1395 673 C1395 649.0 1575 649.0 1575 673 L1575 827 C1575 851.0 1395 851.0 1395 827 Z" fill="white" stroke="#15232b" stroke-width="1.4"/>
+<text x="1485.0" y="745.0" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#15232b">TK-FM-01C</text>
+<text x="1485.0" y="768.0" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="middle" fill="#15232b">R5/R6 storage</text>
+<text x="1485" y="811" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">Compartment C</text>
+<polyline points="1485,395 1485,655" fill="none" stroke="#335a70" stroke-width="2"/>
+<polyline points="1535,675 1540,675 1540,619" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="1540" cy="592" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1540" y="589" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">PT</text>
+<text x="1540" y="604" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-03</text>
+<polyline points="1575,750 1603,750" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="1630" cy="750" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1630" y="747" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">LT</text>
+<text x="1630" y="762" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-03</text>
+<polyline points="1225,685 1225,920 1485,920 1485,845" fill="none" stroke="#20282c" stroke-width="2"/>
+<polyline points="1311,916 1320,920 1311,924" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="1299,924 1290,920 1299,916" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<polyline points="1345,920 1345,892" fill="none" stroke="#15232b" stroke-width="1"/>
+<circle cx="1345" cy="865" r="27" stroke="#15232b" fill="white" stroke-width="1.4"/>
+<text x="1345" y="862" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">GD</text>
+<text x="1345" y="877" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#15232b">FM-03</text>
+<text x="1355" y="948" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#15232b">F-FM-03</text>
+<circle cx="1485" cy="920" r="3" stroke="#15232b" fill="#15232b" stroke-width="1.4"/>
+<polyline points="1580,1010 1485,1010 1485,920" fill="none" stroke="#15232b" stroke-width="2"/>
+<polyline points="1581,998 1618,998 1628,1010 1618,1022 1581,1022 1581,998" fill="none" stroke="#15232b" stroke-width="1.3"/>
+<text x="1604" y="1014" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#15232b">FA</text>
+<text x="1604" y="1041" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#4b5b64">02</text>
+<text x="1566" y="992" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#15232b">From add pump P-FM-01</text>
+<polyline points="1524,1014 1515,1010 1524,1006" fill="none" stroke="#15232b" stroke-width="1.6"/>
+<text x="650" y="1010" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">GD = gas-presence detector (project designation).</text>
+<text x="650" y="1031" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Tank A/B/C are compartments, not three separate tanks.</text>
+<text x="42" y="1064" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Cooling-air connections for the common maintenance-tank enclosure are on sheet 2. No unshown liquid junction is implied within a core pair.</text>
+<polyline points="22,1090 1662,1090" fill="none" stroke="#15232b" stroke-width="1"/>
+<text x="42" y="1115" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#15232b">PRELIMINARY - FOR REVIEW</text>
+<text x="42" y="1139" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Owner-defined process arrangement. Sizes, ratings, fail positions and detailed controls TBD.</text>
+<text x="42" y="1159" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#4b5b64">Functional schematic; not to scale. Solid-dot crossings connect; other crossings do not.</text>
+<polyline points="1100,1090 1100,1168" fill="none" stroke="#15232b" stroke-width="1"/>
+<text x="1120" y="1114" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#15232b">WISTR / FUEL MAINTENANCE</text>
+<text x="1120" y="1139" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#15232b">FS-FM-001     REV B3-draft     2026-10-15</text>
+<text x="1642" y="1160" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#15232b">SHEET 1 OF 3</text>
+</svg>
