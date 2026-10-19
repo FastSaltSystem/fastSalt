@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-19",
+  "source_copy_count": 36,
+  "source_copies_byte_identical": true,
+  "comparison_cells_checked_against_saved_results": 24,
+  "pdf_pages": 5,
+  "pdf_pages_visually_reviewed": 5,
+  "report_links_resolve": true,
+  "cycle_solvers_rerun": false,
+  "engineering_validation_performed": false,
+  "scope": "Documentation packaging and saved-result comparison only"
+}

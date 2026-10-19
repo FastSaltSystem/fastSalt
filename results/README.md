@@ -4,6 +4,12 @@
 
 Selected drawings and previews are preserved here so they can be read on GitHub without running a builder. Open a PDF to use GitHub's preview, or download it if the preview is unavailable. The SVG sheet links provide individual scalable drawings.
 
+## Auxiliary Brayton cooling study - 19 October 2026
+
+**RS-008, Revision A:** [Five-page PDF](2026-10-19/auxiliary-brayton-rev-a/report.pdf) · [Browser report](2026-10-19/auxiliary-brayton-rev-a/report.html) · [Editable report and archived sources](2026-10-19/auxiliary-brayton-rev-a/README.md) · [Study record](../research/auxiliary-brayton-cooling/README.md).
+
+Compares the saved steam, nitrogen, open-air and supercritical CO₂ auxiliary cooling cases at 30 MW per train, with their power margins, size tradeoffs and limitations. Preserves the historical pump allowance and source hashes. Preliminary study; technical review pending. HTML can be downloaded and opened in a browser; GitHub displays its source unless hosted separately.
+
 ## P&ID review snapshot — 15 October 2026
 
 | System | Read the drawing | Revision and scope | Editable source |

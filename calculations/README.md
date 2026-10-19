@@ -144,12 +144,19 @@ This preliminary check uses exterior tank dimensions; internal construction,
 freeboard and connected-pipe fuel inventory remain to be resolved.
 
 
+[Steam Brayton cooler — Hurmet](power-cycle/Steam%20Brayton%20cooler%20-%20Hurmet.md) screens a non-condensing auxiliary heat-removal loop at the existing generator temperature endpoints. Real-steam states are explicitly imported from Python; Hurmet checks duty scaling, shaft-power margin and an illustrative air-fan load. It does not revise the main power cycle or establish a qualified cooling system.
 
+[Brayton-driven salt pump — Hurmet](power-cycle/Brayton-driven%20salt%20pump%20-%20Hurmet.md) couples the auxiliary cycle surplus to the existing generator salt-flow resistance plus 50%, including electric-drive losses, pump heat return and a shared three-leg case. Flow roots are imported from Python; Hurmet recalculates 32 hydraulic and thermal checks. This remains an exploratory estimate.
 
+[Brayton fan and salt-pump balance — Hurmet](power-cycle/Brayton%20fan%20and%20salt%20pump%20balance%20-%20Hurmet.md) estimates simultaneous fan and salt-pump power at 30 and 50 MW per leg, with air-side sensitivities and a conditional power-balance boundary. Cooler and machinery sizes scale between cases; heat-transfer capacity remains unverified. Seventeen numerical checks and duty/air-side sensitivity checks pass.
 
+[Nitrogen versus steam Brayton — Hurmet](power-cycle/Nitrogen%20versus%20steam%20Brayton%20-%20Hurmet.md) compares real-fluid power, volume, air-cooler conductance, charge pressure and fan/pump margin. Thermodynamic states are imported from Python; eleven Hurmet checks pass. A subambient 8:1 nitrogen case is explicitly rejected. This remains a fluid-choice study.
 
+[Open-air Brayton cooler — Hurmet](power-cycle/Open-air%20Brayton%20cooler%20-%20Hurmet.md) evaluates externally heated once-through air with intake/exhaust losses and no secondary cooler or fan. It includes a matched-temperature case, volume/energy comparison and salt-pump margin. Ten Hurmet checks pass; exchanger and discharge suitability remain unresolved.
 
+[Brayton cooler size comparison — Hurmet](power-cycle/Brayton%20cooler%20size%20comparison%20-%20Hurmet.md) distinguishes calculated flow-area requirements from tentative equipment boxes and space reservations for 30 MW trains. Existing salt heaters and unselected separate facilities are excluded. Twelve numerical checks pass; layout dimensions remain unverified.
 
+[Simple CO₂ Brayton cooler — Hurmet](power-cycle/Simple%20CO2%20Brayton%20cooler%20-%20Hurmet.md) screens a compact, unrecuperated high-pressure working loop and its separate dry cooler. It includes same-pressure nitrogen and compressor-temperature comparisons. Twelve Hurmet checks pass. Student emergency-air-passage calculations are excluded.
 
 [Coolant inventory and storage capacity — Hurmet](reactor/Coolant%20inventory%20and%20storage%20capacity%20-%20Hurmet.md) compares the approximately 452 m³ circuit (D-063) with TK-401's provisional 73 m³ working acceptance. A 450°C fill case gives 18–25 m³ expansion, but full hot drainage requires roughly 479 m³ before uncertainty/freeboard allowances. The 8.2 × 16 m D-058 tank reservation is checked separately; relocation remains pending. [Basis, sensitivities and 67 Hurmet checks](reactor/coolant-inventory-check.md).
 

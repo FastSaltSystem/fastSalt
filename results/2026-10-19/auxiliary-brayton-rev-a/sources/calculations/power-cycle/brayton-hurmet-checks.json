@@ -1,0 +1,21 @@
+{
+  "SteamFlow": 17.24231740233336,
+  "TurbinePower": 3.51955044069562,
+  "CompressorPower": 3.182310729014278,
+  "ShaftLoss": 0.07039100881391247,
+  "AvailablePower": 266.8487028674298,
+  "AirCoolerDuty": 9.662760288318658,
+  "EnergyResidual": 0,
+  "InletVolumeFlow": 7.190709368556878,
+  "AirFlow": 95.9559115026679,
+  "FanPower": 63.39089657349575,
+  "RemainingPower": 203.457806293934,
+  "EightFlow": 17.793166891485008,
+  "EightTurbinePower": 9.851684332814864,
+  "EightCompressorPower": 8.296684675223045,
+  "EightAvailable": 1357.9659709355242,
+  "EightCoolerDuty": 8.445000342408179,
+  "EightVolumeFlow": 521.2352415965707,
+  "EightFanPower": 55.40198942075617,
+  "EightRemaining": 1302.5639815147679
+}
