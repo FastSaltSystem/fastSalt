@@ -2,11 +2,13 @@
 decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
-dateFormat: undefined
-saveDate: 2026-10-11
+dateFormat: yyyy-mm-dd
+saveDate: 2026-10-20
 ---------------
 
 # Motor-BFP power-plant equipment — revised working draft
+
+¢` format = "h3" `
 
 11 October 2026. D-029 updates the equipment schedule after the owner authorized
 resizing for the motor-driven boiler feed pumps. Prior steam-drive calculations
@@ -29,8 +31,6 @@ pressure network.
 
 ## Reheater and generators
 
-¢` format = "h7" `
-
 ¢` Pi = 3.14159265359 `
 
 ¢` ReheatUA = 7602044.46093 'W/K' `
@@ -41,13 +41,13 @@ pressure network.
 
 ¢` ReheatCount = 4 `
 
-¢??` ReheatArea = ReheatUA / ReheatU * AreaFactor = 〔9,122.453〕 'm2' `
+¢%%` ReheatArea = ReheatUA / ReheatU * AreaFactor = 〔9,122〕 'm2' `
 
-¢??` AreaPerModule = ReheatArea / ReheatCount = 〔2,280.613〕 'm2' `
+¢%%` AreaPerModule = ReheatArea / ReheatCount = 〔2,281〕 'm2' `
 
 ¢` ReheatDuty = 281.621146747 MW `
 
-¢??` DutyPerModule = ReheatDuty / ReheatCount = 〔70.40529〕 MW `
+¢%%` DutyPerModule = ReheatDuty / ReheatCount = 〔70.4〕 MW `
 
 Four reheaters now reserve **16 × 3.25 × 3.25 m each**, plus 13 m straight tube
 withdrawal. About 2,382 assumed 25.4 mm OD / 12 m tubes per module give a 1.94
@@ -64,9 +64,9 @@ superseded.
 
 ¢` CapacityFactor = 1.1 `
 
-¢??` HPIPRequired = HPIPPower / PowerFactor * CapacityFactor = 〔509.006〕 MW `
+¢%%` HPIPRequired = HPIPPower / PowerFactor * CapacityFactor = 〔509〕 MW `
 
-¢??` LPRequired = LPPower / PowerFactor * CapacityFactor = 〔342.9871〕 MW `
+¢%%` LPRequired = LPPower / PowerFactor * CapacityFactor = 〔343〕 MW `
 
 The last two calculated numerical values express apparent-power requirements in
 **MVA** (Hurmet uses MW as the power-dimension unit). Reserve **550 MVA HP/IP
@@ -84,20 +84,20 @@ replaces 500 MVA. Turbine outlines and shaft arrangement remain provisional.
 
 ¢` MotorRating = 15 MW `
 
-¢??` BFPinput = BFPshaft / DriveEfficiency = 〔24.95787〕 MW `
+¢%%` BFPinput = BFPshaft / DriveEfficiency = 〔25〕 MW `
 
-¢??` ShaftPerPump = BFPshaft / DutyPumps = 〔11.85499〕 MW `
+¢%%` ShaftPerPump = BFPshaft / DutyPumps = 〔11.9〕 MW `
 
-¢??` ElectricPerPump = BFPinput / DutyPumps = 〔12.47893〕 MW `
+¢%%` ElectricPerPump = BFPinput / DutyPumps = 〔12.5〕 MW `
 
 ¢` MotorPowerFactor = 0.95 `
 
 ¢` ElectricalMargin = 1.1 `
 
-¢??` RatedInputPerTrain = MotorRating / DriveEfficiency = 〔15.78947〕 MW `
+¢%%` RatedInputPerTrain = MotorRating / DriveEfficiency = 〔15.8〕 MW `
 
-¢??` TransformerRequirement = RatedInputPerTrain / MotorPowerFactor *
-ElectricalMargin = 〔18.28255〕 MW `
+¢%%` TransformerRequirement = RatedInputPerTrain / MotorPowerFactor *
+ElectricalMargin = 〔18.3〕 MW `
 
 Reserve **three 15 MW motor/pump trains, two duty and one standby**. Each BFP
 supply train has a **20 MVA transformer allowance**, above the calculated MVA
@@ -224,10 +224,9 @@ these bores.
 
 ¢` Rho1 = 73.6283741527 'kg/m3' `
 
-¢??` V1 = 4 * Q1 / (N1 * Pi * D1^2) = 〔23.41357〕 'm/s' `
+¢%%` V1 = 4 * Q1 / (N1 * Pi * D1^2) = 〔23.4〕 'm/s' `
 
-¢??` Drop1 = (DarcyFactor * RouteLength / D1 + LocalK) * Rho1 * V1^2 / 2 =
-〔117.6087〕 kPa `
+¢%%` Drop1 = (DarcyFactor * RouteLength / D1 + LocalK) * Rho1 * V1^2 / 2 = 〔118〕 kPa `
 
 **P2: Main steam branch (each of 3)**
 
@@ -239,10 +238,9 @@ these bores.
 
 ¢` Rho2 = 73.6283741527 'kg/m3' `
 
-¢??` V2 = 4 * Q2 / (N2 * Pi * D2^2) = 〔22.71144〕 'm/s' `
+¢%%` V2 = 4 * Q2 / (N2 * Pi * D2^2) = 〔22.7〕 'm/s' `
 
-¢??` Drop2 = (DarcyFactor * RouteLength / D2 + LocalK) * Rho2 * V2^2 / 2 =
-〔121.7537〕 kPa `
+¢%%` Drop2 = (DarcyFactor * RouteLength / D2 + LocalK) * Rho2 * V2^2 / 2 = 〔122〕 kPa `
 
 **P3: HP admission after reheat split**
 
@@ -254,10 +252,9 @@ these bores.
 
 ¢` Rho3 = 73.6283741527 'kg/m3' `
 
-¢??` V3 = 4 * Q3 / (N3 * Pi * D3^2) = 〔28.76059〕 'm/s' `
+¢%%` V3 = 4 * Q3 / (N3 * Pi * D3^2) = 〔28.8〕 'm/s' `
 
-¢??` Drop3 = (DarcyFactor * RouteLength / D3 + LocalK) * Rho3 * V3^2 / 2 =
-〔185.4782〕 kPa `
+¢%%` Drop3 = (DarcyFactor * RouteLength / D3 + LocalK) * Rho3 * V3^2 / 2 = 〔185〕 kPa `
 
 **P4: Reheater heating supply**
 
@@ -269,10 +266,9 @@ these bores.
 
 ¢` Rho4 = 73.6283741527 'kg/m3' `
 
-¢??` V4 = 4 * Q4 / (N4 * Pi * D4^2) = 〔29.44229〕 'm/s' `
+¢%%` V4 = 4 * Q4 / (N4 * Pi * D4^2) = 〔29.4〕 'm/s' `
 
-¢??` Drop4 = (DarcyFactor * RouteLength / D4 + LocalK) * Rho4 * V4^2 / 2 =
-〔214.2685〕 kPa `
+¢%%` Drop4 = (DarcyFactor * RouteLength / D4 + LocalK) * Rho4 * V4^2 / 2 = 〔214〕 kPa `
 
 **P5: Reheater heating return**
 
@@ -284,10 +280,10 @@ these bores.
 
 ¢` Rho5 = 385.54842247 'kg/m3' `
 
-¢??` V5 = 4 * Q5 / (N5 * Pi * D5^2) = 〔2.755079〕 'm/s' `
+¢%%` V5 = 4 * Q5 / (N5 * Pi * D5^2) = 〔2.76〕 'm/s' `
 
-¢??` Drop5 = (DarcyFactor * RouteLength / D5 + LocalK) * Rho5 * V5^2 / 2 =
-〔9.072116〕 kPa `
+¢%%` Drop5 = (DarcyFactor * RouteLength / D5 + LocalK) * Rho5 * V5^2 / 2 =
+〔9.07〕 kPa `
 
 **P6: Cold reheat**
 
@@ -299,10 +295,10 @@ these bores.
 
 ¢` Rho6 = 12.2979105765 'kg/m3' `
 
-¢??` V6 = 4 * Q6 / (N6 * Pi * D6^2) = 〔39.92305〕 'm/s' `
+¢%%` V6 = 4 * Q6 / (N6 * Pi * D6^2) = 〔39.9〕 'm/s' `
 
-¢??` Drop6 = (DarcyFactor * RouteLength / D6 + LocalK) * Rho6 * V6^2 / 2 =
-〔56.59006〕 kPa `
+¢%%` Drop6 = (DarcyFactor * RouteLength / D6 + LocalK) * Rho6 * V6^2 / 2 =
+〔56.6〕 kPa `
 
 **P7: Hot reheat**
 
@@ -314,10 +310,10 @@ these bores.
 
 ¢` Rho7 = 7.50502349048 'kg/m3' `
 
-¢??` V7 = 4 * Q7 / (N7 * Pi * D7^2) = 〔39.29221〕 'm/s' `
+¢%%` V7 = 4 * Q7 / (N7 * Pi * D7^2) = 〔39.3〕 'm/s' `
 
-¢??` Drop7 = (DarcyFactor * RouteLength / D7 + LocalK) * Rho7 * V7^2 / 2 =
-〔32.44314〕 kPa `
+¢%%` Drop7 = (DarcyFactor * RouteLength / D7 + LocalK) * Rho7 * V7^2 / 2 =
+〔32.4〕 kPa `
 
 **P8: IP-to-LP crossover**
 
@@ -329,10 +325,10 @@ these bores.
 
 ¢` Rho8 = 2.26865916018 'kg/m3' `
 
-¢??` V8 = 4 * Q8 / (N8 * Pi * D8^2) = 〔39.38327〕 'm/s' `
+¢%%` V8 = 4 * Q8 / (N8 * Pi * D8^2) = 〔39.4〕 'm/s' `
 
-¢??` Drop8 = (DarcyFactor * RouteLength / D8 + LocalK) * Rho8 * V8^2 / 2 =
-〔9.550987〕 kPa `
+¢%%` Drop8 = (DarcyFactor * RouteLength / D8 + LocalK) * Rho8 * V8^2 / 2 =
+〔9.55〕 kPa `
 
 **P9: Feedwater header (existing bore)**
 
@@ -344,10 +340,10 @@ these bores.
 
 ¢` Rho9 = 764.509244639 'kg/m3' `
 
-¢??` V9 = 4 * Q9 / (N9 * Pi * D9^2) = 〔2.805301〕 'm/s' `
+¢%%` V9 = 4 * Q9 / (N9 * Pi * D9^2) = 〔2.81〕 'm/s' `
 
-¢??` Drop9 = (DarcyFactor * RouteLength / D9 + LocalK) * Rho9 * V9^2 / 2 =
-〔17.818〕 kPa `
+¢%%` Drop9 = (DarcyFactor * RouteLength / D9 + LocalK) * Rho9 * V9^2 / 2 =
+〔17.8〕 kPa `
 
 **P10: Feedwater branch (each of 3)**
 
@@ -359,10 +355,10 @@ these bores.
 
 ¢` Rho10 = 764.509244639 'kg/m3' `
 
-¢??` V10 = 4 * Q10 / (N10 * Pi * D10^2) = 〔2.809457〕 'm/s' `
+¢%%` V10 = 4 * Q10 / (N10 * Pi * D10^2) = 〔2.81〕 'm/s' `
 
-¢??` Drop10 = (DarcyFactor * RouteLength / D10 + LocalK) * Rho10 * V10^2 / 2 =
-〔19.91322〕 kPa `
+¢%%` Drop10 = (DarcyFactor * RouteLength / D10 + LocalK) * Rho10 * V10^2 / 2 =
+〔19.9〕 kPa `
 
 **P11: Deaerator to feed pumps**
 
@@ -374,10 +370,10 @@ these bores.
 
 ¢` Rho11 = 908.593781654 'kg/m3' `
 
-¢??` V11 = 4 * Q11 / (N11 * Pi * D11^2) = 〔1.994569〕 'm/s' `
+¢%%` V11 = 4 * Q11 / (N11 * Pi * D11^2) = 〔1.99〕 'm/s' `
 
-¢??` Drop11 = (DarcyFactor * RouteLength / D11 + LocalK) * Rho11 * V11^2 / 2 =
-〔11.20546〕 kPa `
+¢%%` Drop11 = (DarcyFactor * RouteLength / D11 + LocalK) * Rho11 * V11^2 / 2 =
+〔11.2〕 kPa `
 
 **P12: Condensate through LP heater bank**
 
@@ -389,10 +385,10 @@ these bores.
 
 ¢` Rho12 = 995.116376062 'kg/m3' `
 
-¢??` V12 = 4 * Q12 / (N12 * Pi * D12^2) = 〔2.3399〕 'm/s' `
+¢%%` V12 = 4 * Q12 / (N12 * Pi * D12^2) = 〔2.34〕 'm/s' `
 
-¢??` Drop12 = (DarcyFactor * RouteLength / D12 + LocalK) * Rho12 * V12^2 / 2 =
-〔17.06207〕 kPa `
+¢%%` Drop12 = (DarcyFactor * RouteLength / D12 + LocalK) * Rho12 * V12^2 / 2 =
+〔17.1〕 kPa `
 
 **P13: HP4 extraction**
 
@@ -404,10 +400,10 @@ these bores.
 
 ¢` Rho13 = 29.1948309528 'kg/m3' `
 
-¢??` V13 = 4 * Q13 / (N13 * Pi * D13^2) = 〔27.1325〕 'm/s' `
+¢%%` V13 = 4 * Q13 / (N13 * Pi * D13^2) = 〔27.1〕 'm/s' `
 
-¢??` Drop13 = (DarcyFactor * RouteLength / D13 + LocalK) * Rho13 * V13^2 / 2 =
-〔82.38765〕 kPa `
+¢%%` Drop13 = (DarcyFactor * RouteLength / D13 + LocalK) * Rho13 * V13^2 / 2 =
+〔82.4〕 kPa `
 
 **P14: HP3 extraction**
 
@@ -419,10 +415,10 @@ these bores.
 
 ¢` Rho14 = 12.9487516673 'kg/m3' `
 
-¢??` V14 = 4 * Q14 / (N14 * Pi * D14^2) = 〔26.96535〕 'm/s' `
+¢%%` V14 = 4 * Q14 / (N14 * Pi * D14^2) = 〔27〕 'm/s' `
 
-¢??` Drop14 = (DarcyFactor * RouteLength / D14 + LocalK) * Rho14 * V14^2 / 2 =
-〔39.67931〕 kPa `
+¢%%` Drop14 = (DarcyFactor * RouteLength / D14 + LocalK) * Rho14 * V14^2 / 2 =
+〔39.7〕 kPa `
 
 **P15: HP2 extraction**
 
@@ -434,10 +430,10 @@ these bores.
 
 ¢` Rho15 = 4.98531509919 'kg/m3' `
 
-¢??` V15 = 4 * Q15 / (N15 * Pi * D15^2) = 〔32.60023〕 'm/s' `
+¢%%` V15 = 4 * Q15 / (N15 * Pi * D15^2) = 〔32.6〕 'm/s' `
 
-¢??` Drop15 = (DarcyFactor * RouteLength / D15 + LocalK) * Rho15 * V15^2 / 2 =
-〔18.13638〕 kPa `
+¢%%` Drop15 = (DarcyFactor * RouteLength / D15 + LocalK) * Rho15 * V15^2 / 2 =
+〔18.1〕 kPa `
 
 **P16: HP1 extraction**
 
@@ -449,10 +445,10 @@ these bores.
 
 ¢` Rho16 = 3.41775618903 'kg/m3' `
 
-¢??` V16 = 4 * Q16 / (N16 * Pi * D16^2) = 〔33.42778〕 'm/s' `
+¢%%` V16 = 4 * Q16 / (N16 * Pi * D16^2) = 〔33.4〕 'm/s' `
 
-¢??` Drop16 = (DarcyFactor * RouteLength / D16 + LocalK) * Rho16 * V16^2 / 2 =
-〔14.63972〕 kPa `
+¢%%` Drop16 = (DarcyFactor * RouteLength / D16 + LocalK) * Rho16 * V16^2 / 2 =
+〔14.6〕 kPa `
 
 **P17: LP3 extraction**
 
@@ -464,10 +460,10 @@ these bores.
 
 ¢` Rho17 = 0.635284755851 'kg/m3' `
 
-¢??` V17 = 4 * Q17 / (N17 * Pi * D17^2) = 〔18.45654〕 'm/s' `
+¢%%` V17 = 4 * Q17 / (N17 * Pi * D17^2) = 〔18.5〕 'm/s' `
 
-¢??` Drop17 = (DarcyFactor * RouteLength / D17 + LocalK) * Rho17 * V17^2 / 2 =
-〔0.6371949〕 kPa `
+¢%%` Drop17 = (DarcyFactor * RouteLength / D17 + LocalK) * Rho17 * V17^2 / 2 =
+〔0.637〕 kPa `
 
 **P18: LP2 extraction**
 
@@ -479,10 +475,10 @@ these bores.
 
 ¢` Rho18 = 0.543510637661 'kg/m3' `
 
-¢??` V18 = 4 * Q18 / (N18 * Pi * D18^2) = 〔34.08421〕 'm/s' `
+¢%%` V18 = 4 * Q18 / (N18 * Pi * D18^2) = 〔34.1〕 'm/s' `
 
-¢??` Drop18 = (DarcyFactor * RouteLength / D18 + LocalK) * Rho18 * V18^2 / 2 =
-〔1.730075〕 kPa `
+¢%%` Drop18 = (DarcyFactor * RouteLength / D18 + LocalK) * Rho18 * V18^2 / 2 =
+〔1.73〕 kPa `
 
 **P19: LP1 extraction**
 
@@ -494,10 +490,10 @@ these bores.
 
 ¢` Rho19 = 0.196485292687 'kg/m3' `
 
-¢??` V19 = 4 * Q19 / (N19 * Pi * D19^2) = 〔34.92856〕 'm/s' `
+¢%%` V19 = 4 * Q19 / (N19 * Pi * D19^2) = 〔34.9〕 'm/s' `
 
-¢??` Drop19 = (DarcyFactor * RouteLength / D19 + LocalK) * Rho19 * V19^2 / 2 =
-〔0.6347951〕 kPa `
+¢%%` Drop19 = (DarcyFactor * RouteLength / D19 + LocalK) * Rho19 * V19^2 / 2 =
+〔0.635〕 kPa `
 
 **P20: IP outlet steam to deaerator**
 
@@ -509,10 +505,10 @@ these bores.
 
 ¢` Rho20 = 2.26865916018 'kg/m3' `
 
-¢??` V20 = 4 * Q20 / (N20 * Pi * D20^2) = 〔34.77344〕 'm/s' `
+¢%%` V20 = 4 * Q20 / (N20 * Pi * D20^2) = 〔34.8〕 'm/s' `
 
-¢??` Drop20 = (DarcyFactor * RouteLength / D20 + LocalK) * Rho20 * V20^2 / 2 =
-〔7.993246〕 kPa `
+¢%%` Drop20 = (DarcyFactor * RouteLength / D20 + LocalK) * Rho20 * V20^2 / 2 =
+〔7.99〕 kPa `
 
 ## First dimensional building check
 

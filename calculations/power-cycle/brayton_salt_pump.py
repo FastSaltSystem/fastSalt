@@ -3,6 +3,13 @@
 Stdlib only. Publishes independently recalculable hydraulic checks in Hurmet;
 flow roots are explicitly imported, not claimed to be solved inside Hurmet.
 """
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import hashlib,json,math,re
 D=Path(__file__).resolve().parent
@@ -141,7 +148,7 @@ def widths(match):
     block=match.group(0);n=block.splitlines()[0].count('|')-1
     return block+'\n{.grid colWidths="'+' '.join(['250']+['135']*(n-1))+'"}'
 text=re.sub(r'(?m)^\|.*(?:\n\|.*)*',widths,text)
-(D/'Brayton-driven salt pump - Hurmet.md').write_text(text)
+write_worksheet(D/'Brayton-driven salt pump - Hurmet.md', text)
 sources=[D/'brayton_salt_pump.py',D/'brayton-cooler-results.json',ROOT/'calculations/steam-generator/Generator sizing - Hurmet.md']
 output=dict(date='2026-10-12',basis='Per leg; 10 MW gross salt-to-Brayton duty; frozen 842.5 K properties',
             source_hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},

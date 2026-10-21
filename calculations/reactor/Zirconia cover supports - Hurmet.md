@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Zirconia cover supports — preliminary screening
+
+¢` format = "h3" `
 
 11 October 2026. Four fixed ceramic compression blocks support each removable
 insulation cassette. This worksheet screens average contact stress and axial
@@ -25,8 +27,6 @@ calculated ceramic temperature distribution. Use k = 3 W/(m K) as a provisional
 effective conductivity. [CeramTec's material guide][1] lists 2.7 W/(m K) at
 25°C for grade 848 TZP; this does not establish conductivity or allowable
 compression at reactor operating temperature.
-
-¢` format = "h7" `
 
 ¢` CassetteMass = 1500 kg `
 
@@ -48,13 +48,13 @@ compression at reactor operating temperature.
 
 ## Average stress, not a strength assessment
 
-¢??` Area = pi * Diameter^2 / 4 = 〔1,963.495〕 mm2 `
+¢%%` Area = pi * Diameter^2 / 4 = 〔1,963〕 mm2 `
 
-¢??` MeanForce = CassetteMass * Gravity / Supports = 〔3.677494〕 kN `
+¢%%` MeanForce = CassetteMass * Gravity / Supports = 〔3.68〕 kN `
 
-¢??` MeanStress = MeanForce / Area = 〔1.872932〕 MPa `
+¢%%` MeanStress = MeanForce / Area = 〔1.87〕 MPa `
 
-¢??` ScreeningStress = LoadFactor * MeanStress = 〔3.745864〕 MPa `
+¢%%` ScreeningStress = LoadFactor * MeanStress = 〔3.75〕 MPa `
 
 No allowable stress is assigned. Do not compare this average with flexural
 strength and call it a compression safety factor. Check ceramic grade, edge
@@ -64,13 +64,13 @@ support structure.
 
 ## Ceramic-only axial heat path
 
-¢??` HeatPerBlock = Conductivity * Area * DeltaTemperature / Height = 〔39.26991〕 W `
+¢%%` HeatPerBlock = Conductivity * Area * DeltaTemperature / Height = 〔39.3〕 W `
 
-¢??` HeatPerCassette = Supports * HeatPerBlock = 〔157.0796〕 W `
+¢%%` HeatPerCassette = Supports * HeatPerBlock = 〔157〕 W `
 
-¢??` HeatAllCassettes = Cassettes * HeatPerCassette = 〔942.4778〕 W `
+¢%%` HeatAllCassettes = Cassettes * HeatPerCassette = 〔942〕 W `
 
-¢??` HeatAtHigherK = HeatPerCassette * 5 / 3 = 〔261.7994〕 W `
+¢%%` HeatAtHigherK = HeatPerCassette * 5 / 3 = 〔262〕 W `
 
 The final expression is a k = 5 W/(m K) sensitivity. The calculation neglects
 contact resistance and steel resistance in series, but also omits heat arriving
@@ -91,8 +91,14 @@ frame into the sliding shoulders and crane hooks.
 
 See the [cover brief][2] and [model guide][3].
 
-[1]: https://www.ceramtec-group.com/fileadmin/user\_upload/Corporate/11\_Downloads/05\_Ceramaseal/CeramTec\_ctna\_materials.pdf
+[1]: https://www.ceramtec-group.com/fileadmin/user\\\\\\\\\\\\\\\_upload/Corporate/11\\\\\\\\\\\\\\\_Downloads/05\\\\\\\\\\\\\\\_Ceramaseal/CeramTec\\\\\\\\\\\\\\\_ctna\\\\\\\\\\\\\\\_materials.pdf
 
 [2]: ../../design/reactor-insulation-cover.md
 
 [3]: ../../../fastSaltModels/docs/insulation-cover.md
+
+[4]: https://www.ceramtec-group.com/fileadmin/user\\\\\\\_upload/Corporate/11\\\\\\\_Downloads/05\\\\\\\_Ceramaseal/CeramTec\\\\\\\_ctna\\\\\\\_materials.pdf
+
+[5]: https://www.ceramtec-group.com/fileadmin/user\\\_upload/Corporate/11\\\_Downloads/05\\\_Ceramaseal/CeramTec\\\_ctna\\\_materials.pdf
+
+[6]: https://www.ceramtec-group.com/fileadmin/user\_upload/Corporate/11\_Downloads/05\_Ceramaseal/CeramTec\_ctna\_materials.pdf

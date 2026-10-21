@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-10
+saveDate: 2026-10-20
 ---------------
 
 # Coolant pump estimate
+
+¢` format = "h3" `
 
 Preliminary installation allowance, 10 October 2026. One centrifugal pump per
 cold leg, three legs. The owner's requested allowance is **50% above the
@@ -19,8 +21,6 @@ correlations and calculated tube length of 19.879 m. The requested 17 m
 generator **casing** is a visual layout change; it does not establish a new
 tube length or pressure loss. Reconcile the internal generator design with MSU
 before selecting equipment.
-
-¢` format = "h7" `
 
 ¢` LegCount = 3 `
 
@@ -40,27 +40,27 @@ before selecting equipment.
 
 ## Per-leg duty
 
-¢??` VolumeFlow = SaltMassFlow / SaltDensity = 〔4.619533〕 m3/s `
+¢%%` VolumeFlow = SaltMassFlow / SaltDensity = 〔4.62〕 m3/s `
 
-¢??` HourlyFlow = VolumeFlow = 〔16,630.32〕 m3/h `
+¢%%` HourlyFlow = VolumeFlow = 〔16,630〕 m3/h `
 
-¢??` GeneratorHydraulicPower = GeneratorPressureDrop * VolumeFlow = 〔881.7431〕 kW `
+¢%%` GeneratorHydraulicPower = GeneratorPressureDrop * VolumeFlow = 〔882〕 kW `
 
-¢??` DesignPressureRise = AllowanceFactor * GeneratorPressureDrop = 〔286.3092〕 kPa `
+¢%%` DesignPressureRise = AllowanceFactor * GeneratorPressureDrop = 〔286〕 kPa `
 
-¢??` SaltHead = DesignPressureRise / (SaltDensity * Gravity) = 〔17.82456〕 m `
+¢%%` SaltHead = DesignPressureRise / (SaltDensity * Gravity) = 〔17.8〕 m `
 
-¢??` HydraulicPower = AllowanceFactor * GeneratorHydraulicPower = 〔1,322.615〕 kW `
+¢%%` HydraulicPower = AllowanceFactor * GeneratorHydraulicPower = 〔1,323〕 kW `
 
-¢??` ShaftPower = HydraulicPower / PumpEfficiency = 〔1,653.268〕 kW `
+¢%%` ShaftPower = HydraulicPower / PumpEfficiency = 〔1,653〕 kW `
 
-¢??` ElectricalInput = ShaftPower / MotorEfficiency = 〔1,722.155〕 kW `
+¢%%` ElectricalInput = ShaftPower / MotorEfficiency = 〔1,722〕 kW `
 
 ¢` MotorRating = 2000 kW `
 
-¢??` MotorLoading = ShaftPower / MotorRating = 〔0.8266342〕 `
+¢%%` MotorLoading = ShaftPower / MotorRating = 〔0.827〕 `
 
-¢??` TotalElectricalInput = LegCount * ElectricalInput = 〔5.166464〕 MW `
+¢%%` TotalElectricalInput = LegCount * ElectricalInput = 〔5.17〕 MW `
 
 The 2 MW rating is mechanical motor output capacity, not the predicted
 electrical consumption. Estimated consumption applies at the allowance duty
@@ -73,7 +73,7 @@ salt-service construction.
 
 ¢` VelocityLimit = 3 m/s `
 
-¢??` MinimumBore = sqrt(4 * VolumeFlow / (pi * VelocityLimit)) = 〔1.400211〕 m `
+¢%%` MinimumBore = sqrt(4 * VolumeFlow / (pi * VelocityLimit)) = 〔1.4〕 m `
 
 The existing 1.4 m visible pipe diameter is retained in the graphics. This
 result is **clear bore**, so a 1.4 m outside diameter with a finite wall would
@@ -84,7 +84,9 @@ still need an agreed definition.
 
 *   Centrifugal pump casing: 2.8 m diameter x 1.8 m high.
 *   Vertical motor: 2.8 x 2.4 x 3.2 m, 2 MW output rating.
-*   Combined unit: 3.2 x 3.2 m support footprint. The current single-floor installation raises the casing on a 2.4 m open steel frame; overall installed height is approximately 7.9 m above the floor.
+*   Combined unit: 3.2 x 3.2 m support footprint. The current single-floor
+    installation raises the casing on a 2.4 m open steel frame; overall
+    installed height is approximately 7.9 m above the floor.
 
 Power fixes a motor rating but does not uniquely fix pump dimensions. The pump
 casing envelope is a layout estimate roughly twice the current 1.4 m pipe

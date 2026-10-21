@@ -1,12 +1,13 @@
 // Run: node checks/check_reactor_top.cjs /path/to/hurmet.cjs /path/to/temml.cjs
 const fs=require('fs'),path=require('path'),assert=require('assert');
-const h=require(process.argv[2]);globalThis.temml=require(process.argv[3]);
+const h=require('../../hurmet_display.cjs').checkingEngine(require(process.argv[2]));globalThis.temml=require(process.argv[3]);
 const source=fs.readFileSync(process.argv[4]||path.join(__dirname,'../Reactor top insulation - Hurmet.md'),'utf8');
-const value=(s,n)=>Number(s.match(new RegExp('¢\\?\\?` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'))[1].replaceAll(',',''));
+const value=(s,n)=>Number(s.match(new RegExp('¢(?:\\?\\?|%%)` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'))[1].replaceAll(',',''));
 (async()=>{
  const saved=await h.updateAndSave(source);
  assert(!(await h.hurmet2html(saved,'Check')).includes('Error.'));
- for(const m of source.matchAll(/¢\?\?` (\w+) =/g)) assert.equal(value(source,m[1]),value(saved,m[1]));
+ const again=await h.updateAndSave(saved);
+ for(const m of saved.matchAll(/¢(?:\?\?|%%)` (\w+) =/g)) assert.equal(value(saved,m[1]),value(again,m[1]));
  const warmer=await h.updateAndSave(source.replace('Ambient = 313.15 K','Ambient = 323.15 K'));
  assert(value(warmer,'MinimumThickness')>800);
  assert.equal(value(warmer,'SelectedThickness'),900);

@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Boiler-feed-pump drive comparison
+
+¢` format = "h3" `
 
 11 October 2026. **Preliminary alternative study**, requested to assess whether
 electric drive offers simpler operation without a significant efficiency loss.
@@ -65,8 +67,6 @@ cooling water, salt pumps, fans and other station services** and is not final
 net export. The steam BFP's duty is already charged through steam diversion; do
 not subtract its shaft power again.
 
-¢` format = "h7" `
-
 ¢` ThermalInput = 1500 MW `
 
 ¢` SteamGross = 676.157911215 MW `
@@ -81,27 +81,25 @@ not subtract its shaft power again.
 
 ¢` ElectricCondensateLoad = 0.537306426635 MW `
 
-¢??` ElectricPumpLoad = PumpShaft / DriveEfficiency = 〔24.95787〕 MW `
+¢%%` ElectricPumpLoad = PumpShaft / DriveEfficiency = 〔25〕 MW `
 
-¢??` SteamComparisonOutput = SteamGross - SteamCondensateLoad = 〔675.6223〕 MW `
+¢%%` SteamComparisonOutput = SteamGross - SteamCondensateLoad = 〔676〕 MW `
 
-¢??` ElectricComparisonOutput = ElectricGross - ElectricPumpLoad -
-ElectricCondensateLoad = 〔671.5901〕 MW `
+¢%%` ElectricComparisonOutput = ElectricGross - ElectricPumpLoad -
+ElectricCondensateLoad = 〔672〕 MW `
 
-¢??` OutputPenalty = SteamComparisonOutput - ElectricComparisonOutput =
-〔4.032175〕 MW `
+¢%%` OutputPenalty = SteamComparisonOutput - ElectricComparisonOutput = 〔4.03〕 MW `
 
-¢??` RelativeOutputPenalty = 100 * OutputPenalty / SteamComparisonOutput =
-〔0.5968091〕 `
+¢%%` RelativeOutputPenalty = 100 * OutputPenalty / SteamComparisonOutput =
+〔0.597〕 `
 
-¢??` SteamEfficiencyPercent = 100 * SteamComparisonOutput / ThermalInput =
-〔45.04148〕 `
+¢%%` SteamEfficiencyPercent = 100 * SteamComparisonOutput / ThermalInput = 〔45〕 `
 
-¢??` ElectricEfficiencyPercent = 100 * ElectricComparisonOutput / ThermalInput =
-〔44.77267〕 `
+¢%%` ElectricEfficiencyPercent = 100 * ElectricComparisonOutput / ThermalInput =
+〔44.8〕 `
 
-¢??` EfficiencyPenaltyPoints = SteamEfficiencyPercent -
-ElectricEfficiencyPercent = 〔0.2688117〕 `
+¢%%` EfficiencyPenaltyPoints = SteamEfficiencyPercent -
+ElectricEfficiencyPercent = 〔0.269〕 `
 
 RelativeOutputPenalty is percent of comparison output; EfficiencyPenaltyPoints
 is an absolute percentage-point difference.
@@ -156,8 +154,8 @@ desuperheating/condensing/drain-cooling zone design.
 
 ¢` ElectricReheatDuty = 281.621146747 MW `
 
-¢??` ReheaterDutyIncreasePercent = 100 * (ElectricReheatDuty /
-SteamReheatDuty - 1) = 〔12.60782〕 `
+¢%%` ReheaterDutyIncreasePercent = 100 * (ElectricReheatDuty /
+SteamReheatDuty - 1) = 〔12.6〕 `
 
 ¢` ElectricReheaterArea = 9122.45335311 'm2' `
 
@@ -167,12 +165,11 @@ SteamReheatDuty - 1) = 〔12.60782〕 `
 
 ¢` MotorRating = 15 MW `
 
-¢??` DutyPerPump = PumpShaft / OperatingPumps = 〔11.85499〕 MW `
+¢%%` DutyPerPump = PumpShaft / OperatingPumps = 〔11.9〕 MW `
 
-¢??` ElectricalDutyPerPump = ElectricPumpLoad / OperatingPumps = 〔12.47893〕 MW `
+¢%%` ElectricalDutyPerPump = ElectricPumpLoad / OperatingPumps = 〔12.5〕 MW `
 
-¢??` MotorShaftMarginPercent = 100 * (MotorRating / DutyPerPump - 1) =
-〔26.52904〕 `
+¢%%` MotorShaftMarginPercent = 100 * (MotorRating / DutyPerPump - 1) = 〔26.5〕 `
 
 Retain the preliminary **3 × 50% arrangement: two duty pumps and one standby**,
 with **15 MW motor shaft ratings** as layout allowances. Normal per-pump
@@ -294,8 +291,26 @@ edit. The physical model remains a preliminary steady-state approximation.
 
 [2]: Power%20plant%20equipment%20sizing%20-%20Hurmet.md
 
-[3]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+[3]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
 
 [4]: https://www.abb.com/global/en/areas/motion/drives/medium-voltage-ac-drives/acs5000
 
-[5]: https://coolprop.org/fluid\_properties/fluids/Water.html
+[5]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[6]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[7]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[8]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[9]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[10]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[11]: https://coolprop.org/fluid\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[12]: https://coolprop.org/fluid\\\\\\\_properties/fluids/Water.html
+
+[13]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+
+[14]: https://coolprop.org/fluid\_properties/fluids/Water.html

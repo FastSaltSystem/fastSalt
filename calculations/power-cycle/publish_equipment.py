@@ -1,4 +1,11 @@
 """Publish editable Hurmet sizing equations; imported property/profile boundaries explicit."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,sys
 ROOT=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).resolve().parent
@@ -99,5 +106,5 @@ The present work establishes numerical starting points for that arrangement. Kee
 
 Python checks seven heater heat balances, positive local temperature approaches, numerical UA convergence, condenser tube geometry and velocity, drive margins, and usable storage. Hurmet is saved, reopened and recalculated, then compared to the Python values. `size_equipment.py`, `publish_equipment.py` and `check_equipment_hurmet.cjs` reproduce this worksheet. Sensitivity checks change U, cooling head and storage time; no turbine manufacturer performance map is asserted.
 ''')
-(ROOT/'Power plant equipment sizing - Hurmet.md').write_text('\n'.join(lines)+'\n');(ROOT/'equipment-hurmet-checks.json').write_text(json.dumps(expected,indent=2)+'\n')
+write_worksheet(ROOT/'Power plant equipment sizing - Hurmet.md', '\n'.join(lines)+'\n');(ROOT/'equipment-hurmet-checks.json').write_text(json.dumps(expected,indent=2)+'\n')
 print('Published worksheet and',len(expected),'comparison targets.')

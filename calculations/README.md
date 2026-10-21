@@ -24,6 +24,31 @@ The preferred file format does not establish engineering approval or validation.
 
 Hurmet files are text and can be versioned in Git. Their prose is Markdown, with Hurmet extensions for calculation cells and saved results. A generic Markdown viewer does not execute those cells or reproduce all of Hurmet's mathematical typesetting. Open the worksheet in Hurmet for editing and recalculation; generate HTML or PDF snapshots when a broadly viewable presentation is needed. Treat snapshots as outputs of the versioned worksheet, not independently edited sources.
 
+## Worksheet display convention
+
+Use `format = "h3"` in a Hurmet calculation cell immediately after the title.
+Use the unit-aware `%%` result selector, which shows the expression and result
+without repeating the expression with substituted numerical values.
+
+- Give every dimensional input and result explicit Hurmet units. Prefer kPa,
+  bar or MPa for pressure, and kJ/kg for enthalpy, when those scales are easier
+  to read. State whether pressure is absolute or gauge in the surrounding text.
+- Keep full input precision. `h3` controls the displayed results, not the
+  precision of the calculation. Avoid manual powers-of-ten conversions when
+  Hurmet can convert to the requested output unit.
+- Counts, ratios, efficiencies, Reynolds numbers and friction factors are
+  dimensionless. Percent and percentage-point results must be identified as such.
+- Generated worksheets use [hurmet_style.py](hurmet_style.py). Numerical checkers
+  use [hurmet_display.cjs](hurmet_display.cjs) to compare high-precision results
+  before saving compact `h3` output; existing tolerances remain unchanged.
+- Preserve archived revisions and published study snapshots. Apply this
+  convention to working sheets and newly published revisions.
+
+The [20 October display check](hurmet-display-check.md) records the conversion
+and numerical comparisons for the 29 working worksheets. Locally generated
+[browser previews](outputs/worksheet-review/index.html) provide a quick way to
+read the current results; these outputs are not committed to Git.
+
 ## Current worksheets
 
 | Worksheet | Role and status | Checks |

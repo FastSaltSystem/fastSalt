@@ -1,9 +1,9 @@
 const fs=require('fs');
 const hp=process.env.HURMET_ENGINE;
 if(!hp)throw Error('Set HURMET_ENGINE to the official Hurmet bundle');
-const h=require(hp);globalThis.temml=require(hp.replace(/hurmet\.cjs$/,'temml.cjs'));
+const h=require('../../hurmet_display.cjs').checkingEngine(require(hp));globalThis.temml=require(hp.replace(/hurmet\.cjs$/,'temml.cjs'));
 const p=process.argv[2] || require('path').join(__dirname,'..','Steam and feedwater pipe sizing - Hurmet.md');
-function result(s,n){const m=s.match(new RegExp('¢\\?\\?` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'));if(!m)throw Error('Missing '+n);return Number(m[1].replaceAll(',',''));}
+function result(s,n){const m=s.match(new RegExp('¢(?:\\?\\?|%%)` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'));if(!m)throw Error('Missing '+n);return Number(m[1].replaceAll(',',''));}
 async function check(s){const out=await h.updateAndSave(s);const html=await h.hurmet2html(out);if(html.includes('Error.'))throw Error('Hurmet calculation error');return out;}
 (async()=>{const source=fs.readFileSync(p,'utf8');const normal=await check(source);await check(normal);
 for(const [oldval,newval,variable,relation] of [

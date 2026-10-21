@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-12
+saveDate: 2026-10-20
 ---------------
 
 # Maintenance fuel tank capacity — preliminary volume check
+
+¢` format = "h3" `
 
 12 October 2026. Check one maintenance fuel tank against one core sector,
 allowing 50% of the tank volume for cooling pipes, as requested by the owner.
@@ -22,8 +24,6 @@ reflectors and plenums. Tank dimensions are from
 visual external envelopes, without resolved walls or internal cavities. Use
 their dimensions provisionally here; replace with clear internal dimensions
 when the tank construction is specified.
-
-¢` format = "h7" `
 
 ¢` CoreDiameter = 3.8 m `
 
@@ -47,18 +47,18 @@ actual fuel inventory: coolant passages, structure and absorber separations
 reduce the volume occupied by fuel. Fuel in connected tubing is outside this
 bound.
 
-¢??` SectorEnvelope = pi * CoreDiameter^2 * CoreHeight / (4 * SectorCount) =
-〔6.426651〕 m3 `
+¢%%` SectorEnvelope = pi * CoreDiameter^2 * CoreHeight / (4 * SectorCount) =
+〔6.43〕 m3 `
 
-¢??` TankGross = TankLength * TankWidth * TankHeight = 〔23.625〕 m3 `
+¢%%` TankGross = TankLength * TankWidth * TankHeight = 〔23.6〕 m3 `
 
-¢??` TankAvailable = TankGross * (1 - CoolingFraction) = 〔11.8125〕 m3 `
+¢%%` TankAvailable = TankGross * (1 - CoolingFraction) = 〔11.8〕 m3 `
 
-¢??` SpareVolume = TankAvailable - SectorEnvelope = 〔5.385849〕 m3 `
+¢%%` SpareVolume = TankAvailable - SectorEnvelope = 〔5.39〕 m3 `
 
-¢??` CapacityRatio = TankAvailable / SectorEnvelope = 〔1.838049〕 `
+¢%%` CapacityRatio = TankAvailable / SectorEnvelope = 〔1.84〕 `
 
-¢??` AvailableSpaceUsed = 100 * SectorEnvelope / TankAvailable = 〔54.40551〕 `
+¢%%` AvailableSpaceUsed = 100 * SectorEnvelope / TankAvailable = 〔54.4〕 `
 
 `AvailableSpaceUsed` is expressed as a percentage.
 

@@ -1,4 +1,11 @@
 """Publish the selected reheat case; properties and coupled solutions are imports."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json
 from CoolProp.CoolProp import PropsSI
@@ -130,4 +137,4 @@ variables described in [the basis](README.md). Dependencies use CoolProp 7.2.0
 HEOS water ([IAPWS-95](https://coolprop.org/fluid_properties/fluids/Water.html)).
 The source hashes, checks, selected state table and full results are saved alongside.
 ''')
-(ROOT/'Selected reheat and wetness - Hurmet.md').write_text('\n'.join(lines)+'\n')
+write_worksheet(ROOT/'Selected reheat and wetness - Hurmet.md', '\n'.join(lines)+'\n')

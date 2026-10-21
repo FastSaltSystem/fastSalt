@@ -3,6 +3,13 @@
 Run from any directory. Defaults to sibling fastSaltModels; no Blender required.
 Geometry remains a layout estimate, not measured internal fluid volume.
 """
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import argparse,hashlib,json,math,re,sys,tomllib
 ROOT=Path(__file__).resolve().parent
@@ -227,7 +234,7 @@ Run `python coolant_inventory.py --models /path/to/fastSaltModels`, then run `ch
         rho=2112.8-.56355*temp;mass=values['LoopVolume']*rho
         sensitivity.append(dict(fill_temperature_K=temp,normal_expansion_m3=(mass-values['NormalLoopMass'])/values['StoreDensity'],hot_drain_m3=mass/values['HotDensity']))
     results={'date':'2026-10-14','status':'D-063 preliminary inventory; D-058 tank reservation retained, placement pending','inputs':{n:{'value':v,'unit':u} for n,(v,u) in inputs.items()},'routes':routes,'geometry_notes':extra,'hurmet_checks':checks,'fill_temperature_sensitivity':sensitivity,'sources':[{ 'path':str(p.relative_to(hub)) if p.is_relative_to(hub) else '../fastSaltModels/'+str(p.relative_to(models)), 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sources]}
-    (out/'Coolant inventory and storage capacity - Hurmet.md').write_text('\n\n'.join(md)+'\n')
+    write_worksheet(out/'Coolant inventory and storage capacity - Hurmet.md', '\n\n'.join(md)+'\n')
     (out/'coolant-inventory-results.json').write_text(json.dumps(results,indent=2)+'\n')
     for n in ['ReactorVolume','SGVolume','LoopVolume','NormalExpansionVolume','AllHotExpansionVolume','FullDrainHot','TankWorking','RequiredInternal','EquivalentOD','EquivalentCurrentTanks']:print(f'{n}: {values[n]:.4f}')
 

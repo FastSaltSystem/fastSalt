@@ -2,9 +2,9 @@
 const fs=require('fs'),path=require('path');
 const engine=process.env.HURMET_ENGINE;
 if(!engine)throw Error('Set HURMET_ENGINE');
-const h=require(engine);globalThis.temml=require(process.env.TEMML_ENGINE||engine.replace(/hurmet\.cjs$/,'temml.cjs'));
+const h=require('../hurmet_display.cjs').checkingEngine(require(engine));globalThis.temml=require(process.env.TEMML_ENGINE||engine.replace(/hurmet\.cjs$/,'temml.cjs'));
 const file=path.join(__dirname,'Rankine cycle - Hurmet.md');
-function value(s,n){const m=s.match(new RegExp('¢\\?\\?` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'));if(!m)throw Error('Missing '+n);return Number(m[1].replaceAll(',',''));}
+function value(s,n){const m=s.match(new RegExp('¢(?:\\?\\?|%%)` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'));if(!m)throw Error('Missing '+n);return Number(m[1].replaceAll(',',''));}
 async function recalc(s){const out=await h.updateAndSave(s);const html=await h.hurmet2html(out);if(html.includes('Error.'))throw Error('Hurmet calculation error: '+html);return {out,html};}
 (async()=>{
  const {out,html}=await recalc(fs.readFileSync(file,'utf8'));const again=await recalc(out);
@@ -15,7 +15,7 @@ async function recalc(s){const out=await h.updateAndSave(s);const html=await h.h
  const half=await recalc(out.replace('ReactorDuty = 1500 MW','ReactorDuty = 750 MW'));
  if(Math.abs(value(half.out,'GrossElectric')/value(out,'GrossElectric')-.5)>1e-6)throw Error('Duty scaling failed');
  if(Math.abs(value(half.out,'GrossEfficiency')-value(out,'GrossEfficiency'))>1e-7)throw Error('Fixed-cycle efficiency scaling failed');
- fs.writeFileSync(file,again.out);fs.mkdirSync(path.join(__dirname,'preview'),{recursive:true});
+ fs.writeFileSync(file,await h.forDisplay(again.out));fs.mkdirSync(path.join(__dirname,'preview'),{recursive:true});
  fs.writeFileSync(path.join(__dirname,'preview','rankine.html'),html);
  console.log('Hurmet round-trip, six external-model comparisons and duty scaling passed.');
  console.log(['GrossElectric','CondenserDuty','CoolingVolume','CondenserArea'].map(n=>n+' = '+value(out,n)).join('\n'));
