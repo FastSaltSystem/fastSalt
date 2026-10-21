@@ -1,4 +1,11 @@
 """Publish the itemized normal coolant pressure profile; no Blender required."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import argparse,hashlib,json,sys,tomllib
 HERE=Path(__file__).resolve().parent
@@ -132,7 +139,7 @@ Run `python calculations/reactor/coolant_pressure_profile.py`, then `node calcul
     sources=[source,pressure_path,models/'models/wistr_installation.py',models/'models/coolant_assembly.py',report_path]
     data={'date':'2026-10-14','revision':'itemized','status':'Preliminary mean-density station pressures; no relief or SG-failure analysis','inputs':{n:{'value':x,'unit':u} for n,(x,u) in inp.items()},'hurmet_checks':checks,'cases':{case:{'coefficients':list(ks),'pump_rise_kPa':v[case+'PumpRise']/1000,'pressures_bar_g':{n:v[case+n]/1e5 for n in ['SGIn','SGOut','Suction','Discharge','ReactorIn','Bottom','ReactorOut']},'segments_kPa':{n:v[case+n]/1000 for n in ['SGSegment','SuctionSegment','ReturnSegment','DownSegment','UpSegment','HotSegment']},'closure_error_Pa':v[case+'ClosureError']} for case,ks in cases.items()},'sources':[{'path':str(p.relative_to(hub)) if p.is_relative_to(hub) else '../fastSaltModels/'+str(p.relative_to(models)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sources]}
     out.mkdir(parents=True,exist_ok=True)
-    (out/'Normal coolant pressure profile - Hurmet.md').write_text('\n\n'.join(md)+'\n')
+    write_worksheet(out/'Normal coolant pressure profile - Hurmet.md', '\n\n'.join(md)+'\n')
     (out/'coolant-pressure-results.json').write_text(json.dumps(data,indent=2)+'\n')
     print(json.dumps(data['cases'],indent=2))
 

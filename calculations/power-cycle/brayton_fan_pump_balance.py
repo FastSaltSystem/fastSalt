@@ -1,4 +1,11 @@
 """Size fan/pump demands against scalable Brayton surplus; not an equipment map."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,math,re,hashlib
 D=Path(__file__).resolve().parent
@@ -108,7 +115,7 @@ def widths(m):
  b=m.group(0);n=b.splitlines()[0].count('|')-1
  return b+'\n{.grid colWidths="'+' '.join(['250']+['125']*(n-1))+'"}'
 s=re.sub(r'(?m)^\|.*(?:\n\|.*)*',widths,s)
-(D/'Brayton fan and salt pump balance - Hurmet.md').write_text(s)
+write_worksheet(D/'Brayton fan and salt pump balance - Hurmet.md', s)
 paths=[D/'brayton_fan_pump_balance.py',D/'brayton-cooler-results.json',D.parent/'steam-generator/Generator sizing - Hurmet.md']
 out=dict(date='2026-10-13',cases=cases,zero_margin_10K=balance,sensitivity=sensitivity,design_flow_65K=fullflow,hurmet_checks=checks,source_hashes={str(p.relative_to(D.parent.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths})
 (D/'brayton-fan-pump-results.json').write_text(json.dumps(out,indent=2)+'\n')

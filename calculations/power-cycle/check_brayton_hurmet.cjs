@@ -1,7 +1,7 @@
 const fs=require('fs'),path=require('path');
-const h=require(process.env.HURMET_ENGINE);globalThis.temml=require(process.env.TEMML_ENGINE);
+const h=require('../hurmet_display.cjs').checkingEngine(require(process.env.HURMET_ENGINE));globalThis.temml=require(process.env.TEMML_ENGINE);
 const file=path.join(__dirname,'Steam Brayton cooler - Hurmet.md');
-function val(s,n){const m=s.match(new RegExp('¢\\?\\?` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'));if(!m)throw Error('Missing '+n);return Number(m[1].replaceAll(',',''));}
+function val(s,n){const m=s.match(new RegExp('¢(?:\\?\\?|%%)` '+n+' = (?:(?!`).)*?〔([^〕]+)〕','s'));if(!m)throw Error('Missing '+n);return Number(m[1].replaceAll(',',''));}
 async function calc(s){const out=await h.updateAndSave(s);const html=await h.hurmet2html(out);if(html.includes('Error.')||out.includes('NaN'))throw Error('Hurmet error');return out;}
 (async()=>{const src=fs.readFileSync(file,'utf8');const out=await calc(await calc(src));
 const expected=JSON.parse(fs.readFileSync(path.join(__dirname,'brayton-hurmet-checks.json'),'utf8'));
@@ -11,6 +11,6 @@ for(const n of ['SteamFlow','AvailablePower','FanPower','RemainingPower','EightF
 const fan=await calc(src.replace('AirPressureDrop = 500 Pa','AirPressureDrop = 1000 Pa'));
 if(Math.abs(val(fan,'FanPower')/val(out,'FanPower')-2)>1e-5)throw Error('Fan pressure sensitivity');
 if(((await h.hurmet2html(out)).match(/<table/g)||[]).length!==4)throw Error('Expected four result tables');
-fs.writeFileSync(file,out);fs.mkdirSync(path.join(__dirname,'preview'),{recursive:true});fs.writeFileSync(path.join(__dirname,'preview/brayton-cooler.html'),await h.hurmet2html(out));
+fs.writeFileSync(file,await h.forDisplay(out));fs.mkdirSync(path.join(__dirname,'preview'),{recursive:true});fs.writeFileSync(path.join(__dirname,'preview/brayton-cooler.html'),await h.hurmet2html(out));
 console.log('Hurmet save/reopen, '+Object.keys(expected).length+' numerical checks, duty scaling and fan-loss sensitivity passed.');
 })().catch(e=>{console.error(e);process.exit(1)});

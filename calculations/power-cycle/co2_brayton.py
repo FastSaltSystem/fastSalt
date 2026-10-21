@@ -1,6 +1,13 @@
 """Simple unrecuperated high-pressure CO2 heat-removal screen; separate dry cooler.
 Does not calculate the students' steam-generator emergency air passages.
 """
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,math,hashlib,re
 import CoolProp
@@ -108,7 +115,7 @@ Run `co2_brayton.py` in the existing CoolProp environment, then `check_co2_brayt
   b=m.group(0);count=b.splitlines()[0].count('|')-1
   return b+'\n{.grid colWidths="'+' '.join(['250']+['125']*(count-1))+'"}'
  t=re.sub(r'(?m)^\|.*(?:\n\|.*)*',widths,t)
- (D/'Simple CO2 Brayton cooler - Hurmet.md').write_text(t)
+ write_worksheet(D/'Simple CO2 Brayton cooler - Hurmet.md', t)
  sources=[D/'co2_brayton.py',D/'nitrogen_brayton.py',D/'brayton-fan-pump-results.json']
  out=dict(date='2026-10-13',property_model='CoolProp '+CoolProp.__version__+' HEOS::CO2',matched=matched,warm=warm,near_critical=dense,same_pressure_nitrogen=high_n,lower_machine_efficiencies=bad,checks=dict(energy_entropy=True,above_critical_state_points=True,duty_scaling=True,UA_grid_relative_change=grid_error),hurmet_checks=checks,source_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources})
  (D/'co2-brayton-results.json').write_text(json.dumps(out,indent=2)+'\n')

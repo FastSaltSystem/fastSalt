@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Steam and feedwater pipe insulation
+
+¢` format = "h3" `
 
 Preliminary layout estimate — 11 October 2026. Allow **350 mm radial insulation
 on steam pipes and 175 mm on feedwater pipes**, conditional on the inputs
@@ -29,8 +31,6 @@ provisional 600°C steam and 325°C feedwater design temperatures. A uniform
 thickness per service is selected using the larger requirement of its branch
 and header, rounded upward to 25 mm. These are planning increments, not
 available stock sizes.
-
-¢` format = "h7" `
 
 ¢` SteamOperating = 830 K `
 
@@ -149,34 +149,34 @@ end `
 SB = steam branch, SH = steam header, WB = feedwater branch, WH = feedwater
 header. The operating-only minima show how much the higher check temperatures add.
 
-¢??` SBOperatingMinimum = Minimum(SBOutside, SteamOperating, Ambient,
-SurfaceLimit, SteamConductivity, Convection, Emissivity, Sigma) = 〔297.6391〕 mm `
+¢%%` SBOperatingMinimum = Minimum(SBOutside, SteamOperating, Ambient,
+SurfaceLimit, SteamConductivity, Convection, Emissivity, Sigma) = 〔298〕 mm `
 
-¢??` SBCheckMinimum = Minimum(SBOutside, SteamCheck, Ambient, SurfaceLimit,
-SteamConductivity, Convection, Emissivity, Sigma) = 〔318.7425〕 mm `
+¢%%` SBCheckMinimum = Minimum(SBOutside, SteamCheck, Ambient, SurfaceLimit,
+SteamConductivity, Convection, Emissivity, Sigma) = 〔319〕 mm `
 
-¢??` SHOperatingMinimum = Minimum(SHOutside, SteamOperating, Ambient,
-SurfaceLimit, SteamConductivity, Convection, Emissivity, Sigma) = 〔324.1876〕 mm `
+¢%%` SHOperatingMinimum = Minimum(SHOutside, SteamOperating, Ambient,
+SurfaceLimit, SteamConductivity, Convection, Emissivity, Sigma) = 〔324〕 mm `
 
-¢??` SHCheckMinimum = Minimum(SHOutside, SteamCheck, Ambient, SurfaceLimit,
-SteamConductivity, Convection, Emissivity, Sigma) = 〔348.0354〕 mm `
+¢%%` SHCheckMinimum = Minimum(SHOutside, SteamCheck, Ambient, SurfaceLimit,
+SteamConductivity, Convection, Emissivity, Sigma) = 〔348〕 mm `
 
-¢??` WBOperatingMinimum = Minimum(WBOutside, WaterOperating, Ambient,
-SurfaceLimit, WaterConductivity, Convection, Emissivity, Sigma) = 〔127.0481〕 mm `
+¢%%` WBOperatingMinimum = Minimum(WBOutside, WaterOperating, Ambient,
+SurfaceLimit, WaterConductivity, Convection, Emissivity, Sigma) = 〔127〕 mm `
 
-¢??` WBCheckMinimum = Minimum(WBOutside, WaterCheck, Ambient, SurfaceLimit,
-WaterConductivity, Convection, Emissivity, Sigma) = 〔145.2876〕 mm `
+¢%%` WBCheckMinimum = Minimum(WBOutside, WaterCheck, Ambient, SurfaceLimit,
+WaterConductivity, Convection, Emissivity, Sigma) = 〔145〕 mm `
 
-¢??` WHOperatingMinimum = Minimum(WHOutside, WaterOperating, Ambient,
-SurfaceLimit, WaterConductivity, Convection, Emissivity, Sigma) = 〔135.0755〕 mm `
+¢%%` WHOperatingMinimum = Minimum(WHOutside, WaterOperating, Ambient,
+SurfaceLimit, WaterConductivity, Convection, Emissivity, Sigma) = 〔135〕 mm `
 
-¢??` WHCheckMinimum = Minimum(WHOutside, WaterCheck, Ambient, SurfaceLimit,
-WaterConductivity, Convection, Emissivity, Sigma) = 〔155.2427〕 mm `
+¢%%` WHCheckMinimum = Minimum(WHOutside, WaterCheck, Ambient, SurfaceLimit,
+WaterConductivity, Convection, Emissivity, Sigma) = 〔155〕 mm `
 
-¢??` SteamThickness = ceil(max(SBCheckMinimum, SHCheckMinimum) /
+¢%%` SteamThickness = ceil(max(SBCheckMinimum, SHCheckMinimum) /
 ThicknessStep) * ThicknessStep = 〔350〕 mm `
 
-¢??` WaterThickness = ceil(max(WBCheckMinimum, WHCheckMinimum) /
+¢%%` WaterThickness = ceil(max(WBCheckMinimum, WHCheckMinimum) /
 ThicknessStep) * ThicknessStep = 〔175〕 mm `
 
 ## Performance with the selected insulation
@@ -186,67 +186,67 @@ clearance.
 
 ### Steam branch
 
-¢??` SBJacket = SBOutside + 2 * SteamThickness = 〔1,355〕 mm `
+¢%%` SBJacket = SBOutside + 2 * SteamThickness = 〔1,355〕 mm `
 
-¢??` SBOperatingSurface = Surface(SBOutside, SteamThickness, SteamOperating,
-Ambient, SteamConductivity, Convection, Emissivity, Sigma) = 〔56.59818〕 °C `
+¢%%` SBOperatingSurface = Surface(SBOutside, SteamThickness, SteamOperating,
+Ambient, SteamConductivity, Convection, Emissivity, Sigma) = 〔56.6〕 °C `
 
-¢??` SBOperatingLoss = 2 * pi * SteamConductivity * (SteamOperating -
-SBOperatingSurface) / ln(SBJacket / SBOutside) = 〔389.1558〕 W/m `
+¢%%` SBOperatingLoss = 2 * pi * SteamConductivity * (SteamOperating -
+SBOperatingSurface) / ln(SBJacket / SBOutside) = 〔389〕 W/m `
 
-¢??` SBCheckSurface = Surface(SBOutside, SteamThickness, SteamCheck, Ambient,
-SteamConductivity, Convection, Emissivity, Sigma) = 〔57.95324〕 °C `
+¢%%` SBCheckSurface = Surface(SBOutside, SteamThickness, SteamCheck, Ambient,
+SteamConductivity, Convection, Emissivity, Sigma) = 〔58〕 °C `
 
-¢??` SBCheckLoss = 2 * pi * SteamConductivity * (SteamCheck - SBCheckSurface) /
-ln(SBJacket / SBOutside) = 〔421.6689〕 W/m `
+¢%%` SBCheckLoss = 2 * pi * SteamConductivity * (SteamCheck - SBCheckSurface) /
+ln(SBJacket / SBOutside) = 〔422〕 W/m `
 
 ### Steam common header
 
-¢??` SHJacket = SHOutside + 2 * SteamThickness = 〔1,815〕 mm `
+¢%%` SHJacket = SHOutside + 2 * SteamThickness = 〔1,815〕 mm `
 
-¢??` SHOperatingSurface = Surface(SHOutside, SteamThickness, SteamOperating,
-Ambient, SteamConductivity, Convection, Emissivity, Sigma) = 〔58.37892〕 °C `
+¢%%` SHOperatingSurface = Surface(SHOutside, SteamThickness, SteamOperating,
+Ambient, SteamConductivity, Convection, Emissivity, Sigma) = 〔58.4〕 °C `
 
-¢??` SHOperatingLoss = 2 * pi * SteamConductivity * (SteamOperating -
-SHOperatingSurface) / ln(SHJacket / SHOutside) = 〔578.532〕 W/m `
+¢%%` SHOperatingLoss = 2 * pi * SteamConductivity * (SteamOperating -
+SHOperatingSurface) / ln(SHJacket / SHOutside) = 〔579〕 W/m `
 
-¢??` SHCheckSurface = Surface(SHOutside, SteamThickness, SteamCheck, Ambient,
-SteamConductivity, Convection, Emissivity, Sigma) = 〔59.87575〕 °C `
+¢%%` SHCheckSurface = Surface(SHOutside, SteamThickness, SteamCheck, Ambient,
+SteamConductivity, Convection, Emissivity, Sigma) = 〔59.9〕 °C `
 
-¢??` SHCheckLoss = 2 * pi * SteamConductivity * (SteamCheck - SHCheckSurface) /
-ln(SHJacket / SHOutside) = 〔626.8752〕 W/m `
+¢%%` SHCheckLoss = 2 * pi * SteamConductivity * (SteamCheck - SHCheckSurface) /
+ln(SHJacket / SHOutside) = 〔627〕 W/m `
 
 ### Feedwater branch
 
-¢??` WBJacket = WBOutside + 2 * WaterThickness = 〔875〕 mm `
+¢%%` WBJacket = WBOutside + 2 * WaterThickness = 〔875〕 mm `
 
-¢??` WBOperatingSurface = Surface(WBOutside, WaterThickness, WaterOperating,
-Ambient, WaterConductivity, Convection, Emissivity, Sigma) = 〔54.21817〕 °C `
+¢%%` WBOperatingSurface = Surface(WBOutside, WaterThickness, WaterOperating,
+Ambient, WaterConductivity, Convection, Emissivity, Sigma) = 〔54.2〕 °C `
 
-¢??` WBOperatingLoss = 2 * pi * WaterConductivity * (WaterOperating -
-WBOperatingSurface) / ln(WBJacket / WBOutside) = 〔214.6039〕 W/m `
+¢%%` WBOperatingLoss = 2 * pi * WaterConductivity * (WaterOperating -
+WBOperatingSurface) / ln(WBJacket / WBOutside) = 〔215〕 W/m `
 
-¢??` WBCheckSurface = Surface(WBOutside, WaterThickness, WaterCheck, Ambient,
-WaterConductivity, Convection, Emissivity, Sigma) = 〔56.37248〕 °C `
+¢%%` WBCheckSurface = Surface(WBOutside, WaterThickness, WaterCheck, Ambient,
+WaterConductivity, Convection, Emissivity, Sigma) = 〔56.4〕 °C `
 
-¢??` WBCheckLoss = 2 * pi * WaterConductivity * (WaterCheck - WBCheckSurface) /
-ln(WBJacket / WBOutside) = 〔247.8101〕 W/m `
+¢%%` WBCheckLoss = 2 * pi * WaterConductivity * (WaterCheck - WBCheckSurface) /
+ln(WBJacket / WBOutside) = 〔248〕 W/m `
 
 ### Feedwater common header
 
-¢??` WHJacket = WHOutside + 2 * WaterThickness = 〔1,240〕 mm `
+¢%%` WHJacket = WHOutside + 2 * WaterThickness = 〔1,240〕 mm `
 
-¢??` WHOperatingSurface = Surface(WHOutside, WaterThickness, WaterOperating,
-Ambient, WaterConductivity, Convection, Emissivity, Sigma) = 〔55.35545〕 °C `
+¢%%` WHOperatingSurface = Surface(WHOutside, WaterThickness, WaterOperating,
+Ambient, WaterConductivity, Convection, Emissivity, Sigma) = 〔55.4〕 °C `
 
-¢??` WHOperatingLoss = 2 * pi * WaterConductivity * (WaterOperating -
-WHOperatingSurface) / ln(WHJacket / WHOutside) = 〔328.9336〕 W/m `
+¢%%` WHOperatingLoss = 2 * pi * WaterConductivity * (WaterOperating -
+WHOperatingSurface) / ln(WHJacket / WHOutside) = 〔329〕 W/m `
 
-¢??` WHCheckSurface = Surface(WHOutside, WaterThickness, WaterCheck, Ambient,
-WaterConductivity, Convection, Emissivity, Sigma) = 〔57.67851〕 °C `
+¢%%` WHCheckSurface = Surface(WHOutside, WaterThickness, WaterCheck, Ambient,
+WaterConductivity, Convection, Emissivity, Sigma) = 〔57.7〕 °C `
 
-¢??` WHCheckLoss = 2 * pi * WaterConductivity * (WaterCheck - WHCheckSurface) /
-ln(WHJacket / WHOutside) = 〔379.8405〕 W/m `
+¢%%` WHCheckLoss = 2 * pi * WaterConductivity * (WaterCheck - WHCheckSurface) /
+ln(WHJacket / WHOutside) = 〔380〕 W/m `
 
 ## Sensitivity: keep the selected thicknesses fixed
 
@@ -257,29 +257,29 @@ assumes 50°C mean radiant surroundings. Smaller convection can represent
 sheltered or stagnant locations. The combined adverse case uses all three
 changes.
 
-¢??` SHWarmRoomSurface = Surface(SHOutside, SteamThickness, SteamCheck, 323.15
-'K', SteamConductivity, Convection, Emissivity, Sigma) = 〔69.05488〕 °C `
+¢%%` SHWarmRoomSurface = Surface(SHOutside, SteamThickness, SteamCheck, 323.15
+'K', SteamConductivity, Convection, Emissivity, Sigma) = 〔69.1〕 °C `
 
-¢??` SHQuietAirSurface = Surface(SHOutside, SteamThickness, SteamCheck, Ambient,
-SteamConductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔69.92321〕 °C `
+¢%%` SHQuietAirSurface = Surface(SHOutside, SteamThickness, SteamCheck, Ambient,
+SteamConductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔69.9〕 °C `
 
-¢??` SHShinyJacketSurface = Surface(SHOutside, SteamThickness, SteamCheck,
-Ambient, SteamConductivity, Convection, 0.10, Sigma) = 〔62.88767〕 °C `
+¢%%` SHShinyJacketSurface = Surface(SHOutside, SteamThickness, SteamCheck,
+Ambient, SteamConductivity, Convection, 0.10, Sigma) = 〔62.9〕 °C `
 
-¢??` SHCombinedSurface = Surface(SHOutside, SteamThickness, SteamCheck, 323.15
-'K', SteamConductivity, 2 'W/m2/K', 0.10, Sigma) = 〔86.03447〕 °C `
+¢%%` SHCombinedSurface = Surface(SHOutside, SteamThickness, SteamCheck, 323.15
+'K', SteamConductivity, 2 'W/m2/K', 0.10, Sigma) = 〔86〕 °C `
 
-¢??` WHWarmRoomSurface = Surface(WHOutside, WaterThickness, WaterCheck, 323.15
-'K', WaterConductivity, Convection, Emissivity, Sigma) = 〔66.66747〕 °C `
+¢%%` WHWarmRoomSurface = Surface(WHOutside, WaterThickness, WaterCheck, 323.15
+'K', WaterConductivity, Convection, Emissivity, Sigma) = 〔66.7〕 °C `
 
-¢??` WHQuietAirSurface = Surface(WHOutside, WaterThickness, WaterCheck, Ambient,
-WaterConductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔66.35922〕 °C `
+¢%%` WHQuietAirSurface = Surface(WHOutside, WaterThickness, WaterCheck, Ambient,
+WaterConductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔66.4〕 °C `
 
-¢??` WHShinyJacketSurface = Surface(WHOutside, WaterThickness, WaterCheck,
-Ambient, WaterConductivity, Convection, 0.10, Sigma) = 〔60.25678〕 °C `
+¢%%` WHShinyJacketSurface = Surface(WHOutside, WaterThickness, WaterCheck,
+Ambient, WaterConductivity, Convection, 0.10, Sigma) = 〔60.3〕 °C `
 
-¢??` WHCombinedSurface = Surface(WHOutside, WaterThickness, WaterCheck, 323.15
-'K', WaterConductivity, 2 'W/m2/K', 0.10, Sigma) = 〔80.89148〕 °C `
+¢%%` WHCombinedSurface = Surface(WHOutside, WaterThickness, WaterCheck, 323.15
+'K', WaterConductivity, 2 'W/m2/K', 0.10, Sigma) = 〔80.9〕 °C `
 
 ## Approximate room heat load from these pipes
 
@@ -296,13 +296,13 @@ for ventilation design.
 
 ¢` HeaderLength = 90 m `
 
-¢??` SteamRoomHeat = BranchCount * BranchLength * SBOperatingLoss +
-HeaderLength * SHOperatingLoss = 〔69.57989〕 kW `
+¢%%` SteamRoomHeat = BranchCount * BranchLength * SBOperatingLoss +
+HeaderLength * SHOperatingLoss = 〔69.6〕 kW `
 
-¢??` WaterRoomHeat = BranchCount * BranchLength * WBOperatingLoss +
-HeaderLength * WHOperatingLoss = 〔39.2612〕 kW `
+¢%%` WaterRoomHeat = BranchCount * BranchLength * WBOperatingLoss +
+HeaderLength * WHOperatingLoss = 〔39.3〕 kW `
 
-¢??` TotalRoomHeat = SteamRoomHeat + WaterRoomHeat = 〔108.8411〕 kW `
+¢%%` TotalRoomHeat = SteamRoomHeat + WaterRoomHeat = 〔109〕 kW `
 
 ## Implementation and remaining choices
 
@@ -324,8 +324,14 @@ reproduction.
 
 [2]: https://insulation.org/training-tools/designguide/design-objectives/
 
-[3]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\_IND\_Thermo-1200\_DS.pdf
+[3]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\\\\\\\\\\\\\_IND\\\\\\\\\\\\\\\_Thermo-1200\\\\\\\\\\\\\\\_DS.pdf
 
 [4]: steam-water-insulation-check.md
 
-[5]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM_IND_Thermo-1200_DS.pdf
+[5]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\\\\\_IND\\\\\\\_Thermo-1200\\\\\\\_DS.pdf
+
+[6]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\_IND\\\_Thermo-1200\\\_DS.pdf
+
+[7]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\_IND\_Thermo-1200\_DS.pdf
+
+[8]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM_IND_Thermo-1200_DS.pdf

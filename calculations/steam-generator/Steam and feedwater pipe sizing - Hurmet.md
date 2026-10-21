@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Steam and feedwater pipe sizing
+
+¢` format = "h3" `
 
 Preliminary estimate — 11 October 2026. Four sizes: one-generator steam and
 feedwater branches, and their three-generator common headers. The owner
@@ -28,8 +30,6 @@ absolute, 830 K steam outlet and 560 K feedwater inlet. They do not update with
 pressure or temperature: when operating conditions change, update enthalpies,
 densities and viscosities from IAPWS as well.
 
-¢` format = "h7" `
-
 ¢` ReactorDuty = 1500 MW `
 
 ¢` GeneratorCount = 3 `
@@ -40,9 +40,9 @@ densities and viscosities from IAPWS as well.
 
 ¢` WaterTemperature = 560 K `
 
-¢` SteamEnthalpy = 3372493 J/kg `
+¢` SteamEnthalpy = 3372.493 kJ/kg `
 
-¢` WaterEnthalpy = 1264452 J/kg `
+¢` WaterEnthalpy = 1264.452 kJ/kg `
 
 ¢` SteamDensity = 73.6086493 kg/m3 `
 
@@ -52,20 +52,19 @@ densities and viscosities from IAPWS as well.
 
 ¢` WaterViscosity = 0.00009635 Pa*s `
 
-¢??` GeneratorDuty = ReactorDuty / GeneratorCount = 〔500〕 MW `
+¢%%` GeneratorDuty = ReactorDuty / GeneratorCount = 〔500〕 MW `
 
-¢??` BranchMass = GeneratorDuty / (SteamEnthalpy - WaterEnthalpy) = 〔237.187〕
-kg/s `
+¢%%` BranchMass = GeneratorDuty / (SteamEnthalpy - WaterEnthalpy) = 〔237〕 kg/s `
 
-¢??` HeaderMass = GeneratorCount * BranchMass = 〔711.5611〕 kg/s `
+¢%%` HeaderMass = GeneratorCount * BranchMass = 〔712〕 kg/s `
 
-¢??` SteamBranchFlow = BranchMass / SteamDensity = 〔3.222271〕 m3/s `
+¢%%` SteamBranchFlow = BranchMass / SteamDensity = 〔3.22〕 m3/s `
 
-¢??` SteamHeaderFlow = HeaderMass / SteamDensity = 〔9.666814〕 m3/s `
+¢%%` SteamHeaderFlow = HeaderMass / SteamDensity = 〔9.67〕 m3/s `
 
-¢??` WaterBranchFlow = BranchMass / WaterDensity = 〔0.3102536〕 m3/s `
+¢%%` WaterBranchFlow = BranchMass / WaterDensity = 〔0.31〕 m3/s `
 
-¢??` WaterHeaderFlow = HeaderMass / WaterDensity = 〔0.9307609〕 m3/s `
+¢%%` WaterHeaderFlow = HeaderMass / WaterDensity = 〔0.931〕 m3/s `
 
 ## 2. Editable hydraulic assumptions
 
@@ -152,113 +151,113 @@ common header. These are clean, nominal internal bores.
 
 ### Steam branch
 
-¢??` SBVelocityBore = sqrt(4 * SteamBranchFlow / (pi * SteamVelocityLimit)) =
-〔405.1036〕 mm `
+¢%%` SBVelocityBore = sqrt(4 * SteamBranchFlow / (pi * SteamVelocityLimit)) =
+〔405〕 mm `
 
-¢??` SBLossBore = LossBore(Loss, Darcy, SteamBranchFlow, SteamDensity,
-SteamViscosity, BranchLength, BranchK, Roughness, BranchLossLimit) = 〔404.1041〕 mm `
+¢%%` SBLossBore = LossBore(Loss, Darcy, SteamBranchFlow, SteamDensity,
+SteamViscosity, BranchLength, BranchK, Roughness, BranchLossLimit) = 〔404〕 mm `
 
-¢??` SBBore = ceil(max(SBVelocityBore, SBLossBore) / BoreStep) * BoreStep =
+¢%%` SBBore = ceil(max(SBVelocityBore, SBLossBore) / BoreStep) * BoreStep =
 〔425〕 mm `
 
-¢??` SBVelocity = Speed(SteamBranchFlow, SBBore) = 〔22.71404〕 m/s `
+¢%%` SBVelocity = Speed(SteamBranchFlow, SBBore) = 〔22.7〕 m/s `
 
-¢??` SBReynolds = SteamDensity * SBVelocity * SBBore / SteamViscosity =
+¢%%` SBReynolds = SteamDensity * SBVelocity * SBBore / SteamViscosity =
 〔20,948,662〕 `
 
-¢??` SBFriction = Darcy(SteamBranchFlow, SBBore, SteamDensity, SteamViscosity,
-Roughness) = 〔0.01219768〕 `
+¢%%` SBFriction = Darcy(SteamBranchFlow, SBBore, SteamDensity, SteamViscosity,
+Roughness) = 〔0.0122〕 `
 
-¢??` SBLoss = Loss(Darcy, SteamBranchFlow, SBBore, SteamDensity, SteamViscosity,
-BranchLength, BranchK, Roughness) = 〔122.1048〕 kPa `
+¢%%` SBLoss = Loss(Darcy, SteamBranchFlow, SBBore, SteamDensity, SteamViscosity,
+BranchLength, BranchK, Roughness) = 〔122〕 kPa `
 
-¢??` SBHydraulicOK = (SBVelocity <= SteamVelocityLimit) and (SBLoss <=
+¢%%` SBHydraulicOK = (SBVelocity <= SteamVelocityLimit) and (SBLoss <=
 BranchLossLimit) = 〔true〕 `
 
 ### Steam header
 
-¢??` SHVelocityBore = sqrt(4 * SteamHeaderFlow / (pi * SteamVelocityLimit)) =
-〔701.66〕 mm `
+¢%%` SHVelocityBore = sqrt(4 * SteamHeaderFlow / (pi * SteamVelocityLimit)) =
+〔702〕 mm `
 
-¢??` SHLossBore = LossBore(Loss, Darcy, SteamHeaderFlow, SteamDensity,
-SteamViscosity, HeaderLength, HeaderK, Roughness, HeaderLossLimit) = 〔710.1499〕 mm `
+¢%%` SHLossBore = LossBore(Loss, Darcy, SteamHeaderFlow, SteamDensity,
+SteamViscosity, HeaderLength, HeaderK, Roughness, HeaderLossLimit) = 〔710〕 mm `
 
-¢??` SHBore = ceil(max(SHVelocityBore, SHLossBore) / BoreStep) * BoreStep =
+¢%%` SHBore = ceil(max(SHVelocityBore, SHLossBore) / BoreStep) * BoreStep =
 〔725〕 mm `
 
-¢??` SHVelocity = Speed(SteamHeaderFlow, SHBore) = 〔23.41626〕 m/s `
+¢%%` SHVelocity = Speed(SteamHeaderFlow, SHBore) = 〔23.4〕 m/s `
 
-¢??` SHReynolds = SteamDensity * SHVelocity * SHBore / SteamViscosity =
+¢%%` SHReynolds = SteamDensity * SHVelocity * SHBore / SteamViscosity =
 〔36,840,751〕 `
 
-¢??` SHFriction = Darcy(SteamHeaderFlow, SHBore, SteamDensity, SteamViscosity,
-Roughness) = 〔0.01103913〕 `
+¢%%` SHFriction = Darcy(SteamHeaderFlow, SHBore, SteamDensity, SteamViscosity,
+Roughness) = 〔0.011〕 `
 
-¢??` SHLoss = Loss(Darcy, SteamHeaderFlow, SHBore, SteamDensity, SteamViscosity,
-HeaderLength, HeaderK, Roughness) = 〔229.4608〕 kPa `
+¢%%` SHLoss = Loss(Darcy, SteamHeaderFlow, SHBore, SteamDensity, SteamViscosity,
+HeaderLength, HeaderK, Roughness) = 〔229〕 kPa `
 
-¢??` SHHydraulicOK = (SHVelocity <= SteamVelocityLimit) and (SHLoss <=
+¢%%` SHHydraulicOK = (SHVelocity <= SteamVelocityLimit) and (SHLoss <=
 HeaderLossLimit) = 〔true〕 `
 
 ### Water branch
 
-¢??` WBVelocityBore = sqrt(4 * WaterBranchFlow / (pi * WaterVelocityLimit)) =
-〔362.8715〕 mm `
+¢%%` WBVelocityBore = sqrt(4 * WaterBranchFlow / (pi * WaterVelocityLimit)) =
+〔363〕 mm `
 
-¢??` WBLossBore = LossBore(Loss, Darcy, WaterBranchFlow, WaterDensity,
-WaterViscosity, BranchLength, BranchK, Roughness, BranchLossLimit) = 〔228.8862〕 mm `
+¢%%` WBLossBore = LossBore(Loss, Darcy, WaterBranchFlow, WaterDensity,
+WaterViscosity, BranchLength, BranchK, Roughness, BranchLossLimit) = 〔229〕 mm `
 
-¢??` WBBore = ceil(max(WBVelocityBore, WBLossBore) / BoreStep) * BoreStep =
+¢%%` WBBore = ceil(max(WBVelocityBore, WBLossBore) / BoreStep) * BoreStep =
 〔375〕 mm `
 
-¢??` WBVelocity = Speed(WaterBranchFlow, WBBore) = 〔2.809082〕 m/s `
+¢%%` WBVelocity = Speed(WaterBranchFlow, WBBore) = 〔2.81〕 m/s `
 
-¢??` WBReynolds = WaterDensity * WBVelocity * WBBore / WaterViscosity =
+¢%%` WBReynolds = WaterDensity * WBVelocity * WBBore / WaterViscosity =
 〔8,358,302〕 `
 
-¢??` WBFriction = Darcy(WaterBranchFlow, WBBore, WaterDensity, WaterViscosity,
-Roughness) = 〔0.01259863〕 `
+¢%%` WBFriction = Darcy(WaterBranchFlow, WBBore, WaterDensity, WaterViscosity,
+Roughness) = 〔0.0126〕 `
 
-¢??` WBLoss = Loss(Darcy, WaterBranchFlow, WBBore, WaterDensity, WaterViscosity,
-BranchLength, BranchK, Roughness) = 〔19.61778〕 kPa `
+¢%%` WBLoss = Loss(Darcy, WaterBranchFlow, WBBore, WaterDensity, WaterViscosity,
+BranchLength, BranchK, Roughness) = 〔19.6〕 kPa `
 
-¢??` WBHydraulicOK = (WBVelocity <= WaterVelocityLimit) and (WBLoss <=
+¢%%` WBHydraulicOK = (WBVelocity <= WaterVelocityLimit) and (WBLoss <=
 BranchLossLimit) = 〔true〕 `
 
 ### Water header
 
-¢??` WHVelocityBore = sqrt(4 * WaterHeaderFlow / (pi * WaterVelocityLimit)) =
-〔628.5119〕 mm `
+¢%%` WHVelocityBore = sqrt(4 * WaterHeaderFlow / (pi * WaterVelocityLimit)) =
+〔629〕 mm `
 
-¢??` WHLossBore = LossBore(Loss, Darcy, WaterHeaderFlow, WaterDensity,
-WaterViscosity, HeaderLength, HeaderK, Roughness, HeaderLossLimit) = 〔406.5408〕 mm `
+¢%%` WHLossBore = LossBore(Loss, Darcy, WaterHeaderFlow, WaterDensity,
+WaterViscosity, HeaderLength, HeaderK, Roughness, HeaderLossLimit) = 〔407〕 mm `
 
-¢??` WHBore = ceil(max(WHVelocityBore, WHLossBore) / BoreStep) * BoreStep =
+¢%%` WHBore = ceil(max(WHVelocityBore, WHLossBore) / BoreStep) * BoreStep =
 〔650〕 mm `
 
-¢??` WHVelocity = Speed(WaterHeaderFlow, WHBore) = 〔2.804927〕 m/s `
+¢%%` WHVelocity = Speed(WaterHeaderFlow, WHBore) = 〔2.8〕 m/s `
 
-¢??` WHReynolds = WaterDensity * WHVelocity * WHBore / WaterViscosity =
+¢%%` WHReynolds = WaterDensity * WHVelocity * WHBore / WaterViscosity =
 〔14,466,293〕 `
 
-¢??` WHFriction = Darcy(WaterHeaderFlow, WHBore, WaterDensity, WaterViscosity,
-Roughness) = 〔0.01135757〕 `
+¢%%` WHFriction = Darcy(WaterHeaderFlow, WHBore, WaterDensity, WaterViscosity,
+Roughness) = 〔0.0114〕 `
 
-¢??` WHLoss = Loss(Darcy, WaterHeaderFlow, WHBore, WaterDensity, WaterViscosity,
-HeaderLength, HeaderK, Roughness) = 〔34.80307〕 kPa `
+¢%%` WHLoss = Loss(Darcy, WaterHeaderFlow, WHBore, WaterDensity, WaterViscosity,
+HeaderLength, HeaderK, Roughness) = 〔34.8〕 kPa `
 
-¢??` WHHydraulicOK = (WHVelocity <= WaterVelocityLimit) and (WHLoss <=
+¢%%` WHHydraulicOK = (WHVelocity <= WaterVelocityLimit) and (WHLoss <=
 HeaderLossLimit) = 〔true〕 `
 
 The totals are branch plus a full-flow header bound, not a balanced network
 solution. Constant-density steam treatment is an estimate at these small
 pressure-loss fractions; larger losses require changing-property analysis.
 
-¢??` SteamPathLoss = SBLoss + SHLoss = 〔351.5656〕 kPa `
+¢%%` SteamPathLoss = SBLoss + SHLoss = 〔352〕 kPa `
 
-¢??` WaterPathLoss = WBLoss + WHLoss = 〔54.42085〕 kPa `
+¢%%` WaterPathLoss = WBLoss + WHLoss = 〔54.4〕 kPa `
 
-¢??` SteamLossFraction = SteamPathLoss / OperatingPressure = 〔0.01464857〕 `
+¢%%` SteamLossFraction = SteamPathLoss / OperatingPressure = 〔0.0146〕 `
 
 ## 5. Pressure-wall assumptions
 
@@ -271,7 +270,9 @@ Design metal temperatures are provisionally 600°C steam and 325°C water.
 assumptions, not extracted allowable stresses for a named alloy. Replace them
 with the adopted code's values at design temperature, including time-dependent
 limits where applicable. Changing temperature alone does not update stress or
-y. The displayed thicknesses are conditional on these assumptions.
+
+ y.  The displayed thicknesses are conditional on these assumptions.
+
 
 ¢` SteamDesignPressure = 30 'MPa' `
 
@@ -344,94 +345,94 @@ end `
 
 ### Steam branch wall
 
-¢??` SBRequiredNominal = NominalWall(SBBore, SteamDesignPressure, SteamStress,
-SteamE, SteamW, SteamY, Allowance, MillTolerance) = 〔114.3983〕 mm `
+¢%%` SBRequiredNominal = NominalWall(SBBore, SteamDesignPressure, SteamStress,
+SteamE, SteamW, SteamY, Allowance, MillTolerance) = 〔114〕 mm `
 
-¢??` SBWall = ceil(SBRequiredNominal / WallStep) * WallStep = 〔115〕 mm `
+¢%%` SBWall = ceil(SBRequiredNominal / WallStep) * WallStep = 〔115〕 mm `
 
-¢??` SBOD = SBBore + 2 * SBWall = 〔655〕 mm `
+¢%%` SBOD = SBBore + 2 * SBWall = 〔655〕 mm `
 
-¢??` SBRequiredMinimum = SteamDesignPressure * SBOD / (2 * (SteamStress *
-SteamE * SteamW + SteamDesignPressure * SteamY)) + Allowance = 〔100.2772〕 mm `
+¢%%` SBRequiredMinimum = SteamDesignPressure * SBOD / (2 * (SteamStress *
+SteamE * SteamW + SteamDesignPressure * SteamY)) + Allowance = 〔100〕 mm `
 
-¢??` SBDeliveredMinimum = (1 - MillTolerance) * SBWall = 〔100.625〕 mm `
+¢%%` SBDeliveredMinimum = (1 - MillTolerance) * SBWall = 〔101〕 mm `
 
-¢??` SBWallMargin = SBDeliveredMinimum - SBRequiredMinimum = 〔0.3477723〕 mm `
+¢%%` SBWallMargin = SBDeliveredMinimum - SBRequiredMinimum = 〔0.348〕 mm `
 
-¢??` SBPressureCapacity = 2 * SteamStress * SteamE * SteamW *
+¢%%` SBPressureCapacity = 2 * SteamStress * SteamE * SteamW *
 (SBDeliveredMinimum - Allowance) / (SBOD - 2 * SteamY * (SBDeliveredMinimum -
-Allowance)) = 〔30.13553〕 MPa `
+Allowance)) = 〔30.1〕 MPa `
 
-¢??` SBPressureOK = (SBWallMargin >= 0 'mm') and (SBPressureCapacity >=
+¢%%` SBPressureOK = (SBWallMargin >= 0 'mm') and (SBPressureCapacity >=
 SteamDesignPressure) = 〔true〕 `
 
 ### Steam header wall
 
-¢??` SHRequiredNominal = NominalWall(SHBore, SteamDesignPressure, SteamStress,
-SteamE, SteamW, SteamY, Allowance, MillTolerance) = 〔191.4861〕 mm `
+¢%%` SHRequiredNominal = NominalWall(SHBore, SteamDesignPressure, SteamStress,
+SteamE, SteamW, SteamY, Allowance, MillTolerance) = 〔191〕 mm `
 
-¢??` SHWall = ceil(SHRequiredNominal / WallStep) * WallStep = 〔195〕 mm `
+¢%%` SHWall = ceil(SHRequiredNominal / WallStep) * WallStep = 〔195〕 mm `
 
-¢??` SHOD = SHBore + 2 * SHWall = 〔1,115〕 mm `
+¢%%` SHOD = SHBore + 2 * SHWall = 〔1,115〕 mm `
 
-¢??` SHRequiredMinimum = SteamDesignPressure * SHOD / (2 * (SteamStress *
-SteamE * SteamW + SteamDesignPressure * SteamY)) + Allowance = 〔168.5941〕 mm `
+¢%%` SHRequiredMinimum = SteamDesignPressure * SHOD / (2 * (SteamStress *
+SteamE * SteamW + SteamDesignPressure * SteamY)) + Allowance = 〔169〕 mm `
 
-¢??` SHDeliveredMinimum = (1 - MillTolerance) * SHWall = 〔170.625〕 mm `
+¢%%` SHDeliveredMinimum = (1 - MillTolerance) * SHWall = 〔171〕 mm `
 
-¢??` SHWallMargin = SHDeliveredMinimum - SHRequiredMinimum = 〔2.030941〕 mm `
+¢%%` SHWallMargin = SHDeliveredMinimum - SHRequiredMinimum = 〔2.03〕 mm `
 
-¢??` SHPressureCapacity = 2 * SteamStress * SteamE * SteamW *
+¢%%` SHPressureCapacity = 2 * SteamStress * SteamE * SteamW *
 (SHDeliveredMinimum - Allowance) / (SHOD - 2 * SteamY * (SHDeliveredMinimum -
-Allowance)) = 〔30.46602〕 MPa `
+Allowance)) = 〔30.5〕 MPa `
 
-¢??` SHPressureOK = (SHWallMargin >= 0 'mm') and (SHPressureCapacity >=
+¢%%` SHPressureOK = (SHWallMargin >= 0 'mm') and (SHPressureCapacity >=
 SteamDesignPressure) = 〔true〕 `
 
 ### Water branch wall
 
-¢??` WBRequiredNominal = NominalWall(WBBore, WaterDesignPressure, WaterStress,
-WaterE, WaterW, WaterY, Allowance, MillTolerance) = 〔70.42105〕 mm `
+¢%%` WBRequiredNominal = NominalWall(WBBore, WaterDesignPressure, WaterStress,
+WaterE, WaterW, WaterY, Allowance, MillTolerance) = 〔70.4〕 mm `
 
-¢??` WBWall = ceil(WBRequiredNominal / WallStep) * WallStep = 〔75〕 mm `
+¢%%` WBWall = ceil(WBRequiredNominal / WallStep) * WallStep = 〔75〕 mm `
 
-¢??` WBOD = WBBore + 2 * WBWall = 〔525〕 mm `
+¢%%` WBOD = WBBore + 2 * WBWall = 〔525〕 mm `
 
-¢??` WBRequiredMinimum = WaterDesignPressure * WBOD / (2 * (WaterStress *
-WaterE * WaterW + WaterDesignPressure * WaterY)) + Allowance = 〔62.65909〕 mm `
+¢%%` WBRequiredMinimum = WaterDesignPressure * WBOD / (2 * (WaterStress *
+WaterE * WaterW + WaterDesignPressure * WaterY)) + Allowance = 〔62.7〕 mm `
 
-¢??` WBDeliveredMinimum = (1 - MillTolerance) * WBWall = 〔65.625〕 mm `
+¢%%` WBDeliveredMinimum = (1 - MillTolerance) * WBWall = 〔65.6〕 mm `
 
-¢??` WBWallMargin = WBDeliveredMinimum - WBRequiredMinimum = 〔2.965909〕 mm `
+¢%%` WBWallMargin = WBDeliveredMinimum - WBRequiredMinimum = 〔2.97〕 mm `
 
-¢??` WBPressureCapacity = 2 * WaterStress * WaterE * WaterW *
+¢%%` WBPressureCapacity = 2 * WaterStress * WaterE * WaterW *
 (WBDeliveredMinimum - Allowance) / (WBOD - 2 * WaterY * (WBDeliveredMinimum -
-Allowance)) = 〔31.64877〕 MPa `
+Allowance)) = 〔31.6〕 MPa `
 
-¢??` WBPressureOK = (WBWallMargin >= 0 'mm') and (WBPressureCapacity >=
+¢%%` WBPressureOK = (WBWallMargin >= 0 'mm') and (WBPressureCapacity >=
 WaterDesignPressure) = 〔true〕 `
 
 ### Water header wall
 
-¢??` WHRequiredNominal = NominalWall(WHBore, WaterDesignPressure, WaterStress,
-WaterE, WaterW, WaterY, Allowance, MillTolerance) = 〔118.6667〕 mm `
+¢%%` WHRequiredNominal = NominalWall(WHBore, WaterDesignPressure, WaterStress,
+WaterE, WaterW, WaterY, Allowance, MillTolerance) = 〔119〕 mm `
 
-¢??` WHWall = ceil(WHRequiredNominal / WallStep) * WallStep = 〔120〕 mm `
+¢%%` WHWall = ceil(WHRequiredNominal / WallStep) * WallStep = 〔120〕 mm `
 
-¢??` WHOD = WHBore + 2 * WHWall = 〔890〕 mm `
+¢%%` WHOD = WHBore + 2 * WHWall = 〔890〕 mm `
 
-¢??` WHRequiredMinimum = WaterDesignPressure * WHOD / (2 * (WaterStress *
-WaterE * WaterW + WaterDesignPressure * WaterY)) + Allowance = 〔104.1364〕 mm `
+¢%%` WHRequiredMinimum = WaterDesignPressure * WHOD / (2 * (WaterStress *
+WaterE * WaterW + WaterDesignPressure * WaterY)) + Allowance = 〔104〕 mm `
 
-¢??` WHDeliveredMinimum = (1 - MillTolerance) * WHWall = 〔105〕 mm `
+¢%%` WHDeliveredMinimum = (1 - MillTolerance) * WHWall = 〔105〕 mm `
 
-¢??` WHWallMargin = WHDeliveredMinimum - WHRequiredMinimum = 〔0.8636364〕 mm `
+¢%%` WHWallMargin = WHDeliveredMinimum - WHRequiredMinimum = 〔0.864〕 mm `
 
-¢??` WHPressureCapacity = 2 * WaterStress * WaterE * WaterW *
+¢%%` WHPressureCapacity = 2 * WaterStress * WaterE * WaterW *
 (WHDeliveredMinimum - Allowance) / (WHOD - 2 * WaterY * (WHDeliveredMinimum -
-Allowance)) = 〔30.28204〕 MPa `
+Allowance)) = 〔30.3〕 MPa `
 
-¢??` WHPressureOK = (WHWallMargin >= 0 'mm') and (WHPressureCapacity >=
+¢%%` WHPressureOK = (WHWallMargin >= 0 'mm') and (WHPressureCapacity >=
 WaterDesignPressure) = 〔true〕 `
 
 ## 7. Dimension summary
@@ -440,22 +441,22 @@ All dimensions below are calculated envelopes. Pressure checks mean only that
 the assumed straight-pipe relation is satisfied. The present Blender pipes are
 not automatically updated from this worksheet.
 
-+--------------+--------------------------+--------------------------+--------------------------+-------------------+
-| Service      | Bore (mm)                | Nominal wall (mm)        | Bare OD (mm)             | Velocity (m/s)    |
-+==============+=========================:+=========================:+=========================:+==================:+
-| Steam branch | ¢??` SBBore = 〔425〕 mm ` | ¢??` SBWall = 〔115〕 mm ` | ¢??` SBOD = 〔655〕 mm `   | ¢??` SBVelocity = |
-|              |                          |                          |                          | 〔22.71404〕 m/s `  |
-+--------------+--------------------------+--------------------------+--------------------------+-------------------+
-| Steam header | ¢??` SHBore = 〔725〕 mm ` | ¢??` SHWall = 〔195〕 mm ` | ¢??` SHOD = 〔1,115〕 mm ` | ¢??` SHVelocity = |
-|              |                          |                          |                          | 〔23.41626〕 m/s `  |
-+--------------+--------------------------+--------------------------+--------------------------+-------------------+
-| Water branch | ¢??` WBBore = 〔375〕 mm ` | ¢??` WBWall = 〔75〕 mm `  | ¢??` WBOD = 〔525〕 mm `   | ¢??` WBVelocity = |
-|              |                          |                          |                          | 〔2.809082〕 m/s `  |
-+--------------+--------------------------+--------------------------+--------------------------+-------------------+
-| Water header | ¢??` WHBore = 〔650〕 mm ` | ¢??` WHWall = 〔120〕 mm ` | ¢??` WHOD = 〔890〕 mm `   | ¢??` WHVelocity = |
-|              |                          |                          |                          | 〔2.804927〕 m/s `  |
-+--------------+--------------------------+--------------------------+--------------------------+-------------------+
-{.c2r colWidths="null null null null null"}
++--------------+--------------------------+--------------------------+--------------------------+--------------------------+
+| Service      | Bore (mm)                | Nominal wall (mm)        | Bare OD (mm)             | Velocity (m/s)           |
++==============+=========================:+=========================:+=========================:+=========================:+
+| Steam branch | ¢%%` SBBore = 〔425〕 mm ` | ¢%%` SBWall = 〔115〕 mm ` | ¢%%` SBOD = 〔655〕 mm `   | ¢%%` SBVelocity = 〔22.7〕 |
+|              |                          |                          |                          | m/s `                    |
++--------------+--------------------------+--------------------------+--------------------------+--------------------------+
+| Steam header | ¢%%` SHBore = 〔725〕 mm ` | ¢%%` SHWall = 〔195〕 mm ` | ¢%%` SHOD = 〔1,115〕 mm ` | ¢%%` SHVelocity = 〔23.4〕 |
+|              |                          |                          |                          | m/s `                    |
++--------------+--------------------------+--------------------------+--------------------------+--------------------------+
+| Water branch | ¢%%` WBBore = 〔375〕 mm ` | ¢%%` WBWall = 〔75〕 mm `  | ¢%%` WBOD = 〔525〕 mm `   | ¢%%` WBVelocity = 〔2.81〕 |
+|              |                          |                          |                          | m/s `                    |
++--------------+--------------------------+--------------------------+--------------------------+--------------------------+
+| Water header | ¢%%` WHBore = 〔650〕 mm ` | ¢%%` WHWall = 〔120〕 mm ` | ¢%%` WHOD = 〔890〕 mm `   | ¢%%` WHVelocity = 〔2.8〕  |
+|              |                          |                          |                          | m/s `                    |
++--------------+--------------------------+--------------------------+--------------------------+--------------------------+
+{.c2r}
 
 ## 8. Sensitivity and comparison
 
@@ -463,26 +464,26 @@ Stress sensitivity keeps the calculated steam-header bore and all other inputs
 fixed. Values are unrounded nominal wall requirements. These stress cases do
 not imply that a particular grade meets them at 600°C.
 
-¢??` SHWallAt60 = NominalWall(SHBore, SteamDesignPressure, 60 'MPa', SteamE,
+¢%%` SHWallAt60 = NominalWall(SHBore, SteamDesignPressure, 60 'MPa', SteamE,
 SteamW, SteamY, Allowance, MillTolerance) = 〔272〕 mm `
 
-¢??` SHWallAt80 = NominalWall(SHBore, SteamDesignPressure, 80 'MPa', SteamE,
-SteamW, SteamY, Allowance, MillTolerance) = 〔191.4861〕 mm `
+¢%%` SHWallAt80 = NominalWall(SHBore, SteamDesignPressure, 80 'MPa', SteamE,
+SteamW, SteamY, Allowance, MillTolerance) = 〔191〕 mm `
 
-¢??` SHWallAt100 = NominalWall(SHBore, SteamDesignPressure, 100 'MPa', SteamE,
-SteamW, SteamY, Allowance, MillTolerance) = 〔148.112〕 mm `
+¢%%` SHWallAt100 = NominalWall(SHBore, SteamDesignPressure, 100 'MPa', SteamE,
+SteamW, SteamY, Allowance, MillTolerance) = 〔148〕 mm `
 
-¢??` SHWallAtOperating = NominalWall(SHBore, 24 'MPa', SteamStress, SteamE,
-SteamW, SteamY, Allowance, MillTolerance) = 〔148.112〕 mm `
+¢%%` SHWallAtOperating = NominalWall(SHBore, 24 'MPa', SteamStress, SteamE,
+SteamW, SteamY, Allowance, MillTolerance) = 〔148〕 mm `
 
 The 24 MPa case above is a pressure sensitivity using 24 MPa gauge for
 comparison; it does not replace design pressure with operating pressure. For
 comparison only, treating the original graphical 0.8 m steam and 0.5 m water
 diameters as bores gives:
 
-¢??` OriginalSteamHeaderVelocity = Speed(SteamHeaderFlow, 0.8 'm') = 〔19.23152〕 m/s `
+¢%%` OriginalSteamHeaderVelocity = Speed(SteamHeaderFlow, 0.8 'm') = 〔19.2〕 m/s `
 
-¢??` OriginalWaterHeaderVelocity = Speed(WaterHeaderFlow, 0.5 'm') = 〔4.740326〕 m/s `
+¢%%` OriginalWaterHeaderVelocity = Speed(WaterHeaderFlow, 0.5 'm') = 〔4.74〕 m/s `
 
 ## 9. Boundaries of this estimate
 
@@ -523,6 +524,12 @@ Equations are recalculated using Hurmet and independently checked in SI units.
 
 [4]: https://www.iapws.org/relguide/IF97-Rev.html
 
-[5]: https://www.spiraxsarco.com/learn-about-steam/steam-distribution/pipes-and-pipe-sizing?sc\_lang=en-GB
+[5]: https://www.spiraxsarco.com/learn-about-steam/steam-distribution/pipes-and-pipe-sizing?sc\\\\\\\\\\\\\\\_lang=en-GB
 
 [6]: steam-water-pipe-check.md
+
+[7]: https://www.spiraxsarco.com/learn-about-steam/steam-distribution/pipes-and-pipe-sizing?sc\\\\\\\_lang=en-GB
+
+[8]: https://www.spiraxsarco.com/learn-about-steam/steam-distribution/pipes-and-pipe-sizing?sc\\\_lang=en-GB
+
+[9]: https://www.spiraxsarco.com/learn-about-steam/steam-distribution/pipes-and-pipe-sizing?sc\_lang=en-GB

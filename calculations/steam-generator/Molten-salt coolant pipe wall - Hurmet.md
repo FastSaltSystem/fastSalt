@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Molten-salt coolant pipe wall estimate
+
+¢` format = "h3" `
 
 Preliminary concept estimate — 11 October 2026. The base assumptions produce
 **25 mm nominal wall for both hot and cold coolant pipes**, with a 1.425 m
@@ -34,8 +36,6 @@ magnesium/potassium/sodium chloride mixture. Material compatibility must be
 established for the actual salt chemistry and impurities; fluoride-salt alloy
 experience alone is not qualification.
 
-¢` format = "h7" `
-
 ¢` VolumeFlow = 4.619533 m3/s `
 
 ¢` VelocityLimit = 3 m/s `
@@ -48,11 +48,11 @@ experience alone is not qualification.
 
 ¢` RunningPumpRise = 286.3092 kPa `
 
-¢??` MinimumBore = sqrt(4 * VolumeFlow / (pi * VelocityLimit)) = 〔1.400211〕 m `
+¢%%` MinimumBore = sqrt(4 * VolumeFlow / (pi * VelocityLimit)) = 〔1.4〕 m `
 
-¢??` Bore = ceil(MinimumBore / BoreStep) * BoreStep = 〔1.425〕 m `
+¢%%` Bore = ceil(MinimumBore / BoreStep) * BoreStep = 〔1.43〕 m `
 
-¢??` Velocity = 4 * VolumeFlow / (pi * Bore^2) = 〔2.896533〕 m/s `
+¢%%` Velocity = 4 * VolumeFlow / (pi * Bore^2) = 〔2.9〕 m/s `
 
 ## 2. Provisional pressure, stress and allowances
 
@@ -123,26 +123,26 @@ straight-pipe pressure calculation; it does not size bends, branches or nozzles.
   return (alpha * D + A) / denominator
 end `
 
-¢??` RequiredNominal = Wall(Bore, DesignPressure, EffectiveStress,
-PressureCoefficient, Allowance, NegativeTolerance) = 〔20.03944〕 mm `
+¢%%` RequiredNominal = Wall(Bore, DesignPressure, EffectiveStress,
+PressureCoefficient, Allowance, NegativeTolerance) = 〔20〕 mm `
 
-¢??` NominalWall = ceil(RequiredNominal / WallStep) * WallStep = 〔25〕 mm `
+¢%%` NominalWall = ceil(RequiredNominal / WallStep) * WallStep = 〔25〕 mm `
 
-¢??` Outside = Bore + 2 * NominalWall = 〔1.475〕 m `
+¢%%` Outside = Bore + 2 * NominalWall = 〔1.48〕 m `
 
-¢??` DeliveredMinimum = (1 - NegativeTolerance) * NominalWall = 〔21.875〕 mm `
+¢%%` DeliveredMinimum = (1 - NegativeTolerance) * NominalWall = 〔21.9〕 mm `
 
-¢??` RequiredMinimum = DesignPressure * Outside / (2 * (EffectiveStress +
-DesignPressure * PressureCoefficient)) + Allowance = 〔17.63294〕 mm `
+¢%%` RequiredMinimum = DesignPressure * Outside / (2 * (EffectiveStress +
+DesignPressure * PressureCoefficient)) + Allowance = 〔17.6〕 mm `
 
-¢??` WallMargin = DeliveredMinimum - RequiredMinimum = 〔4.242063〕 mm `
+¢%%` WallMargin = DeliveredMinimum - RequiredMinimum = 〔4.24〕 mm `
 
-¢??` NetPressureWall = DeliveredMinimum - Allowance = 〔18.875〕 mm `
+¢%%` NetPressureWall = DeliveredMinimum - Allowance = 〔18.9〕 mm `
 
-¢??` PressureCapacity = 2 * EffectiveStress * NetPressureWall / (Outside - 2 *
-PressureCoefficient * NetPressureWall) = 〔1.292897〕 MPa `
+¢%%` PressureCapacity = 2 * EffectiveStress * NetPressureWall / (Outside - 2 *
+PressureCoefficient * NetPressureWall) = 〔1.29〕 MPa `
 
-¢??` PressureCheck = (WallMargin >= 0 'mm') and (PressureCapacity >=
+¢%%` PressureCheck = (WallMargin >= 0 'mm') and (PressureCapacity >=
 DesignPressure) = 〔true〕 `
 
 The calculated pressure capacity applies only to this equation and these
@@ -159,23 +159,23 @@ pressures. Values below are nominal wall requirements before 5 mm rounding;
 compare these with the base-case 25 mm wall. A higher pressure or lower
 effective stress may require a thicker wall.
 
-¢??` WallAtHalfMPa = Wall(Bore, 0.5 'MPa', EffectiveStress, PressureCoefficient,
-Allowance, NegativeTolerance) = 〔11.67185〕 mm `
+¢%%` WallAtHalfMPa = Wall(Bore, 0.5 'MPa', EffectiveStress, PressureCoefficient,
+Allowance, NegativeTolerance) = 〔11.7〕 mm `
 
-¢??` WallAtOneMPa = Wall(Bore, 1 'MPa', EffectiveStress, PressureCoefficient,
-Allowance, NegativeTolerance) = 〔20.03944〕 mm `
+¢%%` WallAtOneMPa = Wall(Bore, 1 'MPa', EffectiveStress, PressureCoefficient,
+Allowance, NegativeTolerance) = 〔20〕 mm `
 
-¢??` WallAtTwoMPa = Wall(Bore, 2 'MPa', EffectiveStress, PressureCoefficient,
-Allowance, NegativeTolerance) = 〔37.15901〕 mm `
+¢%%` WallAtTwoMPa = Wall(Bore, 2 'MPa', EffectiveStress, PressureCoefficient,
+Allowance, NegativeTolerance) = 〔37.2〕 mm `
 
-¢??` WallAtStress30 = Wall(Bore, DesignPressure, 30 'MPa', PressureCoefficient,
-Allowance, NegativeTolerance) = 〔31.39453〕 mm `
+¢%%` WallAtStress30 = Wall(Bore, DesignPressure, 30 'MPa', PressureCoefficient,
+Allowance, NegativeTolerance) = 〔31.4〕 mm `
 
-¢??` WallAtStress50 = Wall(Bore, DesignPressure, 50 'MPa', PressureCoefficient,
-Allowance, NegativeTolerance) = 〔20.03944〕 mm `
+¢%%` WallAtStress50 = Wall(Bore, DesignPressure, 50 'MPa', PressureCoefficient,
+Allowance, NegativeTolerance) = 〔20〕 mm `
 
-¢??` WallAtStress80 = Wall(Bore, DesignPressure, 80 'MPa', PressureCoefficient,
-Allowance, NegativeTolerance) = 〔13.75198〕 mm `
+¢%%` WallAtStress80 = Wall(Bore, DesignPressure, 80 'MPa', PressureCoefficient,
+Allowance, NegativeTolerance) = 〔13.8〕 mm `
 
 ## 5. Insulated layout envelope
 
@@ -193,13 +193,13 @@ appreciably.
 
 ¢` ColdInsulation = 350 mm `
 
-¢??` HotInsulatedOutside = Outside + 2 * HotInsulation = 〔2.275〕 m `
+¢%%` HotInsulatedOutside = Outside + 2 * HotInsulation = 〔2.27〕 m `
 
-¢??` ColdInsulatedOutside = Outside + 2 * ColdInsulation = 〔2.175〕 m `
+¢%%` ColdInsulatedOutside = Outside + 2 * ColdInsulation = 〔2.17〕 m `
 
-¢??` CommonInsulation = max(HotInsulation, ColdInsulation) = 〔400〕 mm `
+¢%%` CommonInsulation = max(HotInsulation, ColdInsulation) = 〔400〕 mm `
 
-¢??` CommonInsulatedOutside = Outside + 2 * CommonInsulation = 〔2.275〕 m `
+¢%%` CommonInsulatedOutside = Outside + 2 * CommonInsulation = 〔2.27〕 m `
 
 ## 6. What remains before construction sizing
 
@@ -230,7 +230,7 @@ reproduction.
 
 [3]: Steam%20and%20feedwater%20pipe%20sizing%20-%20Hurmet.md
 
-[4]: https://engstandards.lanl.gov/esm/pressure\_safety/Chapter17-entire.pdf
+[4]: https://engstandards.lanl.gov/esm/pressure\\\\\\\\\\\\\\\_safety/Chapter17-entire.pdf
 
 [5]: https://www.asme.org/codes-standards/find-codes-standards/b31-1-power-piping
 
@@ -238,4 +238,10 @@ reproduction.
 
 [7]: molten-salt-wall-check.md
 
-[8]: https://engstandards.lanl.gov/esm/pressure_safety/Chapter17-entire.pdf
+[8]: https://engstandards.lanl.gov/esm/pressure\\\\\\\_safety/Chapter17-entire.pdf
+
+[9]: https://engstandards.lanl.gov/esm/pressure\\\_safety/Chapter17-entire.pdf
+
+[10]: https://engstandards.lanl.gov/esm/pressure\_safety/Chapter17-entire.pdf
+
+[11]: https://engstandards.lanl.gov/esm/pressure_safety/Chapter17-entire.pdf

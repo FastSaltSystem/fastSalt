@@ -1,4 +1,11 @@
 """Publish fixed-condenser results to Hurmet; rerun the Python solve after changes."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json
 root=Path(__file__).resolve().parent
@@ -84,4 +91,4 @@ check, recovers the 5 kPa reference case, retains physical flow fractions and
 closes the cycle energy balance. The Hurmet checker independently reproduces
 all three required areas and water temperature rises from the imported states.
 ''')
-(root/'Cooling-water cases - Hurmet.md').write_text('\n'.join(s)+'\n')
+write_worksheet(root/'Cooling-water cases - Hurmet.md', '\n'.join(s)+'\n')

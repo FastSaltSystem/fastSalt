@@ -1,4 +1,11 @@
 """Externally heated open-air Brayton comparison. No combustion or recuperator."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,math,hashlib,re
 import CoolProp
@@ -90,7 +97,7 @@ These trials keep turbine inlet at 557°C, compressor ratio fixed and heat input
 Run `open_air_brayton.py` in the project's CoolProp environment, then `check_open_air_brayton.cjs` with the existing Hurmet/Temml engine paths. Python checks energy, entropy, matching the heater inlet and duty scaling. JSON preserves all states, source hashes and sensitivities. Hurmet checks ten numerical results, save/reopen and alternator-efficiency sensitivity. No cooling architecture, exchanger or turbine rating is selected by this preliminary screen.''')
  text='\n\n'.join(lines)+'\n';text=re.sub(r'(?m)(^\|.*\|)\n\n(?=\|)',r'\1\n',text)
  # Use standard pipe tables for VS Code and GitHub; the checker preserves them.
- (D/'Open-air Brayton cooler - Hurmet.md').write_text(text)
+ write_worksheet(D/'Open-air Brayton cooler - Hurmet.md', text)
  out=dict(date='2026-10-13',property_model='CoolProp '+CoolProp.__version__+' HEOS::Air',cases=cases,matched=matched,sensitivity=sensitivity,checks=dict(energy_entropy=True,matched_heater_inlet=True,duty_scaling=True),hurmet_checks=checks,source_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [D/'open_air_brayton.py',D/'nitrogen-brayton-results.json',D/'brayton-fan-pump-results.json']})
  (D/'open-air-brayton-results.json').write_text(json.dumps(out,indent=2)+'\n')
  print(json.dumps({'matched_ratio':matched['ratio'],'shaft_MW':matched['available_shaft_W']/1e6,'electric_30MW_margin_MW':matched['margin_at_30MW_W']/1e6,'sensitivities_MW':[x['available_shaft_W']/1e6 for x in sensitivity],'checks':len(checks)},indent=2))

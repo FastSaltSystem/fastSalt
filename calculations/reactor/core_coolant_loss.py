@@ -1,4 +1,11 @@
 """Publish the owner-selected UM-flow core pressure-loss estimate in Hurmet."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import argparse,hashlib,json,math,sys,tomllib
 
@@ -163,7 +170,7 @@ Run `python calculations/reactor/core_coolant_loss.py`, followed by `node calcul
     sources=[REPORT,models/'models/wistr_reactor.py',hub/'calculations/steam-generator/Generator sizing - Hurmet.md']
     result={'date':'2026-10-14','status':'Preliminary; owner-selected UM total flow, corrected 3.4 m height','inputs':{k:{'value':x,'unit':u} for k,(x,u) in inputs.items()},'hurmet_checks':checks,'roughness_sensitivity':scenarios,'axial_integration_external':{'temperature_profile':'Linear active-core heating; reflectors at respective endpoint temperatures','active_friction_kPa':fine/1000,'passage_friction_kPa':(fine+friction_segment(v['BottomReflector'],v['InletTemperature'])+friction_segment(v['TopReflector'],v['OutletTemperature']))/1000,'mean_temperature_relative_difference':fine/v['CoreFriction']-1,'convergence_400_to_800_Pa':fine-integrated},'sources':[{'path':str(p.relative_to(hub)) if p.is_relative_to(hub) else str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sources]}
     out.mkdir(parents=True,exist_ok=True)
-    (out/'Core coolant pressure loss - Hurmet.md').write_text('\n\n'.join(md)+'\n')
+    write_worksheet(out/'Core coolant pressure loss - Hurmet.md', '\n\n'.join(md)+'\n')
     (out/'core-coolant-loss-results.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(checks,indent=2))
 

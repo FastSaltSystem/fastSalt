@@ -2,11 +2,13 @@
 decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
-dateFormat: undefined
-saveDate: 2026-10-15
+dateFormat: yyyy-mm-dd
+saveDate: 2026-10-20
 ---------------
 
 # Absorber capacity and gas module screen
+
+¢` format = "h3" `
 
 Preliminary review, 15 October 2026. Twelve circuits: primary A and secondary B
 at each of six radial assemblies. Source chamber volumes are 0.1589 and 0.1938
@@ -14,22 +16,19 @@ m³; their neutronic sufficiency is not reassessed. Current 3D elevations
 override the older sketch. The absorber bottom is raised 0.30 m to the
 active-core bottom; other equipment envelopes are retained.
 
-All editable equations below use **SI scalar values**: metres, cubic metres,
-pascals absolute, kg/m³ and m/s². Outputs ending L are litres; kPa outputs are
-absolute. These balance pressures are not adopted settings.
+The editable equations use explicit, unit-aware quantities. Pressures are in kPa
+absolute; volumes are displayed in m³ or litres. Hurmet performs the unit
+conversions. These balance pressures are not adopted settings.
 
 ## Geometry and assumptions
 
-The original measured absorber tank was 2.10 × 0.08 × 3.95 m, Z = -7.57 to -3.62
-
- m.  The owner excludes the bottom reflector: the adopted bottom is Z = -7.27 m and
-    the remaining envelope is 3.65 m tall. The active core spans Z = -7.27 to
-    -3.87 m, 3.4 m high. Reservoir bottoms are Z = -0.05 m. No salt volume
-    below the active core is included. The second case estimates the 0.25 m
-    upper region as retained gas space, using the source chamber
-    cross-sections; it is not additional salt fill. Partition geometry remains
-    unresolved.
-
+The original measured absorber tank was 2.10 × 0.08 × 3.95 m, Z = -7.57 to
+-3.62 m. The owner excludes the bottom reflector: the adopted bottom is Z =
+-7.27 m and the remaining envelope is 3.65 m tall. The active core spans Z =
+-7.27 to -3.87 m, 3.4 m high. Reservoir bottoms are Z = -0.05 m. No salt volume
+below the active core is included. The second case estimates the 0.25 m upper
+region as retained gas space, using the source chamber cross-sections; it is
+not additional salt fill. Partition geometry remains unresolved.
 
 Density is inferred from document Eq 1, not independently specified. Reservoirs
 are provisionally treated as gross cylinders, with salt charge equal to chamber
@@ -38,67 +37,67 @@ space initially at 100 kPa absolute. Pressure-vessel volume equals chamber
 volume as in the source. Gas is isothermal at equal temperature; real hot/cold
 gas differences and line volumes need review.
 
-¢` Gravity = 9.81 `
+¢` Gravity = 9.81 m/s2 `
 
-¢` SourcePressure = 337790 `
+¢` SourcePressure = 337.79 kPa `
 
-¢` SurgeInitial = 100000 `
+¢` SurgeInitial = 100 kPa `
 
-¢` SourceHead = 7.2 `
+¢` SourceHead = 7.2 m `
 
-¢` PrimaryCharge = 0.1589 `
+¢` PrimaryCharge = 0.1589 m3 `
 
-¢` SecondaryCharge = 0.1938 `
+¢` SecondaryCharge = 0.1938 m3 `
 
-¢` ActiveHeight = 3.4 `
+¢` ActiveHeight = 3.4 m `
 
-¢` AbsorberTankLength = 2.1 `
+¢` AbsorberTankLength = 2.1 m `
 
-¢` AbsorberTankWidth = 0.08 `
+¢` AbsorberTankWidth = 0.08 m `
 
-¢` AbsorberTankHeight = 3.65 `
+¢` AbsorberTankHeight = 3.65 m `
 
-¢` WallTrial = 0.003 `
+¢` WallTrial = 0.003 m `
 
-¢` TankDiameter = 0.806349471933 `
+¢` TankDiameter = 0.806349471933 m `
 
-¢` TankHeight = 1.25992104989 `
+¢` TankHeight = 1.25992104989 m `
 
-¢` ReservoirBottom = -0.05 `
+¢` ReservoirBottom = -0.05 m `
 
-¢` CoreBottom = -7.27 `
+¢` CoreBottom = -7.27 m `
 
-¢` CoreTop = -3.87 `
+¢` CoreTop = -3.87 m `
 
-¢` AbsorberTankBottom = -7.27 `
+¢` AbsorberTankBottom = -7.27 m `
 
-¢` AbsorberTankTop = -3.62 `
+¢` AbsorberTankTop = -3.62 m `
 
-¢` UpperGasHeight = 0.25 `
+¢` UpperGasHeight = 0.25 m `
 
-¢??` Density = (SourcePressure - SurgeInitial) / (Gravity SourceHead) =
-〔3,366.60437195605〕 `
+¢%%` Density = (SourcePressure - SurgeInitial) / (Gravity SourceHead) = 〔3,367〕
+kg/m3 `
 
-¢??` Gradient = Density Gravity = 〔33,026.3888888889〕 `
+¢%%` Gradient = Density Gravity = 〔33〕 kPa/m `
 
-¢??` TankArea = π TankDiameter^2 / 4 = 〔0.51066547027635〕 `
+¢%%` TankArea = π TankDiameter^2 / 4 = 〔0.511〕 m2 `
 
-¢??` TankVolume = TankArea TankHeight = 〔0.64339817545315〕 `
+¢%%` TankVolume = TankArea TankHeight = 〔0.643〕 m3 `
 
-¢??` TankLitres = 1000 TankVolume = 〔643.39817545315〕 `
+¢%%` TankLitres = TankVolume = 〔643〕 L `
 
-¢??` AbsorberTankGrossL = 1000 AbsorberTankLength AbsorberTankWidth
-AbsorberTankHeight = 〔613.2〕 `
+¢%%` AbsorberTankGrossL = AbsorberTankLength AbsorberTankWidth
+AbsorberTankHeight = 〔613〕 L `
 
-¢??` AbsorberTankActiveL = 1000 AbsorberTankLength AbsorberTankWidth
-ActiveHeight = 〔571.2〕 `
+¢%%` AbsorberTankActiveL = AbsorberTankLength AbsorberTankWidth ActiveHeight =
+〔571〕 L `
 
-¢??` TrialNetL = 1000 (AbsorberTankLength - 3 WallTrial) (AbsorberTankWidth - 2
-WallTrial) ActiveHeight = 〔526.0956〕 `
+¢%%` TrialNetL = (AbsorberTankLength - 3 WallTrial) (AbsorberTankWidth - 2
+WallTrial) ActiveHeight = 〔526〕 L `
 
-¢??` ChargeTotalL = 1000 (PrimaryCharge + SecondaryCharge) = 〔352.7〕 `
+¢%%` ChargeTotalL = (PrimaryCharge + SecondaryCharge) = 〔353〕 L `
 
-¢??` ReservoirTrialL = 0.8 TankLitres = 〔514.71854036252〕 `
+¢%%` ReservoirTrialL = 0.8 TankLitres = 〔515〕 L `
 
 The 3 mm wall/partition trial and 80% reservoir allowance are capacity
 sensitivities only. No metal thickness, usable fill fraction or chamber
@@ -110,11 +109,11 @@ bottom-fed external salt tubes.
 Eq 5 must include the hydrostatic term in its denominator. For the original 3 m
 gap and a zero-headspace full reservoir:
 
-¢??` SourcePrimarySurgeL = 1000 SourcePressure PrimaryCharge / (SourcePressure /
-2 + Gradient * 3 - SurgeInitial) = 〔319.542177616598〕 `
+¢%%` SourcePrimarySurgeL = SourcePressure PrimaryCharge / (SourcePressure / 2 +
+Gradient * (3 'm') - SurgeInitial) = 〔320〕 L `
 
-¢??` SourceSecondarySurgeL = 1000 SourcePressure SecondaryCharge /
-(SourcePressure / 2 + Gradient * 3 - SurgeInitial) = 〔389.724820780973〕 `
+¢%%` SourceSecondarySurgeL = SourcePressure SecondaryCharge / (SourcePressure /
+2 + Gradient * (3 'm') - SurgeInitial) = 〔390〕 L `
 
 The result reproduces about 319.6 and 389.7 litres. The source intermediate Eq
 14 also has a sign inconsistency; its Eq 17 correctly gives head = hp + initial
@@ -136,138 +135,132 @@ additional module-side dead-leg volume remains to include.
 
 ### Active Band primary
 
-¢??` ActivePrimaryVolume = PrimaryCharge = 〔0.1589〕 `
+¢%%` ActivePrimaryVolume = PrimaryCharge = 〔0.159〕 m3 `
 
-¢??` ActivePrimaryGasVolume = 0 = 〔0〕 `
+¢%%` ActivePrimaryGasVolume = 0 'm3' = 〔0〕 m3 `
 
-¢??` ActivePrimaryDepth = ActivePrimaryVolume / TankArea = 〔0.311162608887595〕 `
+¢%%` ActivePrimaryDepth = ActivePrimaryVolume / TankArea = 〔0.311〕 m `
 
-¢??` ActivePrimaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 `
+¢%%` ActivePrimaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 m `
 
-¢??` ActivePrimaryHf = ReservoirBottom - CoreTop = 〔3.82〕 `
+¢%%` ActivePrimaryHf = ReservoirBottom - CoreTop = 〔3.82〕 m `
 
-¢??` ActivePrimaryP0 = SurgeInitial + Gradient (ActivePrimaryHp +
-ActivePrimaryDepth) = 〔348,727.105106581〕 `
+¢%%` ActivePrimaryP0 = SurgeInitial + Gradient (ActivePrimaryHp +
+ActivePrimaryDepth) = 〔349〕 kPa `
 
-¢??` ActivePrimaryFinal = (ActivePrimaryP0 ActivePrimaryVolume + SurgeInitial
+¢%%` ActivePrimaryFinal = (ActivePrimaryP0 ActivePrimaryVolume + SurgeInitial
 (TankVolume - ActivePrimaryVolume)) / (ActivePrimaryVolume + TankVolume) =
-〔129,456.301565297〕 `
+〔129〕 kPa `
 
-¢??` ActivePrimarySurge = (ActivePrimaryP0 ActivePrimaryVolume +
+¢%%` ActivePrimarySurge = (ActivePrimaryP0 ActivePrimaryVolume +
 (ActivePrimaryP0 - ActivePrimaryFinal - Gradient ActivePrimaryHf)
 ActivePrimaryGasVolume) / (ActivePrimaryFinal + Gradient ActivePrimaryHf -
-SurgeInitial) = 〔0.356083839538297〕 `
+SurgeInitial) = 〔0.356〕 m3 `
 
-¢??` ActivePrimaryPressureL = 1000 ActivePrimaryVolume = 〔158.9〕 `
+¢%%` ActivePrimaryPressureL = ActivePrimaryVolume = 〔159〕 L `
 
-¢??` ActivePrimarySurgeL = 1000 ActivePrimarySurge = 〔356.083839538297〕 `
+¢%%` ActivePrimarySurgeL = ActivePrimarySurge = 〔356〕 L `
 
-¢??` ActivePrimaryTotalL = 1000 (ActivePrimaryVolume + ActivePrimarySurge) =
-〔514.983839538297〕 `
+¢%%` ActivePrimaryTotalL = (ActivePrimaryVolume + ActivePrimarySurge) = 〔515〕 L `
 
-¢??` ActivePrimaryP0kPa = ActivePrimaryP0 / 1000 = 〔348.727105106581〕 `
+¢%%` ActivePrimaryP0kPa = ActivePrimaryP0 = 〔349〕 kPa `
 
 ### Active Band secondary
 
-¢??` ActiveSecondaryVolume = SecondaryCharge = 〔0.1938〕 `
+¢%%` ActiveSecondaryVolume = SecondaryCharge = 〔0.194〕 m3 `
 
-¢??` ActiveSecondaryGasVolume = 0 = 〔0〕 `
+¢%%` ActiveSecondaryGasVolume = 0 'm3' = 〔0〕 m3 `
 
-¢??` ActiveSecondaryDepth = ActiveSecondaryVolume / TankArea =
-〔0.379504805553279〕 `
+¢%%` ActiveSecondaryDepth = ActiveSecondaryVolume / TankArea = 〔0.38〕 m `
 
-¢??` ActiveSecondaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 `
+¢%%` ActiveSecondaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 m `
 
-¢??` ActiveSecondaryHf = ReservoirBottom - CoreTop = 〔3.82〕 `
+¢%%` ActiveSecondaryHf = ReservoirBottom - CoreTop = 〔3.82〕 m `
 
-¢??` ActiveSecondaryP0 = SurgeInitial + Gradient (ActiveSecondaryHp +
-ActiveSecondaryDepth) = 〔350,984.201071182〕 `
+¢%%` ActiveSecondaryP0 = SurgeInitial + Gradient (ActiveSecondaryHp +
+ActiveSecondaryDepth) = 〔351〕 kPa `
 
-¢??` ActiveSecondaryFinal = (ActiveSecondaryP0 ActiveSecondaryVolume +
+¢%%` ActiveSecondaryFinal = (ActiveSecondaryP0 ActiveSecondaryVolume +
 SurgeInitial (TankVolume - ActiveSecondaryVolume)) / (ActiveSecondaryVolume +
-TankVolume) = 〔134,950.790655698〕 `
+TankVolume) = 〔135〕 kPa `
 
-¢??` ActiveSecondarySurge = (ActiveSecondaryP0 ActiveSecondaryVolume +
+¢%%` ActiveSecondarySurge = (ActiveSecondaryP0 ActiveSecondaryVolume +
 (ActiveSecondaryP0 - ActiveSecondaryFinal - Gradient ActiveSecondaryHf)
 ActiveSecondaryGasVolume) / (ActiveSecondaryFinal + Gradient
-ActiveSecondaryHf - SurgeInitial) = 〔0.42219641395896〕 `
+ActiveSecondaryHf - SurgeInitial) = 〔0.422〕 m3 `
 
-¢??` ActiveSecondaryPressureL = 1000 ActiveSecondaryVolume = 〔193.8〕 `
+¢%%` ActiveSecondaryPressureL = ActiveSecondaryVolume = 〔194〕 L `
 
-¢??` ActiveSecondarySurgeL = 1000 ActiveSecondarySurge = 〔422.19641395896〕 `
+¢%%` ActiveSecondarySurgeL = ActiveSecondarySurge = 〔422〕 L `
 
-¢??` ActiveSecondaryTotalL = 1000 (ActiveSecondaryVolume + ActiveSecondarySurge)
-= 〔615.99641395896〕 `
+¢%%` ActiveSecondaryTotalL = (ActiveSecondaryVolume + ActiveSecondarySurge) =
+〔616〕 L `
 
-¢??` ActiveSecondaryP0kPa = ActiveSecondaryP0 / 1000 = 〔350.984201071182〕 `
+¢%%` ActiveSecondaryP0kPa = ActiveSecondaryP0 = 〔351〕 kPa `
 
 ### Upper Gas Space primary
 
-¢??` UpperPrimaryVolume = PrimaryCharge = 〔0.1589〕 `
+¢%%` UpperPrimaryVolume = PrimaryCharge = 〔0.159〕 m3 `
 
-¢??` UpperPrimaryGasVolume = UpperPrimaryVolume / ActiveHeight * UpperGasHeight
-= 〔0.0116838235294118〕 `
+¢%%` UpperPrimaryGasVolume = UpperPrimaryVolume / ActiveHeight * UpperGasHeight
+= 〔0.0117〕 m3 `
 
-¢??` UpperPrimaryDepth = UpperPrimaryVolume / TankArea = 〔0.311162608887595〕 `
+¢%%` UpperPrimaryDepth = UpperPrimaryVolume / TankArea = 〔0.311〕 m `
 
-¢??` UpperPrimaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 `
+¢%%` UpperPrimaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 m `
 
-¢??` UpperPrimaryHf = ReservoirBottom - CoreTop = 〔3.82〕 `
+¢%%` UpperPrimaryHf = ReservoirBottom - CoreTop = 〔3.82〕 m `
 
-¢??` UpperPrimaryP0 = SurgeInitial + Gradient (UpperPrimaryHp +
-UpperPrimaryDepth) = 〔348,727.105106581〕 `
+¢%%` UpperPrimaryP0 = SurgeInitial + Gradient (UpperPrimaryHp +
+UpperPrimaryDepth) = 〔349〕 kPa `
 
-¢??` UpperPrimaryFinal = (UpperPrimaryP0 UpperPrimaryVolume + SurgeInitial
-(TankVolume - UpperPrimaryVolume)) / (UpperPrimaryVolume + TankVolume) =
-〔129,456.301565297〕 `
+¢%%` UpperPrimaryFinal = (UpperPrimaryP0 UpperPrimaryVolume + SurgeInitial
+(TankVolume - UpperPrimaryVolume)) / (UpperPrimaryVolume + TankVolume) = 〔129〕 kPa `
 
-¢??` UpperPrimarySurge = (UpperPrimaryP0 UpperPrimaryVolume + (UpperPrimaryP0 -
+¢%%` UpperPrimarySurge = (UpperPrimaryP0 UpperPrimaryVolume + (UpperPrimaryP0 -
 UpperPrimaryFinal - Gradient UpperPrimaryHf) UpperPrimaryGasVolume) /
-(UpperPrimaryFinal + Gradient UpperPrimaryHf - SurgeInitial) =
-〔0.363074592710725〕 `
+(UpperPrimaryFinal + Gradient UpperPrimaryHf - SurgeInitial) = 〔0.363〕 m3 `
 
-¢??` UpperPrimaryPressureL = 1000 UpperPrimaryVolume = 〔158.9〕 `
+¢%%` UpperPrimaryPressureL = UpperPrimaryVolume = 〔159〕 L `
 
-¢??` UpperPrimarySurgeL = 1000 UpperPrimarySurge = 〔363.074592710725〕 `
+¢%%` UpperPrimarySurgeL = UpperPrimarySurge = 〔363〕 L `
 
-¢??` UpperPrimaryTotalL = 1000 (UpperPrimaryVolume + UpperPrimarySurge) =
-〔521.974592710725〕 `
+¢%%` UpperPrimaryTotalL = (UpperPrimaryVolume + UpperPrimarySurge) = 〔522〕 L `
 
-¢??` UpperPrimaryP0kPa = UpperPrimaryP0 / 1000 = 〔348.727105106581〕 `
+¢%%` UpperPrimaryP0kPa = UpperPrimaryP0 = 〔349〕 kPa `
 
 ### Upper Gas Space secondary
 
-¢??` UpperSecondaryVolume = SecondaryCharge = 〔0.1938〕 `
+¢%%` UpperSecondaryVolume = SecondaryCharge = 〔0.194〕 m3 `
 
-¢??` UpperSecondaryGasVolume = UpperSecondaryVolume / ActiveHeight *
-UpperGasHeight = 〔0.01425〕 `
+¢%%` UpperSecondaryGasVolume = UpperSecondaryVolume / ActiveHeight *
+UpperGasHeight = 〔0.0143〕 m3 `
 
-¢??` UpperSecondaryDepth = UpperSecondaryVolume / TankArea = 〔0.379504805553279〕 `
+¢%%` UpperSecondaryDepth = UpperSecondaryVolume / TankArea = 〔0.38〕 m `
 
-¢??` UpperSecondaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 `
+¢%%` UpperSecondaryHp = ReservoirBottom - CoreBottom = 〔7.22〕 m `
 
-¢??` UpperSecondaryHf = ReservoirBottom - CoreTop = 〔3.82〕 `
+¢%%` UpperSecondaryHf = ReservoirBottom - CoreTop = 〔3.82〕 m `
 
-¢??` UpperSecondaryP0 = SurgeInitial + Gradient (UpperSecondaryHp +
-UpperSecondaryDepth) = 〔350,984.201071182〕 `
+¢%%` UpperSecondaryP0 = SurgeInitial + Gradient (UpperSecondaryHp +
+UpperSecondaryDepth) = 〔351〕 kPa `
 
-¢??` UpperSecondaryFinal = (UpperSecondaryP0 UpperSecondaryVolume + SurgeInitial
+¢%%` UpperSecondaryFinal = (UpperSecondaryP0 UpperSecondaryVolume + SurgeInitial
 (TankVolume - UpperSecondaryVolume)) / (UpperSecondaryVolume + TankVolume) =
-〔134,950.790655698〕 `
+〔135〕 kPa `
 
-¢??` UpperSecondarySurge = (UpperSecondaryP0 UpperSecondaryVolume +
+¢%%` UpperSecondarySurge = (UpperSecondaryP0 UpperSecondaryVolume +
 (UpperSecondaryP0 - UpperSecondaryFinal - Gradient UpperSecondaryHf)
 UpperSecondaryGasVolume) / (UpperSecondaryFinal + Gradient UpperSecondaryHf -
-SurgeInitial) = 〔0.430145466971723〕 `
+SurgeInitial) = 〔0.43〕 m3 `
 
-¢??` UpperSecondaryPressureL = 1000 UpperSecondaryVolume = 〔193.8〕 `
+¢%%` UpperSecondaryPressureL = UpperSecondaryVolume = 〔194〕 L `
 
-¢??` UpperSecondarySurgeL = 1000 UpperSecondarySurge = 〔430.145466971722〕 `
+¢%%` UpperSecondarySurgeL = UpperSecondarySurge = 〔430〕 L `
 
-¢??` UpperSecondaryTotalL = 1000 (UpperSecondaryVolume + UpperSecondarySurge) =
-〔623.945466971723〕 `
+¢%%` UpperSecondaryTotalL = (UpperSecondaryVolume + UpperSecondarySurge) = 〔624〕 L `
 
-¢??` UpperSecondaryP0kPa = UpperSecondaryP0 / 1000 = 〔350.984201071182〕 `
+¢%%` UpperSecondaryP0kPa = UpperSecondaryP0 = 〔351〕 kPa `
 
 ## Interpretation
 
@@ -308,21 +301,22 @@ is reproduced unchanged from the supplied document. Its dimensions and routing
 have not been updated to the current 3D model. Use the geometry/model revision
 field below to identify the drawing used by the Michigan team.
 
-![Original dimensioned absorber-system schematic from the Word document](assets/absorber-injection-original-dimensioned.png)
+![1][]
 
 The original drawing is a reference for the document's notation, not a new
 dimensioned drawing of the current installation.
 
 ### Analysis identification
 
-| Field | Team entry |
-| --- | --- |
-| Analysis title and case identifier | To be supplied |
-| Author and organization | To be supplied |
-| Analysis date and revision | To be supplied |
-| Report or calculation file reference | To be supplied |
+| Field                                 | Team entry     |
+|---------------------------------------|----------------|
+| Analysis title and case identifier    | To be supplied |
+| Author and organization               | To be supplied |
+| Analysis date and revision            | To be supplied |
+| Report or calculation file reference  | To be supplied |
 | Geometry/model file and revision used | To be supplied |
-| Reviewer, review date and status | Not reviewed |
+| Reviewer, review date and status      | Not reviewed   |
+{.grid colWidths="null null"}
 
 ### Inputs and assumptions supplied by the team
 
@@ -332,9 +326,10 @@ reviewed. Reference the geometry section above where applicable and record any
 differences; its values are not automatically adopted by this record. Duplicate
 rows as needed.
 
-| Input or assumption | Value or description | Units | Source/revision | Status |
-| --- | --- | --- | --- | --- |
-| To be supplied | To be supplied | To be supplied | To be supplied | Pending |
+| Input or assumption | Value or description | Units          | Source/revision | Status  |
+|---------------------|----------------------|----------------|-----------------|---------|
+| To be supplied      | To be supplied       | To be supplied | To be supplied  | Pending |
+{.grid colWidths="null null null null null"}
 
 ### Team-reported results
 
@@ -342,21 +337,36 @@ Define the meaning of each reported time in the team report, and identify the
 case and applicable limitations. Values below are entered from that report;
 they are not calculated or validated by this worksheet.
 
-| Result | Primary chamber | Secondary chamber | Units | Report/case reference |
-| --- | --- | --- | --- | --- |
-| Reported filling time | Pending | Pending | s | Pending |
-| Definition of reported time | Pending | Pending | Not applicable | Pending |
-| Reported uncertainty or range | Pending | Pending | As reported | Pending |
++-------------------------+-----------------+-------------------+----------------+-----------------------+
+| Result                  | Primary chamber | Secondary chamber | Units          | Report/case reference |
++=========================+=================+===================+================+=======================+
+| Reported filling time   | Pending         | Pending           | s              | Pending               |
++-------------------------+-----------------+-------------------+----------------+-----------------------+
+| Definition of reported  | Pending         | Pending           | Not applicable | Pending               |
+| time                    |                 |                   |                |                       |
++-------------------------+-----------------+-------------------+----------------+-----------------------+
+| Reported uncertainty or | Pending         | Pending           | As reported    | Pending               |
+| range                   |                 |                   |                |                       |
++-------------------------+-----------------+-------------------+----------------+-----------------------+
+{.grid colWidths="null null null null null"}
 
 ### Review notes and revision record
 
-| Field | Team entry |
-| --- | --- |
-| Applicability and limitations | To be supplied |
-| Differences from the Word document or current geometry | To be supplied |
-| Open questions and responsible person | To be supplied |
-| Review disposition and supporting reference | Pending |
++--------------------------------------------------+----------------+
+| Field                                            | Team entry     |
++==================================================+================+
+| Applicability and limitations                    | To be supplied |
++--------------------------------------------------+----------------+
+| Differences from the Word document or current    | To be supplied |
+| geometry                                         |                |
++--------------------------------------------------+----------------+
+| Open questions and responsible person            | To be supplied |
++--------------------------------------------------+----------------+
+| Review disposition and supporting reference      | Pending        |
++--------------------------------------------------+----------------+
 | Revision, date, author and description of change | To be supplied |
++--------------------------------------------------+----------------+
+{.grid colWidths="null null"}
 
 This section is maintained in this Hurmet Markdown file and preserved by the
 worksheet generator. Keep its heading and the following Sources and
@@ -371,7 +381,7 @@ assembly, external bottom-feed routing, and exclusion of the bottom-reflector
 region on 15 October 2026.
 
 General gas-law reference: [DOE Fundamentals Handbook, Thermodynamics volume
-1][1]. Absolute pressures and temperatures are required. This does not validate
+1][2]. Absolute pressures and temperatures are required. This does not validate
 the source isothermal assumption.
 
 Run absorber_capacity.py and then check_absorber_capacity.cjs with HURMET_ENGINE
@@ -380,4 +390,10 @@ checks measured elevations, counts, original source rounding and final balance
 closure; Hurmet checks evaluation, reopening and parameter sensitivity.
 Generated HTML remains ignored.
 
-[1]: https://www.energy.gov/documents/doe-hdbk-1012-92vol1
+[1]: assets/absorber-injection-original-dimensioned.png
+{.inline}
+
+[2]: https://www.energy.gov/documents/doe-hdbk-1012-92vol1
+
+[3]: assets/absorber-injection-original-dimensioned.png
+{.inline alt="Original dimensioned absorber-system schematic from the Word document"}

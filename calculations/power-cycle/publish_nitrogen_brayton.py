@@ -1,3 +1,10 @@
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,re
 D=Path(__file__).resolve().parent;r=json.loads((D/'nitrogen-brayton-results.json').read_text());b=r['cases']['nitrogen_four'];lines=[];checks={}
@@ -71,5 +78,5 @@ def widths(m):
  b=m.group(0);n=b.splitlines()[0].count('|')-1
  return b+'\n{.grid colWidths="'+' '.join(['250']+['125']*(n-1))+'"}'
 t=re.sub(r'(?m)^\|.*(?:\n\|.*)*',widths,t)
-(D/'Nitrogen versus steam Brayton - Hurmet.md').write_text(t)
+write_worksheet(D/'Nitrogen versus steam Brayton - Hurmet.md', t)
 (D/'nitrogen-hurmet-checks.json').write_text(json.dumps(checks,indent=2)+'\n')

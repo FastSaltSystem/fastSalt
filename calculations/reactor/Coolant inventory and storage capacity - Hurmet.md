@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-14
+saveDate: 2026-10-20
 ---------------
 
 # Coolant inventory, expansion and TK-401 capacity
+
+¢` format = "h3" `
 
 14 October 2026. Preliminary volume and mass balance for the current three-leg
 installation. **TK-401 is an expansion-storage concept and a proposed
@@ -20,8 +22,6 @@ coefficients consistent with the pump/core calculations. The owner-selected 8.2
 in Blender. No tank or building is resized. Editable allowances are identified
 below. Open this Markdown file in Hurmet to recalculate; saved answers are not
 a certified inventory or an operating instruction.
-
-¢` format = "h7" `
 
 ## Inputs and their provenance
 
@@ -67,18 +67,17 @@ used as the engineering tube count.
 
 ¢` CoreFlowArea = 3.78318127168 m2 `
 
-¢??` BottomVolume = pi * LowerRadius^2 * BottomHeight = 〔24.12743〕 m3 `
+¢%%` BottomVolume = pi * LowerRadius^2 * BottomHeight = 〔24.1〕 m3 `
 
-¢??` DownVolume = pi * (LowerRadius^2 - ReflectorRadius^2) * DownHeight =
-〔66.33159〕 m3 `
+¢%%` DownVolume = pi * (LowerRadius^2 - ReflectorRadius^2) * DownHeight = 〔66.3〕 m3 `
 
-¢??` HotVolume = pi * HotRadius^2 * HotHeight = 〔73.79708〕 m3 `
+¢%%` HotVolume = pi * HotRadius^2 * HotHeight = 〔73.8〕 m3 `
 
-¢??` ChannelVolume = CoreFlowArea * (CoreHeight + LowerReflector +
-UpperReflector) = 〔14.94357〕 m3 `
+¢%%` ChannelVolume = CoreFlowArea * (CoreHeight + LowerReflector +
+UpperReflector) = 〔14.9〕 m3 `
 
-¢??` ReactorVolume = BottomVolume + DownVolume + HotVolume + ChannelVolume =
-〔179.1997〕 m3 `
+¢%%` ReactorVolume = BottomVolume + DownVolume + HotVolume + ChannelVolume =
+〔179〕 m3 `
 
 ### Steam generators
 
@@ -96,13 +95,12 @@ is only a sensitivity; MSU's eventual internal design should replace this basis.
 
 ¢` SGCasingLength = 17 m `
 
-¢??` SGVolumeEach = SGTubeCount * pi * SGTubeBore^2 * SGTubeLength / 4 =
-〔18.35824〕 m3 `
+¢%%` SGVolumeEach = SGTubeCount * pi * SGTubeBore^2 * SGTubeLength / 4 = 〔18.4〕 m3 `
 
-¢??` SGVolume = Legs * SGVolumeEach = 〔55.07471〕 m3 `
+¢%%` SGVolume = Legs * SGVolumeEach = 〔55.1〕 m3 `
 
-¢??` SGCasingVolume = Legs * SGTubeCount * pi * SGTubeBore^2 * SGCasingLength /
-4 = 〔78.54044〕 m3 `
+¢%%` SGCasingVolume = Legs * SGTubeCount * pi * SGTubeBore^2 * SGCasingLength /
+4 = 〔78.5〕 m3 `
 
 ### Main pipes and vessel nozzles
 
@@ -127,20 +125,18 @@ interface mismatch.
 
 ¢` ColdNozzleLength = 2.75363966835 m `
 
-¢??` HotPipeVolume = pi * MainBore^2 * HotLength / 4 = 〔75.36207〕 m3 `
+¢%%` HotPipeVolume = pi * MainBore^2 * HotLength / 4 = 〔75.4〕 m3 `
 
-¢??` ColdPipeVolume = pi * MainBore^2 * ColdLength / 4 = 〔77.43142〕 m3 `
+¢%%` ColdPipeVolume = pi * MainBore^2 * ColdLength / 4 = 〔77.4〕 m3 `
 
-¢??` HotNozzleVolume = Legs * pi * NozzleBore^2 * HotNozzleLength / 4 =
-〔7.38547〕 m3 `
+¢%%` HotNozzleVolume = Legs * pi * NozzleBore^2 * HotNozzleLength / 4 = 〔7.39〕 m3 `
 
-¢??` ColdNozzleVolume = Legs * pi * NozzleBore^2 * ColdNozzleLength / 4 =
-〔11.47682〕 m3 `
+¢%%` ColdNozzleVolume = Legs * pi * NozzleBore^2 * ColdNozzleLength / 4 = 〔11.5〕 m3 `
 
-¢??` PolylineVolume = pi * MainBore^2 * PolylineLength / 4 = 〔171.6521〕 m3 `
+¢%%` PolylineVolume = pi * MainBore^2 * PolylineLength / 4 = 〔172〕 m3 `
 
-¢??` BendVolumeDifference = PolylineVolume - HotPipeVolume - ColdPipeVolume =
-〔18.85861〕 m3 `
+¢%%` BendVolumeDifference = PolylineVolume - HotPipeVolume - ColdPipeVolume =
+〔18.9〕 m3 `
 
 ### Unresolved equipment allowances
 
@@ -171,21 +167,19 @@ unconnected systems is assumed.
 
 ¢` ServiceVolume = 2 m3 `
 
-¢??` CollectorBore = CollectorOD - 2 * CollectorWall = 〔2.05〕 m `
+¢%%` CollectorBore = CollectorOD - 2 * CollectorWall = 〔2.05〕 m `
 
-¢??` CollectorVolumeEach = pi * CollectorBore^2 * CollectorLength / 8 =
-〔4.62089〕 m3 `
+¢%%` CollectorVolumeEach = pi * CollectorBore^2 * CollectorLength / 8 = 〔4.62〕 m3 `
 
-¢??` CollectorVolume = 2 * Legs * CollectorVolumeEach = 〔27.72534〕 m3 `
+¢%%` CollectorVolume = 2 * Legs * CollectorVolumeEach = 〔27.7〕 m3 `
 
-¢??` PumpEnvelopeVolume = Legs * pi * PumpDiameter^2 * PumpHeight / 4 =
-〔33.25062〕 m3 `
+¢%%` PumpEnvelopeVolume = Legs * pi * PumpDiameter^2 * PumpHeight / 4 = 〔33.3〕 m3 `
 
-¢??` PumpVolume = PumpEnvelopeVolume * PumpVoidFraction = 〔16.62531〕 m3 `
+¢%%` PumpVolume = PumpEnvelopeVolume * PumpVoidFraction = 〔16.6〕 m3 `
 
-¢??` LoopVolume = ReactorVolume + SGVolume + HotPipeVolume + ColdPipeVolume +
+¢%%` LoopVolume = ReactorVolume + SGVolume + HotPipeVolume + ColdPipeVolume +
 HotNozzleVolume + ColdNozzleVolume + CollectorVolume + PumpVolume +
-ServiceVolume = 〔452.2808〕 m3 `
+ServiceVolume = 〔452〕 m3 `
 
 ## Temperature cases and fixed-mass balance
 
@@ -218,55 +212,55 @@ exactly once. Fixed geometric volumes neglect thermal expansion of the metal.
 
 ¢` DensitySlope = 0.56355 'kg.m-3.K-1' `
 
-¢??` MeanTemperature = (HotTemperature + ColdTemperature) / 2 = 〔850〕 K `
+¢%%` MeanTemperature = (HotTemperature + ColdTemperature) / 2 = 〔850〕 K `
 
-¢??` FillDensity = DensityIntercept - DensitySlope * FillTemperature =
-〔1,705.269〕 'kg/m3' `
-
-¢??` StoreDensity = DensityIntercept - DensitySlope * StoreTemperature =
-〔1,705.269〕 'kg/m3' `
-
-¢??` HotDensity = DensityIntercept - DensitySlope * HotTemperature = 〔1,611.241〕
+¢%%` FillDensity = DensityIntercept - DensitySlope * FillTemperature = 〔1,705〕
 'kg/m3' `
 
-¢??` ColdDensity = DensityIntercept - DensitySlope * ColdTemperature =
-〔1,656.324〕 'kg/m3' `
+¢%%` StoreDensity = DensityIntercept - DensitySlope * StoreTemperature = 〔1,705〕
+'kg/m3' `
 
-¢??` MeanDensity = DensityIntercept - DensitySlope * MeanTemperature =
-〔1,633.783〕 'kg/m3' `
+¢%%` HotDensity = DensityIntercept - DensitySlope * HotTemperature = 〔1,611〕
+'kg/m3' `
 
-¢??` HotGroup = HotVolume + HotPipeVolume + HotNozzleVolume + Legs *
-CollectorVolumeEach = 〔170.4073〕 m3 `
+¢%%` ColdDensity = DensityIntercept - DensitySlope * ColdTemperature = 〔1,656〕
+'kg/m3' `
 
-¢??` ColdGroup = BottomVolume + DownVolume + ColdPipeVolume + ColdNozzleVolume +
-Legs * CollectorVolumeEach + PumpVolume + ServiceVolume = 〔211.8552〕 m3 `
+¢%%` MeanDensity = DensityIntercept - DensitySlope * MeanTemperature = 〔1,634〕
+'kg/m3' `
 
-¢??` MeanGroup = ChannelVolume + SGVolume = 〔70.01828〕 m3 `
+¢%%` HotGroup = HotVolume + HotPipeVolume + HotNozzleVolume + Legs *
+CollectorVolumeEach = 〔170〕 m3 `
 
-¢??` VolumeClosure = LoopVolume - HotGroup - ColdGroup - MeanGroup = 〔0〕 m3 `
+¢%%` ColdGroup = BottomVolume + DownVolume + ColdPipeVolume + ColdNozzleVolume +
+Legs * CollectorVolumeEach + PumpVolume + ServiceVolume = 〔212〕 m3 `
 
-¢??` ChargeMass = LoopVolume * FillDensity = 〔771,260.4〕 kg `
+¢%%` MeanGroup = ChannelVolume + SGVolume = 〔70〕 m3 `
 
-¢??` NormalLoopMass = HotGroup * HotDensity + ColdGroup * ColdDensity +
-MeanGroup * MeanDensity = 〔739,862.8〕 kg `
+¢%%` VolumeClosure = LoopVolume - HotGroup - ColdGroup - MeanGroup = 〔0〕 m3 `
 
-¢??` NormalExpansionMass = ChargeMass - NormalLoopMass = 〔31,397.57〕 kg `
+¢%%` ChargeMass = LoopVolume * FillDensity = 〔771,260〕 kg `
 
-¢??` NormalExpansionVolume = NormalExpansionMass / StoreDensity = 〔18.41209〕 m3 `
+¢%%` NormalLoopMass = HotGroup * HotDensity + ColdGroup * ColdDensity +
+MeanGroup * MeanDensity = 〔739,863〕 kg `
 
-¢??` AllHotExpansionMass = ChargeMass - LoopVolume * HotDensity = 〔42,527.2〕 kg `
+¢%%` NormalExpansionMass = ChargeMass - NormalLoopMass = 〔31,398〕 kg `
 
-¢??` AllHotExpansionVolume = AllHotExpansionMass / StoreDensity = 〔24.93871〕 m3 `
+¢%%` NormalExpansionVolume = NormalExpansionMass / StoreDensity = 〔18.4〕 m3 `
 
-¢??` NormalMassClosure = NormalLoopMass + NormalExpansionMass - ChargeMass = 〔0〕 kg `
+¢%%` AllHotExpansionMass = ChargeMass - LoopVolume * HotDensity = 〔42,527〕 kg `
 
-¢??` NormalDrainVolume = NormalLoopMass / StoreDensity = 〔433.8687〕 m3 `
+¢%%` AllHotExpansionVolume = AllHotExpansionMass / StoreDensity = 〔24.9〕 m3 `
 
-¢??` FullDrainStore = ChargeMass / StoreDensity = 〔452.2808〕 m3 `
+¢%%` NormalMassClosure = NormalLoopMass + NormalExpansionMass - ChargeMass = 〔0〕 kg `
 
-¢??` FullDrainHot = ChargeMass / HotDensity = 〔478.6749〕 m3 `
+¢%%` NormalDrainVolume = NormalLoopMass / StoreDensity = 〔434〕 m3 `
 
-¢??` DrainClosure = FullDrainStore - NormalDrainVolume - NormalExpansionVolume =
+¢%%` FullDrainStore = ChargeMass / StoreDensity = 〔452〕 m3 `
+
+¢%%` FullDrainHot = ChargeMass / HotDensity = 〔479〕 m3 `
+
+¢%%` DrainClosure = FullDrainStore - NormalDrainVolume - NormalExpansionVolume =
 〔0〕 m3 `
 
 `NormalDrainVolume` is the space for the circulating inventory after it reaches
@@ -299,29 +293,28 @@ credited. Insulation is outside the tank and adds no salt capacity.
 
 ¢` InventoryMargin = 0.1 `
 
-¢??` TankID = TankOD - 2 * TankWall = 〔3.95〕 m `
+¢%%` TankID = TankOD - 2 * TankWall = 〔3.95〕 m `
 
-¢??` TankClearHeight = TankHeight - TankEndAllowance = 〔7.9〕 m `
+¢%%` TankClearHeight = TankHeight - TankEndAllowance = 〔7.9〕 m `
 
-¢??` TankGrossEnvelope = pi * TankOD^2 * TankHeight / 4 = 〔100.531〕 m3 `
+¢%%` TankGrossEnvelope = pi * TankOD^2 * TankHeight / 4 = 〔101〕 m3 `
 
-¢??` TankInternal = pi * TankID^2 * TankClearHeight / 4 = 〔96.80798〕 m3 `
+¢%%` TankInternal = pi * TankID^2 * TankClearHeight / 4 = 〔96.8〕 m3 `
 
-¢??` Freeboard = TankInternal * FreeboardFraction = 〔19.3616〕 m3 `
+¢%%` Freeboard = TankInternal * FreeboardFraction = 〔19.4〕 m3 `
 
-¢??` Heel = TankInternal * HeelFraction = 〔4.840399〕 m3 `
+¢%%` Heel = TankInternal * HeelFraction = 〔4.84〕 m3 `
 
-¢??` TankWorking = TankInternal * (1 - FreeboardFraction - HeelFraction) =
-〔72.60599〕 m3 `
+¢%%` TankWorking = TankInternal * (1 - FreeboardFraction - HeelFraction) =
+〔72.6〕 m3 `
 
-¢??` ExpansionMargin = TankWorking - AllHotExpansionVolume = 〔47.66728〕 m3 `
+¢%%` ExpansionMargin = TankWorking - AllHotExpansionVolume = 〔47.7〕 m3 `
 
-¢??` NormalExpansionRise = NormalExpansionVolume / (pi * TankID^2 / 4) =
-〔1.502516〕 m `
+¢%%` NormalExpansionRise = NormalExpansionVolume / (pi * TankID^2 / 4) = 〔1.5〕 m `
 
-¢??` FullDrainDeficit = FullDrainHot - TankWorking = 〔406.0689〕 m3 `
+¢%%` FullDrainDeficit = FullDrainHot - TankWorking = 〔406〕 m3 `
 
-¢??` FullDrainRatio = FullDrainHot / TankWorking = 〔6.592774〕 `
+¢%%` FullDrainRatio = FullDrainHot / TankWorking = 〔6.59〕 `
 
 Expansion-only margin assumes the tank starts at the reserved heel and has no
 other inventory. The full-drain comparison credits no permanently trapped loop
@@ -336,17 +329,16 @@ thermal-expansion addition. Show an equivalent single cylinder at the existing
 8 m external height; it is a space estimate, not an adopted replacement tank.
 Multiple tanks or an external store are alternatives to evaluate.
 
-¢??` RequiredWorking = FullDrainHot * (1 + InventoryMargin) = 〔526.5424〕 m3 `
+¢%%` RequiredWorking = FullDrainHot * (1 + InventoryMargin) = 〔527〕 m3 `
 
-¢??` RequiredInternal = RequiredWorking / (1 - FreeboardFraction - HeelFraction)
-= 〔702.0565〕 m3 `
+¢%%` RequiredInternal = RequiredWorking / (1 - FreeboardFraction - HeelFraction)
+= 〔702〕 m3 `
 
-¢??` EquivalentID = sqrt(4 * RequiredInternal / (pi * TankClearHeight)) =
-〔10.63721〕 m `
+¢%%` EquivalentID = sqrt(4 * RequiredInternal / (pi * TankClearHeight)) = 〔10.6〕 m `
 
-¢??` EquivalentOD = EquivalentID + 2 * TankWall = 〔10.68721〕 m `
+¢%%` EquivalentOD = EquivalentID + 2 * TankWall = 〔10.7〕 m `
 
-¢??` EquivalentCurrentTanks = RequiredWorking / TankWorking = 〔7.252052〕 `
+¢%%` EquivalentCurrentTanks = RequiredWorking / TankWorking = 〔7.25〕 `
 
 ## Selected TK-401 reservation — D-058
 
@@ -360,30 +352,30 @@ tank construction.
 
 ¢` SelectedTankHeight = 16 m `
 
-¢??` SelectedTankInternal = pi * (SelectedTankOD - 2 * TankWall)^2 *
-(SelectedTankHeight - TankEndAllowance) / 4 = 〔829.4729〕 m3 `
+¢%%` SelectedTankInternal = pi * (SelectedTankOD - 2 * TankWall)^2 *
+(SelectedTankHeight - TankEndAllowance) / 4 = 〔829〕 m3 `
 
-¢??` SelectedTankWorking = SelectedTankInternal * (1 - FreeboardFraction -
-HeelFraction) = 〔622.1047〕 m3 `
+¢%%` SelectedTankWorking = SelectedTankInternal * (1 - FreeboardFraction -
+HeelFraction) = 〔622〕 m3 `
 
-¢??` SelectedTankMargin = SelectedTankWorking - RequiredWorking = 〔95.56234〕 m3 `
+¢%%` SelectedTankMargin = SelectedTankWorking - RequiredWorking = 〔95.6〕 m3 `
 
 ## Sensitivity and checks
 
-¢??` CasingLengthLoop = LoopVolume - SGVolume + SGCasingVolume = 〔475.7465〕 m3 `
+¢%%` CasingLengthLoop = LoopVolume - SGVolume + SGCasingVolume = 〔476〕 m3 `
 
-¢??` ZeroPumpLoop = LoopVolume - PumpVolume = 〔435.6555〕 m3 `
+¢%%` ZeroPumpLoop = LoopVolume - PumpVolume = 〔436〕 m3 `
 
-¢??` FullPumpLoop = LoopVolume - PumpVolume + PumpEnvelopeVolume = 〔468.9061〕 m3 `
+¢%%` FullPumpLoop = LoopVolume - PumpVolume + PumpEnvelopeVolume = 〔469〕 m3 `
 
-¢??` SGOnlyDeficit = SGVolume - TankInternal = 〔-41.73327〕 m3 `
+¢%%` SGOnlyDeficit = SGVolume - TankInternal = 〔-41.7〕 m3 `
 
-¢??` CasingSGOnlyDeficit = SGCasingVolume - TankWorking = 〔5.934459〕 m3 `
+¢%%` CasingSGOnlyDeficit = SGCasingVolume - TankWorking = 〔5.93〕 m3 `
 
-¢??` TenPercentPlenumDeduction = 0.1 * (BottomVolume + DownVolume + HotVolume) =
-〔16.42561〕 m3 `
+¢%%` TenPercentPlenumDeduction = 0.1 * (BottomVolume + DownVolume + HotVolume) =
+〔16.4〕 m3 `
 
-¢??` ReducedPlenumLoop = LoopVolume - TenPercentPlenumDeduction = 〔435.8552〕 m3 `
+¢%%` ReducedPlenumLoop = LoopVolume - TenPercentPlenumDeduction = 〔436〕 m3 `
 
 The full-casing SG tube-length case, pump-cavity extremes and a 10% deduction
 from gross plenums/downcomer do not establish design bounds, but reveal the

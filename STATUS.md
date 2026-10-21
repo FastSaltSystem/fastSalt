@@ -1,5 +1,9 @@
 # Project status and next work
 
+## Hurmet units and compact display — 20 October 2026
+
+The 29 working Hurmet worksheets now use explicit dimensional quantities, readable pressure units, an early `format = "h3"` cell and `%%` result display. Generators and numerical checkers preserve this convention. High-precision before/after comparisons and the existing worksheet checks confirm unchanged numerical results after unit conversion. Archived revisions and published study snapshots remain unchanged. See the [display check](calculations/hurmet-display-check.md).
+
 ## Auxiliary Brayton study preserved - 19 October 2026
 
 [RS-008, Revision A](research/auxiliary-brayton-cooling/README.md) preserves the four-case comparison as a five-page PDF, editable Markdown, browser report and 36 source files. SHA-256 manifests and a historical source-hash audit document the uncommitted working-copy basis. Packaging checked source copies, 24 comparison cells, document links and all five PDF pages; it did not rerun the thermodynamic solvers. Indexed under Research Studies and Viewable Results. Saved locally; no new engineering selection or GitHub publication.

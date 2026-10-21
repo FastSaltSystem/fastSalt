@@ -1,3 +1,10 @@
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,sys
 ROOT=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).resolve().parent
@@ -105,4 +112,4 @@ Sources: [motor-drive heat balance](BFP%20drive%20comparison%20-%20Hurmet.md),
 and their linked CoolProp/property references. No new vendor outlines or verified
 material allowables are introduced by this revision.
 ''')
-(ROOT/'Motor-BFP equipment sizing - Hurmet.md').write_text('\n\n'.join(lines)+'\n');(ROOT/'motor-equipment-hurmet-checks.json').write_text(json.dumps(checks,indent=2)+'\n')
+write_worksheet(ROOT/'Motor-BFP equipment sizing - Hurmet.md', '\n\n'.join(lines)+'\n');(ROOT/'motor-equipment-hurmet-checks.json').write_text(json.dumps(checks,indent=2)+'\n')

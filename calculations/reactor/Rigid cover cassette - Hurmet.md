@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Rigid insulation cassette — preliminary screening
+
+¢` format = "h3" `
 
 11 October 2026. Companion to the [separate rigid-block model][1]. The original
 wool draft is retained. Values are provisional; no allowable stress or load
@@ -19,8 +21,6 @@ The insulation density allowance uses [Thermo-1200 data][2]. Published
 compression above 690 kPa is at 5% compression and must not be treated as a
 working allowable. No bending or joint shear capacity is credited to blocks.
 
-¢` format = "h7" `
-
 ¢` Density = 240 kg/m3 `
 
 ¢` InsulationDepth = 500 mm `
@@ -31,9 +31,9 @@ working allowable. No bending or joint shear capacity is credited to blocks.
 
 ¢` WoolCassetteMass = 1459.683582204 kg `
 
-¢??` AddedMass = CassetteMass - WoolCassetteMass = 〔379.4731〕 kg `
+¢%%` AddedMass = CassetteMass - WoolCassetteMass = 〔379〕 kg `
 
-¢??` MeanBlockPressure = Density * InsulationDepth * Gravity = 〔1.176798〕 kPa `
+¢%%` MeanBlockPressure = Density * InsulationDepth * Gravity = 〔1.18〕 kPa `
 
 ## Upper-frame results imported from Python
 
@@ -60,9 +60,9 @@ absent. See the model guide for the method and verification.
 
 ¢` LoadMultiplier = 2 `
 
-¢??` LiftedDeflectionSensitivity = LoadMultiplier * LiftedApex = 〔11.29804〕 mm `
+¢%%` LiftedDeflectionSensitivity = LoadMultiplier * LiftedApex = 〔11.3〕 mm `
 
-¢??` LiftedStressSensitivity = LoadMultiplier * LiftedStress = 〔97.71119〕 MPa `
+¢%%` LiftedStressSensitivity = LoadMultiplier * LiftedStress = 〔97.7〕 MPa `
 
 The multiplier illustrates linear load sensitivity. It is not a code load factor
 and does not check any allowable. Changing E here does not rerun the grillage;
@@ -95,33 +95,33 @@ positions.
 
 ¢` RodLength = 590 mm `
 
-¢??` TopArea = ChannelWidth * ChannelWall = 〔200〕 mm2 `
+¢%%` TopArea = ChannelWidth * ChannelWall = 〔200〕 mm2 `
 
-¢??` WebArea = ChannelWall * WebDepth = 〔120〕 mm2 `
+¢%%` WebArea = ChannelWall * WebDepth = 〔120〕 mm2 `
 
-¢??` CentroidDepth = (TopArea * ChannelWall / 2 + 2 * WebArea * (ChannelWall +
-WebDepth / 2)) / (TopArea + 2 * WebArea) = 〔17.90909〕 mm `
+¢%%` CentroidDepth = (TopArea * ChannelWall / 2 + 2 * WebArea * (ChannelWall +
+WebDepth / 2)) / (TopArea + 2 * WebArea) = 〔17.9〕 mm `
 
-¢??` ChannelI = ChannelWidth * ChannelWall^3 / 12 + TopArea * (ChannelWall / 2 -
+¢%%` ChannelI = ChannelWidth * ChannelWall^3 / 12 + TopArea * (ChannelWall / 2 -
 CentroidDepth)^2 + 2 * (ChannelWall * WebDepth^3 / 12 + WebArea *
 (ChannelWall + WebDepth / 2 - CentroidDepth)^2) = 〔176,903〕 mm4 `
 
-¢??` ChannelLoad = (MeanBlockPressure + SteelDensity * Gravity *
+¢%%` ChannelLoad = (MeanBlockPressure + SteelDensity * Gravity *
 LinerThickness) * Pitch + (TopArea + 2 * WebArea) * SteelDensity * Gravity =
-〔422.8627〕 N/m `
+〔423〕 N/m `
 
-¢??` ChannelSag = 5 * ChannelLoad * Span^4 / (384 * E * ChannelI) = 〔2.33728〕 mm `
+¢%%` ChannelSag = 5 * ChannelLoad * Span^4 / (384 * E * ChannelI) = 〔2.34〕 mm `
 
-¢??` ChannelStress = ChannelLoad * Span^2 / 8 * (ChannelWall + WebDepth -
-CentroidDepth) / ChannelI = 〔42.71605〕 MPa `
+¢%%` ChannelStress = ChannelLoad * Span^2 / 8 * (ChannelWall + WebDepth -
+CentroidDepth) / ChannelI = 〔42.7〕 MPa `
 
-¢??` CentreRodLoad = ChannelLoad * Span = 〔761.4359〕 N `
+¢%%` CentreRodLoad = ChannelLoad * Span = 〔761〕 N `
 
-¢??` RodArea = pi * RodDiameter^2 / 4 = 〔28.27433〕 mm2 `
+¢%%` RodArea = pi * RodDiameter^2 / 4 = 〔28.3〕 mm2 `
 
-¢??` RodGrossStress = CentreRodLoad / RodArea = 〔26.93029〕 MPa `
+¢%%` RodGrossStress = CentreRodLoad / RodArea = 〔26.9〕 MPa `
 
-¢??` RodExtension = CentreRodLoad * RodLength / (E * RodArea) = 〔0.1134919〕 mm `
+¢%%` RodExtension = CentreRodLoad * RodLength / (E * RodArea) = 〔0.113〕 mm `
 
 Thread-root area, local washer/flange bending, adjustment and fatigue require
 separate checks. The rods are tension members; their small nominal stress is
@@ -135,12 +135,12 @@ No beneficial block bending is assumed.
 
 ¢` StripWidth = 1 m `
 
-¢??` ClearGap = Pitch - ChannelWidth = 〔200〕 mm `
+¢%%` ClearGap = Pitch - ChannelWidth = 〔200〕 mm `
 
-¢??` StripI = StripWidth * LinerThickness^3 / 12 = 〔281.25〕 mm4 `
+¢%%` StripI = StripWidth * LinerThickness^3 / 12 = 〔281〕 mm4 `
 
-¢??` LinerSag = 5 * MeanBlockPressure * StripWidth * ClearGap^4 / (384 * E *
-StripI) = 〔0.6226444〕 mm `
+¢%%` LinerSag = 5 * MeanBlockPressure * StripWidth * ClearGap^4 / (384 * E *
+StripI) = 〔0.623〕 mm `
 
 The upper-frame, channel, rod and liner displacements are separate estimates at
 different positions; their maxima are not a solved total apex displacement.
@@ -149,4 +149,10 @@ thermal paths, block durability or reactor service clearances.
 
 [1]: ../../../fastSaltModels/docs/rigid-insulation-cover.md
 
-[2]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\_IND\_Thermo-1200\_DS.pdf
+[2]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\\\\\\\\\\\\\_IND\\\\\\\\\\\\\\\_Thermo-1200\\\\\\\\\\\\\\\_DS.pdf
+
+[3]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\\\\\_IND\\\\\\\_Thermo-1200\\\\\\\_DS.pdf
+
+[4]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\_IND\\\_Thermo-1200\\\_DS.pdf
+
+[5]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\_IND\_Thermo-1200\_DS.pdf

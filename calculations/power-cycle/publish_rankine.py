@@ -3,6 +3,13 @@
 Run rankine_cycle.py first, then this script, then the Hurmet round-trip check.
 Steam properties and extraction fractions remain Python results, not Hurmet solves.
 """
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json
 ROOT=Path(__file__).resolve().parent
@@ -130,5 +137,5 @@ for line in text.splitlines():
         if len(parts)==3:rows.append('- **'+parts[0]+':** '+parts[1]+'. '+parts[2]+'.')
         else:rows.append('- '+parts[0]+': gross '+parts[1]+', condenser '+parts[2]+', LP moisture '+parts[3]+'.')
     else:rows.append(line)
-(ROOT/'Rankine cycle - Hurmet.md').write_text('\n'.join(rows)+'\n')
+write_worksheet(ROOT/'Rankine cycle - Hurmet.md', '\n'.join(rows)+'\n')
 print('Wrote Hurmet source; run check_rankine_hurmet.cjs to recalculate and save.')

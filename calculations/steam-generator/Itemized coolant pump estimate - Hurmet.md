@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-14
+saveDate: 2026-10-20
 ---------------
 
 # Itemized coolant pump estimate
+
+¢` format = "h3" `
 
 Preliminary normal-duty estimate, 14 October 2026. Replaces the blanket SG-loss
 × 1.5 estimate for this calculation with individually identified loss terms.
@@ -62,8 +64,6 @@ segment pressure-to-energy conversion need a detailed hydraulic network; this
 estimate sums loss pressures and uses **cold-leg volume flow at the pump** for
 shaft power.
 
-¢` format = "h7" `
-
 ¢` TotalMassFlow = 18500 kg/s `
 
 ¢` Legs = 3 `
@@ -90,7 +90,7 @@ shaft power.
 
 ¢` PipeRoughness = 2e-06 m `
 
-¢` CorePassageLoss = 62713.5660789 Pa `
+¢` CorePassageLoss = 62.7135660789 kPa `
 
 ¢` MainBore = 1.425 m `
 
@@ -145,144 +145,142 @@ end `
 
 ## Properties and flow
 
-¢??` MeanTemperature = (HotTemperature + ColdTemperature) / 2 = 〔850〕 K `
+¢%%` MeanTemperature = (HotTemperature + ColdTemperature) / 2 = 〔850〕 K `
 
-¢??` MeanDensity = DensityIntercept - DensitySlope * MeanTemperature =
-〔1,633.783〕 kg/m3 `
-
-¢??` HotDensity = DensityIntercept - DensitySlope * HotTemperature = 〔1,611.241〕
+¢%%` MeanDensity = DensityIntercept - DensitySlope * MeanTemperature = 〔1,634〕
 kg/m3 `
 
-¢??` ColdDensity = DensityIntercept - DensitySlope * ColdTemperature =
-〔1,656.324〕 kg/m3 `
+¢%%` HotDensity = DensityIntercept - DensitySlope * HotTemperature = 〔1,611〕
+kg/m3 `
 
-¢??` MeanViscosity = ViscosityScale * exp(ViscosityTemperature /
-MeanTemperature) = 〔0.002912508〕 Pa.s `
+¢%%` ColdDensity = DensityIntercept - DensitySlope * ColdTemperature = 〔1,656〕
+kg/m3 `
 
-¢??` HotViscosity = ViscosityScale * exp(ViscosityTemperature / HotTemperature)
-= 〔0.002732857〕 Pa.s `
+¢%%` MeanViscosity = ViscosityScale * exp(ViscosityTemperature /
+MeanTemperature) = 〔0.00291〕 Pa.s `
 
-¢??` ColdViscosity = ViscosityScale * exp(ViscosityTemperature /
-ColdTemperature) = 〔0.003123548〕 Pa.s `
+¢%%` HotViscosity = ViscosityScale * exp(ViscosityTemperature / HotTemperature)
+= 〔0.00273〕 Pa.s `
 
-¢??` LegMassFlow = TotalMassFlow / Legs = 〔6,166.667〕 kg/s `
+¢%%` ColdViscosity = ViscosityScale * exp(ViscosityTemperature /
+ColdTemperature) = 〔0.00312〕 Pa.s `
 
-¢??` PumpVolumeFlow = LegMassFlow / ColdDensity = 〔3.723103〕 m3/s `
+¢%%` LegMassFlow = TotalMassFlow / Legs = 〔6,167〕 kg/s `
 
-¢??` SGVelocity = LegMassFlow / (MeanDensity * SGTubeCount * pi * SGTubeBore^2
-/ 4) = 〔2.450942〕 m/s `
+¢%%` PumpVolumeFlow = LegMassFlow / ColdDensity = 〔3.72〕 m3/s `
 
-¢??` SGReynolds = MeanDensity * SGVelocity * SGTubeBore / MeanViscosity =
-〔27,497.31〕 `
+¢%%` SGVelocity = LegMassFlow / (MeanDensity * SGTubeCount * pi * SGTubeBore^2
+/ 4) = 〔2.45〕 m/s `
 
-¢??` SGFactor = Darcy(SGReynolds, TubeRoughness / SGTubeBore) = 〔0.02410035〕 `
+¢%%` SGReynolds = MeanDensity * SGVelocity * SGTubeBore / MeanViscosity =
+〔27,497〕 `
 
-¢??` SGDynamic = MeanDensity * SGVelocity^2 / 2 = 〔4.907162〕 kPa `
+¢%%` SGFactor = Darcy(SGReynolds, TubeRoughness / SGTubeBore) = 〔0.0241〕 `
 
-¢??` SGFriction = SGFactor * SGTubeLength / SGTubeBore * SGDynamic = 〔70.49064〕 kPa `
+¢%%` SGDynamic = MeanDensity * SGVelocity^2 / 2 = 〔4.91〕 kPa `
 
-¢??` SGEnds = SGEndK * SGDynamic = 〔7.360742〕 kPa `
+¢%%` SGFriction = SGFactor * SGTubeLength / SGTubeBore * SGDynamic = 〔70.5〕 kPa `
+
+¢%%` SGEnds = SGEndK * SGDynamic = 〔7.36〕 kPa `
 
 ## Main piping and connections
 
-¢??` HotVelocity = LegMassFlow / (HotDensity * pi * MainBore^2 / 4) = 〔2.399775〕 m/s `
+¢%%` HotVelocity = LegMassFlow / (HotDensity * pi * MainBore^2 / 4) = 〔2.4〕 m/s `
 
-¢??` HotDynamic = HotDensity * HotVelocity^2 / 2 = 〔4.639502〕 kPa `
+¢%%` HotDynamic = HotDensity * HotVelocity^2 / 2 = 〔4.64〕 kPa `
 
-¢??` HotFactor = Darcy(HotDensity * HotVelocity * MainBore / HotViscosity,
-PipeRoughness / MainBore) = 〔0.01041103〕 `
+¢%%` HotFactor = Darcy(HotDensity * HotVelocity * MainBore / HotViscosity,
+PipeRoughness / MainBore) = 〔0.0104〕 `
 
-¢??` HotStraight = HotFactor * HotPipeLength / MainBore * HotDynamic =
-〔0.5339027〕 kPa `
+¢%%` HotStraight = HotFactor * HotPipeLength / MainBore * HotDynamic = 〔0.534〕 kPa `
 
-¢??` HotNozzleVelocity = LegMassFlow / (HotDensity * pi * NozzleBore^2 / 4) =
-〔2.754844〕 m/s `
+¢%%` HotNozzleVelocity = LegMassFlow / (HotDensity * pi * NozzleBore^2 / 4) =
+〔2.75〕 m/s `
 
-¢??` HotNozzleDynamic = HotDensity * HotNozzleVelocity^2 / 2 = 〔6.113983〕 kPa `
+¢%%` HotNozzleDynamic = HotDensity * HotNozzleVelocity^2 / 2 = 〔6.11〕 kPa `
 
-¢??` HotNozzleFactor = Darcy(HotDensity * HotNozzleVelocity * NozzleBore /
-HotViscosity, PipeRoughness / NozzleBore) = 〔0.01030215〕 `
+¢%%` HotNozzleFactor = Darcy(HotDensity * HotNozzleVelocity * NozzleBore /
+HotViscosity, PipeRoughness / NozzleBore) = 〔0.0103〕 `
 
-¢??` HotNozzleFriction = HotNozzleFactor * HotNozzleLength / NozzleBore *
-HotNozzleDynamic = 〔0.08391979〕 kPa `
+¢%%` HotNozzleFriction = HotNozzleFactor * HotNozzleLength / NozzleBore *
+HotNozzleDynamic = 〔0.0839〕 kPa `
 
-¢??` ColdVelocity = LegMassFlow / (ColdDensity * pi * MainBore^2 / 4) =
-〔2.334455〕 m/s `
+¢%%` ColdVelocity = LegMassFlow / (ColdDensity * pi * MainBore^2 / 4) = 〔2.33〕 m/s `
 
-¢??` ColdDynamic = ColdDensity * ColdVelocity^2 / 2 = 〔4.513218〕 kPa `
+¢%%` ColdDynamic = ColdDensity * ColdVelocity^2 / 2 = 〔4.51〕 kPa `
 
-¢??` ColdFactor = Darcy(ColdDensity * ColdVelocity * MainBore / ColdViscosity,
-PipeRoughness / MainBore) = 〔0.01063507〕 `
+¢%%` ColdFactor = Darcy(ColdDensity * ColdVelocity * MainBore / ColdViscosity,
+PipeRoughness / MainBore) = 〔0.0106〕 `
 
-¢??` ColdStraight = ColdFactor * ColdPipeLength / MainBore * ColdDynamic =
-〔0.545115〕 kPa `
+¢%%` ColdStraight = ColdFactor * ColdPipeLength / MainBore * ColdDynamic =
+〔0.545〕 kPa `
 
-¢??` ColdNozzleVelocity = LegMassFlow / (ColdDensity * pi * NozzleBore^2 / 4) =
-〔2.679859〕 m/s `
+¢%%` ColdNozzleVelocity = LegMassFlow / (ColdDensity * pi * NozzleBore^2 / 4) =
+〔2.68〕 m/s `
 
-¢??` ColdNozzleDynamic = ColdDensity * ColdNozzleVelocity^2 / 2 = 〔5.947565〕 kPa `
+¢%%` ColdNozzleDynamic = ColdDensity * ColdNozzleVelocity^2 / 2 = 〔5.95〕 kPa `
 
-¢??` ColdNozzleFactor = Darcy(ColdDensity * ColdNozzleVelocity * NozzleBore /
-ColdViscosity, PipeRoughness / NozzleBore) = 〔0.01052194〕 `
+¢%%` ColdNozzleFactor = Darcy(ColdDensity * ColdNozzleVelocity * NozzleBore /
+ColdViscosity, PipeRoughness / NozzleBore) = 〔0.0105〕 `
 
-¢??` ColdNozzleFriction = ColdNozzleFactor * ColdNozzleLength / NozzleBore *
-ColdNozzleDynamic = 〔0.1295658〕 kPa `
+¢%%` ColdNozzleFriction = ColdNozzleFactor * ColdNozzleLength / NozzleBore *
+ColdNozzleDynamic = 〔0.13〕 kPa `
 
-¢??` StraightLoss = HotStraight + ColdStraight + HotNozzleFriction +
-ColdNozzleFriction = 〔1.292503〕 kPa `
+¢%%` StraightLoss = HotStraight + ColdStraight + HotNozzleFriction +
+ColdNozzleFriction = 〔1.29〕 kPa `
 
-¢??` BendLoss = BendK * (HotBends * HotDynamic + ColdBends * ColdDynamic) =
-〔9.591413〕 kPa `
+¢%%` BendLoss = BendK * (HotBends * HotDynamic + ColdBends * ColdDynamic) =
+〔9.59〕 kPa `
 
-¢??` CollectorLoss = CollectorK * (HotDynamic + ColdDynamic) = 〔9.15272〕 kPa `
+¢%%` CollectorLoss = CollectorK * (HotDynamic + ColdDynamic) = 〔9.15〕 kPa `
 
-¢??` ReactorNozzleLoss = ReactorEntryK * ColdNozzleDynamic + ReactorExitK *
-HotNozzleDynamic = 〔9.004557〕 kPa `
+¢%%` ReactorNozzleLoss = ReactorEntryK * ColdNozzleDynamic + ReactorExitK *
+HotNozzleDynamic = 〔9〕 kPa `
 
-¢??` ValveLoss = ValveK * (HotDynamic + ColdDynamic) = 〔1.830544〕 kPa `
+¢%%` ValveLoss = ValveK * (HotDynamic + ColdDynamic) = 〔1.83〕 kPa `
 
 ## Bulk reactor passage and total duty
 
-¢??` DownArea = pi * (DownOuterRadius^2 - DownInnerRadius^2) = 〔16.9646〕 m2 `
+¢%%` DownArea = pi * (DownOuterRadius^2 - DownInnerRadius^2) = 〔17〕 m2 `
 
-¢??` DownDiameter = 2 * (DownOuterRadius - DownInnerRadius) = 〔2〕 m `
+¢%%` DownDiameter = 2 * (DownOuterRadius - DownInnerRadius) = 〔2〕 m `
 
-¢??` DownVelocity = TotalMassFlow / (ColdDensity * DownArea) = 〔0.6583892〕 m/s `
+¢%%` DownVelocity = TotalMassFlow / (ColdDensity * DownArea) = 〔0.658〕 m/s `
 
-¢??` DownDynamic = ColdDensity * DownVelocity^2 / 2 = 〔0.3589887〕 kPa `
+¢%%` DownDynamic = ColdDensity * DownVelocity^2 / 2 = 〔0.359〕 kPa `
 
-¢??` DownFactor = Darcy(ColdDensity * DownVelocity * DownDiameter /
-ColdViscosity, PipeRoughness / DownDiameter) = 〔0.01241365〕 `
+¢%%` DownFactor = Darcy(ColdDensity * DownVelocity * DownDiameter /
+ColdViscosity, PipeRoughness / DownDiameter) = 〔0.0124〕 `
 
-¢??` DownFriction = DownFactor * DownLength / DownDiameter * DownDynamic =
-〔0.007475544〕 kPa `
+¢%%` DownFriction = DownFactor * DownLength / DownDiameter * DownDynamic =
+〔0.00748〕 kPa `
 
-¢??` BulkTurnLoss = BulkTurnK * DownDynamic = 〔0.7179774〕 kPa `
+¢%%` BulkTurnLoss = BulkTurnK * DownDynamic = 〔0.718〕 kPa `
 
-¢??` KnownGeometryLoss = SGFriction + CorePassageLoss + StraightLoss +
-DownFriction = 〔134.5042〕 kPa `
+¢%%` KnownGeometryLoss = SGFriction + CorePassageLoss + StraightLoss +
+DownFriction = 〔135〕 kPa `
 
-¢??` LocalLoss = SGEnds + BendLoss + CollectorLoss + ReactorNozzleLoss +
-ValveLoss + BulkTurnLoss = 〔37.65795〕 kPa `
+¢%%` LocalLoss = SGEnds + BendLoss + CollectorLoss + ReactorNozzleLoss +
+ValveLoss + BulkTurnLoss = 〔37.7〕 kPa `
 
-¢??` PumpRise = KnownGeometryLoss + LocalLoss = 〔172.1621〕 kPa `
+¢%%` PumpRise = KnownGeometryLoss + LocalLoss = 〔172〕 kPa `
 
-¢??` PumpHead = PumpRise / (ColdDensity * Gravity) = 〔10.59916〕 m `
+¢%%` PumpHead = PumpRise / (ColdDensity * Gravity) = 〔10.6〕 m `
 
-¢??` HydraulicPerPump = PumpRise * PumpVolumeFlow = 〔640.9774〕 kW `
+¢%%` HydraulicPerPump = PumpRise * PumpVolumeFlow = 〔641〕 kW `
 
-¢??` ShaftPerPump = HydraulicPerPump / PumpEfficiency = 〔801.2217〕 kW `
+¢%%` ShaftPerPump = HydraulicPerPump / PumpEfficiency = 〔801〕 kW `
 
-¢??` ElectricalPerPump = ShaftPerPump / MotorEfficiency = 〔834.606〕 kW `
+¢%%` ElectricalPerPump = ShaftPerPump / MotorEfficiency = 〔835〕 kW `
 
-¢??` TotalHydraulic = Legs * HydraulicPerPump = 〔1.922932〕 MW `
+¢%%` TotalHydraulic = Legs * HydraulicPerPump = 〔1.92〕 MW `
 
-¢??` TotalShaft = Legs * ShaftPerPump = 〔2.403665〕 MW `
+¢%%` TotalShaft = Legs * ShaftPerPump = 〔2.4〕 MW `
 
-¢??` TotalElectrical = Legs * ElectricalPerPump = 〔2.503818〕 MW `
+¢%%` TotalElectrical = Legs * ElectricalPerPump = 〔2.5〕 MW `
 
-¢??` BareSubtotalElectrical = Legs * KnownGeometryLoss * PumpVolumeFlow /
-(PumpEfficiency * MotorEfficiency) = 〔1.956144〕 MW `
+¢%%` BareSubtotalElectrical = Legs * KnownGeometryLoss * PumpVolumeFlow /
+(PumpEfficiency * MotorEfficiency) = 〔1.96〕 MW `
 
 KnownGeometryLoss is a subtotal, not a validated lower bound: it includes the
 already-provisional core end allowance. LocalLoss adds only the additional
@@ -299,31 +297,31 @@ loss, SG length/roughness and efficiencies. Low/high: SG tube ends 1/2; bend K
 0.15/0.6; each collector 0.5/2; reactor cold entry 0.5/2 and hot exit 0.25/1;
 each open valve 0.05/1; bulk turn 1/5.
 
-¢??` LowLocalLoss = SGDynamic + 0.15 * (HotBends * HotDynamic + ColdBends *
+¢%%` LowLocalLoss = SGDynamic + 0.15 * (HotBends * HotDynamic + ColdBends *
 ColdDynamic) + 0.5 * (HotDynamic + ColdDynamic) + 0.5 * ColdNozzleDynamic +
 0.25 * HotNozzleDynamic + 0.05 * (HotDynamic + ColdDynamic) + DownDynamic =
-〔19.59813〕 kPa `
+〔19.6〕 kPa `
 
-¢??` HighLocalLoss = 2 * SGDynamic + 0.6 * (HotBends * HotDynamic + ColdBends *
+¢%%` HighLocalLoss = 2 * SGDynamic + 0.6 * (HotBends * HotDynamic + ColdBends *
 ColdDynamic) + 2 * (HotDynamic + ColdDynamic) + 2 * ColdNozzleDynamic +
-HotNozzleDynamic + HotDynamic + ColdDynamic + 5 * DownDynamic = 〔76.25937〕 kPa `
+HotNozzleDynamic + HotDynamic + ColdDynamic + 5 * DownDynamic = 〔76.3〕 kPa `
 
-¢??` LowRise = KnownGeometryLoss + LowLocalLoss = 〔154.1023〕 kPa `
+¢%%` LowRise = KnownGeometryLoss + LowLocalLoss = 〔154〕 kPa `
 
-¢??` LowElectrical = Legs * LowRise * PumpVolumeFlow / (PumpEfficiency *
-MotorEfficiency) = 〔2.241167〕 MW `
+¢%%` LowElectrical = Legs * LowRise * PumpVolumeFlow / (PumpEfficiency *
+MotorEfficiency) = 〔2.24〕 MW `
 
-¢??` HighRise = KnownGeometryLoss + HighLocalLoss = 〔210.7636〕 kPa `
+¢%%` HighRise = KnownGeometryLoss + HighLocalLoss = 〔211〕 kPa `
 
-¢??` HighElectrical = Legs * HighRise * PumpVolumeFlow / (PumpEfficiency *
-MotorEfficiency) = 〔3.065213〕 MW `
+¢%%` HighElectrical = Legs * HighRise * PumpVolumeFlow / (PumpEfficiency *
+MotorEfficiency) = 〔3.07〕 MW `
 
 ## Comparison with the earlier allowance
 
-¢??` SameFlowOldMethod = 1.5 * SGFriction = 〔105.736〕 kPa `
+¢%%` SameFlowOldMethod = 1.5 * SGFriction = 〔106〕 kPa `
 
-¢??` SameFlowOldElectrical = Legs * SameFlowOldMethod * PumpVolumeFlow /
-(PumpEfficiency * MotorEfficiency) = 〔1.537757〕 MW `
+¢%%` SameFlowOldElectrical = Legs * SameFlowOldMethod * PumpVolumeFlow /
+(PumpEfficiency * MotorEfficiency) = 〔1.54〕 MW `
 
 The old sheet's 5.166 MW total electrical estimate also used the larger 22,699
 kg/s total flow. Separate that operating-basis change from replacing the 50%
@@ -373,6 +371,24 @@ in SI arithmetic. Generated HTML is ignored output.
 
 [3]: sources/README.md
 
-[4]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\_RevA\\\_Final.pdf
+[4]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
 
-[5]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\_RevA\_Final.pdf
+[5]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[6]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[7]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[8]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[9]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[10]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[11]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\_Final.pdf
+
+[12]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\_RevA\\\\\\\_Final.pdf
+
+[13]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\_RevA\\\_Final.pdf
+
+[14]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\_RevA\_Final.pdf

@@ -1,4 +1,11 @@
 """Itemized three-leg coolant pump estimate at owner-selected UM flow."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import argparse,hashlib,json,math,re,sys
 HERE=Path(__file__).resolve().parent
@@ -188,7 +195,7 @@ Run `python calculations/steam-generator/coolant_pump_itemized.py`, then `node c
     sources=[core_path,sg_path,HERE/'counter_sg_basis.py',models/'models/wistr_installation.py',models/'models/coolant_assembly.py',report_path]
     result_data={'date':'2026-10-14','status':'Preliminary itemized normal-duty power; no blanket allowance or motor selection','inputs':{n:{'value':x,'unit':u} for n,(x,u) in inp.items()},'hurmet_checks':checks,'routes':routes,'roughness_sensitivity_external':sensitivity,'efficiency_sensitivity_external':[{'pump_efficiency':eta,'motor_efficiency':.96,'total_electrical_MW':v['TotalHydraulic']/eta/.96/1e6} for eta in [.75,.8,.85]],'sources':[{'path':str(p.relative_to(hub)) if p.is_relative_to(hub) else '../fastSaltModels/'+str(p.relative_to(models)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sources]}
     out.mkdir(parents=True,exist_ok=True)
-    (out/'Itemized coolant pump estimate - Hurmet.md').write_text('\n\n'.join(md)+'\n')
+    write_worksheet(out/'Itemized coolant pump estimate - Hurmet.md', '\n\n'.join(md)+'\n')
     (out/'coolant-pump-itemized-results.json').write_text(json.dumps(result_data,indent=2)+'\n')
     for n in ['SGFriction','SGEnds','CorePassageLoss','StraightLoss','BendLoss','CollectorLoss','ReactorNozzleLoss','ValveLoss','DownFriction','BulkTurnLoss','PumpRise','PumpHead','ShaftPerPump','ElectricalPerPump','TotalElectrical','LowElectrical','HighElectrical','SameFlowOldElectrical']:
         print(n,checks.get(n,v[n]))

@@ -2,11 +2,13 @@
 decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
-dateFormat: undefined
-saveDate: 2026-10-13
+dateFormat: yyyy-mm-dd
+saveDate: 2026-10-20
 ---------------
 
 # Brayton cooler size comparison — 30 MW per train
+
+¢` format = "h3" `
 
 13 October 2026. Preliminary scale check for the three candidate auxiliary
 cycles. **One train removes 30 MW gross from salt; three such trains provide 90
@@ -176,49 +178,42 @@ provisional equipment boxes.
 
 ¢` SteamHotVolume = 34.15016252113 m3/s `
 
-¢??` SteamInletArea = SteamInletVolume / ClosedVelocity = 〔0.7190709368557〕 m2 `
+¢%%` SteamInletArea = SteamInletVolume / ClosedVelocity = 〔0.719〕 m2 `
 
-¢??` SteamInletDiameter = sqrt(4 * SteamInletArea / π) = 〔0.956843535942235〕 m `
+¢%%` SteamInletDiameter = sqrt(4 * SteamInletArea / π) = 〔0.957〕 m `
 
-¢??` SteamHotDiameter = sqrt(4 * SteamHotVolume / (ClosedVelocity * π)) =
-〔1.20390112247692〕 m `
+¢%%` SteamHotDiameter = sqrt(4 * SteamHotVolume / (ClosedVelocity * π)) = 〔1.2〕 m `
 
 ¢` SteamCoolerVolume = 247.22449663663 m3/s `
 
-¢??` SteamCoolerFace = SteamCoolerVolume / CoolerFaceVelocity =
-〔82.4081655455433〕 m2 `
+¢%%` SteamCoolerFace = SteamCoolerVolume / CoolerFaceVelocity = 〔82.4〕 m2 `
 
 ¢` NitrogenInletVolume = 10.671855418594 m3/s `
 
 ¢` NitrogenHotVolume = 17.830170931224 m3/s `
 
-¢??` NitrogenInletArea = NitrogenInletVolume / ClosedVelocity =
-〔0.355728513953133〕 m2 `
+¢%%` NitrogenInletArea = NitrogenInletVolume / ClosedVelocity = 〔0.356〕 m2 `
 
-¢??` NitrogenInletDiameter = sqrt(4 * NitrogenInletArea / π) =
-〔0.672998968167859〕 m `
+¢%%` NitrogenInletDiameter = sqrt(4 * NitrogenInletArea / π) = 〔0.673〕 m `
 
-¢??` NitrogenHotDiameter = sqrt(4 * NitrogenHotVolume / (ClosedVelocity * π)) =
-〔0.869905717477892〕 m `
+¢%%` NitrogenHotDiameter = sqrt(4 * NitrogenHotVolume / (ClosedVelocity * π)) =
+〔0.87〕 m `
 
 ¢` NitrogenCoolerVolume = 227.45863274228 m3/s `
 
-¢??` NitrogenCoolerFace = NitrogenCoolerVolume / CoolerFaceVelocity =
-〔75.8195442474267〕 m2 `
+¢%%` NitrogenCoolerFace = NitrogenCoolerVolume / CoolerFaceVelocity = 〔75.8〕 m2 `
 
 ¢` AirInletVolume = 89.169237667213 m3/s `
 
 ¢` AirHotVolume = 158.06858862814 m3/s `
 
-¢??` AirInletArea = AirInletVolume / OpenVelocity = 〔5.94461584448087〕 m2 `
+¢%%` AirInletArea = AirInletVolume / OpenVelocity = 〔5.94〕 m2 `
 
-¢??` AirInletDiameter = sqrt(4 * AirInletArea / π) = 〔2.75116701991214〕 m `
+¢%%` AirInletDiameter = sqrt(4 * AirInletArea / π) = 〔2.75〕 m `
 
-¢??` AirHotDiameter = sqrt(4 * AirHotVolume / (OpenVelocity * π)) =
-〔3.66296034942433〕 m `
+¢%%` AirHotDiameter = sqrt(4 * AirHotVolume / (OpenVelocity * π)) = 〔3.66〕 m `
 
-¢??` NitrogenToSteamUARatio = 234557.50738253 / 122734.53735739 =
-〔1.91109619535635〕 `
+¢%%` NitrogenToSteamUARatio = 234557.50738253 / 122734.53735739 = 〔1.91〕 `
 
 ## Reproduction and next step
 

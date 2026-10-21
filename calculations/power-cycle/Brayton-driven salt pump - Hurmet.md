@@ -2,11 +2,13 @@
 decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
-dateFormat: undefined
-saveDate: 2026-10-12
+dateFormat: yyyy-mm-dd
+saveDate: 2026-10-20
 ---------------
 
 # Brayton-driven salt pony pump — preliminary estimate
+
+¢` format = "h3" `
 
 12 October 2026. Use the [steam-generator hydraulic worksheet][1], with the
 owner's **50% additional pressure-drop allowance for the entire salt loop**, to
@@ -82,10 +84,10 @@ imported flow roots. Real-steam cycle state changes require rerunning
 
 ¢` ReferenceSaltDrop = 65 K `
 
-¢??` FlowArea = TubeCount * π * TubeDiameter^2 / 4 = 〔1.86111090391313〕 m2 `
+¢%%` FlowArea = TubeCount * π * TubeDiameter^2 / 4 = 〔1.86〕 m2 `
 
-¢??` ReferenceFlow = 500 'MW' / (Density * HeatCapacity * ReferenceSaltDrop) =
-〔4.61953282645811〕 m3/s `
+¢%%` ReferenceFlow = 500 'MW' / (Density * HeatCapacity * ReferenceSaltDrop) =
+〔4.62〕 m3/s `
 
 ## Main comparison: all available surplus used for circulation
 
@@ -136,41 +138,37 @@ turbulent expression is not used to claim performance there.
 
 ¢` TwoFlow = 2.0838596064202 m3/s `
 
-¢??` TwoElectrical = HeatDuty * TwoShaftFraction * GeneratorEfficiency =
-〔193.284915979233〕 kW `
+¢%%` TwoElectrical = HeatDuty * TwoShaftFraction * GeneratorEfficiency = 〔193〕 kW `
 
-¢??` TwoPumpShaft = TwoElectrical * MotorEfficiency = 〔185.553519340064〕 kW `
+¢%%` TwoPumpShaft = TwoElectrical * MotorEfficiency = 〔186〕 kW `
 
-¢??` TwoHydraulicAvailable = TwoPumpShaft * PumpEfficiency = 〔148.442815472051〕 kW `
+¢%%` TwoHydraulicAvailable = TwoPumpShaft * PumpEfficiency = 〔148〕 kW `
 
-¢??` TwoVelocity = TwoFlow / FlowArea = 〔1.11968588332846〕 m/s `
+¢%%` TwoVelocity = TwoFlow / FlowArea = 〔1.12〕 m/s `
 
-¢??` TwoReynolds = Density * TwoVelocity * TubeDiameter / Viscosity =
-〔8,704.5298678205〕 `
+¢%%` TwoReynolds = Density * TwoVelocity * TubeDiameter / Viscosity = 〔8,705〕 `
 
-¢??` TwoFriction = (8/6.0516) * ln(Roughness/TubeDiameter +
-(7/TwoReynolds)^0.9)^(-2) = 〔0.0325742755741179〕 `
+¢%%` TwoFriction = (8/6.0516) * ln(Roughness/TubeDiameter +
+(7/TwoReynolds)^0.9)^(-2) = 〔0.0326〕 `
 
-¢??` TwoGeneratorDrop = TwoFriction * TubeLength / TubeDiameter * Density *
-TwoVelocity^2 / 2 = 〔47.4897045254283〕 kPa `
+¢%%` TwoGeneratorDrop = TwoFriction * TubeLength / TubeDiameter * Density *
+TwoVelocity^2 / 2 = 〔47.5〕 kPa `
 
-¢??` TwoLoopDrop = LoopFactor * TwoGeneratorDrop = 〔71.2345567881424〕 kPa `
+¢%%` TwoLoopDrop = LoopFactor * TwoGeneratorDrop = 〔71.2〕 kPa `
 
-¢??` TwoHydraulicRequired = TwoFlow * TwoLoopDrop = 〔148.442815472056〕 kW `
+¢%%` TwoHydraulicRequired = TwoFlow * TwoLoopDrop = 〔148〕 kW `
 
-¢??` TwoPowerClosure = TwoHydraulicRequired / TwoHydraulicAvailable =
-〔1.00000000000003〕 `
+¢%%` TwoPowerClosure = TwoHydraulicRequired / TwoHydraulicAvailable = 〔1〕 `
 
-¢??` TwoMassFlow = Density * TwoFlow = 〔3,413.21876996835〕 kg/s `
+¢%%` TwoMassFlow = Density * TwoFlow = 〔3,413〕 kg/s `
 
-¢??` TwoTransport65K = TwoMassFlow * HeatCapacity * ReferenceSaltDrop =
-〔225.54873887734〕 MW `
+¢%%` TwoTransport65K = TwoMassFlow * HeatCapacity * ReferenceSaltDrop = 〔226〕 MW `
 
-¢??` TwoSaltDrop = HeatDuty / (TwoMassFlow * HeatCapacity) = 〔2.88186049381322〕 K `
+¢%%` TwoSaltDrop = HeatDuty / (TwoMassFlow * HeatCapacity) = 〔2.88〕 K `
 
-¢??` TwoNetMinimum = HeatDuty - TwoPumpShaft = 〔9.81444648065994〕 MW `
+¢%%` TwoNetMinimum = HeatDuty - TwoPumpShaft = 〔9.81〕 MW `
 
-¢??` TwoNetMaximum = HeatDuty - TwoHydraulicRequired = 〔9.85155718452794〕 MW `
+¢%%` TwoNetMaximum = HeatDuty - TwoHydraulicRequired = 〔9.85〕 MW `
 
 ## Recalculated checks: 8:1 case
 
@@ -178,43 +176,40 @@ TwoVelocity^2 / 2 = 〔47.4897045254283〕 kPa `
 
 ¢` EightFlow = 4.0986270096807 m3/s `
 
-¢??` EightElectrical = HeatDuty * EightShaftFraction * GeneratorEfficiency =
-〔1,237.43578243906〕 kW `
+¢%%` EightElectrical = HeatDuty * EightShaftFraction * GeneratorEfficiency =
+〔1,237〕 kW `
 
-¢??` EightPumpShaft = EightElectrical * MotorEfficiency = 〔1,187.9383511415〕 kW `
+¢%%` EightPumpShaft = EightElectrical * MotorEfficiency = 〔1,188〕 kW `
 
-¢??` EightHydraulicAvailable = EightPumpShaft * PumpEfficiency =
-〔950.350680913198〕 kW `
+¢%%` EightHydraulicAvailable = EightPumpShaft * PumpEfficiency = 〔950〕 kW `
 
-¢??` EightVelocity = EightFlow / FlowArea = 〔2.20224759366195〕 m/s `
+¢%%` EightVelocity = EightFlow / FlowArea = 〔2.2〕 m/s `
 
-¢??` EightReynolds = Density * EightVelocity * TubeDiameter / Viscosity =
-〔17,120.4533707092〕 `
+¢%%` EightReynolds = Density * EightVelocity * TubeDiameter / Viscosity =
+〔17,120〕 `
 
-¢??` EightFriction = (8/6.0516) * ln(Roughness/TubeDiameter +
-(7/EightReynolds)^0.9)^(-2) = 〔0.0274087764971781〕 `
+¢%%` EightFriction = (8/6.0516) * ln(Roughness/TubeDiameter +
+(7/EightReynolds)^0.9)^(-2) = 〔0.0274〕 `
 
-¢??` EightGeneratorDrop = EightFriction * TubeLength / TubeDiameter * Density *
-EightVelocity^2 / 2 = 〔154.580331196848〕 kPa `
+¢%%` EightGeneratorDrop = EightFriction * TubeLength / TubeDiameter * Density *
+EightVelocity^2 / 2 = 〔155〕 kPa `
 
-¢??` EightLoopDrop = LoopFactor * EightGeneratorDrop = 〔231.870496795272〕 kPa `
+¢%%` EightLoopDrop = LoopFactor * EightGeneratorDrop = 〔232〕 kPa `
 
-¢??` EightHydraulicRequired = EightFlow * EightLoopDrop = 〔950.350680913184〕 kW `
+¢%%` EightHydraulicRequired = EightFlow * EightLoopDrop = 〔950〕 kW `
 
-¢??` EightPowerClosure = EightHydraulicRequired / EightHydraulicAvailable =
-〔0.999999999999985〕 `
+¢%%` EightPowerClosure = EightHydraulicRequired / EightHydraulicAvailable = 〔1〕 `
 
-¢??` EightMassFlow = Density * EightFlow = 〔6,713.26926125007〕 kg/s `
+¢%%` EightMassFlow = Density * EightFlow = 〔6,713〕 kg/s `
 
-¢??` EightTransport65K = EightMassFlow * HeatCapacity * ReferenceSaltDrop =
-〔443.619210389203〕 MW `
+¢%%` EightTransport65K = EightMassFlow * HeatCapacity * ReferenceSaltDrop =
+〔444〕 MW `
 
-¢??` EightSaltDrop = HeatDuty / (EightMassFlow * HeatCapacity) =
-〔1.465220587336〕 K `
+¢%%` EightSaltDrop = HeatDuty / (EightMassFlow * HeatCapacity) = 〔1.47〕 K `
 
-¢??` EightNetMinimum = HeatDuty - EightPumpShaft = 〔8.8120616488585〕 MW `
+¢%%` EightNetMinimum = HeatDuty - EightPumpShaft = 〔8.81〕 MW `
 
-¢??` EightNetMaximum = HeatDuty - EightHydraulicRequired = 〔9.04964931908682〕 MW `
+¢%%` EightNetMaximum = HeatDuty - EightHydraulicRequired = 〔9.05〕 MW `
 
 ## Heat returned by the salt pump
 

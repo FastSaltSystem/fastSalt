@@ -1,4 +1,11 @@
 """Publish imported real-steam states and editable Hurmet heat-duty scaling."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,re
 D=Path(__file__).resolve().parent
@@ -122,5 +129,5 @@ def table_widths(match):
  widths=' '.join(['240']+['120']*(count-1))
  return block+'\n{.grid colWidths="'+widths+'"}'
 text=re.sub(r'(?m)^\|.*(?:\n\|.*)*',table_widths,text)
-(D/'Steam Brayton cooler - Hurmet.md').write_text(text)
+write_worksheet(D/'Steam Brayton cooler - Hurmet.md', text)
 (D/'brayton-hurmet-checks.json').write_text(json.dumps(checks,indent=2)+'\n')

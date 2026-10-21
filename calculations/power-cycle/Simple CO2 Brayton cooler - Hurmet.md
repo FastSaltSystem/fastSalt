@@ -2,11 +2,13 @@
 decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
-dateFormat: undefined
-saveDate: 2026-10-13
+dateFormat: yyyy-mm-dd
+saveDate: 2026-10-20
 ---------------
 
 # Simple supercritical CO₂ loop — compact heat-removal screen
+
+¢` format = "h3" `
 
 13 October 2026. Investigate compact heat removal, rather than maximizing
 electrical efficiency. **The emergency air passages built into the steam
@@ -185,42 +187,41 @@ emergency-air-passage study remains an independent alternative.
 
 ¢` HotDensity = 71.239398069111 kg/m3 `
 
-¢` HOne = 637391.75279781 J/kg `
+¢` HOne = 637.39175279781 kJ/kg `
 
-¢` HTwo = 711026.03037939 J/kg `
+¢` HTwo = 711.02603037939 kJ/kg `
 
-¢` HThree = 1043911.7401561 J/kg `
+¢` HThree = 1043.9117401561 kJ/kg `
 
-¢` HFour = 957077.43541676 J/kg `
+¢` HFour = 957.07743541676 kJ/kg `
 
-¢??` MassFlow = HeatDuty / (HThree - HTwo) = 〔90.1210208756727〕 kg/s `
+¢%%` MassFlow = HeatDuty / (HThree - HTwo) = 〔90.1〕 kg/s `
 
-¢??` InletFlow = MassFlow / InletDensity = 〔0.747436475468825〕 m3/s `
+¢%%` InletFlow = MassFlow / InletDensity = 〔0.747〕 m3/s `
 
-¢??` HotFlow = MassFlow / HotDensity = 〔1.26504467076272〕 m3/s `
+¢%%` HotFlow = MassFlow / HotDensity = 〔1.27〕 m3/s `
 
-¢??` CompressorPower = MassFlow * (HTwo - HOne) = 〔6.63599626709465〕 MW `
+¢%%` CompressorPower = MassFlow * (HTwo - HOne) = 〔6.64〕 MW `
 
-¢??` TurbinePower = MassFlow * (HThree - HFour) = 〔7.82559619013858〕 MW `
+¢%%` TurbinePower = MassFlow * (HThree - HFour) = 〔7.83〕 MW `
 
-¢??` AvailableShaft = ShaftEfficiency * TurbinePower - CompressorPower =
-〔1.03308799924116〕 MW `
+¢%%` AvailableShaft = ShaftEfficiency * TurbinePower - CompressorPower = 〔1.03〕 MW `
 
-¢??` CoolerHeat = MassFlow * (HFour - HOne) = 〔28.8104000769561〕 MW `
+¢%%` CoolerHeat = MassFlow * (HFour - HOne) = 〔28.8〕 MW `
 
-¢??` EnergyResidual = HeatDuty - CoolerHeat - TurbinePower + CompressorPower =
+¢%%` EnergyResidual = HeatDuty - CoolerHeat - TurbinePower + CompressorPower =
 〔0〕 MW `
 
-¢??` AirFlow = CoolerHeat / (AirHeatCapacity * AirRise * AirDensity) =
-〔245.70745295682〕 m3/s `
+¢%%` AirFlow = CoolerHeat / (AirHeatCapacity * AirRise * AirDensity) = 〔246〕
+m3/s `
 
-¢??` FaceArea = AirFlow / FaceVelocity = 〔81.9024843189399〕 m2 `
+¢%%` FaceArea = AirFlow / FaceVelocity = 〔81.9〕 m2 `
 
-¢??` FanPower = AirFlow * AirPressureDrop / (FanEfficiency * MotorEfficiency) =
-〔196.880971920529〕 kW `
+¢%%` FanPower = AirFlow * AirPressureDrop / (FanEfficiency * MotorEfficiency) =
+〔197〕 kW `
 
-¢??` RemainingElectricity = GeneratorEfficiency * AvailableShaft - FanPower -
-PumpPower = 〔654.562350187867〕 kW `
+¢%%` RemainingElectricity = GeneratorEfficiency * AvailableShaft - FanPower -
+PumpPower = 〔655〕 kW `
 
 Real-fluid states and integrated counterflow UA are imported from Python; Hurmet
 independently checks power, heat and flow. Changing state
@@ -237,8 +238,26 @@ Hurmet numerical checks, save/reopen and air-pressure sensitivity are verified.
 These establish numerical consistency, not selected hardware or qualified
 emergency cooling.
 
-[1]: https://coolprop.org/fluid\\\_properties/fluids/CarbonDioxide.html
+[1]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
 
 [2]: https://www.energy.gov/sco2-rd-focus-areas
 
-[3]: https://coolprop.org/fluid\_properties/fluids/CarbonDioxide.html
+[3]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[4]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[5]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[6]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[7]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[8]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[9]: https://coolprop.org/fluid\\\\\\\\\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[10]: https://coolprop.org/fluid\\\\\\\_properties/fluids/CarbonDioxide.html
+
+[11]: https://coolprop.org/fluid\\\_properties/fluids/CarbonDioxide.html
+
+[12]: https://coolprop.org/fluid\_properties/fluids/CarbonDioxide.html

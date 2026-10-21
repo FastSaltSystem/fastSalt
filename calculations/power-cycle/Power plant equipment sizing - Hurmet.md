@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Power-plant equipment sizing — preliminary
+
+¢` format = "h3" `
 
 11 October 2026. Sizes supported by the selected 1,500 MWt cycle: exchanger
 surface, flow passages, storage inventory, pump duties and generator capacity.
@@ -25,8 +27,6 @@ external Python results. Hurmet executes the equations for volumes, bores,
 areas, inventory, capacity and power from those imports. A
 pressure/temperature/cycle change requires rerunning Python. The source hashes
 and detailed checks are in `equipment-sizing.json`; [method and limitations][1].
-
-¢` format = "h7" `
 
 ¢` Gravity = 9.80665 'm/s2' `
 
@@ -50,11 +50,11 @@ standby capacity.
 
 ¢` ReheatDuty = 252.510110742 MW `
 
-¢??` ReheatArea = SurfaceFactor * ReheatUA / ReheatU = 〔8,179.47〕 'm2' `
+¢%%` ReheatArea = SurfaceFactor * ReheatUA / ReheatU = 〔8,179〕 'm2' `
 
-¢??` ReheatModuleArea = ReheatArea / ReheatModules = 〔2,044.867〕 'm2' `
+¢%%` ReheatModuleArea = ReheatArea / ReheatModules = 〔2,045〕 'm2' `
 
-¢??` ReheatModuleDuty = ReheatDuty / ReheatModules = 〔63.12753〕 MW `
+¢%%` ReheatModuleDuty = ReheatDuty / ReheatModules = 〔63.1〕 MW `
 
 At U = 500 / 1,000 / 1,500 W/(m² K), required areas including the allowance are
 **16,359 / 8,179 / 5,453 m²**. At the middle case each of four modules contains
@@ -90,12 +90,12 @@ be 46,216 m² and needs a revised cooling/control check.
 
 ¢` CoolingFlow = 23.7633756548 'm3/s' `
 
-¢??` CondenserAreaProvided = CondenserModules * CondenserTubeCount * Pi *
-CondenserTubeOD * CondenserTubeLength = 〔38,516.79〕 'm2' `
+¢%%` CondenserAreaProvided = CondenserModules * CondenserTubeCount * Pi *
+CondenserTubeOD * CondenserTubeLength = 〔38,517〕 'm2' `
 
-¢??` CondenserTubeVelocity = (CoolingFlow / CondenserModules) /
-((CondenserTubeCount / CondenserPasses) * Pi * CondenserTubeID^2 / 4) =
-〔2.747459〕 'm/s' `
+¢%%` CondenserTubeVelocity = (CoolingFlow / CondenserModules) /
+((CondenserTubeCount / CondenserPasses) * Pi * CondenserTubeID^2 / 4) = 〔2.75〕
+'m/s' `
 
 Each module has **13,408 tubes**, two passes, 12 m effective length; total
 40,224 tubes. The 23.4 mm ID is a provisional hydraulic geometry, not a
@@ -114,11 +114,11 @@ unresolved.
 
 ¢` CoolingBranchBore = 2 m `
 
-¢??` CoolingMainVelocity = CoolingFlow / (CoolingMainCount * Pi *
-CoolingMainBore^2 / 4) = 〔2.988293〕 'm/s' `
+¢%%` CoolingMainVelocity = CoolingFlow / (CoolingMainCount * Pi *
+CoolingMainBore^2 / 4) = 〔2.99〕 'm/s' `
 
-¢??` CoolingBranchVelocity = (CoolingFlow / CondenserModules) / (Pi *
-CoolingBranchBore^2 / 4) = 〔2.521372〕 'm/s' `
+¢%%` CoolingBranchVelocity = (CoolingFlow / CondenserModules) / (Pi *
+CoolingBranchBore^2 / 4) = 〔2.52〕 'm/s' `
 
 Use two 2.25 m bore parallel mains **for each of supply and return**, and one
 2.0 m bore supply/return pair per condenser module. These are internal bores;
@@ -140,19 +140,18 @@ alone.
 
 ¢` GeneratorMargin = 1.1 `
 
-¢` HPIP_MW_number = 398.246713921 `
+¢` HPIP_MW_number = 398.246713921 MW `
 
-¢` LP_MW_number = 280.476419132 `
+¢` LP_MW_number = 280.476419132 MW `
 
-¢??` HPIP_MVA_number = HPIP_MW_number * GeneratorMargin / PowerFactor =
-〔486.746〕 `
+¢%%` HPIP_MVA_number = HPIP_MW_number * GeneratorMargin / PowerFactor = 〔487〕 MVA `
 
-¢??` LP_MVA_number = LP_MW_number * GeneratorMargin / PowerFactor = 〔342.8045〕 `
+¢%%` LP_MVA_number = LP_MW_number * GeneratorMargin / PowerFactor = 〔343〕 MVA `
 
-The last two numeric results are MVA. Reserve **500 MVA HP/IP and 350 MVA LP
-generators**, using 0.90 power factor and 10% capacity margin. The respective
-calculated outputs are 398.25 and 280.48 MWe. Generator cooling, fault
-capability, excitation and grid requirements remain unresolved.
+The last two results display apparent power in MVA. Reserve **500 MVA HP/IP and
+350 MVA LP generators**, using 0.90 power factor and 10% capacity margin. The
+respective calculated outputs are 398.25 and 280.48 MWe. Generator cooling,
+fault capability, excitation and grid requirements remain unresolved.
 
 ¢` ExhaustMass = 361.044394886 'kg/s' `
 
@@ -164,14 +163,14 @@ capability, excitation and grid requirements remain unresolved.
 
 ¢` HubTipRatio = 0.5 `
 
-¢??` ExhaustVolume = ExhaustMass / ExhaustDensity = 〔9,258.481〕 'm3/s' `
+¢%%` ExhaustVolume = ExhaustMass / ExhaustDensity = 〔9,258〕 'm3/s' `
 
-¢??` TotalAnnulus = ExhaustVolume / AxialVelocity = 〔51.43601〕 'm2' `
+¢%%` TotalAnnulus = ExhaustVolume / AxialVelocity = 〔51.4〕 'm2' `
 
-¢??` TipDiameter = sqrt(4 * TotalAnnulus / (ExhaustFlows * Pi * (1 -
-HubTipRatio^2))) = 〔3.814894〕 m `
+¢%%` TipDiameter = sqrt(4 * TotalAnnulus / (ExhaustFlows * Pi * (1 -
+HubTipRatio^2))) = 〔3.81〕 m `
 
-¢??` BladeLength = TipDiameter * (1 - HubTipRatio) / 2 = 〔0.9537234〕 m `
+¢%%` BladeLength = TipDiameter * (1 - HubTipRatio) / 2 = 〔0.954〕 m `
 
 At 180 m/s assumed axial speed and hub/tip ratio 0.5, four / six / eight exhaust
 flows imply tip diameters **4.67 / 3.81 / 3.30 m** and blade lengths **1.17 /
@@ -206,31 +205,31 @@ Editable area calculations (UA imported from the detailed thermal profiles):
 
 ¢` HP4UA = 8895504.9272 'W/K' `
 
-¢??` HP4Area = SurfaceFactor * HP4UA / HeaterU = 〔5,337.303〕 'm2' `
+¢%%` HP4Area = SurfaceFactor * HP4UA / HeaterU = 〔5,337〕 'm2' `
 
 ¢` HP3UA = 6038433.24148 'W/K' `
 
-¢??` HP3Area = SurfaceFactor * HP3UA / HeaterU = 〔3,623.06〕 'm2' `
+¢%%` HP3Area = SurfaceFactor * HP3UA / HeaterU = 〔3,623〕 'm2' `
 
 ¢` HP2UA = 5151654.9872 'W/K' `
 
-¢??` HP2Area = SurfaceFactor * HP2UA / HeaterU = 〔3,090.993〕 'm2' `
+¢%%` HP2Area = SurfaceFactor * HP2UA / HeaterU = 〔3,091〕 'm2' `
 
 ¢` HP1UA = 3784966.4652 'W/K' `
 
-¢??` HP1Area = SurfaceFactor * HP1UA / HeaterU = 〔2,270.98〕 'm2' `
+¢%%` HP1Area = SurfaceFactor * HP1UA / HeaterU = 〔2,271〕 'm2' `
 
 ¢` LP3UA = 2063976.69926 'W/K' `
 
-¢??` LP3Area = SurfaceFactor * LP3UA / HeaterU = 〔1,238.386〕 'm2' `
+¢%%` LP3Area = SurfaceFactor * LP3UA / HeaterU = 〔1,238〕 'm2' `
 
 ¢` LP2UA = 3419061.80544 'W/K' `
 
-¢??` LP2Area = SurfaceFactor * LP2UA / HeaterU = 〔2,051.437〕 'm2' `
+¢%%` LP2Area = SurfaceFactor * LP2UA / HeaterU = 〔2,051〕 'm2' `
 
 ¢` LP1UA = 3436187.99733 'W/K' `
 
-¢??` LP1Area = SurfaceFactor * LP1UA / HeaterU = 〔2,061.713〕 'm2' `
+¢%%` LP1Area = SurfaceFactor * LP1UA / HeaterU = 〔2,062〕 'm2' `
 
 At U = 1,000 the areas double; at 3,000 they are two-thirds of the listed
 values. Large LP extraction volumes favor short, direct connections near the
@@ -248,13 +247,13 @@ reclosure.
 
 ¢` DADensity = 908.593781654 'kg/m3' `
 
-¢??` FeedPumpFlow = MainMass / DADensity = 〔0.7832656〕 'm3/s' `
+¢%%` FeedPumpFlow = MainMass / DADensity = 〔0.783〕 'm3/s' `
 
-¢` BFPspecificWork = 33315.9524878 'J/kg' `
+¢` BFPspecificWork = 33.3159524878 'kJ/kg' `
 
-¢??` BFPshaft = MainMass * BFPspecificWork = 〔23.70997〕 MW `
+¢%%` BFPshaft = MainMass * BFPspecificWork = 〔23.7〕 MW `
 
-¢??` BFPshaftEach = BFPshaft / 2 = 〔11.85499〕 MW `
+¢%%` BFPshaftEach = BFPshaft / 2 = 〔11.9〕 MW `
 
 **Feedwater:** 26.5 MPa discharge, 0.6 MPa suction, about 2,907 m pressure head;
 85% hydraulic efficiency. The 2.5 MPa above main-turbine inlet pressure budgets
@@ -272,7 +271,7 @@ be rebalanced before adopting the new pressures.
 
 ¢` BFP_suction_loss = 2 m `
 
-¢??` BFP_min_level = BFP_NPSHr + BFP_NPSHmargin + BFP_suction_loss = 〔13〕 m `
+¢%%` BFP_min_level = BFP_NPSHr + BFP_NPSHmargin + BFP_suction_loss = 〔13〕 m `
 
 Saturated deaerator water has no pressure-above-vapor-pressure cushion. With
 assumed NPSHr=8 m, 3 m margin and 2 m suction loss, the minimum water level
@@ -290,8 +289,8 @@ alternative to the elevated storage arrangement.
 
 ¢` CondensateLineLoss = 0.05 MPa `
 
-¢??` CondensatePressureRequired = DApressure + CondensateDensity * Gravity *
-DAlevel + LPHeaterLoss + CondensateLineLoss = 〔0.8866067〕 MPa `
+¢%%` CondensatePressureRequired = DApressure + CondensateDensity * Gravity *
+DAlevel + LPHeaterLoss + CondensateLineLoss = 〔0.887〕 MPa `
 
 **Condensate:** 1.0 MPa discharge is a provisional replacement for 0.72 MPa. The
 elevation and loss budget alone require 0.887 MPa. Total flow 0.418 m³/s; total
@@ -308,10 +307,10 @@ Actual NPSHr, hotwell levels and transients are unresolved.
 
 ¢` MotorEfficiency = 0.96 `
 
-¢??` CoolingPumpElectric = CoolingDensity * Gravity * CoolingFlow * CoolingHead
-/ (CoolingPumpEfficiency * MotorEfficiency) = 〔5.50599〕 MW `
+¢%%` CoolingPumpElectric = CoolingDensity * Gravity * CoolingFlow * CoolingHead
+/ (CoolingPumpEfficiency * MotorEfficiency) = 〔5.51〕 MW `
 
-¢??` CoolingPumpEach = CoolingPumpElectric / 2 = 〔2.752995〕 MW `
+¢%%` CoolingPumpEach = CoolingPumpElectric / 2 = 〔2.75〕 MW `
 
 **Cooling water:** at an assumed 20 m total head, total operating electrical
 load is 5.51 MW. Each duty pump carries 11.88 m³/s; reserve **3.5 MW per
@@ -337,14 +336,14 @@ drawdown range, not the volume to the top of the tank.
 
 ¢` UsableFraction = 0.7 `
 
-¢??` StorageRequired = FeedPumpFlow * StorageTime = 〔469.9594〕 'm3' `
+¢%%` StorageRequired = FeedPumpFlow * StorageTime = 〔470〕 'm3' `
 
-¢??` StorageGross = StorageVessels * Pi * StorageDiameter^2 * StorageLength / 4
-= 〔699.7898〕 'm3' `
+¢%%` StorageGross = StorageVessels * Pi * StorageDiameter^2 * StorageLength / 4
+= 〔700〕 'm3' `
 
-¢??` StorageUsable = StorageGross * UsableFraction = 〔489.8528〕 'm3' `
+¢%%` StorageUsable = StorageGross * UsableFraction = 〔490〕 'm3' `
 
-¢??` StorageDuration = StorageUsable / FeedPumpFlow = 〔625.3981〕 s `
+¢%%` StorageDuration = StorageUsable / FeedPumpFlow = 〔625〕 s `
 
 A candidate is **two 4.5 m diameter × 22 m straight-length vessels**, excluding
 heads and the deaerating sections. Together their 70% usable range provides 490
@@ -402,11 +401,11 @@ indiscriminately to the existing piping losses.
 
 ¢` Pipe1Bore = 0.725 m `
 
-¢??` Pipe1MinBore = sqrt(4 * Pipe1Mass / (Pi * Pipe1Density * Pipe1Count *
-Pipe1Limit)) = 〔0.7016198〕 m `
+¢%%` Pipe1MinBore = sqrt(4 * Pipe1Mass / (Pi * Pipe1Density * Pipe1Count *
+Pipe1Limit)) = 〔0.702〕 m `
 
-¢??` Pipe1Velocity = 4 * Pipe1Mass / (Pi * Pipe1Density * Pipe1Count *
-Pipe1Bore^2) = 〔23.41357〕 'm/s' `
+¢%%` Pipe1Velocity = 4 * Pipe1Mass / (Pi * Pipe1Density * Pipe1Count *
+Pipe1Bore^2) = 〔23.4〕 'm/s' `
 
 **Main steam branch (each of 3)** (main; single-phase).
 
@@ -420,11 +419,11 @@ Pipe1Bore^2) = 〔23.41357〕 'm/s' `
 
 ¢` Pipe2Bore = 0.425 m `
 
-¢??` Pipe2MinBore = sqrt(4 * Pipe2Mass / (Pi * Pipe2Density * Pipe2Count *
-Pipe2Limit)) = 〔0.4050804〕 m `
+¢%%` Pipe2MinBore = sqrt(4 * Pipe2Mass / (Pi * Pipe2Density * Pipe2Count *
+Pipe2Limit)) = 〔0.405〕 m `
 
-¢??` Pipe2Velocity = 4 * Pipe2Mass / (Pi * Pipe2Density * Pipe2Count *
-Pipe2Bore^2) = 〔22.71144〕 'm/s' `
+¢%%` Pipe2Velocity = 4 * Pipe2Mass / (Pi * Pipe2Density * Pipe2Count *
+Pipe2Bore^2) = 〔22.7〕 'm/s' `
 
 **HP admission after reheat split** (main; single-phase).
 
@@ -438,11 +437,11 @@ Pipe2Bore^2) = 〔22.71144〕 'm/s' `
 
 ¢` Pipe3Bore = 0.55 m `
 
-¢??` Pipe3MinBore = sqrt(4 * Pipe3Mass / (Pi * Pipe3Density * Pipe3Count *
-Pipe3Limit)) = 〔0.5499363〕 m `
+¢%%` Pipe3MinBore = sqrt(4 * Pipe3Mass / (Pi * Pipe3Density * Pipe3Count *
+Pipe3Limit)) = 〔0.55〕 m `
 
-¢??` Pipe3Velocity = 4 * Pipe3Mass / (Pi * Pipe3Density * Pipe3Count *
-Pipe3Bore^2) = 〔29.99306〕 'm/s' `
+¢%%` Pipe3Velocity = 4 * Pipe3Mass / (Pi * Pipe3Density * Pipe3Count *
+Pipe3Bore^2) = 〔30〕 'm/s' `
 
 **Reheater heating supply** (main; single-phase).
 
@@ -456,11 +455,11 @@ Pipe3Bore^2) = 〔29.99306〕 'm/s' `
 
 ¢` Pipe4Bore = 0.35 m `
 
-¢??` Pipe4MinBore = sqrt(4 * Pipe4Mass / (Pi * Pipe4Density * Pipe4Count *
-Pipe4Limit)) = 〔0.328322〕 m `
+¢%%` Pipe4MinBore = sqrt(4 * Pipe4Mass / (Pi * Pipe4Density * Pipe4Count *
+Pipe4Limit)) = 〔0.328〕 m `
 
-¢??` Pipe4Velocity = 4 * Pipe4Mass / (Pi * Pipe4Density * Pipe4Count *
-Pipe4Bore^2) = 〔26.39886〕 'm/s' `
+¢%%` Pipe4Velocity = 4 * Pipe4Mass / (Pi * Pipe4Density * Pipe4Count *
+Pipe4Bore^2) = 〔26.4〕 'm/s' `
 
 **Reheater heating return** (reheat\_return; single-phase).
 
@@ -474,11 +473,11 @@ Pipe4Bore^2) = 〔26.39886〕 'm/s' `
 
 ¢` Pipe5Bore = 0.475 m `
 
-¢??` Pipe5MinBore = sqrt(4 * Pipe5Mass / (Pi * Pipe5Density * Pipe5Count *
-Pipe5Limit)) = 〔0.453715〕 m `
+¢%%` Pipe5MinBore = sqrt(4 * Pipe5Mass / (Pi * Pipe5Density * Pipe5Count *
+Pipe5Limit)) = 〔0.454〕 m `
 
-¢??` Pipe5Velocity = 4 * Pipe5Mass / (Pi * Pipe5Density * Pipe5Count *
-Pipe5Bore^2) = 〔2.737161〕 'm/s' `
+¢%%` Pipe5Velocity = 4 * Pipe5Mass / (Pi * Pipe5Density * Pipe5Count *
+Pipe5Bore^2) = 〔2.74〕 'm/s' `
 
 **Cold reheat** (reheat\_cold; single-phase).
 
@@ -492,11 +491,11 @@ Pipe5Bore^2) = 〔2.737161〕 'm/s' `
 
 ¢` Pipe6Bore = 0.75 m `
 
-¢??` Pipe6MinBore = sqrt(4 * Pipe6Mass / (Pi * Pipe6Density * Pipe6Count *
-Pipe6Limit)) = 〔0.7331458〕 m `
+¢%%` Pipe6MinBore = sqrt(4 * Pipe6Mass / (Pi * Pipe6Density * Pipe6Count *
+Pipe6Limit)) = 〔0.733〕 m `
 
-¢??` Pipe6Velocity = 4 * Pipe6Mass / (Pi * Pipe6Density * Pipe6Count *
-Pipe6Bore^2) = 〔38.22242〕 'm/s' `
+¢%%` Pipe6Velocity = 4 * Pipe6Mass / (Pi * Pipe6Density * Pipe6Count *
+Pipe6Bore^2) = 〔38.2〕 'm/s' `
 
 **Hot reheat** (reheat\_hot; single-phase).
 
@@ -510,11 +509,11 @@ Pipe6Bore^2) = 〔38.22242〕 'm/s' `
 
 ¢` Pipe7Bore = 0.95 m `
 
-¢??` Pipe7MinBore = sqrt(4 * Pipe7Mass / (Pi * Pipe7Density * Pipe7Count *
-Pipe7Limit)) = 〔0.9384907〕 m `
+¢%%` Pipe7MinBore = sqrt(4 * Pipe7Mass / (Pi * Pipe7Density * Pipe7Count *
+Pipe7Limit)) = 〔0.938〕 m `
 
-¢??` Pipe7Velocity = 4 * Pipe7Mass / (Pi * Pipe7Density * Pipe7Count *
-Pipe7Bore^2) = 〔39.03667〕 'm/s' `
+¢%%` Pipe7Velocity = 4 * Pipe7Mass / (Pi * Pipe7Density * Pipe7Count *
+Pipe7Bore^2) = 〔39〕 'm/s' `
 
 **IP-to-LP crossover** (IPex; single-phase).
 
@@ -528,11 +527,11 @@ Pipe7Bore^2) = 〔39.03667〕 'm/s' `
 
 ¢` Pipe8Bore = 1.4 m `
 
-¢??` Pipe8MinBore = sqrt(4 * Pipe8Mass / (Pi * Pipe8Density * Pipe8Count *
-Pipe8Limit)) = 〔1.393721〕 m `
+¢%%` Pipe8MinBore = sqrt(4 * Pipe8Mass / (Pi * Pipe8Density * Pipe8Count *
+Pipe8Limit)) = 〔1.39〕 m `
 
-¢??` Pipe8Velocity = 4 * Pipe8Mass / (Pi * Pipe8Density * Pipe8Count *
-Pipe8Bore^2) = 〔39.64199〕 'm/s' `
+¢%%` Pipe8Velocity = 4 * Pipe8Mass / (Pi * Pipe8Density * Pipe8Count *
+Pipe8Bore^2) = 〔39.6〕 'm/s' `
 
 **Feedwater header (existing bore)** (feedwater; single-phase).
 
@@ -546,11 +545,11 @@ Pipe8Bore^2) = 〔39.64199〕 'm/s' `
 
 ¢` Pipe9Bore = 0.65 m `
 
-¢??` Pipe9MinBore = sqrt(4 * Pipe9Mass / (Pi * Pipe9Density * Pipe9Count *
-Pipe9Limit)) = 〔0.6285538〕 m `
+¢%%` Pipe9MinBore = sqrt(4 * Pipe9Mass / (Pi * Pipe9Density * Pipe9Count *
+Pipe9Limit)) = 〔0.629〕 m `
 
-¢??` Pipe9Velocity = 4 * Pipe9Mass / (Pi * Pipe9Density * Pipe9Count *
-Pipe9Bore^2) = 〔2.805301〕 'm/s' `
+¢%%` Pipe9Velocity = 4 * Pipe9Mass / (Pi * Pipe9Density * Pipe9Count *
+Pipe9Bore^2) = 〔2.81〕 'm/s' `
 
 **Feedwater branch (each of 3)** (feedwater; single-phase).
 
@@ -564,11 +563,11 @@ Pipe9Bore^2) = 〔2.805301〕 'm/s' `
 
 ¢` Pipe10Bore = 0.375 m `
 
-¢??` Pipe10MinBore = sqrt(4 * Pipe10Mass / (Pi * Pipe10Density * Pipe10Count *
-Pipe10Limit)) = 〔0.3628957〕 m `
+¢%%` Pipe10MinBore = sqrt(4 * Pipe10Mass / (Pi * Pipe10Density * Pipe10Count *
+Pipe10Limit)) = 〔0.363〕 m `
 
-¢??` Pipe10Velocity = 4 * Pipe10Mass / (Pi * Pipe10Density * Pipe10Count *
-Pipe10Bore^2) = 〔2.809457〕 'm/s' `
+¢%%` Pipe10Velocity = 4 * Pipe10Mass / (Pi * Pipe10Density * Pipe10Count *
+Pipe10Bore^2) = 〔2.81〕 'm/s' `
 
 **Deaerator to feed pumps** (deaerator; single-phase).
 
@@ -582,11 +581,11 @@ Pipe10Bore^2) = 〔2.809457〕 'm/s' `
 
 ¢` Pipe11Bore = 0.5 m `
 
-¢??` Pipe11MinBore = sqrt(4 * Pipe11Mass / (Pi * Pipe11Density * Pipe11Count *
-Pipe11Limit)) = 〔0.4993207〕 m `
+¢%%` Pipe11MinBore = sqrt(4 * Pipe11Mass / (Pi * Pipe11Density * Pipe11Count *
+Pipe11Limit)) = 〔0.499〕 m `
 
-¢??` Pipe11Velocity = 4 * Pipe11Mass / (Pi * Pipe11Density * Pipe11Count *
-Pipe11Bore^2) = 〔1.994569〕 'm/s' `
+¢%%` Pipe11Velocity = 4 * Pipe11Mass / (Pi * Pipe11Density * Pipe11Count *
+Pipe11Bore^2) = 〔1.99〕 'm/s' `
 
 **Condensate through LP heater bank** (condensate\_pump; single-phase).
 
@@ -600,11 +599,11 @@ Pipe11Bore^2) = 〔1.994569〕 'm/s' `
 
 ¢` Pipe12Bore = 0.475 m `
 
-¢??` Pipe12MinBore = sqrt(4 * Pipe12Mass / (Pi * Pipe12Density * Pipe12Count *
-Pipe12Limit)) = 〔0.4610727〕 m `
+¢%%` Pipe12MinBore = sqrt(4 * Pipe12Mass / (Pi * Pipe12Density * Pipe12Count *
+Pipe12Limit)) = 〔0.461〕 m `
 
-¢??` Pipe12Velocity = 4 * Pipe12Mass / (Pi * Pipe12Density * Pipe12Count *
-Pipe12Bore^2) = 〔2.355546〕 'm/s' `
+¢%%` Pipe12Velocity = 4 * Pipe12Mass / (Pi * Pipe12Density * Pipe12Count *
+Pipe12Bore^2) = 〔2.36〕 'm/s' `
 
 **HP4 extraction** (HP4; single-phase).
 
@@ -618,11 +617,11 @@ Pipe12Bore^2) = 〔2.355546〕 'm/s' `
 
 ¢` Pipe13Bore = 0.225 m `
 
-¢??` Pipe13MinBore = sqrt(4 * Pipe13Mass / (Pi * Pipe13Density * Pipe13Count *
-Pipe13Limit)) = 〔0.2248527〕 m `
+¢%%` Pipe13MinBore = sqrt(4 * Pipe13Mass / (Pi * Pipe13Density * Pipe13Count *
+Pipe13Limit)) = 〔0.225〕 m `
 
-¢??` Pipe13Velocity = 4 * Pipe13Mass / (Pi * Pipe13Density * Pipe13Count *
-Pipe13Bore^2) = 〔34.95418〕 'm/s' `
+¢%%` Pipe13Velocity = 4 * Pipe13Mass / (Pi * Pipe13Density * Pipe13Count *
+Pipe13Bore^2) = 〔35〕 'm/s' `
 
 **HP3 extraction** (HPex; single-phase).
 
@@ -636,11 +635,11 @@ Pipe13Bore^2) = 〔34.95418〕 'm/s' `
 
 ¢` Pipe14Bore = 0.175 m `
 
-¢??` Pipe14MinBore = sqrt(4 * Pipe14Mass / (Pi * Pipe14Density * Pipe14Count *
-Pipe14Limit)) = 〔0.1724263〕 m `
+¢%%` Pipe14MinBore = sqrt(4 * Pipe14Mass / (Pi * Pipe14Density * Pipe14Count *
+Pipe14Limit)) = 〔0.172〕 m `
 
-¢??` Pipe14Velocity = 4 * Pipe14Mass / (Pi * Pipe14Density * Pipe14Count *
-Pipe14Bore^2) = 〔33.9781〕 'm/s' `
+¢%%` Pipe14Velocity = 4 * Pipe14Mass / (Pi * Pipe14Density * Pipe14Count *
+Pipe14Bore^2) = 〔34〕 'm/s' `
 
 **HP2 extraction** (pump\_bleed2; single-phase).
 
@@ -654,11 +653,11 @@ Pipe14Bore^2) = 〔33.9781〕 'm/s' `
 
 ¢` Pipe15Bore = 0.3 m `
 
-¢??` Pipe15MinBore = sqrt(4 * Pipe15Mass / (Pi * Pipe15Density * Pipe15Count *
-Pipe15Limit)) = 〔0.2856932〕 m `
+¢%%` Pipe15MinBore = sqrt(4 * Pipe15Mass / (Pi * Pipe15Density * Pipe15Count *
+Pipe15Limit)) = 〔0.286〕 m `
 
-¢??` Pipe15Velocity = 4 * Pipe15Mass / (Pi * Pipe15Density * Pipe15Count *
-Pipe15Bore^2) = 〔31.74134〕 'm/s' `
+¢%%` Pipe15Velocity = 4 * Pipe15Mass / (Pi * Pipe15Density * Pipe15Count *
+Pipe15Bore^2) = 〔31.7〕 'm/s' `
 
 **HP1 extraction** (pump\_bleed1; two-phase homogeneous screen).
 
@@ -672,11 +671,11 @@ Pipe15Bore^2) = 〔31.74134〕 'm/s' `
 
 ¢` Pipe16Bore = 0.225 m `
 
-¢??` Pipe16MinBore = sqrt(4 * Pipe16Mass / (Pi * Pipe16Density * Pipe16Count *
-Pipe16Limit)) = 〔0.2128661〕 m `
+¢%%` Pipe16MinBore = sqrt(4 * Pipe16Mass / (Pi * Pipe16Density * Pipe16Count *
+Pipe16Limit)) = 〔0.213〕 m `
 
-¢??` Pipe16Velocity = 4 * Pipe16Mass / (Pi * Pipe16Density * Pipe16Count *
-Pipe16Bore^2) = 〔31.32679〕 'm/s' `
+¢%%` Pipe16Velocity = 4 * Pipe16Mass / (Pi * Pipe16Density * Pipe16Count *
+Pipe16Bore^2) = 〔31.3〕 'm/s' `
 
 **LP3 extraction** (LP3; single-phase).
 
@@ -690,11 +689,11 @@ Pipe16Bore^2) = 〔31.32679〕 'm/s' `
 
 ¢` Pipe17Bore = 0.675 m `
 
-¢??` Pipe17MinBore = sqrt(4 * Pipe17Mass / (Pi * Pipe17Density * Pipe17Count *
-Pipe17Limit)) = 〔0.6720467〕 m `
+¢%%` Pipe17MinBore = sqrt(4 * Pipe17Mass / (Pi * Pipe17Density * Pipe17Count *
+Pipe17Limit)) = 〔0.672〕 m `
 
-¢??` Pipe17Velocity = 4 * Pipe17Mass / (Pi * Pipe17Density * Pipe17Count *
-Pipe17Bore^2) = 〔34.69441〕 'm/s' `
+¢%%` Pipe17Velocity = 4 * Pipe17Mass / (Pi * Pipe17Density * Pipe17Count *
+Pipe17Bore^2) = 〔34.7〕 'm/s' `
 
 **LP2 extraction** (LP2; single-phase).
 
@@ -708,11 +707,11 @@ Pipe17Bore^2) = 〔34.69441〕 'm/s' `
 
 ¢` Pipe18Bore = 1.25 m `
 
-¢??` Pipe18MinBore = sqrt(4 * Pipe18Mass / (Pi * Pipe18Density * Pipe18Count *
-Pipe18Limit)) = 〔1.231993〕 m `
+¢%%` Pipe18MinBore = sqrt(4 * Pipe18Mass / (Pi * Pipe18Density * Pipe18Count *
+Pipe18Limit)) = 〔1.23〕 m `
 
-¢??` Pipe18Velocity = 4 * Pipe18Mass / (Pi * Pipe18Density * Pipe18Count *
-Pipe18Bore^2) = 〔33.99887〕 'm/s' `
+¢%%` Pipe18Velocity = 4 * Pipe18Mass / (Pi * Pipe18Density * Pipe18Count *
+Pipe18Bore^2) = 〔34〕 'm/s' `
 
 **LP1 extraction** (LP1; two-phase homogeneous screen).
 
@@ -726,11 +725,11 @@ Pipe18Bore^2) = 〔33.99887〕 'm/s' `
 
 ¢` Pipe19Bore = 2.025 m `
 
-¢??` Pipe19MinBore = sqrt(4 * Pipe19Mass / (Pi * Pipe19Density * Pipe19Count *
-Pipe19Limit)) = 〔2.017173〕 m `
+¢%%` Pipe19MinBore = sqrt(4 * Pipe19Mass / (Pi * Pipe19Density * Pipe19Count *
+Pipe19Limit)) = 〔2.02〕 m `
 
-¢??` Pipe19Velocity = 4 * Pipe19Mass / (Pi * Pipe19Density * Pipe19Count *
-Pipe19Bore^2) = 〔34.72997〕 'm/s' `
+¢%%` Pipe19Velocity = 4 * Pipe19Mass / (Pi * Pipe19Density * Pipe19Count *
+Pipe19Bore^2) = 〔34.7〕 'm/s' `
 
 **Feed-pump turbine supply** (HP4; single-phase).
 
@@ -744,11 +743,11 @@ Pipe19Bore^2) = 〔34.72997〕 'm/s' `
 
 ¢` Pipe20Bore = 0.275 m `
 
-¢??` Pipe20MinBore = sqrt(4 * Pipe20Mass / (Pi * Pipe20Density * Pipe20Count *
-Pipe20Limit)) = 〔0.2692438〕 m `
+¢%%` Pipe20MinBore = sqrt(4 * Pipe20Mass / (Pi * Pipe20Density * Pipe20Count *
+Pipe20Limit)) = 〔0.269〕 m `
 
-¢??` Pipe20Velocity = 4 * Pipe20Mass / (Pi * Pipe20Density * Pipe20Count *
-Pipe20Bore^2) = 〔33.55012〕 'm/s' `
+¢%%` Pipe20Velocity = 4 * Pipe20Mass / (Pi * Pipe20Density * Pipe20Count *
+Pipe20Bore^2) = 〔33.6〕 'm/s' `
 
 **Feed-pump turbine exhaust to DA** (pump\_exhaust; two-phase homogeneous
 screen).
@@ -763,11 +762,11 @@ screen).
 
 ¢` Pipe21Bore = 0.625 m `
 
-¢??` Pipe21MinBore = sqrt(4 * Pipe21Mass / (Pi * Pipe21Density * Pipe21Count *
-Pipe21Limit)) = 〔0.6073597〕 m `
+¢%%` Pipe21MinBore = sqrt(4 * Pipe21Mass / (Pi * Pipe21Density * Pipe21Count *
+Pipe21Limit)) = 〔0.607〕 m `
 
-¢??` Pipe21Velocity = 4 * Pipe21Mass / (Pi * Pipe21Density * Pipe21Count *
-Pipe21Bore^2) = 〔33.05217〕 'm/s' `
+¢%%` Pipe21Velocity = 4 * Pipe21Mass / (Pi * Pipe21Density * Pipe21Count *
+Pipe21Bore^2) = 〔33.1〕 'm/s' `
 
 HP1, LP1 and feed-pump-turbine exhaust are screened with homogeneous wet-steam
 properties; real drainage, erosion, slip and flashing losses need separate
@@ -827,14 +826,50 @@ map is asserted.
 
 [4]: equipment-sizing.json
 
-[5]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+[5]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
 
-[6]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\_lang=en-GB
+[6]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_lang=en-GB
 
 [7]: https://graham-mfg.com/solutions/products/surface-condensers/
 
 [8]: https://www.siemens-energy.com/global/en/home/products-services/product/utility-steam-turbines.html
 
-[9]: https://coolprop.org/fluid\_properties/fluids/Water.html
+[9]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
 
-[10]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\_lang=en-GB
+[10]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_lang=en-GB
+
+[11]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[12]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_lang=en-GB
+
+[13]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[14]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_lang=en-GB
+
+[15]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[16]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_lang=en-GB
+
+[17]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[18]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_lang=en-GB
+
+[19]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[20]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_lang=en-GB
+
+[21]: https://coolprop.org/fluid\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[22]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\\\\\\\\\_lang=en-GB
+
+[23]: https://coolprop.org/fluid\\\\\\\_properties/fluids/Water.html
+
+[24]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\\\\\_lang=en-GB
+
+[25]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+
+[26]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\\\_lang=en-GB
+
+[27]: https://coolprop.org/fluid\_properties/fluids/Water.html
+
+[28]: https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/pressurised-deaerators?sc\_lang=en-GB

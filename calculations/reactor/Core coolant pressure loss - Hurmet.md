@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-14
+saveDate: 2026-10-20
 ---------------
 
 # Core coolant pressure loss
+
+¢` format = "h3" `
 
 Preliminary estimate, 14 October 2026. Owner selects the UM report's **18,500
 kg/s total core flow**, with coolant at 810–890 K, and confirms **3.4 m active
@@ -39,8 +41,6 @@ The main-generator worksheet previously used 22,699 kg/s total and an 875 K
 outlet. That earlier operating basis is not used here. Its pump and
 system-pressure estimates require reconciliation before this core result is
 incorporated into the whole-loop balance.
-
-¢` format = "h7" `
 
 ¢` MassFlow = 18500 kg/s `
 
@@ -83,39 +83,38 @@ incorporated into the whole-loop balance.
 Use arithmetic mean bulk temperature for this first estimate. The actual
 velocity rises along each heated tube as density falls.
 
-¢??` MeanTemperature = (InletTemperature + OutletTemperature) / 2 = 〔850〕 K `
+¢%%` MeanTemperature = (InletTemperature + OutletTemperature) / 2 = 〔850〕 K `
 
-¢??` Density = DensityIntercept - DensitySlope * MeanTemperature = 〔1,633.783〕
+¢%%` Density = DensityIntercept - DensitySlope * MeanTemperature = 〔1,634〕 kg/m3 `
+
+¢%%` Viscosity = ViscosityScale * exp(ViscosityTemperature / MeanTemperature) =
+〔0.00291〕 Pa.s `
+
+¢%%` SingleArea = pi * TubeBore^2 / 4 = 〔0.000154〕 m2 `
+
+¢%%` FlowArea = TubeCount * SingleArea = 〔3.78〕 m2 `
+
+¢%%` VolumeFlow = MassFlow / Density = 〔11.3〕 m3/s `
+
+¢%%` TubeMassFlow = MassFlow / TubeCount = 〔0.753〕 kg/s `
+
+¢%%` Velocity = VolumeFlow / FlowArea = 〔2.99〕 m/s `
+
+¢%%` InletDensity = DensityIntercept - DensitySlope * InletTemperature = 〔1,656〕
 kg/m3 `
 
-¢??` Viscosity = ViscosityScale * exp(ViscosityTemperature / MeanTemperature) =
-〔0.002912508〕 Pa.s `
+¢%%` OutletDensity = DensityIntercept - DensitySlope * OutletTemperature =
+〔1,611〕 kg/m3 `
 
-¢??` SingleArea = pi * TubeBore^2 / 4 = 〔0.000153938〕 m2 `
+¢%%` InletVelocity = MassFlow / (InletDensity * FlowArea) = 〔2.95〕 m/s `
 
-¢??` FlowArea = TubeCount * SingleArea = 〔3.783181〕 m2 `
+¢%%` OutletVelocity = MassFlow / (OutletDensity * FlowArea) = 〔3.03〕 m/s `
 
-¢??` VolumeFlow = MassFlow / Density = 〔11.32342〕 m3/s `
+¢%%` ReportedAreaVelocity = MassFlow / (Density * ReportedArea) = 〔2.93〕 m/s `
 
-¢??` TubeMassFlow = MassFlow / TubeCount = 〔0.7527669〕 kg/s `
+¢%%` AreaDifference = ReportedArea / FlowArea - 1 = 〔0.0203〕 `
 
-¢??` Velocity = VolumeFlow / FlowArea = 〔2.993094〕 m/s `
-
-¢??` InletDensity = DensityIntercept - DensitySlope * InletTemperature =
-〔1,656.324〕 kg/m3 `
-
-¢??` OutletDensity = DensityIntercept - DensitySlope * OutletTemperature =
-〔1,611.241〕 kg/m3 `
-
-¢??` InletVelocity = MassFlow / (InletDensity * FlowArea) = 〔2.952359〕 m/s `
-
-¢??` OutletVelocity = MassFlow / (OutletDensity * FlowArea) = 〔3.034969〕 m/s `
-
-¢??` ReportedAreaVelocity = MassFlow / (Density * ReportedArea) = 〔2.933528〕 m/s `
-
-¢??` AreaDifference = ReportedArea / FlowArea - 1 = 〔0.02030533〕 `
-
-¢??` Reynolds = Density * Velocity * TubeBore / Viscosity = 〔23,505.82〕 `
+¢%%` Reynolds = Density * Velocity * TubeBore / Viscosity = 〔23,506〕 `
 
 The exact tube count × bore gives 3.783 m², about 2% smaller than the report's
 listed 3.86 m². Keep the two bases explicit: 3.86 m² reproduces approximately
@@ -139,37 +138,37 @@ roughness. This is a steady, fully developed, single-phase approximation.
     return 1 / x^2
 end `
 
-¢??` FrictionFactor = Darcy(Reynolds, Roughness / TubeBore) = 〔0.02505653〕 `
+¢%%` FrictionFactor = Darcy(Reynolds, Roughness / TubeBore) = 〔0.0251〕 `
 
-¢??` DynamicPressure = Density * Velocity^2 / 2 = 〔7.318211〕 kPa `
+¢%%` DynamicPressure = Density * Velocity^2 / 2 = 〔7.32〕 kPa `
 
-¢??` PassageLength = CoreLength + BottomReflector + TopReflector = 〔3.95〕 m `
+¢%%` PassageLength = CoreLength + BottomReflector + TopReflector = 〔3.95〕 m `
 
-¢??` CoreFriction = FrictionFactor * CoreLength / TubeBore * DynamicPressure =
-〔44.53247〕 kPa `
+¢%%` CoreFriction = FrictionFactor * CoreLength / TubeBore * DynamicPressure =
+〔44.5〕 kPa `
 
-¢??` ReflectorFriction = FrictionFactor * (BottomReflector + TopReflector) /
-TubeBore * DynamicPressure = 〔7.203782〕 kPa `
+¢%%` ReflectorFriction = FrictionFactor * (BottomReflector + TopReflector) /
+TubeBore * DynamicPressure = 〔7.2〕 kPa `
 
-¢??` PassageFriction = CoreFriction + ReflectorFriction = 〔51.73625〕 kPa `
+¢%%` PassageFriction = CoreFriction + ReflectorFriction = 〔51.7〕 kPa `
 
-¢??` EndLoss = (EntranceK + ExitK) * DynamicPressure = 〔10.97732〕 kPa `
+¢%%` EndLoss = (EntranceK + ExitK) * DynamicPressure = 〔11〕 kPa `
 
-¢??` TotalLoss = PassageFriction + EndLoss = 〔62.71357〕 kPa `
+¢%%` TotalLoss = PassageFriction + EndLoss = 〔62.7〕 kPa `
 
-¢??` LossHead = TotalLoss / (Density * Gravity) = 〔3.914232〕 m `
+¢%%` LossHead = TotalLoss / (Density * Gravity) = 〔3.91〕 m `
 
-¢??` HydrostaticDifference = Density * Gravity * PassageLength = 〔63.28664〕 kPa `
+¢%%` HydrostaticDifference = Density * Gravity * PassageLength = 〔63.3〕 kPa `
 
-¢??` MassFlux = MassFlow / FlowArea = 〔4,890.064〕 'kg.m-2.s-1' `
+¢%%` MassFlux = MassFlow / FlowArea = 〔4,890〕 'kg.m-2.s-1' `
 
-¢??` AccelerationDifference = MassFlux^2 * (1 / OutletDensity - 1 /
-InletDensity) = 〔0.4039669〕 kPa `
+¢%%` AccelerationDifference = MassFlux^2 * (1 / OutletDensity - 1 /
+InletDensity) = 〔0.404〕 kPa `
 
-¢??` StaticPressureDifference = TotalLoss + HydrostaticDifference +
-AccelerationDifference = 〔126.4042〕 kPa `
+¢%%` StaticPressureDifference = TotalLoss + HydrostaticDifference +
+AccelerationDifference = 〔126〕 kPa `
 
-¢??` HydraulicPower = TotalLoss * VolumeFlow = 〔710.1318〕 kW `
+¢%%` HydraulicPower = TotalLoss * VolumeFlow = 〔710〕 kW `
 
 TotalLoss is irreversible passage loss including the provisional end losses.
 HydrostaticDifference is the approximate bottom-to-top pressure difference due
@@ -183,21 +182,20 @@ velocities and entry/exit recovery require refinement.
 
 ¢` RougherSurface = 0.00001 m `
 
-¢??` RougherFactor = Darcy(Reynolds, RougherSurface / TubeBore) = 〔0.02650602〕 `
+¢%%` RougherFactor = Darcy(Reynolds, RougherSurface / TubeBore) = 〔0.0265〕 `
 
-¢??` RougherTotalLoss = (RougherFactor * PassageLength / TubeBore + EntranceK +
-ExitK) * DynamicPressure = 〔65.70644〕 kPa `
+¢%%` RougherTotalLoss = (RougherFactor * PassageLength / TubeBore + EntranceK +
+ExitK) * DynamicPressure = 〔65.7〕 kPa `
 
-¢??` MeanFlowLimit = Density * FlowArea * VelocityLimit = 〔18,542.69〕 kg/s `
+¢%%` MeanFlowLimit = Density * FlowArea * VelocityLimit = 〔18,543〕 kg/s `
 
-¢??` OutletFlowLimit = OutletDensity * FlowArea * VelocityLimit = 〔18,286.84〕
-kg/s `
+¢%%` OutletFlowLimit = OutletDensity * FlowArea * VelocityLimit = 〔18,287〕 kg/s `
 
-¢??` MeanCountThreshold = MassFlow / (Density * VelocityLimit * SingleArea) =
-〔24,519.42〕 `
+¢%%` MeanCountThreshold = MassFlow / (Density * VelocityLimit * SingleArea) =
+〔24,519〕 `
 
-¢??` OutletCountThreshold = MassFlow / (OutletDensity * VelocityLimit *
-SingleArea) = 〔24,862.46〕 `
+¢%%` OutletCountThreshold = MassFlow / (OutletDensity * VelocityLimit *
+SingleArea) = 〔24,862〕 `
 
 Count thresholds are real-valued hydraulic comparisons; round upward for whole
 tubes. They are not an adopted geometry change and include no maldistribution
@@ -233,6 +231,24 @@ cells and checks save/reopen and sensitivities. The publisher restores the
 documented baseline; direct Hurmet input edits require updating the
 verification baseline before comparison.
 
-[1]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\_RevA\\\_Final.pdf
+[1]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
 
-[2]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\_RevA\_Final.pdf
+[2]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[3]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[4]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[5]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[6]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[7]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_Final.pdf
+
+[8]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\\\\\\\\\_RevA\\\\\\\\\\\\\\\_Final.pdf
+
+[9]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\\\\\_RevA\\\\\\\_Final.pdf
+
+[10]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\\\_RevA\\\_Final.pdf
+
+[11]: https://standards.nasa.gov/sites/default/files/standards/KSC/A/0/KSC-STD-Z-0017\_RevA\_Final.pdf

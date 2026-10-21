@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Selected reheat and LP wetness - preliminary design
+
+¢` format = "h3" `
 
 11 October 2026. This selects a working thermal-cycle configuration after the
 owner requested resolution of reheat feasibility and LP wetness. It supersedes
@@ -36,31 +38,29 @@ off-design turbine performance.
 
 ## Imported properties and selected-cycle inputs
 
-¢` format = "h7" `
-
 ¢` ReactorDuty = 1500 MW `
 
-¢` MainH = 3372394.68556 'J/kg' `
+¢` MainH = 3372.39468556 'kJ/kg' `
 
-¢` FeedH = 1264676.95016 'J/kg' `
+¢` FeedH = 1264.67695016 'kJ/kg' `
 
-¢` HPwork = 337635.944418 'J/kg' `
+¢` HPwork = 337.635944418 'kJ/kg' `
 
-¢` IPwork = 236218.786987 'J/kg' `
+¢` IPwork = 236.218786987 'kJ/kg' `
 
-¢` LPwork = 404153.291265 'J/kg' `
+¢` LPwork = 404.153291265 'kJ/kg' `
 
-¢` ColdReheatH = 2875339.32398 'J/kg' `
+¢` ColdReheatH = 2875.33932398 'kJ/kg' `
 
-¢` HotReheatH = 3483315.98114 'J/kg' `
+¢` HotReheatH = 3483.31598114 'kJ/kg' `
 
-¢` HeatingReturnH = 2022118.99572 'J/kg' `
+¢` HeatingReturnH = 2022.11899572 'kJ/kg' `
 
-¢` LPExhaustH = 2342219.90378 'J/kg' `
+¢` LPExhaustH = 2342.21990378 'kJ/kg' `
 
-¢` SatLiquidH = 137748.595597 'J/kg' `
+¢` SatLiquidH = 137.748595597 'kJ/kg' `
 
-¢` SatVaporH = 2560725.49038 'J/kg' `
+¢` SatVaporH = 2560.72549038 'kJ/kg' `
 
 ¢` HeatingFraction = 0.262771048799 `
 
@@ -74,29 +74,29 @@ off-design turbine performance.
 
 ## Flow, power and reheat duty at 5 kPa
 
-¢??` MainFlow = ReactorDuty / (MainH - FeedH) = 〔711.6702〕 'kg/s' `
+¢%%` MainFlow = ReactorDuty / (MainH - FeedH) = 〔712〕 'kg/s' `
 
-¢??` GrossElectric = MainFlow * (HPwork + IPwork + LPwork) * ShaftEfficiency *
-GeneratorEfficiency = 〔678.7231〕 MW `
+¢%%` GrossElectric = MainFlow * (HPwork + IPwork + LPwork) * ShaftEfficiency *
+GeneratorEfficiency = 〔679〕 MW `
 
-¢??` GrossEfficiency = GrossElectric / ReactorDuty = 〔0.4524821〕 `
+¢%%` GrossEfficiency = GrossElectric / ReactorDuty = 〔0.452〕 `
 
-¢??` HeatingSteam = MainFlow * HeatingFraction = 〔187.0063〕 'kg/s' `
+¢%%` HeatingSteam = MainFlow * HeatingFraction = 〔187〕 'kg/s' `
 
-¢??` ReheatedSteam = MainFlow * ReheatedFraction = 〔415.3286〕 'kg/s' `
+¢%%` ReheatedSteam = MainFlow * ReheatedFraction = 〔415〕 'kg/s' `
 
-¢??` ReheatColdDuty = ReheatedSteam * (HotReheatH - ColdReheatH) = 〔252.5101〕 MW `
+¢%%` ReheatColdDuty = ReheatedSteam * (HotReheatH - ColdReheatH) = 〔253〕 MW `
 
-¢??` ReheatHotDuty = HeatingSteam * (MainH - HeatingReturnH) = 〔252.5101〕 MW `
+¢%%` ReheatHotDuty = HeatingSteam * (MainH - HeatingReturnH) = 〔253〕 MW `
 
-¢??` ReheatBalance = ReheatHotDuty - ReheatColdDuty = 〔3.999301e-9〕 MW `
+¢%%` ReheatBalance = ReheatHotDuty - ReheatColdDuty = 〔4.00e-9〕 MW `
 
-¢??` ExhaustQuality = (LPExhaustH - SatLiquidH) / (SatVaporH - SatLiquidH) =
-〔0.9098194〕 `
+¢%%` ExhaustQuality = (LPExhaustH - SatLiquidH) / (SatVaporH - SatLiquidH) =
+〔0.91〕 `
 
-¢??` ExhaustMoisture = 1 - ExhaustQuality = 〔0.09018063〕 `
+¢%%` ExhaustMoisture = 1 - ExhaustQuality = 〔0.0902〕 `
 
-¢??` WetnessPass = ExhaustMoisture <= MoistureTarget = 〔true〕 `
+¢%%` WetnessPass = ExhaustMoisture <= MoistureTarget = 〔true〕 `
 
 The gross result includes the steam diverted to reheating and the steam-driven
 BFP. Do not subtract BFP shaft work again. Net export awaits the station
@@ -120,15 +120,15 @@ areas exclude design margins.
 
 ¢` AssumedU1 = 500 'W.m-2.K-1' `
 
-¢??` ReheaterArea1 = ImportedUA / AssumedU1 = 〔13,632.45〕 'm2' `
+¢%%` ReheaterArea1 = ImportedUA / AssumedU1 = 〔13,632〕 'm2' `
 
 ¢` AssumedU2 = 1000 'W.m-2.K-1' `
 
-¢??` ReheaterArea2 = ImportedUA / AssumedU2 = 〔6,816.225〕 'm2' `
+¢%%` ReheaterArea2 = ImportedUA / AssumedU2 = 〔6,816〕 'm2' `
 
 ¢` AssumedU3 = 1500 'W.m-2.K-1' `
 
-¢??` ReheaterArea3 = ImportedUA / AssumedU3 = 〔4,544.15〕 'm2' `
+¢%%` ReheaterArea3 = ImportedUA / AssumedU3 = 〔4,544〕 'm2' `
 
 ## Coupled cooling-water cases, unchanged condenser
 
@@ -195,6 +195,24 @@ results are saved alongside.
 
 [2]: README.md
 
-[3]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+[3]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
 
-[4]: https://coolprop.org/fluid\_properties/fluids/Water.html
+[4]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[5]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[6]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[7]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[8]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[9]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[10]: https://coolprop.org/fluid\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[11]: https://coolprop.org/fluid\\\\\\\_properties/fluids/Water.html
+
+[12]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+
+[13]: https://coolprop.org/fluid\_properties/fluids/Water.html

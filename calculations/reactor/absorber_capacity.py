@@ -1,4 +1,11 @@
 """Reproduce source volume balance and screen current geometry; no transient timing fit."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import hashlib,json,math,tomllib
 ROOT=Path(__file__).resolve().parents[2]
@@ -89,7 +96,7 @@ def main():
    start=previous.index(team_heading)
    end=previous.index(sources_heading,start)
    lines.insert(lines.index(sources_heading),previous[start:end].rstrip()+'\n')
- worksheet.write_text('\n'.join(lines)+'\n')
+ write_worksheet(worksheet, '\n'.join(lines)+'\n')
  (HERE/'absorber-capacity-results.json').write_text(json.dumps(r,indent=2)+'\n')
  print(json.dumps({k:v for k,v in r.items() if k not in ('hurmet_checks','sources')},indent=2))
 if __name__=='__main__':main()

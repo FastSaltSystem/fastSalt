@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-10
+saveDate: 2026-10-20
 ---------------
 
 # Generator sizing
+
+¢` format = "h3" `
 
 _Fast Salt System — preliminary steam-generator calculations, converted from
 Calca._
@@ -20,8 +22,6 @@ The inputs, assumptions, correlations, and explanatory reasoning are retained
 from the supplied worksheet. This is a format conversion, not a revision of the
 design calculations. Conversion notes are at the end.
 
-¢` format = "h9" `
-
 Calculations for a combined steam generator and emergency air cooler.
 
 Number of steam generators / emergency air coolers.
@@ -30,7 +30,7 @@ Number of steam generators / emergency air coolers.
 
 ¢` ReactorPower = 1500 MW `
 
-¢??` Q_Gen = ReactorPower / NGen = 〔500〕 MW `
+¢%%` Q_Gen = ReactorPower / NGen = 〔500〕 MW `
 
 ### Temperature distribution
 
@@ -41,7 +41,7 @@ bottom.
 
 ¢` TSaltCool = 810 K `
 
-¢??` SaltAveT = (TSaltHot +TSaltCool)/2 = 〔842.5〕 K `
+¢%%` SaltAveT = (TSaltHot +TSaltCool)/2 = 〔843〕 K `
 
 Supercritical water enters the bottom and exits the top.
 
@@ -51,13 +51,13 @@ Supercritical water enters the bottom and exits the top.
 
 Temperature  differences at top and bottom.
 
-¢??` DTtop = TSaltHot - TStmHot = 〔45〕 K `
+¢%%` DTtop = TSaltHot - TStmHot = 〔45〕 K `
 
-¢??` DTbot = TSaltCool - TStmCool = 〔250〕 K `
+¢%%` DTbot = TSaltCool - TStmCool = 〔250〕 K `
 
 Average temperature difference.
 
-¢??` DTAve = (DTtop + DTbot)/2 = 〔147.5〕 K `
+¢%%` DTAve = (DTtop + DTbot)/2 = 〔148〕 K `
 
 The log mean temperature difference.
 
@@ -65,7 +65,7 @@ The log mean temperature difference.
     return ((Th2-Tc2)-(Th1-Tc1))/ln((Th2-Tc2)/(Th1-Tc1))
 end `
 
-¢??` DT_lmdt = LMTD(TSaltHot, TSaltCool, TStmHot, TStmCool) = 〔119.547579〕 K `
+¢%%` DT_lmdt = LMTD(TSaltHot, TSaltCool, TStmHot, TStmCool) = 〔120〕 K `
 
 ### Coolant properties (MgCl2-KCL-NCl at w/o 45.9, 38.9, 15.1).
 
@@ -89,16 +89,16 @@ end `
 
 Coolant density at average temperature.
 
-¢??` CoolantDensity = CoolantDensityF(SaltAveT) = 〔1,637.93125〕 kg/m3 `
+¢%%` CoolantDensity = CoolantDensityF(SaltAveT) = 〔1,638〕 kg/m3 `
 
-¢??` CoolantHeatCapacity = CoolantHeatCapacityF(SaltAveT) = 〔1.01663〕 J.g-1.K-1 `
+¢%%` CoolantHeatCapacity = CoolantHeatCapacityF(SaltAveT) = 〔1.02〕 J.g-1.K-1 `
 
-¢??` CoolantViscosity = CoolantViscosityF(SaltAveT) = 〔0.00294967785〕 kg.m-1.s-1 `
+¢%%` CoolantViscosity = CoolantViscosityF(SaltAveT) = 〔0.00295〕 kg.m-1.s-1 `
 
-¢??` CoolantHeatCond = CoolantHeatCondF(SaltAveT) = 〔0.43413〕 W.m-1.K-1 `
+¢%%` CoolantHeatCond = CoolantHeatCondF(SaltAveT) = 〔0.434〕 W.m-1.K-1 `
 
-¢??` SaltMassFlow = Q_Gen/(CoolantHeatCapacity*(TSaltHot-TSaltCool)) =
-〔7,566.47718〕 kg/s `
+¢%%` SaltMassFlow = Q_Gen/(CoolantHeatCapacity*(TSaltHot-TSaltCool)) = 〔7,566〕
+kg/s `
 
 Assumed molten salt tube's geometry.
 
@@ -106,9 +106,9 @@ Assumed molten salt tube's geometry.
 
 ¢` TubeThickness = 1 mm `
 
-¢??` TubeOD = TubeID + 2 * TubeThickness = 〔1.6〕 cm `
+¢%%` TubeOD = TubeID + 2 * TubeThickness = 〔1.6〕 cm `
 
-¢??` TubeArea = (pi/4)*TubeID^2 = 〔1.5393804〕 cm2 `
+¢%%` TubeArea = (pi/4)*TubeID^2 = 〔1.54〕 cm2 `
 
 ### Number of coolant tubes needed.
 
@@ -118,41 +118,41 @@ the tubes .
 
 ¢` VelocityLimit = 3 'm/s' `
 
-¢??` AreaNeeded =SaltMassFlow/CoolantDensity/VelocityLimit = 〔1.53984428〕 m2 `
+¢%%` AreaNeeded =SaltMassFlow/CoolantDensity/VelocityLimit = 〔1.54〕 m2 `
 
-¢??` TubesNeeded = ceil(AreaNeeded/TubeArea) = 〔10,004〕 `
+¢%%` TubesNeeded = ceil(AreaNeeded/TubeArea) = 〔10,004〕 `
 
 ## Tubes Used
 
 Set the number of tubes to use.  Setting higher than the needed amount can
 reduce the height of the generator.
 
-¢??` TubesUsed = max(TubesNeeded, 12000) = 〔12,000〕 `
+¢%%` TubesUsed = max(TubesNeeded, 12000) = 〔12,000〕 `
 
 The tubes can be arranged in different configurations, depending on how many
 tubes are put in each row. This sets the generator to a square profile.
 
-¢??` TubesPerRowSq = ceil(sqrt(2* TubesUsed) ) = 〔155〕 `
+¢%%` TubesPerRowSq = ceil(sqrt(2* TubesUsed) ) = 〔155〕 `
 
-¢??` TubesPerRow = TubesPerRowSq = 〔155〕 `
+¢%%` TubesPerRow = TubesPerRowSq = 〔155〕 `
 
-¢??` NRows = ceil(TubesUsed/TubesPerRow) = 〔78〕 `
+¢%%` NRows = ceil(TubesUsed/TubesPerRow) = 〔78〕 `
 
-¢??` NTubes = TubesPerRow * NRows = 〔12,090〕 `
+¢%%` NTubes = TubesPerRow * NRows = 〔12,090〕 `
 
-¢??` SaltWidth = NRows * TubeOD = 〔1.248〕 m `
+¢%%` SaltWidth = NRows * TubeOD = 〔1.25〕 m `
 
 ## Generator profile
 
-¢??` GenDepth = TubesPerRow * TubeOD = 〔2.48〕 m `
+¢%%` GenDepth = TubesPerRow * TubeOD = 〔2.48〕 m `
 
-¢??` GenDepth = 〔8.13648294〕 ft `
+¢%%` GenDepth = 〔8.14〕 ft `
 
 Assuming same size tubes for steam:
 
-¢??` GenWidth = 2 * SaltWidth = 〔2.496〕 m `
+¢%%` GenWidth = 2 * SaltWidth = 〔2.5〕 m `
 
-¢??` GenWidth = 〔8.18897638〕 ft `
+¢%%` GenWidth = 〔8.19〕 ft `
 
 ### Heat transfer per side of tube
 
@@ -162,14 +162,14 @@ Heat transfer in this generator is from both sides of each row of tubes.
 
 The amount of heat to transfer on each side of a tube is:
 
-¢??` Q_Side = Q_Gen/NTubes/Sides = 〔20.6782465〕 kW `
+¢%%` Q_Side = Q_Gen/NTubes/Sides = 〔20.7〕 kW `
 
 ### Radiative heat transfer.
 
 Check to see how well heat is transferred by radiated heat due to temperature.
 The Stefan-Boltzman constant:
 
-¢??` sigma = 5.669e-8 'W.m-2.K-4' = 〔5.66900000e-8〕 W.m-2.K-4 `
+¢%%` sigma = 5.669e-8 'W.m-2.K-4' = 〔5.67e-8〕 W.m-2.K-4 `
 
 Basic emissivity of stainless steel.
 
@@ -177,21 +177,19 @@ Basic emissivity of stainless steel.
 
 Assuming two infinite flat planes facing each other:
 
-¢??` qTop_A = (sigma * (TSaltHot^4 - TStmHot^4)) / ((2/eSS) -1) = 〔2.33994392〕
-kW/m2 `
+¢%%` qTop_A = (sigma * (TSaltHot^4 - TStmHot^4)) / ((2/eSS) -1) = 〔2.34〕 kW/m2 `
 
-¢??` qBot_A = (sigma * (TSaltCool^4 - TStmCool^4)) / ((2/eSS) -1) = 〔6.96378465〕
-kW/m2 `
+¢%%` qBot_A = (sigma * (TSaltCool^4 - TStmCool^4)) / ((2/eSS) -1) = 〔6.96〕 kW/m2 `
 
 Radiation heat transfer is larger at the bottom than the top.
 
 Use the average transfer rate for the height of generator needed:
 
-¢??` qRadAve_A =((qTop_A + qBot_A)/2) = 〔4.65186428〕 kW/m2 `
+¢%%` qRadAve_A =((qTop_A + qBot_A)/2) = 〔4.65〕 kW/m2 `
 
-¢??` QRadPerL = qRadAve_A * GenDepth * NRows * Sides = 〔1.79971325〕 MW/m `
+¢%%` QRadPerL = qRadAve_A * GenDepth * NRows * Sides = 〔1.8〕 MW/m `
 
-¢??` RadLength = Q_Gen / QRadPerL = 〔277.822036〕 m `
+¢%%` RadLength = Q_Gen / QRadPerL = 〔278〕 m `
 
 This is impractically large so we need conduction and / or convection to bring
 the size down. We can also bring the height down by increasing the number of
@@ -202,11 +200,11 @@ tubes.
 The air  gap has a diamond shape between two sets of circular tubes.  It ranges
 from zero to TubeOD.  Assume the gap is the average.
 
-¢??` AirK = 0.024 'W.m-1.K-1' = 〔0.024〕 W.m-1.K-1 `
+¢%%` AirK = 0.024 'W.m-1.K-1' = 〔0.024〕 W.m-1.K-1 `
 
-¢??` AirGap = TubeOD/2 = 〔0.8〕 cm `
+¢%%` AirGap = TubeOD/2 = 〔0.8〕 cm `
 
-¢??` qAirK_A = AirK * (DT_lmdt)/AirGap = 〔0.358642736〕 kW/m2 `
+¢%%` qAirK_A = AirK * (DT_lmdt)/AirGap = 〔0.359〕 kW/m2 `
 
 This is significantly smaller (\< 1/10) than the radiation heat transfer.
 
@@ -215,7 +213,7 @@ This is significantly smaller (\< 1/10) than the radiation heat transfer.
 If we assume, like molten salt, that convection improves heat transfer by a
 factor of 6 we get:
 
-¢??` qAirConv_A = 6 * qAirK_A = 〔2.15185642〕 kW/m2 `
+¢%%` qAirConv_A = 6 * qAirK_A = 〔2.15〕 kW/m2 `
 
 This is still lower (\~ 1/2) than radiation heat transfer.
 
@@ -226,39 +224,39 @@ Q/A = (k/dx) DT.  A = contact width \* length.  Solving for length gets you: L =
 Q/kDT.  The actual length needed is just the nominal length times the aspect
 ratio: (dx/width).
 
-¢??` SteelCond = 19 'W.m-1.K-1' = 〔19〕 W.m-1.K-1 `
+¢%%` SteelCond = 19 'W.m-1.K-1' = 〔19〕 W.m-1.K-1 `
 
-¢??` NSurfaces = NTubes * 2 = 〔24,180〕 `
+¢%%` NSurfaces = NTubes * 2 = 〔24,180〕 `
 
 Heat per degree K per side.
 
-¢??` Q_K_S = Q_Side / DT_lmdt = 〔0.172970852〕 kW/K `
+¢%%` Q_K_S = Q_Side / DT_lmdt = 〔0.173〕 kW/K `
 
-¢??` NominalLength = Q_K_S / SteelCond = 〔9.10372903〕 m `
+¢%%` NominalLength = Q_K_S / SteelCond = 〔9.1〕 m `
 
 ### Tubes touching
 
 Let's say the width of contact width between tubes can be 1/10 the diameter.
 
-¢??` touchW = TubeOD/10 = 〔0.16〕 cm `
+¢%%` touchW = TubeOD/10 = 〔0.16〕 cm `
 
-¢??` touchTh = 2 * TubeThickness = 〔2〕 mm `
+¢%%` touchTh = 2 * TubeThickness = 〔2〕 mm `
 
-¢??` touchAspect = touchTh/touchW = 〔1.25〕 `
+¢%%` touchAspect = touchTh/touchW = 〔1.25〕 `
 
-¢??` touchLength = NominalLength*touchAspect = 〔11.3796613〕 m `
+¢%%` touchLength = NominalLength*touchAspect = 〔11.4〕 m `
 
 ### Tubes with saddle pads:
 
 Assume saddle pads that are: 3/4 the diameter in width and half of thickest:
 
-¢??` saddleW = 0.75 * TubeOD = 〔1.2〕 cm `
+¢%%` saddleW = 0.75 * TubeOD = 〔1.2〕 cm `
 
-¢??` saddleTh = 2*TubeThickness + (TubeOD/3)/2 = 〔4.66666667〕 mm `
+¢%%` saddleTh = 2*TubeThickness + (TubeOD/3)/2 = 〔4.67〕 mm `
 
-¢??` saddleAspect = saddleTh/saddleW = 〔0.388888889〕 `
+¢%%` saddleAspect = saddleTh/saddleW = 〔0.389〕 `
 
-¢??` saddleLength = NominalLength * saddleAspect = 〔3.54033907〕 m `
+¢%%` saddleLength = NominalLength * saddleAspect = 〔3.54〕 m `
 
 Now this is getting more reasonable.
 
@@ -268,21 +266,21 @@ Now this is getting more reasonable.
 
 ¢` sqContactTh = 2 mm `
 
-¢??` sqAspect = sqContactTh / sqContactW = 〔0.25〕 `
+¢%%` sqAspect = sqContactTh / sqContactW = 〔0.25〕 `
 
 Best height to width ratio.
 
-¢??` sqLength = NominalLength * sqAspect = 〔2.27593226〕 m `
+¢%%` sqLength = NominalLength * sqAspect = 〔2.28〕 m `
 
 Effective resistance is contact thickness divided by conductivity.
 
-¢??` sqContactR = sqContactTh / SteelCond = 〔0.105263158〕 m2.K/kW `
+¢%%` sqContactR = sqContactTh / SteelCond = 〔0.105〕 m2.K/kW `
 
 ## Fluid heat transfer
 
 ### Salt side
 
-¢??` saltVel = SaltMassFlow/NTubes/CoolantDensity/TubeArea = 〔2.48213732〕 m/s `
+¢%%` saltVel = SaltMassFlow/NTubes/CoolantDensity/TubeArea = 〔2.48〕 m/s `
 
 ¢` function ReynoldsNumber(density, velocity, diameter, viscosity)
     return density * velocity * diameter / viscosity
@@ -296,21 +294,21 @@ Function calculates heat transfer coefficient from coolant bulk flow to chamber 
     return nusseltNum * heatCond / diameter
 end `
 
-¢??` saltReyn = ReynoldsNumber(CoolantDensity, saltVel,TubeID, CoolantViscosity)
-= 〔19,296.339〕 `
+¢%%` saltReyn = ReynoldsNumber(CoolantDensity, saltVel,TubeID, CoolantViscosity)
+= 〔19,296〕 `
 
-¢??` saltBulkH = BulkToWallDeltaH(CoolantHeatCapacity, CoolantViscosity,
-CoolantHeatCond, saltReyn, TubeID) = 〔4.42540763〕 kW.m-2.K-1 `
+¢%%` saltBulkH = BulkToWallDeltaH(CoolantHeatCapacity, CoolantViscosity,
+CoolantHeatCond, saltReyn, TubeID) = 〔4.43〕 kW.m-2.K-1 `
 
 The resistance is just the inverse of the heat transfer coefficient.
 
-¢??` saltR = 1 / saltBulkH = 〔0.225967884〕 m2.K/kW `
+¢%%` saltR = 1 / saltBulkH = 〔0.226〕 m2.K/kW `
 
 The length needed can be calculated as the heat per side divided by the
 temperature difference and the number of sides it is distributed over, divided
 by the heat transfer coefficient times the wall width.
 
-¢??` saltLength = Q_K_S * saltR / sqContactW = 〔4.88573217〕 m `
+¢%%` saltLength = Q_K_S * saltR / sqContactW = 〔4.89〕 m `
 
 ### Steam side
 
@@ -318,68 +316,67 @@ Values from https://www.ski-gmbh.com/swa/tools/steam, and
 https://www.thermopedia.com/de/content/1150/ . Pressure is 24 MPa for both
 inlet and exit.
 
-¢` ExitEnthalpy = 3372493 'J/kg' `
+¢` ExitEnthalpy = 3372.493 'kJ/kg' `
 
-¢` InletEnthalpy = 1264452 'J/kg' `
+¢` InletEnthalpy = 1264.452 'kJ/kg' `
 
-¢??` SteamMassFlow = Q_Gen/(ExitEnthalpy-InletEnthalpy) = 〔237.187038〕 kg/s `
+¢%%` SteamMassFlow = Q_Gen/(ExitEnthalpy-InletEnthalpy) = 〔237〕 kg/s `
 
 Steam exit side.
 
-¢??` ExitDensity = 1 / (0.01358536 'm3/kg') = 〔73.6086493〕 kg/m3 `
+¢%%` ExitDensity = 1 / (0.01358536 'm3/kg') = 〔73.6〕 kg/m3 `
 
-¢??` ExitViscosity = 3.392e-5 'kg.m-1.s-1' = 〔0.00003392〕 kg.m-1.s-1 `
+¢%%` ExitViscosity = 3.392e-5 'kg.m-1.s-1' = 〔0.0000339〕 kg.m-1.s-1 `
 
-¢??` ExitConduct = 100 'mW.m-1.K-1' = 〔0.1〕 W.m-1.K-1 `
+¢%%` ExitConduct = 100 'mW.m-1.K-1' = 〔0.1〕 W.m-1.K-1 `
 
-¢??` ExitHeatCapacity = 2980.664 'J.kg-1.K-1' = 〔2,980.664〕 J.kg-1.K-1 `
+¢%%` ExitHeatCapacity = 2980.664 'J.kg-1.K-1' = 〔2,981〕 J.kg-1.K-1 `
 
-¢??` ExitVelocity = SteamMassFlow/ExitDensity/(TubeArea*NTubes) = 〔1.73136984〕 m/s `
+¢%%` ExitVelocity = SteamMassFlow/ExitDensity/(TubeArea*NTubes) = 〔1.73〕 m/s `
 
-¢??` ExityReyn = ReynoldsNumber(ExitDensity, ExitVelocity, TubeID,
-ExitViscosity) = 〔52,600.6232〕 `
+¢%%` ExityReyn = ReynoldsNumber(ExitDensity, ExitVelocity, TubeID,
+ExitViscosity) = 〔52,601〕 `
 
-¢??` ExitBulkH = BulkToWallDeltaH(ExitHeatCapacity, ExitViscosity, ExitConduct,
-ExityReyn, TubeID) = 〔1.2043172〕 kW.m-2.K-1 `
+¢%%` ExitBulkH = BulkToWallDeltaH(ExitHeatCapacity, ExitViscosity, ExitConduct,
+ExityReyn, TubeID) = 〔1.2〕 kW.m-2.K-1 `
 
-¢??` ExitR = 1 / ExitBulkH = 〔0.830346025〕 m2.K/kW `
+¢%%` ExitR = 1 / ExitBulkH = 〔0.83〕 m2.K/kW `
 
 Values for inlet side :
 
 ¢` InletDensity = 764.494 'kg/m3' `
 
-¢??` InletViscocity = 9.635e-5 'kg.m-1.s-1' = 〔0.00009635〕 kg.m-1.s-1 `
+¢%%` InletViscocity = 9.635e-5 'kg.m-1.s-1' = 〔0.0000963〕 kg.m-1.s-1 `
 
-¢??` InletConduct = 600 'mW.m-1.K-1' = 〔0.6〕 W.m-1.K-1 `
+¢%%` InletConduct = 600 'mW.m-1.K-1' = 〔0.6〕 W.m-1.K-1 `
 
-¢??` InletHeatCapacity = 5012.22 'J.kg-1.K-1' = 〔5,012.22〕 J.kg-1.K-1 `
+¢%%` InletHeatCapacity = 5012.22 'J.kg-1.K-1' = 〔5,012〕 J.kg-1.K-1 `
 
-¢??` InletVelocity = SteamMassFlow/InletDensity/(TubeArea*NTubes) =
-〔0.166703461〕 m/s `
+¢%%` InletVelocity = SteamMassFlow/InletDensity/(TubeArea*NTubes) = 〔0.167〕 m/s `
 
-¢??` InletReyn = ReynoldsNumber(InletDensity, InletVelocity, TubeID,
-InletViscocity) = 〔18,518.0398〕 `
+¢%%` InletReyn = ReynoldsNumber(InletDensity, InletVelocity, TubeID,
+InletViscocity) = 〔18,518〕 `
 
-¢??` InletBulkH = BulkToWallDeltaH(InletHeatCapacity, InletViscocity,
-InletConduct, InletReyn, TubeID) = 〔2.88998576〕 kW.m-2.K-1 `
+¢%%` InletBulkH = BulkToWallDeltaH(InletHeatCapacity, InletViscocity,
+InletConduct, InletReyn, TubeID) = 〔2.89〕 kW.m-2.K-1 `
 
-¢??` InletR = 1 / InletBulkH = 〔0.346022467〕 m2.K/kW `
+¢%%` InletR = 1 / InletBulkH = 〔0.346〕 m2.K/kW `
 
-¢??` SteamAveR = (InletR + ExitR)/2 = 〔0.588184246〕 m2.K/kW `
+¢%%` SteamAveR = (InletR + ExitR)/2 = 〔0.588〕 m2.K/kW `
 
-¢??` steamlength = Q_K_S * SteamAveR/ sqContactW = 〔12.7173412〕 m `
+¢%%` steamlength = Q_K_S * SteamAveR/ sqContactW = 〔12.7〕 m `
 
 Add resistances in series: salt, contact, steam.
 
-¢??` allThreeR = saltR + sqContactR + SteamAveR = 〔0.919415288〕 m2.K/kW `
+¢%%` allThreeR = saltR + sqContactR + SteamAveR = 〔0.919〕 m2.K/kW `
 
-¢??` tubeLength = Q_K_S * allThreeR / sqContactW = 〔19.8790057〕 m `
+¢%%` tubeLength = Q_K_S * allThreeR / sqContactW = 〔19.9〕 m `
 
-¢??` AddedLengths = steamlength + saltLength + sqLength = 〔19.8790057〕 m `
+¢%%` AddedLengths = steamlength + saltLength + sqLength = 〔19.9〕 m `
 
-¢??` tubeLength = 〔65.2198349〕 ft `
+¢%%` tubeLength = 〔65.2〕 ft `
 
-¢??` tubeLengthTotal = NGen * 2 * NTubes * tubeLength = 〔1,442.02307〕 km `
+¢%%` tubeLengthTotal = NGen * 2 * NTubes * tubeLength = 〔1,442〕 km `
 
 ## Salt pressure Drop
 
@@ -395,12 +392,12 @@ end `
 The pressure drop over the generator because of flow resistance in the
 generator:
 
-¢??` CoolantPressureDrop = PressureDrop(tubeLength, TubeID, saltVel,
-SSRoughness,CoolantDensity, CoolantViscosity) = 〔190.872791〕 kPa `
+¢%%` CoolantPressureDrop = PressureDrop(tubeLength, TubeID, saltVel,
+SSRoughness,CoolantDensity, CoolantViscosity) = 〔191〕 kPa `
 
-¢??` CoolantPressureDrop = 〔27.6837578〕 psi `
+¢%%` CoolantPressureDrop = 〔27.7〕 psi `
 
-¢??` CoolantPressureDrop = 〔63.8584111〕 ftH₂O `
+¢%%` CoolantPressureDrop = 〔63.9〕 ftH₂O `
 
 Since the pressure head is near or over 50 feet we will require some kind of
 centrifugal pump.
@@ -409,17 +406,16 @@ centrifugal pump.
 
 The power required to push the coolant through each generator.
 
-¢??` GenPumpPower=CoolantPressureDrop* SaltMassFlow/CoolantDensity =
-〔881.743122〕 kW `
+¢%%` GenPumpPower=CoolantPressureDrop* SaltMassFlow/CoolantDensity = 〔882〕 kW `
 
-¢??` GenPumpPower = 〔1,182.437〕 hp `
+¢%%` GenPumpPower = 〔1,182〕 hp `
 
 ### Buoyancy
 
 Pressure across generator due to height and density change in salt.
 
-¢??` Buoncy = tubeLength*(CoolantDensityF(TSaltCool) - CoolantDensityF(TSaltHot)
-) * 9.8 'N/kg' = 〔7.13555914〕 kPa `
+¢%%` Buoncy = tubeLength*(CoolantDensityF(TSaltCool) - CoolantDensityF(TSaltHot)
+) * 9.8 'N/kg' = 〔7.14〕 kPa `
 
 ## Conversion notes
 

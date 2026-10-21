@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Molten-salt coolant pipe insulation
+
+¢` format = "h3" `
 
 Preliminary estimate — 11 October 2026. Allow **400 mm radial insulation on hot
 coolant legs and 350 mm on cooler return legs**. An optional common 400 mm
@@ -28,8 +30,6 @@ diameter. Use **1.5 m bare OD** as a provisional thermal/layout envelope. This
 leaves about 50 mm per side beyond that bore, but does not select or verify a
 50 mm pressure wall. Recalculate when the pipe wall is established. A 1.4 m OD
 comparison below quantifies the effect of this uncertainty.
-
-¢` format = "h7" `
 
 ¢` HotTemperature = 875 K `
 
@@ -127,41 +127,41 @@ end `
 
 ## Thickness and steady-state performance
 
-¢??` HotMinimum = Minimum(PipeOutside, HotTemperature, Ambient, SurfaceLimit,
-Conductivity, Convection, Emissivity, Sigma) = 〔364.0038〕 mm `
+¢%%` HotMinimum = Minimum(PipeOutside, HotTemperature, Ambient, SurfaceLimit,
+Conductivity, Convection, Emissivity, Sigma) = 〔364〕 mm `
 
-¢??` HotThickness = ceil(HotMinimum / ThicknessStep) * ThicknessStep = 〔400〕 mm `
+¢%%` HotThickness = ceil(HotMinimum / ThicknessStep) * ThicknessStep = 〔400〕 mm `
 
-¢??` HotJacket = PipeOutside + 2 * HotThickness = 〔2.3〕 m `
+¢%%` HotJacket = PipeOutside + 2 * HotThickness = 〔2.3〕 m `
 
-¢??` HotSurface = Surface(PipeOutside, HotThickness, HotTemperature, Ambient,
-Conductivity, Convection, Emissivity, Sigma) = 〔58.04343〕 °C `
+¢%%` HotSurface = Surface(PipeOutside, HotThickness, HotTemperature, Ambient,
+Conductivity, Convection, Emissivity, Sigma) = 〔58〕 °C `
 
-¢??` HotLoss = 2 * pi * Conductivity * (HotTemperature - HotSurface) /
-ln(HotJacket / PipeOutside) = 〔719.4284〕 W/m `
+¢%%` HotLoss = 2 * pi * Conductivity * (HotTemperature - HotSurface) /
+ln(HotJacket / PipeOutside) = 〔719〕 W/m `
 
-¢??` ColdMinimum = Minimum(PipeOutside, ColdTemperature, Ambient, SurfaceLimit,
-Conductivity, Convection, Emissivity, Sigma) = 〔325.6415〕 mm `
+¢%%` ColdMinimum = Minimum(PipeOutside, ColdTemperature, Ambient, SurfaceLimit,
+Conductivity, Convection, Emissivity, Sigma) = 〔326〕 mm `
 
-¢??` ColdThickness = ceil(ColdMinimum / ThicknessStep) * ThicknessStep = 〔350〕 mm `
+¢%%` ColdThickness = ceil(ColdMinimum / ThicknessStep) * ThicknessStep = 〔350〕 mm `
 
-¢??` ColdJacket = PipeOutside + 2 * ColdThickness = 〔2.2〕 m `
+¢%%` ColdJacket = PipeOutside + 2 * ColdThickness = 〔2.2〕 m `
 
-¢??` ColdSurface = Surface(PipeOutside, ColdThickness, ColdTemperature, Ambient,
-Conductivity, Convection, Emissivity, Sigma) = 〔58.50739〕 °C `
+¢%%` ColdSurface = Surface(PipeOutside, ColdThickness, ColdTemperature, Ambient,
+Conductivity, Convection, Emissivity, Sigma) = 〔58.5〕 °C `
 
-¢??` ColdLoss = 2 * pi * Conductivity * (ColdTemperature - ColdSurface) /
-ln(ColdJacket / PipeOutside) = 〔706.2711〕 W/m `
+¢%%` ColdLoss = 2 * pi * Conductivity * (ColdTemperature - ColdSurface) /
+ln(ColdJacket / PipeOutside) = 〔706〕 W/m `
 
-¢??` CommonThickness = max(HotThickness, ColdThickness) = 〔400〕 mm `
+¢%%` CommonThickness = max(HotThickness, ColdThickness) = 〔400〕 mm `
 
-¢??` CommonJacket = PipeOutside + 2 * CommonThickness = 〔2.3〕 m `
+¢%%` CommonJacket = PipeOutside + 2 * CommonThickness = 〔2.3〕 m `
 
-¢??` CommonColdSurface = Surface(PipeOutside, CommonThickness, ColdTemperature,
-Ambient, Conductivity, Convection, Emissivity, Sigma) = 〔55.99715〕 °C `
+¢%%` CommonColdSurface = Surface(PipeOutside, CommonThickness, ColdTemperature,
+Ambient, Conductivity, Convection, Emissivity, Sigma) = 〔56〕 °C `
 
-¢??` CommonColdLoss = 2 * pi * Conductivity * (ColdTemperature -
-CommonColdSurface) / ln(CommonJacket / PipeOutside) = 〔636.1438〕 W/m `
+¢%%` CommonColdLoss = 2 * pi * Conductivity * (ColdTemperature -
+CommonColdSurface) / ln(CommonJacket / PipeOutside) = 〔636〕 W/m `
 
 ## Sensitivity at fixed selected thicknesses
 
@@ -173,42 +173,42 @@ convection and emissivity together, keeping nominal coolant temperatures.
 Exceeding 60°C in these cases means the base selection does not meet the target
 in those conditions.
 
-¢??` HotWarmRoomSurface = Surface(PipeOutside, HotThickness, HotTemperature,
-323.15 'K', Conductivity, Convection, Emissivity, Sigma) = 〔67.29746〕 °C `
+¢%%` HotWarmRoomSurface = Surface(PipeOutside, HotThickness, HotTemperature,
+323.15 'K', Conductivity, Convection, Emissivity, Sigma) = 〔67.3〕 °C `
 
-¢??` HotQuietAirSurface = Surface(PipeOutside, HotThickness, HotTemperature,
-Ambient, Conductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔67.2932〕 °C `
+¢%%` HotQuietAirSurface = Surface(PipeOutside, HotThickness, HotTemperature,
+Ambient, Conductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔67.3〕 °C `
 
-¢??` HotShinyJacketSurface = Surface(PipeOutside, HotThickness, HotTemperature,
-Ambient, Conductivity, Convection, 0.10, Sigma) = 〔60.77318〕 °C `
+¢%%` HotShinyJacketSurface = Surface(PipeOutside, HotThickness, HotTemperature,
+Ambient, Conductivity, Convection, 0.10, Sigma) = 〔60.8〕 °C `
 
-¢??` HotWarmerSaltSurface = Surface(PipeOutside, HotThickness, HotTemperature +
-25 'K', Ambient, Conductivity, Convection, Emissivity, Sigma) = 〔58.82763〕 °C `
+¢%%` HotWarmerSaltSurface = Surface(PipeOutside, HotThickness, HotTemperature +
+25 'K', Ambient, Conductivity, Convection, Emissivity, Sigma) = 〔58.8〕 °C `
 
-¢??` HotCombinedSurface = Surface(PipeOutside, HotThickness, HotTemperature,
-323.15 'K', Conductivity, 2 'W/m2/K', 0.10, Sigma) = 〔82.87507〕 °C `
+¢%%` HotCombinedSurface = Surface(PipeOutside, HotThickness, HotTemperature,
+323.15 'K', Conductivity, 2 'W/m2/K', 0.10, Sigma) = 〔82.9〕 °C `
 
-¢??` ColdWarmRoomSurface = Surface(PipeOutside, ColdThickness, ColdTemperature,
-323.15 'K', Conductivity, Convection, Emissivity, Sigma) = 〔67.70342〕 °C `
+¢%%` ColdWarmRoomSurface = Surface(PipeOutside, ColdThickness, ColdTemperature,
+323.15 'K', Conductivity, Convection, Emissivity, Sigma) = 〔67.7〕 °C `
 
-¢??` ColdQuietAirSurface = Surface(PipeOutside, ColdThickness, ColdTemperature,
-Ambient, Conductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔67.90159〕 °C `
+¢%%` ColdQuietAirSurface = Surface(PipeOutside, ColdThickness, ColdTemperature,
+Ambient, Conductivity, 2 'W/m2/K', Emissivity, Sigma) = 〔67.9〕 °C `
 
-¢??` ColdShinyJacketSurface = Surface(PipeOutside, ColdThickness,
-ColdTemperature, Ambient, Conductivity, Convection, 0.10, Sigma) = 〔61.29447〕 °C `
+¢%%` ColdShinyJacketSurface = Surface(PipeOutside, ColdThickness,
+ColdTemperature, Ambient, Conductivity, Convection, 0.10, Sigma) = 〔61.3〕 °C `
 
-¢??` ColdWarmerSaltSurface = Surface(PipeOutside, ColdThickness,
+¢%%` ColdWarmerSaltSurface = Surface(PipeOutside, ColdThickness,
 ColdTemperature + 25 'K', Ambient, Conductivity, Convection, Emissivity, Sigma)
-= 〔59.4164〕 °C `
+= 〔59.4〕 °C `
 
-¢??` ColdCombinedSurface = Surface(PipeOutside, ColdThickness, ColdTemperature,
-323.15 'K', Conductivity, 2 'W/m2/K', 0.10, Sigma) = 〔83.48092〕 °C `
+¢%%` ColdCombinedSurface = Surface(PipeOutside, ColdThickness, ColdTemperature,
+323.15 'K', Conductivity, 2 'W/m2/K', 0.10, Sigma) = 〔83.5〕 °C `
 
-¢??` HotSmallODMinimum = Minimum(1.4 'm', HotTemperature, Ambient, SurfaceLimit,
-Conductivity, Convection, Emissivity, Sigma) = 〔360.6408〕 mm `
+¢%%` HotSmallODMinimum = Minimum(1.4 'm', HotTemperature, Ambient, SurfaceLimit,
+Conductivity, Convection, Emissivity, Sigma) = 〔361〕 mm `
 
-¢??` ColdSmallODMinimum = Minimum(1.4 'm', ColdTemperature, Ambient,
-SurfaceLimit, Conductivity, Convection, Emissivity, Sigma) = 〔322.8076〕 mm `
+¢%%` ColdSmallODMinimum = Minimum(1.4 'm', ColdTemperature, Ambient,
+SurfaceLimit, Conductivity, Convection, Emissivity, Sigma) = 〔323〕 mm `
 
 ## Illustrative external-pipe heat load
 
@@ -224,14 +224,14 @@ excludes generators, pumps, reactor, manifolds, valves and supports.
 
 ¢` ColdRouteLength = 15 m `
 
-¢??` HotRoomHeat = LoopCount * HotRouteLength * HotLoss = 〔32.37428〕 kW `
+¢%%` HotRoomHeat = LoopCount * HotRouteLength * HotLoss = 〔32.4〕 kW `
 
-¢??` ColdRoomHeat = LoopCount * ColdRouteLength * ColdLoss = 〔31.7822〕 kW `
+¢%%` ColdRoomHeat = LoopCount * ColdRouteLength * ColdLoss = 〔31.8〕 kW `
 
-¢??` TotalRoomHeat = HotRoomHeat + ColdRoomHeat = 〔64.15648〕 kW `
+¢%%` TotalRoomHeat = HotRoomHeat + ColdRoomHeat = 〔64.2〕 kW `
 
-¢??` CommonRoomHeat = LoopCount * (HotRouteLength * HotLoss + ColdRouteLength *
-CommonColdLoss) = 〔61.00075〕 kW `
+¢%%` CommonRoomHeat = LoopCount * (HotRouteLength * HotLoss + ColdRouteLength *
+CommonColdLoss) = 〔61〕 kW `
 
 ## Installation and operating limits
 
@@ -256,10 +256,16 @@ room/radiant conditions and conductivity must be confirmed. See
 
 [2]: Coolant%20pump%20estimate%20-%20Hurmet.md
 
-[3]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\_IND\_Thermo-1200\_DS.pdf
+[3]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\\\\\\\\\\\\\_IND\\\\\\\\\\\\\\\_Thermo-1200\\\\\\\\\\\\\\\_DS.pdf
 
 [4]: Steam%20and%20feedwater%20insulation%20-%20Hurmet.md
 
 [5]: molten-salt-insulation-check.md
 
-[6]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM_IND_Thermo-1200_DS.pdf
+[6]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\\\\\_IND\\\\\\\_Thermo-1200\\\\\\\_DS.pdf
+
+[7]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\\\_IND\\\_Thermo-1200\\\_DS.pdf
+
+[8]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM\_IND\_Thermo-1200\_DS.pdf
+
+[9]: https://www.jm.com/content/dam/jm/global/en/industrial-insulation/calcium-silicate/thermo-1200/JM_IND_Thermo-1200_DS.pdf

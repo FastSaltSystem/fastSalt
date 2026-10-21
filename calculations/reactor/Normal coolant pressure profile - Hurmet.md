@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-14
+saveDate: 2026-10-20
 ---------------
 
 # Normal coolant pressure profile
+
+¢` format = "h3" `
 
 **Itemized revision, 14 October 2026.** Replaces the earlier 50%-allowance
 pressure envelope, preserved in
@@ -60,9 +62,7 @@ Elevations are current visual-layout values. Suction straight loss is split by
 route length; bend counts come from the three-leg assembly. Actual accumulator
 salt level is not yet modeled, so casing-top height is provisional.
 
-¢` format = "h7" `
-
-¢` TopPressure = 100000 Pa `
+¢` TopPressure = 1 bar `
 
 ¢` Density = 1633.7825 kg/m3 `
 
@@ -92,23 +92,23 @@ salt level is not yet modeled, so casing-top height is provisional.
 
 ¢` HotBends = 3 `
 
-¢` CorePassageLoss = 62713.5660789 Pa `
+¢` CorePassageLoss = 62.7135660789 kPa `
 
-¢` SGFriction = 70490.644494 Pa `
+¢` SGFriction = 70.490644494 kPa `
 
-¢` SGDynamic = 4907.1615146 Pa `
+¢` SGDynamic = 4.9071615146 kPa `
 
-¢` HotDynamic = 4639.50195281 Pa `
+¢` HotDynamic = 4.63950195281 kPa `
 
-¢` ColdDynamic = 4513.21793899 Pa `
+¢` ColdDynamic = 4.51321793899 kPa `
 
 ¢` HotStraight = 533.902742744 Pa `
 
 ¢` ColdStraight = 545.115000895 Pa `
 
-¢` HotNozzleDynamic = 6113.98340173 Pa `
+¢` HotNozzleDynamic = 6.11398340173 kPa `
 
-¢` ColdNozzleDynamic = 5947.5650292 Pa `
+¢` ColdNozzleDynamic = 5.9475650292 kPa `
 
 ¢` HotNozzleFriction = 83.9197924731 Pa `
 
@@ -118,11 +118,11 @@ salt level is not yet modeled, so casing-top height is provisional.
 
 ¢` DownDynamic = 358.988693254 Pa `
 
-¢??` Gradient = Density * Gravity = 〔0.1602193〕 'bar/m' `
+¢%%` Gradient = Density * Gravity = 〔0.16〕 'bar/m' `
 
-¢??` SuctionStraight = ColdStraight * SuctionLengthFraction = 〔0.259377〕 kPa `
+¢%%` SuctionStraight = ColdStraight * SuctionLengthFraction = 〔0.259〕 kPa `
 
-¢??` ReturnStraight = ColdStraight - SuctionStraight = 〔0.285738〕 kPa `
+¢%%` ReturnStraight = ColdStraight - SuctionStraight = 〔0.286〕 kPa `
 
 ## Base fitting-loss case
 
@@ -143,51 +143,51 @@ independently published itemized pump rise.
 
 ¢` BaseBulkK = 2 `
 
-¢??` BaseSGSegment = SGFriction + BaseSGEndK * SGDynamic + BaseCollectorK *
-(HotDynamic + ColdDynamic) = 〔87.00411〕 kPa `
+¢%%` BaseSGSegment = SGFriction + BaseSGEndK * SGDynamic + BaseCollectorK *
+(HotDynamic + ColdDynamic) = 〔87〕 kPa `
 
-¢??` BaseSuctionSegment = SuctionStraight + SuctionBends * BaseBendK *
-ColdDynamic = 〔2.967308〕 kPa `
+¢%%` BaseSuctionSegment = SuctionStraight + SuctionBends * BaseBendK *
+ColdDynamic = 〔2.97〕 kPa `
 
-¢??` BaseReturnSegment = ReturnStraight + ReturnBends * BaseBendK *
-ColdDynamic + BaseValveK * ColdDynamic = 〔3.896312〕 kPa `
+¢%%` BaseReturnSegment = ReturnStraight + ReturnBends * BaseBendK *
+ColdDynamic + BaseValveK * ColdDynamic = 〔3.9〕 kPa `
 
-¢??` BaseDownSegment = ColdNozzleFriction + BaseReactorEntryK *
-ColdNozzleDynamic + DownFriction + BaseBulkK * DownDynamic = 〔6.802584〕 kPa `
+¢%%` BaseDownSegment = ColdNozzleFriction + BaseReactorEntryK *
+ColdNozzleDynamic + DownFriction + BaseBulkK * DownDynamic = 〔6.8〕 kPa `
 
-¢??` BaseUpSegment = CorePassageLoss + HotNozzleFriction + BaseReactorExitK *
-HotNozzleDynamic = 〔65.85448〕 kPa `
+¢%%` BaseUpSegment = CorePassageLoss + HotNozzleFriction + BaseReactorExitK *
+HotNozzleDynamic = 〔65.9〕 kPa `
 
-¢??` BaseHotSegment = HotStraight + HotBends * BaseBendK * HotDynamic +
-BaseValveK * HotDynamic = 〔5.637355〕 kPa `
+¢%%` BaseHotSegment = HotStraight + HotBends * BaseBendK * HotDynamic +
+BaseValveK * HotDynamic = 〔5.64〕 kPa `
 
-¢??` BasePumpRise = BaseSGSegment + BaseSuctionSegment + BaseReturnSegment +
-BaseDownSegment + BaseUpSegment + BaseHotSegment = 〔172.1621〕 kPa `
+¢%%` BasePumpRise = BaseSGSegment + BaseSuctionSegment + BaseReturnSegment +
+BaseDownSegment + BaseUpSegment + BaseHotSegment = 〔172〕 kPa `
 
-¢??` BaseSGIn = TopPressure + Density * Gravity * (TopZ - SGInZ) = 〔1.240329〕 bar `
+¢%%` BaseSGIn = TopPressure + Density * Gravity * (TopZ - SGInZ) = 〔1.24〕 bar `
 
-¢??` BaseSGOut = BaseSGIn + Density * Gravity * (SGInZ - SGOutZ) - BaseSGSegment
-= 〔2.549271〕 bar `
+¢%%` BaseSGOut = BaseSGIn + Density * Gravity * (SGInZ - SGOutZ) - BaseSGSegment
+= 〔2.55〕 bar `
 
-¢??` BaseSuction = BaseSGOut + Density * Gravity * (SGOutZ - SuctionZ) -
-BaseSuctionSegment = 〔2.245623〕 bar `
+¢%%` BaseSuction = BaseSGOut + Density * Gravity * (SGOutZ - SuctionZ) -
+BaseSuctionSegment = 〔2.25〕 bar `
 
-¢??` BaseDischarge = BaseSuction + Density * Gravity * (SuctionZ - DischargeZ) +
-BasePumpRise = 〔3.823047〕 bar `
+¢%%` BaseDischarge = BaseSuction + Density * Gravity * (SuctionZ - DischargeZ) +
+BasePumpRise = 〔3.82〕 bar `
 
-¢??` BaseReactorIn = BaseDischarge + Density * Gravity * (DischargeZ -
-ReactorInZ) - BaseReturnSegment = 〔3.784084〕 bar `
+¢%%` BaseReactorIn = BaseDischarge + Density * Gravity * (DischargeZ -
+ReactorInZ) - BaseReturnSegment = 〔3.78〕 bar `
 
-¢??` BaseBottom = BaseReactorIn + Density * Gravity * (ReactorInZ - BottomZ) -
-BaseDownSegment = 〔4.253594〕 bar `
+¢%%` BaseBottom = BaseReactorIn + Density * Gravity * (ReactorInZ - BottomZ) -
+BaseDownSegment = 〔4.25〕 bar `
 
-¢??` BaseReactorOut = BaseBottom + Density * Gravity * (BottomZ - ReactorOutZ) -
-BaseUpSegment = 〔2.773925〕 bar `
+¢%%` BaseReactorOut = BaseBottom + Density * Gravity * (BottomZ - ReactorOutZ) -
+BaseUpSegment = 〔2.77〕 bar `
 
-¢??` BaseReturnToSG = BaseReactorOut + Density * Gravity * (ReactorOutZ -
-SGInZ) - BaseHotSegment = 〔1.240329〕 bar `
+¢%%` BaseReturnToSG = BaseReactorOut + Density * Gravity * (ReactorOutZ -
+SGInZ) - BaseHotSegment = 〔1.24〕 bar `
 
-¢??` BaseClosureError = BaseReturnToSG - BaseSGIn = 〔0〕 Pa `
+¢%%` BaseClosureError = BaseReturnToSG - BaseSGIn = 〔0〕 Pa `
 
 ## Low fitting-loss case
 
@@ -210,51 +210,51 @@ passage loss and SG friction stay fixed.
 
 ¢` LowBulkK = 1 `
 
-¢??` LowSGSegment = SGFriction + LowSGEndK * SGDynamic + LowCollectorK *
-(HotDynamic + ColdDynamic) = 〔79.97417〕 kPa `
+¢%%` LowSGSegment = SGFriction + LowSGEndK * SGDynamic + LowCollectorK *
+(HotDynamic + ColdDynamic) = 〔80〕 kPa `
 
-¢??` LowSuctionSegment = SuctionStraight + SuctionBends * LowBendK * ColdDynamic
-= 〔1.613342〕 kPa `
+¢%%` LowSuctionSegment = SuctionStraight + SuctionBends * LowBendK * ColdDynamic
+= 〔1.61〕 kPa `
 
-¢??` LowReturnSegment = ReturnStraight + ReturnBends * LowBendK * ColdDynamic +
-LowValveK * ColdDynamic = 〔1.865364〕 kPa `
+¢%%` LowReturnSegment = ReturnStraight + ReturnBends * LowBendK * ColdDynamic +
+LowValveK * ColdDynamic = 〔1.87〕 kPa `
 
-¢??` LowDownSegment = ColdNozzleFriction + LowReactorEntryK *
-ColdNozzleDynamic + DownFriction + LowBulkK * DownDynamic = 〔3.469813〕 kPa `
+¢%%` LowDownSegment = ColdNozzleFriction + LowReactorEntryK *
+ColdNozzleDynamic + DownFriction + LowBulkK * DownDynamic = 〔3.47〕 kPa `
 
-¢??` LowUpSegment = CorePassageLoss + HotNozzleFriction + LowReactorExitK *
-HotNozzleDynamic = 〔64.32598〕 kPa `
+¢%%` LowUpSegment = CorePassageLoss + HotNozzleFriction + LowReactorExitK *
+HotNozzleDynamic = 〔64.3〕 kPa `
 
-¢??` LowHotSegment = HotStraight + HotBends * LowBendK * HotDynamic +
-LowValveK * HotDynamic = 〔2.853654〕 kPa `
+¢%%` LowHotSegment = HotStraight + HotBends * LowBendK * HotDynamic +
+LowValveK * HotDynamic = 〔2.85〕 kPa `
 
-¢??` LowPumpRise = LowSGSegment + LowSuctionSegment + LowReturnSegment +
-LowDownSegment + LowUpSegment + LowHotSegment = 〔154.1023〕 kPa `
+¢%%` LowPumpRise = LowSGSegment + LowSuctionSegment + LowReturnSegment +
+LowDownSegment + LowUpSegment + LowHotSegment = 〔154〕 kPa `
 
-¢??` LowSGIn = TopPressure + Density * Gravity * (TopZ - SGInZ) = 〔1.240329〕 bar `
+¢%%` LowSGIn = TopPressure + Density * Gravity * (TopZ - SGInZ) = 〔1.24〕 bar `
 
-¢??` LowSGOut = LowSGIn + Density * Gravity * (SGInZ - SGOutZ) - LowSGSegment =
-〔2.61957〕 bar `
+¢%%` LowSGOut = LowSGIn + Density * Gravity * (SGInZ - SGOutZ) - LowSGSegment =
+〔2.62〕 bar `
 
-¢??` LowSuction = LowSGOut + Density * Gravity * (SGOutZ - SuctionZ) -
-LowSuctionSegment = 〔2.329462〕 bar `
+¢%%` LowSuction = LowSGOut + Density * Gravity * (SGOutZ - SuctionZ) -
+LowSuctionSegment = 〔2.33〕 bar `
 
-¢??` LowDischarge = LowSuction + Density * Gravity * (SuctionZ - DischargeZ) +
-LowPumpRise = 〔3.726288〕 bar `
+¢%%` LowDischarge = LowSuction + Density * Gravity * (SuctionZ - DischargeZ) +
+LowPumpRise = 〔3.73〕 bar `
 
-¢??` LowReactorIn = LowDischarge + Density * Gravity * (DischargeZ -
-ReactorInZ) - LowReturnSegment = 〔3.707634〕 bar `
+¢%%` LowReactorIn = LowDischarge + Density * Gravity * (DischargeZ -
+ReactorInZ) - LowReturnSegment = 〔3.71〕 bar `
 
-¢??` LowBottom = LowReactorIn + Density * Gravity * (ReactorInZ - BottomZ) -
-LowDownSegment = 〔4.210472〕 bar `
+¢%%` LowBottom = LowReactorIn + Density * Gravity * (ReactorInZ - BottomZ) -
+LowDownSegment = 〔4.21〕 bar `
 
-¢??` LowReactorOut = LowBottom + Density * Gravity * (BottomZ - ReactorOutZ) -
-LowUpSegment = 〔2.746088〕 bar `
+¢%%` LowReactorOut = LowBottom + Density * Gravity * (BottomZ - ReactorOutZ) -
+LowUpSegment = 〔2.75〕 bar `
 
-¢??` LowReturnToSG = LowReactorOut + Density * Gravity * (ReactorOutZ - SGInZ) -
-LowHotSegment = 〔1.240329〕 bar `
+¢%%` LowReturnToSG = LowReactorOut + Density * Gravity * (ReactorOutZ - SGInZ) -
+LowHotSegment = 〔1.24〕 bar `
 
-¢??` LowClosureError = LowReturnToSG - LowSGIn = 〔0〕 Pa `
+¢%%` LowClosureError = LowReturnToSG - LowSGIn = 〔0〕 Pa `
 
 ## High fitting-loss case
 
@@ -277,51 +277,51 @@ passage loss and SG friction stay fixed.
 
 ¢` HighBulkK = 5 `
 
-¢??` HighSGSegment = SGFriction + HighSGEndK * SGDynamic + HighCollectorK *
-(HotDynamic + ColdDynamic) = 〔98.61041〕 kPa `
+¢%%` HighSGSegment = SGFriction + HighSGEndK * SGDynamic + HighCollectorK *
+(HotDynamic + ColdDynamic) = 〔98.6〕 kPa `
 
-¢??` HighSuctionSegment = SuctionStraight + SuctionBends * HighBendK *
-ColdDynamic = 〔5.675239〕 kPa `
+¢%%` HighSuctionSegment = SuctionStraight + SuctionBends * HighBendK *
+ColdDynamic = 〔5.68〕 kPa `
 
-¢??` HighReturnSegment = ReturnStraight + ReturnBends * HighBendK *
-ColdDynamic + HighValveK * ColdDynamic = 〔10.21482〕 kPa `
+¢%%` HighReturnSegment = ReturnStraight + ReturnBends * HighBendK *
+ColdDynamic + HighValveK * ColdDynamic = 〔10.2〕 kPa `
 
-¢??` HighDownSegment = ColdNozzleFriction + HighReactorEntryK *
-ColdNozzleDynamic + DownFriction + HighBulkK * DownDynamic = 〔13.82711〕 kPa `
+¢%%` HighDownSegment = ColdNozzleFriction + HighReactorEntryK *
+ColdNozzleDynamic + DownFriction + HighBulkK * DownDynamic = 〔13.8〕 kPa `
 
-¢??` HighUpSegment = CorePassageLoss + HotNozzleFriction + HighReactorExitK *
-HotNozzleDynamic = 〔68.91147〕 kPa `
+¢%%` HighUpSegment = CorePassageLoss + HotNozzleFriction + HighReactorExitK *
+HotNozzleDynamic = 〔68.9〕 kPa `
 
-¢??` HighHotSegment = HotStraight + HotBends * HighBendK * HotDynamic +
-HighValveK * HotDynamic = 〔13.52451〕 kPa `
+¢%%` HighHotSegment = HotStraight + HotBends * HighBendK * HotDynamic +
+HighValveK * HotDynamic = 〔13.5〕 kPa `
 
-¢??` HighPumpRise = HighSGSegment + HighSuctionSegment + HighReturnSegment +
-HighDownSegment + HighUpSegment + HighHotSegment = 〔210.7636〕 kPa `
+¢%%` HighPumpRise = HighSGSegment + HighSuctionSegment + HighReturnSegment +
+HighDownSegment + HighUpSegment + HighHotSegment = 〔211〕 kPa `
 
-¢??` HighSGIn = TopPressure + Density * Gravity * (TopZ - SGInZ) = 〔1.240329〕 bar `
+¢%%` HighSGIn = TopPressure + Density * Gravity * (TopZ - SGInZ) = 〔1.24〕 bar `
 
-¢??` HighSGOut = HighSGIn + Density * Gravity * (SGInZ - SGOutZ) - HighSGSegment
-= 〔2.433208〕 bar `
+¢%%` HighSGOut = HighSGIn + Density * Gravity * (SGInZ - SGOutZ) - HighSGSegment
+= 〔2.43〕 bar `
 
-¢??` HighSuction = HighSGOut + Density * Gravity * (SGOutZ - SuctionZ) -
-HighSuctionSegment = 〔2.10248〕 bar `
+¢%%` HighSuction = HighSGOut + Density * Gravity * (SGOutZ - SuctionZ) -
+HighSuctionSegment = 〔2.1〕 bar `
 
-¢??` HighDischarge = HighSuction + Density * Gravity * (SuctionZ - DischargeZ) +
-HighPumpRise = 〔4.065919〕 bar `
+¢%%` HighDischarge = HighSuction + Density * Gravity * (SuctionZ - DischargeZ) +
+HighPumpRise = 〔4.07〕 bar `
 
-¢??` HighReactorIn = HighDischarge + Density * Gravity * (DischargeZ -
-ReactorInZ) - HighReturnSegment = 〔3.96377〕 bar `
+¢%%` HighReactorIn = HighDischarge + Density * Gravity * (DischargeZ -
+ReactorInZ) - HighReturnSegment = 〔3.96〕 bar `
 
-¢??` HighBottom = HighReactorIn + Density * Gravity * (ReactorInZ - BottomZ) -
-HighDownSegment = 〔4.363035〕 bar `
+¢%%` HighBottom = HighReactorIn + Density * Gravity * (ReactorInZ - BottomZ) -
+HighDownSegment = 〔4.36〕 bar `
 
-¢??` HighReactorOut = HighBottom + Density * Gravity * (BottomZ - ReactorOutZ) -
-HighUpSegment = 〔2.852796〕 bar `
+¢%%` HighReactorOut = HighBottom + Density * Gravity * (BottomZ - ReactorOutZ) -
+HighUpSegment = 〔2.85〕 bar `
 
-¢??` HighReturnToSG = HighReactorOut + Density * Gravity * (ReactorOutZ -
-SGInZ) - HighHotSegment = 〔1.240329〕 bar `
+¢%%` HighReturnToSG = HighReactorOut + Density * Gravity * (ReactorOutZ -
+SGInZ) - HighHotSegment = 〔1.24〕 bar `
 
-¢??` HighClosureError = HighReturnToSG - HighSGIn = 〔0〕 Pa `
+¢%%` HighClosureError = HighReturnToSG - HighSGIn = 〔0〕 Pa `
 
 ## Lower bias comparison and interpretation
 
@@ -331,12 +331,11 @@ not an adopted operating target. The previous broad suction interval came from
 allowing all unlocated resistance to sit in the suction line; it is superseded
 by the itemized suction resistance here.
 
-¢` LowerTopPressure = 50000 Pa `
+¢` LowerTopPressure = 0.5 bar `
 
-¢??` LowerBiasSuction = BaseSuction + LowerTopPressure - TopPressure =
-〔1.745623〕 bar `
+¢%%` LowerBiasSuction = BaseSuction + LowerTopPressure - TopPressure = 〔1.75〕 bar `
 
-¢??` LowerBiasBottom = BaseBottom + LowerTopPressure - TopPressure = 〔3.753594〕 bar `
+¢%%` LowerBiasBottom = BaseBottom + LowerTopPressure - TopPressure = 〔3.75〕 bar `
 
 ## Limits and verification
 

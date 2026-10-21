@@ -1,4 +1,11 @@
 """Flow-based sizes and explicitly provisional layout reservations, 30 MW per train."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json,math,re,hashlib
 D=Path(__file__).resolve().parent
@@ -105,7 +112,7 @@ def widths(m):
  b=m.group(0);n=b.splitlines()[0].count('|')-1
  return b+'\n{.grid colWidths="'+' '.join(['250']+['125']*(n-1))+'"}'
 t=re.sub(r'(?m)^\|.*(?:\n\|.*)*',widths,t)
-(D/'Brayton cooler size comparison - Hurmet.md').write_text(t)
+write_worksheet(D/'Brayton cooler size comparison - Hurmet.md', t)
 source_paths=[D/'brayton_size_screen.py',D/'brayton-cooler-results.json',D/'nitrogen-brayton-results.json',D/'open-air-brayton-results.json',D/'brayton-fan-pump-results.json']
 output=dict(date='2026-10-13',heat_per_train_MW=30,cases=cases,vacuum_steam_inlet_m3_s=vac,hurmet_checks=checks,source_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in source_paths})
 (D/'brayton-size-results.json').write_text(json.dumps(output,indent=2)+'\n')

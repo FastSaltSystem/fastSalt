@@ -1,4 +1,11 @@
 """Publish imported cycle results and executable Hurmet comparison arithmetic."""
+
+# Shared Hurmet publication style; calculation inputs retain full precision.
+import sys as _hurmet_sys
+from pathlib import Path as _HurmetPath
+_hurmet_sys.path.insert(0, str(_HurmetPath(__file__).resolve().parents[1]))
+from hurmet_style import write_worksheet
+
 from pathlib import Path
 import json
 import sys
@@ -251,5 +258,5 @@ for i,line in enumerate(lines):
   cols=line.count('|')-1
   widths='260 150 150' if cols==3 else '140 140 140 140'
   formatted.append('{.grid colWidths="'+widths+'"}')
-(ROOT/'BFP drive comparison - Hurmet.md').write_text('\n'.join(formatted)+'\n')
+write_worksheet(ROOT/'BFP drive comparison - Hurmet.md', '\n'.join(formatted)+'\n')
 (ROOT/'bfp-hurmet-checks.json').write_text(json.dumps(expected,indent=2)+'\n')

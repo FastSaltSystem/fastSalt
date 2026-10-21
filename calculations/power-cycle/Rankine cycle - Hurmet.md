@@ -3,10 +3,12 @@ decimalFormat: 1,000,000.
 fontSize: 12
 pageSize: letter
 dateFormat: yyyy-mm-dd
-saveDate: 2026-10-11
+saveDate: 2026-10-20
 ---------------
 
 # Rankine cycle - preliminary heat balance
+
+¢` format = "h3" `
 
 11 October 2026. Main-steam reheat and a provisional water-cooled condenser at 5
 kPa absolute follow the owner's confirmed instructions. This is a first design
@@ -53,29 +55,27 @@ curve; its cooled high-pressure return is throttled into the highest HP heater.
 
 ## Imported state and cycle inputs
 
-¢` format = "h7" `
-
 ¢` ReactorDuty = 1500 MW `
 
 ¢` GeneratorCount = 3 `
 
-¢` MainEnthalpy = 3372394.68556 'J/kg' `
+¢` MainEnthalpy = 3372.39468556 'kJ/kg' `
 
-¢` FeedEnthalpy = 1264676.95016 'J/kg' `
+¢` FeedEnthalpy = 1264.67695016 'kJ/kg' `
 
-¢` HPwork = 337252.327509 'J/kg' `
+¢` HPwork = 337.252327509 'kJ/kg' `
 
-¢` IPwork = 275084.502777 'J/kg' `
+¢` IPwork = 275.084502777 'kJ/kg' `
 
-¢` LPwork = 381263.506393 'J/kg' `
+¢` LPwork = 381.263506393 'kJ/kg' `
 
-¢` BFPwork = 30118.6769796 'J/kg' `
+¢` BFPwork = 30.1186769796 'kJ/kg' `
 
 ¢` CEPwork = 548.420407042 'J/kg' `
 
-¢` CondenserHeat = 1114361.59007 'J/kg' `
+¢` CondenserHeat = 1114.36159007 'kJ/kg' `
 
-¢` ReheatGain = 435921.5363 'J/kg' `
+¢` ReheatGain = 435.9215363 'kJ/kg' `
 
 ¢` ReheatFraction = 0.159567439186 `
 
@@ -93,36 +93,35 @@ curve; its cooled high-pressure return is throttled into the highest HP heater.
 
 ## Heat, flow and power
 
-¢??` TotalSteam = ReactorDuty / (MainEnthalpy - FeedEnthalpy) = 〔711.6702〕
-'kg/s' `
+¢%%` TotalSteam = ReactorDuty / (MainEnthalpy - FeedEnthalpy) = 〔712〕 'kg/s' `
 
-¢??` PerGeneratorSteam = TotalSteam / GeneratorCount = 〔237.2234〕 'kg/s' `
+¢%%` PerGeneratorSteam = TotalSteam / GeneratorCount = 〔237〕 'kg/s' `
 
-¢??` ReheaterSupply = TotalSteam * ReheatFraction = 〔113.5594〕 'kg/s' `
+¢%%` ReheaterSupply = TotalSteam * ReheatFraction = 〔114〕 'kg/s' `
 
-¢??` ReheatedSteam = TotalSteam * ReheatedFraction = 〔434.448〕 'kg/s' `
+¢%%` ReheatedSteam = TotalSteam * ReheatedFraction = 〔434〕 'kg/s' `
 
-¢??` ReheatDuty = ReheatedSteam * ReheatGain = 〔189.3852〕 MW `
+¢%%` ReheatDuty = ReheatedSteam * ReheatGain = 〔189〕 MW `
 
-¢??` PumpTurbineSteam = TotalSteam * PumpTurbineFraction = 〔63.55137〕 'kg/s' `
+¢%%` PumpTurbineSteam = TotalSteam * PumpTurbineFraction = 〔63.6〕 'kg/s' `
 
-¢??` LPExhaustSteam = TotalSteam * LPExhaustFraction = 〔370.0741〕 'kg/s' `
+¢%%` LPExhaustSteam = TotalSteam * LPExhaustFraction = 〔370〕 'kg/s' `
 
-¢??` HPIPGross = TotalSteam * (HPwork + IPwork) * ShaftEfficiency *
-GeneratorEfficiency = 〔424.9527〕 MW `
+¢%%` HPIPGross = TotalSteam * (HPwork + IPwork) * ShaftEfficiency *
+GeneratorEfficiency = 〔425〕 MW `
 
-¢??` LPGross = TotalSteam * LPwork * ShaftEfficiency * GeneratorEfficiency =
-〔264.5912〕 MW `
+¢%%` LPGross = TotalSteam * LPwork * ShaftEfficiency * GeneratorEfficiency =
+〔265〕 MW `
 
-¢??` GrossElectric = HPIPGross + LPGross = 〔689.544〕 MW `
+¢%%` GrossElectric = HPIPGross + LPGross = 〔690〕 MW `
 
-¢??` GrossEfficiency = GrossElectric / ReactorDuty = 〔0.459696〕 `
+¢%%` GrossEfficiency = GrossElectric / ReactorDuty = 〔0.46〕 `
 
-¢??` BFPShaft = TotalSteam * BFPwork = 〔21.43457〕 MW `
+¢%%` BFPShaft = TotalSteam * BFPwork = 〔21.4〕 MW `
 
-¢??` CEPElectric = TotalSteam * CEPwork / CEPMotorEfficiency = 〔0.4065568〕 MW `
+¢%%` CEPElectric = TotalSteam * CEPwork / CEPMotorEfficiency = 〔0.407〕 MW `
 
-¢??` CondenserDuty = TotalSteam * CondenserHeat = 〔793.058〕 MW `
+¢%%` CondenserDuty = TotalSteam * CondenserHeat = 〔793〕 MW `
 
 The feed-pump turbine extraction already pays for BFP shaft power in the turbine
 flow balance. Do **not** subtract BFP shaft power again from electrical
@@ -151,19 +150,19 @@ pump power, water supply and final heat sink remain open.
 
 ¢` CondenserU = 2500 'W.m-2.K-1' `
 
-¢??` CoolingMass = CondenserDuty / (WaterHeatCapacity * (CoolingOut -
-CoolingIn)) = 〔23,715.85〕 'kg/s' `
+¢%%` CoolingMass = CondenserDuty / (WaterHeatCapacity * (CoolingOut -
+CoolingIn)) = 〔23,716〕 'kg/s' `
 
-¢??` CoolingVolume = CoolingMass / WaterDensity = 〔23.76338〕 'm3/s' `
+¢%%` CoolingVolume = CoolingMass / WaterDensity = 〔23.8〕 'm3/s' `
 
-¢??` ColdApproach = CondensingT - CoolingIn = 〔12.87426〕 K `
+¢%%` ColdApproach = CondensingT - CoolingIn = 〔12.9〕 K `
 
-¢??` HotApproach = CondensingT - CoolingOut = 〔4.874255〕 K `
+¢%%` HotApproach = CondensingT - CoolingOut = 〔4.87〕 K `
 
-¢??` CondenserLMTD = (ColdApproach - HotApproach) / ln(ColdApproach /
-HotApproach) = 〔8.236704〕 K `
+¢%%` CondenserLMTD = (ColdApproach - HotApproach) / ln(ColdApproach /
+HotApproach) = 〔8.24〕 K `
 
-¢??` CondenserArea = CondenserDuty / (CondenserU * CondenserLMTD) = 〔38,513.37〕
+¢%%` CondenserArea = CondenserDuty / (CondenserU * CondenserLMTD) = 〔38,513〕
 'm2' `
 
 ## Feasibility checks and open decisions
@@ -202,10 +201,28 @@ reproduction steps are kept alongside this worksheet.
 
 [1]: README.md
 
-[2]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+[2]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
 
 [3]: rankine-states.csv
 
-[4]: https://coolprop.org/fluid\_properties/fluids/Water.html
+[4]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
 
-[5]: https://coolprop.org/fluid_properties/fluids/Water.html
+[5]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[6]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[7]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[8]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[9]: https://coolprop.org/fluid\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[10]: https://coolprop.org/fluid\\\\\\\\\\\\\\\_properties/fluids/Water.html
+
+[11]: https://coolprop.org/fluid\\\\\\\_properties/fluids/Water.html
+
+[12]: https://coolprop.org/fluid\\\_properties/fluids/Water.html
+
+[13]: https://coolprop.org/fluid\_properties/fluids/Water.html
+
+[14]: https://coolprop.org/fluid_properties/fluids/Water.html
